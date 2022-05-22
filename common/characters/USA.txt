@@ -1,0 +1,41 @@
+characters={
+	USA_william_howard_taft={
+		name="William Howard Taft"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=conservatism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	USA_woodrow_wilson={
+		name="Woodrow Wilson"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=progressivism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	USA_theodore_roosevelt={
+		name="Theodore Roosevelt"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=progressivism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}
