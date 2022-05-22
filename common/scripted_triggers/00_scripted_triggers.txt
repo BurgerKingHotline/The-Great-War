@@ -246,10 +246,6 @@ is_csa_state = {
 
 has_naval_treaty_trigger = {
 	OR = {
-		has_idea = MTG_naval_treaty_adherent
-		has_idea = MTG_naval_treaty_cheating
-		has_idea = MTG_naval_treaty_adherent_reduced
-		has_idea = MTG_naval_treaty_cheating_reduced
 	}
 }
 
@@ -580,7 +576,6 @@ is_available_to_collaboration_government = { # occupied_countries.1 should be up
 			FROM = { original_tag = DNZ }
 			original_tag = POL
 		}
-		TUR_cannot_form_kurdish_collaboration_government = yes
 		any_country_with_original_tag = {
 			original_tag_to_check = FROM
 			is_puppet_of = PREV # if already created one do not create another

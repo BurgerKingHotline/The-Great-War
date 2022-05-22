@@ -108,7 +108,6 @@ country_event = {
 #	picture = GFX_report_event_worker_protests
 #
 #	trigger = {
-#		has_idea_with_trait = communist_revolutionary
 #		NOT = { has_government = communism }
 #		NOT = { has_country_flag = communism_government_support }
 #	}
@@ -137,7 +136,6 @@ country_event = {
 #	picture = GFX_report_event_gathering_protest
 #	
 #	trigger = {
-#		has_idea_with_trait = communist_revolutionary
 #		NOT = { has_government = communism }
 #		has_country_flag = communism_government_support
 #		communism > 0.4
@@ -182,7 +180,6 @@ country_event = {
 	picture = GFX_report_event_gathering_protest
 	
 	trigger = {
-		has_idea_with_trait = communist_revolutionary
 		NOT = { has_government = communism }
 		communism > 0.2
 		NOT = { communism > 0.59 }
@@ -255,11 +252,9 @@ country_event = {
 	picture = GFX_report_event_desertion_poster
 	
 	trigger = {
-		has_idea_with_trait = communist_revolutionary
 		NOT = { has_government = communism }
 		communism > 0.3
 		NOT = { communism > 0.59 }
-		NOT = { has_idea = communist_partisans_recruiting }
 		if = {
 			limit = {
 				has_dlc = "Together for Victory"
@@ -329,7 +324,6 @@ country_event = {
 #	picture = GFX_report_event_gathering_protest
 #	
 #	trigger = {
-#		has_idea_with_trait = communist_revolutionary
 #		NOT = { has_government = communism }
 #		communism > 0.4
 #		OR = {
@@ -495,7 +489,6 @@ country_event = {
 #	picture = GFX_report_event_fascist_gathering
 #	
 #	trigger = {
-#		has_idea_with_trait = fascist_demagogue
 #		NOT = { has_government = fascism }
 #		NOT = { has_country_flag = fascism_government_support }
 #	}
@@ -524,7 +517,6 @@ country_event = {
 #	picture = GFX_report_event_fascist_gathering
 #	
 #	trigger = {
-#		has_idea_with_trait = fascist_demagogue
 #		NOT = { has_government = fascism }
 #		has_country_flag = fascism_government_support
 #		fascism > 0.3
@@ -562,7 +554,6 @@ country_event = {
 #	picture = GFX_report_event_fascist_gathering
 #	
 #	trigger = {
-#		has_idea_with_trait = fascist_demagogue
 #		NOT = { has_government = fascism }
 #		fascism > 0.25
 #		if = {
@@ -667,11 +658,9 @@ country_event = {
 	picture = GFX_report_event_fascist_militia
 	
 	trigger = {
-		has_idea_with_trait = fascist_demagogue
 		NOT = { has_government = fascism }
 		fascism > 0.3
 		NOT = { fascism > 0.59 }
-		NOT = { has_idea = fascist_assault_divisions }
 		if = {
 			limit = {
 				has_dlc = "Together for Victory"
@@ -746,7 +735,6 @@ country_event = {
 	picture = GFX_report_event_worker_protests
 	
 	trigger = {
-		has_idea_with_trait = fascist_demagogue
 		NOT = { has_government = fascism }
 		fascism > 0.25
 		NOT = { fascism > 0.59 }
@@ -889,7 +877,6 @@ country_event = {
 	picture = GFX_report_event_journalists_speech
 	
 	trigger = {
-		has_idea_with_trait = democratic_reformer
 		NOT = { has_government = democratic }
 		NOT = { has_country_flag = democracy_opposition_formed }
 		is_puppet = no
@@ -946,10 +933,8 @@ country_event = {
 	picture = GFX_report_event_election_vote
 	
 	trigger = {
-		has_idea_with_trait = democratic_reformer
 		NOT = { has_government = democratic }
 		has_country_flag = democracy_opposition_formed
-		NOT = { has_idea = democratic_opposition_voicing_protests }
 		NOT = {
 			AND = {
 				has_dlc = "No Step Back"
@@ -1012,7 +997,6 @@ country_event = {
 #	picture = GFX_report_event_election_vote
 #	
 #	trigger = {
-#		has_idea_with_trait = democratic_reformer
 #		NOT = { has_government = democratic }
 #		democratic > 0.5
 #		has_country_flag = democracy_government_support
@@ -1059,8 +1043,6 @@ country_event = {
 	#trigger = {
 	#	fascism > 0.5
 	#	NOT = { has_government = fascism }
-	#	NOT = { has_idea = fascist_revolutionaries }
-	#	NOT = { has_idea = reign_of_terror }
 	#	is_puppet = no
 	#	has_civil_war = no
 	#}
@@ -1113,8 +1095,6 @@ country_event = {
 	#trigger = {
 	#	communism > 0.5
 	#	NOT = { has_government = communism }
-	#	NOT = { has_idea = communist_revolutionaries }
-	#	NOT = { has_idea = reign_of_terror }
 	#	is_puppet = no
 	#	has_civil_war = no
 	#}
@@ -1177,8 +1157,6 @@ country_event = {
 	#trigger = {
 	#	democratic > 0.5
 	#	NOT = { has_government = democratic }
-	#	NOT = { has_idea = democratic_revolutionaries }
-	#	NOT = { has_idea = reign_of_terror }
 	#	is_puppet = no
 	#	has_civil_war = no
 	#}
@@ -1238,7 +1216,6 @@ country_event = {
 	trigger = {
 		fascism > 0.7
 		num_of_controlled_states > 1
-		#has_idea = fascist_revolutionaries
 		NOT = { has_government = fascism }
 		has_civil_war = no
 		check_has_focus_tree_to_switch_to_fascism = yes
@@ -1353,7 +1330,6 @@ country_event = {
 	trigger = {
 		communism > 0.7
 		num_of_controlled_states > 1
-		#has_idea = communist_revolutionaries
 		NOT = { has_government = communism }
 		#Special case CHI PRC
 		OR = {
@@ -1481,7 +1457,6 @@ country_event = {
 	trigger = {
 		democratic > 0.7
 		num_of_controlled_states > 1
-		#has_idea = democratic_revolutionaries
 		#Special case CHI PRC
 		NOT = { has_government = democratic }
 		OR = {
@@ -1606,7 +1581,6 @@ country_event = {
 
 	trigger = {
 		fascism < 0.3
-		has_idea = fascist_revolutionaries
 	}
 
 	mean_time_to_happen = {
@@ -1627,7 +1601,6 @@ country_event = {
 
 	trigger = {
 		communism < 0.3
-		has_idea = communist_revolutionaries
 	}
 
 	mean_time_to_happen = {
@@ -1648,7 +1621,6 @@ country_event = {
 
 	trigger = {
 		democratic < 0.3
-		has_idea = democratic_revolutionaries
 	}
 
 	mean_time_to_happen = {
@@ -1680,7 +1652,6 @@ country_event = {
 			has_government = fascism
 			has_government = communism
 		}
-		has_idea = neutrality_idea
 	}
 
 	mean_time_to_happen = {

@@ -101,7 +101,6 @@ ideas = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
 					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
 				if = {
 					limit = {
@@ -174,7 +173,6 @@ ideas = {
 						has_dlc = "Death or Dishonor"
 					}
 					OR = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
 				if = {
@@ -252,7 +250,6 @@ ideas = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
 					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
 				if = {
 					limit = {
@@ -320,7 +317,6 @@ ideas = {
 					add = 1800
 
 					# revert from closed_economy if we have large allies
-					has_idea = closed_economy
 					has_large_ally_not_pick_closed_economy = yes
 				}
    			}
@@ -344,7 +340,6 @@ ideas = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
 					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
 				if = {
 					limit = {
@@ -392,8 +387,6 @@ ideas = {
 					# never take this if we are on low conscription laws for safety
 					factor = 0
 					OR = {
-						has_idea = volunteer_only
-						has_idea = limited_conscription
 					}
 				}
 
@@ -415,8 +408,6 @@ ideas = {
 						has_manpower < 2000000
 						NOT = {
 							OR = {
-								has_idea = all_adults_serve
-								has_idea = service_by_requirement
 							}
 						}
 					}
@@ -619,7 +610,6 @@ ideas = {
 						original_tag = CHI
 						has_dlc = "Waking the Tiger"
 					}
-					NOT = { has_idea = CHI_nine_power_treaty }
 				}
 				if = {
 					limit = {
@@ -668,7 +658,6 @@ ideas = {
 				}
 				modifier = {
 					factor = 1000
-					has_idea = uncontrolled_exports #Poland should try and escape this as soon as they can
 				}
    			}
 		}
@@ -689,9 +678,6 @@ ideas = {
 					AND = {
 						NOT = { has_government = democratic }
 						OR = {
-							has_idea = partial_economic_mobilisation
-							has_idea = war_economy
-							has_idea = tot_economic_mobilisation
 						}
 					}
 				}
@@ -702,7 +688,6 @@ ideas = {
 						original_tag = CHI
 						has_dlc = "Waking the Tiger"
 					}
-					NOT = { has_idea = CHI_nine_power_treaty }
 				}
 				if = {
 					limit = {
@@ -750,7 +735,6 @@ ideas = {
 					add = 1500
 
 					# revert from closed_economy if we have large allies
-					has_idea = closed_economy
 					has_large_ally_not_pick_closed_economy = yes
 				}
    			}
@@ -766,8 +750,6 @@ ideas = {
 					has_government = communism
 				}
 				OR = {
-					has_idea = war_economy
-					has_idea = tot_economic_mobilisation
 				}
 				OR = {
 					NOT = {	tag = SOV }
@@ -779,7 +761,6 @@ ideas = {
 						original_tag = CHI
 						has_dlc = "Waking the Tiger"
 					}
-					NOT = { has_idea = CHI_nine_power_treaty }
 				}
 			}
 

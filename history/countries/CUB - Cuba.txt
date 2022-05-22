@@ -20,15 +20,6 @@ set_convoys = 20
 	add_command_power = 100
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
 	
 	oob = "CUB_1939"
 	set_technology = {
@@ -73,6 +64,4 @@ set_popularities = {
 }
 
 1939.1.1 = {
-	promote_character = CUB_federico_laredo_bru
-	retire_character = CUB_josé_agripino_barnet
 }

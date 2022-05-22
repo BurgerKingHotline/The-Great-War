@@ -31,15 +31,6 @@ set_convoys = 5
 	add_command_power = 100
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = large_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
 	
 	oob = "IRQ_1939"
 	set_technology = {
@@ -102,6 +93,4 @@ set_popularities = {
 		neutrality = 70
 	}
 
-	promote_character = IRQ_faisal_ii
-	retire_character = IRQ_ghazi_i
 }

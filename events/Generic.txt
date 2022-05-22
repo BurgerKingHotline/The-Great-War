@@ -447,11 +447,9 @@ country_event = {
 				original_tag = LAT
 				FROM = { original_tag = GER }
 			}
-			uncomplete_national_focus = {
 				focus = LAT_alignment_with_germany
 				uncomplete_children = yes
 			}
-			complete_national_focus = LAT_the_thunder_strikes_alone
 		}
 	}
 	option = {
@@ -494,11 +492,9 @@ country_event = {
 				original_tag = LAT
 				FROM = { original_tag = GER }
 			}
-			uncomplete_national_focus = {
 				focus = LAT_alignment_with_germany
 				uncomplete_children = yes
 			}
-			complete_national_focus = LAT_the_thunder_strikes_alone
 		}
 	}
 }
@@ -621,7 +617,6 @@ country_event = {
 						original_tag = GER
 						has_government = democratic
 					}
-					NOT = { has_idea = GER_pool_technical_know_how }
 				}
 				add_ideas = GER_pool_technical_know_how
 			}
@@ -775,7 +770,6 @@ country_event = {
 						original_tag = GER
 						has_government = democratic
 					}
-					NOT = { has_idea = GER_pool_technical_know_how }
 				}
 				add_ideas = GER_pool_technical_know_how
 			}

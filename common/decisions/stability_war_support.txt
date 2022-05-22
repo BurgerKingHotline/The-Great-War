@@ -17,9 +17,6 @@ crisis = {
 				has_country_flag = crisis_solution_in_progress
 			}
 			OR = {
-				has_idea = draft_dodging
-				has_idea = draft_dodging_2
-				has_idea = draft_dodging_3
 			}
 		}
 
@@ -37,9 +34,6 @@ crisis = {
 				has_country_flag = crisis_solution_in_progress
 			}
 			OR = {
-				has_idea = draft_dodging
-				has_idea = draft_dodging_2
-				has_idea = draft_dodging_3
 			}
 									
 		}
@@ -66,9 +60,6 @@ crisis = {
 				has_country_flag = crisis_solution_in_progress
 			}
 			OR = {
-				has_idea = strikes_1
-				has_idea = strikes_2
-				has_idea = strikes_3
 			}
 		}
 
@@ -76,16 +67,12 @@ crisis = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_idea = strikes_3
 				factor = 500
 			}
 		}
 		
 		visible = {
 			OR = {
-				has_idea = strikes_1
-				has_idea = strikes_2
-				has_idea = strikes_3
 			}
 			OR = {
 				has_country_flag = crisis_in_progress
@@ -109,9 +96,6 @@ crisis = {
 		available = {
 			NOT = {
 				OR = {
-					has_idea = draft_dodging
-					has_idea = draft_dodging_2
-					has_idea = draft_dodging_3
 				}
 			}
 		}
@@ -120,16 +104,10 @@ crisis = {
 
 		activation = {
 			OR = {
-				has_idea = draft_dodging
-				has_idea = draft_dodging_2
-				has_idea = draft_dodging_3
 			}
 		}
 		visible = {
 			OR = {
-				has_idea = draft_dodging
-				has_idea = draft_dodging_2
-				has_idea = draft_dodging_3
 			}
 		}
 		complete_effect = {
@@ -138,7 +116,6 @@ crisis = {
 		timeout_effect = {
 			if = {
 				limit = {
-					has_idea = draft_dodging_3
 					has_stability < 0.21
 					NOT = {
 						has_government = communism
@@ -150,7 +127,6 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = draft_dodging_3
 					has_stability < 0.21
 					has_government = communism
 					
@@ -161,7 +137,6 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = draft_dodging_3
 					has_stability < 0.41
 					NOT = {
 						has_government = communism
@@ -171,7 +146,6 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = draft_dodging_3
 					has_stability < 0.41
 					has_government = communism
 					
@@ -180,14 +154,12 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = draft_dodging_3
 					has_stability > 0.4
 				}
 				add_stability = -0.1
 			}
 			if = {
 				limit = { 
-					has_idea = draft_dodging_2
 				}
 				swap_ideas = {
 					remove_idea = draft_dodging_2
@@ -196,7 +168,6 @@ crisis = {
 			}
 			if = {
 				limit = { 
-					has_idea = draft_dodging
 				}
 				swap_ideas = {
 					remove_idea = draft_dodging
@@ -212,9 +183,6 @@ crisis = {
 		available = {
 			NOT = {
 				OR = {
-					has_idea = strikes_1
-					has_idea = strikes_2
-					has_idea = strikes_3
 				}
 				has_country_flag = crisis_in_progress
 			}
@@ -224,9 +192,6 @@ crisis = {
 
 		activation = {
 			OR = {
-				has_idea = strikes_1
-				has_idea = strikes_2
-				has_idea = strikes_3
 			}
 			OR = {
 				has_country_flag = crisis_in_progress #needed to avoid doubling up with demob strikes
@@ -235,9 +200,6 @@ crisis = {
 		}
 		visible = {
 			OR = {
-				has_idea = strikes_1 
-				has_idea = strikes_2
-				has_idea = strikes_3	
 			}
 			OR = {
 				has_country_flag = crisis_in_progress
@@ -250,7 +212,6 @@ crisis = {
 		timeout_effect = {
 			if = {
 				limit = {
-					has_idea = strikes_3
 					has_stability < 0.21
 					NOT = {
 						has_government = communism
@@ -262,7 +223,6 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = strikes_3
 					has_stability < 0.21
 					has_government = communism
 					
@@ -273,7 +233,6 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = strikes_3
 					has_stability < 0.41
 					NOT = {
 						has_government = communism
@@ -283,7 +242,6 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = strikes_3
 					has_stability < 0.41
 					has_government = communism
 					
@@ -292,14 +250,12 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = strikes_3
 					has_stability > 0.4
 				}
 				add_stability = -0.1
 			}
 			if = {
 				limit = { 
-					has_idea = strikes_2
 				}
 				swap_ideas = {
 					remove_idea = strikes_2
@@ -308,7 +264,6 @@ crisis = {
 			}
 			if = {
 				limit = { 
-					has_idea = strikes_1
 				}
 				swap_ideas = {
 					remove_idea = strikes_1
@@ -331,9 +286,6 @@ crisis = {
 				has_civil_war = yes
 			}
 			OR = {
-				has_idea = mutiny_1
-				has_idea = mutiny_2
-				has_idea = mutiny_3
 			}
 		}
 
@@ -351,9 +303,6 @@ crisis = {
 				has_country_flag = crisis_solution_in_progress
 			}
 			OR = {
-				has_idea = mutiny_1
-				has_idea = mutiny_2
-				has_idea = mutiny_3
 			}
 		}
 
@@ -368,9 +317,6 @@ crisis = {
 		available = {
 			NOT = {
 				OR = {
-					has_idea = mutiny_1
-					has_idea = mutiny_2
-					has_idea = mutiny_3
 				}
 				has_country_flag = crisis_in_progress
 			}
@@ -380,9 +326,6 @@ crisis = {
 
 		activation = {
 			OR = {
-				has_idea = mutiny_1
-				has_idea = mutiny_2
-				has_idea = mutiny_3
 			}
 			OR = {
 				has_country_flag = crisis_in_progress #needed to avoid doubling up with demob strikes
@@ -391,9 +334,6 @@ crisis = {
 		}
 		visible = {
 			OR = {
-				has_idea = mutiny_1 
-				has_idea = mutiny_2
-				has_idea = mutiny_3	
 			}
 			OR = {
 				has_country_flag = crisis_in_progress #needed to avoid doubling up with demob strikes
@@ -406,7 +346,6 @@ crisis = {
 		timeout_effect = {
 			if = {
 				limit = {
-					has_idea = mutiny_3
 					has_stability < 0.21
 					NOT = {
 						has_government = communism
@@ -418,7 +357,6 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = mutiny_3
 					has_stability < 0.21
 					has_government = communism
 					
@@ -429,7 +367,6 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = mutiny_3
 					has_stability < 0.41
 					NOT = {
 						has_government = communism
@@ -439,7 +376,6 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = mutiny_3
 					has_stability < 0.41
 					has_government = communism
 					
@@ -448,14 +384,12 @@ crisis = {
 			}
 			if = {
 				limit = {
-					has_idea = mutiny_3
 					has_stability > 0.4
 				}
 				add_stability = -0.1
 			}
 			if = {
 				limit = { 
-					has_idea = mutiny_2
 				}
 				swap_ideas = {
 					remove_idea = mutiny_2
@@ -464,7 +398,6 @@ crisis = {
 			}
 			if = {
 				limit = { 
-					has_idea = mutiny_1
 				}
 				swap_ideas = {
 					remove_idea = mutiny_1
@@ -523,19 +456,16 @@ demobilization = {
 			}
 			if = {
 				limit = {
-					has_idea = strikes_1
 				}
 				remove_ideas = strikes_1
 			}
 			if = {
 				limit = {
-					has_idea = strikes_2
 				}
 				remove_ideas = strikes_2
 			}
 			if = {
 				limit = {
-					has_idea = strikes_3
 				}
 				remove_ideas = strikes_3
 			}
@@ -563,19 +493,16 @@ demobilization = {
 		complete_effect = {
 			if = {
 				limit = {
-					has_idea = strikes_1
 				}
 				remove_ideas = strikes_1
 			}
 			if = {
 				limit = {
-					has_idea = strikes_2
 				}
 				remove_ideas = strikes_2
 			}
 			if = {
 				limit = {
-					has_idea = strikes_3
 				}
 				remove_ideas = strikes_3
 			}
@@ -584,7 +511,6 @@ demobilization = {
 			activate_mission = demob_economic_mission
 			if = {
 				limit = {
-					has_idea = strikes_3
 					has_stability < 0.21
 					NOT = {
 						has_government = communism
@@ -596,7 +522,6 @@ demobilization = {
 			}
 			if = {
 				limit = {
-					has_idea = strikes_3
 					has_stability < 0.21
 					has_government = communism
 					
@@ -607,7 +532,6 @@ demobilization = {
 			}
 			if = {
 				limit = {
-					has_idea = strikes_3
 					has_stability < 0.41
 					NOT = {
 						has_government = communism
@@ -617,7 +541,6 @@ demobilization = {
 			}
 			if = {
 				limit = {
-					has_idea = strikes_3
 					has_stability < 0.41
 					has_government = communism
 					
@@ -626,14 +549,12 @@ demobilization = {
 			}
 			if = {
 				limit = {
-					has_idea = strikes_3
 					has_stability > 0.4
 				}
 				add_stability = -0.1
 			}
 			if = {
 				limit = { 
-					has_idea = strikes_2
 				}
 				swap_ideas = {
 					remove_idea = strikes_2
@@ -642,7 +563,6 @@ demobilization = {
 			}
 			if = {
 				limit = { 
-					has_idea = strikes_1
 				}
 				swap_ideas = {
 					remove_idea = strikes_1
@@ -653,9 +573,6 @@ demobilization = {
 				limit = { 
 					NOT = { 
 						OR = {
-							has_idea = strikes_1
-							has_idea = strikes_2
-							has_idea = strikes_3
 						}
 					}
 				}

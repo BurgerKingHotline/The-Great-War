@@ -49,15 +49,6 @@ set_convoys = 10
 	add_command_power = 100
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = large_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
 	
 	oob = "COL_1939"
 	if = {
@@ -128,8 +119,6 @@ set_popularities = {
 		democratic = 100
 	}
 
-	promote_character = COL_eduardo_santos
-	retire_character = COL_alfonso_lópez_pumarejo
 }
 
 

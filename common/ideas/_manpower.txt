@@ -34,10 +34,7 @@ ideas = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
 					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
-				NOT = { has_idea = undisturbed_isolation }
-				NOT = { has_idea = isolation }
 			}
 
 			ai_will_do = {
@@ -45,7 +42,6 @@ ideas = {
 
    				modifier = {
 					factor = 60 # being disarmed is bad in a wargame yo
-					has_idea = disarmed_nation
 				}
 			}
 
@@ -67,8 +63,6 @@ ideas = {
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.025 group = mobilization_laws }
 				has_war_support > 0.1
-				NOT = { has_idea = undisturbed_isolation }
-				NOT = { has_idea = isolation }
 				if = {
 					limit = {
 						original_tag = AST
@@ -94,7 +88,6 @@ ideas = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
 					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
 				if = {
 					limit = {
@@ -114,7 +107,6 @@ ideas = {
 						original_tag = BUL
 						has_dlc = "Battle for the Bosporus"
 					}
-					NOT = { has_idea = BUL_army_restrictions }
 				}
 			}
 
@@ -136,7 +128,6 @@ ideas = {
 				}
 				modifier = {
 					tag = ENG
-					has_idea_with_trait = military_theorist
 					factor = 20
 				}
 			}
@@ -189,7 +180,6 @@ ideas = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
 					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
 				if = {
 					limit = {
@@ -209,7 +199,6 @@ ideas = {
 						original_tag = BUL
 						has_dlc = "Battle for the Bosporus"
 					}
-					NOT = { has_idea = BUL_army_restrictions }
 				}
 			}
 			ai_will_do = {
@@ -314,7 +303,6 @@ ideas = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
 					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
 				if = {
 					limit = {
@@ -334,7 +322,6 @@ ideas = {
 						original_tag = BUL
 						has_dlc = "Battle for the Bosporus"
 					}
-					NOT = { has_idea = BUL_army_restrictions }
 				}
 			}
 
@@ -441,7 +428,6 @@ ideas = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
 					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
 				if = {
 					limit = {
@@ -461,7 +447,6 @@ ideas = {
 						original_tag = BUL
 						has_dlc = "Battle for the Bosporus"
 					}
-					NOT = { has_idea = BUL_army_restrictions }
 				}
 			}
 
@@ -559,7 +544,6 @@ ideas = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
 					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
 				if = {
 					limit = {
@@ -579,7 +563,6 @@ ideas = {
 						original_tag = BUL
 						has_dlc = "Battle for the Bosporus"
 					}
-					NOT = { has_idea = BUL_army_restrictions }
 				}
 			}
 

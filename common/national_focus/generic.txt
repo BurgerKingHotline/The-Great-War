@@ -1781,12 +1781,10 @@ focus_tree = {
 						is_historical_focus_on = yes
 						has_government = neutrality
 					}
-					has_idea = neutrality_idea
 				}
 			}
 			modifier = {
 				factor = 20
-				has_idea = SOV_russian_political_influence
 			}
 		}
 
@@ -1834,7 +1832,6 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 10
-				has_idea = SOV_russian_political_influence
 			}
 		}
 
@@ -1960,7 +1957,6 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { has_idea = neutrality_idea }
 				remove_ideas = neutrality_idea
 			}			
 			add_ideas = militarism_focus
@@ -1984,7 +1980,6 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { has_idea = neutrality_idea }
 				remove_ideas = neutrality_idea
 			}		
 			add_political_power = 200
@@ -2022,7 +2017,6 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { NOT = { has_idea = neutrality_idea } }
 				add_ideas = neutrality_idea
 			}
 			add_political_power = 150
@@ -2048,13 +2042,11 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 0
-				has_idea = neutrality_idea
 			}
 		}
 
 		completion_reward = {
 			if = {
-				limit = { has_idea = neutrality_idea }
 				remove_ideas = neutrality_idea
 			}	
 			set_rule = { can_send_volunteers = yes }
@@ -2212,7 +2204,6 @@ focus_tree = {
 			custom_effect_tooltip = why_we_fight_effect
 			hidden_effect = {
 				if = {
-					limit = { NOT = { has_idea = neutrality_idea } }
 					set_rule = { can_create_factions = yes }
 				}			
 			}

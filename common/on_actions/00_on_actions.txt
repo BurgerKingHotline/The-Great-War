@@ -112,7 +112,6 @@ on_actions = {
 				country_event = { id = generic.8 }
 			}
 			if = {
-				limit = { has_idea = race_for_the_bomb_outclassed }
 				remove_ideas = race_for_the_bomb_outclassed
 			}
 			if = {
@@ -283,7 +282,6 @@ on_actions = {
 					original_tag = SOV
 					has_government = communism
 					FROM = {
-						has_idea = anti_soviet_pact 
 					}
 				}
 				FROM = {
@@ -326,7 +324,6 @@ on_actions = {
 			#Remove anti_soviet_pact if joining commie Soviet in faction
 			if = {
 				limit = {
-					has_idea = anti_soviet_pact 
 					FROM = {
 						original_tag = SOV
 						has_government = communism
@@ -413,7 +410,6 @@ on_actions = {
 						set_country_flag = warlord_replaced
 					}
 					FROM = {
-						warlord_rule_all_parties = yes
 					}
 				}
 			}
@@ -443,12 +439,6 @@ on_actions = {
 				limit = {
 					FROM = {
 						OR = {
-							has_idea = american_protection_drift_democratic
-							has_idea = american_protection_drift_communism
-							has_idea = american_protection_drift_fascism
-							has_idea = american_protection_defence_democratic
-							has_idea = american_protection_defence_communism
-							has_idea = american_protection_defence_fascism
 						}
 					}
 					NOT = { 
@@ -458,12 +448,6 @@ on_actions = {
 						#USA = { has_war_with = FROM } Should USA enforce peace in a nation it is already at war with?
 					}
 					OR = {
-						has_idea = american_protection_drift_democratic
-						has_idea = american_protection_drift_communism
-						has_idea = american_protection_drift_fascism
-						has_idea = american_protection_defence_democratic
-						has_idea = american_protection_defence_communism
-						has_idea = american_protection_defence_fascism
 					}
 				}				
 				FROM = { country_event = { id = usa.16 days = 1 } }
@@ -477,7 +461,6 @@ on_actions = {
 						OR = {
 							has_opinion_modifier = anti_comintern_pact_opinion
 							has_opinion_modifier = tripartite_pact_opinion
-							has_idea = anti_soviet_pact
 						}
 					}
 				}
@@ -509,7 +492,6 @@ on_actions = {
 						original_tag = SOV 
 						has_government = communism 
 					}
-					FROM = { has_idea = anti_soviet_pact }
 				}
 				save_event_target_as = anti_soviet_pact_aggressor
 				FROM = {
@@ -671,7 +653,6 @@ on_actions = {
 					FROM = { tag = JAP }
 					ROOT = { tag = CHI }
 				}
-				JAP = { JAP_intervene_in_china_remove = yes }
 			}
 			
 			if = {
@@ -756,15 +737,12 @@ on_actions = {
 			if = {
 				limit = { has_government = democratic }
 				if = {
-					limit = { has_idea = democratic_opposition_voicing_protests }
 					remove_ideas = democratic_opposition_voicing_protests
 				}
 				if = {
-					limit = { has_idea = democratic_revolutionaries }
 					remove_ideas = democratic_revolutionaries
 				}
 				if = {
-					limit = { has_idea = reign_of_terror }
 					remove_ideas = reign_of_terror
 				}
 			}
@@ -775,40 +753,32 @@ on_actions = {
 					set_cosmetic_tag = SAF_COM
 				}
 				if = {
-					limit = { has_idea = communist_partisans_recruiting }
 					remove_ideas = communist_partisans_recruiting
 				}
 				if = {
-					limit = { has_idea = communist_revolutionaries }
 					remove_ideas = communist_revolutionaries
 				}
 				if = {
-					limit = { has_idea = communism_defeated }
 					remove_ideas = communism_defeated
 				}
 
 				#Remove anti_soviet_pact
 				if = {
-					limit = { has_idea = anti_soviet_pact }
 					remove_ideas = anti_soviet_pact
 				}
 			}
 			if = {
 				limit = { has_government = fascism }
 				if = {
-					limit = { has_idea = fascist_assault_divisions }
 					remove_ideas = fascist_assault_divisions
 				}
 				if = {
-					limit = { has_idea = fascist_revolutionaries }
 					remove_ideas = fascist_revolutionaries
 				}
 				if = {
-					limit = { has_idea = fascism_defeated }
 					remove_ideas = fascism_defeated
 				}
 				if = {
-					limit = { has_idea = anti_nazi_coup }
 					remove_ideas = anti_nazi_coup
 				}
 			}
@@ -816,8 +786,6 @@ on_actions = {
 			#if = {
 			#	limit = { 
 			#		OR = {
-			#			has_idea = trotskyite_plot 
-			#			has_idea = trotskyite_plot_purged
 			#		}
 			#		NOT = {
 			#			has_civil_war = yes
