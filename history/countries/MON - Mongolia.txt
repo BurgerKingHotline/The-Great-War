@@ -1,98 +1,78 @@
-﻿capital = 219 
+﻿capital = 330
 
-#oob = "SOV_1936"
-
-set_research_slots = 2
+oob = "MON_1936"
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_recon = 1
-	tech_support = 1		
-	tech_engineers = 1
-	tech_military_police = 1
-	tech_mountaineers = 1
-	motorised_infantry = 1
-	paratroopers = 1
-	gw_artillery = 1
+}
+
+add_ideas = {
+	limited_conscription
+}
 
 
-	early_fighter = 1
-	fighter1 = 1
-	early_bomber = 1
-	strategic_bomber1 = 1
-	naval_bomber1 = 1
-	mass_assault = 1
-	fleet_in_being = 1
-}
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
+1939.1.1 = {
+
+	add_political_power = 1198
+	add_command_power = 100
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = construction_effort_2
+	complete_national_focus = production_effort_2
+	complete_national_focus = infrastructure_effort
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	oob = "MON_1939"
 	set_technology = {
-		gwtank = 1
-		basic_light_tank = 1
-	}
-}
-if = {
-	limit = {
+		support_weapons = 1
+		gw_artillery = 1
 		
-		has_dlc = "No Step Back"
+		#doctrines
+		air_superiority = 1
 		
-	}
-	set_technology = {
-		gwtank_chassis = 1
-		basic_light_tank_chassis = 1
-	}
-}
-if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		early_submarine = 1
-		basic_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-		early_battleship = 1
-		early_battlecruiser = 1
-		transport = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_light = 1
-		early_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		mtg_transport = 1
-		basic_battery = 1
-		basic_torpedo = 1
+		mass_assault = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
 	}
 }
+
 set_politics = {
 	ruling_party = communism
 	last_election = "1936.1.1"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
-
 set_popularities = {
-	democratic = 40
-	communism = 60
+	communism = 100
 }
 
+1939.1.1 = {
+	add_ideas = {
+		limited_conscription
+	}
 
-
-
-
-
-
+	promote_character = MON_khorloogiin_choibalsan
+	retire_character = MON_anandyn_amar
+}
