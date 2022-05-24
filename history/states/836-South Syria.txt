@@ -1,0 +1,20 @@
+
+state={
+	id=836
+	name="STATE_836"
+	manpower = 690
+	
+	state_category = rural
+
+	history={
+		owner = SAU
+		add_core_of = SAU
+	}
+
+
+	provinces={
+		12316 12768
+	}
+
+	local_supplies=2.0 
+}

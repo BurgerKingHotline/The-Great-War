@@ -1,0 +1,31 @@
+
+state={
+	id=841
+	name="STATE_841"
+	manpower = 144000
+	
+	state_category = rural
+	resources={
+		oil=3 # was: 3
+	}
+
+	history={
+		owner = OTT
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			12702 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = SAU
+		add_core_of = OTT
+	}
+
+	provinces={
+		1955 10791 12702
+	}
+
+	local_supplies=0.0 
+}
