@@ -7,9 +7,9 @@ state={
 
 	history={
 		owner = CHI
-		add_core_of = CHI
+		add_claim_by = CHI
 		add_core_of = TIB
-		add_core_of = PRC
+		add_claim_by = PRC
 		buildings = {
 			infrastructure = 1
 

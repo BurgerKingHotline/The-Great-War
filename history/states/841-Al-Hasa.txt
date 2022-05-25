@@ -20,7 +20,11 @@ state={
 			}
 		}
 		add_core_of = SAU
-		add_core_of = OTT
+
+		1913.01.1 = {
+			owner = SAU
+		}
+		
 	}
 
 	provinces={

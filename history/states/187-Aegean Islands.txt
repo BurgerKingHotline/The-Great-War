@@ -11,7 +11,7 @@ state={
 	}
 
 	history={
-		owner = GRE
+		owner = OTT
 		buildings = {
 			infrastructure = 1
 			dockyard = 1
@@ -29,10 +29,11 @@ state={
 			8435 1
 		}
 		add_core_of = GRE
+		add_core_of = OTT
 	}
 
 	provinces={
-		3401 6550 8435 
+		6550 8435 
 	}
 
 	local_supplies=9.0 

@@ -1,0 +1,24 @@
+state=
+{
+	id=845
+	name="STATE_845"
+	manpower = 84000 
+	
+	state_category = rural
+	
+	history={
+		owner = ENG
+		add_core_of = SOM
+		buildings = {
+			infrastructure = 1
+			12941 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces =	{
+ 		11014 12941
+	}
+
+	local_supplies=0.0 
+}

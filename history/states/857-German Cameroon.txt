@@ -1,0 +1,27 @@
+
+state={
+	id=857
+	name="STATE_857"
+	manpower = 354000
+	resources={
+		steel=8
+	}
+
+
+	state_category = metropolis
+	
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CAM
+	}
+
+	provinces={
+		7978 8028 10780
+	}
+	
+
+	local_supplies=0.0 
+}

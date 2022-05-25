@@ -21,6 +21,7 @@ state={
 		}
 		add_core_of = SYR
 		add_core_of = KUR
+		add_claim_by = OTT #for increased compliance gain
 	}
 
 

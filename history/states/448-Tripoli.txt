@@ -7,7 +7,7 @@ state={
 	state_category = town
 
 	history={
-		owner = ITA
+		owner = OTT
 		
 		victory_points = {
 			1149 10 
@@ -20,6 +20,9 @@ state={
 			}
 		}
 		add_core_of = LBA
+		1912.08.18 = {
+			owner = ITA
+		}
 	}
 
 	provinces={

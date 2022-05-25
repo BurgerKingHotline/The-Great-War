@@ -5,9 +5,14 @@ state=
 	manpower = 2194
 	
 	state_category = wasteland
+	impassable = yes
+
+	resources={
+		steel=2 # was: 6.000
+	}
 	
 	history = {
-		owner = ENG
+		owner = EGY
 		buildings = {
 			infrastructure = 1
 		}
@@ -19,7 +24,7 @@ state=
 		add_core_of = EGY
 	}
 	provinces={
-		1080 4068 4910 5069 7156 9957 10126 12002 12889 
+		1080 4068  9957 10126 12002 12889 
 	}
 
 	local_supplies=0.0 

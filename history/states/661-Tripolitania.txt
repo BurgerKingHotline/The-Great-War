@@ -6,15 +6,18 @@ state={
 	state_category = wasteland
 	
 	history={
-		owner = ITA
+		owner = OTT
 		buildings = {
 			infrastructure = 1
 		}
 		add_core_of = LBA
+		1912.08.18 = {
+			owner = ITA
+		}
 	}
 	
 	provinces={
-		1174 4051 4117 4176 7154 7194 10037 10067 11940 12009 
+		1174 4051 4117 4176 4962 7154 7194 10037 10067 11940 12009 
 	}
 
 	local_supplies=0.0 

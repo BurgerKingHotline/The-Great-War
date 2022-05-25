@@ -1,0 +1,31 @@
+state=
+{
+	id=848
+	name="STATE_848"
+	manpower = 10700
+	
+	state_category = town
+
+	history=
+	{
+		owner = SAF
+		buildings = {
+			infrastructure = 3
+			12082 = {
+				naval_base = 2
+			}
+		}
+
+		add_claim_by = GER
+
+		victory_points = {
+			12082 2
+		}
+	}
+
+	provinces={
+		12082
+	}
+
+	local_supplies=0.0 
+}

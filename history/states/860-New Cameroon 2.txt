@@ -1,0 +1,30 @@
+
+state={
+	id=860
+	name="STATE_860"
+	manpower = 76180
+	resources={
+		steel=8
+	}
+
+
+	state_category = metropolis
+	
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = RCG
+		1911.11.4 = {
+			owner = GER
+		}
+	}
+
+	provinces={
+		10725 10893 10917
+	}
+	
+
+	local_supplies=0.0 
+}

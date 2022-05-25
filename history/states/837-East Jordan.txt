@@ -19,7 +19,7 @@ state={
 		}
 
 		add_core_of = SYR
-		add_core_of = OTT
+		add_claim_by = OTT #for increased compliance gain
 	}
 
 	provinces={

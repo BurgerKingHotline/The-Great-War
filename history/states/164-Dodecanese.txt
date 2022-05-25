@@ -8,7 +8,7 @@ state=
 	
 	history=
 	{
-		owner = ITA
+		owner = OTT
 		victory_points = {
 			10007 1 
 		}
@@ -23,6 +23,10 @@ state=
 			}
 		}
 		add_core_of = GRE
+		add_core_of = OTT
+		1912.08.18 = {
+			owner = ITA
+		}
 	}
 	provinces=
 	{

@@ -6,7 +6,7 @@ state={
 		chromium=12.000 #added due to portugal setup
 	}
 
-	manpower = 3197719
+	manpower = 2497719
 	
 	state_category = rural
 	
@@ -16,10 +16,18 @@ state={
 		victory_points = {
 			7069 10 
 		}
+		victory_points = {
+			7100 5
+		}
+		victory_points = {
+			4139 5
+		}
+		victory_points = {
+			11943 1
+		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			industrial_complex = 1
-			air_base = 4
 			7069 = {
 				naval_base = 4
 			}
@@ -27,7 +35,7 @@ state={
 	}
 
 	provinces={
-		989 1079 1111 1194 4084 4097 4139 7069 7100 7116 7173 10013 10023 10070 11943 11987 12042 
+		1079 1194 4139 7069 7100 10023 10070 11943
 	}
 
 	local_supplies=0.0 

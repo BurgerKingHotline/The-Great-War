@@ -1,0 +1,30 @@
+
+state={
+	id=863
+	name="STATE_863"
+	manpower = 365552
+	
+	state_category = wasteland
+
+	history={
+		owner = MOR
+		add_core_of = MOR
+		add_claim_by = FRA
+		victory_points = {
+			4108 5 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		1911.4.28 = {
+			owner = FRA
+		}
+	}
+
+	provinces={
+		1102 1152 4084 4108 4903 7203 10107 10731 11987 12042 12711 12842
+	}
+
+	local_supplies=0.0 
+}
