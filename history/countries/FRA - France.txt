@@ -27,6 +27,10 @@ if = {
 	}
 }
 
+create_faction = entente_faction
+add_to_faction = FRA
+add_to_faction = RUS
+
 set_research_slots = 3
 set_stability = 0.5
 add_command_power = 20
@@ -983,3 +987,6 @@ if = {
 		}
 	}
 }
+
+give_guarantee = RUS
+give_guarantee = ENG

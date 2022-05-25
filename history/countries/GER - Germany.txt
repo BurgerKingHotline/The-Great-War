@@ -15,6 +15,10 @@ if = {
 	set_oob = "GER_1936_nsb"
 }
 
+create_faction = central_powers_faction
+add_to_faction = GER
+add_to_faction = ASH
+
 starting_train_buffer = 2
 set_fuel_ratio = 0.8
 
@@ -339,19 +343,18 @@ create_import = {
 }
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = neutrality
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 20
-	fascism = 60
-	communism = 20
+	democratic = 5
+	fascism = 10
+	communism = 5
+	neutrality = 80
 }
 
-create_faction = Axis
-add_to_faction = GER
 
 
 add_ideas = {
