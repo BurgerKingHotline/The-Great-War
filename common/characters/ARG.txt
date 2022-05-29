@@ -1,0 +1,15 @@
+characters={
+	ARG_jose_figueroa_alcorta={
+		name="José Figueroa Alcorta"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=liberalism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

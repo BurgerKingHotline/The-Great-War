@@ -1,0 +1,15 @@
+characters={
+	NZL_joseph_ward={
+		name="Sir Joseph Ward"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=liberalism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

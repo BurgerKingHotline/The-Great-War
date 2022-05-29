@@ -1,0 +1,28 @@
+characters={
+	JAP_meiji={
+		name="Emperor Meiji"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=despotism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	JAP_katsura_taro={
+		name="Prince Katsura Tarō"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=oligarchism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

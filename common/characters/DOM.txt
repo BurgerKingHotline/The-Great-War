@@ -1,0 +1,44 @@
+characters={
+	#gets assassinated and a civil war starts
+	DOM_ramon_caceres={
+		name="Ramón Cáceres"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#US backed red party member
+	DOM_horacio_vasquez={
+		name="Horacio Vásquez"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#Other side of civil war
+	DOM_eladio_victoria={
+		name="Eladio Victoria"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

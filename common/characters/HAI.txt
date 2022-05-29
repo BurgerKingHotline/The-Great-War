@@ -1,0 +1,15 @@
+characters={
+	HAI_cincinnatus_leconte={
+		name="Cincinnatus Leconte"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=progressivism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

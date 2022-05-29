@@ -1,0 +1,56 @@
+characters={
+	MEX_porfirio_diaz={
+		name="Porfirio Díaz"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=despotism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#Zapatistas
+	MEX_emiliano_zapata={
+		name="Emiliano Zapata"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=socialism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#Mexican Liberal Party
+	MEX_ricardo_flores_magon={
+		name="Ricardo Flores Magón"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=anarchist_communism  
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MEX_francisco_madero={
+		name="Francisco I. Madero"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=liberal  
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

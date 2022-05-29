@@ -1,0 +1,30 @@
+characters={
+	#Crowned in 1914
+	PER_ahmad_shah_qajar={
+		name="Ahmad Shah Qajar"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=despotism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#regent, weak leader
+	PER_abolqasem_naser_olmolk={
+		name="Abolqasem Naser ol-Molk"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=centrism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

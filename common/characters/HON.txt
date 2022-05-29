@@ -1,0 +1,15 @@
+characters={
+	HON_miguel_r_davila={
+		name="Miguel R. Dávila"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=liberalism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

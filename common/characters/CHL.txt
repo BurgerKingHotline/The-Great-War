@@ -1,0 +1,30 @@
+characters={
+	#startleader, leaves on 23rd of December 1910
+	CHL_emiliano_figueroa={
+		name="Emiliano Figueroa"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=liberalism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#gets elected in december
+	CHL_ramon_barros_luco={
+		name="Ramón Barros Luco"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=liberalism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

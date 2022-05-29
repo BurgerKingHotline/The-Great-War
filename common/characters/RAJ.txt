@@ -1,0 +1,15 @@
+characters={
+	RAJ_earl_of_minto={
+		name="The Earl of Minto"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=moderatism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

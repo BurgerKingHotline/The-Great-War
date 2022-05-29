@@ -1,0 +1,28 @@
+characters={
+	HOL_wilhelmina={
+		name="Wilhelmina"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=despotism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HOL_theo_heemskerk={
+		name="Theo Heemskerk"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=conservatism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

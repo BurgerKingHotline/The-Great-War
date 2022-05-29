@@ -1,0 +1,41 @@
+characters={
+	ITA_victor_emmanuel={
+		name="Victor Emmanuel III"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=despotism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ITA_luigi_luzzatti={
+		name="Luigi Luzzatti"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=conservatism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ITA_michele_bianchi={
+		name="Michele Bianchi"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=fascism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

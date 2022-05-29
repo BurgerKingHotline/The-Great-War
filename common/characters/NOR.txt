@@ -1,0 +1,28 @@
+characters={
+	NOR_haakon_vii={
+		name="Haakon VII"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=despotism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	NOR_wollert_konow={
+		name="Wollert Konow"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=conservatism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

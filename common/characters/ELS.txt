@@ -1,0 +1,16 @@
+characters={
+	#liberal but military dictator
+	ELS_fernando_figueroa={
+		name="Fernando Figueroa"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=moderatism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

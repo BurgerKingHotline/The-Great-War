@@ -1,0 +1,44 @@
+characters={
+	#Dies in 1913 from assassination, replaced by Constantine I
+	GRE_george_i={
+		name="George I"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=oligarchism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#Socialists followed Venizelos
+	GRE_eleftherios_venizelos={
+		name="Eleftherios Venizelos"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=liberalism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#Will become available after greece retakes Thessaloniki, eventually became a key member in the KKE
+	GRE_avraam_benaroya={
+		name="Avraam Benaroya"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=marxism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

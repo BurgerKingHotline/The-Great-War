@@ -1,0 +1,30 @@
+characters={
+	#left office on 25 of november 1910
+	PAR_emiliano_gonzalez_navero={
+		name="Emiliano González Navero"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=liberalism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#entered office 25 of novermber
+	PAR_manuel_gondra={
+		name="Manuel Gondra"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=liberalism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}
