@@ -141,7 +141,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_research_slot = 1
 		}
 	}
 
@@ -198,7 +198,7 @@
 
 	focus = {
 		id = GEN_sell_equipment
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_generic_combined_arms
 		x = 0
 		y = 1
 		cost = 10
@@ -273,7 +273,7 @@
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		prerequisite = { focus = GEN_mil_buildup }
+		prerequisite = { focus = GEN_mil_buildup focus = GEN_anti_war }
 		mutually_exclusive = { focus = GEN_neutrality_commitment }
 		relative_position_id = GEN_mil_buildup
 		available_if_capitulated = yes
@@ -467,8 +467,8 @@
 	}
 
 	focus = {
-		id = GEN_industrial_scientists
-		icon = GFX_focus_research2
+		id = GEN_anti_war
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 2
 		cost = 10
@@ -479,7 +479,6 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_research_slot = 1
 		}
 	}
 
@@ -491,8 +490,9 @@
 		cost = 10
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		mutually_exclusive = { focus = GEN_join_war }
-		prerequisite = { focus = GEN_industrial_scientists }
-		relative_position_id = GEN_industrial_scientists
+		prerequisite = { focus = GEN_mil_buildup focus = GEN_anti_war }
+		
+		relative_position_id = GEN_anti_war
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1440,88 +1440,7 @@
 		}
 	}
 
-	focus = {
-		id = GEN_infrastructure_ii
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 2
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		relative_position_id = GEN_military_factories_ii
-		prerequisite = { focus = GEN_military_factories_ii }
-		prerequisite = { focus = GEN_research_investments }
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 1
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
+	
 
 	focus = {
 		id = GEN_civilian_industry
@@ -1660,14 +1579,97 @@
 	}
 
 	focus = {
-		id = GEN_research_investments
-		icon = GFX_focus_research
+		id = GEN_infrastructure_ii
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		prerequisite = { focus = GEN_infrastructure_i }
 		relative_position_id = GEN_infrastructure_i
+		prerequisite = { focus = GEN_infrastructure_i }
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GEN_research_investments
+		icon = GFX_focus_research
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_military_factories_ii }
+		prerequisite = { focus = GEN_infrastructure_ii }
+		relative_position_id = GEN_military_factories_ii
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1682,8 +1684,8 @@
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		prerequisite = { focus = GEN_research_investments }
-		relative_position_id = GEN_research_investments
+		prerequisite = { focus = GEN_infrastructure_ii }
+		relative_position_id = GEN_infrastructure_ii
 		available_if_capitulated = yes
 
 		available = {
