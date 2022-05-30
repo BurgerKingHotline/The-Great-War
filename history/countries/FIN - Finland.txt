@@ -50,10 +50,6 @@ if = {
 
 set_convoys = 5
 
-add_ideas = {
-	limited_conscription
-}
-
 1939.1.1 = {
 	add_political_power = 1198
 	add_command_power = 100
@@ -126,11 +122,6 @@ set_popularities = {
 		election_frequency = 36
 		elections_allowed = yes
 	}
-}
-
-
-add_ideas = {
-	sisu
 }
 
 ### VARIANTS ###

@@ -52,20 +52,6 @@ if = {
 	}
 	set_technology = { camelry = 1 }
 }
-
-if = {
-	limit = { has_dlc = "Together for Victory" }
-
-	add_ideas = {
-		RAJ_princely_states
-		RAJ_marginalized_muslim_community
-		RAJ_agrarian_society
-		RAJ_risk_of_famine
-	}
-
-	add_to_tech_sharing_group = commonwealth_research
-}
-
 if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }
@@ -161,19 +147,4 @@ set_popularities = {
 	fascism = 2
 	communism = 1
 	neutrality = 80
-}
-
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	create_operative_leader = {
-		name = "Noor Inayat Khan"
-		GFX = GFX_portrait_noor_inayat_khan
-		traits = {  }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = { RAJ }
-	}
 }

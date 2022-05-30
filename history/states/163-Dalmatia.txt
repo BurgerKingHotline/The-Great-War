@@ -16,7 +16,6 @@ state=
 		}
 		add_core_of = CRO
 		add_core_of = ASH
-		start_resistance = CRO #Yugoslavia shouldn't resist occupation
 	} 
 	provinces={	
 		3943 

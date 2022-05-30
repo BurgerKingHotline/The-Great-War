@@ -442,15 +442,6 @@ country_event = {
 				has_government = fascism
 			}
 		}
-		if = {
-			limit = {
-				original_tag = LAT
-				FROM = { original_tag = GER }
-			}
-				focus = LAT_alignment_with_germany
-				uncomplete_children = yes
-			}
-		}
 	}
 	option = {
 		name = generic.4.c
@@ -485,15 +476,6 @@ country_event = {
 					}
 					has_government = communism
 				}
-			}
-		}
-		if = {
-			limit = {
-				original_tag = LAT
-				FROM = { original_tag = GER }
-			}
-				focus = LAT_alignment_with_germany
-				uncomplete_children = yes
 			}
 		}
 	}

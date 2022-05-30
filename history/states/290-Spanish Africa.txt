@@ -17,9 +17,6 @@ state={
 		add_claim_by = SPR
 		buildings = {
 			infrastructure = 2
-			12100 = {
-				naval_base = 3
-			}
 		}
 	}
 

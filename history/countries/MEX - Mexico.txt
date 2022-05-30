@@ -65,24 +65,9 @@ set_convoys = 45
 set_stability = 0.2
 set_war_support = 0.1
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = {
-		MEX_callistas
-		MEX_church_power_2
-		MEX_oil_concessions
-		MEX_politicised_army
-		MEX_cedillo_tension_2
-	}
-}
-
 1939.1.1 = {
 	add_political_power = 1198
 	add_command_power = 100
-
-	set_global_flag = flag_mexico_cedillo_has_revolted
 	
 	oob = "MEX_1939"
 	if = {
@@ -124,60 +109,6 @@ if = {
 		dispersed_industry = 1
 		dispersed_industry2 = 1
 		dispersed_industry3 = 1
-	}
-
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-
-		remove_ideas = {
-			MEX_cedillo_tension_2 # Already rebelled by this point
-		}
-		
-		# 70
-		# 140
-		# 210
-		# 280
-		# 350
-		# 420
-		# 490
-		# 560
-		# 630
-		# 700
-		# 770
-		# 840
-		# 910
-		unlock_national_focus = MEX_focus_nationalize_the_oil_fields
-		# 980
-		remove_ideas = {
-			MEX_oil_concessions
-		}
-		
-		ENG = {
-			add_opinion_modifier = {
-				target = MEX
-				modifier = embargo
-			}
-		}
-		USA = {
-			add_opinion_modifier = {
-				target = MEX
-				modifier = embargo
-			}
-		}
-		add_opinion_modifier = {
-			target = ENG
-			modifier = embargo
-		}
-		add_opinion_modifier = {
-			target = USA
-			modifier = embargo
-		}
-		
-		else = {
-			#generic focuses
-		}
 	}
 }
 

@@ -166,10 +166,6 @@ if = {
 		partial_economic_mobilisation
 	}
 
-
-	give_guarantee = POL
-	ENG = { add_to_faction = FRA }
-
 	
 	if = {
 		limit = { has_dlc = "Man the Guns" }
@@ -297,18 +293,8 @@ set_popularities = {
 }
 
 add_ideas = {
-	FRA_victors_of_wwi
-	FRA_disjointed_government
-	FRA_protected_by_the_maginot_line
 	limited_conscription
-	FRA_full_employment
-	FRA_political_violence
-	FRA_inefficient_economy_2
 }
-
-give_guarantee = CZE
-give_guarantee = YUG
-give_guarantee = ROM
 
 
 

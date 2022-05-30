@@ -495,10 +495,7 @@ technology_sharing_group = {
 	categories = { industry electronics nuclear rocketry }
 
 	available = {
-		OR = {
-			original_tag = SOV
-			SOV_is_valid_academy_of_sciences_target = yes
-		}
+		original_tag = SOV
 	}
 }
 
@@ -514,10 +511,7 @@ technology_sharing_group = { #Alternative Soviet Academy of Sciences for non com
 	categories = { industry electronics nuclear rocketry }
 
 	available = {
-		OR = {
-			original_tag = SOV
-			SOV_is_valid_academy_of_sciences_target = yes
-		}
+		original_tag = SOV
 	}
 }
 

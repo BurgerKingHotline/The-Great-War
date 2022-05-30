@@ -66,53 +66,8 @@ if = {
 		basic_depth_charges = 1
 	}
 }
-if = {
-	limit = { has_dlc = "No Step Back" }
-	set_variable = {
-		var = pol_peasant_democracy
-		value = 30
-	}
-	set_variable = {
-		var = pol_peasant_communism
-		value = 30
-	}
-}
-
-if = {
-	limit = {
-		has_dlc = "Poland: United and Ready"
-	}
-	add_ideas = {
-		uncontrolled_exports
-		POL_april_constitution_1
-		POL_looming_peasants_strike
-		POL_sanation_left_opposition_1
-		POL_sanation_right_opposition_1
-	}
-}
-
-
-85 = {
-	add_dynamic_modifier = { modifier = international_city }
-}
 
 1939.1.1 = {
-	
-	if = {
-		limit = {
-			has_dlc = "Poland: United and Ready"
-		}
-
-		unlock_national_focus = POL_the_four_year_plan
-		unlock_national_focus = POL_prepare_for_the_next_war
-		unlock_national_focus = POL_standardisation_of_equipment
-		unlock_national_focus = POL_modernising_the_cavalry
-
-
-
-
-		remove_ideas = POL_looming_peasants_strike
-	}
 
 	add_political_power = 1198
 	add_command_power = 100
@@ -125,17 +80,6 @@ if = {
 		limited_conscription
 		partial_economic_mobilisation
 	}
-	if = {
-		limit = {
-			NOT = { has_dlc = "Poland: United and Ready" }
-		}
-		add_ideas = {
-			#laws
-			limited_exports
-		}
-	}
-
-
 	
 	if = {
 		limit = { has_dlc = "Man the Guns" }

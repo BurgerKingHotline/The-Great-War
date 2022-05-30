@@ -4,7 +4,7 @@ state={
 	name="STATE_863"
 	manpower = 365552
 	
-	state_category = wasteland
+	state_category = rural
 
 	history={
 		owner = MOR
