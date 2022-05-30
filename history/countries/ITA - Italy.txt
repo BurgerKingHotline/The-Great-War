@@ -21,8 +21,6 @@ set_research_slots = 4
 set_stability = 0.6
 set_war_support = 0.7
 add_ideas = {
-	victor_emmanuel
-	vittoria_mutilata
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
@@ -170,23 +168,6 @@ if = {
 		extensive_conscription
 	}
 
-	unlock_national_focus = ITA_slovenia_dalmatia_claims
-	unlock_national_focus = ITA_albania_war_goal
-
-	unlock_national_focus = ITA_modernized_artillery
-
-	#Simulate Claims on Yugoslavia focus effects
-	add_state_claim = 102
-	add_state_claim = 103
-	add_named_threat = { threat = 4 name = ITA_slovenia_dalmatia_claims_threat }
-	YUG = {
-		add_opinion_modifier = { target = ITA modifier = claimed_western_yugoslavia }
-		add_popularity = {
-			ideology = fascism
-			popularity = -0.07
-		}
-	}
-
 
 	oob = "ITA_1939"
 	set_technology = {
@@ -294,15 +275,16 @@ if = {
 set_convoys = 200
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = neutrality
 	last_election = "1934.3.26"
 	election_frequency = 60
 	elections_allowed = no
 }
 set_popularities = {
 	democratic = 22
-	fascism = 76
+	fascism = 26
 	communism = 2
+	neutrality = 50
 }
 
 

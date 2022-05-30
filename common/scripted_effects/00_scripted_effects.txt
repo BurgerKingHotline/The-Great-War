@@ -1177,50 +1177,16 @@ join_allies_effect = {
 
 #Should remove any and all fascist foreign influence, to be updated
 remove_fascist_spirits_effect = {
-	if = {
-		remove_ideas = fascist_influence
-	}
-	if = {
-		remove_ideas = american_influence_drift_fascism
-	}
-	if = {
-		remove_ideas = GER_align_hungary
-	}
-	if = {
-		remove_ideas = GER_align_romania
-	}
+	remove_ideas = fascist_influence
 }
 
 #Should remove any and all communist foreign influence
 remove_communist_spirits_effect = {
-	if = {
-		remove_ideas = american_influence_drift_communism
-	}
-	if = {
-		remove_ideas = comintern_influence
-	}
-	if = {
-		remove_ideas = pan_slavic_propaganda
-	}
-	if = {
-		remove_ideas = agitated_peasants
-	}
-	if = {
-		remove_ideas = armed_communist_militants
-	}
-	if = {
-		remove_ideas = BALTIC_communist_propaganda
-	}
-	if = { 
-		remove_ideas = BALTIC_communist_militancy
-	}
 }
 
 #Should remove any and all democratic foreign influence
 remove_democratic_spirits_effect = {
-	if = {
-		remove_ideas = democratic_influence
-	}
+	remove_ideas = democratic_influence
 }
 
 #Adds current ruling popularity to a new ideology - useful to represent ideological shifts within the same party

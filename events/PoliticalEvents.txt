@@ -881,29 +881,6 @@ country_event = {
 		NOT = { has_country_flag = democracy_opposition_formed }
 		is_puppet = no
 		NOT = { democratic > 0.59 }
-		NOT = {
-			AND = {
-				has_dlc = "No Step Back"
-				OR = {
-					original_tag = POL
-					original_tag = EST
-					original_tag = LAT
-					original_tag = LIT
-					AND = {
-						original_tag = FIN
-					}
-				}
-			}
-		}
-		NOT = {
-			AND = {
-				has_dlc = "Battle for the Bosporus"
-				OR = {
-					original_tag = GRE
-					original_tag = TUR
-				}
-			}
-		}
 	}
 	
 	mean_time_to_happen = {
@@ -1579,13 +1556,7 @@ country_event = {
 	desc = political.24.d
 	picture = GFX_report_event_fascists_posing
 
-	trigger = {
-		fascism < 0.3
-	}
-
-	mean_time_to_happen = {
-		days = 2
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = political.24.a
@@ -1599,13 +1570,7 @@ country_event = {
 	desc = political.25.d
 	picture = GFX_report_event_stalin_propaganda
 
-	trigger = {
-		communism < 0.3
-	}
-
-	mean_time_to_happen = {
-		days = 2
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = political.25.a
@@ -1619,13 +1584,7 @@ country_event = {
 	desc = political.26.d
 	picture = GFX_report_event_europe_funeral
 
-	trigger = {
-		democratic < 0.3
-	}
-
-	mean_time_to_happen = {
-		days = 2
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = political.26.a
