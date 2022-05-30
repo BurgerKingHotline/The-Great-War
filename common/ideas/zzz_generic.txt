@@ -1,5 +1,25 @@
 ideas = {
 
+	country = {
+		economic_cooperation_spirits = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+
+		}
+	}
+
 	hidden_ideas = {
 
 		continuous_naval_production = {
