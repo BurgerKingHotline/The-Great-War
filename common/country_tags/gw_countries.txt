@@ -1,3 +1,4 @@
 ASH = "countries/AustriaHungary.txt"
 RUS = "countries/Russia.txt"
 OTT = "countries/Ottomans.txt"
+QIN = "countries/Qing.txt"
