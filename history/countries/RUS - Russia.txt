@@ -95,6 +95,22 @@ give_guarantee = FRA
 give_guarantee = ENG
 
 
-
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = BUK
+		autonomous_state = autonomy_integrated_puppet
+	}
+	set_autonomy = {
+		target = KHI
+		autonomous_state = autonomy_integrated_puppet
+	}
+	else = {
+		puppet = BUK
+		puppet = KHI
+	}
+}
 
 

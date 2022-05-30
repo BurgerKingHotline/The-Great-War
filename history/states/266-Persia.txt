@@ -2,7 +2,10 @@
 state={
 	id=266
 	name="STATE_266" # Tehran
-	manpower = 3446250
+	manpower = 1080000 
+	resources={
+		oil=19
+	}
 	
 	state_category = town
 
@@ -14,14 +17,12 @@ state={
 			industrial_complex = 2
 			air_base = 3
 		}
-		victory_points = {
-			10837 10 
-		}
+		
 		add_core_of = PER
 	}
 
 	provinces={
-		4580 7602 10385 10768 10837 
+		4580 7602 10351 10385 10768 
 	}
 
 	local_supplies=0.0 

@@ -5,19 +5,21 @@ state={
 		tungsten=2.000
 	}
 
+	impassable = yes
+
 	history={
-		owner = CHI
+		owner = QIN
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
 
 		}
 		add_core_of = TIB
-
+		add_claim_by = QIN
 	}
 
 	provinces={
-		2010 2093 4994 5011 7926 8068 10755 10918 
+		2010
 	}
 	manpower=1722000
 	buildings_max_level_factor=1.000

@@ -17,6 +17,7 @@ state={
 		}
 		add_core_of = CRO
 		add_core_of = ASH
+		add_core_of = HUN
 	}
 
 	provinces={

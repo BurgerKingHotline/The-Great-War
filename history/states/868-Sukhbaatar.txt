@@ -1,0 +1,20 @@
+state={
+	id=868
+	name="STATE_868"
+	provinces={
+		4873 10805
+	}
+
+	history={
+		owner = QIN
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = MON
+		add_core_of = QIN
+	}
+	manpower=17800
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}
