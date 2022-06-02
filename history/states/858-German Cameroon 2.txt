@@ -15,7 +15,7 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = CAM
+		add_core_of = CMR
 		1911.11.4 = {
 			owner = FRA
 		}
