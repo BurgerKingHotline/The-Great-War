@@ -1,0 +1,103 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#       attacker_modifier = no  # if yes this modifier will also be read in combat for 
+#                               # people engaging in the combat even if not in the state
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+
+#senussiya resistence mechanic modifiers
+senussiya_resistence_modifier_1 = {
+	remove_trigger = { 
+		has_resistance = no
+		owner = {
+			original_tag = LBA
+		}
+	}
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	compliance_growth = -0.05
+	local_manpower = -0.15
+	local_resources = -0.25
+	resistance_decay = -0.15 	
+	state_resources_factor = -0.2
+	state_production_speed_buildings_factor = -0.3
+}
+
+senussiya_resistence_modifier_2 = {
+	remove_trigger = { 
+		has_resistance = no
+		owner = {
+			original_tag = LBA
+		}
+	}
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	compliance_growth = -0.15
+	local_manpower = -0.3
+	local_resources = -0.5
+	resistance_decay = -0.25
+	resistance_damage_to_garrison = 0.1
+	state_resources_factor = -0.35
+	state_production_speed_buildings_factor = -0.5
+}
+
+senussiya_resistence_modifier_3 = {
+	remove_trigger = { 
+		has_resistance = no
+		owner = {
+			original_tag = LBA
+		}
+	}
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	compliance_growth = -0.25
+	local_manpower = -0.45
+	local_resources = -0.65
+	resistance_decay = -0.35
+	resistance_damage_to_garrison = 0.25
+	state_resources_factor = -0.40
+	state_production_speed_buildings_factor = -0.65
+}
+senussiya_resistence_modifier_4 = {
+	remove_trigger = { 
+		has_resistance = no
+		owner = {
+			original_tag = LBA
+		}
+	}
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	compliance_growth = -0.40
+	local_manpower = -0.75
+	local_resources = -0.75
+	resistance_decay = -0.5
+	resistance_damage_to_garrison = 0.5
+	state_resources_factor = -0.6
+	state_production_speed_buildings_factor = -0.65
+}

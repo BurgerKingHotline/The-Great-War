@@ -1,0 +1,124 @@
+#	Example:
+#
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+
+#Senussiya resistence mechanic scripted effects, theres probably a better way to do this though
+
+increase_senussiya_resistence = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = senussiya_resistence_modifier_1
+			}
+		}
+		remove_dynamic_modifier = { 
+			modifier = senussiya_resistence_modifier_1
+		} 
+		add_dynamic_modifier = {
+			modifier = senussiya_resistence_modifier_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = senussiya_resistence_modifier_2
+			}
+		}
+		remove_dynamic_modifier = { 
+			modifier = senussiya_resistence_modifier_2
+		} 
+		add_dynamic_modifier = {
+			modifier = senussiya_resistence_modifier_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = senussiya_resistence_modifier_3
+			}
+		}
+		remove_dynamic_modifier = { 
+			modifier = senussiya_resistence_modifier_3
+		} 
+		add_dynamic_modifier = {
+			modifier = senussiya_resistence_modifier_4
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_state_flag = senussiya_resistence_modifier_1}
+		}
+		add_dynamic_modifier = {
+			modifier = senussiya_resistence_modifier_1
+		}
+		set_state_flag = senussiya_resistence_flag
+	}
+}
+
+decrease_senussiya_resistence = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = senussiya_resistence_modifier_4
+			}
+		}
+		remove_dynamic_modifier = { 
+			modifier = senussiya_resistence_modifier_4
+		} 
+		add_dynamic_modifier = {
+			modifier = senussiya_resistence_modifier_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = senussiya_resistence_modifier_3
+			}
+		}
+		remove_dynamic_modifier = { 
+			modifier = senussiya_resistence_modifier_3
+		} 
+		add_dynamic_modifier = {
+			modifier = senussiya_resistence_modifier_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = senussiya_resistence_modifier_2
+			}
+		}
+		remove_dynamic_modifier = { 
+			modifier = senussiya_resistence_modifier_2
+		} 
+		add_dynamic_modifier = {
+			modifier = senussiya_resistence_modifier_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = senussiya_resistence_modifier_1
+			}
+		}
+		remove_dynamic_modifier = { 
+			modifier = senussiya_resistence_modifier_1
+		}
+		clr_state_flag = senussiya_resistence_flag
+	}
+}

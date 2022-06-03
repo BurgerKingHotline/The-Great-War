@@ -1,0 +1,76 @@
+﻿###########################
+# Nuclear Bomb Events
+###########################
+
+add_namespace = TLG_newsevents
+
+# senussiya revolts!
+news_event = {
+	id = TLG_newsevents.1
+	title = TLG_newsevents.1.t
+	desc = TLG_newsevents.1.desc
+	picture = GFX_news_event_nuke
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #eh we can defeat them
+		name = decisions.1.a
+		trigger = {
+			OR = {
+				original_tag = FROM
+				is_in_faction_with = FROM
+				is_subject_of = FROM
+				FROM = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
+
+	option = { #Great!
+		name = decisions.1.b
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+
+	option = { #hopefully this wont inspire our colonies...
+		name = decisions.1.c
+		trigger = {
+			NOT = {
+				original_tag = FROM
+				is_in_faction_with = FROM
+				is_subject_of = FROM
+				FROM = {
+					is_subject_of = ROOT
+				}
+				has_war_with = FROM
+			}
+			any_owned_state = {
+				is_in_home_area = NO
+			}
+		}
+	}
+
+	option = { #good for them ig
+		name = decisions.1.c
+		trigger = {
+			NOT = {
+				original_tag = FROM
+				is_in_faction_with = FROM
+				is_subject_of = FROM
+				FROM = {
+					is_subject_of = ROOT
+				}
+				has_war_with = FROM
+				any_owned_state = {
+					is_in_home_area = NO
+				}
+			}
+		}
+	}
+}

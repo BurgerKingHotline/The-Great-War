@@ -15,6 +15,11 @@ state={
 		1912.10.18 = {
 			owner = EGY
 		}
+		set_state_flag = senussiya_resistence_flag
+		set_state_flag = senussiya_headquarters
+		add_dynamic_modifier = {
+			modifier = senussiya_resistence_modifier_1
+		}
 	}
 
 	provinces={

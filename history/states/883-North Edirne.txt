@@ -1,0 +1,28 @@
+
+state= {
+	id=883
+	name="STATE_883"
+	manpower = 363947
+	resources={
+
+	}
+	
+	state_category = town
+
+	history= {
+		owner = OTT
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = OTT
+		1913.5.30 = {
+			owner = BUL
+		}
+	}
+	
+	provinces =	{
+		10758
+	}
+
+	local_supplies=0.0 
+}

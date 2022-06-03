@@ -436,3 +436,84 @@ country_event = {
 		}
 	}
 }
+
+country_event = { #Senussiya Revolt
+	id = decisions.3
+	title = decisions.3.t
+	desc = decisions.3.desc
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = {
+							modifier = senussiya_resistence_modifier_4
+						}
+						has_dynamic_modifier = {
+							modifier = senussiya_resistence_modifier_3
+						}
+					}
+				}
+				transfer_state_to = LBA
+				random_list = {
+					2 = {
+						create_unit = {
+							division = "name = \"Infantry Division\" division_template = \"Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+							owner = LBA
+						}
+						modifier = {
+							factor = 2
+							has_dynamic_modifier = {
+								modifier = senussiya_resistence_modifier_4
+							}
+						}
+					}
+					1 = {
+						create_unit = {
+							division = "name = \"Infantry Division\" division_template = \"Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+							owner = LBA
+						}
+						create_unit = {
+							division = "name = \"Infantry Division\" division_template = \"Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.5 start_manpower_factor = 1"
+							owner = LBA
+						}
+						modifier = {
+							factor = 3
+							has_dynamic_modifier = {
+								modifier = senussiya_resistence_modifier_4
+							}
+						}
+					}
+					1 = {
+					}
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.5 start_manpower_factor = 1"
+					owner = LBA
+				}
+			}
+			set_global_flag = senussiya_revolted
+			declare_war_on = {
+				target = ROOT
+				type = annex_everything
+			}
+		}
+	}
+	
+	# we can defeat them
+	option = {
+		name = decisions.1.a
+	}
+
+	# For islam!
+	option = {
+		name = decisions.1.b
+		LBA = { change_tag_from = ROOT }
+	}
+}

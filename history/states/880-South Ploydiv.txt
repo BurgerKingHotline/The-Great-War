@@ -1,0 +1,31 @@
+
+state={
+	id=880
+	name="STATE_880"
+	manpower = 1814936
+	
+	state_category = large_town
+
+	resources={
+		chromium = 1
+	}
+
+	history={
+		owner = OTT
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex =2
+		}
+		add_core_of = OTT
+		1913.5.30 = {
+			owner = BUL
+		}
+	}
+
+	provinces={
+		1958 6857 9818 
+	}
+
+	local_supplies=5.0 
+}

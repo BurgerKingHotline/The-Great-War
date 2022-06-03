@@ -14,7 +14,12 @@ state={
 		}
 
 		add_core_of = EGY
+		add_core_of = LBA
 
+		set_state_flag = senussiya_resistence_flag
+		add_dynamic_modifier = {
+			modifier = senussiya_resistence_modifier_1
+		}
 	}
 
 	provinces={

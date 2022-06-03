@@ -1,0 +1,263 @@
+senussiya_owned_decisions = {
+	senussiya_decrease_decision = {
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				has_state_flag = senussiya_resistence_flag
+			}
+		}
+
+		available = {
+			if = { #so you wont be able to just remove senussiya in a year,
+				limit = {
+					FROM = {
+						has_state_flag = senussiya_headquarters
+					}
+				}
+				FROM = {
+					compliance > 90
+					resistance < 10
+				}
+				
+				has_equipment = {
+					infantry_equipment > 1999
+				}
+				
+			}
+			else = {
+				has_equipment = {
+					infantry_equipment > 999
+				}
+			}
+		}
+
+		on_map_mode = map_only
+
+		state_target = yes
+
+        cost = 100
+
+		days_re_enable = 64
+
+        complete_effect = {
+			FROM = {
+				decrease_senussiya_resistence = yes
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+        }
+		ai_will_do = {
+			factor = 100
+		}
+    }
+
+	senussiya_resistence_increase = {
+
+		icon = generic_form_nation
+
+		available = {                           
+			
+		}
+		activation = {                          
+			any_owned_state = {
+				is_core_of = LBA
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = senussiya_resistence_modifier_4
+					}
+				}
+				if = {
+					limit = {
+						owner = {
+							original_tag = OTT
+						}
+					}
+					resistance > 60
+					compliance < 40
+					ROOT = {
+						has_stability < 0.7
+					}
+				}
+				else = {
+					resistance > 25
+					compliance < 70
+					ROOT = {
+						has_stability < 0.9
+					}
+				}
+			}
+			any_owned_state = {
+				has_state_flag = senussiya_resistence_flag
+			}
+		}
+		is_good = no              
+		selectable_mission = yes             
+		days_mission_timeout = 50              
+		timeout_effect = {  
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = LBA
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = senussiya_resistence_modifier_4
+						}
+					}
+					if = {
+						limit = {
+							owner = {
+								original_tag = OTT
+							}
+						}
+						resistance > 60
+						compliance < 40
+						ROOT = {
+							has_stability < 0.7
+						}
+					}
+					else = {
+						resistance > 40
+						compliance < 60
+						ROOT = {
+							has_stability < 0.9
+						}
+					}
+				}
+				increase_senussiya_resistence = yes
+			}                                 
+        }
+        complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1500
+			}
+			add_political_power = -50
+        }
+	}
+
+	senussiya_revolt = {
+
+		icon = generic_form_nation
+
+		available = {                           
+			NOT = {
+				all_owned_state = {
+					if = {
+						limit = {
+							has_state_flag = senussiya_resistence_flag
+						}
+						OR = {
+							has_dynamic_modifier = {
+								modifier = senussiya_resistence_modifier_4
+							}
+							has_dynamic_modifier = {
+								modifier = senussiya_resistence_modifier_3
+							}
+						}
+					}
+				}
+			}
+		}
+		activation = {                          
+			all_owned_state = {
+				if = {
+					limit = {
+						has_state_flag = senussiya_resistence_flag
+					}
+					OR = {
+						has_dynamic_modifier = {
+							modifier = senussiya_resistence_modifier_4
+						}
+						has_dynamic_modifier = {
+							modifier = senussiya_resistence_modifier_3
+						}
+					}
+				}
+			}
+			has_stability < 0.8
+			NOT = {
+				has_global_flag = senussiya_revolted
+			}
+		}
+		is_good = no              
+		selectable_mission = no
+		days_mission_timeout = 50              
+		timeout_effect = {
+			effect_tooltip = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							has_dynamic_modifier = {
+								modifier = senussiya_resistence_modifier_4
+							}
+							has_dynamic_modifier = {
+								modifier = senussiya_resistence_modifier_3
+							}
+						}
+					}
+					transfer_state_to = LBA
+				}
+				LBA = {
+					declare_war_on = {
+						target = ROOT
+						type = annex_everything
+					}
+				}
+				
+			} 
+			country_event = { id = decisions.3 }
+        }
+        complete_effect = {
+			
+        }
+	}
+}
+
+senussiya_enemy_decisions = {
+	fund_senussiya_decision = {
+
+		target_trigger = {
+			FROM = {
+				any_owned_state = {
+					has_state_flag = senussiya_resistence_flag
+				}
+			}
+		}
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+
+        cost = 25
+
+		days_re_enable = 64
+
+        complete_effect = {
+			FROM = {
+				random_state = {
+					limit = {
+						is_core_of = LBA
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = senussiya_resistence_modifier_4
+							}
+						}
+					}
+					increase_senussiya_resistence = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+        }
+		ai_will_do = {
+			factor = 100
+		}
+    }
+}

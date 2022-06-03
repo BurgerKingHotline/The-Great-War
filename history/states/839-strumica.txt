@@ -7,12 +7,16 @@ state={
 	state_category = rural
 
 	history={
-		owner = BUL
+		owner = OTT
 		buildings = {
 			infrastructure = 1
 		}
 		add_core_of = BUL
 		add_core_of = SER
+		add_core_of = OTT
+		1913.5.30 = {
+			owner = BUL
+		}
 	}
 
 	provinces={
