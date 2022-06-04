@@ -1,0 +1,41 @@
+ideas = {
+
+	country = {
+		balkan_wars_idea = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.1
+				army_core_attack_factor = 0.2
+				training_time_factor = -0.05
+			}
+
+		}
+		ott_first_balkan_war = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = -0.15
+			}
+
+		}
+	}
+}

@@ -85,6 +85,16 @@ bookmarks = {
 			history = "OTHER_BLITZKRIEG_DESC"
 		}
 
+		"SER"={
+			minor = yes
+			history = "RAJ_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
 		# minors from DLC ####
 		
 		effect = {

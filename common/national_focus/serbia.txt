@@ -1,0 +1,245 @@
+﻿focus_tree = {
+	id = serbian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SER
+		}
+	}
+	
+	continuous_focus_position = { x = 70 y = 1300 }
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = SER_balkan_intervention
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.25
+		}
+	}
+
+	focus = {
+		id = SER_recliam_serbia
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = SER_balkan_intervention
+		prerequisite = { focus = SER_balkan_intervention }
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_claim = 876
+			add_state_claim = 802
+			add_state_claim = 872
+			add_state_claim = 106
+		}
+	}
+
+	focus = {
+		id = SER_balkan_league
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = SER_recliam_serbia
+		prerequisite = { focus = SER_recliam_serbia }
+		mutually_exclusive = { focus = SER_alone }
+		x = 1
+		y = 1
+		cost = 10
+		available = {
+			date > 1912.01.01
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_faction = balkan_league
+			add_to_faction = SER
+			add_to_faction = GRE
+			add_to_faction = BUL
+			add_to_faction = MNT
+		}
+	}
+
+	focus = {
+		id = SER_balkan_war_i
+		relative_position_id = SER_balkan_league
+		prerequisite = { focus = SER_balkan_league }
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		cost = 1
+		available = {
+			date > 1912.08.01
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				declare_war_on = {
+    				target = OTT
+   					type = take_claimed_state 
+				}
+			}
+			hidden_effect = {
+				OTT = {
+					add_timed_idea = {
+    					idea = ott_first_balkan_war
+    					days = 240
+					}
+				}
+				SER = {
+					add_timed_idea = {
+    					idea = balkan_wars_idea
+    					days = 450 
+					}
+					declare_war_on = {
+    					target = OTT
+   						type = take_claimed_state 
+					}
+					add_to_faction = ALB
+				}
+				BUL = {
+					add_timed_idea = {
+    					idea = balkan_wars_idea
+    					days = 450 
+					}
+					declare_war_on = {
+    					target = OTT
+   						type = take_claimed_state 
+					}
+				}
+				MNT = {
+					add_timed_idea = {
+    					idea = balkan_wars_idea
+    					days = 450 
+					}
+					declare_war_on = {
+    					target = OTT
+   						type = take_claimed_state 
+					}
+				}
+				GRE = {
+					add_timed_idea = {
+    					idea = balkan_wars_idea
+    					days = 450 
+					}
+					declare_war_on = {
+    					target = OTT
+   						type = take_claimed_state
+					}
+				}
+				ALB = {
+					add_timed_idea = {
+    					idea = balkan_wars_idea
+    					days = 235 
+					}
+					transfer_state = 44
+					declare_war_on = {
+    					target = OTT
+   						type = take_claimed_state 
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SER_balkan_war_ii
+		relative_position_id = SER_balkan_war_i
+		prerequisite = { focus = SER_balkan_war_i }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		available = {
+			date > 1913.06.01
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SER_alone
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = SER_recliam_serbia
+		available = {
+			always = no
+		}
+		prerequisite = { focus = SER_recliam_serbia }
+		mutually_exclusive = { focus = SER_balkan_league }
+		x = -1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SER_ottoman_negotiation
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = SER_alone
+		prerequisite = { focus = SER_alone }
+		x = -2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SER_serbian_rebels
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = SER_alone
+		prerequisite = { focus = SER_alone }
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SER_unification
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = SER_recliam_serbia
+		prerequisite = { focus = SER_balkan_war_i focus = SER_serbian_rebels focus = SER_ottoman_negotiation }
+		x = 0
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = SER_bosnian_rebels
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = SER_unification
+		prerequisite = { focus = SER_unification }
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+}

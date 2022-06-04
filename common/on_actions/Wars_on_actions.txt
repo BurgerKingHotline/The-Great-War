@@ -1,0 +1,78 @@
+on_actions = {
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = {
+                    OTT = {
+                    NOT = {
+                    has_country_flag = balkan_war_i
+                    controls_state = 44
+                    controls_state = 341
+                    controls_state = 184
+                    controls_state = 874
+                    controls_state = 875
+                    controls_state = 876
+                    controls_state = 802
+                    controls_state = 872
+                    controls_state = 106
+                    controls_state = 805
+                    controls_state = 185
+                    controls_state = 731
+                    controls_state = 871
+                    controls_state = 878
+                    controls_state = 879
+                    controls_state = 839
+                    controls_state = 880
+                    controls_state = 881
+                    controls_state = 855
+                    controls_state = 883
+                }
+                has_war_with = BUL
+                has_war_with = SER
+                has_war_with = MNT
+                has_war_with = GRE
+                has_war_with = ALB
+            }
+        }
+            BUL = {
+                transfer_state = 341
+                transfer_state = 871
+                transfer_state = 878
+                transfer_state = 839
+                transfer_state = 880
+                transfer_state = 881
+                transfer_state = 855
+                transfer_state = 883
+                transfer_state = 184
+                white_peace = OTT
+            }
+            SER = {
+                transfer_state = 106
+                transfer_state = 872
+                transfer_state = 802
+                white_peace = OTT
+            }
+            MNT = {
+                transfer_state = 874
+                transfer_state = 876
+                white_peace = OTT
+            }
+            GRE = {
+                transfer_state = 185
+                transfer_state = 731
+                transfer_state = 879
+                white_peace = OTT
+            }
+            ALB = {
+                transfer_state = 805
+                transfer_state = 44
+                transfer_state = 875
+                white_peace = OTT
+            }
+            OTT = {
+                set_country_flag = balkan_war_i
+            }
+        }
+    }
+}
+}

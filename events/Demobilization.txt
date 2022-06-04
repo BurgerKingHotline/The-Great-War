@@ -1,0 +1,20 @@
+﻿
+add_namespace = demobilization
+
+country_event = {
+	id = demobilization.1
+    title = demobilization.1.t 
+    desc = demobilization.1.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = demobilization.1.a 
+		set_equipment_fraction = 0.2
+		add_ideas = {
+   			civilian_economy 
+   			volunteer_only 
+		}
+	}
+}
