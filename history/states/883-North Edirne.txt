@@ -2,7 +2,7 @@
 state= {
 	id=883
 	name="STATE_883"
-	manpower = 363947
+	manpower = 9001s
 	resources={
 
 	}
@@ -15,6 +15,7 @@ state= {
 			infrastructure = 1
 		}
 		add_core_of = OTT
+		add_claim_by = BUL
 		1913.5.30 = {
 			owner = BUL
 		}

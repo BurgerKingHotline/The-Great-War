@@ -4,13 +4,9 @@ state={
 	name="STATE_877"
 
 	history={
-		victory_points = {
-			9602 3 
-		}
 		owner = SER
 		buildings = {
 			infrastructure = 2
-
 		}
 		add_core_of = SER
 		add_core_of = KOS
@@ -20,7 +16,7 @@ state={
 	provinces={
 		6953 9890
 	}
-	manpower=707000
+	manpower=20000
 	buildings_max_level_factor=1.000
 	state_category=town
 

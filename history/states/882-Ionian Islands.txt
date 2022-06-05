@@ -2,15 +2,10 @@
 state={
 	id=882
 	name="STATE_882"
-	manpower = 760900
+	manpower = 254494
 	
 	state_category = rural
 	
-	resources={
-		chromium=14 # was: 20
-		steel = 14 # was: 20
-	}
-
 	history={
 		victory_points = {
 			10203 1

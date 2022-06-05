@@ -2,7 +2,7 @@
 state= {
 	id=341
 	name="STATE_341"
-	manpower = 363947
+	manpower = 295840
 	resources={
 
 	}
@@ -16,17 +16,12 @@ state= {
 		}
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
-			849 = {
-				naval_base = 3
-				coastal_bunker = 2
-			}
 		}
 		add_core_of = OTT
 	}
 
 	provinces =	{
-		849 922 3879 3893 6895 11842 	
+		922 3893 11842 	
 	}
 
 	local_supplies=0.0 

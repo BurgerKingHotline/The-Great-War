@@ -2,7 +2,7 @@
 state={
 	id=212
 	name="STATE_212"
-	manpower = 1814936
+	manpower = 450000
 	
 	state_category = large_town
 
@@ -14,9 +14,6 @@ state={
 		owner = BUL
 		victory_points = { #Plovdiv
 			6923 10
-		}
-		victory_points = { #Stara Zagora
-			6814 3
 		}
 		victory_points = { #Haskovo
 			9862 1
@@ -30,7 +27,7 @@ state={
 	}
 
 	provinces={
-		3937 6814 6923 6952 6982 9862 11813 
+		3937 6923 6952 6982 9862 11813 
 	}
 
 	local_supplies=5.0 

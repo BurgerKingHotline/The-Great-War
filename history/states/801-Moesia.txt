@@ -1,7 +1,7 @@
 state={
 	id=801
 	name="STATE_801"
-	manpower = 1218780
+	manpower = 1240000
 
 	state_category=rural
 
@@ -13,6 +13,12 @@ state={
 		victory_points = { #Pleven
 			3796 3
 		}
+		victory_points = { #Varna
+			9783 5
+		}
+		victory_points = { #Shumen
+			9769 1
+		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex =1
@@ -23,7 +29,7 @@ state={
 	}
 
 	provinces={
-		3796 3819 3952 6842 9610 9612 
+		649 3796 3819 3952 6842 9610 9612 9769 9783
 	}
 #	resources={
 #		oil=1

@@ -2,7 +2,7 @@
 state={
 	id=185
 	name="STATE_185"
-	manpower = 760900
+	manpower = 169000
 	
 	state_category = rural
 	
@@ -27,6 +27,7 @@ state={
 			owner = GRE
 		}
 		add_core_of = GRE
+		add_claim_by = ALB
 	}
 
 	provinces = {

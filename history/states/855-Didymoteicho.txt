@@ -1,0 +1,23 @@
+state={
+	id=855
+	name="STATE_855"
+	manpower = 30000
+	
+	state_category = rural
+
+	history={
+		owner = OTT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = OTT
+		add_core_of = GRE
+		add_claim_by = BUL
+	}
+
+	provinces={
+		10907
+	}
+
+	local_supplies=0.0 
+}

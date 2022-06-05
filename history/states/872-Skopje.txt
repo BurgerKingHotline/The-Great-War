@@ -16,7 +16,7 @@ state={
 			3882 5
 		}
 		add_core_of = SER
-		add_claim_by = BUL
+		add_core_of = BUL
 		1913.5.30 = {
 			owner = SER
 		}
@@ -25,7 +25,7 @@ state={
 	provinces={
 		833 867 3882
 	}
-	manpower=1374200
+	manpower=423047
 	buildings_max_level_factor=1.000
 	state_category=rural
 

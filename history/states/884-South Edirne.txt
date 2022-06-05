@@ -1,0 +1,30 @@
+
+state= {
+	id=884
+	name="STATE_884"
+	manpower = 540532
+	resources={
+
+	}
+	
+	state_category = town
+
+	history= {
+		owner = OTT
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			849 = {
+				naval_base = 3
+				coastal_bunker = 2
+			}
+		}
+		add_core_of = OTT
+	}
+
+	provinces =	{
+		849 3879 6895	
+	}
+
+	local_supplies=0.0 
+}

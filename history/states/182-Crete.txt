@@ -1,7 +1,7 @@
 state = {
 	id=182
 	name="STATE_182"
-	manpower = 387900
+	manpower = 311532
 	
 	state_category = town
 	history = {
@@ -23,6 +23,7 @@ state = {
 			}
 		}
 		add_core_of = GRE
+		add_claim_by = OTT
 	}
 	provinces = {
 		1164 4170 9940 12058

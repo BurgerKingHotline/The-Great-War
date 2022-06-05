@@ -18,6 +18,9 @@ state={
 		buildings = {
 			infrastructure = 2
 		}
+		1911.4.28 = {
+			owner = SPR
+		}
 	}
 
 	provinces={

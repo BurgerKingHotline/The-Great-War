@@ -6,6 +6,8 @@ state={
 		aluminium=7.000
 	}
 
+	impassable = yes
+
 	history={
 		owner = CAN
 		buildings = {
