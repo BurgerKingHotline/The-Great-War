@@ -45,7 +45,7 @@
 
 	focus = {
 		id = GEN_towards_germany
-		icon = GFX_focus_ger_revive_kaiserreich
+		icon = GFX_generic_deal_germany
 		x = -4
 		y = 1
 		cost = 10
@@ -302,7 +302,7 @@
 
 	focus = {
 		id = GEN_join_ger
-		icon = GFX_focus_ger_revive_kaiserreich
+		icon = GFX_generic_deal_germany
 		x = 1
 		y = 1
 		cost = 10

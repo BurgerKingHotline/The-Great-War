@@ -87,12 +87,11 @@ bookmarks = {
 		}
 		"ITA" = {
 			minor = yes
-			history = ITA_BLITZKRIEG_DESC
+			history = "ITA_BLITZKRIEG_DESC"
 			ideology = neutrality
 			ideas={
 			}
 			focuses = {
-				
 			}			
 		}
 		
