@@ -90,12 +90,14 @@ on_actions = {
         }
     }
     on_weekly_RUS = {
-        if = {
-            limit = {
-                check_variable = { RUS_socialist_radicalisation > 79 }
-                check_variable = { party_popularity_100@communism > 49 }
+        effect = {
+            if = {
+                limit = {
+                    check_variable = { RUS_socialist_radicalisation > 79 }
+                    check_variable = { party_popularity_100@communism > 49 }
+                }
+                RUS_civil_war_start = yes
             }
-            RUS_civil_war_start = yes
         }
     }
 }
