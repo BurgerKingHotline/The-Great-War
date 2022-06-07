@@ -85,14 +85,13 @@ bookmarks = {
 			focuses = {
 			}
 		}
-		"ITA" = {
-			minor = yes
-			history = "ITA_BLITZKRIEG_DESC"
+		"ITA"={#i dont know why minor = yes would make it dissapear so
+			history = "ITA_GATHERING_STORM_DESC"
 			ideology = neutrality
-			ideas={
+			ideas = {
 			}
 			focuses = {
-			}			
+			}
 		}
 		
 		effect = {

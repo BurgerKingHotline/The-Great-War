@@ -65,6 +65,7 @@ senussiya_owned_decisions = {
 		activation = {                          
 			any_owned_state = {
 				is_core_of = LBA
+				has_state_flag = senussiya_resistence_flag
 				NOT = {
 					has_dynamic_modifier = {
 						modifier = senussiya_resistence_modifier_4
@@ -89,9 +90,6 @@ senussiya_owned_decisions = {
 						has_stability < 0.9
 					}
 				}
-			}
-			any_owned_state = {
-				has_state_flag = senussiya_resistence_flag
 			}
 		}
 		is_good = no              
@@ -175,6 +173,9 @@ senussiya_owned_decisions = {
 							modifier = senussiya_resistence_modifier_3
 						}
 					}
+				}
+				else = {
+					always = no
 				}
 			}
 			has_stability < 0.8
