@@ -135,10 +135,6 @@ country_event = {
 	
 	option = { 
 		name = stability.3.a
-		ai_chance = {
-			
-		}
-		
 	}
 
 }
@@ -150,15 +146,7 @@ country_event = {
 	title = stability.21.t	
 	desc = {
 		text = stability.21.desc.a
-	trigger = { 		 
-		}	
-	} 	
-	desc = {
-		text = stability.21.desc.b
-	}
-	desc = {
-		text = stability.21.desc.c
-	}
+	} 
 
 	picture = GFX_report_event_desertion_poster					
 		
@@ -186,12 +174,6 @@ country_event = {
 	}
 	
 	option = { #military crackdown level 1
-		trigger = { 
-			NOT = {
-				OR = {
-				}
-			}
-		}
 		ai_chance = {
 			base = 50
 			modifier = {
@@ -245,6 +227,32 @@ country_event = {
 			modifier = {
 				has_political_power > 100
 				factor = 2
+			}
+		}
+		random_list = {
+			10 = {
+				add_to_variable = {
+					var = RUS_socialist_radicalisation
+					value = 15
+					tooltip = RUS_socialist_radicalisation_increase
+				}
+			}
+			30 = {
+				add_to_variable = {
+					var = RUS_socialist_radicalisation
+					value = 10
+					tooltip = RUS_socialist_radicalisation_increase
+				}
+			}
+			40 = {
+				add_to_variable = {
+					var = RUS_socialist_radicalisation
+					value = 5
+					tooltip = RUS_socialist_radicalisation_increase
+				}
+			}
+			20 = {
+				
 			}
 		}
 		add_political_power = -120

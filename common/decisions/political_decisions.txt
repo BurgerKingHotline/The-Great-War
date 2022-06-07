@@ -1846,14 +1846,13 @@ political_actions = {
 
 		available = {
             communism > 0.1
-            if = {
-				limit = {
-					tag = SPR
-				}
-				NOT = {
-				}
-			}
         }
+
+		allowed = {
+			NOT = {
+				original_tag = RUS
+			}
+		}
 	
 		modifier = {
 			communism_drift = -0.05
@@ -2025,6 +2024,12 @@ political_actions = {
 				}
 				NOT = {
 				}
+			}
+		}
+
+		allowed = {
+			NOT = {
+				original_tag = RUS
 			}
 		}
 

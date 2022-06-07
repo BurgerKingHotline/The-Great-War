@@ -1,0 +1,79 @@
+russian_socialism_decisions = {
+	RUS_raid_marxist_printing_houses = {
+		icon = generic_civil_support
+
+		available = {
+        }
+	
+		modifier = {
+			communism_drift = -0.05
+		}
+	
+		days_remove = 100
+		cost = 50
+
+		complete_effect = {
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 10
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+			add_stability = -0.05
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				check_variable = { RUS_socialist_radicalisation < 70 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { RUS_socialist_radicalisation < 50 }
+				check_variable = { party_popularity_100@communism > 30 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { RUS_socialist_radicalisation < 30 }
+				check_variable = { party_popularity_100@communism > 40 }
+			}
+		}
+	}
+
+	RUS_give_trade_unions_liberty = {
+		icon = generic_civil_support
+
+		available = {
+        }
+		cost = 100
+		days_re_enable = 60
+
+		complete_effect = {
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = -10
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				check_variable = { RUS_socialist_radicalisation > 40 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { RUS_socialist_radicalisation > 50 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { RUS_socialist_radicalisation > 60 }
+			}
+			modifier = {
+				factor = 20000
+				check_variable = { RUS_socialist_radicalisation > 70 }
+			}
+		}
+	}
+}

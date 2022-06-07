@@ -33,60 +33,69 @@ on_actions = {
                         has_war_with = ALB
                     }
                 }
-            BUL = {
-                transfer_state = 341
-                transfer_state = 871
-                transfer_state = 878
-                transfer_state = 839
-                transfer_state = 880
-                transfer_state = 881
-                transfer_state = 855
-                transfer_state = 883
-                transfer_state = 184
-                white_peace = OTT
-            }
-            SER = {
-                transfer_state = 106
-                transfer_state = 872
-                transfer_state = 802
-                transfer_state = 876
-                white_peace = OTT
-            }
-            MNT = {
-                transfer_state = 874
-                transfer_state = 875
-                white_peace = OTT
-            }
-            GRE = {
-                transfer_state = 185
-                transfer_state = 731
-                transfer_state = 879
-                white_peace = OTT
-            }
-            ALB = { #albania got its independence peacefully, plus wasn't in the balkan wars, but they're borders were defined by the treaty, so why not ig
-                transfer_state = 805
-                transfer_state = 44
-            }
-            OTT = {
-                set_country_flag = balkan_war_i_end
-                182 = {
-                    remove_claim_by = PREV
+                BUL = {
+                    transfer_state = 341
+                    transfer_state = 871
+                    transfer_state = 878
+                    transfer_state = 839
+                    transfer_state = 880
+                    transfer_state = 881
+                    transfer_state = 855
+                    transfer_state = 883
+                    transfer_state = 184
+                    white_peace = OTT
                 }
-                871 = {
-                    remove_core_of = OTT
+                SER = {
+                    transfer_state = 106
+                    transfer_state = 872
+                    transfer_state = 802
+                    transfer_state = 876
+                    white_peace = OTT
                 }
-                839 = {
-                    remove_core_of = OTT
+                MNT = {
+                    transfer_state = 874
+                    transfer_state = 875
+                    white_peace = OTT
                 }
-                878 = {
-                    remove_core_of = OTT
+                GRE = {
+                    transfer_state = 185
+                    transfer_state = 731
+                    transfer_state = 879
+                    white_peace = OTT
                 }
-                880 = {
-                    remove_core_of = OTT
+                ALB = { #albania got its independence peacefully, plus wasn't in the balkan wars, but they're borders were defined by the treaty, so why not ig
+                    transfer_state = 805
+                    transfer_state = 44
                 }
-                #so the ottomans dont hate the rest of the balkans as much 
+                OTT = {
+                    set_country_flag = balkan_war_i_end
+                    182 = {
+                        remove_claim_by = PREV
+                    }
+                    871 = {
+                        remove_core_of = OTT
+                    }
+                    839 = {
+                        remove_core_of = OTT
+                    }
+                    878 = {
+                        remove_core_of = OTT
+                    }
+                    880 = {
+                        remove_core_of = OTT
+                    }
+                    #so the ottomans dont hate the rest of the balkans as much 
+                }
             }
         }
     }
-}
+    on_weekly_RUS = {
+        if = {
+            limit = {
+                check_variable = { RUS_socialist_radicalisation > 79 }
+                check_variable = { party_popularity_100@communism > 49 }
+            }
+            RUS_civil_war_start = yes
+        }
+    }
 }

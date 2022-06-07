@@ -1,0 +1,17 @@
+﻿#########################
+#Russian civilwar events#
+#########################
+
+add_namespace = rus_civilwar
+
+#rus civil war starts
+country_event = {
+	id = rus_civilwar.1
+	title = rus_civilwar.1.t	
+	desc = rus_civilwar.1.desc	#
+	
+	option = { 
+		name = rus_civilwar.1.a
+	}
+
+}

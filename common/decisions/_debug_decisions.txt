@@ -259,4 +259,62 @@ debug_decisions = {
 		}
 	}
 
+	increase_socialist_radicalisation = {
+
+		allowed = {
+			tag = RUS
+		}
+
+        complete_effect = {
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 5
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+        }
+    }
+
+	decrease_socialist_radicalisation = {
+
+		allowed = {
+			tag = RUS
+		}
+
+        complete_effect = {
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = -5
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+        }
+    }
+
+	increase_socialist_popularity = {
+
+		allowed = {
+			tag = RUS
+		}
+
+        complete_effect = {
+			add_popularity = {
+				popularity = 0.05
+				ideology = communism
+			}
+        }
+    }
+
+	decrease_socialist_popularity = {
+
+		allowed = {
+			tag = RUS
+		}
+
+        complete_effect = {
+			add_popularity = {
+				popularity = -0.05
+				ideology = communism
+			}
+        }
+    }
+
 }

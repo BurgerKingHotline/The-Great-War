@@ -122,3 +122,7 @@ decrease_senussiya_resistence = {
 		clr_state_flag = senussiya_resistence_flag
 	}
 }
+
+RUS_civil_war_start = {
+	country_event = { id = rus_civilwar.1 days = 1}
+}
