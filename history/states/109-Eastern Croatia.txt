@@ -1,16 +1,14 @@
 
 state={
 	id=109
-	name="STATE_109" # Croatia
-	manpower = 2224400
-	
-	state_category = large_town
+	name="STATE_109"
 
 	history={
 		owner = ASH
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 3
+
 		}
 		victory_points = {
 			11581 3 
@@ -18,11 +16,14 @@ state={
 		add_core_of = CRO
 		add_core_of = ASH
 		add_core_of = HUN
+
 	}
 
 	provinces={
-		624 3592 3596 3627 6647 9595 9611 11577 11580 11581 11594
+		624 3592 3596 3601 9611 11581 
 	}
-
-	local_supplies=0.0 
+	manpower=926644
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
 }

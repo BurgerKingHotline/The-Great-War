@@ -2,11 +2,14 @@ state=
 {
 	id=163
 	name="STATE_163"
-	manpower = 18000
+	manpower = 14016
 	
-	state_category = enclave
+	state_category = city
 	
 	history={
+		victory_points = {
+			11639 2 
+		}
 		owner = ASH
 		buildings = {
 			infrastructure = 3 #was: 5
