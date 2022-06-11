@@ -1,0 +1,24 @@
+state={
+	id=902
+	name="STATE_902"
+	
+	history={
+		victory_points = {
+			11610 5 
+		}
+		owner = ASH
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ASH
+		add_core_of = HUN
+	}
+	
+	provinces={
+		9624 9643 11610 
+	}
+	manpower=152926
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

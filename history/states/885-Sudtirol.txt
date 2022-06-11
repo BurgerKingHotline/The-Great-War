@@ -1,0 +1,21 @@
+state={
+	id=885
+	name="STATE_885"
+	
+	history={
+		owner = ASH
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ASH
+		add_claim_by = ITA
+	}
+	
+	provinces={
+		6675 9630 11598 
+	}
+	manpower=389000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

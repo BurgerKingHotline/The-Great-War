@@ -1,0 +1,25 @@
+state={
+	id=894
+	name="STATE_894"
+	
+	history={
+		owner = ASH
+		buildings = {
+			infrastructure = 4
+			5283 = {
+				bunker = 1
+
+			}
+		}
+		add_core_of = CZE
+		add_core_of = ASH
+	}
+	
+	provinces={
+		543 557 5283 7857 11525 
+	}
+	manpower=11970
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

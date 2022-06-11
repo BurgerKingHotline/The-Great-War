@@ -1,0 +1,22 @@
+state={
+	id=905
+	name="STATE_905"
+	
+	history={
+		owner = ASH
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ASH
+		add_core_of = CRO
+		add_core_of = HUN
+	}
+	
+	provinces={
+		3627 6647 9595 11594 
+	}
+	manpower=537702
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

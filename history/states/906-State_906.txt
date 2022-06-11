@@ -1,0 +1,22 @@
+state={
+	id=906
+	name="STATE_906"
+	
+	history={
+		owner = ASH
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = ASH
+		add_core_of = BOS
+		add_core_of = CRO
+	}
+	
+	provinces={
+		3985 6614 6619 9586 9588 
+	}
+	manpower=160000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
