@@ -1,0 +1,30 @@
+﻿focus_tree = {
+	id = serbian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = RUS
+		}
+	}
+	
+	continuous_focus_position = { x = 70 y = 1300 }
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = RUS_
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.25
+		}
+	}
+}
