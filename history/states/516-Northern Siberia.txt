@@ -3,8 +3,10 @@ state = {
 	id = 516
 	name = "STATE_516" # Taymyria
 	manpower = 21974
+
+	impassable = yes
 	
-	state_category = pastoral
+	state_category = wasteland
 
 	history = {
 		victory_points = {
@@ -13,7 +15,7 @@ state = {
 		owner = RUS
 		add_core_of = RUS
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 		}
 		#add_core_of = SOV
 		add_core_of = TAY

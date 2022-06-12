@@ -1,0 +1,21 @@
+state={
+	id=910
+	name="STATE_910"
+	manpower = 12000
+	
+	state_category = wasteland
+
+	history={
+		owner = MOR
+		add_core_of = MOR
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	
+	provinces={
+		4920
+	}
+
+	local_supplies=0.0 
+}

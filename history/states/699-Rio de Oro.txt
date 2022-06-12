@@ -8,6 +8,7 @@ state={
 	history={
 		owner = SPR
 		add_core_of = WES
+		add_core_of = MOR
 		buildings = {
 			infrastructure = 1
 			8038 = {
@@ -20,7 +21,7 @@ state={
 	}
 	
 	provinces={
-		4920 5012 7979 8038 8111 10875
+		5012 7979 8038 8111 10875
 	}
 
 	local_supplies=0.0 
