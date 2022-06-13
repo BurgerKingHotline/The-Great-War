@@ -1,0 +1,34 @@
+balkan_war_decisions = {
+	balkan_get_ivolved = {
+		icon = generic_civil_support
+
+		visible = {
+			OR = {
+				original_tag = ROM
+				original_tag = OTT
+			}
+			SER = {
+				has_war_with = BUL
+			}
+		}
+
+		available = {
+			NOT = {
+				has_war_with = BUL
+			}
+        	}
+
+		cost = 0
+
+		complete_effect = {
+			declare_war_on = {
+   				target = BUL
+    			type = take_claimed_state
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

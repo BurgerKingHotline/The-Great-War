@@ -5,7 +5,6 @@ on_actions = {
                 limit = {
                     OTT = {
                         NOT = {
-                            AND = {
                                 has_country_flag = balkan_war_i_end
                                 controls_state = 341
                                 controls_state = 184
@@ -24,13 +23,11 @@ on_actions = {
                                 controls_state = 881
                                 controls_state = 855
                                 controls_state = 883
-                            }
                         }
                         has_war_with = BUL
                         has_war_with = SER
                         has_war_with = MNT
                         has_war_with = GRE
-                        has_war_with = ALB
                     }
                 }
                 BUL = {
@@ -62,10 +59,6 @@ on_actions = {
                     transfer_state = 731
                     transfer_state = 879
                     white_peace = OTT
-                }
-                ALB = { #albania got its independence peacefully, plus wasn't in the balkan wars, but they're borders were defined by the treaty, so why not ig
-                    transfer_state = 805
-                    transfer_state = 44
                 }
                 OTT = {
                     set_country_flag = balkan_war_i_end

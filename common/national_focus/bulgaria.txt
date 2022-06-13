@@ -1,0 +1,169 @@
+﻿focus_tree = {
+	id = bulgarian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BUL
+		}
+	}
+	
+	continuous_focus_position = { x = 70 y = 1300 }
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = BUL_balkan_intervention
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.25
+		}
+	}
+
+	focus = {
+		id = BUL_recliam_lands
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = BUL_balkan_intervention
+		prerequisite = { focus = BUL_balkan_intervention }
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_claim = 880
+			add_state_claim = 855
+			add_state_claim = 341
+            add_state_claim = 871
+            add_state_claim = 878
+            add_state_claim = 839
+            add_state_claim = 881
+            add_state_claim = 883
+            add_state_claim = 184
+		}
+	}
+
+	focus = {
+		id = BUL_balkan_league
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = BUL_recliam_lands
+		prerequisite = { focus = BUL_recliam_lands }
+		x = 0
+		y = 1
+		cost = 10
+		available = {
+			date > 1912.01.01
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_faction = balkan_league
+			add_to_faction = SER
+			add_to_faction = GRE
+			add_to_faction = BUL
+			add_to_faction = MNT
+		}
+	}
+
+	focus = {
+		id = BUL_balkan_war_i
+		relative_position_id = BUL_balkan_league
+		prerequisite = { focus = BUL_balkan_league }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		cost = 1
+		available = {
+			date > 1912.08.01
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				declare_war_on = {
+    				target = OTT
+   					type = take_claimed_state 
+				}
+			}
+			hidden_effect = {
+				OTT = {
+					add_timed_idea = {
+    					idea = ott_first_balkan_war
+    					days = 240
+					}
+				}
+				SER = {
+					add_timed_idea = {
+    					idea = balkan_wars_idea
+    					days = 450 
+					}
+					declare_war_on = {
+    					target = OTT
+   						type = take_claimed_state 
+					}
+				}
+				BUL = {
+					add_timed_idea = {
+    					idea = balkan_wars_idea
+    					days = 450 
+					}
+					declare_war_on = {
+    					target = OTT
+   						type = take_claimed_state 
+					}
+				}
+				MNT = {
+					add_timed_idea = {
+    					idea = balkan_wars_idea
+    					days = 450 
+					}
+					declare_war_on = {
+    					target = OTT
+   						type = take_claimed_state 
+					}
+				}
+				GRE = {
+					add_timed_idea = {
+    					idea = balkan_wars_idea
+    					days = 450 
+					}
+					declare_war_on = {
+    					target = OTT
+   						type = take_claimed_state
+					}
+				}
+				ALB = {
+					transfer_state = 44
+					transfer_state = 805
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BUL_leave_league
+		relative_position_id = BUL_balkan_war_i
+		prerequisite = {
+			focus = BUL_balkan_war_i
+		}
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+
+		completion_reward = {
+			leave_faction = yes
+		}
+	}
+
+
+}
