@@ -800,3 +800,18 @@ SOV_ROME = {
 	color = rgb { 128 0 128 }
 	color_ui = rgb { 128 0 128 }
 }
+################################
+####GREAT WAR  COSMETIC TAGS####
+################################
+BUK_russian = {
+	color = rgb { 56 110 87 }
+	color_ui = rgb { 56 110 87 }
+}
+KHI_russian = {
+	color = rgb { 93 110 56 }
+	color_ui = rgb { 93 110 56 }
+}
+ASH_focus_puppet = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
