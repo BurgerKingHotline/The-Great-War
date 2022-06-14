@@ -33,8 +33,6 @@ senussiya_owned_decisions = {
 			}
 		}
 
-		on_map_mode = map_only
-
 		state_target = yes
 
         cost = 100
@@ -223,6 +221,12 @@ senussiya_enemy_decisions = {
 		target_trigger = {
 			FROM = {
 				any_owned_state = {
+					is_core_of = LBA
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = senussiya_resistence_modifier_4
+						}
+					}
 					has_state_flag = senussiya_resistence_flag
 				}
 			}
@@ -248,6 +252,7 @@ senussiya_enemy_decisions = {
 								modifier = senussiya_resistence_modifier_4
 							}
 						}
+						has_state_flag = senussiya_resistence_flag
 					}
 					increase_senussiya_resistence = yes
 				}
