@@ -4,4 +4,16 @@
  russian_socialism_decisions:0 "Socialist Agitation"
  russian_socialism_decisions_desc:0 "The [RUS.GetNameDef] has had a history of dealing with revolutionaries who try to destroy our great empire! The most radical of these groups are the socialists, who are a fringe group supporting the works of Marx, a german philosopher. We must keep tabs on them to make sure they don't overthrow the government. \n\n§RIf the popularity of the socialists exceeds 50% and the radicalism exceeds 80% then they may start a revolution!§!\n\nSocialist Popularity = [?party_popularity_100@communism|Y]%\nSocialist Radicalism = [?RUS_socialist_radicalisation|Y]\n"
  RUS_socialist_radicalisation_increase:0 "Socialist Radicalisation: $RIGHT|Y=$"
+
+ # SENUSSIYA RESISTANCE
+ senussiya_owned_decisions:0 "Senussian Resistance"
+ senussiya_enemy_decisions:0 "Fund Senussian Resistance"
+ senussiya_decrease_decision:0 "Decrease Senussi Resistance in [FROM.GetName]"
+ senussiya_resistence_increase:0 "Senussi Resistance Increase"
+ senussiya_revolt:0 "Senussi Revolt"
+ fund_senussiya_decision:0 "Fund Senussian Resistance"
+ senussiya_resistence_modifier_1:0 "Semussi Resistance"
+ senussiya_resistence_modifier_2:0 "Semussi Resistance"
+ senussiya_resistence_modifier_3:0 "Semussi Resistance"
+ senussiya_resistence_modifier_4:0 "Semussi Resistance"
  
