@@ -165,5 +165,42 @@
 		}
 	}
 
+	focus = {
+		id = BUL_balkan_war_ii
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = BUL_leave_league
+		prerequisite = { focus = BUL_leave_league }
+		x = 0
+		y = 1
+		cost = 1
+		available = {
+			date > 1913.06.16
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_claim = 731
+			add_state_claim = 106
+			add_state_claim = 872
+			add_state_claim = 803
+			declare_war_on = {
+    			target = SER
+   				type = take_claimed_state 
+			}
+			declare_war_on = {
+    			target = GRE
+   				type = take_claimed_state 
+			}
+			hidden_effect = {
+				MNT = {
+					declare_war_on = {
+    					target = BUL
+   						type = take_claimed_state 
+					}
+				}
+			}
+		}
+	}
+
 
 }

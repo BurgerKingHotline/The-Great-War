@@ -1,12 +1,24 @@
 balkan_war_decisions = { # for countries to join later and sue for peace if originally declined forced peace
 	visible_when_empty = no
-	visible = {
+	allowed = {
+		OR = {
 		original_tag = BUL
 		original_tag = SER
 		original_tag = OTT
 		original_tag = ROM
 		original_tag = MNT
 		original_tag = GRE
+		}
+	}
+	visible = {
+		OR = {
+		original_tag = BUL
+		original_tag = SER
+		original_tag = OTT
+		original_tag = ROM
+		original_tag = MNT
+		original_tag = GRE
+		}
 	}
 }
 
