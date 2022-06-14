@@ -37,7 +37,7 @@ senussiya_owned_decisions = { #for decisions if they own the states
 }
 
 senussiya_enemy_decisions = { #for decisions if the enemy own the states
-	visible_when_empty = no
+	visible_when_empty = yes
 	allowed = {
 		OR = {
 			#muslim countries can ofc support senussiya
@@ -71,6 +71,9 @@ russian_socialism_decisions = {
 		tag = RUS
 	}
 	visible = {
-		NOT = {has_government = communism}
+		NOT = {
+			has_government = communism
+			has_country_flag = RUS_no_more_commie_radical
+		}
 	}
 }

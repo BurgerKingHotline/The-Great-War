@@ -244,7 +244,7 @@ senussiya_enemy_decisions = {
 
         complete_effect = {
 			FROM = {
-				random_state = {
+				random_owned_state = {
 					limit = {
 						is_core_of = LBA
 						NOT = {
@@ -252,7 +252,6 @@ senussiya_enemy_decisions = {
 								modifier = senussiya_resistence_modifier_4
 							}
 						}
-						has_state_flag = senussiya_resistence_flag
 					}
 					increase_senussiya_resistence = yes
 				}
