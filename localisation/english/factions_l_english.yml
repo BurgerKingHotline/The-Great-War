@@ -95,3 +95,8 @@
 
  central_powers_faction:0 "Central Powers"
  entente_faction:0 "Entente"
+ RUS_white_faction:0 "White Forces"
+ RUS_red_faction:0 "Red Forces"
+ 
+ #uh, idk where to put this so
+ RUS_CIVIL_WAR_FACTION:0 "§RRussia can NOT invite others to their faction during the Russian Civil War!§!"

@@ -64,6 +64,8 @@ senussiya_enemy_decisions = { #for decisions if the enemy own the states
 	}
 }
 
+#RUS
+
 russian_socialism_decisions = {
 	priority = 1000
 	visible_when_empty = yes
@@ -75,5 +77,18 @@ russian_socialism_decisions = {
 			has_government = communism
 			has_country_flag = RUS_no_more_commie_radical
 		}
+	}
+}
+
+RUS_crusade_against_communism_decisions = {
+	visible_when_empty = yes
+	allowed = {
+		tag = RUS
+	}
+	visible = {
+		NOT = {
+			has_government = Communism
+		}
+		has_completed_focus = RUS_crusade_against_communism
 	}
 }

@@ -225,9 +225,45 @@ on_actions = {
             if = {
                 limit = {
                     check_variable = { RUS_socialist_radicalisation > 79 }
-                    check_variable = { party_popularity_100@communism > 49 }
+                    check_variable = { party_popularity_100@communism > 59 }
                 }
-                RUS_civil_war_start = yes
+                if = {
+                    limit = {
+                        has_country_flag = RUS_provisional_government_in_charge
+                    }
+                    RUS_civil_war_start = yes
+                }
+                else = {
+                    country_event = { id = rus_civilwar.1 }
+                }
+            }
+        }
+    }
+    on_capitulation = {
+        effect = {
+            if = {
+                limit = {
+                    ROOT = {
+                        original_tag = RUS
+                    }
+                    FROM = {
+                        original_tag = SOV
+                    }
+                }
+                clr_global_flag = Russian_civil_war_flag
+                set_global_flag = Reds_won_civil_war_flag
+            }
+            if = {
+                limit = {
+                    ROOT = {
+                        original_tag = SOV
+                    }
+                    FROM = {
+                        original_tag = RUS
+                    }
+                }
+                clr_global_flag = Russian_civil_war_flag
+                set_global_flag = Whites_won_civil_war_flag
             }
         }
     }

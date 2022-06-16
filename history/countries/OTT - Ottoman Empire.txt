@@ -1,4 +1,4 @@
-﻿capital = 49
+﻿capital = 797
 
 if = {
 	limit = {
@@ -104,6 +104,10 @@ set_convoys = 20
 set_stability = 0.5
 set_war_support = 0.3
 
+add_opinion_modifier = {
+	target = RUS
+	modifier = historic_enemies_modifier
+}
 
 
 ### VARIANTS ###

@@ -1294,3 +1294,7 @@
  LBA_senussiya:0 "Senussiya"
  LBA_senussiya_DEF:0 "the Senussi Order"
  LBA_senussiya_ADJ:0 "Senussi"
+
+ RUS_provisional:0 "Provisional Government of Russia"
+ RUS_provisional_DEF:0 "the Provisional Government of Russia"
+ RUS_provisional_ADJ:0 "Russian"

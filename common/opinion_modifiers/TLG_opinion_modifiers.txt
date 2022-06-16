@@ -1,0 +1,28 @@
+opinion_modifiers = {
+	
+	#RUS
+	continued_dialogue = {
+		value = 25
+	}
+
+	entente_strengthened = {
+		value = 15
+	}
+
+	talks_with_the_germans_modifier = {
+		value = -30
+	}
+
+	historic_enemies_modifier = {
+		value = -50
+	}
+
+	crusade_against_communism_negative_modifier = {
+		value = -50
+	}
+
+	crusade_against_communism_positive_modifier = {
+		value = 15
+	}
+
+}

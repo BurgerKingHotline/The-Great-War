@@ -43,10 +43,14 @@ russian_socialism_decisions = {
 	RUS_give_trade_unions_liberty = {
 		icon = generic_civil_support
 
+		visible = {
+			NOT = { has_completed_focus = RUS_destroy_trade_unions }
+		}
+
 		available = {
         }
 		cost = 100
-		days_re_enable = 60
+		days_re_enable = 90
 
 		complete_effect = {
 			add_to_variable = {

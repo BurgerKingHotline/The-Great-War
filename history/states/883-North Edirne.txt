@@ -15,7 +15,7 @@ state= {
 			infrastructure = 1
 		}
 		add_core_of = OTT
-		add_claim_by = BUL
+		add_core_of = BUL
 		1913.5.30 = {
 			owner = BUL
 		}

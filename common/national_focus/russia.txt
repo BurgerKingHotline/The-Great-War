@@ -16,15 +16,1451 @@
 	reset_on_civilwar = no
 
 	focus = {
-		id = RUS_
+		id = RUS_meeting_with_the_germans
 		icon = GFX_goal_generic_political_pressure
-		x = 0
+		x = 20
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
 
+		available = {
+		}
+
 		completion_reward = {
-			add_war_support = 0.25
+			add_political_power = 50
+			country_event = {
+				id = rus_events.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = RUS_the_powers_of_the_tsar
+		icon = GFX_goal_generic_political_pressure
+		mutually_exclusive = { focus = RUS_accede_to_the_radicals}
+		prerequisite = { focus = RUS_meeting_with_the_germans }
+		x = -4
+		y = 1
+		relative_position_id = RUS_meeting_with_the_germans
+		cost = 5
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_accede_to_the_radicals
+		icon = GFX_goal_generic_political_pressure
+		mutually_exclusive = { focus = RUS_the_powers_of_the_tsar}
+		prerequisite = { focus = RUS_meeting_with_the_germans }
+		x = 4
+		y = 1
+		relative_position_id = RUS_meeting_with_the_germans
+		cost = 5
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_cement_the_tsars_rule
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_the_powers_of_the_tsar }
+		mutually_exclusive = { focus = RUS_elections_in_the_duma }
+		x = -4
+		y = 1
+		relative_position_id = RUS_the_powers_of_the_tsar 
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = -0.10
+			add_political_power = -100
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 10
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_elections_in_the_duma
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_the_powers_of_the_tsar focus = RUS_accede_to_the_radicals }
+		mutually_exclusive = { focus = RUS_cement_the_tsars_rule focus = RUS_radicalise_the_people }
+		x = 4
+		y = 1
+		relative_position_id = RUS_the_powers_of_the_tsar 
+		cost = 5
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			country_event = {
+				id = rus_events.12
+			}
+		}
+	}
+
+
+	focus = {
+		id = RUS_radicalise_the_people
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_accede_to_the_radicals }
+		mutually_exclusive = { focus = RUS_elections_in_the_duma }
+		x = 4
+		y = 1
+		relative_position_id = RUS_accede_to_the_radicals
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = -0.15
+			add_political_power = 150
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = -10
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+			set_country_flag = RUS_no_more_commie_radical
+		}
+	}
+
+	focus = {
+		id = RUS_a_duma_in_chains
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_cement_the_tsars_rule }
+		x = 0
+		y = 1
+		relative_position_id = RUS_cement_the_tsars_rule
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 5
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+			if = {
+				limit = {
+					has_idea = RUS_duma
+				}
+				swap_ideas = {
+					remove_idea = RUS_duma
+					add_idea = RUS_chained_duma
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_root_out_socialist_influence
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_a_duma_in_chains }
+		x = 1
+		y = 1
+		relative_position_id = RUS_a_duma_in_chains
+		cost = 5
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = -0.15
+			}
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 10
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_undermine_democratic_influence
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_a_duma_in_chains }
+		x = -1
+		y = 1
+		relative_position_id = RUS_a_duma_in_chains
+		cost = 5
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.15
+			}
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 5
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_dismiss_the_duma
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_root_out_socialist_influence }
+		prerequisite = { focus = RUS_undermine_democratic_influence }
+		x = -1
+		y = 1
+		relative_position_id = RUS_root_out_socialist_influence
+		cost = 10
+		available_if_capitulated = yes
+
+		available = {
+			neutrality > 0.79
+			has_stability > 0.6
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			remove_idea = RUS_chained_duma
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 15
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_destroy_trade_unions
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_dismiss_the_duma }
+		x = -3
+		y = 1
+		relative_position_id = RUS_dismiss_the_duma
+		cost = 5
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = communism
+				popularity = -0.15
+			}
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 10
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_crusade_against_communism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_destroy_trade_unions }
+		x = -1
+		y = 1
+		relative_position_id = RUS_destroy_trade_unions
+		cost = 10
+
+		completion_reward = {
+			add_ideas = {
+				RUS_crusade_against_communism
+			}
+			unlock_decision_category_tooltip = RUS_crusade_against_communism_decisions
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_government = communism
+					}
+					RUS = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = crusade_against_communism_negative_modifier
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_destroy_independance_movements
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_dismiss_the_duma }
+		x = 0
+		y = 1
+		relative_position_id = RUS_dismiss_the_duma
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			remove_idea = {
+				RUS_strong_independance_movements
+			}
+			custom_effect_tooltip = RUS_civil_war_no_independance
+		}
+	}
+
+	focus = {
+		id = RUS_policy_of_russification
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_destroy_independance_movements }
+		x = 0
+		y = 2
+		relative_position_id = RUS_destroy_independance_movements
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = -0.1
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = POL
+						is_core_of = FIN
+						is_core_of = LIT
+						is_core_of = LAT
+						is_core_of = EST
+						is_core_of = MOL
+						is_core_of = ARM
+						is_core_of = GEO
+						is_core_of = AZR
+						is_core_of = KAZ
+						is_core_of = UZB
+						is_core_of = KYR
+						is_core_of = TAJ
+					}
+				}
+				add_core_of = ROOT
+			}
+			830 = {
+				add_core_of = ROOT
+			}
+			831 = {
+				add_core_of = ROOT
+			}
+			329 = {
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_ban_the_political_parties
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_destroy_trade_unions }
+		prerequisite = { focus = RUS_destroy_independance_movements }
+		x = 1
+		y = 2
+		relative_position_id = RUS_destroy_trade_unions
+		cost = 5
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 15
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+			add_ideas = {
+				RUS_banned_political_parties
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_all_power_to_the_tsar
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_ban_the_political_parties }
+		prerequisite = { focus = RUS_policy_of_russification }
+		x = -1
+		y = 3
+		relative_position_id = RUS_policy_of_russification
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_country_flag = RUS_no_more_commie_radical
+			add_ideas = {
+				RUS_all_power_to_the_tsar_idea
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_increased_radicalisation
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_elections_in_the_duma }
+		mutually_exclusive = { focus = RUS_full_socialist_control focus = RUS_full_tsarist_control}
+		x = 0
+		y = 1
+		relative_position_id = RUS_elections_in_the_duma
+		cost = 8
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = RUS_duma_no_majority_flag
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = RUS_duma
+				}
+				swap_ideas = {
+					remove_idea = RUS_duma
+					add_idea = RUS_radicalised_duma
+				}
+			}
+			else = {
+				add_ideas = {
+					RUS_radicalised_duma
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_full_socialist_control
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_elections_in_the_duma}
+		mutually_exclusive = { focus = RUS_increased_radicalisation focus = RUS_full_tsarist_control }
+		x = 2
+		y = 1
+		relative_position_id = RUS_elections_in_the_duma
+		cost = 8
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = RUS_duma_socialist_majority_flag
+		}
+
+		completion_reward = {
+			set_politics = {
+				name = RUS_democratic_party_trudovik
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_full_tsarist_control
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_elections_in_the_duma}
+		mutually_exclusive = { focus = RUS_increased_radicalisation focus = RUS_full_socialist_control }
+		x = -2
+		y = 1
+		relative_position_id = RUS_elections_in_the_duma
+		cost = 8
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = RUS_duma_tsarist_majority_flag
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = RUS_duma
+				}
+				swap_ideas = {
+					remove_idea = RUS_duma
+					add_idea = RUS_tsarist_duma
+				}
+			}
+			else = {
+				add_ideas = {
+					RUS_tsarist_duma
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_a_puppet_duma
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_full_tsarist_control }
+		x = -1
+		y = 1
+		relative_position_id = RUS_full_tsarist_control
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			if = {
+				limit = {
+					has_idea = RUS_tsarist_duma
+				}
+				swap_ideas = {
+					remove_idea = RUS_tsarist_duma
+					add_idea = RUS_puppet_duma
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RUS_tsarist_meddling_duma_tsarist
+					add_idea = RUS_puppet_duma_tsarist_meddling
+				}
+			}
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 5
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_tsarist_meddling_in_the_duma
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_full_tsarist_control focus = RUS_increased_radicalisation}
+		x = 1
+		y = 1
+		relative_position_id = RUS_full_tsarist_control
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			if = {
+				limit = {
+					has_idea = RUS_tsarist_duma
+				}
+				swap_ideas = {
+					remove_idea = RUS_tsarist_duma
+					add_idea = RUS_tsarist_meddling_duma_tsarist
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RUS_radicalised_duma
+				}
+				swap_ideas = {
+					remove_idea = RUS_radicalised_duma
+					add_idea = RUS_tsarist_meddling_duma_radical
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RUS_puppet_duma
+				}
+				swap_ideas = {
+					remove_idea = RUS_puppet_duma
+					add_idea = RUS_tsarist_meddling_duma_puppet
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RUS_democratic_duma_radical
+					add_idea = RUS_tsarist_meddling_duma_democratic
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_democratic_reforms
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_full_socialist_control focus = RUS_increased_radicalisation}
+		x = 1
+		y = 1
+		relative_position_id = RUS_increased_radicalisation
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = {
+					has_idea = RUS_radicalised_duma
+				}
+				swap_ideas = {
+					remove_idea = RUS_radicalised_duma
+					add_idea = RUS_democratic_duma_radical
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RUS_socialist_duma
+				}
+				swap_ideas = {
+					remove_idea = RUS_socialist_duma
+					add_idea = RUS_democratic_duma_social
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = RUS_tsarist_meddling_duma_radical
+				}
+				swap_ideas = {
+					remove_idea = RUS_tsarist_meddling_duma_radical
+					add_idea = RUS_democratic_duma_tsarist_meddling
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RUS_reformist_duma
+					add_idea = RUS_democratic_duma_reform
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_reformist_socialism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_full_socialist_control}
+		x = 1
+		y = 1
+		relative_position_id = RUS_full_socialist_control
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = {
+					has_idea = RUS_socialist_duma
+				}
+				swap_ideas = {
+					remove_idea = RUS_socialist_duma
+					add_idea = RUS_reformist_duma
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RUS_democratic_duma_social
+					add_idea = RUS_reformist_duma_democratic
+				}
+			}
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = -5
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_a_new_duma
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_reformist_socialism focus = RUS_a_puppet_duma focus = RUS_tsarist_meddling_in_the_duma focus = RUS_democratic_reforms }
+		x = 0
+		y = 2
+		relative_position_id = RUS_increased_radicalisation
+		cost = 5
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 150
+			if = {
+				limit = {
+					has_completed_focus = RUS_full_tsarist_control
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = RUS_increased_radicalisation
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = RUS_full_socialist_control
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_promise_independance_after_the_war
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_a_new_duma }
+		x = 2
+		y = 1
+		relative_position_id = RUS_a_new_duma
+		cost = 10
+		available_if_capitulated = yes
+
+		available = {
+			has_war = yes
+		}
+
+		completion_reward = {
+			remove_ideas = {
+				RUS_strong_independance_movements
+			}
+			add_political_power = 150
+			add_stability = 0.05
+			add_war_support = 0.15
+			custom_effect_tooltip = RUS_have_to_release_when_war_over
+		}
+	}
+
+	focus = {
+		id = RUS_continued_dialogue_with_the_germans
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		relative_position_id = RUS_dismiss_the_duma
+		prerequisite = { focus = RUS_dismiss_the_duma focus = RUS_a_new_duma}
+		mutually_exclusive = { focus = RUS_strengthen_the_entente }
+		cost = 7.2
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+			NOT = {
+				has_country_flag = RUS_germans_leave_potsdam
+				has_country_flag = RUS_russian_full_access_flag
+			}
+			has_country_flag = RUS_ger_agree_potsdam
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_opinion_modifier = {
+				target = GER
+				modifier = continued_dialogue
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = continued_dialogue
+				}
+			}
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = talks_with_the_germans_modifier
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_rapproachments_with_the_austrians
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = RUS_continued_dialogue_with_the_germans
+		prerequisite = { focus = RUS_continued_dialogue_with_the_germans }
+		mutually_exclusive = { focus = RUS_revenge_for_bosnia }
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			remove_opinion_modifier = {
+				target = ASH
+				modifier = historic_enemies_modifier
+			}
+			ASH = {
+				remove_opinion_modifier = {
+					target = RUS
+					modifier = historic_enemies_modifier
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_revive_the_league_of_emperors
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 2
+		relative_position_id = RUS_rapproachments_with_the_austrians
+		prerequisite = { focus = RUS_rapproachments_with_the_austrians }
+		prerequisite = { focus = RUS_joint_training }
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = {
+					id = generic.2
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_strengthen_the_entente
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 1
+		relative_position_id = RUS_dismiss_the_duma
+		prerequisite = { focus = RUS_a_new_duma focus = RUS_dismiss_the_duma }
+		mutually_exclusive = { focus = RUS_continued_dialogue_with_the_germans }
+		cost = 7.2
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+			NOT = {
+				has_country_flag = RUS_german_full_access_flag
+			}
+			OR = {
+				has_country_flag = RUS_ger_agree_potsdam
+				has_country_flag = RUS_germans_leave_potsdam
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_major = yes
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = entente_strengthened
+				}
+				ROOT = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = entente_strengthened
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_revenge_for_bosnia
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = RUS_strengthen_the_entente
+		prerequisite = { focus = RUS_strengthen_the_entente }
+		mutually_exclusive = { focus = RUS_rapproachments_with_the_austrians }
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.15
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_joint_training
+		icon = GFX_goal_generic_political_pressure
+		x = -2
+		y = 2
+		relative_position_id = RUS_strengthen_the_entente
+		prerequisite = { focus = RUS_strengthen_the_entente focus = RUS_continued_dialogue_with_the_germans}
+		cost = 7.2
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				army_experience = 75
+				add_timed_idea = {
+					idea = RUS_joint_training
+					days = 100
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = RUS_continued_dialogue_with_the_germans
+				}
+				GER = {
+					country_event = { id = rus_events.8 days = 1}
+					custom_effect_tooltip = needs_approval
+				}
+			}
+			else = {
+				FRA = {
+					country_event = { id = rus_events.8 days = 1}
+					custom_effect_tooltip = needs_approval
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_safeguard_the_orthodoxy
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 2
+		relative_position_id = RUS_revenge_for_bosnia
+		prerequisite = { focus = RUS_revenge_for_bosnia}
+		prerequisite = { focus = RUS_joint_training }
+		cost = 5
+		available_if_capitulated = yes
+
+		bypass = {
+			has_guaranteed = SER
+			has_guaranteed = ROM
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
+			give_guarantee = SER
+			give_guarantee = ROM
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_consituent_assembly
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = RUS_a_new_duma
+		prerequisite = { focus = RUS_a_new_duma }
+		cost = 10
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = RUS_provisional_government_in_charge
+			NOT = { 
+				has_completed_focus = RUS_full_socialist_control
+				has_completed_focus = RUS_reformist_socialism
+			}
+			OR = {
+				has_civil_war = yes
+				AND = {
+					has_war = yes
+					surrender_progress > 0.15	
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = {
+				RUS_consituent_assembly_idea
+			}
+			country_event = { id = rus_events.13 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_supreme_ruler_of_russia
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = RUS_consituent_assembly
+		prerequisite = { focus = RUS_consituent_assembly }
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { 
+				has_government = communism 
+				has_completed_focus = RUS_presidential_republic
+			}
+			OR = {
+				has_civil_war = yes
+				AND = {
+					has_war = yes
+					surrender_progress > 0.2	
+				}
+			}
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				long_name = TAG_party_long
+				name = TAG_party
+			}
+			#promotes character, ill do character work later
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_presidential_republic
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		relative_position_id = RUS_consituent_assembly
+		prerequisite = { focus = RUS_consituent_assembly }
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				has_civil_war = no
+				AND = {
+					has_war = no
+					surrender_progress < 0.1	
+				}
+			}
+			OR = {
+				NOT = { has_completed_focus = RUS_supreme_ruler_of_russia }
+				has_completed_focus = RUS_return_to_democracy
+			}
+		}
+
+		completion_reward = {
+			set_politics = {
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_purge_the_communists
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		relative_position_id = RUS_presidential_republic
+		prerequisite = { focus = RUS_supreme_ruler_of_russia focus = RUS_presidential_republic}
+		cost = 8
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = communism
+				popularity = -0.25
+			}
+			add_stability = 0.1
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_the_white_army
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 2
+		relative_position_id = RUS_presidential_republic
+		prerequisite = { focus = RUS_purge_the_communists}
+		cost = 8
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			add_ideas = {
+				RUS_white_army
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_return_to_democracy
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 3
+		relative_position_id = RUS_supreme_ruler_of_russia
+		prerequisite = { focus = RUS_purge_the_communists }
+		mutually_exclusive = { focus = RUS_loyalty_to_the_ruler }
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+			has_completed_focus = RUS_supreme_ruler_of_russia
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_loyalty_to_the_ruler
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 3
+		relative_position_id = RUS_supreme_ruler_of_russia
+		prerequisite = { focus = RUS_purge_the_communists }
+		mutually_exclusive = { focus = RUS_return_to_democracy }
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+			has_completed_focus = RUS_supreme_ruler_of_russia
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_the_grand_russian_state
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		relative_position_id = RUS_loyalty_to_the_ruler
+		prerequisite = { focus = RUS_loyalty_to_the_ruler }
+		cost = 8
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			add_ideas = {
+				RUS_grand_russian_state
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_democratic_institutions
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 2
+		relative_position_id = RUS_presidential_republic
+		prerequisite = { focus = RUS_presidential_republic }
+		cost = 8
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_a_democratic_army
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		relative_position_id = RUS_democratic_institutions
+		prerequisite = { focus = RUS_the_white_army }
+		prerequisite = { focus = RUS_democratic_institutions }
+		cost = 8
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_white_army
+				add_idea = RUS_democratic_army
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	focus = {
+		id = RUS_prepare_for_a_civil_war
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_radicalise_the_people}
+		x = 0
+		y = 1
+		relative_position_id = RUS_radicalise_the_people
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = RUS_increase_divisions_when_civil_war
+		}
+	}
+
+	focus = {
+		id = RUS_secure_menshevik_support
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_prepare_for_a_civil_war }
+		x = -1
+		y = 1
+		relative_position_id = RUS_prepare_for_a_civil_war
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = RUS_menshevik_division_spawns
+		}
+	}
+
+	focus = {
+		id = RUS_secure_bolshevik_support
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_prepare_for_a_civil_war }
+		x = 1
+		y = 1
+		relative_position_id = RUS_prepare_for_a_civil_war
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = RUS_bolshevik_division_spawns
+		}
+	}
+
+	focus = {
+		id = RUS_funds_from_international_communists
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_secure_menshevik_support focus = RUS_secure_bolshevik_support}
+		x = 1
+		y = 1
+		relative_position_id = RUS_secure_menshevik_support
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = RUS_when_civil_war_starts
+			effect_tooltip = {
+				add_ideas = {
+					RUS_funds_from_international_communists
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_allow_trudovik_involvement
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_secure_menshevik_support }
+		mutually_exclusive = { focus = RUS_remove_trudovik_influence }
+		x = -1
+		y = 2
+		relative_position_id = RUS_secure_menshevik_support
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			SOV = {
+				set_country_flag = SOV_trudoviks_allowed_flag
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_remove_trudovik_influence
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_secure_bolshevik_support }
+		mutually_exclusive = { focus = RUS_allow_trudovik_involvement }
+		x = 1
+		y = 2
+		relative_position_id = RUS_secure_bolshevik_support
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_manpower = -20000
+			SOV = {
+				set_country_flag = SOV_trudoviks_banned_flag
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_consolidate_the_party
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_funds_from_international_communists }
+		prerequisite = { focus = RUS_allow_trudovik_involvement focus = RUS_remove_trudovik_influence }
+		x = 0
+		y = 3
+		relative_position_id = RUS_funds_from_international_communists
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = RUS_remove_party_debuff
+		}
+	}
+
+	focus = {
+		id = RUS_kill_the_tsar
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_consolidate_the_party }
+		x = 0
+		y = 1
+		relative_position_id = RUS_consolidate_the_party
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
+			RUS_civil_war_start = yes
+		}
+	}
+
+	focus = {
+		id = RUS_continue_industrialisation
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 0
+		cost = 8
+		available_if_capitulated = yes
+
+		completion_reward = {
 		}
 	}
 }

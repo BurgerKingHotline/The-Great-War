@@ -1,0 +1,653 @@
+ideas = {
+	country = {
+		RUS_duma = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = -0.1
+				drift_defence_factor = -0.1
+				democratic_acceptance = 25
+			}
+
+		}
+
+		RUS_tsarist_duma = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = -0.05
+				drift_defence_factor = -0.05
+				democratic_acceptance = 20
+			}
+
+		}
+
+		RUS_radicalised_duma = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = -0.05
+				drift_defence_factor = -0.25
+				democratic_acceptance = 25
+			}
+
+		}
+
+		RUS_socialist_duma = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+				drift_defence_factor = -0.3
+				war_support_factor = -0.05
+				democratic_acceptance = 30
+			}
+		}
+
+		RUS_puppet_duma = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {# 0.05 stability, 0.05 drift defence, -20 democratic acceptance, 0.05 war support
+				political_power_factor = 0.1
+				war_support_factor = 0.05
+			}
+
+		}
+
+		RUS_tsarist_meddling_duma_tsarist = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {#0.05 stability, 0.05 drift defence, -5 democratic acceptance
+				political_power_factor = 0.1
+				democratic_acceptance = 15
+			}
+
+		}
+
+		RUS_tsarist_meddling_duma_radical = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {#0.05 stability, 0.05 drift defence, -5 democratic acceptance
+				political_power_factor = 0.2
+				drift_defence_factor = -0.20
+				democratic_acceptance = 20
+			}
+
+		}
+
+		RUS_tsarist_meddling_duma_puppet = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {#0.05 stability, 0.05 drift defence, -5 democratic acceptance
+				political_power_factor = 0.1
+				drift_defence_factor = -0.15
+				stability_factor = 0.05
+				democratic_acceptance = 15
+
+			}
+
+		}
+
+		RUS_puppet_duma_tsarist_meddling = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {# 0.05 stability, 0.05 drift defence, -20 democratic acceptance, 0.05 war support
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				drift_defence_factor = 0.05
+				democratic_acceptance = -5
+				war_support_factor = 0.05
+			}
+
+		}
+
+		RUS_democratic_duma_radical = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = { #0.05 pp, 0.05 stability, -0.05 drift defence, 5 democratic acceptence
+				political_power_factor = 0.3
+				drift_defence_factor = -0.3
+				democratic_acceptance = 30
+			}
+
+		}
+
+		RUS_democratic_duma_social = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = { #0.05 pp, 0.05 stability, -0.05 drift defence, 5 democratic acceptence
+				political_power_factor = 0.3
+				stability_factor = 0.05
+				drift_defence_factor = -0.35
+				war_support_factor = -0.05
+				democratic_acceptance = 35
+			}
+		}
+
+		RUS_democratic_duma_tsarist_meddling = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = { #0.05 pp, 0.05 stability, -0.05 drift defence, 5 democratic acceptence
+				political_power_factor = 0.25
+				stability_factor = 0.05
+				drift_defence_factor = -0.25
+				democratic_acceptance = 25
+			}
+		}
+
+		RUS_tsarist_meddling_duma_democratic = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {#0.05 stability, 0.05 drift defence, -5 democratic acceptance
+				political_power_factor = 0.3
+				stability_factor = 0.05
+				drift_defence_factor = -0.25
+				democratic_acceptance = 25
+			}
+
+		}
+
+		RUS_reformist_duma = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {#0.05 pp -0.05 stability, -0.05 drift defence, 5 democratic acceptance
+				political_power_factor = 0.3
+				stability_factor = -0.05
+				drift_defence_factor = -0.3
+				war_support_factor = -0.05
+				democratic_acceptance = 35
+			}
+
+		}
+
+		RUS_reformist_duma_democratic = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {#0.05 pp -0.05 stability, -0.05 drift defence, 5 democratic acceptance
+				political_power_factor = 0.35
+				drift_defence_factor = -0.3
+				war_support_factor = -0.05
+				democratic_acceptance = 40
+			}
+
+		}
+
+		RUS_democratic_duma_reform = {
+			name = RUS_duma
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = { #0.05 pp -0.05 stability, -0.05 drift defence, 5 democratic acceptance
+				political_power_factor = 0.35
+				stability_factor = 0.1
+				drift_defence_factor = -0.3
+				war_support_factor = -0.05
+				democratic_acceptance = 35
+			}
+		}
+
+		RUS_chained_duma = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.5
+				neutrality_drift = 0.02
+			}
+
+		}
+
+		#END OF DUMA
+
+		RUS_crusade_against_communism = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.15
+				army_attack_factor = 0.1
+				army_morale_factor = 0.1
+			}
+
+		}
+
+		RUS_banned_political_parties = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+			}
+
+		}
+
+		RUS_all_power_to_the_tsar_idea = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_weekly = 0.02
+				neutrality_drift = 0.05
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.2
+				supply_consumption_factor = -0.15
+				consumer_goods_factor = -0.05
+				training_time_factor = -0.1
+			}
+
+		}
+
+		RUS_white_army = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.05
+				supply_consumption_factor = -0.1
+				attrition = -0.08
+				winter_attrition_factor = -0.25
+				out_of_supply_factor = 0.05
+			}
+
+		}
+
+		RUS_democratic_army = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.05
+				supply_consumption_factor = -0.1
+				attrition = -0.08
+				winter_attrition_factor = -0.25
+				out_of_supply_factor = 0.05
+				army_org_factor = 0.15
+				army_morale_factor = 0.07
+				breakthrough_factor = 0.05
+			}
+
+		}
+
+		RUS_grand_russian_state = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.08
+				war_support_weekly = 0.02
+				army_attack_factor = 0.25
+				training_time_factor = -0.1
+				justify_war_goal_time = -0.15
+				surrender_limit = 0.15
+				offensive_war_stability_factor = 0.3
+				resistance_growth = -0.15
+			}
+
+		}
+
+		RUS_strong_independance_movements = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				resistance_growth = 0.15
+			}
+
+		}
+
+		RUS_consituent_assembly_idea = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				command_power_gain = 0.5
+				max_command_power = 50
+			}
+
+		}
+
+		RUS_agrarian_nation = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = 0.1
+			}
+
+		}
+
+		RUS_joint_training = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = 0.1
+			}
+
+		}
+
+		RUS_russian_civil_war = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = 1
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				supply_consumption_factor = -0.1
+				conversion_cost_civ_to_mil_factor = 0.4
+				consumer_goods_factor = -0.15
+				production_speed_arms_factory_factor = 0.1
+			}
+
+		}
+
+		################
+		#SOVIET SPIRITS#
+		###############
+
+		SOV_funds_from_international_communists = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.2
+			}
+
+		}
+
+		SOV_disorganised_party = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.2
+				war_support_factor = -0.15
+				army_org_factor = -0.05
+			}
+
+		}
+	}
+}

@@ -124,5 +124,17 @@ decrease_senussiya_resistence = {
 }
 
 RUS_civil_war_start = {
-	country_event = { id = rus_civilwar.1 days = 1}
+	country_event = { id = rus_civilwar.4 }
+	news_event = { id = TLG_newsevents.2 }
+	SOV = {
+		set_cosmetic_tag = RUS
+		
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+			long_name = RUS_communism_party_long
+			name = RUS_communism_party
+		}
+	}
+	set_global_flag = Russian_civil_war_flag
 }
