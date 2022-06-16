@@ -8,7 +8,7 @@ state=
 	
 	history={
 		victory_points = {
-			11639 2 
+			3943 2 
 		}
 		owner = ASH
 		buildings = {
@@ -19,6 +19,7 @@ state=
 		}
 		add_core_of = CRO
 		add_core_of = ASH
+		add_claim_by = ITA
 	} 
 	provinces={	
 		3943 
