@@ -24,5 +24,14 @@ opinion_modifiers = {
 	crusade_against_communism_positive_modifier = {
 		value = 15
 	}
+	
+	#ASH
+	ASH_license = {
+		value = 15
+	}
+	
+	ASH_anger_germany = {
+		value = -20
+	}
 
 }

@@ -1,0 +1,3142 @@
+﻿focus_tree = {
+	id = austrohungarian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ASH
+		}
+	}
+	
+	continuous_focus_position = { x = 70 y = 1300 }
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = ASH_mobilization_efforts
+		icon = GFX_focus_generic_little_entente
+		x = 3
+		y = 0
+		cost = 1
+		available = {
+			OR = {
+				has_war = yes
+				threat > 0.5
+			}
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				army_experience = 10
+				add_command_power = 15
+			}
+			hidden_effect = {
+				add_named_threat = { 
+  			  	threat = 1
+    			name = ASH_mobilizing
+			}
+				army_experience = 10
+				add_command_power = 15
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_prepare_the_people
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		relative_position_id = ASH_mobilization_efforts
+		cost = 1
+		prerequisite = {
+			focus = ASH_mobilization_efforts
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_war_support = 0.1
+				add_ideas = ash_mobilized_populace_idea
+			}
+			hidden_effect = {
+					add_war_support = 0.1
+					add_ideas = ash_mobilized_populace_idea
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_convert_automotive_industry
+		icon = GFX_focus_SOV_merge_plants
+		x = 1
+		y = 1
+		relative_position_id = ASH_mobilization_efforts
+		cost = 1
+		prerequisite = {
+			focus = ASH_mobilization_efforts
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 10
+			}
+			hidden_effect = {
+					add_command_power = 10
+					add_ideas = ash_converted_auto_factories
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_wartime_assembly_lines
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		relative_position_id = ASH_prepare_the_people
+		cost = 1
+		prerequisite = {
+			focus = ASH_prepare_the_people
+		}
+		prerequisite = {
+			focus = ASH_convert_automotive_industry
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 10
+				add_ideas = ash_wartime_industry_i
+			}
+			hidden_effect = {
+					add_command_power = 10
+					add_ideas = ash_wartime_industry_i
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_aeronautical_designs
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 0
+		y = 1
+		relative_position_id = ASH_convert_automotive_industry
+		cost = 1
+		prerequisite = {
+			focus = ASH_convert_automotive_industry
+		}
+		prerequisite = {
+			focus = ASH_reorganize_maa
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+					add_tech_bonus = {
+    				bonus = 0.5
+  					uses = 1
+  					category = light_air
+				}
+			}
+			hidden_effect = {
+					add_tech_bonus = {
+    				bonus = 0.5
+  					uses = 1
+  					category = light_air
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_mobilize_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -2
+		y = 1
+		relative_position_id = ASH_prepare_the_people
+		cost = 1
+		prerequisite = {
+			focus = ASH_prepare_the_people
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_ideas = ash_mobilized_railways
+			}
+			hidden_effect = {
+				add_ideas = ash_mobilized_railways
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_militarized_trains
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = ASH_mobilize_railways
+		cost = 1
+		prerequisite = {
+			focus = ASH_mobilize_railways
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				effect_tooltip = {
+					add_tech_bonus = {
+    				bonus = 0.5
+  					uses = 1
+  					category = train_tech
+					}
+				}
+			}
+			hidden_effect = {
+					add_tech_bonus = {
+    				bonus = 0.5
+  					uses = 1
+  					category = train_tech
+					}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_assembly_lines_ii
+		icon = GFX_focus_SOV_organize_wreckers
+		x = 0
+		y = 1
+		relative_position_id = ASH_wartime_assembly_lines
+		cost = 1
+		prerequisite = {
+			focus = ASH_wartime_assembly_lines
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				effect_tooltip = {
+					swap_ideas = {
+    					remove_idea = ash_wartime_industry_i
+    					add_idea = ash_wartime_industry_ii
+					}
+				}
+			}
+			hidden_effect = {
+					swap_ideas = {
+    					remove_idea = ash_wartime_industry_i
+    					add_idea = ash_wartime_industry_ii
+					}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_kuk_luftfahrtruppen
+		icon = GFX_focus_SOV_flying_clubs
+		x = 0
+		y = 1
+		relative_position_id = ASH_aeronautical_designs
+		cost = 1
+		prerequisite = {
+			focus = ASH_aeronautical_designs
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				effect_tooltip = {
+					air_experience = 10
+					add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = medium_air
+					}
+				}
+			}
+			hidden_effect = {
+					air_experience = 10
+					add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = medium_air
+					}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_airfields_i
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 1
+		relative_position_id = ASH_kuk_luftfahrtruppen
+		cost = 1
+		prerequisite = {
+			focus = ASH_kuk_luftfahrtruppen
+		}
+		available_if_capitulated = no
+
+		completion_reward = {
+			effect_tooltip = {
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+			hidden_effect = {
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_airfields_ii
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 1
+		relative_position_id = ASH_airfields_i
+		cost = 1
+		prerequisite = {
+			focus = ASH_airfields_i
+		}
+		available_if_capitulated = no
+
+		completion_reward = {
+			effect_tooltip = {
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+			hidden_effect = {
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_airfields_iii
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 1
+		relative_position_id = ASH_airfields_ii
+		cost = 1
+		prerequisite = {
+			focus = ASH_airfields_ii
+		}
+		available_if_capitulated = no
+
+		completion_reward = {
+			effect_tooltip = {
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+			hidden_effect = {
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_air_support
+		icon = GFX_goal_generic_defence
+		x = -2
+		y = 1
+		relative_position_id = ASH_kuk_luftfahrtruppen
+		cost = 1
+		prerequisite = {
+			focus = ASH_kuk_luftfahrtruppen
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				air_experience = 10
+			}
+			hidden_effect = {
+				air_experience = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_supply_drop
+		icon = GFX_focus_generic_paratrooper
+		x = -2
+		y = 1
+		relative_position_id = ASH_air_support
+		cost = 1
+		prerequisite = {
+			focus = ASH_air_support
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = air_equipment
+				}
+			}
+			hidden_effect = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = air_equipment
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_scout_aircraft
+		icon = GFX_focus_usa_escort_fighters
+		x = 0
+		y = 1
+		relative_position_id = ASH_air_support
+		cost = 1
+		prerequisite = {
+			focus = ASH_air_support
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = cat_scout_plane
+				}
+			}
+			hidden_effect = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = cat_scout_plane
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_early_parachutes
+		icon = GFX_focus_generic_paratrooper
+		x = 0
+		y = 1
+		relative_position_id = ASH_supply_drop
+		cost = 1
+		prerequisite = {
+			focus = ASH_supply_drop
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = para_tech
+				}
+			}
+			hidden_effect = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = para_tech
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_airborne_soldiers
+		icon = GFX_focus_generic_paratrooper
+		x = 0
+		y = 1
+		relative_position_id = ASH_early_parachutes
+		cost = 1
+		prerequisite = {
+			focus = ASH_early_parachutes
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				air_experience = 10
+				add_tech_bonus = {
+    					bonus = 0.25
+  						uses = 2
+  						category = para_tech
+				}
+			}
+			hidden_effect = {
+				air_experience = 10
+				add_tech_bonus = {
+    					bonus = 0.25
+  						uses = 2
+  						category = para_tech
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_aerial_recon_effort
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 1
+		relative_position_id = ASH_scout_aircraft
+		cost = 1
+		prerequisite = {
+			focus = ASH_scout_aircraft
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				air_experience = 10
+			}
+			hidden_effect = {
+				air_experience = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_aerial_offense
+		icon = GFX_goal_generic_occupy_start_war
+		x = 2
+		y = 1
+		relative_position_id = ASH_kuk_luftfahrtruppen
+		cost = 1
+		prerequisite = {
+			focus = ASH_kuk_luftfahrtruppen
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				air_experience = 10
+			}
+			hidden_effect = {
+				air_experience = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_early_cas
+		icon = GFX_goal_generic_CAS
+		x = 0
+		y = 1
+		relative_position_id = ASH_aerial_offense
+		cost = 1
+		prerequisite = {
+			focus = ASH_aerial_offense
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = cas_bomber
+				}
+			}
+			hidden_effect = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = cas_bomber
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_bombardment
+		icon = GFX_goal_generic_air_bomber
+		x = 2
+		y = 1
+		relative_position_id = ASH_aerial_offense
+		cost = 1
+		prerequisite = {
+			focus = ASH_aerial_offense
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = tactical_bomber
+				}
+			}
+			hidden_effect = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = tactical_bomber
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_anti_ship
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 1
+		y = 2
+		relative_position_id = ASH_aerial_offense
+		cost = 1
+		prerequisite = {
+			focus = ASH_early_cas
+		}
+		prerequisite = {
+			focus = ASH_bombardment
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = naval_bomber
+				}
+			}
+			hidden_effect = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = naval_bomber
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_early_carriers
+		icon = GFX_goal_generic_navy_carrier
+		x = 0
+		y = 1
+		relative_position_id = ASH_anti_ship
+		cost = 1
+		prerequisite = {
+			focus = ASH_anti_ship
+		}
+		prerequisite = {
+			focus = ASH_strengthen_branch_cooperation
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				air_experience = 5
+				navy_experience = 5
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = ca_tech
+				}
+			}
+			hidden_effect = {
+				air_experience = 5
+				navy_experience = 5
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = ca_tech
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_review_armed_forces
+		icon = GFX_focus_POL_sanation_right
+		x = 10
+		y = 0
+		cost = 1
+		available = {
+		
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				army_experience = 5
+				add_command_power = 10
+			}
+			hidden_effect = {
+				army_experience = 5
+				add_command_power = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_kuk_kriegsmarine
+		icon = GFX_goal_generic_navy_battleship
+		x = 0
+		y = 1
+		relative_position_id = ASH_review_armed_forces
+		cost = 1
+		prerequisite = {
+			focus = ASH_review_armed_forces
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 5
+				add_political_power = 10
+				navy_experience = 5
+			}
+			hidden_effect = {
+				add_command_power = 5
+				add_political_power = 20
+				navy_experience = 5
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_grand_fleet
+		icon = GFX_focus_generic_navy_battleship2
+		x = -1
+		y = 1
+		relative_position_id = ASH_kuk_kriegsmarine
+		cost = 1
+		prerequisite = {
+			focus = ASH_kuk_kriegsmarine
+		}
+		mutually_exclusive = {
+			focus = ASH_invisible_fleet
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_invisible_fleet
+		icon = GFX_goal_generic_wolf_pack
+		x = 1
+		y = 1
+		relative_position_id = ASH_kuk_kriegsmarine
+		cost = 1
+		available = {
+			ASH = {
+				OR = {
+					is_ally_with = GER
+					GER = {
+						has_opinion = {
+    					target = ASH
+ 				  		value > 50
+						}
+					}
+				}
+			}
+		}
+		prerequisite = {
+			focus = ASH_kuk_kriegsmarine
+		}
+		mutually_exclusive = {
+			focus = ASH_grand_fleet
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_contest_adriatic
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 0
+		y = 1
+		relative_position_id = ASH_grand_fleet
+		cost = 1
+		prerequisite = {
+			focus = ASH_grand_fleet
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_u_boat_licences
+		icon = GFX_goal_generic_navy_submarine
+		x = 0
+		y = 1
+		relative_position_id = ASH_invisible_fleet
+		cost = 1
+		prerequisite = {
+			focus = ASH_invisible_fleet
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_destroyers
+		icon = GFX_focus_generic_destroyer
+		x = 1
+		y = 1
+		relative_position_id = ASH_contest_adriatic
+		cost = 1
+		prerequisite = {
+			focus = ASH_contest_adriatic
+			focus = ASH_u_boat_licences
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_cruisers
+		icon = GFX_focus_generic_cruiser2
+		x = 0
+		y = 1
+		relative_position_id = ASH_destroyers
+		cost = 1
+		prerequisite = {
+			focus = ASH_destroyers
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_strengthen_branch_cooperation
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		relative_position_id = ASH_cruisers
+		cost = 1
+		prerequisite = {
+			focus = ASH_cruisers
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_reorganize_maa
+		icon = GFX_goal_generic_air_fighter2
+		x = -4
+		y = 1
+		relative_position_id = ASH_review_armed_forces
+		cost = 1
+		prerequisite = {
+			focus = ASH_review_armed_forces
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 5
+				add_political_power = 10
+				air_experience = 5
+			}
+			hidden_effect = {
+				add_command_power = 5
+				add_political_power = 20
+				air_experience = 5
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_blimp_designs
+		icon = GFX_goal_generic_occupy_start_war
+		x = 0
+		y = 1
+		relative_position_id = ASH_reorganize_maa
+		cost = 1
+		prerequisite = {
+			focus = ASH_reorganize_maa
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				air_experience = 10
+			}
+			hidden_effect = {
+				air_experience = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_zeppelin_effort
+		icon = GFX_goal_generic_occupy_start_war
+		x = 0
+		y = 1
+		relative_position_id = ASH_blimp_designs
+		cost = 1
+		prerequisite = {
+			focus = ASH_blimp_designs
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				air_experience = 10
+			}
+			hidden_effect = {
+				air_experience = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_landstreitkrafte
+		icon = GFX_focus_generic_military_mission
+		x = 4
+		y = 1
+		relative_position_id = ASH_review_armed_forces
+		cost = 1
+		prerequisite = {
+			focus = ASH_review_armed_forces
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 5
+				add_political_power = 10
+				army_experience = 5
+			}
+			hidden_effect = {
+				add_command_power = 5
+				add_political_power = 10
+				army_experience = 5
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_foreign_arms
+		icon = GFX_goal_generic_trade
+		x = 0
+		y = 1
+		relative_position_id = ASH_landstreitkrafte
+		cost = 1
+		prerequisite = {
+			focus = ASH_landstreitkrafte
+		}
+		mutually_exclusive = {
+			focus = ASH_domestic_arms
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_domestic_arms
+		icon = GFX_focus_generic_home_defense
+		x = 6
+		y = 1
+		relative_position_id = ASH_landstreitkrafte
+		cost = 1
+		prerequisite = {
+			focus = ASH_landstreitkrafte
+		}
+		mutually_exclusive = {
+			focus = ASH_foreign_arms
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_steyr_arms
+		icon = GFX_focus_generic_manpower
+		x = -2
+		y = 1
+		relative_position_id = ASH_domestic_arms
+		cost = 1
+		prerequisite = {
+			focus = ASH_domestic_arms
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_support_weapon_development
+		icon = GFX_goal_generic_army_artillery
+		x = 1
+		y = 1
+		relative_position_id = ASH_steyr_arms
+		cost = 1
+		prerequisite = {
+			focus = ASH_steyr_arms
+		}
+		prerequisite = {
+			focus = ASH_skoda_works
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_light_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = 0
+		y = 1
+		relative_position_id = ASH_support_weapon_development
+		cost = 1
+		prerequisite = {
+			focus = ASH_support_weapon_development
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_improved_mgs
+		icon = GFX_goal_generic_small_arms
+		x = -2
+		y = 1
+		relative_position_id = ASH_support_weapon_development
+		cost = 1
+		prerequisite = {
+			focus = ASH_support_weapon_development
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_experimental_weaponry
+		icon = GFX_goal_generic_secret_weapon
+		x = -1
+		y = 1
+		relative_position_id = ASH_improved_mgs
+		cost = 1
+		prerequisite = {
+			focus = ASH_improved_mgs
+			focus = ASH_austro_german_joint_research
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_experimental_small_arms
+		icon = GFX_focus_secret_rearmament
+		x = 0
+		y = 1
+		relative_position_id = ASH_experimental_weaponry
+		cost = 1
+		prerequisite = {
+			focus = ASH_experimental_weaponry
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_early_smgs
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		relative_position_id = ASH_experimental_small_arms
+		cost = 1
+		prerequisite = {
+			focus = ASH_experimental_small_arms
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_semi_auto_rifle_integration
+		icon = GFX_goal_generic_small_arms
+		x = 1
+		y = 1
+		relative_position_id = ASH_experimental_small_arms
+		cost = 1
+		prerequisite = {
+			focus = ASH_experimental_small_arms
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_skoda_works
+		icon = GFX_focus_generic_combined_arms
+		x = 0
+		y = 1
+		relative_position_id = ASH_domestic_arms
+		cost = 1
+		prerequisite = {
+			focus = ASH_domestic_arms
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	
+
+	focus = {
+		id = ASH_austro_daimler
+		icon = GFX_focus_SOV_the_road_of_life
+		x = 2
+		y = 1
+		relative_position_id = ASH_domestic_arms
+		cost = 1
+		prerequisite = {
+			focus = ASH_domestic_arms
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_armored_car_effort
+		icon = GFX_goal_generic_build_tank
+		x = 1
+		y = 1
+		relative_position_id = ASH_austro_daimler
+		cost = 1
+		prerequisite = {
+			focus = ASH_austro_daimler
+		}
+		mutually_exclusive = {
+			focus = ASH_burstyn_motorgeschutz
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_truck_artillery_effort
+		icon = GFX_focus_generic_air_defense
+		x = 0
+		y = 1
+		relative_position_id = ASH_armored_car_effort
+		cost = 1
+		prerequisite = {
+			focus = ASH_armored_car_effort
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_burstyn_motorgeschutz
+		icon = GFX_goal_generic_army_tanks
+		x = -1
+		y = 1
+		relative_position_id = ASH_austro_daimler
+		cost = 1
+		prerequisite = {
+			focus = ASH_austro_daimler
+		}
+		prerequisite = {
+			focus = ASH_skoda_works
+		}
+		mutually_exclusive = {
+			focus = ASH_armored_car_effort
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_early_tank_trials
+		icon = GFX_focus_generic_tank_production
+		x = 0
+		y = 1
+		relative_position_id = ASH_burstyn_motorgeschutz
+		cost = 1
+		prerequisite = {
+			focus = ASH_burstyn_motorgeschutz
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_rsaf
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		x = -1
+		y = 1
+		relative_position_id = ASH_foreign_arms
+		available = {
+			NOT = {
+				is_in_faction_with = GER
+			}
+		}
+		cost = 1
+		prerequisite = {
+			focus = ASH_foreign_arms
+		}
+		mutually_exclusive = {
+			focus = ASH_mauser
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_relation_modifier = {
+    			target = ENG
+    			modifier = ASH_foreign_licenses
+				}
+				add_opinion_modifier = {
+			    target = ENG
+			    modifier = ASH_license
+				}
+				GER = {
+					add_opinion_modifier = {
+			    	target = ASH
+			    	modifier = ASH_anger_germany
+					}
+				}
+				ENG = {
+					add_opinion_modifier = {
+			    	target = ASH
+			   		modifier = ASH_license
+					}
+				}
+			}
+			hidden_effect = {
+				add_relation_modifier = {
+    			target = ENG
+    			modifier = ASH_foreign_licenses
+				}
+				add_opinion_modifier = {
+			    target = ENG
+			    modifier = ASH_license
+				}
+				GER = {
+					add_opinion_modifier = {
+			    	target = ASH
+			    	modifier = ASH_anger_germany
+					}
+				}
+				ENG = {
+					add_opinion_modifier = {
+			    	target = ASH
+			   		modifier = ASH_license
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_purchase_landships
+		icon = GFX_focus_generic_license_production
+		x = 0
+		y = 1
+		relative_position_id = ASH_rsaf
+		cost = 1
+		prerequisite = {
+			focus = ASH_rsaf
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = armor
+				}
+			}
+			hidden_effect = {
+				add_tech_bonus = {
+    					bonus = 0.5
+  						uses = 1
+  						category = armor
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_austro_british_training
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 0
+		y = 1
+		relative_position_id = ASH_purchase_landships
+		cost = 1
+		prerequisite = {
+			focus = ASH_purchase_landships
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_early_naval_landing_craft
+		icon = GFX_goal_generic_amphibious_assault
+		x = 0
+		y = 2
+		relative_position_id = ASH_austro_british_training
+		cost = 1
+		prerequisite = {
+			focus = ASH_austro_british_training
+		}
+		prerequisite = {
+			focus = ASH_strengthen_branch_cooperation
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_mauser
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 1
+		y = 1
+		relative_position_id = ASH_foreign_arms
+		cost = 1
+		prerequisite = {
+			focus = ASH_foreign_arms
+		}
+		mutually_exclusive = {
+			focus = ASH_rsaf
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_relation_modifier = {
+    			target = GER
+    			modifier = ASH_foreign_licenses
+				}
+				add_opinion_modifier = {
+			    target = GER
+			    modifier = ASH_license
+				}
+				GER = {
+					add_opinion_modifier = {
+			    	target = ASH
+			    	modifier = ASH_license
+					}
+				}
+			}
+			hidden_effect = {
+				add_relation_modifier = {
+    			target = GER
+    			modifier = ASH_foreign_licenses
+				}
+				add_opinion_modifier = {
+			    target = GER
+			    modifier = ASH_license
+				}
+				GER = {
+					add_opinion_modifier = {
+			    	target = ASH
+			    	modifier = ASH_license
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_greater_cooperation__with_germany
+		icon = GFX_focus_POL_beck_ribbentrop
+		x = 0
+		y = 1
+		relative_position_id = ASH_mauser
+		cost = 1
+		prerequisite = {
+			focus = ASH_mauser
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_austro_german_joint_research
+		icon = GFX_goal_generic_scientific_exchange
+		x = 0
+		y = 1
+		relative_position_id = ASH_greater_cooperation__with_germany
+		cost = 1
+		prerequisite = {
+			focus = ASH_greater_cooperation__with_germany
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_review_economy
+		icon = GFX_goal_generic_consumer_goods
+		x = 32
+		y = 0
+		cost = 1
+		available = {
+		
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				army_experience = 10
+				add_command_power = 30
+			}
+			hidden_effect = {
+				army_experience = 10
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_industrial_effort
+		icon = GFX_goal_generic_production
+		x = 0
+		y = 1
+		relative_position_id = ASH_review_economy
+		cost = 1
+		prerequisite = {
+			focus = ASH_review_economy
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_infrastructure_i
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = ASH_industrial_effort
+		cost = 1
+		prerequisite = {
+			focus = ASH_industrial_effort
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_infrastructure_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = ASH_infrastructure_i
+		cost = 1
+		prerequisite = {
+			focus = ASH_infrastructure_i
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_infrastructure_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = ASH_infrastructure_ii
+		cost = 1
+		prerequisite = {
+			focus = ASH_infrastructure_ii
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_fortification_effort
+		icon = GFX_goal_generic_defence
+		x = -1
+		y = 1
+		relative_position_id = ASH_infrastructure_iii
+		cost = 1
+		prerequisite = {
+			focus = ASH_infrastructure_iii
+		}
+		prerequisite = {
+			focus = ASH_armament_effort_iii
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_walls_of_tyrol
+		icon = GFX_goal_generic_construct_military
+		x = -1
+		y = 1
+		relative_position_id = ASH_fortification_effort
+		cost = 1
+		prerequisite = {
+			focus = ASH_fortification_effort
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_fortify_the_south
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 2
+		relative_position_id = ASH_walls_of_tyrol
+		cost = 1
+		prerequisite = {
+			focus = ASH_walls_of_tyrol
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_walls_of_galicia
+		icon = GFX_goal_generic_construct_military
+		x = 1
+		y = 1
+		relative_position_id = ASH_fortification_effort
+		cost = 1
+		prerequisite = {
+			focus = ASH_fortification_effort
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_entrench_the_north
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 2
+		relative_position_id = ASH_walls_of_galicia
+		cost = 1
+		prerequisite = {
+			focus = ASH_walls_of_galicia
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_defenders_of_carpathia
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 2
+		relative_position_id = ASH_fortification_effort
+		cost = 1
+		prerequisite = {
+			focus = ASH_fortification_effort
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_habsburg_fortress
+		icon = GFX_focus_POL_habsburg
+		x = 0
+		y = 2
+		relative_position_id = ASH_defenders_of_carpathia
+		cost = 1
+		prerequisite = {
+			focus = ASH_defenders_of_carpathia
+		}
+		prerequisite = {
+			focus = ASH_fortify_the_south
+		}
+		prerequisite = {
+			focus = ASH_entrench_the_north
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_armament_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -2
+		y = 1
+		relative_position_id = ASH_industrial_effort
+		cost = 1
+		prerequisite = {
+			focus = ASH_industrial_effort
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_ganz_works
+		icon = GFX_focus_generic_military_mission
+		x = -2
+		y = 1
+		relative_position_id = ASH_armament_effort
+		cost = 1
+		prerequisite = {
+			focus = ASH_armament_effort
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_ganz_danubius
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		x = -2
+		y = 1
+		relative_position_id = ASH_ganz_works
+		cost = 1
+		prerequisite = {
+			focus = ASH_ganz_works
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_expand_fiume_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 1
+		relative_position_id = ASH_ganz_danubius
+		cost = 1
+		prerequisite = {
+			focus = ASH_ganz_danubius
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_fortify_the_adriatic
+		icon = GFX_focus_generic_coastal_fort
+		x = 3
+		y = 2
+		relative_position_id = ASH_expand_fiume_dockyards
+		cost = 1
+		prerequisite = {
+			focus = ASH_expand_fiume_dockyards
+		}
+		prerequisite = {
+			focus = ASH_walls_of_tyrol
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_ganz_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		relative_position_id = ASH_ganz_works
+		cost = 1
+		prerequisite = {
+			focus = ASH_ganz_works
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_renationalize_railways
+		icon = GFX_focus_SOV_south_manchuria_railway
+		x = 0
+		y = 1
+		relative_position_id = ASH_ganz_railways
+		cost = 1
+		prerequisite = {
+			focus = ASH_ganz_railways
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_armament_effort_ii
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -0
+		y = 1
+		relative_position_id = ASH_armament_effort
+		cost = 1
+		prerequisite = {
+			focus = ASH_armament_effort
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_armament_effort_iii
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		relative_position_id = ASH_armament_effort_ii
+		cost = 1
+		prerequisite = {
+			focus = ASH_armament_effort_ii
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_research_investments
+		icon = GFX_focus_research
+		x = 2
+		y = 1
+		relative_position_id = ASH_infrastructure_i
+		cost = 1
+		prerequisite = {
+			focus = ASH_infrastructure_i
+		}
+		prerequisite = {
+			focus = ASH_civil_industry
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_civil_industry
+		icon = GFX_focus_generic_industry_1
+		x = 4
+		y = 1
+		relative_position_id = ASH_industrial_effort
+		cost = 1
+		prerequisite = {
+			focus = ASH_industrial_effort
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_urbanization_investments
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 1
+		relative_position_id = ASH_civil_industry
+		cost = 1
+		prerequisite = {
+			focus = ASH_civil_industry
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_cisleithanian_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		relative_position_id = ASH_urbanization_investments
+		cost = 1
+		prerequisite = {
+			focus = ASH_urbanization_investments
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_factories_on_the_moldau
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		relative_position_id = ASH_cisleithanian_factories
+		cost = 1
+		prerequisite = {
+			focus = ASH_cisleithanian_factories
+		}
+		prerequisite = {
+			focus = ASH_city_of_music
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_expand_alpine_mines
+		icon = GFX_goal_generic_construction2
+		x = -1
+		y = 1
+		relative_position_id = ASH_factories_on_the_moldau
+		cost = 1
+		prerequisite = {
+			focus = ASH_factories_on_the_moldau
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_city_of_music
+		icon = GFX_focus_research2
+		x = 0
+		y = 2
+		relative_position_id = ASH_urbanization_investments
+		cost = 1
+		prerequisite = {
+			focus = ASH_urbanization_investments
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_coffee_house_capital
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 2
+		relative_position_id = ASH_city_of_music
+		cost = 1
+		prerequisite = {
+			focus = ASH_city_of_music
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_city_of_ideas
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		relative_position_id = ASH_coffee_house_capital
+		cost = 1
+		prerequisite = {
+			focus = ASH_coffee_house_capital
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_telegram_infrastructure
+		icon = GFX_goal_generic_radar
+		x = -1
+		y = 1
+		relative_position_id = ASH_coffee_house_capital
+		cost = 1
+		prerequisite = {
+			focus = ASH_coffee_house_capital
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_hungarian_agriculture
+		icon = GFX_focus_generic_industry_2
+		x = 1
+		y = 1
+		relative_position_id = ASH_urbanization_investments
+		cost = 1
+		prerequisite = {
+			focus = ASH_urbanization_investments
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_rural_electrification
+		icon = GFX_goal_generic_construct_civilian
+		x = 1
+		y = 1
+		relative_position_id = ASH_hungarian_agriculture
+		cost = 1
+		prerequisite = {
+			focus = ASH_hungarian_agriculture
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_gem_on_the_danube
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		relative_position_id = ASH_hungarian_agriculture
+		cost = 1
+		prerequisite = {
+			focus = ASH_hungarian_agriculture
+		}
+		prerequisite = {
+			focus = ASH_rural_electrification
+		}
+		prerequisite = {
+			focus = ASH_city_of_music
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_expand_carpathian_mines
+		icon = GFX_goal_generic_construction2
+		x = 1
+		y = 1
+		relative_position_id = ASH_gem_on_the_danube
+		cost = 1
+		prerequisite = {
+			focus = ASH_gem_on_the_danube
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_reform_the_empire
+		icon = GFX_focus_POL_sanation_right
+		x = 50
+		y = 0
+		cost = 1
+		available = {
+		
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				army_experience = 5
+				add_command_power = 10
+			}
+			hidden_effect = {
+				army_experience = 5
+				add_command_power = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_all_one_greater_austria
+		icon = GFX_focus_generic_monarchy_1
+		x = -5
+		y = 1
+		relative_position_id = ASH_reform_the_empire
+		cost = 1
+		prerequisite = {
+			focus = ASH_reform_the_empire
+		}
+		mutually_exclusive = {
+			focus = ASH_limited_self_governance
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_limited_self_governance
+		icon = GFX_focus_generic_monarchy_2
+		x = 5
+		y = 1
+		relative_position_id = ASH_reform_the_empire
+		cost = 1
+		prerequisite = {
+			focus = ASH_reform_the_empire
+		}
+		mutually_exclusive = {
+			focus = ASH_all_one_greater_austria
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_end_status_quo
+		icon = GFX_focus_generic_monarchy_1
+		x = -2
+		y = 1
+		relative_position_id = ASH_limited_self_governance
+		cost = 1
+		prerequisite = {
+			focus = ASH_limited_self_governance
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_break_up_cisleithania
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 1
+		relative_position_id = ASH_end_status_quo
+		cost = 1
+		prerequisite = {
+			focus = ASH_end_status_quo
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				CZE = {
+					remove_state_core = 894
+					add_state_claim = 894
+					transfer_state = 9
+					transfer_state = 69
+					transfer_state = 74
+					transfer_state = 75
+				}
+				SLV = {
+					transfer_state = 102
+					transfer_state = 897
+				}
+			}
+			hidden_effect = {
+				CZE = {
+					remove_state_core = 894
+					add_state_claim = 894
+					transfer_state = 9
+					transfer_state = 69
+					transfer_state = 74
+					transfer_state = 75
+					set_cosmetic_tag = CZE_federal
+				}
+				SLV = {
+					transfer_state = 102
+					transfer_state = 897
+					set_cosmetic_tag = SLV_federal
+				}
+				ASH = {
+					set_cosmetic_tag = ASH_federal
+					diplomatic_relation = {
+    				country = CZE
+   					relation = guarantee
+    				active = yes
+					}
+					diplomatic_relation = {
+    				country = SLV
+   					relation = guarantee
+    				active = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_remnants_of_the_dual_system
+		icon = GFX_focus_YUG_devolved_croatia
+		x = 0
+		y = 1
+		relative_position_id = ASH_break_up_cisleithania
+		cost = 1
+		prerequisite = {
+			focus = ASH_break_up_cisleithania
+		}
+		mutually_exclusive = {
+			focus = ASH_unite_croatia
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				DAL = {
+					add_state_core = 103
+					add_state_core = 907
+					transfer_state = 103
+					transfer_state = 907
+				}
+				CRO = {
+					remove_state_core = 103
+					remove_state_core = 907
+					transfer_state = 109
+					transfer_state = 905
+					transfer_state = 895
+				}
+			}
+			hidden_effect = {
+				DAL = {
+					add_state_core = 103
+					add_state_core = 907
+					transfer_state = 103
+					transfer_state = 907
+					set_cosmetic_tag = DAL_federal
+				}
+				CRO = {
+					remove_state_core = 103
+					remove_state_core = 907
+					transfer_state = 109
+					transfer_state = 905
+					transfer_state = 895
+					set_cosmetic_tag = CRO_federal_slavonia
+				}
+				ASH = {
+					diplomatic_relation = {
+    				country = CRO
+   					relation = guarantee
+    				active = yes
+					}
+					diplomatic_relation = {
+    				country = DAL
+   					relation = guarantee
+    				active = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_unite_croatia
+		icon = GFX_focus_generic_monarchy_1
+		x = -2
+		y = 1
+		relative_position_id = ASH_break_up_cisleithania
+		cost = 1
+		prerequisite = {
+			focus = ASH_break_up_cisleithania
+		}
+		mutually_exclusive = {
+			focus = ASH_remnants_of_the_dual_system
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				CRO = {
+					transfer_state = 103
+					transfer_state = 907
+					transfer_state = 109
+					transfer_state = 905
+					transfer_state = 895
+				}
+			}
+			hidden_effect = {
+				CRO = {
+					transfer_state = 103
+					transfer_state = 907
+					transfer_state = 109
+					transfer_state = 905
+					transfer_state = 895
+					set_cosmetic_tag = CRO_federal_united
+				}
+				ASH = {
+					diplomatic_relation = {
+    				country = CRO
+   					relation = guarantee
+    				active = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_recognize_slovakia
+		icon = GFX_focus_generic_monarchy_1
+		x = 2
+		y = 1
+		relative_position_id = ASH_break_up_cisleithania
+		cost = 1
+		prerequisite = {
+			focus = ASH_break_up_cisleithania
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				SLO = {
+					transfer_state = 71
+					transfer_state = 70
+				}
+				HUN = {
+					remove_state_core = 71
+					remove_state_core = 70
+				}
+			}
+			hidden_effect = {
+				SLO = {
+					transfer_state = 71
+					transfer_state = 70
+					set_cosmetic_tag = SLO_federal
+				}
+				HUN = {
+					remove_state_core = 71
+					remove_state_core = 70
+				}
+				ASH = {
+					diplomatic_relation = {
+    				country = SLO
+   					relation = guarantee
+    				active = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_galician_autonomy
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 1
+		relative_position_id = ASH_unite_croatia
+		cost = 1
+		prerequisite = {
+			focus = ASH_unite_croatia
+			focus = ASH_remnants_of_the_dual_system
+			focus = ASH_recognize_slovakia
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				GLI = {
+					add_state_core = 91
+					add_state_core = 89
+					add_state_core = 893
+					transfer_state = 91
+					transfer_state = 89
+					transfer_state = 893
+				}
+				LOD = {
+					add_state_core = 88
+					add_state_core = 72
+					transfer_state = 88
+					transfer_state = 72
+				}
+				POL = {
+					remove_state_core = 88
+					remove_state_core = 72
+					add_state_claim = 88
+					add_state_claim = 72
+				}
+				CZE = {
+					remove_state_core = 72
+					add_state_claim = 72
+				}
+				UKR = {
+					remove_state_core = 91
+					remove_state_core = 89
+					remove_state_core = 893
+					add_state_claim = 91
+					add_state_claim = 89
+					add_state_claim = 893
+				}
+			}
+			hidden_effect = {
+				GLI = {
+					add_state_core = 91
+					add_state_core = 89
+					add_state_core = 893
+					transfer_state = 91
+					transfer_state = 89
+					transfer_state = 893
+					set_cosmetic_tag = GLI_federal
+				}
+				LOD = {
+					add_state_core = 88
+					add_state_core = 72
+					transfer_state = 88
+					transfer_state = 72
+					set_cosmetic_tag = LOD_federal
+				}
+				POL = {
+					remove_state_core = 88
+					remove_state_core = 72
+					add_state_claim = 88
+					add_state_claim = 72
+				}
+				CZE = {
+					remove_state_core = 72
+					add_state_claim = 72
+				}
+				UKR = {
+					remove_state_core = 91
+					remove_state_core = 89
+					remove_state_core = 893
+					add_state_claim = 91
+					add_state_claim = 89
+					add_state_claim = 893
+				}
+				ASH = {
+					diplomatic_relation = {
+    				country = GLI
+   					relation = guarantee
+    				active = yes
+					}
+					diplomatic_relation = {
+    				country = LOD
+   					relation = guarantee
+    				active = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_split_carpathia
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 1
+		relative_position_id = ASH_remnants_of_the_dual_system
+		cost = 1
+		prerequisite = {
+			focus = ASH_unite_croatia
+			focus = ASH_remnants_of_the_dual_system
+			focus = ASH_recognize_slovakia
+		}
+		mutually_exclusive = {
+			focus = ASH_carpathian_autonomy
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				TRA = {
+					remove_state_core = 890
+					add_state_claim = 890
+					transfer_state = 84
+					transfer_state = 76
+					transfer_state = 892
+					transfer_state = 82
+					transfer_state = 83
+					transfer_state = 843
+					transfer_state = 80
+				}
+				SZE = {
+					transfer_state = 891
+				}
+				BAT = {
+					transfer_state = 45
+					transfer_state = 764
+					transfer_state = 889
+				}
+			}
+			hidden_effect = {
+				TRA = {
+					remove_state_core = 890
+					add_state_claim = 890
+					transfer_state = 84
+					transfer_state = 76
+					transfer_state = 892
+					transfer_state = 82
+					transfer_state = 83
+					transfer_state = 843
+					transfer_state = 80
+					set_cosmetic_tag = TRA_federal_lesser
+				}
+				SZE = {
+					transfer_state = 891
+					set_cosmetic_tag = SZE_federal
+				}
+				BAT = {
+					transfer_state = 45
+					transfer_state = 764
+					transfer_state = 889
+					set_cosmetic_tag = BAT_federal
+				}
+				ASH = {
+					diplomatic_relation = {
+    				country = TRA
+   					relation = guarantee
+    				active = yes
+					}
+					diplomatic_relation = {
+    				country = BAT
+   					relation = guarantee
+    				active = yes
+					}
+					diplomatic_relation = {
+    				country = SZE
+   					relation = guarantee
+    				active = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_carpathian_autonomy
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 1
+		relative_position_id = ASH_recognize_slovakia
+		cost = 1
+		prerequisite = {
+			focus = ASH_unite_croatia
+			focus = ASH_remnants_of_the_dual_system
+			focus = ASH_recognize_slovakia
+		}
+		mutually_exclusive = {
+			focus = ASH_split_carpathia
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				TRA = {
+					remove_state_core = 890
+					add_state_claim = 890
+					transfer_state = 84
+					transfer_state = 76
+					transfer_state = 892
+					transfer_state = 82
+					transfer_state = 83
+					transfer_state = 843
+					transfer_state = 80
+					transfer_state = 891
+					transfer_state = 45
+					transfer_state = 764
+					transfer_state = 889
+				}
+			}
+			hidden_effect = {
+				TRA = {
+					remove_state_core = 890
+					add_state_claim = 890
+					transfer_state = 84
+					transfer_state = 76
+					transfer_state = 892
+					transfer_state = 82
+					transfer_state = 83
+					transfer_state = 843
+					transfer_state = 80
+					transfer_state = 891
+					transfer_state = 45
+					transfer_state = 764
+					transfer_state = 889
+					set_cosmetic_tag = TRA_federal_carpathia
+				}
+				ASH = {
+					diplomatic_relation = {
+    				country = TRA
+   					relation = guarantee
+    				active = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_a_true_union
+		icon = GFX_focus_generic_monarchy_1
+		x = -1
+		y = 1
+		relative_position_id = ASH_split_carpathia
+		cost = 1
+		prerequisite = {
+			focus = ASH_split_carpathia
+			focus = ASH_carpathian_autonomy
+		}
+		prerequisite = {
+			focus = ASH_galician_autonomy
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_deal_with_hungarian_dissidents
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 1
+		relative_position_id = ASH_a_true_union
+		cost = 1
+		prerequisite = {
+			focus = ASH_a_true_union
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_the_bosnian_question
+		icon = GFX_focus_generic_monarchy_1
+		x = 1
+		y = 1
+		relative_position_id = ASH_split_carpathia
+		cost = 1
+		prerequisite = {
+			focus = ASH_split_carpathia
+			focus = ASH_carpathian_autonomy
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_reconcile_with_serbia
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 1
+		relative_position_id = ASH_the_bosnian_question
+		cost = 1
+		prerequisite = {
+			focus = ASH_the_bosnian_question
+		}
+		mutually_exclusive = {
+			focus = ASH_defend_territorial_integrity
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+	focus = {
+		id = ASH_defend_territorial_integrity
+		icon = GFX_focus_generic_monarchy_1
+		x = 2
+		y = 1
+		relative_position_id = ASH_the_bosnian_question
+		cost = 1
+		prerequisite = {
+			focus = ASH_the_bosnian_question
+		}
+		mutually_exclusive = {
+			focus = ASH_reconcile_with_serbia
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_command_power = 30
+			}
+			hidden_effect = {
+				add_command_power = 30
+			}
+		}
+	}
+
+
+}

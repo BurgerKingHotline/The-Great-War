@@ -1294,7 +1294,64 @@
  LBA_senussiya:0 "Senussiya"
  LBA_senussiya_DEF:0 "the Senussi Order"
  LBA_senussiya_ADJ:0 "Senussi"
-
+ 
  RUS_provisional:0 "Provisional Government of Russia"
  RUS_provisional_DEF:0 "the Provisional Government of Russia"
  RUS_provisional_ADJ:0 "Russian"
+ 
+ ASH_federal:0 "Austria"
+ ASH_federal_DEF:0 "the Federal Kingdom of Austria"
+ ASH_federal_ADJ:0 "Austrian"
+ 
+ CRO_federal_slavonia:0 "Croatia-Slavonia"
+ CRO_federal_slavonia_DEF:0 "the Kingdom of Croatia and Slavonia"
+ CRO_federal_slavonia_ADJ:0 "Croatian"
+ 
+ CRO_federal_united:0 "Croatia"
+ CRO_federal_united_DEF:0 "the Kingdom of Croatia"
+ CRO_federal_united_ADJ:0 "Croatian"
+ 
+ DAL_federal:0 "Dalmatia"
+ DAL_federal_DEF:0 "the Kingdom of Dalmatia"
+ DAL_federal_ADJ:0 "Dalmatian"
+ 
+ SLV_federal:0 "Carniola"
+ SLV_federal_DEF:0 "the Duchy of Carniola"
+ SLV_federal_ADJ:0 "Slovenian"
+ 
+ SZE_federal:0 "Székely Land"
+ SZE_federal_DEF:0 "the Székely Land"
+ SZE_federal_ADJ:0 "Székely"
+ 
+ GLI_federal:0 "West Ukraine"
+ GLI_federal_DEF:0 "the Kingdom of West Ukraine"
+ GLI_federal_ADJ:0 "West Ukrainian"
+ 
+ LOD_federal:0 "Lodomeria"
+ LOD_federal_DEF:0 "the Kingdom of Lodomeria"
+ LOD_federal_ADJ:0 "Lodomerian"
+ 
+ CZE_federal:0 "Bohemia"
+ CZE_federal_DEF:0 "the Kingdom of Bohemia"
+ CZE_federal_ADJ:0 "Bohemian"
+ 
+ SLO_federal:0 "Slovakia"
+ SLO_federal_DEF:0 "the Slovak State"
+ SLO_federal_ADJ:0 "Slovakian"
+ 
+ HUN_federal:0 "Hungary"
+ HUN_federal_DEF:0 "the Kingdom of Hungary"
+ HUN_federal_ADJ:0 "Hungarian"
+ 
+ TRA_federal_lesser:0 "Transylvania"
+ TRA_federal_lesser_DEF:0 "Transylvania"
+ TRA_federal_lesser_ADJ:0 "Transylvanian"
+ 
+ TRA_federal_carpathia:0 "Carpathia"
+ TRA_federal_carpathia_DEF:0 "the Kingdom of Carpathia"
+ TRA_federal_carpathia_ADJ:0 "Carpathian"
+ 
+ BAT_federal:0 "Vojvodina"
+ BAT_federal_DEF:0 "Serbian State of Vojvodina"
+ BAT_federal_ADJ:0 "Serbian"
+

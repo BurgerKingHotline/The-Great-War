@@ -832,3 +832,32 @@ QIN = {
 	color = hsv { 0.18 0.6 0.9 } #255 244 190
 	color_ui = hsv { 0.18 0.3 0.9 }
 }
+
+FIU = {
+	color = rgb { 181 165 92 }
+	color_ui = rgb { 181 165 92 }
+}
+DAL = {
+	color = rgb { 92 163 181 }
+	color_ui = rgb { 92 163 181 }
+}
+SZE = {
+	color = rgb { 70 90 145 }
+	color_ui = rgb { 70 90 145 }
+}
+TYL = {
+	color = rgb { 70 145 113 }
+	color_ui = rgb { 70 145 113 }
+}
+BAT = {
+	color = rgb { 109 181 144 }
+	color_ui = rgb { 109 181 144 }
+}
+GLI = {
+	color = rgb { 189 131 57 }
+	color_ui = rgb { 189 131 57 }
+}
+LOD = {
+	color = rgb { 204 49 85 }
+	color_ui = rgb { 204 49 85 }
+}

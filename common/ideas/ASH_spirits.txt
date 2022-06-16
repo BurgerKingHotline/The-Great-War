@@ -1,0 +1,101 @@
+ideas = {
+
+	country = {
+		ash_mobilized_populace_idea = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.1
+				army_core_attack_factor = 0.1
+				stability_factor = -0.1
+				war_stability_factor = 0.3
+				training_time_factor = -0.05
+			}
+
+		}
+		ash_converted_auto_factories = {
+			picture = GFX_idea_SOV_third_five_year_plan_military
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.4
+				conversion_cost_mil_to_civ_factor = 0.6
+				stability_factor = -0.01
+			}
+
+		}
+		ash_wartime_industry_i = {
+			picture = GFX_idea_SOV_organize_wreckers
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.3
+				line_change_production_efficiency_factor = 0.2
+			}
+
+		}
+		ash_mobilized_railways = {
+			picture = GFX_idea_generic_build_infrastructure
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				repair_speed_infrastructure_factor = 0.3
+				repair_speed_rail_way_factor = 0.5
+				supply_node_range = 0.1
+			}
+
+		}
+		ash_wartime_industry_ii = {
+			picture = GFX_idea_SOV_organize_wreckers
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.3
+				line_change_production_efficiency_factor = 0.4
+				repair_speed_arms_factory_factor = 0.3
+			}
+
+		}
+	}
+}

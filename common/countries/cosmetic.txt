@@ -811,7 +811,59 @@ KHI_russian = {
 	color = rgb { 93 110 56 }
 	color_ui = rgb { 93 110 56 }
 }
-ASH_focus_puppet = {
+ASH_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+CRO_federal_slavonia = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+CRO_federal_united = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+DAL_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+SLV_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+SZE_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+GLI_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+LOD_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+CZE_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+SLO_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+HUN_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+TRA_federal_lesser = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+TRA_federal_carpathia = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+BAT_federal = {
 	color = rgb { 219 210 208 }
 	color_ui = rgb { 219 210 208 }
 }
