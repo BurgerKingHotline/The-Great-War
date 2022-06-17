@@ -1,0 +1,28 @@
+characters={
+	OTT_mehmed_v={
+		name="Mehmed V Reşâd"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=despotism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	OTT_Medjliss_Oumoumi={
+		name="The Medjliss Oumoumi"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=centrism 
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -259,3 +259,5 @@ if = {
 	}
 }
 
+recruit_character = OTT_Medjliss_Oumoumi
+

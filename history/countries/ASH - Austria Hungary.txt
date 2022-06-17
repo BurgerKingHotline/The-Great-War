@@ -37,3 +37,5 @@ add_opinion_modifier = {
 	target = RUS
 	modifier = historic_enemies_modifier
 }
+
+recruit_character = ASH_franz_joseph_i
