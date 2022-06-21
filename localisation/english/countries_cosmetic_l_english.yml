@@ -1331,9 +1331,9 @@
  LOD_federal_DEF:0 "the Kingdom of Lodomeria"
  LOD_federal_ADJ:0 "Lodomerian"
  
- CZE_federal:0 "Bohemia"
- CZE_federal_DEF:0 "the Kingdom of Bohemia"
- CZE_federal_ADJ:0 "Bohemian"
+ CZE_federal:0 "Bohemia-Moravia"
+ CZE_federal_DEF:0 "the Kingdom of Bohemia and Moravia"
+ CZE_federal_ADJ:0 "Bohemia-Moravian"
  
  SLO_federal:0 "Slovakia"
  SLO_federal_DEF:0 "the Slovak State"
@@ -1352,6 +1352,14 @@
  TRA_federal_carpathia_ADJ:0 "Carpathian"
  
  BAT_federal:0 "Vojvodina"
- BAT_federal_DEF:0 "Serbian State of Vojvodina"
+ BAT_federal_DEF:0 "the Serbian State of Vojvodina"
  BAT_federal_ADJ:0 "Serbian"
+ 
+ TYL_federal:0 "Südtirol"
+ TYL_federal_DEF:0 "the Autonomy of Südtirol-Alto Adige"
+ TYL_federal_ADJ:0 "Tyrolean"
+ 
+ FIU_federal:0 "Greater Fiume"
+ FIU_federal_DEF:0 "the Autonomy of Fiume the March of Istria and Italian Dalmatia"
+ FIU_federal_ADJ:0 "Italo-Dalmatian"
 

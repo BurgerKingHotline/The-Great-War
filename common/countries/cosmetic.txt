@@ -867,3 +867,11 @@ BAT_federal = {
 	color = rgb { 219 210 208 }
 	color_ui = rgb { 219 210 208 }
 }
+TYL_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
+FIU_federal = {
+	color = rgb { 219 210 208 }
+	color_ui = rgb { 219 210 208 }
+}
