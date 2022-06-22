@@ -865,7 +865,10 @@ country_event = { #collapse of russian control in europe
 						} 
 						modifier = {
 							factor = 0
-							has_completed_focus = RUS_prepare_for_a_civil_war
+							RUS = {
+								has_completed_focus = RUS_prepare_for_a_civil_war
+							}
+							
 						}
 					}
 					25 = {
@@ -899,7 +902,10 @@ country_event = { #collapse of russian control in europe
 						} 
 						modifier = {
 							factor = 2
-							has_completed_focus = RUS_prepare_for_a_civil_war
+							RUS = {
+								has_completed_focus = RUS_prepare_for_a_civil_war
+							}
+							
 						}
 					}
 					25 = {
@@ -953,7 +959,7 @@ country_event = { #Potsdam Meeting
 	option = {#Demand full russian control of persia
 		name = rus_events.1.a
 
-		set_country_flag = RUS_russian_full_access_flag
+		set_global_flag = RUS_russian_full_access_flag
 		GER = {
 			country_event = {
 				id = rus_events.2
@@ -962,7 +968,7 @@ country_event = { #Potsdam Meeting
 		}
 
 		ai_chance = {
-			factor = 5
+			factor = 8
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -973,7 +979,7 @@ country_event = { #Potsdam Meeting
 	option = {#Allow Germans railroads in persia
 		name = rus_events.1.b
 
-		set_country_flag = RUS_german_railroads_flag
+		set_global_flag = RUS_german_railroads_flag
 
 		ai_chance = {
 			factor = 10
@@ -990,10 +996,10 @@ country_event = { #Potsdam Meeting
 	option = {#Give Germans full access to persia
 		name = rus_events.1.c
 
-		set_country_flag = RUS_german_full_access_flag
+		set_global_flag = RUS_german_full_access_flag
 
 		ai_chance = {
-			factor = 3
+			factor = 5
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -1019,29 +1025,24 @@ country_event = { #Potsdam Meeting for germans
 	option = {#No, we demand more!
 		name = rus_events.2.a
 
-		if = {
-			limit = {
-				RUS = {
-					has_country_flag = RUS_german_railroads_flag
-				}
-			}
-		}
-
 		ai_chance = {
 			factor = 10
 			modifier = {
-				factor = 0.5
+				factor = 0.8
 				FROM = {
 					is_ai = no
 				}
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_global_flag = RUS_german_railroads_flag
 			}
 		}
 
 		trigger = {
 			NOT = {
-				RUS = {
-					has_country_flag = RUS_german_full_access_flag
-				}
+				has_global_flag = RUS_german_full_access_flag
 			}
 		}
 
@@ -1094,8 +1095,8 @@ country_event = { #germans want more
 	
 	option = {#Fine
 		name = rus_events.4.a
-		clr_country_flag = RUS_russian_full_access_flag 
-		set_country_flag = RUS_german_railroads_flag
+		clr_global_flag = RUS_russian_full_access_flag 
+		set_global_flag = RUS_german_railroads_flag
 		FROM = {
 			country_event = {
 				id = rus_events.5
@@ -1103,7 +1104,7 @@ country_event = { #germans want more
 			}
 		}
 		trigger = {
-			has_country_flag = RUS_russian_full_access_flag
+			has_global_flag = RUS_russian_full_access_flag
 		}
 		ai_chance = {
 			factor = 10
@@ -1116,8 +1117,8 @@ country_event = { #germans want more
 
 	option = {#Fine
 		name = rus_events.4.a
-		clr_country_flag = RUS_german_railroads_flag
-		set_country_flag = RUS_german_full_access_flag
+		clr_global_flag = RUS_german_railroads_flag
+		set_global_flag = RUS_german_full_access_flag
 		FROM = {
 			country_event = {
 				id = rus_events.5
@@ -1125,7 +1126,7 @@ country_event = { #germans want more
 			}
 		}
 		trigger = {
-			has_country_flag = RUS_german_railroads_flag
+			has_global_flag = RUS_german_railroads_flag
 		}
 		ai_chance = {
 			factor = 5
@@ -1172,9 +1173,7 @@ country_event = { #Russians agree!
 		}
 		trigger = {
 			NOT = {
-				RUS = {
-					has_country_flag = RUS_german_full_access_flag
-				}
+				has_global_flag = RUS_german_full_access_flag
 			}
 		}
 		ai_chance = {
@@ -1247,12 +1246,14 @@ country_event = { #germans leave
 	
 	option = {#ah
 		name = rus_events.7.a
-		clr_country_flag = RUS_russian_full_access_flag
-		clr_country_flag = RUS_german_railroads_flag
-		clr_country_flag = RUS_german_full_access_flag
+		clr_global_flag = RUS_russian_full_access_flag
+		clr_global_flag = RUS_german_railroads_flag
+		clr_global_flag = RUS_german_full_access_flag
 		set_country_flag = RUS_germans_leave_potsdam
 	}
 }
+
+#potsdam done
 
 country_event = { #russians ask help with training
 	id = rus_events.9
@@ -1282,6 +1283,9 @@ country_event = { #russians ask help with training
 				id = rus_events.10 days = 1
 			}
 		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 
 	option = {#no
@@ -1290,6 +1294,9 @@ country_event = { #russians ask help with training
 			country_event = {
 				id = rus_events.11 days = 1
 			}
+		}
+		ai_chance = {
+			factor = 0
 		}
 	}
 }
@@ -1381,5 +1388,159 @@ country_event = { #formation of the consituent assembly
 		name = rus_events.13.a
 		add_political_power = 50
 		add_stability = 0.02
+	}
+}
+
+country_event = { #Russians attempt to seize tannu tuva
+	id = rus_events.14
+	title = rus_events.14.t	
+	desc = rus_events.14.desc
+
+	is_triggered_only = yes
+	
+	option = {#We resisted against their attacks
+		name = rus_events.14.a
+		effect_tooltip = {
+			RUS = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+				}
+			}
+		}
+		hidden_effect = {
+			RUS = {
+				country_event = { id = rus_events.15 }
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					is_ai = no
+				}
+			}
+		}
+	}
+
+	option = {#Russian forces quickly took control
+		name = rus_events.14.b
+		RUS = {
+			country_event = { id = rus_events.16 }
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = { #The invasion of tannu tuva failed
+	id = rus_events.15
+	title = rus_events.15.t	
+	desc = rus_events.15.desc
+
+	is_triggered_only = yes
+	
+	option = {#Fine, we'll have to do it ourselves
+		name = rus_events.15.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = { #fate of tanu tuva
+	id = rus_events.16
+	title = rus_events.16.t	
+	desc = rus_events.16.desc
+
+	is_triggered_only = yes
+	
+	option = {#Puppet Tannu tuva
+		name = rus_events.16.a
+		if = {
+			limit = {
+				has_dlc = "Together for Victory"
+			}
+			set_autonomy = {
+				target = TAN
+				autonomous_state = autonomy_integrated_puppet
+			}
+			else = {
+				puppet = TAN
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {#Completely annex it
+		name = rus_events.16.b
+		annex_country = {
+			target = TAN
+		}
+		329 = {
+			set_compliance = 60
+			set_resistance = 0
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+country_event = { #Russia sends an ultimatum
+	id = rus_events.17
+	title = rus_events.17.t	
+	desc = rus_events.17.desc
+
+	is_triggered_only = yes
+	
+	option = {#We shall not surrender
+		name = rus_events.17.a
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {#Completely annex it
+		name = rus_events.17.b
+		if = {
+			limit = {
+				has_dlc = "Together for Victory"
+			}
+			set_autonomy = {
+				target = TAN
+				autonomous_state = autonomy_integrated_puppet
+			}
+			else = {
+				puppet = TAN
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
 	}
 }

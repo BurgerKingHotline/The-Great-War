@@ -123,6 +123,8 @@ decrease_senussiya_resistence = {
 	}
 }
 
+#Russia
+
 RUS_civil_war_start = {
 	country_event = { id = rus_civilwar.4 }
 	news_event = { id = TLG_newsevents.2 }
@@ -137,4 +139,7 @@ RUS_civil_war_start = {
 		}
 	}
 	set_global_flag = Russian_civil_war_flag
+}
+
+RUS_industrialisation_increase = {
 }

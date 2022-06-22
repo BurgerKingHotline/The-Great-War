@@ -302,28 +302,6 @@ ideas = {
 
 		}
 
-		RUS_reformist_duma_democratic = {
-			name = RUS_duma
-			picture = generic_production_bonus
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {#0.05 pp -0.05 stability, -0.05 drift defence, 5 democratic acceptance
-				political_power_factor = 0.35
-				drift_defence_factor = -0.3
-				war_support_factor = -0.05
-				democratic_acceptance = 40
-			}
-
-		}
-
 		RUS_democratic_duma_reform = {
 			name = RUS_duma
 			picture = generic_production_bonus
@@ -454,6 +432,7 @@ ideas = {
 		}
 
 		RUS_democratic_army = {
+			name = RUS_white_army
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -545,24 +524,6 @@ ideas = {
 
 		}
 
-		RUS_agrarian_nation = {
-			picture = generic_production_bonus
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				experience_gain_army_factor = 0.1
-			}
-
-		}
-
 		RUS_joint_training = {
 			picture = generic_production_bonus
 			allowed = {
@@ -602,7 +563,47 @@ ideas = {
 				consumer_goods_factor = -0.15
 				production_speed_arms_factory_factor = 0.1
 			}
+		}
 
+		RUS_industrialising_nation_1 = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05 
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		RUS_industrialising_nation_2 = {
+			name = RUS_industrialising_nation_1
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				 	
+
+				industrial_capacity_factory = 0.3
+				production_factory_efficiency_gain_factor = 0.08 
+				production_factory_max_efficiency_factor = 0.05
+				political_power_gain = -0.05
+			}
 		}
 
 		################
