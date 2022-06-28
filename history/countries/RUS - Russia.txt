@@ -96,14 +96,15 @@ set_popularities = {
 	neutrality = 49
 }
 set_war_support = 0.35
-give_guarantee = FRA
-give_guarantee = ENG
 
 recruit_character = RUS_nicholas_ii
 
 if = {
 	limit = {
-		has_dlc = "Together for Victory"
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
 	}
 	set_autonomy = {
 		target = BUK
