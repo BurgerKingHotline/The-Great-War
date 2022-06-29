@@ -973,6 +973,3 @@ if = {
 		}
 	}
 }
-
-give_guarantee = RUS
-give_guarantee = ENG
