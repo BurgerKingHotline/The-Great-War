@@ -146,42 +146,13 @@ on_actions = {
             if = {
                 limit = {
                     BUL = {
-                        NOT = {
-                            has_country_flag = balkan_war_ii_end
-                            controls_state = 341
-                            controls_state = 855
-                            controls_state = 878
-                            controls_state = 871
-                        }
-                    }
-                }
-                SER = {
-                    transfer_state = 871
-                }
-                GRE = {
-                    transfer_state = 184
-                }
-                if = {
-                    limit = {
-                        ROM = {
-                            has_war_with = BUL
-                        }
-                    }
-                    ROM = {
-                        transfer_state = 77
-                        white_peace = BUL
-                    }
-                }
-                if = {
-                    limit = {
-                        OTT = {
-                            has_war_with = BUL
-                        }
-                    }
-                    OTT = {
-                        transfer_state = 341
-                        transfer_state = 855
-                        white_peace = BUL
+                      NOT = {
+                        has_country_flag = balkan_war_ii_end
+                        controls_state = 341
+                        controls_state = 855
+                        controls_state = 878
+                        controls_state = 871
+                      }
                     }
                 }
                 BUL = {
@@ -194,6 +165,12 @@ on_actions = {
                     white_peace = BUL
                 }
                 GRE = {
+                    white_peace = BUL
+                }
+                OTT = {
+                    white_peace = BUL
+                }
+                ROM = {
                     white_peace = BUL
                 }
             }

@@ -39,6 +39,3 @@ add_opinion_modifier = {
 }
 
 recruit_character = ASH_franz_joseph_i
-
-give_guarantee = ITA
-give_guarantee = GER

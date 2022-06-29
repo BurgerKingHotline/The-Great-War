@@ -928,6 +928,3 @@ create_equipment_variant = {
 	#	obsolete = yes
 	#}
 }
-
-give_guarantee = ITA
-give_guarantee = ASH
