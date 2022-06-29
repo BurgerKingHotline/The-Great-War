@@ -11,6 +11,10 @@
 	}
 	
 	continuous_focus_position = { x = 70 y = 1300 }
+
+	initial_show_position = {
+		focus = ASH_review_armed_forces
+	}
 	
 	default = no
 	reset_on_civilwar = no
@@ -30,20 +34,16 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				army_experience = 10
-				add_command_power = 15
-			}
+			army_experience = 10
+			add_command_power = 15
 			hidden_effect = {
 				add_named_threat = { 
   			  	threat = 1
     			name = ASH_mobilizing
 			}
-				army_experience = 10
-				add_command_power = 15
-			}
 		}
 	}
+}
 
 	focus = {
 		id = ASH_prepare_the_people
@@ -82,13 +82,8 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 10
-			}
-			hidden_effect = {
-					add_command_power = 10
-					add_ideas = ash_converted_auto_factories
-			}
+			add_command_power = 10
+			add_ideas = ash_converted_auto_factories
 		}
 	}
 
@@ -108,14 +103,8 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 10
-				add_ideas = ash_wartime_industry_i
-			}
-			hidden_effect = {
-					add_command_power = 10
-					add_ideas = ash_wartime_industry_i
-			}
+			add_command_power = 10
+			add_ideas = ash_wartime_industry_i
 		}
 	}
 
@@ -135,19 +124,10 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-					add_tech_bonus = {
-    				bonus = 0.5
-  					uses = 1
-  					category = light_air
-				}
-			}
-			hidden_effect = {
-					add_tech_bonus = {
-    				bonus = 0.5
-  					uses = 1
-  					category = light_air
-				}
+			add_tech_bonus = {
+    		bonus = 0.5
+  			uses = 1
+  			category = light_air
 			}
 		}
 	}
@@ -165,12 +145,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_ideas = ash_mobilized_railways
-			}
-			hidden_effect = {
-				add_ideas = ash_mobilized_railways
-			}
+			add_ideas = ash_mobilized_railways
 		}
 	}
 
@@ -187,21 +162,10 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				effect_tooltip = {
-					add_tech_bonus = {
-    				bonus = 0.5
-  					uses = 1
-  					category = train_tech
-					}
-				}
-			}
-			hidden_effect = {
-					add_tech_bonus = {
-    				bonus = 0.5
-  					uses = 1
-  					category = train_tech
-					}
+			add_tech_bonus = {
+    		bonus = 0.5
+  			uses = 1
+  			category = train_tech
 			}
 		}
 	}
@@ -219,19 +183,9 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				effect_tooltip = {
-					swap_ideas = {
-    					remove_idea = ash_wartime_industry_i
-    					add_idea = ash_wartime_industry_ii
-					}
-				}
-			}
-			hidden_effect = {
-					swap_ideas = {
-    					remove_idea = ash_wartime_industry_i
-    					add_idea = ash_wartime_industry_ii
-					}
+			swap_ideas = {
+    			remove_idea = ash_wartime_industry_i
+    			add_idea = ash_wartime_industry_ii
 			}
 		}
 	}
@@ -249,23 +203,11 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				effect_tooltip = {
-					air_experience = 10
-					add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = medium_air
-					}
-				}
-			}
-			hidden_effect = {
-					air_experience = 10
-					add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = medium_air
-					}
+			air_experience = 10
+			add_tech_bonus = {
+    			bonus = 0.5
+  				uses = 1
+  				category = medium_air
 			}
 		}
 	}
@@ -283,38 +225,19 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			effect_tooltip = {
-				random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-					}
+			random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = air_base
+					size > 1
+					include_locked = yes
 				}
 			}
-			hidden_effect = {
-				random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-					}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
 				}
 			}
 		}
@@ -333,38 +256,19 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			effect_tooltip = {
-				random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-					}
+			random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = air_base
+					size > 1
+					include_locked = yes
 				}
 			}
-			hidden_effect = {
-				random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-					}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
 				}
 			}
 		}
@@ -383,38 +287,19 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			effect_tooltip = {
-				random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-					}
+			random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = air_base
+					size > 1
+					include_locked = yes
 				}
 			}
-			hidden_effect = {
-				random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-					}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
 				}
 			}
 		}
@@ -433,12 +318,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				air_experience = 10
-			}
-			hidden_effect = {
-				air_experience = 10
-			}
+			air_experience = 10
 		}
 	}
 
@@ -455,19 +335,10 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = air_equipment
-				}
-			}
-			hidden_effect = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = air_equipment
-				}
+			add_tech_bonus = {
+    			bonus = 0.5
+  				uses = 1
+  				category = air_equipment
 			}
 		}
 	}
@@ -485,19 +356,10 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = cat_scout_plane
-				}
-			}
-			hidden_effect = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = cat_scout_plane
-				}
+			add_tech_bonus = {
+    			bonus = 0.5
+  				uses = 1
+  				category = cat_scout_plane
 			}
 		}
 	}
@@ -515,19 +377,10 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = para_tech
-				}
-			}
-			hidden_effect = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = para_tech
-				}
+			add_tech_bonus = {
+    			bonus = 0.5
+  				uses = 1
+  				category = para_tech
 			}
 		}
 	}
@@ -545,21 +398,11 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				air_experience = 10
-				add_tech_bonus = {
-    					bonus = 0.25
-  						uses = 2
-  						category = para_tech
-				}
-			}
-			hidden_effect = {
-				air_experience = 10
-				add_tech_bonus = {
-    					bonus = 0.25
-  						uses = 2
-  						category = para_tech
-				}
+			air_experience = 10
+			add_tech_bonus = {
+    			bonus = 0.25
+  				uses = 2
+  				category = para_tech
 			}
 		}
 	}
@@ -577,12 +420,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				air_experience = 10
-			}
-			hidden_effect = {
-				air_experience = 10
-			}
+			air_experience = 10
 		}
 	}
 
@@ -599,12 +437,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				air_experience = 10
-			}
-			hidden_effect = {
-				air_experience = 10
-			}
+			air_experience = 10
 		}
 	}
 
@@ -621,19 +454,10 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = cas_bomber
-				}
-			}
-			hidden_effect = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = cas_bomber
-				}
+			add_tech_bonus = {
+    			bonus = 0.5
+  				uses = 1
+  				category = cas_bomber
 			}
 		}
 	}
@@ -651,19 +475,10 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = tactical_bomber
-				}
-			}
-			hidden_effect = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = tactical_bomber
-				}
+			add_tech_bonus = {
+    			bonus = 0.5
+  				uses = 1
+  				category = tactical_bomber
 			}
 		}
 	}
@@ -684,19 +499,10 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = naval_bomber
-				}
-			}
-			hidden_effect = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = naval_bomber
-				}
+			add_tech_bonus = {
+    			bonus = 0.5
+  				uses = 1
+  				category = naval_bomber
 			}
 		}
 	}
@@ -717,23 +523,12 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				air_experience = 5
-				navy_experience = 5
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = ca_tech
-				}
-			}
-			hidden_effect = {
-				air_experience = 5
-				navy_experience = 5
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = ca_tech
-				}
+			air_experience = 5
+			navy_experience = 5
+			add_tech_bonus = {
+    			bonus = 0.5
+  				uses = 1
+  				category = ca_tech
 			}
 		}
 	}
@@ -750,14 +545,8 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				army_experience = 5
-				add_command_power = 10
-			}
-			hidden_effect = {
-				army_experience = 5
-				add_command_power = 10
-			}
+			army_experience = 5
+			add_command_power = 10
 		}
 	}
 
@@ -774,16 +563,9 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 5
-				add_political_power = 10
-				navy_experience = 5
-			}
-			hidden_effect = {
-				add_command_power = 5
-				add_political_power = 20
-				navy_experience = 5
-			}
+			add_command_power = 5
+			add_political_power = 10
+			navy_experience = 5
 		}
 	}
 
@@ -803,12 +585,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -841,12 +618,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -863,12 +635,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -885,12 +652,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -908,12 +670,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -930,12 +687,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -952,12 +704,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -974,16 +721,9 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 5
-				add_political_power = 10
-				air_experience = 5
-			}
-			hidden_effect = {
-				add_command_power = 5
-				add_political_power = 20
-				air_experience = 5
-			}
+			add_command_power = 5
+			add_political_power = 10
+			air_experience = 5
 		}
 	}
 
@@ -1000,12 +740,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				air_experience = 10
-			}
-			hidden_effect = {
-				air_experience = 10
-			}
+			air_experience = 10
 		}
 	}
 
@@ -1022,12 +757,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				air_experience = 10
-			}
-			hidden_effect = {
-				air_experience = 10
-			}
+			air_experience = 10
 		}
 	}
 
@@ -1044,16 +774,9 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 5
-				add_political_power = 10
-				army_experience = 5
-			}
-			hidden_effect = {
-				add_command_power = 5
-				add_political_power = 10
-				army_experience = 5
-			}
+			add_command_power = 5
+			add_political_power = 10
+			army_experience = 5
 		}
 	}
 
@@ -1064,6 +787,9 @@
 		y = 1
 		relative_position_id = ASH_landstreitkrafte
 		cost = 1
+		allow_branch = {
+			NOT = { has_completed_focus = ASH_domestic_arms }
+		}
 		prerequisite = {
 			focus = ASH_landstreitkrafte
 		}
@@ -1073,11 +799,9 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
 				add_command_power = 30
-			}
 			hidden_effect = {
-				add_command_power = 30
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -1087,8 +811,18 @@
 		icon = GFX_focus_generic_home_defense
 		x = 6
 		y = 1
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_domestic_arms
+			}
+		}
 		relative_position_id = ASH_landstreitkrafte
 		cost = 1
+		allow_branch = {
+			NOT = { has_completed_focus = ASH_foreign_arms }
+		}
 		prerequisite = {
 			focus = ASH_landstreitkrafte
 		}
@@ -1098,11 +832,9 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 			hidden_effect = {
-				add_command_power = 30
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -1112,6 +844,13 @@
 		icon = GFX_focus_generic_manpower
 		x = -2
 		y = 1
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_domestic_arms
+			}
+		}
 		relative_position_id = ASH_domestic_arms
 		cost = 1
 		prerequisite = {
@@ -1120,12 +859,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1145,12 +879,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1167,12 +896,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1189,12 +913,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1203,6 +922,20 @@
 		icon = GFX_goal_generic_secret_weapon
 		x = -1
 		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_domestic_arms
+			}
+		}
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_foreign_arms
+			}
+		}
 		relative_position_id = ASH_improved_mgs
 		cost = 1
 		prerequisite = {
@@ -1212,12 +945,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1234,12 +962,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1256,12 +979,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1278,12 +996,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1292,6 +1005,13 @@
 		icon = GFX_focus_generic_combined_arms
 		x = 0
 		y = 1
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_domestic_arms
+			}
+		}
 		relative_position_id = ASH_domestic_arms
 		cost = 1
 		prerequisite = {
@@ -1300,12 +1020,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1316,6 +1031,13 @@
 		icon = GFX_focus_SOV_the_road_of_life
 		x = 2
 		y = 1
+		offset = {
+			x = 2
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_domestic_arms
+			}
+		}
 		relative_position_id = ASH_domestic_arms
 		cost = 1
 		prerequisite = {
@@ -1324,12 +1046,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1349,12 +1066,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1371,12 +1083,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1399,12 +1106,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1421,12 +1123,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1451,48 +1148,24 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_relation_modifier = {
+			add_relation_modifier = {
     			target = ENG
     			modifier = ASH_foreign_licenses
-				}
-				add_opinion_modifier = {
+			}
+			add_opinion_modifier = {
 			    target = ENG
 			    modifier = ASH_license
-				}
-				GER = {
-					add_opinion_modifier = {
+			}
+			GER = {
+				add_opinion_modifier = {
 			    	target = ASH
 			    	modifier = ASH_anger_germany
-					}
-				}
-				ENG = {
-					add_opinion_modifier = {
-			    	target = ASH
-			   		modifier = ASH_license
-					}
 				}
 			}
-			hidden_effect = {
-				add_relation_modifier = {
-    			target = ENG
-    			modifier = ASH_foreign_licenses
-				}
+			ENG = {
 				add_opinion_modifier = {
-			    target = ENG
-			    modifier = ASH_license
-				}
-				GER = {
-					add_opinion_modifier = {
-			    	target = ASH
-			    	modifier = ASH_anger_germany
-					}
-				}
-				ENG = {
-					add_opinion_modifier = {
 			    	target = ASH
 			   		modifier = ASH_license
-					}
 				}
 			}
 		}
@@ -1511,19 +1184,10 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = armor
-				}
-			}
-			hidden_effect = {
-				add_tech_bonus = {
-    					bonus = 0.5
-  						uses = 1
-  						category = armor
-				}
+			add_tech_bonus = {
+    			bonus = 0.5
+  				uses = 1
+  				category = armor
 			}
 		}
 	}
@@ -1541,12 +1205,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1566,12 +1225,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1591,43 +1245,25 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_relation_modifier = {
-    			target = GER
-    			modifier = ASH_foreign_licenses
-				}
-				add_opinion_modifier = {
-			    target = GER
-			    modifier = ASH_license
-				}
-				GER = {
-					add_opinion_modifier = {
-			    	target = ASH
-			    	modifier = ASH_license
-					}
-				}
+			add_relation_modifier = {
+    		target = GER
+    		modifier = ASH_foreign_licenses
 			}
-			hidden_effect = {
-				add_relation_modifier = {
-    			target = GER
-    			modifier = ASH_foreign_licenses
-				}
+			add_opinion_modifier = {
+			 target = GER
+			 modifier = ASH_license
+			}
+			GER = {
 				add_opinion_modifier = {
-			    target = GER
-			    modifier = ASH_license
-				}
-				GER = {
-					add_opinion_modifier = {
-			    	target = ASH
-			    	modifier = ASH_license
-					}
+			 	target = ASH
+			 	modifier = ASH_license
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = ASH_greater_cooperation__with_germany
+		id = ASH_greater_cooperation_with_germany
 		icon = GFX_focus_POL_beck_ribbentrop
 		x = 0
 		y = 1
@@ -1639,12 +1275,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1653,20 +1284,15 @@
 		icon = GFX_goal_generic_scientific_exchange
 		x = 0
 		y = 1
-		relative_position_id = ASH_greater_cooperation__with_germany
+		relative_position_id = ASH_greater_cooperation_with_germany
 		cost = 1
 		prerequisite = {
-			focus = ASH_greater_cooperation__with_germany
+			focus = ASH_greater_cooperation_with_germany
 		}
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1675,6 +1301,20 @@
 		icon = GFX_goal_generic_consumer_goods
 		x = 32
 		y = 0
+		offset = {
+			x = -8
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_foreign_arms
+			}
+		}
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_domestic_arms
+			}
+		}
 		cost = 1
 		available = {
 		
@@ -1683,10 +1323,6 @@
 
 		completion_reward = {
 			effect_tooltip = {
-				army_experience = 10
-				add_command_power = 30
-			}
-			hidden_effect = {
 				army_experience = 10
 				add_command_power = 30
 			}
@@ -1706,12 +1342,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1728,12 +1359,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1750,12 +1376,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1772,12 +1393,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1797,12 +1413,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1819,12 +1430,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1841,12 +1447,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1863,12 +1464,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1885,12 +1481,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1907,12 +1498,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1935,12 +1521,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1957,12 +1538,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -1979,12 +1555,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2001,12 +1572,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2023,12 +1589,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2048,12 +1609,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2070,12 +1626,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2092,12 +1643,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2114,12 +1660,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2136,12 +1677,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2161,12 +1697,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2183,12 +1714,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2205,12 +1731,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2227,12 +1748,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2252,12 +1768,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2274,12 +1785,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2296,12 +1802,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2318,12 +1819,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2340,12 +1836,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2362,12 +1853,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2384,12 +1870,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2406,12 +1887,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2434,12 +1910,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2456,12 +1927,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2470,6 +1936,20 @@
 		icon = GFX_focus_POL_sanation_right
 		x = 50
 		y = 0
+		offset = {
+			x = -13
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_foreign_arms
+			}
+		}
+		offset = {
+			x = -8
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_domestic_arms
+			}
+		}
 		cost = 1
 		available = {
 		
@@ -2477,14 +1957,8 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				army_experience = 5
-				add_command_power = 10
-			}
-			hidden_effect = {
-				army_experience = 5
-				add_command_power = 10
-			}
+			army_experience = 5
+			add_command_power = 10
 		}
 	}
 
@@ -2493,8 +1967,18 @@
 		icon = GFX_focus_generic_monarchy_1
 		x = -5
 		y = 1
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_all_one_greater_austria
+			}
+		}
 		relative_position_id = ASH_reform_the_empire
 		cost = 1
+		allow_branch = {
+			NOT = { has_completed_focus = ASH_limited_self_governance }
+		}
 		prerequisite = {
 			focus = ASH_reform_the_empire
 		}
@@ -2504,11 +1988,9 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 			hidden_effect = {
-				add_command_power = 30
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -2518,8 +2000,18 @@
 		icon = GFX_focus_generic_monarchy_2
 		x = 5
 		y = 1
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+			has_completed_focus = ASH_limited_self_governance
+			}
+		}
 		relative_position_id = ASH_reform_the_empire
 		cost = 1
+		allow_branch = {
+			NOT = { has_completed_focus = ASH_all_one_greater_austria }
+		}
 		prerequisite = {
 			focus = ASH_reform_the_empire
 		}
@@ -2529,11 +2021,9 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 			hidden_effect = {
-				add_command_power = 30
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -2551,12 +2041,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -2573,33 +2058,23 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				CZE = {
-					remove_state_core = 894
-					add_state_claim = 894
-					transfer_state = 9
-					transfer_state = 69
-					transfer_state = 74
-					transfer_state = 75
-				}
-				SLV = {
-					transfer_state = 102
-					transfer_state = 897
-				}
+			CZE = {
+				remove_state_core = 894
+				add_state_claim = 894
+				transfer_state = 9
+				transfer_state = 69
+				transfer_state = 74
+				transfer_state = 75
+			}
+			SLV = {
+				transfer_state = 102
+				transfer_state = 897
 			}
 			hidden_effect = {
 				CZE = {
-					remove_state_core = 894
-					add_state_claim = 894
-					transfer_state = 9
-					transfer_state = 69
-					transfer_state = 74
-					transfer_state = 75
 					set_cosmetic_tag = CZE_federal
 				}
 				SLV = {
-					transfer_state = 102
-					transfer_state = 897
 					set_cosmetic_tag = SLV_federal
 				}
 				ASH = {
@@ -2635,35 +2110,24 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				DAL = {
-					add_state_core = 103
-					add_state_core = 907
-					transfer_state = 103
-					transfer_state = 907
-				}
-				CRO = {
-					remove_state_core = 103
-					remove_state_core = 907
-					transfer_state = 109
-					transfer_state = 905
-					transfer_state = 895
-				}
+			DAL = {
+				add_state_core = 103
+				add_state_core = 907
+				transfer_state = 103
+				transfer_state = 907
+			}
+			CRO = {
+				remove_state_core = 103
+				remove_state_core = 907
+				transfer_state = 109
+				transfer_state = 905
+				transfer_state = 895
 			}
 			hidden_effect = {
 				DAL = {
-					add_state_core = 103
-					add_state_core = 907
-					transfer_state = 103
-					transfer_state = 907
 					set_cosmetic_tag = DAL_federal
 				}
 				CRO = {
-					remove_state_core = 103
-					remove_state_core = 907
-					transfer_state = 109
-					transfer_state = 905
-					transfer_state = 895
 					set_cosmetic_tag = CRO_federal_slavonia
 				}
 				ASH = {
@@ -2698,7 +2162,6 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
 				CRO = {
 					transfer_state = 103
 					transfer_state = 907
@@ -2706,14 +2169,8 @@
 					transfer_state = 905
 					transfer_state = 895
 				}
-			}
 			hidden_effect = {
 				CRO = {
-					transfer_state = 103
-					transfer_state = 907
-					transfer_state = 109
-					transfer_state = 905
-					transfer_state = 895
 					set_cosmetic_tag = CRO_federal_united
 				}
 				ASH = {
@@ -2740,25 +2197,17 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				SLO = {
-					transfer_state = 71
-					transfer_state = 70
-				}
-				HUN = {
-					remove_state_core = 71
-					remove_state_core = 70
-				}
+			SLO = {
+				transfer_state = 71
+				transfer_state = 70
+			}
+			HUN = {
+				remove_state_core = 71
+				remove_state_core = 70
 			}
 			hidden_effect = {
 				SLO = {
-					transfer_state = 71
-					transfer_state = 70
 					set_cosmetic_tag = SLO_federal
-				}
-				HUN = {
-					remove_state_core = 71
-					remove_state_core = 70
 				}
 				ASH = {
 					diplomatic_relation = {
@@ -2786,74 +2235,44 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				GLI = {
-					add_state_core = 91
-					add_state_core = 89
-					add_state_core = 893
-					transfer_state = 91
-					transfer_state = 89
-					transfer_state = 893
-				}
-				LOD = {
-					add_state_core = 88
-					add_state_core = 72
-					transfer_state = 88
-					transfer_state = 72
-				}
-				POL = {
-					remove_state_core = 88
-					remove_state_core = 72
-					add_state_claim = 88
-					add_state_claim = 72
-				}
-				CZE = {
-					remove_state_core = 72
-					add_state_claim = 72
-				}
-				UKR = {
-					remove_state_core = 91
-					remove_state_core = 89
-					remove_state_core = 893
-					add_state_claim = 91
-					add_state_claim = 89
-					add_state_claim = 893
-				}
+			GLI = {
+				add_state_core = 91
+				add_state_core = 89
+				add_state_core = 893
+				transfer_state = 91
+				transfer_state = 89
+				transfer_state = 893
+			}
+			LOD = {
+				add_state_core = 88
+				add_state_core = 72
+				transfer_state = 88
+				transfer_state = 72
+			}
+			POL = {
+				remove_state_core = 88
+				remove_state_core = 72
+				add_state_claim = 88
+				add_state_claim = 72
+			}
+			CZE = {
+				remove_state_core = 72
+				add_state_claim = 72
+			}
+			UKR = {
+				remove_state_core = 91
+				remove_state_core = 89
+				remove_state_core = 893
+				add_state_claim = 91
+				add_state_claim = 89
+				add_state_claim = 893
 			}
 			hidden_effect = {
 				GLI = {
-					add_state_core = 91
-					add_state_core = 89
-					add_state_core = 893
-					transfer_state = 91
-					transfer_state = 89
-					transfer_state = 893
 					set_cosmetic_tag = GLI_federal
 				}
 				LOD = {
-					add_state_core = 88
-					add_state_core = 72
-					transfer_state = 88
-					transfer_state = 72
 					set_cosmetic_tag = LOD_federal
-				}
-				POL = {
-					remove_state_core = 88
-					remove_state_core = 72
-					add_state_claim = 88
-					add_state_claim = 72
-				}
-				CZE = {
-					remove_state_core = 72
-					add_state_claim = 72
-				}
-				UKR = {
-					remove_state_core = 91
-					remove_state_core = 89
-					remove_state_core = 893
-					add_state_claim = 91
-					add_state_claim = 89
-					add_state_claim = 893
 				}
 				ASH = {
 					diplomatic_relation = {
@@ -2889,48 +2308,33 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				TRA = {
-					remove_state_core = 890
-					add_state_claim = 890
-					transfer_state = 84
-					transfer_state = 76
-					transfer_state = 892
-					transfer_state = 82
-					transfer_state = 83
-					transfer_state = 843
-					transfer_state = 80
-				}
-				SZE = {
-					transfer_state = 891
-				}
-				BAT = {
-					transfer_state = 45
-					transfer_state = 764
-					transfer_state = 889
-				}
+			TRA = {
+				remove_state_core = 890
+				add_state_claim = 890
+				transfer_state = 84
+				transfer_state = 76
+				transfer_state = 892
+				transfer_state = 82
+				transfer_state = 83
+				transfer_state = 843
+				transfer_state = 80
+			}
+			SZE = {
+				transfer_state = 891
+			}
+			BAT = {
+				transfer_state = 45
+				transfer_state = 764
+				transfer_state = 889
 			}
 			hidden_effect = {
 				TRA = {
-					remove_state_core = 890
-					add_state_claim = 890
-					transfer_state = 84
-					transfer_state = 76
-					transfer_state = 892
-					transfer_state = 82
-					transfer_state = 83
-					transfer_state = 843
-					transfer_state = 80
 					set_cosmetic_tag = TRA_federal_lesser
 				}
 				SZE = {
-					transfer_state = 891
 					set_cosmetic_tag = SZE_federal
 				}
 				BAT = {
-					transfer_state = 45
-					transfer_state = 764
-					transfer_state = 889
 					set_cosmetic_tag = BAT_federal
 				}
 				ASH = {
@@ -2972,38 +2376,23 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				TRA = {
-					remove_state_core = 890
-					add_state_claim = 890
-					transfer_state = 84
-					transfer_state = 76
-					transfer_state = 892
-					transfer_state = 82
-					transfer_state = 83
-					transfer_state = 843
-					transfer_state = 80
-					transfer_state = 891
-					transfer_state = 45
-					transfer_state = 764
-					transfer_state = 889
-				}
+			TRA = {
+				remove_state_core = 890
+				add_state_claim = 890
+				transfer_state = 84
+				transfer_state = 76
+				transfer_state = 892
+				transfer_state = 82
+				transfer_state = 83
+				transfer_state = 843
+				transfer_state = 80
+				transfer_state = 891
+				transfer_state = 45
+				transfer_state = 764
+				transfer_state = 889
 			}
 			hidden_effect = {
 				TRA = {
-					remove_state_core = 890
-					add_state_claim = 890
-					transfer_state = 84
-					transfer_state = 76
-					transfer_state = 892
-					transfer_state = 82
-					transfer_state = 83
-					transfer_state = 843
-					transfer_state = 80
-					transfer_state = 891
-					transfer_state = 45
-					transfer_state = 764
-					transfer_state = 889
 					set_cosmetic_tag = TRA_federal_carpathia
 				}
 				ASH = {
@@ -3034,12 +2423,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -3056,12 +2440,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -3079,12 +2458,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -3104,12 +2478,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -3129,12 +2498,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				add_command_power = 30
-			}
-			hidden_effect = {
-				add_command_power = 30
-			}
+			add_command_power = 30
 		}
 	}
 
@@ -3154,23 +2518,12 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				ITA = {
-					transfer_state = 163
-					transfer_state = 736
-					transfer_state = 39
-					transfer_state = 898
-					transfer_state = 899
-				}
-			}
-			hidden_effect = {
-				ITA = {
-					transfer_state = 163
-					transfer_state = 736
-					transfer_state = 39
-					transfer_state = 898
-					transfer_state = 899
-				}
+			ITA = {
+				transfer_state = 163
+				transfer_state = 736
+				transfer_state = 39
+				transfer_state = 898
+				transfer_state = 899
 			}
 		}
 	}
@@ -3192,29 +2545,21 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			effect_tooltip = {
-				FIU = {
-					transfer_state = 163
-					transfer_state = 736
-					transfer_state = 898
-					transfer_state = 899
-				}
-				TYL = {
-					transfer_state = 39
-					transfer_state = 885
-				}
+			FIU = {
+				transfer_state = 163
+				transfer_state = 736
+				transfer_state = 898
+				transfer_state = 899
+			}
+			TYL = {
+				transfer_state = 39
+				transfer_state = 885
 			}
 			hidden_effect = {
 				FIU = {
-					transfer_state = 163
-					transfer_state = 736
-					transfer_state = 898
-					transfer_state = 899
 					set_cosmetic_tag = FIU_federal
 				}
 				TYL = {
-					transfer_state = 39
-					transfer_state = 885
 					set_cosmetic_tag = TYL_federal
 				}
 			}

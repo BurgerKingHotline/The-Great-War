@@ -1,0 +1,27 @@
+﻿#########################
+#Austro-Hungarian events#
+#########################
+
+add_namespace = ash_events
+add_namespace = ash_hidden
+
+country_event = {
+	id = ash_hidden.1
+	title = ash_hidden.1.t	
+	desc = ash_hidden.1.desc	
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	immediate = {
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	option = { 
+		name = ash_hidden.1.a
+		load_focus_tree = { tree = austrohungarian_focus keep_completed = yes }
+	}
+}
