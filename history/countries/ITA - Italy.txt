@@ -868,3 +868,6 @@ if = {
 		}
 	}
 }
+
+give_guarantee = GER
+give_guarantee = ASH

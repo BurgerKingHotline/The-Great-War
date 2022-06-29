@@ -1371,7 +1371,4 @@ if = {
 		}
 	}
 }
-
-give_guarantee = FRA
-give_guarantee = RUS
 give_guarantee = BEL
