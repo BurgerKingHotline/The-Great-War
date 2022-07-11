@@ -242,7 +242,7 @@ on_actions = {
         }
     }
 
-
+    #RUSSIAN ON ACTIONS
     on_weekly_RUS = {
         effect = {
             if = {

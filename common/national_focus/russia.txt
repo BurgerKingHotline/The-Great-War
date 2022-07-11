@@ -46,11 +46,12 @@
 		x = -4
 		y = 1
 		relative_position_id = RUS_meeting_with_the_germans
-		cost = 5
+		cost = 8
 		 
 
 		completion_reward = {
 			add_stability = 0.05
+			add_war_support = 0.05
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.1
@@ -67,6 +68,14 @@
 		relative_position_id = RUS_the_powers_of_the_tsar
 		cost = 5
 		 
+		available = {
+			TAN = {
+				exists = yes
+			}
+			any_owned_state = {
+				is_neighbor_of = TAN
+			}
+		}
 
 		completion_reward = {
 			TAN = {
@@ -84,10 +93,10 @@
 		x = 4
 		y = 1
 		relative_position_id = RUS_meeting_with_the_germans
-		cost = 5
+		cost = 8
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
@@ -107,7 +116,7 @@
 		x = -3
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar 
-		cost = 10
+		cost = 8
 		 
 
 		completion_reward = {
@@ -413,6 +422,7 @@
 			add_ideas = {
 				RUS_banned_political_parties
 			}
+			custom_effect_tooltip = RUS_no_february_revolution
 		}
 	}
 
@@ -969,6 +979,7 @@
 		bypass = {
 			has_guaranteed = SER
 			has_guaranteed = ROM
+			has_guaranteed = MNT
 		}
 
 		completion_reward = {
@@ -977,6 +988,7 @@
 			add_war_support = 0.05
 			give_guarantee = SER
 			give_guarantee = ROM
+			give_guarantee = MNT
 		}
 
 		ai_will_do = {
@@ -1024,7 +1036,7 @@
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar
 		prerequisite = { focus = RUS_the_powers_of_the_tsar } 
-		cost = 3
+		cost = 7
 
 		available = {
 			NOT = {
@@ -1050,12 +1062,9 @@
 		y = 1
 		relative_position_id = RUS_matters_in_persia
 		prerequisite = { focus = RUS_matters_in_persia } 
-		cost = 8
+		cost = 5
 
 		available = {
-			NOT = {
-				has_global_flag = RUS_german_full_access_flag
-			}
 		}
 
 		completion_reward = {
@@ -1094,13 +1103,14 @@
 		cost = 5
 
 		available = {
-			NOT = {
-				has_global_flag = RUS_german_full_access_flag
-			}
 			has_global_flag = RUS_german_railroads_flag
+			NOT = {
+				has_war_with = GER
+			}
 		}
 
 		completion_reward = {
+			
 		}
 
 		ai_will_do = {
@@ -1118,9 +1128,6 @@
 		cost = 5
 
 		available = {
-			NOT = {
-				has_global_flag = RUS_german_full_access_flag
-			}
 		}
 
 		completion_reward = {
@@ -1142,7 +1149,7 @@
 
 		available = {
 			NOT = {
-				has_global_flag = RUS_german_full_access_flag
+				has_war_with = GER
 			}
 		}
 
@@ -1165,9 +1172,6 @@
 		cost = 10
 
 		available = {
-			NOT = {
-				has_global_flag = RUS_german_full_access_flag
-			}
 			has_global_flag = RUS_russian_full_access_flag
 		}
 
@@ -1223,6 +1227,7 @@
 		y = 1
 		relative_position_id = RUS_consituent_assembly
 		prerequisite = { focus = RUS_consituent_assembly }
+		mutually_exclusive = { focus = RUS_presidential_republic }
 		cost = 5
 		 
 
@@ -1262,8 +1267,8 @@
 		y = 1
 		relative_position_id = RUS_consituent_assembly
 		prerequisite = { focus = RUS_consituent_assembly }
+		mutually_exclusive = { focus = RUS_supreme_ruler_of_russia }
 		cost = 5
-		 
 
 		available = {
 			OR = {
@@ -1607,7 +1612,6 @@
 		y = 3
 		relative_position_id = RUS_funds_from_international_communists
 		cost = 8
-		 
 
 		completion_reward = {
 			custom_effect_tooltip = RUS_remove_party_debuff
@@ -1682,7 +1686,7 @@
 	}
 
 	focus = {
-		id = RUS_increase_workers_standards_of_living
+		id = RUS_increase_standards_of_living
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = RUS_invest_in_industry}
 		x = 1

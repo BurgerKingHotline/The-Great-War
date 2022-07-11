@@ -317,4 +317,26 @@ debug_decisions = {
         }
     }
 
+	february_revolution_start = {
+
+		allowed = {
+			tag = RUS
+		}
+
+        complete_effect = {
+			country_event = { id = rus_civilwar.1 }
+        }
+    }
+
+	russian_civil_war_start = {
+
+		allowed = {
+			tag = RUS
+		}
+
+        complete_effect = {
+			RUS_civil_war_start = yes
+        }
+    }
+
 }

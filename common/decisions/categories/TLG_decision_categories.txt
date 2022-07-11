@@ -92,3 +92,14 @@ RUS_crusade_against_communism_decisions = {
 		has_completed_focus = RUS_crusade_against_communism
 	}
 }
+
+SOV_form_ssrs = {
+	visible_when_empty = yes
+	allowed = {
+		tag = SOV
+	}
+	visible = {
+		has_government = Communism
+		#has_completed_focus = RUS_crusade_against_communism
+	}
+}
