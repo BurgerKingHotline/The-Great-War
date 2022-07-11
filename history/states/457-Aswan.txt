@@ -17,14 +17,10 @@ state=
 			infrastructure = 1
 		}
 
-		victory_points = {
-			12002 1
-		}
-
 		add_core_of = EGY
 	}
 	provinces={
-		1080 4068  9957 10126 12002 12889 
+		12889 
 	}
 
 	local_supplies=0.0 

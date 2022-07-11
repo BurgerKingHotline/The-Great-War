@@ -17,7 +17,7 @@ state={
 
 		}
 		add_core_of = POL
-
+		add_claim_by = BLR
 	}
 
 	provinces={

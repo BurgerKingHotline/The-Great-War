@@ -1,0 +1,33 @@
+
+state={
+	id=911
+	name="STATE_911"
+	manpower =  1163163
+	
+	state_category = city
+
+	history={
+		owner = RUS
+		add_core_of = RUS
+		victory_points = {
+			9289 5
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		#add_core_of = SOV
+		add_core_of = BLR
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 3
+			}
+		}
+	}
+
+	provinces={
+		216 294 342 3331 3378 6220 6292 6371 9241 9289 11322
+	}
+
+	local_supplies=5.0 
+}

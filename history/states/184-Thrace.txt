@@ -2,7 +2,7 @@
 state={
 	id=184
 	name="STATE_184"
-	manpower = 10000
+	manpower = 100000 #im guessing i missed a 0 because it was 10,000?
 
 	state_category = rural
 

@@ -1,0 +1,25 @@
+state={
+	id=912
+	name="STATE_912"
+
+	history={
+		add_core_of = TAJ
+		add_core_of = BUK
+		owner = RUS
+		buildings = {
+			infrastructure = 1
+
+		}
+		#add_core_of = SOV
+
+	}
+
+	provinces={
+		4467 4923 12805
+	}
+	manpower=50000s
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+
+	local_supplies=0.0 
+}

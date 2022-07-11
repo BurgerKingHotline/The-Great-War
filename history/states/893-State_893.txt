@@ -7,13 +7,16 @@ state={
 		buildings = {
 			infrastructure = 4
 		}
+		victory_points = {
+			9494 1 
+		}
 		add_core_of = ASH
 		add_core_of = UKR
 		add_core_of = POL
 	}
 	
 	provinces={
-		466 3434 
+		466 3434 9494 
 	}
 	manpower=130923
 	state_category = rural
