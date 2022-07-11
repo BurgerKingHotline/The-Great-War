@@ -134,7 +134,7 @@ senussiya_owned_decisions = {
         }
 	}
 
-	senussiya_revolt = {
+	senussiya_revolt = { #this is probably really resource intensive, TODO: make it less resource intensive while still allowing it to be dynamic
 
 		icon = generic_form_nation
 
@@ -157,7 +157,10 @@ senussiya_owned_decisions = {
 				}
 			}
 		}
-		activation = {                          
+		activation = {    
+			any_owned_state = {
+				has_state_flag = senussiya_resistence_flag
+			}                      
 			all_owned_state = {
 				if = {
 					limit = {
@@ -171,9 +174,6 @@ senussiya_owned_decisions = {
 							modifier = senussiya_resistence_modifier_3
 						}
 					}
-				}
-				else = {
-					always = no
 				}
 			}
 			has_stability < 0.8
