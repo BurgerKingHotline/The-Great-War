@@ -1,11 +1,11 @@
 ﻿capital = 277
 
-oob = "MEX_1936"
+#oob = "MEX_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "MEX_1936_naval_mtg"
+		#set_naval_#oob = "MEX_1936_naval_mtg"
 	else = {
-		set_naval_oob = "MEX_1936_naval_legacy"
+		#set_naval_#oob = "MEX_1936_naval_legacy"
 	}
 }
 
@@ -69,12 +69,12 @@ set_war_support = 0.1
 	add_political_power = 1198
 	add_command_power = 100
 	
-	oob = "MEX_1939"
+	#oob = "MEX_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "MEX_1939_naval_mtg"
+			#set_naval_#oob = "MEX_1939_naval_mtg"
 		else = {
-			set_naval_oob = "MEX_1939_naval_legacy"
+			#set_naval_#oob = "MEX_1939_naval_legacy"
 		}
 	}
 	
@@ -154,7 +154,7 @@ if = {
 	create_equipment_variant = {
 		name = "Nicolás Bravo Class"			
 		type = ship_hull_light_1
-		name_group = MEX_DD_HISTORICAL
+		#name_group = = MEX##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -171,7 +171,7 @@ if = {
 	create_equipment_variant = {
 		name = "Durango Class"			# represents both Guanajuato and Durango classes (gunboats)
 		type = ship_hull_light_1
-		name_group = MEX_DD_HISTORICAL
+		#name_group = = MEX##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -187,7 +187,7 @@ if = {
 	create_equipment_variant = {
 		name = "Anahuac Class"			
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = MEX_BB_HISTORICAL
+		#name_group = = MEX_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1

@@ -1,6 +1,6 @@
 ﻿capital = 43
 
-oob = "HUN_1936"
+#oob = "HUN_1936"
 
 set_research_slots = 3
 set_stability = 0.7
@@ -103,7 +103,7 @@ if = {
 			basic_light_tank = 1
 	
 		}
-		set_oob = "HUN_1939"
+		#oob = "HUN_1939"
 	}
 	if = {
 		limit = {
@@ -133,7 +133,7 @@ if = {
 			}
 			icon = "GFX_generic_light_BAA_camo"
 		}
-		set_oob = "HUN_1939_nsb"
+		#oob = "HUN_1939_nsb"
 	}
 }
 

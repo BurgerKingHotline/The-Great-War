@@ -1,6 +1,6 @@
 ﻿capital = 103 
 
-#oob = "DAL_1936"
+##oob = "DAL_1936"
 
 set_research_slots = 3
 

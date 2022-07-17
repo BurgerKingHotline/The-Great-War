@@ -1,6 +1,6 @@
 ﻿capital = 6
 
-oob = "BEL_1936"
+#oob = "BEL_1936"
 
 set_research_slots = 3
 set_stability = 0.8
@@ -32,7 +32,7 @@ set_technology = {
 
 	#generic focuses
 
-	oob = "BEL_1939"
+	#oob = "BEL_1939"
 	set_technology = {
 		fighter1 = 1
 		gw_artillery = 1

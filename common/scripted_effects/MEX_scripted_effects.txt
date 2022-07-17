@@ -1,0 +1,63 @@
+#	Example:
+#
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+
+#Senussiya resistence mechanic scripted effects, theres probably a better way to do this though
+
+carranza_state_superiority = {
+	if = {
+		limit = {
+			has_state_flag = zapata_state_support
+		}
+		clr_state_flag = zapata_state_support
+		add_to_variable = {
+			var = MEX.zapata_owned_states
+			value = -1
+		}
+		set_state_flag = carranza_state_support
+	}
+	else_if = {
+		limit = {
+			has_state_flag = villa_state_support
+		}
+		clr_state_flag = villa_state_support
+		add_to_variable = {
+			var = MEX.villa_owned_states
+			value = -1
+		}
+		set_state_flag = carranza_state_support
+	}
+	else_if = {
+		limit = {
+			has_state_flag = diaz_state_support
+		}
+		clr_state_flag = diaz_state_support
+		add_to_variable = {
+			var = MEX.diaz_owned_states
+			value = -1
+		}
+		set_state_flag = carranza_state_support
+	}
+	else_if = {
+		set_state_flag = carranza_state_support
+	}
+	add_to_variable = {
+		var = MEX.carranza_owned_states
+		value = 1
+	}
+}

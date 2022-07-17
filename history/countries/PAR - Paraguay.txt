@@ -1,6 +1,6 @@
 ﻿capital = 301
 
-oob = "PAR_1936"
+#oob = "PAR_1936"
 
 # Starting tech
 set_technology = {
@@ -20,7 +20,7 @@ set_country_flag = monroe_doctrine
 	
 	#generic focuses
 	
-	oob = "PAR_1939"
+	#oob = "PAR_1939"
 	set_technology = {
 		CAS1 = 1
 		interwar_artillery = 1

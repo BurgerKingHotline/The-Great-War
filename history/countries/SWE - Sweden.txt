@@ -1,11 +1,11 @@
 ﻿capital = 141	
 
-oob = "SWE_1936"
+#oob = "SWE_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "SWE_1936_naval_mtg"
+		#set_naval_#oob = "SWE_1936_naval_mtg"
 	else = {
-		set_naval_oob = "SWE_1936_naval_legacy"
+		#set_naval_#oob = "SWE_1936_naval_legacy"
 	}
 }
 
@@ -89,12 +89,12 @@ if = {
 	
 	#generic focuses
 	
-	oob = "SWE_1939"
+	#oob = "SWE_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "SWE_1939_naval_mtg"
+			#set_naval_#oob = "SWE_1939_naval_mtg"
 		else = {
-			set_naval_oob = "SWE_1939_naval_legacy"
+			#set_naval_#oob = "SWE_1939_naval_legacy"
 		}
 	}
 
@@ -265,7 +265,7 @@ if = {
 	create_equipment_variant = {
 		name = "Hajen Class"					# represents Hajen and Bävern classes	
 		type = ship_hull_submarine_1
-		name_group = SWE_SS_HISTORICAL
+		#name_group = = SWE_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -277,7 +277,7 @@ if = {
 	create_equipment_variant = {
 		name = "Valen Class"				
 		type = ship_hull_submarine_1
-		name_group = SWE_SS_HISTORICAL
+		#name_group = = SWE_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -289,7 +289,7 @@ if = {
 	create_equipment_variant = {
 		name = "Draken Class"				
 		type = ship_hull_submarine_2
-		name_group = SWE_SS_HISTORICAL
+		#name_group = = SWE_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -301,7 +301,7 @@ if = {
 	create_equipment_variant = {
 		name = "Örnen Class"					# torpedo boats		
 		type = ship_hull_light_1
-		name_group = SWE_DD_HISTORICAL
+		#name_group = = SWE##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -318,7 +318,7 @@ if = {
 	create_equipment_variant = {
 		name = "Ehrensköld Class"				# represents Ehrensköld	and Klas Horn classes
 		type = ship_hull_light_1
-		name_group = SWE_DD_HISTORICAL
+		#name_group = = SWE##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -335,7 +335,7 @@ if = {
 	create_equipment_variant = {
 		name = "Clas Fleming Class"				# minelayer		
 		type = ship_hull_light_1
-		name_group = SWE_DD_HISTORICAL
+		#name_group = = SWE##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -352,7 +352,7 @@ if = {
 	create_equipment_variant = {
 		name = "Göteborg Class"	
 		type = ship_hull_light_2
-		name_group = SWE_DD_HISTORICAL
+		#name_group = = SWE##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -369,7 +369,7 @@ if = {
 	create_equipment_variant = {
 		name = "Fylgia Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = SWE_CL_HISTORICAL
+		#name_group = = SWE##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -388,7 +388,7 @@ if = {
 	create_equipment_variant = {
 		name = "Äran Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = SWE_CA_HISTORICAL
+		#name_group = = SWE_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -407,7 +407,7 @@ if = {
 	create_equipment_variant = {
 		name = "Oscar II Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = SWE_CA_HISTORICAL
+		#name_group = = SWE_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -426,7 +426,7 @@ if = {
 	create_equipment_variant = {
 		name = "Sverige Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = SWE_CA_HISTORICAL
+		#name_group = = SWE_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -444,7 +444,7 @@ if = {
 	create_equipment_variant = {
 		name = "Gotland Class"
 		type = ship_hull_cruiser_2
-		name_group = SWE_CL_HISTORICAL
+		#name_group = = SWE##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -473,7 +473,7 @@ if = {
 		create_equipment_variant = {
 			name = "Delfinen Class"				
 			type = ship_hull_submarine_2
-			name_group = SWE_SS_HISTORICAL
+			#name_group = = SWE_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -485,7 +485,7 @@ if = {
 		create_equipment_variant = {
 			name = "Sjölejonet Class"				
 			type = ship_hull_submarine_2
-			name_group = SWE_SS_HISTORICAL
+			#name_group = = SWE_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2

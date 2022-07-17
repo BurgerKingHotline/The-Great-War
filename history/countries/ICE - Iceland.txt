@@ -1,6 +1,6 @@
 ﻿capital = 100 #Iceland
 
-oob = "ICE_1936"
+#oob = "ICE_1936"
 
 set_research_slots = 3
 
@@ -25,7 +25,7 @@ set_technology = {
 	
 	#generic focuses
 	
-	oob = "ICE_1939"
+	#oob = "ICE_1939"
 	set_technology = {
 		gw_artillery = 1
 		interwar_artillery = 1

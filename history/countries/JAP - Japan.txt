@@ -93,7 +93,7 @@ if = {
 		gwtank = 1
 		basic_light_tank = 1
 	}
-	set_oob = "JAP_1936"
+	#oob = "JAP_1936"
 }
 if = {
 	limit = {
@@ -103,7 +103,7 @@ if = {
 		gwtank_chassis = 1
 		basic_light_tank_chassis = 1
 	}
-	set_oob = "JAP_1936_nsb"
+	#oob = "JAP_1936_nsb"
 }
 if = {
 	limit = {
@@ -134,7 +134,7 @@ if = {
 		basic_cruiser_armor_scheme = 1
 		cruiser_submarines = 1
 	}
-	set_naval_oob = "JAP_1936_naval"
+	#set_naval_#oob = "JAP_1936_naval"
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -153,7 +153,7 @@ if = {
 		basic_carrier = 1
 		transport = 1
 	}
-	set_naval_oob = "JAP_1936_naval_legacy"
+	#set_naval_#oob = "JAP_1936_naval_legacy"
 }
 
 if = {
@@ -257,7 +257,7 @@ create_import = {
 			improved_ship_hull_carrier = 1
 			ship_hull_super_heavy = 1
 		}
-		set_naval_oob = "JAP_1939_naval"
+		#set_naval_#oob = "JAP_1939_naval"
 	}
 	if = {
 		limit = {
@@ -271,7 +271,7 @@ create_import = {
 			improved_carrier = 1
 			heavy_battleship = 1
 		}
-		set_naval_oob = "JAP_1939_naval_legacy"
+		#set_naval_#oob = "JAP_1939_naval_legacy"
 	}
 	if = {
 		limit = {
@@ -280,9 +280,9 @@ create_import = {
 		set_technology = {
 			basic_medium_tank_chassis = 1
 		}
-		set_oob = "JAP_1939_nsb"
+		#oob = "JAP_1939_nsb"
 		else = {
-			set_oob = "JAP_1939"
+			#oob = "JAP_1939"
 		}
 	}
 }
@@ -517,7 +517,7 @@ if = {
 		create_equipment_variant = {
 			name = "Akagi Class"
 			type = ship_hull_carrier_conversion_bb
-			name_group = JAP_CV_HISTORICAL
+			#name_group = = JAP_CV_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
@@ -533,7 +533,7 @@ if = {
 		create_equipment_variant = {
 			name = "Kaga Class"
 			type = ship_hull_carrier_conversion_bb
-			name_group = JAP_CV_HISTORICAL
+			#name_group = = JAP_CV_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
@@ -549,7 +549,7 @@ if = {
 		create_equipment_variant = {
 			name = "Soryu Class"
 			type = ship_hull_carrier_1
-			name_group = JAP_CV_HISTORICAL
+			#name_group = = JAP_CV_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
@@ -564,7 +564,7 @@ if = {
 		create_equipment_variant = {
 			name = "Zuiho Class"
 			type = ship_hull_carrier_conversion_ca
-			name_group = JAP_CVL_HISTORICAL
+			#name_group = = JAP_CVL_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
@@ -577,7 +577,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "Hosho Class"
-			name_group = JAP_CVL_HISTORICAL
+			#name_group = = JAP_CVL_HISTORICAL
 			type = ship_hull_carrier_conversion_ca
 			parent_version = 0
 			modules = {
@@ -592,7 +592,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "Ryujo Class"
-			name_group = JAP_CVL_HISTORICAL
+			#name_group = = JAP_CVL_HISTORICAL
 			type = ship_hull_carrier_1
 			parent_version = 0
 			modules = {
@@ -609,7 +609,7 @@ if = {
 		### Battleship Variants	
 		create_equipment_variant = {
 			name = "Nagato Class"
-			name_group = JAP_BB_HISTORICAL
+			#name_group = = JAP_BB_HISTORICAL
 			type = ship_hull_heavy_1
 			parent_version = 0
 			modules = {
@@ -628,7 +628,7 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "Kongo Class"
-			name_group = JAP_BB_HISTORICAL
+			#name_group = = JAP_BB_HISTORICAL
 			type = ship_hull_heavy_1
 			parent_version = 0
 			modules = {
@@ -648,7 +648,7 @@ if = {
 		create_equipment_variant = {
 			name = "Fuso/Ise Class"
 			type = ship_hull_heavy_1
-			name_group = JAP_BB_HISTORICAL
+			#name_group = = JAP_BB_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_heavy_battery_1
@@ -670,7 +670,7 @@ if = {
 		create_equipment_variant = {
 			name = "Myoko Class"
 			type = ship_hull_cruiser_2
-			name_group = JAP_CA_HISTORICAL
+			#name_group = = JAP_CA_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_medium_battery_2
@@ -690,7 +690,7 @@ if = {
 		create_equipment_variant = {
 			name = "Aoba Class"
 			type = ship_hull_cruiser_1
-			name_group = JAP_CA_HISTORICAL
+			#name_group = = JAP_CA_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_medium_battery_1
@@ -709,7 +709,7 @@ if = {
 		create_equipment_variant = {
 			name = "Chikuma Class"
 			type = ship_hull_cruiser_1
-			name_group = JAP_CA_HISTORICAL
+			#name_group = = JAP_CA_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -728,7 +728,7 @@ if = {
 		create_equipment_variant = {
 			name = "Izumo Class"
 			type = ship_hull_cruiser_coastal_defense_ship
-			name_group = JAP_CA_HISTORICAL
+			#name_group = = JAP_CA_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_medium_battery_1
@@ -746,7 +746,7 @@ if = {
 		create_equipment_variant = {
 			name = "Tone Class"
 			type = ship_hull_cruiser_2
-			name_group = JAP_CA_HISTORICAL
+			#name_group = = JAP_CA_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_medium_battery_2
@@ -765,7 +765,7 @@ if = {
 		create_equipment_variant = {
 			name = "Mogami Class"
 			type = ship_hull_cruiser_2
-			name_group = JAP_CL_HISTORICAL
+			#name_group = = JAP##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_medium_battery_2
@@ -784,7 +784,7 @@ if = {
 		create_equipment_variant = {
 			name = "Yubari Class"
 			type = ship_hull_cruiser_1
-			name_group = JAP_CL_HISTORICAL
+			#name_group = = JAP##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -802,7 +802,7 @@ if = {
 		create_equipment_variant = {
 			name = "Sendai Class"
 			type = ship_hull_cruiser_1
-			name_group = JAP_CL_HISTORICAL
+			#name_group = = JAP##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -820,7 +820,7 @@ if = {
 		create_equipment_variant = {
 			name = "Tenryu Class"
 			type = ship_hull_cruiser_1
-			name_group = JAP_CL_HISTORICAL
+			#name_group = = JAP##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -838,7 +838,7 @@ if = {
 		create_equipment_variant = {
 			name = "Kuma/Nagara Class"
 			type = ship_hull_cruiser_1
-			name_group = JAP_CL_HISTORICAL
+			#name_group = = JAP##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -855,7 +855,7 @@ if = {
 		create_equipment_variant = {
 			name = "Okinoshima Class"					# cruiser minelayer
 			type = ship_hull_cruiser_1
-			name_group = JAP_MINELAYERS_HISTORICAL
+			#name_group = = JAP_MINELAYERS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -873,7 +873,7 @@ if = {
 		create_equipment_variant = {
 			name = "Mutsuki Class" #collection of various WWI and early interwar ships with similiar capabilities
 			type = ship_hull_light_1
-			name_group = JAP_DD_HISTORICAL
+			#name_group = = JAP##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_1
@@ -890,7 +890,7 @@ if = {
 		create_equipment_variant = {
 			name = "Momi Class" 
 			type = ship_hull_light_1
-			name_group = JAP_DD_HISTORICAL
+			#name_group = = JAP##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_1
@@ -907,7 +907,7 @@ if = {
 		create_equipment_variant = {
 			name = "Fubuki Class"
 			type = ship_hull_light_1
-			name_group = JAP_DD_HISTORICAL
+			#name_group = = JAP##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
@@ -923,7 +923,7 @@ if = {
 		create_equipment_variant = {
 			name = "Katsuriki Class" 				# collection of interwar DD-sized minelayers
 			type = ship_hull_light_1
-			name_group = JAP_MINELAYERS_HISTORICAL
+			#name_group = = JAP_MINELAYERS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_1
@@ -940,7 +940,7 @@ if = {
 		create_equipment_variant = {
 			name = "Kaidai III Class"
 			type = ship_hull_submarine_1
-			name_group = JAP_SS_HISTORICAL
+			#name_group = = JAP_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -961,7 +961,7 @@ if = {
 		create_equipment_variant = {
 			name = "I-121 Class"
 			type = ship_hull_submarine_1
-			name_group = JAP_SS_HISTORICAL
+			#name_group = = JAP_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -1008,7 +1008,7 @@ if = {
 			create_equipment_variant = {
 				name = "Shokaku Class"
 				type = ship_hull_carrier_2
-				name_group = JAP_CV_HISTORICAL
+				#name_group = = JAP_CV_HISTORICAL
 				parent_version = 0
 				modules = {
 					fixed_ship_deck_slot_1 = ship_deck_space
@@ -1024,7 +1024,7 @@ if = {
 			create_equipment_variant = {
 				name = "Yamato Class"
 				type = ship_hull_super_heavy_1
-				name_group = JAP_BB_HISTORICAL
+				#name_group = = JAP_BB_HISTORICAL
 				parent_version = 0
 				modules = {
 					fixed_ship_battery_slot = ship_super_heavy_battery_1
@@ -1046,7 +1046,7 @@ if = {
 			create_equipment_variant = {
 				name = "Asashio Class"
 				type = ship_hull_light_2
-				name_group = JAP_DD_HISTORICAL
+				#name_group = = JAP##name_group = =
 				parent_version = 0
 				modules = {
 					fixed_ship_battery_slot = ship_light_battery_2
@@ -1062,7 +1062,7 @@ if = {
 			create_equipment_variant = {
 				name = "Katori Class"
 				type = ship_hull_cruiser_2
-				name_group = JAP_CL_HISTORICAL
+				#name_group = = JAP##name_group = =
 				parent_version = 0
 				modules = {
 					fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -1079,7 +1079,7 @@ if = {
 			create_equipment_variant = {
 				name = "Kagero Class"
 				type = ship_hull_light_2
-				name_group = JAP_DD_HISTORICAL
+				#name_group = = JAP##name_group = =
 				parent_version = 0
 				modules = {
 					fixed_ship_battery_slot = ship_light_battery_2
@@ -1095,7 +1095,7 @@ if = {
 			create_equipment_variant = {
 				name = "Hatsutaka Class" 				# DD-sized minelayers
 				type = ship_hull_light_2
-				name_group = JAP_MINELAYERS_HISTORICAL
+				#name_group = = JAP_MINELAYERS_HISTORICAL
 				parent_version = 0
 				modules = {
 					fixed_ship_battery_slot = ship_light_battery_1
@@ -1111,7 +1111,7 @@ if = {
 			create_equipment_variant = {
 				name = "A1/B1 Class"
 				type = ship_hull_cruiser_submarine
-				name_group = JAP_SS_HISTORICAL
+				#name_group = = JAP_SS_HISTORICAL
 				parent_version = 0
 				modules = {
 					fixed_ship_torpedo_slot = ship_torpedo_sub_1

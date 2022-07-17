@@ -1,6 +1,6 @@
 ﻿capital = 8
 
-oob = "LUX_1936"
+#oob = "LUX_1936"
 
 # Starting tech
 set_technology = {
@@ -24,7 +24,7 @@ set_stability = 0.8
 	
 	#generic focuses
 	
-	oob = "LUX_1939"
+	#oob = "LUX_1939"
 	set_technology = {
 		tech_recon = 1
 		fighter1 = 1

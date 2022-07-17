@@ -1,6 +1,6 @@
 ﻿capital = 305
 
-oob = "ECU_1936"
+#oob = "ECU_1936"
 
 # Starting tech
 set_technology = {
@@ -22,7 +22,7 @@ set_convoys = 5
 	
 	#generic focuses
 	
-	oob = "ECU_1939"
+	#oob = "ECU_1939"
 	set_technology = {
 		gw_artillery = 1
 		infantry_weapons1 = 1

@@ -6,13 +6,13 @@ if = {
 			has_dlc = "No Step Back"
 		}
 	}
-	set_oob = "ITA_1936"
+	#oob = "ITA_1936"
 }
 if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
-	set_oob = "ITA_1936_nsb"
+	#oob = "ITA_1936_nsb"
 }
 
 starting_train_buffer = 1.5
@@ -96,7 +96,7 @@ if = {
 		early_battlecruiser = 1
 		transport = 1
 	}
-	set_naval_oob = "ITA_1936_naval_legacy"
+	#set_naval_#oob = "ITA_1936_naval_legacy"
 }
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -125,7 +125,7 @@ if = {
 		coastal_defense_ships = 1
 		improved_airplane_launcher = 1
 	}
-	set_naval_oob = "ITA_1936_naval_mtg"
+	#set_naval_#oob = "ITA_1936_naval_mtg"
 }
 if = {
 	limit = {
@@ -169,7 +169,7 @@ if = {
 	}
 
 
-	oob = "ITA_1939"
+	#oob = "ITA_1939"
 	set_technology = {
 		fighter1 = 1
 		fighter2 = 1
@@ -229,7 +229,7 @@ if = {
 			improved_light_tank = 1
 	
 		}
-		set_oob = "ITA_1939"
+		#oob = "ITA_1939"
 	}
 	if = {
 		limit = {
@@ -242,7 +242,7 @@ if = {
 			improved_light_tank_chassis = 1
 	
 		}
-		set_oob = "ITA_1939_nsb"
+		#oob = "ITA_1939_nsb"
 	}
 	if = {
 		limit = { not = { has_dlc = "Man the Guns" } }
@@ -254,7 +254,7 @@ if = {
 			basic_battleship = 1
 			improved_battleship = 1
 		}
-		set_naval_oob = "ITA_1939_naval_legacy"
+		#set_naval_#oob = "ITA_1939_naval_legacy"
 	}
 	if = {
 		limit = {
@@ -264,7 +264,7 @@ if = {
 			improved_airplane_launcher = 1
 			
 		}
-		set_naval_oob = "ITA_1939_naval_mtg"
+		#set_naval_#oob = "ITA_1939_naval_mtg"
 	}
 	
 	set_stability = 0.8
@@ -430,7 +430,7 @@ if = {
 	create_equipment_variant = {			# original configuration of class pre-refit (refit in 1937-40)
 		name = "Andrea Doria Class"
 		type = ship_hull_heavy_1
-		name_group = ITA_BB_HISTORICAL
+		#name_group = = ITA_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -450,7 +450,7 @@ if = {
 	create_equipment_variant = {
 		name = "Conte Di Cavour Class"
 		type = ship_hull_heavy_1
-		name_group = ITA_BB_HISTORICAL
+		#name_group = = ITA_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -470,7 +470,7 @@ if = {
 	create_equipment_variant = {
 		name = "San Giorgio Class"
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = ITA_CA_HISTORICAL
+		#name_group = = ITA_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -490,7 +490,7 @@ if = {
 	create_equipment_variant = {
 		name = "Trento Class"
 		type = ship_hull_cruiser_1
-		name_group = ITA_CA_HISTORICAL
+		#name_group = = ITA_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -509,7 +509,7 @@ if = {
 	create_equipment_variant = {
 		name = "Zara Class"
 		type = ship_hull_cruiser_1
-		name_group = ITA_CA_HISTORICAL
+		#name_group = = ITA_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -528,7 +528,7 @@ if = {
 	create_equipment_variant = {
 		name = "Bolzano Class"
 		type = ship_hull_cruiser_1
-		name_group = ITA_CA_HISTORICAL
+		#name_group = = ITA_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -547,7 +547,7 @@ if = {
 	create_equipment_variant = {
 		name = "Taranto Class"
 		type = ship_hull_cruiser_1
-		name_group = ITA_CL_HISTORICAL
+		#name_group = = ITA##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -565,7 +565,7 @@ if = {
 	create_equipment_variant = {
 		name = "Giussano Class"
 		type = ship_hull_cruiser_1
-		name_group = ITA_CL_HISTORICAL
+		#name_group = = ITA##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_2
@@ -583,7 +583,7 @@ if = {
 	create_equipment_variant = {
 		name = "Montecuccoli Class"
 		type = ship_hull_cruiser_2
-		name_group = ITA_CL_HISTORICAL
+		#name_group = = ITA##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_2
@@ -603,7 +603,7 @@ if = {
 	create_equipment_variant = {
 		name = "Duca degli Abruzzi Class"
 		type = ship_hull_cruiser_2
-		name_group = ITA_CL_HISTORICAL
+		#name_group = = ITA##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_2
@@ -622,7 +622,7 @@ if = {
 	create_equipment_variant = {
 		name = "Curatone Class" 		#Represents the following WWI/1920s DDs/DEs: Curatone, Sauro/Sella, Turbine, Pilo, Audace, Siritori, La Masa, Palestro, Cantore
 		type = ship_hull_light_1
-		name_group = ITA_DD_HISTORICAL
+		#name_group = = ITA##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -639,7 +639,7 @@ if = {
 	create_equipment_variant = {
 		name = "Navigatori Class"			#Represents the following WWI/1920s Heavy DDs: Mirabello, (Aquila,) Leone, Navigatori
 		type = ship_hull_light_1
-		name_group = ITA_DD_HISTORICAL
+		#name_group = = ITA##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -656,7 +656,7 @@ if = {
 	create_equipment_variant = {
 		name = "Maestrale Class" 			#Represents the following WWI/1920s DDs: Freccia, Foglore, Mastrale, Oriani, Spica (and subclasses)
 		type = ship_hull_light_1
-		name_group = ITA_DD_HISTORICAL
+		#name_group = = ITA##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -672,7 +672,7 @@ if = {
 	create_equipment_variant = {
 			name = "Littorio Class"
 			type = ship_hull_heavy_2
-			name_group = ITA_BB_HISTORICAL
+			#name_group = = ITA_BB_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_heavy_battery_2
@@ -692,7 +692,7 @@ if = {
 	create_equipment_variant = {
 		name = "Mameli Class"
 		type = ship_hull_submarine_1
-		name_group = ITA_SS_HISTORICAL
+		#name_group = = ITA_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -704,7 +704,7 @@ if = {
 	create_equipment_variant = {
 		name = "Bandiera Class"
 		type = ship_hull_submarine_1
-		name_group = ITA_SS_HISTORICAL
+		#name_group = = ITA_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -716,7 +716,7 @@ if = {
 	create_equipment_variant = {
 		name = "Sirena Class"
 		type = ship_hull_submarine_2
-		name_group = ITA_SS_HISTORICAL
+		#name_group = = ITA_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -728,7 +728,7 @@ if = {
 	create_equipment_variant = {
 		name = "Calvi Class"
 		type = ship_hull_submarine_2
-		name_group = ITA_SS_HISTORICAL
+		#name_group = = ITA_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -759,7 +759,7 @@ if = {
 		create_equipment_variant = {
 			name = "Caio Duilio Class"			# refit variant (refit in 1937-40)
 			type = ship_hull_heavy_1
-			name_group = ITA_BB_HISTORICAL
+			#name_group = = ITA_BB_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_heavy_battery_1
@@ -781,7 +781,7 @@ if = {
 		create_equipment_variant = {
 			name = "Duca degli Abruzzi Class"
 			type = ship_hull_cruiser_2
-			name_group = ITA_CL_HISTORICAL
+			#name_group = = ITA##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_3
@@ -800,7 +800,7 @@ if = {
 		create_equipment_variant = {
 			name = "Soldati Class" 				# represents Soldati and Pegaso classes
 			type = ship_hull_light_2
-			name_group = ITA_DD_HISTORICAL
+			#name_group = = ITA##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
@@ -817,7 +817,7 @@ if = {
 		create_equipment_variant = {
 			name = "Marcello Class"
 			type = ship_hull_submarine_2
-			name_group = ITA_SS_HISTORICAL
+			#name_group = = ITA_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_1

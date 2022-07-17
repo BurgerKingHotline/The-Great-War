@@ -1,0 +1,45 @@
+ideas = {
+	country = {
+		ger_prussian_roots = {
+			picture = ger_revive_the_kaiserreich
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.05
+				army_core_defence_factor = 0.1
+				war_support_factor = 0.15
+				command_power_gain = 0.5
+			}
+
+		}
+		ger_expanding_sphere = {
+			picture = ger_expanding_sphere
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				opinion_gain_monthly = 5
+			}
+
+		}
+	}
+}

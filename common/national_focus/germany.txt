@@ -1,0 +1,635 @@
+﻿focus_tree = {
+	id = german_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	
+	continuous_focus_position = { x = 70 y = 2000 }
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = GER_contest_british_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 10
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = GER_potsdam_conference
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		relative_position_id = GER_contest_british_navy
+		prerequisite = {
+			focus = GER_contest_british_navy
+		}
+		x = 0
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_south_border
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = GER_potsdam_conference
+		prerequisite = {
+			focus = GER_potsdam_conference
+		}
+		x = -5
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_support_austria
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		relative_position_id = GER_south_border
+		mutually_exclusive = {
+			focus = GER_support_italy
+		}
+		prerequisite = {
+			focus = GER_south_border
+		}
+		x = -2
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_romania_mission
+		icon = GFX_focus_invite_romania
+		relative_position_id = GER_support_austria
+		mutually_exclusive = {
+			focus = GER_balkan_prussia
+		}
+		prerequisite = {
+			focus = GER_support_austria
+			focus = GER_support_italy
+		}
+		x = 1
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_balkan_prussia
+		icon = GFX_focus_generic_befriend_bulgaria
+		relative_position_id = GER_support_austria
+		mutually_exclusive = {
+			focus = GER_romania_mission
+		}
+		prerequisite = {
+			focus = GER_support_austria
+			focus = GER_support_italy
+		}
+		x = 3
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = GER_invite_ottomans
+		icon = GFX_goal_molotov_ribbentrop_pact
+		relative_position_id = GER_romania_mission
+		prerequisite = {
+			focus = GER_romania_mission
+			focus = GER_balkan_prussia
+		}
+		x = 1
+		y = 1
+		cost = 45
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_threatan_balkans
+		icon = GFX_focus_BUL_free_balkan_states
+		relative_position_id = GER_invite_ottomans
+		prerequisite = {
+			focus = GER_invite_ottomans
+		}
+		x = 0
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_morrocco_interests
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = GER_support_austria
+		prerequisite = {
+			focus = GER_support_austria
+		}
+		x = -1
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_naval_escelation
+		icon = GFX_focus_generic_navy_battleship2
+		relative_position_id = GER_morrocco_interests
+		prerequisite = {
+			focus = GER_morrocco_interests
+		}
+		x = 1
+		y = 2
+		cost = 70
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_mittelafrika_claims
+		icon = GFX_goal_generic_more_territorial_claims
+		relative_position_id = GER_morrocco_interests
+		prerequisite = {
+			focus = GER_morrocco_interests
+		}
+		x = -1
+		y = 1
+		cost = 40
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = GER_invest_in_mittelafrika
+		icon = GFX_focus_generic_africa_infrastructure
+		relative_position_id = GER_mittelafrika_claims
+		prerequisite = {
+			focus = GER_mittelafrika_claims
+		}
+		x = 0
+		y = 1
+		cost = 50
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_asian_interests
+		icon = GFX_focus_usa_focus_on_asia
+		relative_position_id = GER_morrocco_interests
+		prerequisite = {
+			focus = GER_morrocco_interests
+		}
+		x = -3
+		y = 1
+		cost = 40
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_support_italy
+		icon = GFX_focus_befriend_italy
+		relative_position_id = GER_south_border
+		mutually_exclusive = {
+			focus = GER_support_austria
+		}
+		prerequisite = {
+			focus = GER_south_border
+		}
+		x = 2
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = GER_dissolve_aliance
+		icon = GFX_goal_generic_attack_allies
+		relative_position_id = GER_support_italy
+		prerequisite = {
+			focus = GER_support_italy
+		}
+		x = 1
+		y = 1
+		cost = 70
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_pact_of_steel
+		icon = GFX_goal_tripartite_pact
+		relative_position_id = GER_dissolve_aliance
+		prerequisite = {
+			focus = GER_dissolve_aliance
+		}
+		x = 0
+		y = 1
+		cost = 45
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_unite_people
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = GER_pact_of_steel
+		prerequisite = {
+			focus = GER_pact_of_steel
+		}
+		x = 0
+		y = 1
+		cost = 70
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_war_with_france
+		icon = GFX_focus_attack_france
+		relative_position_id = GER_unite_people
+		prerequisite = {
+			focus = GER_naval_escelation
+			focus = GER_unite_people
+		}
+		x = -3
+		y = 2
+		cost = 70
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_schlieffen_plan
+		icon = GFX_goal_generic_more_territorial_claims
+		relative_position_id = GER_war_with_france
+		prerequisite = {
+			focus = GER_war_with_france
+		}
+		x = -4
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_pressure_hol
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = GER_schlieffen_plan
+		prerequisite = {
+			focus = GER_schlieffen_plan
+		}
+		mutually_exclusive = {
+			focus = GER_befriend_hol
+		}
+		x = -1
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_claim_indonesia
+		icon = GFX_goal_generic_position_armies
+		relative_position_id = GER_pressure_hol
+		prerequisite = {
+			focus = GER_pressure_hol
+		}
+		x = 0
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+			has_completed_focus = GER_asian_interests
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_befriend_hol
+		icon = GFX_focus_hol_oranje_boven
+		relative_position_id = GER_schlieffen_plan
+		mutually_exclusive = {
+			focus = GER_pressure_hol
+		}
+		prerequisite = {
+			focus = GER_schlieffen_plan
+		}
+		x = 1
+		y = 1
+		cost = 40
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_septemberprogramm
+		icon = GFX_focus_ger_revive_kaiserreich
+		relative_position_id = GER_war_with_france
+		prerequisite = {
+			focus = GER_war_with_france
+		}
+		x = 3
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_eastern_push
+		icon = GFX_goal_generic_position_armies
+		relative_position_id = GER_septemberprogramm
+		prerequisite = {
+			focus = GER_septemberprogramm
+		}
+		x = 0
+		y = 1
+		cost = 60
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_improve_national_spirit
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = GER_war_with_france
+		prerequisite = {
+			focus = GER_war_with_france
+		}
+		x = 5
+		y = 1
+		cost = 25
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_zimmerman_telegram
+		icon = GFX_focus_mex_redeem_aztlan
+		relative_position_id = GER_war_with_france
+		mutually_exclusive = {
+			focus = GER_ally_usa
+		}
+		prerequisite = {
+			focus = GER_war_with_france
+		}
+		x = -1
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_ally_usa
+		icon = GFX_goal_generic_dangerous_deal
+		relative_position_id = GER_war_with_france
+		mutually_exclusive = {
+			focus = GER_zimmerman_telegram
+		}
+		prerequisite = {
+			focus = GER_war_with_france
+		}
+		x = 1
+		y = 1
+		cost = 45
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+
+}

@@ -1,11 +1,11 @@
 ﻿capital = 7
 
-oob = "HOL_1936"
+#oob = "HOL_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "HOL_1936_naval_mtg"
+		#set_naval_#oob = "HOL_1936_naval_mtg"
 	else = {
-		set_naval_oob = "HOL_1936_naval_legacy"
+		#set_naval_#oob = "HOL_1936_naval_legacy"
 	}
 }
 
@@ -98,12 +98,12 @@ if = {
 	remove_ideas = HOL_weak_government
 
 	
-	oob = "HOL_1939"
+	#oob = "HOL_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "HOL_1939_naval_mtg"
+			#set_naval_#oob = "HOL_1939_naval_mtg"
 		else = {
-			set_naval_oob = "HOL_1939_naval_legacy"
+			#set_naval_#oob = "HOL_1939_naval_legacy"
 		}
 	}
 
@@ -204,7 +204,7 @@ if = {
 	create_equipment_variant = {			# represents K II-X, O8 subs
 		name = "K-III Class"
 		type = ship_hull_submarine_1
-		name_group = HOL_SS_KCLASS
+		#name_group = = HOL_SS_KCLASS
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -216,7 +216,7 @@ if = {
 	create_equipment_variant = {
 		name = "O9 Class"					# represents O9-15, K XI-XIII subs
 		type = ship_hull_submarine_1
-		name_group = HOL_SS_OCLASS
+		#name_group = = HOL_SS_OCLASS
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -228,7 +228,7 @@ if = {
 	create_equipment_variant = {
 		name = "K-XIV Class"				# represents K XIV-XVIII, O16 subs
 		type = ship_hull_submarine_2
-		name_group = HOL_SS_KCLASS
+		#name_group = = HOL_SS_KCLASS
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -240,7 +240,7 @@ if = {
 	create_equipment_variant = {
 		name = "Van Ghent Class"			
 		type = ship_hull_light_1
-		name_group = HOL_DD_HISTORICAL
+		#name_group = = HOL##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -257,7 +257,7 @@ if = {
 	create_equipment_variant = {
 		name = "Van Galen Class"				
 		type = ship_hull_light_1
-		name_group = HOL_DD_HISTORICAL
+		#name_group = = HOL##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -274,7 +274,7 @@ if = {
 	create_equipment_variant = {
 		name = "Java Class"
 		type = ship_hull_cruiser_1
-		name_group = HOL_CL_HISTORICAL
+		#name_group = = HOL##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -291,7 +291,7 @@ if = {
 	create_equipment_variant = {
 		name = "De Ruyter Class"
 		type = ship_hull_cruiser_1
-		name_group = HOL_CL_HISTORICAL
+		#name_group = = HOL##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -308,7 +308,7 @@ if = {
 	create_equipment_variant = {
 		name = "Hertog Hendrik Class"			
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = HOL_CA_HISTORICAL
+		#name_group = = HOL_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -326,7 +326,7 @@ if = {
 	create_equipment_variant = {
 		name = "Soerabaja Class"				# represents Soerabaja (De Zeven Provinciën) and Jacob van Heemskerck 
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = HOL_CA_HISTORICAL
+		#name_group = = HOL_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -356,7 +356,7 @@ if = {
 		create_equipment_variant = {
 			name = "O19 Class"								# represents O19-24 subs
 			type = ship_hull_submarine_3
-			name_group = HOL_SS_OCLASS
+			#name_group = = HOL_SS_OCLASS
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -369,7 +369,7 @@ if = {
 		create_equipment_variant = {
 			name = "Gerard Callenburgh Class"					
 			type = ship_hull_light_2
-			name_group = HOL_DD_HISTORICAL
+			#name_group = = HOL##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
@@ -401,7 +401,7 @@ if = {
 		create_equipment_variant = {
 			name = "Tromp Class"
 			type = ship_hull_cruiser_1
-			name_group = HOL_CL_HISTORICAL
+			#name_group = = HOL##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_2

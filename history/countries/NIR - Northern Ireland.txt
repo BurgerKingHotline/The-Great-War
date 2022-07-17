@@ -17,7 +17,7 @@ set_convoys = 10
 	
 	#generic focuses
 	
-	oob = "IRE_1939"
+	#oob = "IRE_1939"
 	set_technology = {
 		gw_artillery = 1
 		interwar_antiair = 1

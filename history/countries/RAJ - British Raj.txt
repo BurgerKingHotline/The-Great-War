@@ -1,6 +1,6 @@
 ﻿capital = 439
 
-oob = "RAJ_1936"
+#oob = "RAJ_1936"
 
 
 set_stability = 0.6
@@ -83,7 +83,7 @@ set_cosmetic_tag = RAJ_UK # British Raj
 
 	add_political_power = 1198
 	add_command_power = 100
-	oob = "RAJ_1939"
+	#oob = "RAJ_1939"
 
 	#generic focuses
 

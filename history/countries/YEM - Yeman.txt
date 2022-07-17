@@ -1,6 +1,6 @@
 ﻿capital = 293
 
-oob = "YEM_1936"
+#oob = "YEM_1936"
 
 # Starting tech
 set_technology = {
@@ -25,7 +25,7 @@ set_convoys = 5
 	
 	#generic focuses
 	
-	oob = "YEM_1939"
+	#oob = "YEM_1939"
 	set_technology = {
 		#doctrines
 		grand_battle_plan = 1

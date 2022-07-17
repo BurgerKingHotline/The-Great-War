@@ -6,13 +6,13 @@ if = {
 			has_dlc = "No Step Back"
 		}
 	}
-	set_oob = "ENG_1936"
+	#oob = "ENG_1936"
 }
 if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
-	set_oob = "ENG_1936_nsb"
+	#oob = "ENG_1936_nsb"
 }
 
 starting_train_buffer = 4
@@ -21,13 +21,13 @@ if = {
 	limit = {
 		has_dlc = "Man the Guns"
 	}
-	set_naval_oob = "ENG_1936_Naval"
+	#set_naval_#oob = "ENG_1936_Naval"
 	else = {
-		set_naval_oob = "ENG_1936_Naval_Legacy"
+		#set_naval_#oob = "ENG_1936_Naval_Legacy"
 	}
 }
 
-load_oob = "ENG_Motorized"
+#oob = "ENG_Motorized"
 
 set_research_slots = 4
 
@@ -233,21 +233,21 @@ if = {
 				has_dlc = "No Step Back"
 			}
 		}
-		set_oob = "ENG_1939"
+		#oob = "ENG_1939"
 	}
 	if = {
 		limit = {
 			has_dlc = "No Step Back"
 		}
-		set_oob = "ENG_1939_nsb"
+		#oob = "ENG_1939_nsb"
 	}
 	if = {
 		limit = {
 			has_dlc = "Man the Guns"
 		}
-		set_naval_oob = "ENG_1939_Naval"
+		#set_naval_#oob = "ENG_1939_Naval"
 		else = {
-			set_naval_oob = "ENG_1939_Naval_Legacy"
+			#set_naval_#oob = "ENG_1939_Naval_Legacy"
 		}
 	}
 
@@ -351,7 +351,7 @@ if = {
 			basic_carrier = 1
 			improved_carrier = 1
 		}
-		set_naval_oob = "ENG_1939_Naval_Legacy"
+		#set_naval_#oob = "ENG_1939_Naval_Legacy"
 	}
 	if = {
 		limit = {
@@ -368,7 +368,7 @@ if = {
 			dp_secondary_battery = 1
 			improved_sonar = 1
 		}
-		set_naval_oob = "ENG_1939_Naval"
+		#set_naval_#oob = "ENG_1939_Naval"
 		remove_ideas = MTG_naval_treaty_adherent
 		add_ideas = MTG_naval_treaty_adherent_reduced
 		clr_global_flag = MTG_second_london_conference
@@ -661,7 +661,7 @@ if = {
 	create_equipment_variant = {
 		name = "O/P/R Class"
 		type = ship_hull_submarine_1
-		name_group = ENG_SS_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -672,7 +672,7 @@ if = {
 	create_equipment_variant = {
 		name = "S Class"
 		type = ship_hull_submarine_1
-		name_group = ENG_SS_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -684,7 +684,7 @@ if = {
 	create_equipment_variant = {
 		name = "A/B/C/D Class"
 		type = ship_hull_light_1
-		name_group = ENG_DD_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_2
@@ -701,7 +701,7 @@ if = {
 	create_equipment_variant = {
 		name = "E/F/G/H Class"
 		type = ship_hull_light_2
-		name_group = ENG_DD_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_2
@@ -717,7 +717,7 @@ if = {
 	create_equipment_variant = {
 		name = "V/W Class"
 		type = ship_hull_light_1
-		name_group = ENG_DD_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -734,7 +734,7 @@ if = {
 	create_equipment_variant = {
 		name = "S Class"
 		type = ship_hull_light_1
-		name_group = ENG_DD_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -752,7 +752,7 @@ if = {
 	create_equipment_variant = {
 		name = "C-Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CL_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -770,7 +770,7 @@ if = {
 	create_equipment_variant = {
 		name = "Danae Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CL_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -788,7 +788,7 @@ if = {
 	create_equipment_variant = {
 		name = "Emerald Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CL_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -806,7 +806,7 @@ if = {
 	create_equipment_variant = {
 		name = "Leander Class"
 		type = ship_hull_cruiser_2
-		name_group = ENG_CL_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_2
@@ -824,7 +824,7 @@ if = {
 	create_equipment_variant = {
 		name = "Adventure Class"						# cruiser minelayer
 		type = ship_hull_cruiser_1
-		name_group = ENG_MINELAYERS_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -841,7 +841,7 @@ if = {
 	create_equipment_variant = {
 			name = "Town Class"
 			type = ship_hull_cruiser_2
-			name_group = ENG_CL_HISTORICAL
+			
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_2
@@ -860,7 +860,7 @@ if = {
 	create_equipment_variant = {
 		name = "County Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CA_HISTORICAL
+		#name_group = = ENG_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_2
@@ -878,7 +878,7 @@ if = {
 	create_equipment_variant = {
 		name = "York Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CA_HISTORICAL
+		#name_group = = ENG_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_2
@@ -895,7 +895,7 @@ if = {
 	create_equipment_variant = {
 		name = "Hawkins Class"
 		type = ship_hull_cruiser_1
-		name_group = ENG_CA_HISTORICAL
+		#name_group = = ENG_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -914,7 +914,7 @@ if = {
 	create_equipment_variant = {
 		name = "Renown Class"
 		type = ship_hull_heavy_1
-		name_group = ENG_BC_HISTORICAL
+		#name_group = = ENG_BC_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -935,7 +935,7 @@ if = {
 	create_equipment_variant = {
 		name = "Admiral Class"
 		type = ship_hull_heavy_1
-		name_group = ENG_BC_HISTORICAL
+		#name_group = = ENG_BC_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -955,7 +955,7 @@ if = {
 	create_equipment_variant = {
 		name = "G3 Design"
 		type = ship_hull_heavy_1
-		name_group = ENG_BC_HISTORICAL
+		#name_group = = ENG_BC_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_2
@@ -975,7 +975,7 @@ if = {
 	create_equipment_variant = {
 		name = "Nelson Class"
 		type = ship_hull_heavy_1
-		name_group = ENG_BB_HISTORICAL
+		#name_group = = ENG_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_2
@@ -994,7 +994,7 @@ if = {
 	create_equipment_variant = {
 		name = "Queen Elizabeth Class"
 		type = ship_hull_heavy_1
-		name_group = ENG_BB_HISTORICAL
+		#name_group = = ENG_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -1014,7 +1014,7 @@ if = {
 	create_equipment_variant = {
 		name = "Revenge Class"
 		type = ship_hull_heavy_1
-		name_group = ENG_BB_HISTORICAL
+		#name_group = = ENG_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -1034,7 +1034,7 @@ if = {
 	create_equipment_variant = {
 		name = "Eagle Class"
 		type = ship_hull_carrier_conversion_bb
-		name_group = ENG_CV_HISTORICAL
+		#name_group = = ENG_CV_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_deck_slot_1 = ship_deck_space
@@ -1051,7 +1051,7 @@ if = {
 	create_equipment_variant = {
 		name = "Hermes Class"
 		type = ship_hull_carrier_conversion_ca
-		name_group = ENG_CVL_HISTORICAL
+		#name_group = = ENG_CVL_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_deck_slot_1 = ship_deck_space
@@ -1066,7 +1066,7 @@ if = {
 	create_equipment_variant = {
 		name = "Courageous Class"
 		type = ship_hull_carrier_conversion_bb
-		name_group = ENG_CV_HISTORICAL
+		#name_group = = ENG_CV_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_deck_slot_1 = ship_deck_space
@@ -1082,7 +1082,7 @@ if = {
 	create_equipment_variant = {
 			name = "Ark Royal Class"
 			type = ship_hull_carrier_1
-			name_group = ENG_CV_HISTORICAL
+			#name_group = = ENG_CV_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
@@ -1130,7 +1130,7 @@ if = {
 		create_equipment_variant = {
 			name = "Illustrious Class"
 			type = ship_hull_carrier_2
-			name_group = ENG_CV_HISTORICAL
+			#name_group = = ENG_CV_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
@@ -1146,7 +1146,7 @@ if = {
 		create_equipment_variant = {
 			name = "Dido Class"
 			type = ship_hull_cruiser_2
-			name_group = ENG_CLAA_HISTORICAL
+			#name_group = = ENG_CLAA_HISTORICAL
 			parent_version = 1
 			modules = {
 				fixed_ship_battery_slot = dp_light_battery
@@ -1164,7 +1164,7 @@ if = {
 		create_equipment_variant = {
 			name = "Crown Colony Class"
 			type = ship_hull_cruiser_3
-			name_group = ENG_CL_HISTORICAL
+			
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_2
@@ -1183,7 +1183,7 @@ if = {
 		create_equipment_variant = {
 			name = "Tribal Class"
 			type = ship_hull_light_2
-			name_group = ENG_DD_HISTORICAL
+			
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air_1
@@ -1198,7 +1198,7 @@ if = {
 		create_equipment_variant = {
 			name = "J/K/N Class"
 			type = ship_hull_light_3
-			name_group = ENG_DD_HISTORICAL
+			
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air_1
@@ -1214,7 +1214,7 @@ if = {
 		create_equipment_variant = {
 			name = "King George V Class"
 			type = ship_hull_heavy_2
-			name_group = ENG_BB_HISTORICAL
+			#name_group = = ENG_BB_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_heavy_battery_2
@@ -1233,7 +1233,7 @@ if = {
 		create_equipment_variant = {
 			name = "Lion Class" # 1938 variant
 			type = ship_hull_heavy_2
-			name_group = ENG_BB_HISTORICAL
+			#name_group = = ENG_BB_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_heavy_battery_3
@@ -1252,7 +1252,7 @@ if = {
 		create_equipment_variant = {
 			name = "T Class"
 			type = ship_hull_submarine_2
-			name_group = ENG_SS_HISTORICAL
+			
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -1263,7 +1263,7 @@ if = {
 		create_equipment_variant = {
 			name = "Grampus Class"
 			type = ship_hull_submarine_2
-			name_group = ENG_SS_HISTORICAL
+			
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -1274,7 +1274,7 @@ if = {
 		create_equipment_variant = {
 			name = "U Class"
 			type = ship_hull_submarine_1
-			name_group = ENG_SS_HISTORICAL
+			
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2

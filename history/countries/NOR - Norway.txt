@@ -1,11 +1,11 @@
 ﻿capital = 110
 
-oob = "NOR_1936"
+#oob = "NOR_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "NOR_1936_naval_mtg"
+		#set_naval_#oob = "NOR_1936_naval_mtg"
 	else = {
-		set_naval_oob = "NOR_1936_naval_legacy"
+		#set_naval_#oob = "NOR_1936_naval_legacy"
 	}
 }
 
@@ -61,12 +61,12 @@ if = {
 	
 	#generic focuses
 	
-	oob = "NOR_1939"
+	#oob = "NOR_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "NOR_1939_naval_mtg"
+			#set_naval_#oob = "NOR_1939_naval_mtg"
 		else = {
-			set_naval_oob = "NOR_1939_naval_legacy"
+			#set_naval_#oob = "NOR_1939_naval_legacy"
 		}
 	}
 
@@ -169,7 +169,7 @@ if = {
 	create_equipment_variant = {
 		name = "Draug Class"							
 		type = ship_hull_light_1
-		name_group = NOR_DD_HISTORICAL
+		#name_group = = NOR##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -217,7 +217,7 @@ if = {
 	create_equipment_variant = {
 		name = "Norge Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = NOR_CA_HISTORICAL
+		#name_group = = NOR_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -246,7 +246,7 @@ if = {
 		create_equipment_variant = {
 			name = "Sleipner & Odin Class"							
 			type = ship_hull_light_1
-			name_group = NOR_DD_HISTORICAL
+			#name_group = = NOR##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_1

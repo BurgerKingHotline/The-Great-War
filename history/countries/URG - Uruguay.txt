@@ -1,11 +1,11 @@
 ﻿capital = 300
 
-oob = "URG_1936"
+#oob = "URG_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "URG_1936_naval_mtg"
+		#set_naval_#oob = "URG_1936_naval_mtg"
 	else = {
-		set_naval_oob = "URG_1936_naval_legacy"
+		#set_naval_#oob = "URG_1936_naval_legacy"
 	}
 }
 
@@ -51,12 +51,12 @@ set_convoys = 5
 	
 	#generic focuses
 	
-	oob = "URG_1939"
+	#oob = "URG_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "URG_1939_naval_mtg"
+			#set_naval_#oob = "URG_1939_naval_mtg"
 		else = {
-			set_naval_oob = "URG_1939_naval_legacy"
+			#set_naval_#oob = "URG_1939_naval_legacy"
 		}
 	}
 
@@ -125,7 +125,7 @@ if = {
 	create_equipment_variant = {
 		name = "Uruguay Class"				
 		type = ship_hull_light_1
-		name_group = URG_DD_HISTORICAL
+		#name_group = = URG##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1

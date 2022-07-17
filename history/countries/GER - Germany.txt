@@ -1,18 +1,23 @@
 ﻿capital = 64
 
+add_ideas = {
+	ger_prussian_roots 
+	ger_expanding_sphere 
+}
+
 if = {
 	limit = {
 		NOT = {
 			has_dlc = "No Step Back"
 		}
 	}
-	set_oob = "GER_1936"
+	#oob = "GER_1936"
 }
 if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
-	set_oob = "GER_1936_nsb"
+	#oob = "GER_1936_nsb"
 }
 
 create_faction = central_powers_faction
@@ -91,7 +96,7 @@ if = {
 		early_battlecruiser = 1
 		transport = 1
 	}
-	set_naval_oob = "GER_1936_naval"
+	#set_naval_#oob = "GER_1936_naval"
 }
 if = {
 	limit = {
@@ -123,7 +128,7 @@ if = {
 		sonar = 1
 		basic_cruiser_armor_scheme = 1
 	}
-	set_naval_oob = "GER_1936_naval_mtg"
+	#set_naval_#oob = "GER_1936_naval_mtg"
 }
 if = {
 	limit = {
@@ -253,7 +258,7 @@ create_import = {
 		set_technology = {
 			basic_medium_tank = 1 
 		}
-		set_oob = "GER_1939"
+		#oob = "GER_1939"
 	}
 	if = {
 		limit = {
@@ -264,7 +269,7 @@ create_import = {
 		set_technology = {
 			basic_medium_tank_chassis = 1 
 		}
-		set_oob = "GER_1939_nsb"
+		#oob = "GER_1939_nsb"
 	}
 	if = {
 		limit = {
@@ -280,7 +285,7 @@ create_import = {
 			basic_carrier = 1
 			improved_carrier = 1
 		}
-		set_naval_oob = "GER_1939_naval_legacy"
+		#set_naval_#oob = "GER_1939_naval_legacy"
 	}
 	if = {
 		limit = {
@@ -294,7 +299,7 @@ create_import = {
 			improved_heavy_battery = 1
 			basic_heavy_armor_scheme = 1
 		}
-		set_naval_oob = "GER_1939_naval_mtg"
+		#set_naval_#oob = "GER_1939_naval_mtg"
 	}
 }
 
@@ -480,7 +485,7 @@ if = {
 	create_equipment_variant = {
 		name = "Deutschland Class"
 		type = ship_hull_cruiser_panzerschiff
-		name_group = GER_CA_HISTORICAL
+		
 		parent_version = 0
 		modules = {
         	fixed_ship_anti_air_slot = ship_anti_air_1
@@ -496,7 +501,7 @@ if = {
 	create_equipment_variant = {
 		name = "Type 24 Class"
 		type = ship_hull_light_1
-		name_group = GER_TB_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -512,7 +517,7 @@ if = {
 	create_equipment_variant = {
 		name = "Zerstörer 1934 Class"
 		type = ship_hull_light_2
-		name_group = GER_DD_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_2
@@ -529,7 +534,7 @@ if = {
 	create_equipment_variant = {
 		name = "Zerstörer 1934A Class"
 		type = ship_hull_light_2
-		name_group = GER_DD_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_2
@@ -545,7 +550,7 @@ if = {
 	create_equipment_variant = {
 		name = "Type II Class"
 		type = ship_hull_submarine_1
-		name_group = GER_SS_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -557,7 +562,7 @@ if = {
 	create_equipment_variant = {
 		name = "Type VII Class"
 		type = ship_hull_submarine_2
-		name_group = GER_SS_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -568,7 +573,7 @@ if = {
 	create_equipment_variant = {
 		name = "Königsberg Class"
 		type = ship_hull_cruiser_1
-		name_group = GER_CL_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -586,7 +591,7 @@ if = {
 	create_equipment_variant = {
 		name = "Emden Class"
 		type = ship_hull_cruiser_1
-		name_group = GER_CL_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -604,7 +609,7 @@ if = {
 	create_equipment_variant = {
 		name = "Bremse Class"
 		type = ship_hull_cruiser_1
-		name_group = GER_CL_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -621,7 +626,7 @@ if = {
 	create_equipment_variant = {
 		name = "Leipzig Class"
 		type = ship_hull_cruiser_2
-		name_group = GER_CL_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -639,7 +644,7 @@ if = {
 	create_equipment_variant = {
 		name = "Admiral Hipper Class"
 		type = ship_hull_cruiser_2
-		name_group = GER_CA_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_2
@@ -657,7 +662,7 @@ if = {
 	create_equipment_variant = {
 		name = "Scharnhorst Class"
 		type = ship_hull_heavy_2
-		name_group = GER_BB_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_2
@@ -676,7 +681,7 @@ if = {
 	create_equipment_variant = {
 		name = "Deutschland Class"
 		type = ship_hull_pre_dreadnought
-		name_group = GER_BB_HISTORICAL
+		
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -756,7 +761,7 @@ create_equipment_variant = {
 		create_equipment_variant = {
 			name = "Zerstörer 1936 Class"
 			type = ship_hull_light_2
-			name_group = GER_DD_HISTORICAL
+			
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
@@ -771,7 +776,7 @@ create_equipment_variant = {
 		create_equipment_variant = {
 			name = "Bismarck Class"
 			type = ship_hull_heavy_2
-			name_group = GER_BB_HISTORICAL
+			
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_heavy_battery_3
@@ -790,7 +795,7 @@ create_equipment_variant = {
 		create_equipment_variant = {
 			name = "Graf Zeppelin Class"
 			type = ship_hull_carrier_1
-			name_group = GER_CV_HISTORICAL
+			#name_group = = GER_CV_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space

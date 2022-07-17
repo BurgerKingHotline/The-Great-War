@@ -1,11 +1,11 @@
 ﻿capital = 10
 
-oob = "POL_1936"
+#oob = "POL_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "POL_1936_naval_mtg"
+		#set_naval_#oob = "POL_1936_naval_mtg"
 	else = {
-		set_naval_oob = "POL_1936_naval_legacy"
+		#set_naval_#oob = "POL_1936_naval_legacy"
 	}
 }
 
@@ -83,9 +83,9 @@ if = {
 	
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "POL_1939_naval_mtg"
+			#set_naval_#oob = "POL_1939_naval_mtg"
 		else = {
-			set_naval_oob = "POL_1939_naval_legacy"
+			#set_naval_#oob = "POL_1939_naval_legacy"
 		}
 	}
 
@@ -136,7 +136,7 @@ if = {
 		set_technology = {
 			basic_light_tank = 1
 		}
-		set_oob = "POL_1939"
+		#oob = "POL_1939"
 	}
 	if = {
 		limit = {
@@ -147,7 +147,7 @@ if = {
 		set_technology = {
 			basic_light_tank_chassis = 1
 		}
-		set_oob = "POL_1939_nsb"
+		#oob = "POL_1939_nsb"
 	}
 	if = {
 		limit = { not = { has_dlc = "Man the Guns" } }
@@ -327,7 +327,7 @@ if = {
 	create_equipment_variant = {
 		name = "Wilk Class"				
 		type = ship_hull_submarine_2
-		name_group = POL_SS_HISTORICAL
+		#name_group = = POL_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -339,7 +339,7 @@ if = {
 	create_equipment_variant = {
 		name = "Wicher Class"				
 		type = ship_hull_light_1
-		name_group = POL_DD_HISTORICAL
+		#name_group = = POL##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -367,7 +367,7 @@ if = {
 		create_equipment_variant = {
 			name = "Orzel Class"				
 			type = ship_hull_submarine_2
-			name_group = POL_SS_HISTORICAL
+			#name_group = = POL_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -379,7 +379,7 @@ if = {
 		create_equipment_variant = {
 			name = "Grom Class"					
 			type = ship_hull_light_2
-			name_group = POL_DD_HISTORICAL
+			#name_group = = POL##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2

@@ -6,19 +6,19 @@ if = {
 			has_dlc = "No Step Back"
 		}
 	}
-	set_oob = "ROM_1936"
+	#oob = "ROM_1936"
 }
 if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
-	set_oob = "ROM_1936_nsb"
+	#oob = "ROM_1936_nsb"
 }
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "ROM_1936_naval_mtg"
+		#set_naval_#oob = "ROM_1936_naval_mtg"
 	else = {
-		set_naval_oob = "ROM_1936_naval_legacy"
+		#set_naval_#oob = "ROM_1936_naval_legacy"
 	}
 }
 
@@ -118,17 +118,17 @@ set_convoys = 10
 	
 	if = {
 		limit = { NOT = { has_dlc = "No Step Back" } }
-		set_oob = "ROM_1939"
+		#oob = "ROM_1939"
 	}
 	if = {
 		limit = { has_dlc = "No Step Back" } 
-		set_oob = "ROM_1939_nsb"
+		#oob = "ROM_1939_nsb"
 	}
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "ROM_1939_naval_mtg"
+			#set_naval_#oob = "ROM_1939_naval_mtg"
 		else = {
-			set_naval_oob = "ROM_1939_naval_legacy"
+			#set_naval_#oob = "ROM_1939_naval_legacy"
 		}
 	}
 
@@ -236,7 +236,7 @@ if = {
 	create_equipment_variant = {
 		name = "Delfinul Class"				
 		type = ship_hull_submarine_2
-		name_group = ROM_SS_HISTORICAL
+		#name_group = = ROM_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -248,7 +248,7 @@ if = {
 	create_equipment_variant = {
 		name = "Marasti Class"				
 		type = ship_hull_light_1
-		name_group = ROM_DD_HISTORICAL
+		#name_group = = ROM##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -265,7 +265,7 @@ if = {
 	create_equipment_variant = {
 		name = "Regele Ferdinand Class"	
 		type = ship_hull_light_1
-		name_group = ROM_DD_HISTORICAL
+		#name_group = = ROM##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1

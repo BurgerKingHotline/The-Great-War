@@ -1,6 +1,6 @@
 ﻿capital = 11
 
-oob = "LIT_1936"
+#oob = "LIT_1936"
 
 set_research_slots = 3
 
@@ -25,7 +25,7 @@ set_convoys = 10
 	add_command_power = 100
 	
 	
-	oob = "LIT_1939"
+	#oob = "LIT_1939"
 	set_technology = {
 		tech_engineers = 1
 		early_bomber = 1

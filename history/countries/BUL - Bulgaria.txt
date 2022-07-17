@@ -1,7 +1,7 @@
 ﻿capital = 48
 
 #TROOPS
-oob = "BUL_1936" #VANILLA & DLC
+#oob = "BUL_1936" #VANILLA & DLC
 set_convoys = 5 #VANILLA & DLC
 
 #You don't want Bulgarian party names? Just remove these lines
@@ -189,7 +189,7 @@ set_technology = { #VANILLA & DLC
 			gwtank = 1
 			basic_light_tank = 1
 		}
-		set_oob = "BUL_1939"
+		#oob = "BUL_1939"
 	}
 	if = {
 		limit = {
@@ -201,7 +201,7 @@ set_technology = { #VANILLA & DLC
 			gwtank_chassis = 1
 			basic_light_tank_chassis = 1
 		}
-		set_oob = "BUL_1939_nsb"
+		#oob = "BUL_1939_nsb"
 	}
 
 	

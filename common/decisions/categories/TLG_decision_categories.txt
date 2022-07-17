@@ -103,3 +103,59 @@ SOV_form_ssrs = {
 		#has_completed_focus = RUS_crusade_against_communism
 	}
 }
+
+# MEX
+MEX_revolution_escalation = {
+	visible_when_empty = no
+	priority = 100
+	allowed = {
+		original_tag = MEX
+	}
+	visible = {
+		has_global_flag = MEX_revolution
+	}
+}
+MEX_carranza_support_category = {
+	visible_when_empty = no
+	priority = 10
+	allowed = {
+		original_tag = MEX
+	}
+	visible = {
+		has_country_flag = MEX_supported_carranza
+		has_global_flag = MEX_revolution
+	}
+}
+MEX_zapata_support_category = {
+	visible_when_empty = no
+	priority = 10
+	allowed = {
+		original_tag = MEX
+	}
+	visible = {
+		has_country_flag = MEX_supported_zapata
+		has_global_flag = MEX_revolution
+	}
+}
+MEX_villa_support_category = {
+	visible_when_empty = no
+	priority = 10
+	allowed = {
+		original_tag = MEX
+	}
+	visible = {
+		has_country_flag = MEX_supported_villa
+		has_global_flag = MEX_revolution
+	}
+}
+MEX_diaz_support_category = {
+	visible_when_empty = no
+	priority = 10
+	allowed = {
+		original_tag = MEX
+	}
+	visible = {
+		has_country_flag = MEX_supported_diaz
+		has_global_flag = MEX_revolution
+	}
+}

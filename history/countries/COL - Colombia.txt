@@ -1,11 +1,11 @@
 ﻿capital = 306
 
-oob = "COL_1936"
+#oob = "COL_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "COL_1936_naval_mtg"
+		#set_naval_#oob = "COL_1936_naval_mtg"
 	else = {
-		set_naval_oob = "COL_1936_naval_legacy"
+		#set_naval_#oob = "COL_1936_naval_legacy"
 	}
 }
 
@@ -50,12 +50,12 @@ set_convoys = 10
 	
 	#generic focuses
 	
-	oob = "COL_1939"
+	#oob = "COL_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "COL_1939_naval_mtg"
+			#set_naval_#oob = "COL_1939_naval_mtg"
 		else = {
-			set_naval_oob = "COL_1939_naval_legacy"
+			#set_naval_#oob = "COL_1939_naval_legacy"
 		}
 	}
 
@@ -133,7 +133,7 @@ if = {
 	create_equipment_variant = {
 		name = "Antioquia Class"				
 		type = ship_hull_light_1
-		name_group = COL_DD_HISTORICAL
+		#name_group = = COL##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_2

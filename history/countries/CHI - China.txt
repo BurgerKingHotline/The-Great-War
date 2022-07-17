@@ -1,11 +1,11 @@
 ﻿capital = 613 # Nanjing
 
-oob = "CHI_1936"
+#oob = "CHI_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "CHI_1936_naval_mtg"
+		#set_naval_#oob = "CHI_1936_naval_mtg"
 	else = {
-		set_naval_oob = "CHI_1936_naval_legacy"
+		#set_naval_#oob = "CHI_1936_naval_legacy"
 	}
 }
 
@@ -80,15 +80,15 @@ set_convoys = 40
 	create_faction = chinese_united_front
 	add_to_faction = PRC
 	remove_opinion_modifier = { target = PRC modifier = hostile_status }
-	#load_oob = "CHI_united_front"
+	##oob = "CHI_united_front"
 	set_global_flag = CHI_unite
 	
-	oob = "CHI_1939"
+	#oob = "CHI_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "CHI_1939_naval_mtg"
+			#set_naval_#oob = "CHI_1939_naval_mtg"
 		else = {
-			set_naval_oob = "CHI_1939_naval_legacy"
+			#set_naval_#oob = "CHI_1939_naval_legacy"
 		}
 	}
 	set_technology = {
@@ -156,7 +156,7 @@ if = {
 	create_equipment_variant = {
 		name = "Jianwei Class"			
 		type = ship_hull_light_1
-		name_group = CHI_DD_HISTORICAL
+		#name_group = = CHI##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -173,7 +173,7 @@ if = {
 	create_equipment_variant = {
 		name = "Hairong Class"					# Hairong protected cruisers and Zhaohe, Yingrui training cruisers
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = CHI_CL_HISTORICAL
+		#name_group = = CHI##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -191,7 +191,7 @@ if = {
 	create_equipment_variant = {
 		name = "Haiqi Class"
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = CHI_CL_HISTORICAL
+		#name_group = = CHI##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -210,7 +210,7 @@ if = {
 	create_equipment_variant = {
 		name = "Ninghai Class"
 		type = ship_hull_cruiser_1
-		name_group = CHI_CL_HISTORICAL
+		#name_group = = CHI##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1

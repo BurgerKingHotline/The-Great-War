@@ -1,0 +1,25 @@
+﻿add_namespace = mexican_revolution
+
+country_event = {
+	id = mexican_revolution.1
+    title = mexican_revolution.1.t 
+    desc = mexican_revolution.1.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = mexican_revolution.1.a 
+		set_global_flag = MEX_revolution
+		hidden_effect = {
+			485 = {
+				set_state_flag = zapata_state_support
+				add_to_variable = {
+					var = MEX.zapata_owned_states
+					value = 1
+				}
+			}
+			set_country_flag = diaz_escalating
+		}
+	}
+}

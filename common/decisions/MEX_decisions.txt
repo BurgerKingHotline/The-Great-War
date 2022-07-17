@@ -1,0 +1,181 @@
+MEX_revolution_escalation = {
+
+	feliz_diaz_escalates = {
+		days_mission_timeout = 10 #571
+		fire_only_once = yes
+		activation = {
+			has_country_flag = diaz_escalating
+		}
+		available = {
+			NOT = {
+				has_global_flag = MEX_revolution
+			}
+		}
+		timeout_effect = {
+			477 = {
+				set_state_flag = diaz_state_support
+				add_to_variable = {
+					var = MEX.diaz_owned_states
+					value = 1
+				}
+			}
+			clr_country_flag = diaz_escalating
+			set_country_flag = carranza_villa_escalating
+		}
+	}
+
+	carranza_villa_escalates = {
+		days_mission_timeout = 10 #161
+		fire_only_once = yes
+		activation = {
+			has_country_flag = carranza_villa_escalating
+		}
+		available = {
+			NOT = {
+				has_global_flag = MEX_revolution
+			}
+		}
+		timeout_effect = {
+			483 = {
+				set_state_flag = carranza_state_support
+				add_to_variable = {
+					var = MEX.carranza_owned_states
+					value = 1
+				}
+			}
+			480 = {
+				set_state_flag = carranza_state_support
+				add_to_variable = {
+					var = MEX.carranza_owned_states
+					value = 1
+				}
+			}
+			482 = {
+				set_state_flag = villa_state_support
+				add_to_variable = {
+					var = MEX.villa_owned_states
+					value = 1
+				}
+			}
+			clr_country_flag = carranza_villa_escalating
+			set_country_flag = full_civil_war
+			set_country_flag = random_state_change
+		}
+	}
+
+	random_state_change = {
+		days_mission_timeout = 5 #137
+		activation = {
+			has_country_flag = random_state_change
+			check_variable = { mex_random_state_changes > 3 }
+		}
+		available = {
+			NOT = {
+				has_global_flag = MEX_revolution
+			}
+			check_variable = { mex_random_state_changes > 3 }
+		}
+		timeout_effect = {
+			if = {
+				limit = {
+					check_variable = { mex_random_state_changes < 3 }
+				}
+				add_to_variable = {
+					var = mex_random_state_changes
+					value = 1
+				}
+			}
+			random_state = {
+				limit = {
+					is_core_of = MEX
+					is_owned_by = MEX
+					NOT = {
+						has_state_flag = carranza_state_support
+						has_state_flag = zapata_state_support
+						has_state_flag = villa_state_support
+						has_state_flag = diaz_state_support
+					}
+				}
+				random_list = {
+					25 = {
+						set_state_flag = carranza_state_support
+						add_to_variable = {
+							var = MEX.carranza_owned_states
+							value = 1
+						}
+					}
+					25 = {
+						set_state_flag = zapata_state_support
+						add_to_variable = {
+							var = MEX.zapata_owned_states
+							value = 1
+						}
+					}
+					25 = {
+						set_state_flag = villa_state_support
+						add_to_variable = {
+							var = MEX.villa_owned_states
+							value = 1
+						}
+					}
+					25 = {
+						set_state_flag = diaz_state_support
+						add_to_variable = {
+							var = MEX.diaz_owned_states
+							value = 1
+						}
+					}
+				}
+			}
+		}
+		
+	}
+
+	full_civil_war = {
+		days_mission_timeout = 15 #549
+		fire_only_once = yes
+		activation = {
+			has_country_flag = full_civil_war
+		}
+	}
+}
+
+MEX_carranza_support_category = {
+	carranza_pacify_state = {
+		target_array = controlled_states
+		days_re_enable = 210
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_state_flag = carranza_state_support
+				}
+				any_neighbor_state = {
+					has_state_flag = carranza_state_support
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+		state_target = yes
+		cost = 150
+		complete_effect = {
+			carranza_state_superiority = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+        }
+	}
+}
+MEX_zapata_support_category = {
+	
+}
+MEX_villa_support_category = {
+	
+}
+MEX_diaz_support_category = {
+	
+}

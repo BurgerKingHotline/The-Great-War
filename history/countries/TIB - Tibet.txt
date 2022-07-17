@@ -1,6 +1,6 @@
 ﻿capital = 757
 
-oob = "TIB_1936"
+#oob = "TIB_1936"
 
 # Starting tech
 set_technology = {
@@ -15,7 +15,7 @@ set_technology = {
 	
 	#generic focuses
 	
-	oob = "TIB_1939"
+	#oob = "TIB_1939"
 	set_technology = {
 		#doctrines
 		air_superiority = 1

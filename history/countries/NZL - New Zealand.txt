@@ -1,6 +1,6 @@
 ﻿capital = 284
 
-oob = "NZL_1936"
+#oob = "NZL_1936"
 
 # Starting tech
 set_stability = 0.8
@@ -67,12 +67,12 @@ if = {
 
 	add_political_power = 1198
 	add_command_power = 100
-	oob = "NZL_1939"
+	#oob = "NZL_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "NZL_1939_naval_mtg"
+			#set_naval_#oob = "NZL_1939_naval_mtg"
 		else = {
-			set_naval_oob = "NZL_1939_naval_legacy"
+			#set_naval_#oob = "NZL_1939_naval_legacy"
 		}
 	}
 	
@@ -216,7 +216,7 @@ if = {
 	create_equipment_variant = {
 		name = "Danae Class"
 		type = ship_hull_cruiser_1
-		name_group = NZL_CL_HISTORICAL
+		#name_group = = NZL##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -243,7 +243,7 @@ if = {
 		create_equipment_variant = {
 			name = "Leander Class"
 			type = ship_hull_cruiser_2
-			name_group = NZL_CL_HISTORICAL
+			#name_group = = NZL##name_group = =
 			modules = {
 				fixed_ship_battery_slot = ship_light_medium_battery_1
 				fixed_ship_anti_air_slot = ship_anti_air_1

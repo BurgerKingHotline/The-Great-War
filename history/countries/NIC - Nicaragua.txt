@@ -1,6 +1,6 @@
 ﻿capital = 317
 
-oob = "NIC_1936"
+#oob = "NIC_1936"
 
 # Starting tech
 set_technology = {
@@ -22,7 +22,7 @@ set_convoys = 10
 	
 	#generic focuses
 	
-	oob = "NIC_1939"
+	#oob = "NIC_1939"
 	set_technology = {
 		interwar_artillery = 1
 		infantry_weapons1 = 1

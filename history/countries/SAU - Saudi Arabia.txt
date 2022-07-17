@@ -1,6 +1,6 @@
 ﻿capital = 292
 
-oob = "SAU_1936"
+#oob = "SAU_1936"
 
 # Starting tech
 set_technology = {
@@ -25,7 +25,7 @@ set_convoys = 5
 	
 	#generic focuses
 	
-	oob = "SAU_1939"
+	#oob = "SAU_1939"
 	set_technology = {
 		tech_support = 1
 		tech_recon = 1

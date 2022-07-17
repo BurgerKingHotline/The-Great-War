@@ -1,11 +1,11 @@
 ﻿capital = 47
 
-oob = "GRE_1936"
+#oob = "GRE_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "GRE_1936_naval_mtg"
+		#set_naval_#oob = "GRE_1936_naval_mtg"
 	else = {
-		set_naval_oob = "GRE_1936_naval_legacy"
+		#set_naval_#oob = "GRE_1936_naval_legacy"
 	}
 }
 
@@ -94,12 +94,12 @@ set_convoys = 10
 		}
 	}
 	
-	oob = "GRE_1939"
+	#oob = "GRE_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "GRE_1939_naval_mtg"
+			#set_naval_#oob = "GRE_1939_naval_mtg"
 		else = {
-			set_naval_oob = "GRE_1939_naval_legacy"
+			#set_naval_#oob = "GRE_1939_naval_legacy"
 		}
 	}
 	
@@ -229,7 +229,7 @@ if = {
 	create_equipment_variant = {
 		name = "Katsonis Class"				
 		type = ship_hull_submarine_1
-		name_group = GRE_SS_HISTORICAL
+		#name_group = = GRE_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -241,7 +241,7 @@ if = {
 	create_equipment_variant = {
 		name = "Glafkos Class"				
 		type = ship_hull_submarine_2
-		name_group = GRE_SS_HISTORICAL
+		#name_group = = GRE_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -253,7 +253,7 @@ if = {
 	create_equipment_variant = {
 		name = "Aetos Class"					
 		type = ship_hull_light_1
-		name_group = GRE_DD_HISTORICAL
+		#name_group = = GRE##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -270,7 +270,7 @@ if = {
 	create_equipment_variant = {
 		name = "Hydra Class"	
 		type = ship_hull_light_1
-		name_group = GRE_DD_HISTORICAL
+		#name_group = = GRE##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -287,7 +287,7 @@ if = {
 	create_equipment_variant = {
 		name = "Averof Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = GRE_CA_HISTORICAL
+		#name_group = = GRE_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -306,7 +306,7 @@ if = {
 	create_equipment_variant = {
 		name = "Elli Class"				
 		type = ship_hull_cruiser_1
-		name_group = GRE_CL_HISTORICAL
+		#name_group = = GRE##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -325,7 +325,7 @@ if = {
 	create_equipment_variant = {
 		name = "Kilkis Class"	
 		type = ship_hull_pre_dreadnought
-		name_group = GRE_BB_HISTORICAL
+		#name_group = = GRE_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -355,7 +355,7 @@ if = {
 	create_equipment_variant = {
 			name = "Vasilefs Georgios I Class"	
 			type = ship_hull_light_2
-			name_group = GRE_DD_HISTORICAL
+			#name_group = = GRE##name_group = =
 			parent_version = 0
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2

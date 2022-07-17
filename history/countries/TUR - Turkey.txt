@@ -6,19 +6,19 @@ if = {
 			has_dlc = "No Step Back"
 		}
 	}
-	set_oob = "TUR_1936"
+	#oob = "TUR_1936"
 }
 if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
-	set_oob = "TUR_1936_nsb"
+	#oob = "TUR_1936_nsb"
 }
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "TUR_1936_naval_mtg"
+		#set_naval_#oob = "TUR_1936_naval_mtg"
 	else = {
-		set_naval_oob = "TUR_1936_naval_legacy"
+		#set_naval_#oob = "TUR_1936_naval_legacy"
 	}
 }
 
@@ -318,7 +318,7 @@ if = {
 	create_equipment_variant = {
 		name = "Birinci Inönü Class"				
 		type = ship_hull_submarine_1
-		name_group = TUR_SS_HISTORICAL
+		#name_group = = TUR_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -330,7 +330,7 @@ if = {
 	create_equipment_variant = {
 		name = "Dumlupinar Class"				
 		type = ship_hull_submarine_2
-		name_group = TUR_SS_HISTORICAL
+		#name_group = = TUR_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -341,7 +341,7 @@ if = {
 	create_equipment_variant = {
 		name = "Sakarya Class"								# represents Sakarya and Gur classes
 		type = ship_hull_submarine_1
-		name_group = TUR_SS_HISTORICAL
+		#name_group = = TUR_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_2
@@ -353,7 +353,7 @@ if = {
 	create_equipment_variant = {
 		name = "Peyk Class"									# large torpedo boats		
 		type = ship_hull_light_1
-		name_group = TUR_DD_HISTORICAL
+		#name_group = = TUR##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -370,7 +370,7 @@ if = {
 	create_equipment_variant = {
 		name = "Kocatepe Class"								# represents Kocatepe and Zafer classes
 		type = ship_hull_light_1
-		name_group = TUR_DD_HISTORICAL
+		#name_group = = TUR##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -387,7 +387,7 @@ if = {
 	create_equipment_variant = {
 		name = "Mecidiye Class"								# represents Mecidiye and Hamidiye protected cruisers		
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = TUR_CL_HISTORICAL
+		#name_group = = TUR##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -406,7 +406,7 @@ if = {
 	create_equipment_variant = {
 		name = "Yavuz Class"	
 		type = ship_hull_heavy_1
-		name_group = TUR_BC_HISTORICAL
+		#name_group = = TUR_BC_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1
@@ -436,7 +436,7 @@ if = {
 		create_equipment_variant = {
 			name = "Saldiray Class"				
 			type = ship_hull_submarine_2
-			name_group = TUR_SS_HISTORICAL
+			#name_group = = TUR_SS_HISTORICAL
 			parent_version = 0
 			modules = {
 				fixed_ship_torpedo_slot = ship_torpedo_sub_2

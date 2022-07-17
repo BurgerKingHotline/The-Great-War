@@ -1,6 +1,6 @@
 ﻿capital = 899 
 
-#oob = "FIU_1936"
+##oob = "FIU_1936"
 
 set_research_slots = 3
 

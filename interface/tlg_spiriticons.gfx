@@ -1,0 +1,7 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_idea_ger_expanding_sphere"
+		texturefile = "gfx/interface/ideas/ger_expanding_sphere.dds"
+	}
+}

@@ -1,11 +1,11 @@
 ﻿capital = 279
 
-oob = "CHL_1936"
+#oob = "CHL_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "CHL_1936_naval_mtg"
+		#set_naval_#oob = "CHL_1936_naval_mtg"
 	else = {
-		set_naval_oob = "CHL_1936_naval_legacy"
+		#set_naval_#oob = "CHL_1936_naval_legacy"
 	}
 }
 
@@ -61,12 +61,12 @@ set_convoys = 20
 	
 	#generic focuses
 	
-	oob = "CHL_1939"
+	#oob = "CHL_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "CHL_1939_naval_mtg"
+			#set_naval_#oob = "CHL_1939_naval_mtg"
 		else = {
-			set_naval_oob = "CHL_1939_naval_legacy"
+			#set_naval_#oob = "CHL_1939_naval_legacy"
 		}
 	}
 
@@ -168,7 +168,7 @@ if = {
 	create_equipment_variant = {
 		name = "H1 Class"				
 		type = ship_hull_submarine_1
-		name_group = CHL_SS_HISTORICAL
+		#name_group = = CHL_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -180,7 +180,7 @@ if = {
 	create_equipment_variant = {
 		name = "Capitán O'Brien Class"				
 		type = ship_hull_submarine_1
-		name_group = CHL_SS_HISTORICAL
+		#name_group = = CHL_SS_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -192,7 +192,7 @@ if = {
 	create_equipment_variant = {
 		name = "Almirante Lynch Class"				
 		type = ship_hull_light_1
-		name_group = CHL_DD_HISTORICAL
+		#name_group = = CHL##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -209,7 +209,7 @@ if = {
 	create_equipment_variant = {
 		name = "Serrano Class"	
 		type = ship_hull_light_1
-		name_group = CHL_DD_HISTORICAL
+		#name_group = = CHL##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -226,7 +226,7 @@ if = {
 	create_equipment_variant = {
 		name = "O'Higgins Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = CHL_CA_HISTORICAL
+		#name_group = = CHL_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -244,7 +244,7 @@ if = {
 	create_equipment_variant = {
 		name = "Chacabuco Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = CHL_CL_HISTORICAL
+		#name_group = = CHL##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -263,7 +263,7 @@ if = {
 	create_equipment_variant = {
 		name = "Almirante Latorre Class"	
 		type = ship_hull_heavy_1
-		name_group = CHL_BB_HISTORICAL
+		#name_group = = CHL_BB_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_1

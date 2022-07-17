@@ -1,6 +1,6 @@
 ﻿capital = 285
 
-oob = "AST_1936"
+#oob = "AST_1936"
 set_stability = 0.8
 set_war_support = 0.3
 # Starting tech
@@ -51,7 +51,7 @@ if = {
 		early_submarine = 1
 		transport = 1
 	}
-	set_naval_oob = "AST_1936_naval_legacy"
+	#set_naval_#oob = "AST_1936_naval_legacy"
 }
 if = {
 	limit = {
@@ -71,13 +71,13 @@ if = {
 		basic_cruiser_armor_scheme = 1
 		mtg_transport = 1
 	}
-	set_naval_oob = "AST_1936_naval"
+	#set_naval_#oob = "AST_1936_naval"
 }
 
 1939.1.1 = {
 	add_political_power = 1198
 	add_command_power = 100
-	oob = "AST_1939"
+	#oob = "AST_1939"
 	
 	if = {
 		limit = { has_dlc = "Together for Victory" }
@@ -164,7 +164,7 @@ if = {
 		set_technology = {
 			basic_destroyer = 1
 		}
-		set_naval_oob = "AST_1939_naval_legacy"
+		#set_naval_#oob = "AST_1939_naval_legacy"
 	}
 	if = {
 		limit = {
@@ -177,7 +177,7 @@ if = {
 			improved_sonar = 1
 			improved_depth_charges = 1
 		}
-		set_naval_oob = "AST_1939_naval"
+		#set_naval_#oob = "AST_1939_naval"
 	}
 }
 
@@ -245,7 +245,7 @@ if = {
 	create_equipment_variant = {
 		name = "Sydney Class"
 		type = ship_hull_cruiser_2
-		name_group = AST_CL_HISTORICAL
+		#name_group = = AST##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_2
@@ -263,7 +263,7 @@ if = {
 	create_equipment_variant = {
 		name = "Town Class"
 		type = ship_hull_cruiser_1
-		name_group = AST_CL_HISTORICAL
+		#name_group = = AST##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -282,7 +282,7 @@ if = {
 	create_equipment_variant = {
 		name = "Canberra Class"
 		type = ship_hull_cruiser_1
-		name_group = AST_CA_HISTORICAL
+		#name_group = = AST_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_2
@@ -301,7 +301,7 @@ if = {
 	create_equipment_variant = {
 		name = "V/W Class"
 		type = ship_hull_light_1
-		name_group = AST_DD_HISTORICAL
+		#name_group = = AST##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -317,7 +317,7 @@ if = {
 	create_equipment_variant = {
 		name = "S Class"
 		type = ship_hull_light_1
-		name_group = AST_DD_HISTORICAL
+		#name_group = = AST##name_group = =
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
@@ -356,7 +356,7 @@ if = {
 		create_equipment_variant = {
 			name = "Arunta Class"
 			type = ship_hull_light_2
-			name_group = AST_DD_HISTORICAL
+			#name_group = = AST##name_group = =
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air_1
