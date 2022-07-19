@@ -8,6 +8,10 @@ set_technology = {
 
 set_convoys = 20
 
+1914.1.1 = {
+	set_cosmetic_tag = EGY_sultanate
+}
+
 1939.1.1 = {
 
 	add_political_power = 1198

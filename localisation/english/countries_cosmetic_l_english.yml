@@ -1362,3 +1362,9 @@
  FIU_federal:0 "Greater Fiume"
  FIU_federal_DEF:0 "the Autonomy of Fiume the March of Istria and Italian Dalmatia"
  FIU_federal_ADJ:0 "Italo-Dalmatian"
+
+ EGY_sultanate_neutrality:0 "Sultanate of Egypt"
+ EGY_sultanate_neutrality_DEF:0 "the Sultanate of Egypt"
+
+ EGY_kingdom_neutrality:0 "Kingdom of Egypt"
+ EGY_kingdom_neutrality_DEF:0 "the Kingdom of Egypt"
