@@ -7,6 +7,7 @@ set_research_slots = 2
 add_ideas = {
 	RUS_duma
 	RUS_strong_independance_movements
+	RUS_industrialising_nation_1
 }
 
 # Starting tech

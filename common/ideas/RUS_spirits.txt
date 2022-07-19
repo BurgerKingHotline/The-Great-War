@@ -380,6 +380,7 @@ ideas = {
 			
 			modifier = {
 				neutrality_drift = 0.05
+				political_power_factor = 0.05
 			}
 
 		}
@@ -598,12 +599,106 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				 	
-
 				industrial_capacity_factory = 0.3
 				production_factory_efficiency_gain_factor = 0.08 
 				production_factory_max_efficiency_factor = 0.05
 				political_power_gain = -0.05
+			}
+		}
+
+		RUS_industrialising_nation_3 = {
+			name = RUS_industrialising_nation_1
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.3
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.05 
+				political_power_gain = -0.1
+			}
+		}
+
+		RUS_industrialising_nation_4 = {
+			name = RUS_industrialising_nation_1
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.35
+				production_factory_efficiency_gain_factor = 0.12
+				production_factory_max_efficiency_factor = 0.13
+				production_speed_industrial_complex_factor = 0.07
+				production_speed_infrastructure_factor = 0.1
+				political_power_gain = -0.15
+			}
+		}
+
+		RUS_industrialising_nation_5 = {
+			name = RUS_industrialising_nation_1
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.4
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.2
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.15
+				political_power_gain = -0.25
+			}
+		}
+
+		RUS_industrialising_nation_6 = {
+			name = RUS_industrialising_nation_1
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.5
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.25
+				production_speed_arms_factory_factor = 0.1
+				political_power_gain = -0.35
+				stability_factor = -0.05
 			}
 		}
 

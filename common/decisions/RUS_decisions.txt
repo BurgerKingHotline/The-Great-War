@@ -82,6 +82,208 @@ russian_socialism_decisions = {
 	}
 }
 
+RUS_tsarist_intervention_decisions = {
+	RUS_intervene_in_the_economy = {
+		icon = generic_civil_support
+
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = RUS_tsar_intervening
+				}
+			}
+        }
+
+		complete_effect = {
+			set_country_flag = RUS_tsar_intervening
+		}
+
+		remove_effect = {
+			clr_country_flag = RUS_tsar_intervening
+		}
+	
+		modifier = {
+			consumer_goods_factor = -0.05
+			production_factory_efficiency_gain_factor = -0.05 
+			production_factory_start_efficiency_factor = -0.08
+			production_lack_of_resource_penalty_factor = 0.25 
+		}
+	
+		days_remove = 180
+		days_re_enable = 179
+		cost = 50
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	RUS_intervene_in_the_military = {
+		icon = generic_civil_support
+
+		visible = {
+		}
+
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = RUS_tsar_intervening
+				}
+			}
+        }
+	
+		modifier = {
+			army_org_factor = 0.3
+			army_core_defence_factor = 0.05
+			army_core_attack_factor = 0.05
+			army_morale_factor = -0.05
+			max_planning_factor = -0.15
+			planning_speed = -0.15
+			political_power_factor = -0.05
+		}
+
+		complete_effect = {
+			set_country_flag = RUS_tsar_intervening
+		}
+
+		remove_effect = {
+			clr_country_flag = RUS_tsar_intervening
+		}
+	
+		days_remove = 180
+		days_re_enable = 179
+		cost = 50
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 5
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+	}
+
+	RUS_intervene_in_national_security = {
+		icon = generic_civil_support
+
+		visible = {
+		}
+
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = RUS_tsar_intervening
+				}
+			}
+        }
+
+		allowed = {
+			has_dlc = "La Resistance"
+		}
+	
+		modifier = {
+			crypto_strength = 3
+			civilian_intel_to_others = -0.1
+			army_intel_to_others = -0.1
+			airforce_intel_to_others = -0.1
+			foreign_subversive_activites = -0.3
+			navy_intel_to_others = -0.1
+			agency_upgrade_time = -0.25
+		}
+
+		complete_effect = {
+			set_country_flag = RUS_tsar_intervening
+		}
+
+		remove_effect = {
+			clr_country_flag = RUS_tsar_intervening
+		}
+	
+		days_remove = 180
+		days_re_enable = 179
+		cost = 50
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 2
+				OR = {
+					has_stability < 0.4
+					has_war_support < 0.4
+				}
+			}
+		}
+	}
+
+	RUS_intervene_in_foreign_policy = {
+		icon = generic_civil_support
+
+		visible = {
+		}
+
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = RUS_tsar_intervening
+				}
+			}
+        }
+	
+		modifier = {
+			opinion_gain_monthly_factor = 0.3
+			custom_trigger_tooltip = RUS_other_people_like_you_more
+			improve_relations_maintain_cost_factor = 0.15
+		}
+
+		complete_effect = {
+			set_country_flag = RUS_tsar_intervening
+			hidden_effect = {
+				every_other_country = {
+					add_ai_strategy = {
+						type = befriend 
+						id = RUS
+						value = 20
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = RUS_tsar_intervening
+			hidden_effect = {
+				every_other_country = {
+					add_ai_strategy = {
+						type = befriend 
+						id = RUS
+						value = -20
+					}
+				}
+			}
+		}
+	
+		days_remove = 180
+		days_re_enable = 179
+		cost = 50
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 2
+				OR = {
+					has_stability < 0.4
+					has_war_support < 0.4
+				}
+			}
+		}
+	}
+}
+
 #SOVIET DECISIONS
 
 SOV_form_ssrs = {
@@ -137,7 +339,7 @@ SOV_form_ssrs = {
 					set_state_owner = 229
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
 								controls_state = 229
 							}
 						}
@@ -146,7 +348,7 @@ SOV_form_ssrs = {
 					set_state_owner = 230
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
 								controls_state = 230
 							}
 						}
@@ -155,7 +357,7 @@ SOV_form_ssrs = {
 					set_state_owner = 231
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
 								controls_state = 231
 							}
 						}
@@ -164,7 +366,7 @@ SOV_form_ssrs = {
 					set_state_owner = 826
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
 								controls_state = 826
 							}
 						}
@@ -173,7 +375,7 @@ SOV_form_ssrs = {
 					set_state_owner = 828
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
 								controls_state = 828
 							}
 						}
@@ -182,7 +384,7 @@ SOV_form_ssrs = {
 					set_state_owner = 842
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
 								controls_state = 842
 							}
 						}

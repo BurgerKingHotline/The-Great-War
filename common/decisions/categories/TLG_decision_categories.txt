@@ -80,6 +80,17 @@ russian_socialism_decisions = {
 	}
 }
 
+RUS_tsarist_intervention_decisions = {
+	priority = 1000
+	visible_when_empty = yes
+	allowed = {
+		tag = RUS
+	}
+	visible = {
+		has_completed_focus = RUS_tsarist_national_intervension
+	}
+}
+
 RUS_crusade_against_communism_decisions = {
 	visible_when_empty = yes
 	allowed = {

@@ -1209,7 +1209,7 @@ country_event = { #collapse of russian control in europe
 			if = {
 				limit = {
 					NOT = { 
-						has_completed_focus = RUS_destroy_independance_movements
+						has_completed_focus = RUS_promote_the_all_russian_nation
 					}
 				}
 				release = MOL
@@ -2125,6 +2125,605 @@ country_event = { #Russia sends an ultimatum
 		}
 		ai_chance = {
 			factor = 5
+		}
+	}
+}
+
+country_event = { #How to divide up persia?
+	id = rus_events.18
+	title = rus_events.18.t	
+	desc = rus_events.18.desc
+
+	is_triggered_only = yes
+	
+	option = {#Divide it up with only germany
+		name = rus_events.18.a
+		effect_tooltip = {
+			transfer_state = 419
+			transfer_state = 832
+			transfer_state = 266
+			transfer_state = 420
+			transfer_state = 416
+			transfer_state = 418
+			GER = {
+				transfer_state = 421
+				transfer_state = 417
+				transfer_state = 413
+				transfer_state = 411
+				transfer_state = 414
+				transfer_state = 412
+				transfer_state = 410
+			}
+		}
+		hidden_effect = {
+			GER = { country_event = { id = rus_events.19 days = 1 } }
+		}
+		set_country_flag = RUS_only_ger_owns_persia
+		custom_effect_tooltip = RUS_eng_might_interfere
+		trigger = {
+			NOT = {
+				is_in_faction_with = ENG
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {#Divide it three ways with britain included
+		name = rus_events.18.b
+		effect_tooltip = {
+			transfer_state = 419
+			transfer_state = 832
+			transfer_state = 266
+			transfer_state = 420
+			transfer_state = 416
+			transfer_state = 418
+			GER = {
+				transfer_state = 421
+				transfer_state = 417
+				transfer_state = 413
+			}
+			ENG = {
+				transfer_state = 411
+				transfer_state = 414
+				transfer_state = 412
+				transfer_state = 410
+			}
+		}
+		hidden_effect = {
+			GER = { country_event = { id = rus_events.23 days = 1 } }
+			ENG = { country_event = { id = rus_events.23 days = 1 } }
+		}
+		set_country_flag = RUS_britain_also_owns_persia
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = { #dividing with only germany - germany
+	id = rus_events.19
+	title = rus_events.19.t	
+	desc = rus_events.19.desc
+
+	is_triggered_only = yes
+	
+	option = {#great!
+		name = rus_events.18.a
+		effect_tooltip = {
+			FROM = {
+				transfer_state = 419
+				transfer_state = 832
+				transfer_state = 266
+				transfer_state = 420
+				transfer_state = 416
+				transfer_state = 418
+			}
+			GER = {
+				transfer_state = 421
+				transfer_state = 417
+				transfer_state = 413
+				transfer_state = 411
+				transfer_state = 414
+				transfer_state = 412
+				transfer_state = 410
+			}
+		}
+		random_list = {
+			50 = {
+				hidden_effect = {
+					ENG = { country_event = { id = rus_events.10002 days = 1 } }
+				}
+			}
+			50 = {
+			}
+		}
+		custom_effect_tooltip = RUS_eng_might_interfere
+		trigger = {
+			NOT = {
+				is_in_faction_with = ENG
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {#give britain some land
+		name = rus_events.18.b
+		effect_tooltip = {
+			FROM = {
+				transfer_state = 419
+				transfer_state = 832
+				transfer_state = 266
+				transfer_state = 420
+				transfer_state = 416
+				transfer_state = 418
+			}
+			GER = {
+				transfer_state = 421
+				transfer_state = 417
+				transfer_state = 413
+			}
+			ENG = {
+				transfer_state = 411
+				transfer_state = 414
+				transfer_state = 412
+				transfer_state = 410
+			}
+		}
+		custom_effect_tooltip = RUS_eng_might_interfere
+		trigger = {
+			is_in_faction_with = ENG
+		}
+		hidden_effect = {
+			RUS = {
+				country_event = { id = rus_events.20 days = 1 }
+			}
+			ENG = {
+				country_event = { id = rus_events.21 days = 1 }
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+	option = {#hmm, decline
+		name = rus_events.18.c
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = { #dividing with only germany - uk
+	id = rus_events.10002
+	title = rus_events.10002.t	
+	desc = rus_events.10002.desc
+
+	is_triggered_only = yes
+	
+	option = {#we demand some concessions
+		name = rus_events.10002.a
+		effect_tooltip = {
+			transfer_state = 411
+			transfer_state = 414
+			transfer_state = 412
+			transfer_state = 410
+		}
+		RUS = {
+			custom_effect_tooltip = needs_approval
+			hidden_effect = {
+				country_event = { id = rus_events.20 days = 1 }
+			}
+		}
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {#hmm, they can have it
+		name = rus_events.10002.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { #demanded britain gain some land
+	id = rus_events.20
+	title = rus_events.20.t	
+	desc = rus_events.20.desc
+
+	is_triggered_only = yes
+	
+	option = {#fine
+		name = rus_events.20.a
+		effect_tooltip = {
+			RUS = {
+				transfer_state = 419
+				transfer_state = 832
+				transfer_state = 266
+				transfer_state = 420
+				transfer_state = 416
+				transfer_state = 418
+			}
+			GER = {
+				transfer_state = 421
+				transfer_state = 417
+				transfer_state = 413
+			}
+			ENG = {
+				transfer_state = 411
+				transfer_state = 414
+				transfer_state = 412
+				transfer_state = 410
+			}
+		}
+		clr_country_flag = RUS_only_ger_owns_persia
+		set_country_flag = RUS_britain_also_owns_persia
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {#NO 
+		name = rus_events.20.b
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = GER
+					}
+				}
+				GER = {
+					ENG = {
+						country_event = { id = rus_events.22 days = 1 }
+					}
+				}
+			}
+			ENG = {
+				country_event = { id = rus_events.22 days = 1 }
+			}
+		}
+		
+		effect_tooltip = {
+			if = {
+				limit = {
+					FROM = {
+						tag = GER
+					}
+				}
+				GER = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = ROOT
+					}
+				}
+			}
+			ENG = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+				}
+			}
+		}
+		
+	}
+}
+
+country_event = { #notifying britain that germany demanded land on their behalf
+	id = rus_events.21
+	title = rus_events.21.t	
+	desc = rus_events.21.desc
+
+	is_triggered_only = yes
+	
+	option = {#thanks mate
+		name = rus_events.21.a
+		effect_tooltip = {
+			RUS = {
+				transfer_state = 419
+				transfer_state = 832
+				transfer_state = 266
+				transfer_state = 420
+				transfer_state = 416
+				transfer_state = 418
+			}
+			GER = {
+				transfer_state = 421
+				transfer_state = 417
+				transfer_state = 413
+			}
+			ENG = {
+				transfer_state = 411
+				transfer_state = 414
+				transfer_state = 412
+				transfer_state = 410
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #Russia doesnt give britain land
+	id = rus_events.22
+	title = rus_events.22.t	
+	desc = rus_events.22.desc
+
+	is_triggered_only = yes
+	
+	option = {#well, we need this land, this war will be over by christmas
+		name = rus_events.22.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = RUS
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {#were not gonna go to war just for persia
+		name = rus_events.22.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #Russia splits persia 3 ways
+	id = rus_events.23
+	title = rus_events.23.t	
+	desc = rus_events.23.desc
+
+	is_triggered_only = yes
+	
+	option = {#great!
+		name = rus_events.23.a
+		effect_tooltip = {
+			RUS = {
+				transfer_state = 419
+				transfer_state = 832
+				transfer_state = 266
+				transfer_state = 420
+				transfer_state = 416
+				transfer_state = 418
+			}
+			GER = {
+				transfer_state = 421
+				transfer_state = 417
+				transfer_state = 413
+			}
+			ENG = {
+				transfer_state = 411
+				transfer_state = 414
+				transfer_state = 412
+				transfer_state = 410
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = ENG
+				}
+				RUS = {
+					country_event = { id = rus_events.27 days = 1 }
+				}
+			}
+			else_if = {
+				limit = {
+					tag = GER
+				}
+				RUS = {
+					country_event = { id = rus_events.26 days = 1 }
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {#I'd rather not
+		name = rus_events.23.b
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = ENG
+				}
+				RUS = {
+					country_event = { id = rus_events.25 days = 1 }
+				}
+			}
+			else_if = {
+				limit = {
+					tag = GER
+				}
+				RUS = {
+					country_event = { id = rus_events.24 days = 1 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #germwany no accewpt
+	id = rus_events.24
+	title = rus_events.24.t	
+	desc = rus_events.24.desc
+
+	is_triggered_only = yes
+	
+	option = {#oh
+		name = rus_events.23.a
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #englwand no accewpt
+	id = rus_events.25
+	title = rus_events.25.t	
+	desc = rus_events.25.desc
+
+	is_triggered_only = yes
+	
+	option = {#so uh, germany?
+		name = rus_events.25.a
+		clr_country_flag = RUS_britain_also_owns_persia
+		set_country_flag = RUS_only_ger_owns_persia
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+country_event = { #germoney accept!!!!!!!!! Jerma
+	id = rus_events.26
+	title = rus_events.26.t	
+	desc = rus_events.26.desc
+
+	is_triggered_only = yes
+	
+	option = {#alr
+		name = rus_events.26.a
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = RUS_can_demand_persia
+	}
+}
+
+country_event = { #england accept!!!! greqaat
+
+	id = rus_events.27
+	title = rus_events.27.t	
+	desc = rus_events.27.desc
+
+	is_triggered_only = yes
+	
+	option = {#alr
+		name = rus_events.27.a
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #omg big scawwwy wussia demwans puuuuuwsia
+
+	id = rus_events.28
+	title = rus_events.28.t	
+	desc = rus_events.28.desc
+
+	is_triggered_only = yes
+	
+	option = {#ok daddy
+		name = rus_events.28.a
+
+		RUS = {
+			transfer_state = 419
+			transfer_state = 832
+			transfer_state = 266
+			transfer_state = 420
+			transfer_state = 416
+			transfer_state = 418
+		}
+		GER = {
+			transfer_state = 421
+			transfer_state = 417
+			transfer_state = 413
+		}
+		ENG = {
+			transfer_state = 411
+			transfer_state = 414
+			transfer_state = 412
+			transfer_state = 410
+		}
+
+		trigger = {
+			RUS = {
+				has_country_flag = RUS_britain_also_owns_persia
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {#ok daddy 2 electric boogaloo
+		name = rus_events.28.a
+
+		FROM = {
+			transfer_state = 419
+			transfer_state = 832
+			transfer_state = 266
+			transfer_state = 420
+			transfer_state = 416
+			transfer_state = 418
+		}
+		GER = {
+			transfer_state = 421
+			transfer_state = 417
+			transfer_state = 413
+			transfer_state = 411
+			transfer_state = 414
+			transfer_state = 412
+			transfer_state = 410
+		}
+
+		trigger = {
+			RUS = {
+				has_country_flag = RUS_only_ger_owns_persia
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {#ga mau1!!!!!!!111!!
+		name = rus_events.28.b
+		if = {
+			limit = {
+				RUS = {
+					has_country_flag = RUS_britain_also_owns_persia
+				}
+			}
+			ENG = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+				}
+			}
+		}
+		GER = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROOT
+			}
+		}
+		RUS = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 10
 		}
 	}
 }
