@@ -237,7 +237,7 @@ RUS_tsarist_intervention_decisions = {
 	
 		modifier = {
 			opinion_gain_monthly_factor = 0.3
-			custom_trigger_tooltip = RUS_other_people_like_you_more
+			custom_modifier_tooltip = RUS_other_people_like_you_more
 			improve_relations_maintain_cost_factor = 0.15
 		}
 

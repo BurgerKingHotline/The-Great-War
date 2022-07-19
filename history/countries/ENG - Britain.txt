@@ -201,18 +201,6 @@ if = {
 	}
 }
 
-diplomatic_relation = {
-    country = QAT
-    relation = military_access
-    active = yes
-}
-
-diplomatic_relation = {
-    country = QAT
-    relation = guarantee
-    active = yes
-}
-
 if = {
 	limit = { has_dlc = "Together for Victory" }
 

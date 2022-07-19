@@ -486,24 +486,47 @@
 		cost = 70
 		 
 		available = {
-			all_state = {
-				limit = {
+			hidden_trigger = {
+				all_state = {
 					OR = {
-						is_core_of = POL
-						is_core_of = UKR
-						is_core_of = BLR
-						is_core_of = RUS
-						is_core_of = MON
-						state = 761
-						state = 714
-						state = 717
-						state = 328
-						state = 715
-						state = 618
-						state = 617
-						state = 760
+						AND = {
+							OR = {
+								is_core_of = POL
+								is_core_of = UKR
+								is_core_of = BLR
+								is_core_of = RUS
+								is_core_of = MON
+								state = 761
+								state = 714
+								state = 717
+								state = 328
+								state = 715
+								state = 618
+								state = 617
+								state = 760
+							}
+							is_controlled_by = ROOT
+						}
+						NOT = {
+							is_core_of = POL
+							is_core_of = UKR
+							is_core_of = BLR
+							is_core_of = RUS
+							is_core_of = MON
+							state = 761
+							state = 714
+							state = 717
+							state = 328
+							state = 715
+							state = 618
+							state = 617
+							state = 760
+						}
 					}
 				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = RUS_owns_states_claimed
 			}
 		}
 
@@ -526,7 +549,6 @@
 						state = 617
 						state = 760
 					}
-					is_controlled_by = ROOT
 				}
 				add_core_of = ROOT
 			}
@@ -598,18 +620,33 @@
 		cost = 70
 		
 		available = {
-			all_state = {
-				limit = {
+			hidden_effect = {
+				all_state = {
 					OR = {
-						is_core_of = BUL
-						is_core_of = ROM
-						is_core_of = SER
-						is_core_of = MNT
-						is_core_of = BOS
-						is_core_of = SLV
+						AND = {
+							OR = {
+								is_core_of = BUL
+								is_core_of = ROM
+								is_core_of = SER
+								is_core_of = MNT
+								is_core_of = BOS
+								is_core_of = SLV
+							}
+							is_controlled_by = ROOT
+						}
+						NOT = {
+							is_core_of = BUL
+							is_core_of = ROM
+							is_core_of = SER
+							is_core_of = MNT
+							is_core_of = BOS
+							is_core_of = SLV
+						}
 					}
 				}
-				is_controlled_by = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = RUS_owns_states_claimed
 			}
 		}
 

@@ -100,6 +100,20 @@ diplomatic_relation = {
     active = yes
 }
 
+ENG = {
+	diplomatic_relation = {
+		country = QAT
+		relation = military_access
+		active = yes
+	}
+
+	diplomatic_relation = {
+		country = QAT
+		relation = guarantee
+		active = yes
+	}
+}
+
 if = {
 	limit = {
 		OR = {

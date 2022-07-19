@@ -1,28 +1,38 @@
 on_actions = {
+
+    on_startup = {
+        effect = {
+            ENG = {
+                give_resource_rights = { receiver = EGY state = 551 }
+                give_resource_rights = { receiver = EGY state = 549 }
+            }
+        }
+    }
+
     on_state_control_changed = { # Balkan League Victory - Balkan War I
         effect = {
             if = {
                 limit = {
                     OTT = {
                         NOT = {
-                                has_country_flag = balkan_war_i_end
-                                controls_state = 341
-                                controls_state = 184
-                                controls_state = 874
-                                controls_state = 876
-                                controls_state = 802
-                                controls_state = 872
-                                controls_state = 106
-                                controls_state = 185
-                                controls_state = 731
-                                controls_state = 871
-                                controls_state = 878
-                                controls_state = 879
-                                controls_state = 839
-                                controls_state = 880
-                                controls_state = 881
-                                controls_state = 855
-                                controls_state = 883
+                            has_country_flag = balkan_war_i_end
+                            controls_state = 341
+                            controls_state = 184
+                            controls_state = 874
+                            controls_state = 876
+                            controls_state = 802
+                            controls_state = 872
+                            controls_state = 106
+                            controls_state = 185
+                            controls_state = 731
+                            controls_state = 871
+                            controls_state = 878
+                            controls_state = 879
+                            controls_state = 839
+                            controls_state = 880
+                            controls_state = 881
+                            controls_state = 855
+                            controls_state = 883
                         }
                         has_war_with = BUL
                         has_war_with = SER
@@ -152,6 +162,8 @@ on_actions = {
                             controls_state = 855
                             controls_state = 878
                             controls_state = 871
+                            has_war_with = SER
+                            has_war_with = GRE
                         }
                     }
                 }
