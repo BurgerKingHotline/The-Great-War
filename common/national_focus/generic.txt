@@ -1751,4 +1751,407 @@
 		}
 	}
 
+	focus = {
+		id = GEN_political_sphere
+		icon = GFX_focus_generic_support_the_left_right
+		x = -25
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = GEN_individual_liberties
+		icon = GFX_focus_generic_military_academy
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		mutually_exclusive = { focus = GEN_despotism }
+		prerequisite = { focus = GEN_political_sphere }
+		relative_position_id = GEN_political_sphere
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = liberty_ethos_focus
+		}
+	}
+
+	focus = {
+		id = GEN_democracy
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		mutually_exclusive = { focus = GEN_socialism }
+		prerequisite = { focus = GEN_individual_liberties }
+		relative_position_id = GEN_individual_liberties
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_socialism
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_individual_liberties }
+		mutually_exclusive = { focus = GEN_democracy }
+		relative_position_id = GEN_individual_liberties
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+		}
+	}
+
+	focus = {
+		id = GEN_reform_country
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_democracy focus = GEN_socialism }
+		relative_position_id = GEN_democracy
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_sufferage
+		icon = GFX_focus_generic_the_giant_wakes
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_reform_country }
+		prerequisite = { focus = GEN_democracy }
+		relative_position_id = GEN_reform_country
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_deterrence
+		icon = GFX_goal_generic_neutrality_focus
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_sufferage }
+		mutually_exclusive = { focus = GEN_freedom_fight }
+		relative_position_id = GEN_sufferage
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_open_economy
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_deterrence }
+		relative_position_id = GEN_deterrence
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_forts
+		icon = GFX_goal_fortify_the_westwall
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_open_economy }
+		relative_position_id = GEN_open_economy
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_freedom_fight
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_sufferage }
+		mutually_exclusive = { focus = GEN_deterrence }
+		relative_position_id = GEN_sufferage
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_why_we_fight
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_freedom_fight focus = GEN_political_propoganda }
+		relative_position_id = GEN_freedom_fight
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = why_we_fight_focus
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					set_rule = { can_create_factions = yes }
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = GEN_ideological_fanaticism
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_why_we_fight }
+		relative_position_id = GEN_why_we_fight
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+			set_rule = {
+				can_create_factions = yes
+			}
+			hidden_effect = {
+				set_rule = { can_use_kamikaze_pilots = yes }
+			}
+			custom_effect_tooltip = kamikaze_focus_tooltip
+		}
+	}
+
+	focus = {
+		id = GEN_workers_economy
+		icon = GFX_goal_generic_soviet_construction
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_reform_country }
+		prerequisite = { focus = GEN_socialism }
+		relative_position_id = GEN_reform_country
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_political_propoganda
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_workers_economy focus = GEN_militarism }
+		relative_position_id = GEN_workers_economy
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_despotism
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_political_sphere }
+		mutually_exclusive = { focus = GEN_individual_liberties }
+		relative_position_id = GEN_political_sphere
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = { idea = collectivist_ethos_focus days = 1095 }
+		}
+	}
+
+	focus = {
+		id = GEN_nationalism
+		icon = GFX_goal_support_fascism
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_despotism }
+		mutually_exclusive = { focus = GEN_authoritarianism }
+		relative_position_id = GEN_despotism
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}	
+		}
+	}
+
+	focus = {
+		id = GEN_authoritarianism
+		icon = GFX_focus_generic_military_dictatorship
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_despotism }
+		mutually_exclusive = { focus = GEN_nationalism }
+		relative_position_id = GEN_despotism
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_chauvinism
+		icon = GFX_focus_generic_japanese_imperial_glory
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_nationalism focus = GEN_authoritarianism }
+		relative_position_id = GEN_nationalism
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_militarism
+		icon = GFX_focus_generic_military_mission
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_chauvinism }
+		prerequisite = { focus = GEN_nationalism }
+		relative_position_id = GEN_chauvinism
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}			
+			add_ideas = militarism_focus
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+	focus = {
+		id = GEN_traditional_society
+		icon = GFX_focus_usa_voter_registration_act
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_chauvinism }
+		prerequisite = { focus = GEN_authoritarianism }
+		relative_position_id = GEN_chauvinism
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_statism
+		icon = GFX_goal_demand_sudetenland
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_traditional_society }
+		relative_position_id = GEN_traditional_society
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_closed_economy
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_statism }
+		relative_position_id = GEN_statism
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GEN_reserve_military
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = GEN_closed_economy }
+		relative_position_id = GEN_closed_economy
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
 }

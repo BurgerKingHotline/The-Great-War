@@ -127,8 +127,7 @@ MEX_revolution_escalation = {
 					}
 				}
 			}
-		}
-		
+		}		
 	}
 
 	full_civil_war = {
@@ -136,6 +135,14 @@ MEX_revolution_escalation = {
 		fire_only_once = yes
 		activation = {
 			has_country_flag = full_civil_war
+		}
+		available = {
+			NOT = {
+				has_global_flag = MEX_revolution
+			}
+		}
+		timeout_effect = {
+			check_sides_civil_war = yes	
 		}
 	}
 }

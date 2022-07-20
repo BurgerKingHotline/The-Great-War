@@ -23,3 +23,56 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = mexican_revolution.2
+    title = mexican_revolution.2.t 
+    desc = mexican_revolution.2.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = mexican_revolution.2.a # zapata side
+		trigger = {
+			OR = {
+				check_variable = { mx = 0 }
+				check_variable = { mx2 = 0 }
+			}
+		}
+		starting_civil_war_other_side_zapata = yes
+		hidden_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.75
+			}
+		}
+	}
+	option = {
+		name = mexican_revolution.2.a # villa side
+		trigger = {
+			OR = {
+				check_variable = { mx = 1 }
+				check_variable = { mx2 = 1 }
+			}
+		}
+	}
+	option = {
+		name = mexican_revolution.2.a # diaz side
+		trigger = {
+			OR = {
+				check_variable = { mx = 2 }
+				check_variable = { mx2 = 2 }
+			}
+		}
+	}
+	option = {
+		name = mexican_revolution.2.a # carranza side
+		trigger = {
+			OR = {
+				check_variable = { mx = 3 }
+				check_variable = { mx2 = 3W }
+			}
+		}
+	}
+}

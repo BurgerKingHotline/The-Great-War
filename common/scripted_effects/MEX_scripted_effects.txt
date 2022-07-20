@@ -19,6 +19,114 @@
 
 #Senussiya resistence mechanic scripted effects, theres probably a better way to do this though
 
+check_sides_civil_war = {
+			add_to_temp_array = { temparr = zapata_state_support } # Simpler to do operations with an array later on.
+			add_to_temp_array = { temparr = villa_state_support }
+			add_to_temp_array = { temparr = carranza_state_support }
+			add_to_temp_array = { temparr = diaz_state_support }
+
+			if = {                              # Checking which of A and B is larger. Assigning a variable to represent it.
+    			limit = {
+        			check_variable = { A > B }
+    			}
+    			set_temp_variable = { t1 = 0 }
+			}
+			else_if = {
+    			limit = {
+        			check_variable = { A < B }
+    			}
+    			set_temp_variable = { t1 = 1 }
+			}
+			else = {
+    			random_list = {
+        			50 = {
+            			set_temp_variable = { t1 = 0 }
+        			}                                       # Just assume a random one is larger otherwise.    
+        			50 = {
+            			set_temp_variable = { t1 = 1 }
+        			}
+    			}
+			}
+			if = {                              # Doing the same with C and D.
+    			limit = {
+        			check_variable = { C > D }
+    			}
+    			set_temp_variable = { t2 = 2 }
+			}
+			else_if = {
+    			limit = {
+        			check_variable = { C < D }
+    			}
+    			set_temp_variable = { t2 = 3 }
+			}
+			else = {
+    			random_list = {
+        			50 = {
+            			set_temp_variable = { t2 = 2 }
+        			}
+        			50 = {
+            			set_temp_variable = { t2 = 3 }
+        			}
+    			}
+			}
+			if = {
+    			limit = {
+        			check_variable = { temparr^t1 > temparr^t2 }        # Exactly why an array is used.
+    			}
+   			 set_temp_variable = { mx = t1 }     # The larger of t1 and t2 is surely the maximum value. Let's store it as mx.
+    			set_temp_variable = { t1 = t2 }     # The other one is surely either #2 or #3. Let it be t1 for later.
+			}
+			else_if = {
+    			limit = {
+        			check_variable = { temparr^t1 < temparr^t2 }
+    			}
+    			set_temp_variable = { mx = t2 }
+			}
+			else = {
+    			random_list = {
+        			50 = {
+            			set_temp_variable = { mx = t1 }
+            			set_temp_variable = { t1 = t2 }
+        			}
+        			50 = {
+            			set_temp_variable = { mx = t2 }
+        			}
+    			}
+			}
+			if = {                               # This may be a bit confusing, obtaining the other one that can be #2 (or frankly #3 or #4).
+    			limit = {                        # So far, we have compared A and B, then C and D, then found the larger one.
+        			check_variable = { mx > 1 }  # Let's say A < B < C < D.
+    			}                                # We have found t1 = B, mx = D.
+    			set_temp_variable = { t2 = 5 }   # In this case, it is already known that A is lesser than B and, since D is larger than B, lesser than D too.
+			}                                    # So A can be disqualified as a #2 candidate. 
+			else = {                             # So we need to get the C.
+    			set_temp_variable = { t2 = 1 }   # In each case, that's the first number we compare the maximum to.
+			}                                    # If maximum has ID of 0 or 1, then the sum of IDs is 0. Otherwise, their sum is 5. Subtracting the ID from the sum can find the other #2 candidate.
+			subtract_from_temp_variable = { t2 = mx }   # So, overall, if mx = A, t2 = B. if mx = B, t2 = A. if mx = C, t2 = D. if mx = D, t2 = C.
+			if = {
+    			limit = {
+        			check_variable = { temparr^t1 > temparr^t2 }
+    			}
+    			set_temp_variable = { mx2 = t1 }
+			}
+			else_if = {
+    			limit = {
+        			check_variable = { temparr^t1 < temparr^t2 }
+    			}
+    			set_temp_variable = { mx2 = t2 }
+			}
+			else = {
+    			random_list = {
+        			50 = {
+            			set_temp_variable = { mx2 = t1 }
+        			}
+        			50 = {
+            			set_temp_variable = { mx2 = t2 }
+        			}
+   				}
+			}
+}
+
 carranza_state_superiority = {
 	if = {
 		limit = {
@@ -59,5 +167,53 @@ carranza_state_superiority = {
 	add_to_variable = {
 		var = MEX.carranza_owned_states
 		value = 1
+	}
+}
+
+starting_civil_war_other_side_zapata = {
+	if = {
+    	limit = {
+        	check_variable = { mx = 0 }
+    	}
+		set_temp_variable = { the_other_fuckers = mx2 }
+	}
+	else = {
+    	set_temp_variable = { the_other_fuckers = mx }
+	}
+	if = {
+		limit = {
+			check_variable = { the_other_fuckers = 1 }
+		}
+		start_civil_war = {
+			ruling_party = communism
+			ideology = democratic
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { the_other_fuckers = 2 }
+		}
+		start_civil_war = {
+			ruling_party = communism
+			ideology = neutrality
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { the_other_fuckers = 3 }
+		}
+		start_civil_war = {
+			ruling_party = communism
+			ideology = neutrality
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
 	}
 }
