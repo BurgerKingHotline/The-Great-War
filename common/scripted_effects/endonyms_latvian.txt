@@ -1,0 +1,132 @@
+apply_latvian_endonyms = {
+
+	if = {
+		limit = {
+			state = 12
+			NOT = { has_state_flag = state_name_latvian }
+		}
+		set_state_name = "Vidzeme"
+		
+		set_state_flag = state_name_latvian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_lithuanian
+		clr_state_flag = state_name_estonian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_belarusian
+		
+		set_province_name = { id = 9340 name = "Riga" }
+		set_province_name = { id = 310 name = "Daugavpils" }
+	}
+	
+	if = {
+		limit = {
+			state = 190
+			NOT = { has_state_flag = state_name_latvian }
+		}
+		set_state_name = "Kurzeme"
+		
+		set_state_flag = state_name_latvian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_lithuanian
+		clr_state_flag = state_name_estonian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_belarusian
+		
+		set_province_name = { id = 9262 name = "Liepāja" }
+	}
+	
+	if = {
+		##### LITHUANIA #####
+		limit = {
+			state = 189
+			NOT = { has_state_flag = state_name_latvian }
+		}
+		set_state_name = "Šauļi"
+		
+		set_state_flag = state_name_latvian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_lithuanian
+		clr_state_flag = state_name_estonian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_belarusian
+		
+		set_province_name = { id = 9483 name = "Šauļi" }
+		set_province_name = { id = 6314 name = "Palonga" }
+	}
+	
+	if = {
+		limit = {
+			state = 11
+			NOT = { has_state_flag = state_name_latvian }
+		}
+		set_state_name = "Kauna"
+		
+		set_state_flag = state_name_latvian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_lithuanian
+		clr_state_flag = state_name_estonian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_belarusian
+		
+		set_province_name = { id = 6296 name = "Kauņa" }
+	}
+	
+	if = {
+		limit = {
+			state = 784
+			NOT = { has_state_flag = state_name_latvian }
+		}
+		set_state_name = "Vilna"
+		
+		set_state_flag = state_name_latvian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_lithuanian
+		clr_state_flag = state_name_estonian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_belarusian
+		
+		set_province_name = { id = 3320 name = "Viļņa" }
+	}
+	
+	if = {
+		limit = {
+			state = 188
+			NOT = { has_state_flag = state_name_latvian }
+		}
+		set_state_name = "Klaipēda"
+		
+		set_state_flag = state_name_latvian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_lithuanian
+		clr_state_flag = state_name_estonian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_belarusian
+		
+		set_province_name = { id = 3288 name = "Klaipēda" }
+	}
+	
+	if = {
+		##### GERMANY #####
+		limit = {
+			state = 763
+			NOT = { has_state_flag = state_name_latvian }
+		}
+		set_state_name = "Karalauči"
+		
+		set_state_flag = state_name_latvian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_lithuanian
+		clr_state_flag = state_name_estonian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_belarusian
+		
+		set_province_name = { id = 6332 name = "Karaļauči" }
+	}
+}

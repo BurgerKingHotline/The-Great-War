@@ -1,0 +1,192 @@
+apply_bulgarian_endonyms = {
+	
+	if = {
+		##### BULGARIA #####
+		limit = {
+			state = 211
+			NOT = { has_state_flag = state_name_bulgarian }
+		}
+		set_state_name = "Burgas"
+		
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		set_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 9888 name = "Yambol" }
+		set_province_name = { id = 6967 name = "Sliven" }
+		set_province_name = { id = 9769 name = "Shumen" }
+		set_province_name = { id = 9902 name = "Burgas" }
+		set_province_name = { id = 9783 name = "Varna" }
+	}
+	
+	if = {
+		limit = {
+			state = 212
+			NOT = { has_state_flag = state_name_bulgarian }
+		}
+		set_state_name = "Plovdiv"
+		
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		set_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 9862 name = "Haskovo" }
+		set_province_name = { id = 6923 name = "Plovdiv" }
+		set_province_name = { id = 6814 name = "Stara Zagora" }
+	}
+	
+	if = {
+		limit = {
+			state = 801
+			NOT = { has_state_flag = state_name_bulgarian }
+		}
+		set_state_name = "Moesia"
+		
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		set_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 3796 name = "Pleven" }
+		set_province_name = { id = 9612 name = "Ruse" }
+	}
+	
+	if = {
+		limit = {
+			state = 48
+			NOT = { has_state_flag = state_name_bulgarian }
+		}
+		set_state_name = "Sofia"
+		
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		set_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 949 name = "Sofia" }
+		set_province_name = { id = 9771 name = "Vidin" }
+	}
+	
+	
+	if = {
+		##### ROMANIA #####
+		limit = {
+			state = 77
+			NOT = { has_state_flag = state_name_bulgarian }
+			BUL = { has_government = communism }
+		}
+		set_state_name = "Dobrudja"
+		
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_belarusian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		set_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 11597 name = "Tolbukhin" }
+	}
+	
+	if = {
+		limit = {
+			state = 77
+			NOT = { has_state_flag = state_name_bulgarian }
+			NOT = { BUL = { has_government = communism } }
+		}
+		set_state_name = "Dobrudja"
+		
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_belarusian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		set_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 11597 name = "Dobrich" }
+	}
+	
+	if = {
+		limit = {
+			##### GREECE #####
+			state = 184
+			NOT = { has_state_flag = state_name_bulgarian }
+		}
+		set_state_name = "Trakiya"
+		
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		set_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 11905 name = "Dedeagach" }
+	}
+	
+	if = {
+		##### TURKEY #####
+		limit = {
+			state = 341
+			NOT = { has_state_flag = state_name_bulgarian }
+		}
+		set_state_name = "Odrin"
+		
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		set_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 11842 name = "Odrin" }
+	}
+	
+	if = {
+		limit = {
+			state = 797
+			NOT = { has_state_flag = state_name_bulgarian }
+		}
+		set_state_name = "Tsarigrad"
+		
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		set_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 9833 name = "Tsarigrad" }
+	}
+}

@@ -1,0 +1,217 @@
+apply_italian_endonyms = {
+
+	if = {
+		limit = {
+			state = 160
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Venezia"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		
+		set_province_name = { id = 11584 name = "Venezia" }
+	}
+	
+	if = {
+		limit = {
+			state = 736
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Istria"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		
+		set_province_name = { id = 6626 name = "Trieste" }
+	}
+	
+	if = {
+		limit = {
+			state = 39
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Alto Adige"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		
+		set_province_name = { id = 11598 name = "Bolzano" }
+	}
+	
+	if = {
+		limit = {
+			state = 159
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Lombardia"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		
+		set_province_name = { id = 3780 name = "Milan" }
+	}
+	
+	if = {
+		limit = {
+			state = 2
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Lazio"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		
+		set_province_name = { id = 9904 name = "Roma" }
+		set_province_name = { id = 11846 name = "Anzio" }
+	}
+	
+	if = {
+		limit = {
+			state = 162
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Toscana"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		
+		set_province_name = { id = 9907 name = "Firenze" }
+		set_province_name = { id = 11833 name = "Livorno" }
+		set_province_name = { id = 6973 name = "La Spezia" }
+	}
+	
+	if = {
+		limit = {
+			state = 117
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Campania"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		
+		set_province_name = { id = 819 name = "Napoli" }
+	}
+	
+	if = {
+		##### YUGOSLAVIA #####
+		limit = {
+			state = 103
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Dalmazia"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		
+		set_province_name = { id = 11564 name = "Fiume" }
+		set_province_name = { id = 3924 name = "Spalato" }
+	}
+	
+	if = {
+		limit = {
+			state = 102
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Slovenia"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		
+		set_province_name = { id = 9627 name = "Lubiana" }
+	}
+	
+	if = {
+		##### FRANCE #####
+		limit = {
+			state = 735
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Savoia"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_french
+		
+		set_province_name = { id = 9909 name = "Nizza" }
+		set_province_name = { id = 778 name = "Annezia" }
+	}
+	
+	if = {
+		limit = {
+			state = 32
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Alpi"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_french
+		
+		set_province_name = { id = 3768 name = "Granopoli" }
+	}
+	
+	if = {
+		limit = {
+			state = 21
+			NOT = { has_state_flag = state_name_italian }
+		}
+		set_state_name = "Provenza"
+		
+		set_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_french
+		
+		set_province_name = { id = 911 name = "Tolone" }
+		set_province_name = { id = 11834 name = "Marsiglia" }
+	}
+}

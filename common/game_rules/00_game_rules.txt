@@ -2058,4 +2058,20 @@ obsolete_focus_branches_visibility = {
 	}
 }
 
+endonyms = {
+	name = "ENDONYMS"
+	group = "RULE_GROUP_GENERAL_UI"
+	default = {
+		name = HIDE
+		text = "RULE_OPTION_HIDE"
+		desc = "RULE_OPTION_HIDE_DESC"
+	}
+	option = {
+		name = SHOW
+		text = "RULE_OPTION_SHOW"
+		desc = "RULE_OPTION_SHOW_DESC"
+		allow_achievements = yes
+	}
+}
+
 #We could add stuff for political advisor visibility filters here too, in the future

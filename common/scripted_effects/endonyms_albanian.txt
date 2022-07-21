@@ -1,0 +1,132 @@
+apply_albanian_endonyms = {
+
+	if = {
+		limit = {
+			state = 44
+			NOT = { has_state_flag = state_name_albanian }
+		}
+		set_state_name = "Shqipëria"
+		
+		set_state_flag = state_name_albanian
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 9914 name = "Tiranë" }
+		set_province_name = { id = 11767 name = "Vlorë" }
+	}
+	
+	if = {
+		limit = {
+			state = 805
+			NOT = { has_state_flag = state_name_albanian }
+		}
+		set_state_name = "Epiri i Veriut"
+		
+		set_state_flag = state_name_albanian
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+
+	}
+	
+	if = {
+		limit = {
+			state = 802
+			NOT = { has_state_flag = state_name_albanian }
+		}
+		set_state_name = "Kosovë"
+		
+		set_state_flag = state_name_albanian
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 6940 name = "Prishtinë" }
+	}
+	
+	if = {
+		limit = {
+			state = 875
+			NOT = { has_state_flag = state_name_albanian }
+		}
+		set_state_name = "Plavë"
+		
+		set_state_flag = state_name_albanian
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+	}
+	
+	if = {
+		limit = {
+			state = 872
+			NOT = { has_state_flag = state_name_albanian }
+		}
+		set_state_name = "Shkup"
+		
+		set_state_flag = state_name_albanian
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 3882 name = "Shkup" }
+	}
+	
+	if = {
+		limit = {
+			state = 877
+			NOT = { has_state_flag = state_name_albanian }
+		}
+		set_state_name = "Mitrovicë"
+		
+		set_state_flag = state_name_albanian
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+	}
+	
+	if = {
+		limit = {
+			state = 874
+			NOT = { has_state_flag = state_name_albanian }
+		}
+		set_state_name = "Sanxhaku"
+		
+		set_state_flag = state_name_albanian
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+	}
+}

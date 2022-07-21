@@ -1,0 +1,173 @@
+apply_french_endonyms = {
+
+	if = {
+		##### FRANCE #####
+		limit = {
+			state = 28
+			NOT = { has_state_flag = state_name_french }
+		}
+		set_state_name = "Alsace-Lorraine"
+		
+		set_state_flag = state_name_french
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 9503 name = "Strasbourg" }
+		set_province_name = { id = 678 name = "Mulhouse" }
+		set_province_name = { id = 9559 name = "Metz" }
+	}
+	
+	if = {
+		limit = {
+			state = 17
+			NOT = { has_state_flag = state_name_french }
+		}
+		set_state_name = "Franche-Comte"
+		
+		set_state_flag = state_name_french
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 11516 name = "Nancy" }
+		set_province_name = { id = 9642 name = "Besancon" }
+	}
+	
+	if = {
+		limit = {
+			state = 27
+			NOT = { has_state_flag = state_name_french }
+		}
+		set_state_name = "Bourgogne"
+		
+		set_state_flag = state_name_french
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 3652 name = "Dijon" }
+	}
+	
+	if = {
+		limit = {
+			state = 32
+			NOT = { has_state_flag = state_name_french }
+		}
+		set_state_name = "Alpes"
+		
+		set_state_flag = state_name_french
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 3768 name = "Grenoble" }
+	}
+	
+	if = {
+		limit = {
+			state = 21
+			NOT = { has_state_flag = state_name_french }
+		}
+		set_state_name = "Provence"
+		
+		set_state_flag = state_name_french
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 11834 name = "Marseille" }
+		set_province_name = { id = 911 name = "Toulon" }
+	}
+	
+	if = {
+		limit = {
+			state = 735
+			NOT = { has_state_flag = state_name_french }
+		}
+		set_state_name = "Savoy"
+		
+		set_state_flag = state_name_french
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 9909 name = "Nice" }
+		set_province_name = { id = 778 name = "Annecy" }
+	}
+	
+	if = {
+		limit = {
+			state = 20
+			NOT = { has_state_flag = state_name_french }
+		}
+		set_state_name = "Rhone"
+		
+		set_state_flag = state_name_french
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 6613 name = "Lyon" }
+	}
+	
+	if = {
+		##### GERMANY #####
+		limit = {
+			state = 42
+			NOT = { has_state_flag = state_name_french }
+		}
+		set_state_name = "Moselle"
+		
+		set_state_flag = state_name_french
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 11531 name = "Sarrebruck" }
+		set_province_name = { id = 11435 name = "Bitbourg" }
+	}
+	
+	if = {
+		limit = {
+			state = 51
+			NOT = { has_state_flag = state_name_french }
+		}
+		set_state_name = "Rhénanie"
+		
+		set_state_flag = state_name_french
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 587 name = "Cologne" }
+		set_province_name = { id = 6469 name = "Essen" }
+	}
+	
+	if = {
+		limit = {
+			state = 50
+			NOT = { has_state_flag = state_name_french }
+		}
+		set_state_name = "Wurtembergeois"
+		
+		set_state_flag = state_name_french
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 9517 name = "Stougard" }
+		set_province_name = { id = 11499 name = "Ulm" }
+	}
+
+}

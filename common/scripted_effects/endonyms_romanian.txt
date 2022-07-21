@@ -1,0 +1,187 @@
+apply_romanian_endonyms = {
+
+	if = {
+		##### ROMANIA #####
+		limit = {
+			state = 82
+			NOT = { has_state_flag = state_name_romanian }
+		}
+		set_state_name = "Banat"
+		
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		set_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 9606 name = "Timisoara" }
+	}
+	
+	if = {
+		limit = {
+			state = 84
+			NOT = { has_state_flag = state_name_romanian }
+		}
+		set_state_name = "Ardeal"
+		
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		set_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 690 name = "Brasov" }
+	}
+	
+	if = {
+		limit = {
+			state = 76
+			NOT = { has_state_flag = state_name_romanian }
+		}
+		set_state_name = "Transilvania de Nord"
+		
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		set_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 6711 name = "Cluj" }
+	}
+	
+	if = {
+		limit = {
+			state = 83
+			NOT = { has_state_flag = state_name_romanian }
+		}
+		set_state_name = "Crisana"
+		
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		set_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 6682 name = "Arad" }
+	}
+	
+	if = {
+		limit = {
+			state = 77
+			NOT = { has_state_flag = state_name_romanian }
+		}
+		set_state_name = "Dobrogea"
+		
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_bulgarian
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		set_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 11597 name = "Dobrogea" }
+	}
+	
+	if = {
+		limit = {
+			state = 766
+			NOT = { has_state_flag = state_name_romanian }
+		}
+		set_state_name = "Bugeac"
+		
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_bulgarian
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		set_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 6727 name = "Cetatea Albă" }
+	}
+	
+	if = {
+		limit = {
+			state = 78
+			NOT = { has_state_flag = state_name_romanian }
+		}
+		set_state_name = "Bessarabia"
+		
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_bulgarian
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		set_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 3707 name = "Chisinău" }
+	}
+	
+	if = {
+		##### BULGARIA #####
+		limit = {
+			state = 48
+			NOT = { has_state_flag = state_name_romanian }
+		}
+		set_state_name = "Sofia"
+		
+		set_state_flag = state_name_romanian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 949 name = "Sofia" }
+		set_province_name = { id = 9771 name = "Diiu" }
+	}
+	
+	if = {
+		limit = {
+			state = 801
+			NOT = { has_state_flag = state_name_romanian }
+		}
+		set_state_name = "Moesia"
+		
+		set_state_flag = state_name_romanian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 3796 name = "Plevna" }
+		set_province_name = { id = 9612 name = "Rusciuc" }
+	}
+}

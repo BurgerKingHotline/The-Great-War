@@ -1,0 +1,64 @@
+apply_greek_endonyms = {
+
+	if = {
+		limit = {
+			state = 184
+			NOT = { has_state_flag = state_name_greek }
+		}
+		set_state_name = "Thrake"
+		
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		set_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 11905 name = "Alexandroupoli" }
+	}
+
+
+	if = {
+		limit = {
+			##### TURKEY #####
+			state = 797
+			NOT = { has_state_flag = state_name_greek }
+		}
+		set_state_name = "Konstantinoupoli"
+		
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		set_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 9833 name = "Konstantinoupoli" }
+	}
+	
+	if = {
+		limit = {
+			state = 341
+			NOT = { has_state_flag = state_name_greek }
+		}
+		set_state_name = "Adrianoupoli"
+		
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		set_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 11842 name = "Adrianoupoli" }
+	}
+}

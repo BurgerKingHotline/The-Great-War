@@ -36,7 +36,7 @@ bookmarks = {
 		}
 		GER = {
 			history = GER_BLITZKRIEG_DESC
-			ideology = fascism
+			ideology = neutrality
 			ideas = {
 			}
 			focuses = {
@@ -45,7 +45,7 @@ bookmarks = {
 		}
 		ITA = {
 			history = ITA_BLITZKRIEG_DESC
-			ideology = fascism
+			ideology = neutrality
 			ideas={
 			}
 			focuses = {
@@ -54,16 +54,16 @@ bookmarks = {
 		}
 		JAP = {
 			history = JAP_BLITZKRIEG_DESC
-			ideology = fascism
+			ideology = democratic
 			ideas={
 			}	
 			focuses = {
 				
 			}		
 		}
-		SOV = {
+		RUS = {
 			history = SOV_BLITZKRIEG_DESC
-			ideology = communism
+			ideology = neutrality
 			ideas = {
 			}
 			focuses = {

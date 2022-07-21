@@ -1,0 +1,202 @@
+apply_yugoslav_endonyms = {
+
+	if = {
+		limit = {
+			state = 107
+			NOT = { has_state_flag = state_name_yugoslav }
+		}
+		set_state_name = "Sumadija"
+		
+		clr_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		set_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		
+		set_province_name = { id = 11586 name = "Beograd" }
+	}
+	
+	if = {
+		limit = {
+			state = 45
+			NOT = { has_state_flag = state_name_yugoslav }
+		}
+		set_state_name = "Vojvodina"
+		
+		clr_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		set_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		
+		set_province_name = { id = 619 name = "Novi Sad" }
+	}
+	
+	if = {
+		limit = {
+			state = 764
+			NOT = { has_state_flag = state_name_yugoslav }
+		}
+		set_state_name = "Srpski Banat"
+		
+		clr_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		set_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+	}
+	
+	if = {
+		limit = {
+			state = 109
+			NOT = { has_state_flag = state_name_yugoslav }
+		}
+		set_state_name = "Hrvatska"
+		
+		clr_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		set_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		
+		set_province_name = { id = 11581 name = "Zagreb" }
+	}
+	
+	if = {
+		limit = {
+			state = 106
+			NOT = { has_state_flag = state_name_yugoslav }
+		}
+		set_state_name = "Vardarska Banovina"
+		
+		clr_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		set_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		
+		set_province_name = { id = 3882 name = "Skopje" }
+	}
+	
+	if = {
+		limit = {
+			state = 803
+			NOT = { has_state_flag = state_name_yugoslav }
+		}
+		set_state_name = "Pirot"
+		
+		clr_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		set_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 11857 name = "Leskovac" }
+	}
+	
+	if = {
+		limit = {
+			state = 103
+			NOT = { has_state_flag = state_name_yugoslav }
+		}
+		set_state_name = "Dalmacija"
+		
+		clr_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		set_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		
+		set_province_name = { id = 11564 name = "Rijeka" }
+		set_province_name = { id = 3924 name = "Split" }
+	}
+	
+	if = {
+		limit = {
+			state = 102
+			NOT = { has_state_flag = state_name_yugoslav }
+		}
+		set_state_name = "Slovenija"
+		
+		clr_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		set_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		
+		set_province_name = { id = 9627 name = "Ljubljana" }
+	}
+	
+	if = {
+		limit = {
+			state = 802
+			NOT = { has_state_flag = state_name_yugoslav }
+		}
+		set_state_name = "Kosovo"
+		
+		clr_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		set_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_albanian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		
+		set_province_name = { id = 6940 name = "Priština" }
+	}
+	
+	if = {
+		limit = {
+			state = 82
+			NOT = { has_state_flag = state_name_yugoslav }
+		}
+		set_state_name = "Banat"
+		
+		clr_state_flag = state_name_italian
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_hungarian
+		clr_state_flag = state_name_czech
+		set_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_turkish
+		
+		set_province_name = { id = 9606 name = "Temišvar" }
+	}
+}

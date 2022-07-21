@@ -1,0 +1,340 @@
+apply_hungarian_endonyms = {
+
+	if = {
+		##### HUNGARY #####
+		limit = {
+			state = 155
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Dunántúl"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		
+		set_province_name = { id = 11610 name = "Pecs" }
+	}
+	
+	if = {
+		limit = {
+			state = 154
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Alföld"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 11659 name = "Debrecen" }
+	}
+	
+	if = {
+		##### AUSTRIA #####
+		limit = {
+			state = 4
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Alsó-Ausztria"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 11666 name = "Bécs" }
+	}
+	
+	if = {
+		limit = {
+			state = 152
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Felső-Ausztria"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 688 name = "Sóvár" }
+	}
+	
+	if = {
+		##### ROMANIA #####
+		limit = {
+			state = 76
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Észak-Érdely"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 6711 name = "Kolozsvár" }
+	}
+	
+	if = {
+		limit = {
+			state = 84
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Érdely"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 690 name = "Brassó" }
+	}
+	
+	if = {
+		limit = {
+			state = 83
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Körösvidék"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 6682 name = "Arad" }
+	}
+	
+	if = {
+		limit = {
+			state = 82
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Bánság"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 9606 name = "Temesvár" }
+	}
+	
+	if = {
+		##### YUGOSLAVIA #####
+		limit = {
+			state = 45
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Vajdaság"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 619 name = "Újvidék" }
+	}
+	
+	if = {
+		limit = {
+			state = 764
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Nyugat-Bánság"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+	}
+	
+	if = {
+		limit = {
+			state = 109
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Szlavónia"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_italian
+		
+		set_province_name = { id = 11581 name = "Zágráb" }
+	}
+	
+	if = {
+		##### CZECHOSLOVAKIA #####
+		limit = {
+			state = 664
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Déli-Szlovákia"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 6573 name = "Kassa" }
+	}
+	
+	if = {
+		limit = {
+			state = 73
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Kárpátalja"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 3548 name = "Munkács" }
+	}
+	
+	if = {
+		limit = {
+			state = 71
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Keleti-Szlovákia"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 3581 name = "Eperjes" }
+	}
+	
+	if = {
+		limit = {
+			state = 70
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Nyugat-Szlovákia"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 9692 name = "Pozsony" }
+		set_province_name = { id = 11539 name = "Zsolna" }
+	}
+	
+	if = {
+		##### POLAND #####
+		limit = {
+			state = 88
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Krakkó"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 9427 name = "Krakkó" }
+		set_province_name = { id = 442 name = "Tarnó" }
+	}
+	
+	if = {
+		##### POLAND #####
+		limit = {
+			state = 91
+			NOT = { has_state_flag = state_name_hungarian }
+		}
+		set_state_name = "Ilyvó"
+		
+		set_state_flag = state_name_hungarian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		clr_state_flag = state_name_czech
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		
+		set_province_name = { id = 11479 name = "Ilyvó" }
+	}
+}

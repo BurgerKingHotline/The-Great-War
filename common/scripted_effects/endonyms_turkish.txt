@@ -1,0 +1,129 @@
+apply_turkish_endonyms = {
+
+if = {
+		limit = {
+			state = 341
+			NOT = { has_state_flag = state_name_turkish }
+		}
+		set_state_name = "Edirne"
+		
+		set_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 11842 name = "Edirne" }
+	}
+	
+	if = {
+		limit = {
+			state = 797
+			NOT = { has_state_flag = state_name_turkish }
+		}
+		set_state_name = "Istanbul"
+		
+		set_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 9833 name = "Istanbul" }
+	}
+	
+	if = {
+		limit = {
+			state = 184
+			NOT = { has_state_flag = state_name_turkish }
+		}
+		set_state_name = "Trakya"
+		
+		set_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 11905 name = "Dedeağaç" }
+	}
+	
+	if = {
+		limit = {
+			##### BULGARIA #####
+			state = 212
+			NOT = { has_state_flag = state_name_turkish }
+		}
+		set_state_name = "Filibe"
+		
+		set_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 6923 name = "Filibe" }
+		set_province_name = { id = 6814 name = "Eski Zağra" }
+		set_province_name = { id = 9862 name = "Hasköy" }
+	}
+	
+	if = {
+		limit = {
+			state = 211
+			NOT = { has_state_flag = state_name_turkish }
+		}
+		set_state_name = "Burgaz"
+		
+		set_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 9902 name = "Burgaz" }
+		set_province_name = { id = 9783 name = "Varna" }
+		set_province_name = { id = 9888 name = "Yanbolu" }
+		set_province_name = { id = 6967 name = "İslimiye" }
+		set_province_name = { id = 9769 name = "Şumnu" }
+	}
+	
+	if = {
+		limit = {
+			state = 106
+			NOT = { has_state_flag = state_name_turkish }
+		}
+		set_state_name = "Kuzey Makedonya"
+		
+		set_state_flag = state_name_turkish
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_turkish
+		clr_state_flag = state_name_greek
+		clr_state_flag = state_name_yugoslav
+		clr_state_flag = state_name_romanian
+		clr_state_flag = state_name_bulgarian
+		
+		set_province_name = { id = 3882 name = "Üsküp" }
+	}
+}

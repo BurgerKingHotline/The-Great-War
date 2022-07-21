@@ -1,0 +1,218 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+					rule = endonyms
+					option = SHOW
+					}
+				}
+				set_global_flag = endonyms_enabled
+			}
+		}
+	}
+
+	on_startup = {
+		effect = {
+			if = {
+				limit = { has_global_flag = endonyms_enabled }
+				every_state = {
+				if = { limit = { owner = { is_german_speaking_country = yes } }
+					apply_german_endonyms = yes
+				}
+				
+				else_if = { limit = { owner = { is_czechoslovak_country = yes } }
+					apply_czech_endonyms = yes
+				}
+				
+				else_if = { limit = { owner = { tag = POL } }
+					apply_polish_endonyms = yes
+				}
+					
+				else_if = { limit = { owner = { tag = FRA } }
+					apply_french_endonyms = yes
+				}
+					
+				else_if = { limit = { owner = { tag = HUN } }
+					apply_hungarian_endonyms = yes
+				}
+					
+				else_if = { limit = { owner = { is_russian_country = yes } }
+					apply_russian_endonyms = yes
+				}
+					
+				else_if = { limit = { owner = { is_south_slav_country = yes } }
+					apply_yugoslav_endonyms = yes
+				}
+					
+				else_if = { limit = { owner = { tag = LIT } }
+					apply_lithuanian_endonyms = yes
+				}
+					
+				else_if = { limit = { owner = { tag = LAT } }
+					apply_latvian_endonyms = yes
+				}
+					
+				else_if = { limit = { owner = { tag = EST } }
+					apply_estonian_endonyms = yes
+				}
+					
+				else_if = { limit = { owner = { tag = ITA } }
+					apply_italian_endonyms = yes
+				}
+					
+				else_if = { limit = { owner = { tag = GRE } }
+					apply_greek_endonyms = yes
+				}
+					
+				else_if = { limit = { owner = { is_romanian_country = yes } }
+					apply_romanian_endonyms = yes
+				}
+				
+				else_if = { limit = { owner = { is_turkish_country = yes } }
+					apply_turkish_endonyms = yes
+				}
+				
+				else_if = { limit = { owner = { tag = ALB } }
+						apply_albanian_endonyms = yes
+				}
+				
+				else_if = { limit = { owner = { tag = FIN } }
+					apply_finnish_endonyms = yes
+				}
+				
+				else_if = { limit = { owner = { tag = JAP } }
+					apply_japanese_endonyms = yes
+				}
+				
+				else_if = { limit = { owner = { is_chinese_speaking_country = yes } }
+					apply_chinese_endonyms = yes
+				}
+					
+				else = { reset_state_name = yes }
+
+				}
+			}
+		}
+	}
+	
+#	on_government_change = {
+#		effect = {
+#			if = {
+#				limit = {
+#					SOV = { controls_state = 195 OR = { has_government = neutrality has_government = fascism } }
+#				}
+#				set_province_name = { id = 3151 name = "Petrograd" }
+#				195 = { set_state_name = "Petrograd" }
+#			}
+#			
+#			else_if = { limit = { SOV = { controls_state = 195 has_government = communism } }
+#				195 = { set_state_name = "Leningrad" }
+#				set_province_name = { id = 3151 name = "Leningrad" }
+#			}
+#			
+#			else = { 195 = { set_state_name = "St. Peterburg" } set_province_name = { id = 3151 name = "St. Peterburg" } }
+#		}
+#	}
+
+	on_state_control_changed = {
+		effect = {
+			if = { limit = { has_global_flag = endonyms_enabled }
+				FROM.FROM = {
+					if = { limit = { ROOT = { is_german_speaking_country = yes } }
+						apply_german_endonyms = yes
+					}
+				
+					else_if = { limit = { ROOT = { is_czechoslovak_country = yes } }
+						apply_czech_endonyms = yes
+					}
+				
+					else_if = { limit = { ROOT = { tag = POL } }
+						apply_polish_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { tag = FRA } }
+						apply_french_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { tag = HUN } }
+						apply_hungarian_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { tag = SOV } }
+						apply_russian_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { tag = UKR } }
+						apply_ukrainian_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { tag = BLR } }
+						apply_belarusian_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { is_south_slav_country = yes } }
+						apply_yugoslav_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { tag = LIT } }
+						apply_lithuanian_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { tag = LAT } }
+						apply_latvian_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { tag = EST } }
+						apply_estonian_endonyms = yes
+					}
+					
+					else_if = { limit = { owner = { tag = FIN } }
+						apply_finnish_endonyms = yes
+					}
+					
+					else_if = { limit = { owner = { tag = SWE } }
+						apply_swedish_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { tag = ITA } }
+						apply_italian_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { tag = GRE } }
+						apply_greek_endonyms = yes
+					}
+					
+					else_if = { limit = { owner = { is_turkish_country = yes } }
+					apply_turkish_endonyms = yes
+					}
+					
+					else_if = { limit = { ROOT = { is_romanian_country = yes } }
+						apply_romanian_endonyms = yes
+					}
+					
+					else_if = { limit = { owner = { tag = ALB } }
+						apply_albanian_endonyms = yes
+					}
+					
+					else_if = { limit = { owner = { tag = BUL } }
+						apply_bulgarian_endonyms = yes
+					}
+					
+					else_if = { limit = { owner = { tag = JAP } }
+						apply_japanese_endonyms = yes
+					}
+					
+					else_if = { limit = { owner = { is_chinese_speaking_country = yes } }
+						apply_chinese_endonyms = yes
+					}
+					
+					else = { reset_state_name = yes }
+					
+				}
+			}
+		}
+	}
+}

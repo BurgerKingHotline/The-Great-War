@@ -1,0 +1,136 @@
+apply_chinese_endonyms = {
+
+	if = {
+		##### CHINA #####
+		limit = {
+			state = 608
+			NOT = { has_state_flag = state_name_chinese }
+		}
+		set_state_name = "Beijing"
+		
+		set_state_flag = state_name_chinese
+		clr_state_flag = state_name_japanese
+		clr_state_flag = state_name_mongolian
+		clr_state_flag = state_name_korean
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 9843 name = "Beijing" }
+		set_province_name = { id = 10068 name = "Tianjin" }
+	}
+	
+	if = {
+		limit = {
+			state = 743
+			NOT = { has_state_flag = state_name_chinese }
+		}
+		set_state_name = "Qingdao"
+		
+		set_state_flag = state_name_chinese
+		clr_state_flag = state_name_japanese
+		clr_state_flag = state_name_mongolian
+		clr_state_flag = state_name_korean
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 10000 name = "Qingdao" }
+	}
+	
+	if = {
+		limit = {
+			state = 597
+			NOT = { has_state_flag = state_name_chinese }
+		}
+		set_state_name = "Shandong"
+		
+		set_state_flag = state_name_chinese
+		clr_state_flag = state_name_japanese
+		clr_state_flag = state_name_mongolian
+		clr_state_flag = state_name_korean
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 1069 name = "Jinan" }
+	}
+	
+	if = {
+		limit = {
+			state = 607
+			NOT = { has_state_flag = state_name_chinese }
+		}
+		set_state_name = "Henan"
+		
+		set_state_flag = state_name_chinese
+		clr_state_flag = state_name_japanese
+		clr_state_flag = state_name_mongolian
+		clr_state_flag = state_name_korean
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 9958 name = "Zhengzhou" }
+	}
+	
+	if = {
+		limit = {
+			state = 613
+			NOT = { has_state_flag = state_name_chinese }
+		}
+		set_state_name = "Shanghai"
+		
+		set_state_flag = state_name_chinese
+		clr_state_flag = state_name_japanese
+		clr_state_flag = state_name_mongolian
+		clr_state_flag = state_name_korean
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 11913 name = "Nanjing" }
+		set_province_name = { id = 10076 name = "Suzhou" }
+		set_province_name = { id = 7014 name = "Shanghai" }
+	}
+	
+	if = {
+		limit = {
+			state = 596
+			NOT = { has_state_flag = state_name_chinese }
+		}
+		set_state_name = "Zhejiang"
+		
+		set_state_flag = state_name_chinese
+		clr_state_flag = state_name_japanese
+		clr_state_flag = state_name_mongolian
+		clr_state_flag = state_name_korean
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 7191 name = "Hangzhou" }
+		set_province_name = { id = 9974 name = "Ningbo" }
+	}
+	
+	if = {
+		limit = {
+			state = 749
+			NOT = { has_state_flag = state_name_chinese }
+		}
+		set_state_name = "Huangshan"
+		
+		set_state_flag = state_name_chinese
+		clr_state_flag = state_name_japanese
+		clr_state_flag = state_name_mongolian
+		clr_state_flag = state_name_korean
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 12019 name = "Huangshan" }
+	}
+	
+	if = {
+		limit = {
+			state = 595
+			NOT = { has_state_flag = state_name_chinese }
+		}
+		set_state_name = "Fujian"
+		
+		set_state_flag = state_name_chinese
+		clr_state_flag = state_name_japanese
+		clr_state_flag = state_name_mongolian
+		clr_state_flag = state_name_korean
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 4196 name = "Fuzhou" }
+		set_province_name = { id = 7071 name = "Xiamen" }
+	}
+}

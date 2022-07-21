@@ -1,0 +1,36 @@
+apply_japanese_endonyms = {
+
+	if = {
+		##### CHINA #####
+		limit = {
+			state = 608
+			NOT = { has_state_flag = state_name_japanese }
+		}
+		set_state_name = "Pekin"
+		
+		clr_state_flag = state_name_chinese
+		set_state_flag = state_name_japanese
+		clr_state_flag = state_name_mongolian
+		clr_state_flag = state_name_korean
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 9843 name = "Pekin" }
+		set_province_name = { id = 10068 name = "Ta Jin" }
+	}
+	
+	if = {
+		limit = {
+			state = 743
+			NOT = { has_state_flag = state_name_chinese }
+		}
+		set_state_name = "Santosho"
+		
+		clr_state_flag = state_name_chinese
+		set_state_flag = state_name_japanese
+		clr_state_flag = state_name_mongolian
+		clr_state_flag = state_name_korean
+		clr_state_flag = state_name_russian
+		
+		set_province_name = { id = 1069 name = "Seinan" }
+	}
+}

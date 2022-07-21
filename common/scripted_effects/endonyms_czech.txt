@@ -1,0 +1,208 @@
+apply_czech_endonyms = {
+
+	if = {
+		##### CZECHOSLOVAKIA #####
+		limit = {
+			state = 9
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Čechy"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+		
+		set_province_name = { id = 11542 name = "Praha" }
+		set_province_name = { id = 6418 name = "Plzeň" }
+		set_province_name = { id = 9569 name = "Tábor" }
+	}
+	
+	if = {
+		limit = {
+			state = 69
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Sudety"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+		
+		set_province_name = { id = 3585 name = "Karlovy Vary" }
+		set_province_name = { id = 11401 name = "Liberec" }
+	}
+	
+	if = {
+		limit = {
+			state = 74
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Ostravský Kraj"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+		
+		set_province_name = { id = 3583 name = "Ostrava" }
+	}
+	
+	if = {
+		limit = {
+			state = 72
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Záolží"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+	}
+	
+	if = {
+		limit = {
+			state = 75
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Morava"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+		
+		set_province_name = { id = 3569 name = "Brno" }
+		set_province_name = { id = 6562 name = "Olomouc" }
+	}
+	
+	if = {
+		limit = {
+			state = 70
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Západné Slovensko"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+		
+		set_province_name = { id = 9692 name = "Bratislava" }
+		set_province_name = { id = 11539 name = "Žilina" }
+	}
+	
+	if = {
+		limit = {
+			state = 71
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Východne Slovensko"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+		
+		set_province_name = { id = 3581 name = "Prešov" }
+	}
+	
+	if = {
+		limit = {
+			state = 73
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Podkarpatská Rus"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+		
+		set_province_name = { id = 3548 name = "Mukačevo" }
+	}
+	
+	if = {
+		limit = {
+			state = 664
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Jižně Slovensko"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+		
+		set_province_name = { id = 6573 name = "Košice" }
+	}
+	
+	if = {
+		##### AUSTRIA #####
+		limit = {
+			state = 4
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Dolní Rakousy"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+		
+		set_province_name = { id = 11666 name = "Vídeň" }
+		set_province_name = { id = 9648 name = "Hradec" }
+	}
+	
+	if = {
+		limit = {
+			state = 152
+			NOT = { has_state_flag = state_name_czech }
+		}
+		set_state_name = "Horní Rakousy"
+		
+		clr_state_flag = state_name_german
+		clr_state_flag = state_name_polish
+		clr_state_flag = state_name_russian
+		clr_state_flag = state_name_ukrainian
+		clr_state_flag = state_name_belarusian
+		set_state_flag = state_name_czech
+		clr_state_flag = state_name_hungarian
+		
+		set_province_name = { id = 688 name = "Solnohrad" }
+		set_province_name = { id = 732 name = "Linec" }
+		set_province_name = { id = 3673 name = "Celovec" }
+	}
+}
