@@ -284,6 +284,200 @@ RUS_tsarist_intervention_decisions = {
 	}
 }
 
+economy_decisions = {
+	RUS_finish_the_trans_siberian_railway_dec = {
+
+		icon = generic_form_nation
+
+		allowed = { tag = RUS }
+		available = {
+			has_railway_connection = {
+				start_state = 566
+				target_state = 657
+			}
+		}
+
+		activation = {
+			has_completed_focus = RUS_finish_the_trans_siberian_railway
+		}
+
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 180
+
+		timeout_effect = {
+        	add_political_power = -100
+			add_stability = -0.05
+		}
+
+        complete_effect = {
+			add_political_power = 50
+			add_stability = 0.05
+        }
+	}
+
+	RUS_ai_build_siberian_railway = {
+		icon = generic_civil_support
+
+		visible = {
+			OR = { #wouldve liked to use allowed, but since theres a debug console command...
+				is_ai = yes
+				is_debug = yes
+			}
+		}
+
+		activation = {
+			has_completed_focus = RUS_finish_the_trans_siberian_railway
+		}
+
+		allowed = {
+			original_tag = RUS
+		}
+
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 100
+
+		timeout_effect = {
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = RUS
+						add = 2
+					}
+				}
+				fallback = yes
+				path = { 4725 7763 12657 10678 7851 12543 10559 7725 4677 }
+				start_province = 4725
+				target_province = 4677
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = RUS
+						add = 2
+					}
+				}
+				fallback = yes
+				path = { 4797 1762 4837 10528 4766 12507 7860 10683 7786 4677 }
+				start_province = 4797
+				target_province = 4677
+			}
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				instant_build = yes
+				province = {
+					4677
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	RUS_finish_the_trans_siberian_railway_man_dec = {
+
+		icon = generic_form_nation
+
+		allowed = { tag = RUS }
+		available = {
+			has_railway_connection = {
+				start_state = 563
+				target_state = 714
+			}
+		}
+
+		activation = {
+			has_completed_focus = RUS_finish_the_trans_siberian_railway
+		}
+
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 180
+
+		timeout_effect = {
+        	add_political_power = -200
+			add_war_support = -0.05
+		}
+
+        complete_effect = {
+			add_political_power = 100
+			add_war_support = 0.05
+        }
+	}
+
+	RUS_ai_build_siberian_railway_in_man= {
+		icon = generic_civil_support
+
+		visible = {
+			OR = { #wouldve liked to use allowed, but since theres a debug console command...
+				is_ai = yes
+				is_debug = yes
+			}
+		}
+
+		activation = {
+			has_completed_focus = RUS_build_up_manchurian_rails
+			has_country_flag = RUS_able_to_build_man
+			761 = {
+				OR = {
+					is_controlled_by = ROOT
+					owner = {
+						gives_military_access_to = ROOT
+					}
+				}
+			}
+			714 = {
+				OR = {
+					is_controlled_by = ROOT
+					owner = {
+						gives_military_access_to = ROOT
+					}
+				}
+			}
+		}
+
+		allowed = {
+			original_tag = RUS
+		}
+
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 100
+
+		timeout_effect = {
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				controller_priority = {
+					base = 1
+				}
+				fallback = yes
+				path = { 4506 12485 4876 10638 13150 4745 7743 4719 4677 }
+				start_province = 4506
+				target_province = 4677
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
 #SOVIET DECISIONS
 
 SOV_form_ssrs = {

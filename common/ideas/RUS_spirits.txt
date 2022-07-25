@@ -567,6 +567,49 @@ ideas = {
 			}
 		}
 
+		#economy
+
+		RUS_outdated_railways = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = -0.25 
+				production_speed_rail_way_factor = -0.25 
+				supply_combat_penalties_on_core_factor = 0.1
+				supply_consumption_factor = 0.1
+			}
+		}
+
+		RUS_agrarian_nation = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.08
+				production_speed_industrial_complex_factor = -0.08
+				production_factory_efficiency_gain_factor = -0.05 
+				production_factory_max_efficiency_factor = -0.05
+				global_building_slots_factor = -0.25
+			}
+		}
+
 		RUS_industrialising_nation_1 = {
 			picture = generic_production_bonus
 			allowed = {

@@ -452,6 +452,7 @@
 						state = 760
 					}
 				}
+				set_state_flag = RUS_pan_core
 				add_claim_by = ROOT
 				owner = {
 					if = {
@@ -490,37 +491,11 @@
 				all_state = {
 					OR = {
 						AND = {
-							OR = {
-								is_core_of = POL
-								is_core_of = UKR
-								is_core_of = BLR
-								is_core_of = RUS
-								is_core_of = MON
-								state = 761
-								state = 714
-								state = 717
-								state = 328
-								state = 715
-								state = 618
-								state = 617
-								state = 760
-							}
+							set_state_flag = RUS_pan_core
 							is_controlled_by = ROOT
 						}
 						NOT = {
-							is_core_of = POL
-							is_core_of = UKR
-							is_core_of = BLR
-							is_core_of = RUS
-							is_core_of = MON
-							state = 761
-							state = 714
-							state = 717
-							state = 328
-							state = 715
-							state = 618
-							state = 617
-							state = 760
+							set_state_flag = RUS_pan_core
 						}
 					}
 				}
@@ -535,22 +510,11 @@
 			every_state = {
 				limit = {
 					OR = {
-						is_core_of = POL
-						is_core_of = UKR
-						is_core_of = BLR
-						is_core_of = RUS
-						is_core_of = MON
-						state = 761
-						state = 714
-						state = 717
-						state = 328
-						state = 715
-						state = 618
-						state = 617
-						state = 760
+						set_state_flag = RUS_pan_core
 					}
 				}
 				add_core_of = ROOT
+				clr_state_flag = RUS_pan_core
 			}
 		}
 	}
@@ -587,6 +551,7 @@
 					}
 				}
 				add_claim_by = ROOT
+				set_state_flag = RUS_core_slav
 				owner = {
 					if = {
 						limit = {
@@ -624,23 +589,11 @@
 				all_state = {
 					OR = {
 						AND = {
-							OR = {
-								is_core_of = BUL
-								is_core_of = ROM
-								is_core_of = SER
-								is_core_of = MNT
-								is_core_of = BOS
-								is_core_of = SLV
-							}
+							has_state_flag = RUS_core_slav
 							is_controlled_by = ROOT
 						}
 						NOT = {
-							is_core_of = BUL
-							is_core_of = ROM
-							is_core_of = SER
-							is_core_of = MNT
-							is_core_of = BOS
-							is_core_of = SLV
+							has_state_flag = RUS_core_slav
 						}
 					}
 				}
@@ -655,15 +608,11 @@
 			every_state = {
 				limit = {
 					OR = {
-						is_core_of = BUL
-						is_core_of = ROM
-						is_core_of = SER
-						is_core_of = MNT
-						is_core_of = BOS
-						is_core_of = SLV
+						has_state_flag = RUS_core_slav
 					}
 				}
 				add_core_of = ROOT
+				clr_state_flag = RUS_core_slav
 			}
 		}
 	}
@@ -1127,8 +1076,8 @@
 		available = {
 			NOT = { has_government = communism }
 			NOT = {
-				has_country_flag = RUS_germans_leave_potsdam
-				has_country_flag = RUS_russian_full_access_flag
+				has_global_flag = RUS_germans_leave_potsdam
+				has_global_flag = RUS_russian_full_access_flag
 			}
 			has_country_flag = RUS_ger_agree_potsdam
 		}
@@ -1241,11 +1190,11 @@
 		available = {
 			NOT = { has_government = communism }
 			NOT = {
-				has_country_flag = RUS_german_full_access_flag
+				has_global_flag = RUS_german_full_access_flag
 			}
 			OR = {
-				has_country_flag = RUS_ger_agree_potsdam
-				has_country_flag = RUS_germans_leave_potsdam
+				has_global_flag = RUS_ger_agree_potsdam
+				has_global_flag = RUS_germans_leave_potsdam
 			}
 		}
 
@@ -1413,7 +1362,7 @@
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar
 		prerequisite = { focus = RUS_the_powers_of_the_tsar } 
-		cost = 49
+		cost = 50
 
 		available = {
 			NOT = {
@@ -2480,6 +2429,283 @@
 					modifier = RUS_trans_siberian_railway_construction
 				}
 			}
+			add_political_power = 50
+
+			activate_decision = RUS_finish_the_trans_siberian_railway_dec
+			custom_effect_tooltip = if_mission_completed
+			effect_tooltip = {
+				add_political_power = 50
+				add_stability = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_build_up_manchurian_rails
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_invest_in_industry }
+		x = 0
+		y = 2
+		relative_position_id = RUS_finish_the_trans_siberian_railway
+		cost = 35
+
+		completion_reward = {
+			effect_tooltip = {
+				761 = {
+					add_dynamic_modifier = {
+						modifier = RUS_trans_siberian_railway_construction
+					}
+					controller = {
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = RUS_controls_manchuria
+									original_tag = RUS
+								}
+							}
+							give_military_access = RUS
+							set_country_flag = RUS_controls_manchuria
+						}
+					}
+				}
+				714 = {
+					add_dynamic_modifier = {
+						modifier = RUS_trans_siberian_railway_construction
+					}
+					controller = {
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = RUS_controls_manchuria
+									original_tag = RUS
+								}
+							}
+							give_military_access = RUS
+							set_country_flag = RUS_controls_manchuria
+						}
+					}
+				}
+				717 = {
+					add_dynamic_modifier = {
+						modifier = RUS_trans_siberian_railway_construction
+					}
+					controller = {
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = RUS_controls_manchuria
+									original_tag = RUS
+								}
+							}
+							give_military_access = RUS
+							set_country_flag = RUS_controls_manchuria
+						}
+					}
+				}
+				328 = {
+					add_dynamic_modifier = {
+						modifier = RUS_trans_siberian_railway_construction
+					}
+					controller = {
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = RUS_controls_manchuria
+									original_tag = RUS
+								}
+							}
+							give_military_access = RUS
+							set_country_flag = RUS_controls_manchuria
+						}
+					}
+				}
+				715 = {
+					add_dynamic_modifier = {
+						modifier = RUS_trans_siberian_railway_construction
+					}
+					controller = {
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = RUS_controls_manchuria
+									original_tag = RUS
+								}
+							}
+							give_military_access = RUS
+							set_country_flag = RUS_controls_manchuria
+						}
+					}
+				}
+				716 = {
+					add_dynamic_modifier = {
+						modifier = RUS_trans_siberian_railway_construction
+					}
+					controller = {
+						if = {
+							limit = {
+								NOT = {
+									has_country_flag = RUS_controls_manchuria
+									tag = ROOT
+								}
+							}
+							give_military_access = RUS
+							set_country_flag = RUS_controls_manchuria
+						}
+					}
+				}
+			}
+
+			every_other_country = {
+				limit = {
+					has_country_flag = { RUS_controls_manchuria }
+				}
+				custom_effect_tooltip = needs_approval
+			}
+
+			if = {
+				limit = {
+					QIN = {
+						has_country_flag = RUS_controls_manchuria
+					}
+				}
+				custom_effect_tooltip = RUS_qing_prob_wont_accept
+			}
+
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 761 
+							state = 714
+							state = 717
+							state = 328
+							state = 715
+							state = 716 
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = RUS_trans_siberian_railway_construction
+					}
+				}
+			}
+			
+			add_political_power = 50
+
+			effect_tooltip = {
+				activate_decision = RUS_finish_the_trans_siberian_railway_man_dec
+				custom_effect_tooltip = if_mission_completed
+				add_political_power = 100
+				add_war_support = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				761 = {
+					controller = {
+						tag = QIN
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_invest_in_infrastructure
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_finish_the_trans_siberian_railway }
+		x = -1
+		y = 1
+		relative_position_id = RUS_finish_the_trans_siberian_railway
+		cost = 35
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_mend_the_railways
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_finish_the_trans_siberian_railway }
+		x = 0
+		y = 2
+		relative_position_id = RUS_invest_in_infrastructure
+		cost = 35
+
+		completion_reward = {
+			remove_ideas = RUS_outdated_railways
 		}
 	}
 }

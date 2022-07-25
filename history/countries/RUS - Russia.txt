@@ -8,6 +8,7 @@ add_ideas = {
 	RUS_duma
 	RUS_strong_independance_movements
 	RUS_industrialising_nation_1
+	RUS_outdated_railways
 }
 
 # Starting tech

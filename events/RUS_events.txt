@@ -2723,7 +2723,110 @@ country_event = { #omg big scawwwy wussia demwans puuuuuwsia
 			}
 		}
 		ai_chance = {
+			factor = 8
+			modifier = {
+				factor = 0.5
+				FROM = {
+					is_ai = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { #russia wants to build railways in manchuria
+	id = rus_events.29
+	title = rus_events.29.t	
+	desc = rus_events.29.desc
+
+	is_triggered_only = yes
+	
+	option = {#fine
+		name = rus_events.29.a
+		RUS = {
+			country_event = { id = rus_events.30 }
+		}
+
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 761 
+					state = 714
+					state = 717
+					state = 328
+					state = 715
+					state = 716 
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = RUS_trans_siberian_railway_construction
+			}
+		}
+		give_military_access = RUS
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.05
+				original_tag = QIN
+			}
+		}
+	}
+
+	option = {#nah
+		name = rus_events.29.b
+		add_political_power = 25
+		RUS = {
+			country_event = { id = rus_events.31 }
+		}
+		ai_chance = {
 			factor = 10
+		}
+	}
+}
+
+country_event = { #from accepts
+	id = rus_events.30
+	title = rus_events.30.t	
+	desc = rus_events.30.desc
+
+	is_triggered_only = yes
+	
+	option = {#great
+		name = rus_events.30.a
+		set_country_flag = RUS_able_to_build_man
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 761 
+					state = 714
+					state = 717
+					state = 328
+					state = 715
+					state = 716 
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = RUS_trans_siberian_railway_construction
+			}
+		}
+		give_military_access = RUS
+		ai_chance = {
+			factor = 120
+		}
+	}
+}
+
+country_event = { #from declines
+	id = rus_events.31
+	title = rus_events.31.t	
+	desc = rus_events.31.desc
+
+	is_triggered_only = yes
+	
+	option = {#oof
+		name = rus_events.31.a
+		ai_chance = {
+			factor = 120
 		}
 	}
 }
