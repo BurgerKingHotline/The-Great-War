@@ -589,27 +589,6 @@ ideas = {
 			}
 		}
 
-		RUS_agrarian_nation = {
-			picture = generic_production_bonus
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				production_speed_arms_factory_factor = -0.08
-				production_speed_industrial_complex_factor = -0.08
-				production_factory_efficiency_gain_factor = -0.05 
-				production_factory_max_efficiency_factor = -0.05
-				global_building_slots_factor = -0.25
-			}
-		}
-
 		RUS_industrialising_nation_1 = {
 			picture = generic_production_bonus
 			allowed = {

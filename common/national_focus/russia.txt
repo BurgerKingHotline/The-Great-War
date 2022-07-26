@@ -491,11 +491,11 @@
 				all_state = {
 					OR = {
 						AND = {
-							set_state_flag = RUS_pan_core
+							has_state_flag = RUS_pan_core
 							is_controlled_by = ROOT
 						}
 						NOT = {
-							set_state_flag = RUS_pan_core
+							has_state_flag = RUS_pan_core
 						}
 					}
 				}
@@ -510,7 +510,7 @@
 			every_state = {
 				limit = {
 					OR = {
-						set_state_flag = RUS_pan_core
+						has_state_flag = RUS_pan_core
 					}
 				}
 				add_core_of = ROOT
