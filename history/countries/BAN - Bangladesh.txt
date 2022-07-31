@@ -9,6 +9,8 @@ set_technology = {
 
 
 
+oob = "GENERIC_1910"
+
 set_convoys = 5
 
 1939.1.1 = {

@@ -61,6 +61,8 @@ if = {
 
 set_country_flag = monroe_doctrine
 
+oob = "GENERIC_1910"
+
 set_convoys = 45
 set_stability = 0.2
 set_war_support = 0.1

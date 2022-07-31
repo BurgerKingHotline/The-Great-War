@@ -21,5 +21,7 @@ set_popularities = {
 	neutrality = 100
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 5
 

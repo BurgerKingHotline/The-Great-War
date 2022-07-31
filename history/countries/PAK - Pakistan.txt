@@ -22,6 +22,8 @@ if = {
 	add_to_tech_sharing_group = commonwealth_research
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 20
 
 

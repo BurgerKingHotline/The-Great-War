@@ -258,6 +258,8 @@ give_guarantee = URG
 
 
 
+oob = "GENERIC_1910"
+
 set_convoys = 500
 
 

@@ -287,6 +287,8 @@ create_import = {
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 400
 
 if = {

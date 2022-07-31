@@ -8,6 +8,8 @@ set_technology = {
 	mass_assault = 1
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 5
 
 set_politics = {

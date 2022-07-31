@@ -126,3 +126,15 @@ RUS_trans_siberian_railway_construction = {
 	state_production_speed_rail_way_factor = 0.5
 	state_production_speed_supply_node_factor = 0.75
 }
+
+#France dynamic modifiers
+moroccan_rebels_modifier = {
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	compliance_growth = -0.1
+	local_manpower = -0.2
+	local_resources = -0.25
+	resistance_decay = -0.15 	
+	state_production_speed_buildings_factor = -0.3
+}

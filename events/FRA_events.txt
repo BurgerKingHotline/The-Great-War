@@ -1,0 +1,380 @@
+﻿add_namespace = french_events
+
+#election of 1910
+country_event = {
+	id = french_events.1
+	title = french_events.1.t	
+	desc = french_events.1.d	
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.08
+			}
+		}
+	}
+	
+	option = { #radicals win again
+		name = french_events.1.a
+		complete_national_focus = FRA_1910_elections
+		complete_national_focus = FRA_1910_radical_reelection
+	}
+	option = { #
+		name = french_events.1.b
+		complete_national_focus = FRA_1910_elections
+		complete_national_focus = FRA_1910_workers_international_victory
+	}
+	option = { #
+		name = french_events.1.c
+		complete_national_focus = FRA_1910_elections
+		complete_national_focus = FRA_1910_democratic_alliance_victory
+	}
+}
+
+country_event = { #Briand wnats to make his own party
+	id = french_events.2
+	title = french_events.2.t	
+	desc = french_events.2.d	
+
+	is_triggered_only = yes
+	
+	option = { #no don't do it bro
+		name = french_events.2.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		}
+	}
+	option = { #less go, cavy my boi
+		name = french_events.2.b
+		add_country_leader_role = {
+			character = FRA_joseph_caillaux
+			promote_leader = yes
+			country_leader={
+				ideology=progressivism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}
+
+add_namespace = morocco
+
+country_event = { #ruh roh raggy, re got a reberrion
+	id = morocco.1
+	title = morocco.1.t	
+	desc = morocco.1.d	
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = morocco.1.a
+		#make some southern states demilitarized
+		462 = {
+			set_demilitarized_zone = yes
+			add_dynamic_modifier = { modifier = moroccan_rebels_modifier }
+		}
+		set_global_flag = morocco_crisis_begun
+		every_country = {
+			limit = {
+				OR = {
+					tag = FRA
+					tag = GER
+				}
+			}
+			news_event = { id = morocco.2 hours = 2 }
+		}
+	}
+}
+
+news_event = { #morocco having a rbellion
+	id = morocco.2
+	title = morocco.2.t	
+	desc = morocco.2.d	
+
+	is_triggered_only = yes
+	
+	option = { #time to prepare for a gamer move
+		name = morocco.2.a
+		trigger = {
+			tag = FRA
+		}
+	}
+	option = { #oh boy I sure hope france doesn't do a gamer move
+		name = morocco.2.b
+		trigger = {
+			tag = GER
+		}
+	}
+}
+
+country_event = { #france demands submission
+	id = morocco.3
+	title = morocco.3.t	
+	desc = {
+		text = morocco.3.d1
+		trigger = {
+			NOT = {
+				is_guaranteed_by = GER
+			}
+		}
+	}	
+	desc = {
+		text = morocco.3.d2
+		trigger = {
+			is_guaranteed_by = GER
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = morocco.3.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1.5
+				has_opinion = {
+					target = FRA
+					value > 0
+				}
+			}
+			modifier = {
+				factor = 0.5
+				is_guaranteed_by = GER
+			}
+		}
+		effect_tooltip = {
+			FRA = {
+				puppet = MOR
+			}
+		}
+		FRA = {
+			country_event = { id = morocco.4 hours = 2 }
+			if = {
+				limit = {
+					GER = {
+						has_guaranteed = MOR
+					}
+				}
+				country_event = { id = morocco.7 hours = 6 }
+			}
+		}
+	}
+	option = { #deny
+		name = morocco.3.a
+		ai_chance = {
+			factor = 3
+			modifier = {
+				add = 1
+				has_opinion = {
+					target = FRA
+					value < -10
+				}
+			}
+			modifier = {
+				factor = 2
+				is_guaranteed_by = GER
+			}
+		}
+		effect_tooltip = {
+			FRA = {
+				create_wargoal = {
+					target = MOR
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+		FRA = {
+			country_event = { id = morocco.5 hours = 2 }
+		}
+	}
+}
+
+country_event = { #morocco submits
+	id = morocco.4
+	title = morocco.4.t	
+	desc = morocco.4.d	
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = morocco.4.a
+		puppet = MOR
+		hidden_effect = {
+			MOR = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.4
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+			SPR = {
+				transfer_state = 290
+			}
+		}
+	}
+}
+
+country_event = { #morocco denies
+	id = morocco.5
+	title = morocco.5.t	
+	desc = morocco.5.d	
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = morocco.5.a
+		hidden_effect = {
+			SPR = {
+				transfer_state = 290
+			}
+		}
+		create_wargoal = {
+			target = MOR
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+country_event = { #Germans deciding whether to intervene or not
+	id = morocco.6
+	title = morocco.6.t	
+	desc = morocco.6.d	
+
+	is_triggered_only = yes
+	
+	option = { #demand concessions from France in exchange
+		name = morocco.6.a
+		ai_chance = {
+			factor = 6
+		}
+		FRA = {
+			country_event = { id = morocco.7 hours = 2 }
+		}
+		hidden_effect = {
+			MOR = {
+				country_event = { id = morocco.3 hours = 2 }
+			}
+		}
+	}
+	option = { #pledge support to morocco
+		name = morocco.6.b
+		ai_chance = {
+			factor = 2
+		}
+		give_guarantee = MOR
+		hidden_effect = {
+			MOR = {
+				country_event = { id = morocco.3 hours = 2 }
+			}
+		}
+	}
+	option = { #none of our business
+		name = morocco.6.c
+		ai_chance = {
+			factor = 2
+		}
+		hidden_effect = {
+			MOR = {
+				country_event = { id = morocco.3 hours = 2 }
+			}
+		}
+	}
+}
+
+country_event = { #Germany demands concessions
+	id = morocco.7
+	title = morocco.7.t	
+	desc = morocco.7.d	
+
+	is_triggered_only = yes
+	
+	option = { #sure
+		name = morocco.7.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 0.5
+				has_completed_focus = FRA_1910_democratic_alliance_victory
+			}
+		}
+		GER = {
+			effect_tooltip = {
+				transfer_state = 859
+				transfer_state = 860
+				transfer_state = 861
+			}
+			country_event = { id = morocco.8 hours = 2 }
+		}
+	}
+	option = { #nah
+		name = morocco.7.b
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_completed_focus = FRA_1910_democratic_alliance_victory
+			}
+		}
+		effect_tooltip = {
+			GER = {
+				create_wargoal = {
+					target = FRA
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+		GER = {
+			country_event = { id = morocco.9 hours = 2 }
+		}
+	}
+}
+
+country_event = { #France gives us Neukamerun
+	id = morocco.8
+	title = morocco.8.t	
+	desc = morocco.8.d	
+
+	is_triggered_only = yes
+	
+	option = { #yo nice
+		name = morocco.8.a
+		transfer_state = 859
+		transfer_state = 860
+		transfer_state = 861
+	}
+}
+
+country_event = { #France refuses concessions for Morocco
+	id = morocco.9
+	title = morocco.9.t	
+	desc = morocco.9.d	
+
+	is_triggered_only = yes
+	
+	option = { #darn
+		name = morocco.9.a
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = -10
+	}
+	option = { #waaaaagh
+		name = morocco.9.b
+		ai_chance = {
+			factor = 2
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FRA
+		}
+	}
+}

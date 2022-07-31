@@ -98,5 +98,7 @@ set_popularities = {
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 80
 set_stability = 0.75

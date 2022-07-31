@@ -100,6 +100,8 @@ if = {
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 20
 
 1939.1.1 = {

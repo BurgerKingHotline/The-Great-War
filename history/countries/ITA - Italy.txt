@@ -272,6 +272,8 @@ if = {
 }
 
 
+oob = "GENERIC_1910"
+
 set_convoys = 200
 
 set_politics = {

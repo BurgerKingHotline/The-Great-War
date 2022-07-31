@@ -116,6 +116,8 @@ if = {
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 200		# biggest merchant marine in the world
 set_stability = 0.7
 

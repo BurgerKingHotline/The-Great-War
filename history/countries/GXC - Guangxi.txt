@@ -38,6 +38,8 @@ set_technology = {
 
 
 
+oob = "GENERIC_1910"
+
 set_convoys = 5
 
 set_politics = {

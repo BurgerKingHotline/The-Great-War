@@ -55,6 +55,8 @@ set_country_flag = monroe_doctrine
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 10
 set_politics = {
 	ruling_party = fascism

@@ -142,6 +142,8 @@ set_popularities = {
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 40
 
 ### VARIANTS ###

@@ -2,6 +2,12 @@ on_actions = {
 
     on_startup = {
         effect = {
+		every_country = {
+			limit = {
+				NOT = { has_country_flag = has_actual_oob }
+			}
+			d_create_army = yes
+		}
             ENG = {
                 give_resource_rights = { receiver = EGY state = 551 }
                 give_resource_rights = { receiver = EGY state = 549 }

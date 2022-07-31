@@ -140,6 +140,8 @@ set_popularities = {
 	neutrality = 94
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 20
 set_stability = 0.5
 set_war_support = 0.3

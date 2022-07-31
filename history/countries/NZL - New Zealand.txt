@@ -179,6 +179,8 @@ set_popularities = {
 	democratic = 100
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 70
 
 1939.1.1 = {
@@ -190,7 +192,9 @@ set_convoys = 70
 	}
 
 	# Didn't take office until '40, added for flavor
-	set_convoys = 80
+	oob = "GENERIC_1910"
+
+set_convoys = 80
 }
 
 

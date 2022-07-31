@@ -193,6 +193,8 @@ set_popularities = {
 	communism = 2
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 100
 
 1939.1.1 = {
@@ -208,7 +210,9 @@ set_convoys = 100
 		communism = 1
 	}
 
-	set_convoys = 100
+	oob = "GENERIC_1910"
+
+set_convoys = 100
 }
 
 if = {

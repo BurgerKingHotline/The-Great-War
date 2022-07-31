@@ -71,6 +71,8 @@ if = {
 
 
 set_research_slots = 3
+oob = "GENERIC_1910"
+
 set_convoys = 50
 set_stability = 0.75
 

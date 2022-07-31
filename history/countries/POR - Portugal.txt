@@ -139,6 +139,8 @@ if = {
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 50
 set_politics = {
 	ruling_party = neutrality
@@ -164,6 +166,8 @@ set_popularities = {
 		neutrality = 100
 	}
 }
+
+oob = "GENERIC_1910"
 
 set_convoys = 100
 set_stability = 0.75

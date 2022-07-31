@@ -69,6 +69,8 @@ if = {
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 20
 
 set_cosmetic_tag = RAJ_UK # British Raj

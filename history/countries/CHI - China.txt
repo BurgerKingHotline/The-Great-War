@@ -58,6 +58,8 @@ if = {
 
 save_global_event_target_as = WTT_current_china_leader
 
+oob = "GENERIC_1910"
+
 set_convoys = 40
 
 1939.1.1 = {

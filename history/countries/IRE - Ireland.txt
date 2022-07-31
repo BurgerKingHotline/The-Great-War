@@ -11,6 +11,8 @@ set_technology = {
 	basic_train = 1
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 10
 
 

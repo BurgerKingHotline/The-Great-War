@@ -57,6 +57,8 @@ set_technology = {
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 10
 set_politics = {
 	ruling_party = neutrality

@@ -2,6 +2,8 @@
 
 #TROOPS
 #oob = "BUL_1936" #VANILLA & DLC
+oob = "GENERIC_1910"
+
 set_convoys = 5 #VANILLA & DLC
 
 #You don't want Bulgarian party names? Just remove these lines

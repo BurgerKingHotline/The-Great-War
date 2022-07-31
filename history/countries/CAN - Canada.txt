@@ -190,6 +190,8 @@ set_popularities = {
 	communism = 1
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 100
 set_stability = 0.75
 

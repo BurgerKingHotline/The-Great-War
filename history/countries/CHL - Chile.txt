@@ -52,6 +52,8 @@ if = {
 
 set_country_flag = monroe_doctrine
 
+oob = "GENERIC_1910"
+
 set_convoys = 20
 
 1939.1.1 = {
@@ -108,6 +110,8 @@ set_convoys = 20
 		dispersed_industry2 = 1
 	}
 }
+
+oob = "GENERIC_1910"
 
 set_convoys = 5
 set_politics = {

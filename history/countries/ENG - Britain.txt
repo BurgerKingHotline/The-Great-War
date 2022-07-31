@@ -145,6 +145,8 @@ if = {
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 800
 
 # DIPLOMACY
@@ -380,7 +382,9 @@ if = {
 		modify_global_flag = { flag = MTG_naval_treaty_signatories value = -2 }
 	}
 
-	set_convoys = 200
+	oob = "GENERIC_1910"
+
+set_convoys = 200
 }
 
 set_politics = {

@@ -5,6 +5,10 @@ set_technology = {
 	infantry_weapons = 1
 }
 
+country_event = { id = morocco.1 days = 366 }
+
+oob = "GENERIC_1910"
+
 set_convoys = 20
 
 1939.1.1 = {

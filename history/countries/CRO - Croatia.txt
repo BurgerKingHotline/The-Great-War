@@ -37,6 +37,8 @@ if = {
 	}
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 5
 
 

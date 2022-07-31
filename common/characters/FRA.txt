@@ -1,16 +1,67 @@
 characters={
 	#Prime Minister
+	FRA_aristide_briand={
+		name="Aristide Briand"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FRA_joseph_caillaux={
+		name="Joseph Caillaux"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		#will be given it via event
+		#country_leader={
+		#	ideology=progressivism
+		#	expire="1965.1.1.1"
+		#	id=-1
+		#}
+	}
+	FRA_jean_jaures={
+		name="Jean Jaurès"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		#will be given it via event
+		#country_leader={
+		#	ideology=socialism
+		#	expire="1965.1.1.1"
+		#	id=-1
+		#}
+	}
+	FRA_raymond_poincare={
+		name="Raymond Poincaré"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		#will be given it via event
+		#country_leader={
+		#	ideology=conservatism
+		#	expire="1965.1.1.1"
+		#	id=-1
+		#}
+	}
+	#president
 	FRA_armand_fallieres={
 		name="Armand Fallières"
 		portraits={
 			civilian={
 				large=GFX_portrait_Mohammed_Zahir_Shah
 			}
-		}
-		country_leader={
-			ideology=conservatism 
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 }

@@ -35,6 +35,12 @@ set_research_slots = 3
 set_stability = 0.5
 add_command_power = 20
 
+country_event = { id = french_events.1 days = 113 }
+
+recruit_character = FRA_aristide_briand
+recruit_character = FRA_joseph_caillaux
+recruit_character = FRA_jean_jaures
+recruit_character = FRA_raymond_poincare
 
 # Starting tech
 set_technology = {
@@ -135,7 +141,6 @@ if = {
 		mtg_transport = 1
 		cruiser_submarines = 1
 	}
-	add_ideas = MTG_naval_treaty_adherent
 }
 if = {
 	limit = {
@@ -275,6 +280,8 @@ if = {
 		add_ideas = MTG_naval_treaty_adherent_reduced
 	}
 }
+
+oob = "GENERIC_1910"
 
 set_convoys = 300
 

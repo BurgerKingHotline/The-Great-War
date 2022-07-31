@@ -13,6 +13,8 @@ set_technology = {
 	early_bomber = 1
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 5
 
 

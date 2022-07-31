@@ -8,6 +8,8 @@ set_technology = {
 	tech_mountaineers = 1
 }
 
+oob = "GENERIC_1910"
+
 set_convoys = 5
 
 
