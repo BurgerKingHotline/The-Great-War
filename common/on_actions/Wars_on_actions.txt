@@ -260,6 +260,22 @@ on_actions = {
         }
     }
 
+    # MEXICO ON ACTIONS
+
+    on_startup = {
+        effect = {
+            if = {
+                limit = {
+                    date < 1911.1.1
+                }  
+			    country_event = {
+    			    id = mexican_revolution.2
+    			    days = 208
+			    }
+            }
+        }
+    }
+
     #RUSSIAN ON ACTIONS
     on_weekly_RUS = {
         effect = {

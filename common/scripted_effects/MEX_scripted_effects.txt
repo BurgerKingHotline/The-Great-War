@@ -127,49 +127,6 @@ check_sides_civil_war = {
 			}
 }
 
-carranza_state_superiority = {
-	if = {
-		limit = {
-			has_state_flag = zapata_state_support
-		}
-		clr_state_flag = zapata_state_support
-		add_to_variable = {
-			var = MEX.zapata_owned_states
-			value = -1
-		}
-		set_state_flag = carranza_state_support
-	}
-	else_if = {
-		limit = {
-			has_state_flag = villa_state_support
-		}
-		clr_state_flag = villa_state_support
-		add_to_variable = {
-			var = MEX.villa_owned_states
-			value = -1
-		}
-		set_state_flag = carranza_state_support
-	}
-	else_if = {
-		limit = {
-			has_state_flag = diaz_state_support
-		}
-		clr_state_flag = diaz_state_support
-		add_to_variable = {
-			var = MEX.diaz_owned_states
-			value = -1
-		}
-		set_state_flag = carranza_state_support
-	}
-	else_if = {
-		set_state_flag = carranza_state_support
-	}
-	add_to_variable = {
-		var = MEX.carranza_owned_states
-		value = 1
-	}
-}
-
 starting_civil_war_other_side_zapata = {
 	if = {
     	limit = {
@@ -215,5 +172,322 @@ starting_civil_war_other_side_zapata = {
 			capital = 41
 			states = { 41 165 167 168 173 175 790 792 793 794 }
 		}
+	}
+}
+
+starting_civil_war_other_side_villa = {
+	if = {
+    	limit = {
+        	check_variable = { mx = 1 }
+    	}
+		set_temp_variable = { the_other_fuckers = mx2 }
+	}
+	else = {
+    	set_temp_variable = { the_other_fuckers = mx }
+	}
+	if = {
+		limit = {
+			check_variable = { the_other_fuckers = 0 }
+		}
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = communism
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { the_other_fuckers = 2 }
+		}
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = neutrality
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { the_other_fuckers = 3 }
+		}
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = neutrality
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+}
+
+starting_civil_war_other_side_carranza = {
+	if = {
+    	limit = {
+        	check_variable = { mx = 2 }
+    	}
+		set_temp_variable = { the_other_fuckers = mx2 }
+	}
+	else = {
+    	set_temp_variable = { the_other_fuckers = mx }
+	}
+	if = {
+		limit = {
+			check_variable = { the_other_fuckers = 0 }
+		}
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = communism
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { the_other_fuckers = 1 }
+		}
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = democratic
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { the_other_fuckers = 3 }
+		}
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = neutrality
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+}
+
+starting_civil_war_other_side_diaz = {
+	if = {
+    	limit = {
+        	check_variable = { mx = 3 }
+    	}
+		set_temp_variable = { the_other_fuckers = mx2 }
+	}
+	else = {
+    	set_temp_variable = { the_other_fuckers = mx }
+	}
+	if = {
+		limit = {
+			check_variable = { the_other_fuckers = 0 }
+		}
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = communism
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { the_other_fuckers = 1 }
+		}
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = democratic
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { the_other_fuckers = 2 }
+		}
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = neutrality
+			size = 0.5
+			capital = 41
+			states = { 41 165 167 168 173 175 790 792 793 794 }
+		}
+	}
+}
+
+
+carranza_state_superiority = {
+	if = {
+		limit = {
+			has_state_flag = zapata_state_support
+		}
+		clr_state_flag = zapata_state_support
+		add_to_variable = {
+			var = MEX.zapata_owned_states
+			value = -1
+		}
+		set_state_flag = carranza_state_support
+	}
+	else_if = {
+		limit = {
+			has_state_flag = villa_state_support
+		}
+		clr_state_flag = villa_state_support
+		add_to_variable = {
+			var = MEX.villa_owned_states
+			value = -1
+		}
+		set_state_flag = carranza_state_support
+	}
+	else_if = {
+		limit = {
+			has_state_flag = diaz_state_support
+		}
+		clr_state_flag = diaz_state_support
+		add_to_variable = {
+			var = MEX.diaz_owned_states
+			value = -1
+		}
+		set_state_flag = carranza_state_support
+	}
+	else_if = {
+		set_state_flag = carranza_state_support
+	}
+	add_to_variable = {
+		var = MEX.carranza_owned_states
+		value = 1
+	}
+}
+
+zapata_state_superiority = {
+	if = {
+		limit = {
+			has_state_flag = carranza_state_support
+		}
+		clr_state_flag = carranza_state_support
+		add_to_variable = {
+			var = MEX.carranza_owned_states
+			value = -1
+		}
+		set_state_flag = zapata_state_support
+	}
+	else_if = {
+		limit = {
+			has_state_flag = villa_state_support
+		}
+		clr_state_flag = villa_state_support
+		add_to_variable = {
+			var = MEX.villa_owned_states
+			value = -1
+		}
+		set_state_flag = zapata_state_support
+	}
+	else_if = {
+		limit = {
+			has_state_flag = diaz_state_support
+		}
+		clr_state_flag = diaz_state_support
+		add_to_variable = {
+			var = MEX.diaz_owned_states
+			value = -1
+		}
+		set_state_flag = zapata_state_support
+	}
+	else_if = {
+		set_state_flag = zapata_state_support
+	}
+	add_to_variable = {
+		var = MEX.zapata_owned_states
+		value = 1
+	}
+}
+
+villa_state_superiority = {
+	if = {
+		limit = {
+			has_state_flag = carranza_state_support
+		}
+		clr_state_flag = carranza_state_support
+		add_to_variable = {
+			var = MEX.carranza_owned_states
+			value = -1
+		}
+		set_state_flag = villa_state_support
+	}
+	else_if = {
+		limit = {
+			has_state_flag = zapata_state_support
+		}
+		clr_state_flag = zapata_state_support
+		add_to_variable = {
+			var = MEX.zapata_owned_states
+			value = -1
+		}
+		set_state_flag = villa_state_support
+	}
+	else_if = {
+		limit = {
+			has_state_flag = diaz_state_support
+		}
+		clr_state_flag = diaz_state_support
+		add_to_variable = {
+			var = MEX.diaz_owned_states
+			value = -1
+		}
+		set_state_flag = villa_state_support
+	}
+	else_if = {
+		set_state_flag = villa_state_support
+	}
+	add_to_variable = {
+		var = MEX.villa_owned_states
+		value = 1
+	}
+}
+
+diaz_state_superiority = {
+	if = {
+		limit = {
+			has_state_flag = carranza_state_support
+		}
+		clr_state_flag = carranza_state_support
+		add_to_variable = {
+			var = MEX.carranza_owned_states
+			value = -1
+		}
+		set_state_flag = diaz_state_support
+	}
+	else_if = {
+		limit = {
+			has_state_flag = villa_state_support
+		}
+		clr_state_flag = villa_state_support
+		add_to_variable = {
+			var = MEX.villa_owned_states
+			value = -1
+		}
+		set_state_flag = diaz_state_support
+	}
+	else_if = {
+		limit = {
+			has_state_flag = zapata_state_support
+		}
+		clr_state_flag = zapata_state_support
+		add_to_variable = {
+			var = MEX.zapata_owned_states
+			value = -1
+		}
+		set_state_flag = diaz_state_support
+	}
+	else_if = {
+		set_state_flag = diaz_state_support
+	}
+	add_to_variable = {
+		var = MEX.diaz_owned_states
+		value = 1
 	}
 }

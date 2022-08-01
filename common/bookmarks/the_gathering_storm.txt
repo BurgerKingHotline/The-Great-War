@@ -72,6 +72,15 @@ bookmarks = {
 			}
 		}
 
+		"ITA"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
 		"---"={
 			history = "OTHER_BLITZKRIEG_DESC"
 		}
@@ -79,14 +88,6 @@ bookmarks = {
 		"SER"={
 			minor = yes
 			history = "RAJ_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-			}
-			focuses = {
-			}
-		}
-		"ITA"={#i dont know why minor = yes would make it dissapear so
-			history = "ITA_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 			}

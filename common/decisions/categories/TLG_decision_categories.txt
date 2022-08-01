@@ -116,8 +116,20 @@ SOV_form_ssrs = {
 }
 
 # MEX
-MEX_revolution_escalation = {
+
+MEX_debug_category = {
 	visible_when_empty = no
+	priority = 150
+	allowed = {
+		original_tag = MEX
+	}
+	visible = {
+		is_debug = yes
+	}
+}
+
+MEX_revolution_escalation = {
+	visible_when_empty = yes
 	priority = 100
 	allowed = {
 		original_tag = MEX
@@ -127,7 +139,7 @@ MEX_revolution_escalation = {
 	}
 }
 MEX_carranza_support_category = {
-	visible_when_empty = no
+	visible_when_empty = yes
 	priority = 10
 	allowed = {
 		original_tag = MEX
@@ -138,7 +150,7 @@ MEX_carranza_support_category = {
 	}
 }
 MEX_zapata_support_category = {
-	visible_when_empty = no
+	visible_when_empty = yes
 	priority = 10
 	allowed = {
 		original_tag = MEX
@@ -149,7 +161,7 @@ MEX_zapata_support_category = {
 	}
 }
 MEX_villa_support_category = {
-	visible_when_empty = no
+	visible_when_empty = yes
 	priority = 10
 	allowed = {
 		original_tag = MEX
@@ -160,7 +172,7 @@ MEX_villa_support_category = {
 	}
 }
 MEX_diaz_support_category = {
-	visible_when_empty = no
+	visible_when_empty = yes
 	priority = 10
 	allowed = {
 		original_tag = MEX

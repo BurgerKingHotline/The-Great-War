@@ -1,4 +1,29 @@
 ﻿l_english:
+ # events
+ mexican_revolution.1.t:0 "Transitional Government Takes Power"
+ mexican_revolution.1.d:0 ""
+ mexican_revolution.1.a:0 "This is only the beginning"
+ mexican_revolution.2.t:0 "Revolution Sides Solidify"
+ mexican_revolution.2.d:0 ""
+ mexican_revolution.2.a:0 "Support Zapatas"
+ mexican_revolution.2.b:0 "Support Villas"
+ mexican_revolution.2.c:0 "Support Diaz"
+ mexican_revolution.2.e:0 "Support Carranza"
+
+ # decisions
+ MEX_revolution_escalation:0 "Revolution Escalation"
  MEX_revolution_escalation_desc:0 "Diaz: [?diaz_owned_states]\nZapata: [?zapata_owned_states]\nVilla: [?villa_owned_states]\nCarranza: [?carranza_owned_states]"
+ feliz_diaz_escalates:0 "Diaz Escalation"
+ carranza_villa_escalates:0 "Carranza and Villa Escalation"
+ random_state_change:0 "State Loyalty Change"
+ full_civil_war:0 "Sides Solidify"
+ MEX_carranza_support_category:0 "Expand Carranza Support"
+ carranza_pacify_state:0 "Pacify [FROM.GetName]"
+ MEX_zapata_support_category:0 "Expand Zapata Support"
+ zapata_pacify_state:0 "Pacify [FROM.GetName]"
+ MEX_villa_support_category:0 "Expand Villa Support"
+ villa_pacify_state:0 "Pacify [FROM.GetName]"
+ MEX_diaz_support_category:0 "Expand Diaz Support"
+ diaz_pacify_state:0 "Pacify [FROM.GetName]"
 
  

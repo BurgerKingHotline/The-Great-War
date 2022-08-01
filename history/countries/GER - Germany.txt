@@ -1,8 +1,26 @@
 ﻿capital = 64
+oob = "GENERIC_1910"
+
+# leaders 
+
+recruit_character = GER_wilhelm_ii
+
+# navy 
+
+recruit_character = GER_albert_heinrich
+recruit_character = GER_alfred_tirpitz
+recruit_character = GER_hans_koester
+recruit_character = GER_henning_holtzendorff
+
+# army
+
+recruit_character = GER_paul_hindenburg
+recruit_character = GER_august_mackensen
+recruit_character = GER_helmuth_moltke
+recruit_character = GER_josias_heeringen
 
 add_ideas = {
 	ger_prussian_roots 
-	ger_expanding_sphere 
 }
 
 if = {

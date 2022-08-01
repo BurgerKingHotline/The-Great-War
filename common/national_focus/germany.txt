@@ -34,7 +34,7 @@
 	}
 
 	focus = {
-		id = GER_potsdam_conference
+		id = GER_expand_political_sphere
 		icon = GFX_focus_renounce_the_treaty_of_trianon
 		relative_position_id = GER_contest_british_navy
 		prerequisite = {
@@ -49,6 +49,9 @@
 		}
 
 		completion_reward = {
+			add_ideas = {
+				ger_expanding_sphere 
+			}
 		}
 
 		ai_will_do = {
@@ -58,9 +61,9 @@
 	focus = {
 		id = GER_south_border
 		icon = GFX_goal_generic_neutrality_focus
-		relative_position_id = GER_potsdam_conference
+		relative_position_id = GER_expand_political_sphere
 		prerequisite = {
-			focus = GER_potsdam_conference
+			focus = GER_expand_political_sphere
 		}
 		x = -5
 		y = 1

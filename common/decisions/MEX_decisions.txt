@@ -1,7 +1,63 @@
+MEX_debug_category = {
+	select_diaz = {
+		available = {
+			NOT = {
+				has_country_flag = MEX_supported_villa
+				has_country_flag = MEX_supported_carranza
+				has_country_flag = MEX_supported_zapata
+			}
+		}
+		complete_effect = {
+			set_country_flag = MEX_supported_diaz
+		}
+		fire_only_once = yes
+	}
+	select_villa = {
+		available = {
+			NOT = {
+				has_country_flag = MEX_supported_diaz
+				has_country_flag = MEX_supported_carranza
+				has_country_flag = MEX_supported_zapata
+			}
+		}
+		complete_effect = {
+			set_country_flag = MEX_supported_villa
+		}
+		fire_only_once = yes
+	}
+	select_carranza = {
+		available = {
+			NOT = {
+				has_country_flag = MEX_supported_villa
+				has_country_flag = MEX_supported_diaz
+				has_country_flag = MEX_supported_zapata
+			}
+		}
+		complete_effect = {
+			set_country_flag = MEX_supported_carranza
+		}
+		fire_only_once = yes
+	}
+	select_zapata = {
+		available = {
+			NOT = {
+				has_country_flag = MEX_supported_villa
+				has_country_flag = MEX_supported_carranza
+				has_country_flag = MEX_supported_diaz
+			}
+		}
+		complete_effect = {
+			set_country_flag = MEX_supported_zapata
+		}
+		fire_only_once = yes
+	}
+}
+
+
 MEX_revolution_escalation = {
 
 	feliz_diaz_escalates = {
-		days_mission_timeout = 10 #571
+		days_mission_timeout = 571 #571
 		fire_only_once = yes
 		activation = {
 			has_country_flag = diaz_escalating
@@ -25,7 +81,7 @@ MEX_revolution_escalation = {
 	}
 
 	carranza_villa_escalates = {
-		days_mission_timeout = 10 #161
+		days_mission_timeout = 161 #161
 		fire_only_once = yes
 		activation = {
 			has_country_flag = carranza_villa_escalating
@@ -60,14 +116,15 @@ MEX_revolution_escalation = {
 			clr_country_flag = carranza_villa_escalating
 			set_country_flag = full_civil_war
 			set_country_flag = random_state_change
+			activate_mission = random_state_change
 		}
 	}
 
 	random_state_change = {
-		days_mission_timeout = 5 #137
+		days_mission_timeout = 137 #137
 		activation = {
 			has_country_flag = random_state_change
-			check_variable = { mex_random_state_changes > 3 }
+			check_variable = { mex_random_state_changes < 3 }
 		}
 		available = {
 			NOT = {
@@ -84,6 +141,7 @@ MEX_revolution_escalation = {
 					var = mex_random_state_changes
 					value = 1
 				}
+				activate_mission = random_state_change
 			}
 			random_state = {
 				limit = {
@@ -131,7 +189,7 @@ MEX_revolution_escalation = {
 	}
 
 	full_civil_war = {
-		days_mission_timeout = 15 #549
+		days_mission_timeout = 549 #549
 		fire_only_once = yes
 		activation = {
 			has_country_flag = full_civil_war
@@ -143,9 +201,15 @@ MEX_revolution_escalation = {
 		}
 		timeout_effect = {
 			check_sides_civil_war = yes	
+			country_event = {
+    			id = mexican_revolution.2
+    			days = 7
+   			 	random_days = 7
+			}
 		}
 	}
 }
+
 
 MEX_carranza_support_category = {
 	carranza_pacify_state = {
@@ -178,11 +242,92 @@ MEX_carranza_support_category = {
 	}
 }
 MEX_zapata_support_category = {
-	
+	zapata_pacify_state = {
+		target_array = controlled_states
+		days_re_enable = 210
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_state_flag = zapata_state_support
+				}
+				any_neighbor_state = {
+					has_state_flag = zapata_state_support
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+		state_target = yes
+		cost = 150
+		complete_effect = {
+			zapata_state_superiority = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+        }
+	}	
 }
 MEX_villa_support_category = {
-	
+	villa_pacify_state = {
+		target_array = controlled_states
+		days_re_enable = 210
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_state_flag = villa_state_support
+				}
+				any_neighbor_state = {
+					has_state_flag = villa_state_support
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+		state_target = yes
+		cost = 150
+		complete_effect = {
+			villa_state_superiority = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+        }
+	}	
 }
 MEX_diaz_support_category = {
-	
+	diaz_pacify_state = {
+		target_array = controlled_states
+		days_re_enable = 210
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_state_flag = diaz_state_support
+				}
+				any_neighbor_state = {
+					has_state_flag = diaz_state_support
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+		state_target = yes
+		cost = 150
+		complete_effect = {
+			diaz_state_superiority = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+        }
+	}
 }

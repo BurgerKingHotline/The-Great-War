@@ -12,4 +12,129 @@ characters={
 			id=-1
 		}
 	}
+	GER_paul_hindenburg={
+		name="Paul von Hindenburg"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		field_marshal={
+			skill = 5
+    		attack_skill = 6
+    		defense_skill = 4
+    		planning_skill = 8
+    		logistics_skill = 4
+		}
+	}
+	GER_august_mackensen={
+		name="August von Mackensen"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		field_marshal={
+			skill = 8
+    		attack_skill = 4
+    		defense_skill = 5
+    		planning_skill = 6
+    		logistics_skill = 5
+		}
+	}
+	GER_helmuth_moltke={
+		name="Helmuth von Moltke"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		corps_commander={
+			skill = 3
+    		attack_skill = 6
+    		defense_skill = 2
+    		planning_skill = 8
+    		logistics_skill = 3
+		}
+	}
+	GER_josias_heeringen={
+		name="Josias von Heeringen"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		corps_commander={
+			skill = 4
+    		attack_skill = 2
+    		defense_skill = 3
+    		planning_skill = 6
+    		logistics_skill = 6
+		}
+	}
+	GER_albert_heinrich={
+		name="Albert Heinrich"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		navy_leader={
+    		skill = 2
+    		attack_skill = 3
+    		defense_skill = 4
+    		maneuvering_skill = 4
+    		coordination_skill = 2
+		}
+		country_leader={
+			ideology=despotism 
+			expire="1930.1.1.1"
+			id=-1
+		}
+	}
+	GER_alfred_tirpitz={
+		name="Alfred von Tirpitz"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		navy_leader={
+    		skill = 5
+    		attack_skill = 5
+    		defense_skill = 2
+    		maneuvering_skill = 2
+    		coordination_skill = 5
+		}
+	}
+	GER_hans_koester={
+		name="Hans von Koester"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		navy_leader={
+    		skill = 4
+    		attack_skill = 4
+    		defense_skill = 2
+    		maneuvering_skill = 2
+    		coordination_skill = 5
+		}
+	}
+	GER_henning_holtzendorff={
+		name="Henning von Holtzendorff"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		navy_leader={
+    		skill = 2
+    		attack_skill = 4
+    		defense_skill = 1
+    		maneuvering_skill = 3
+    		coordination_skill = 2
+		}
+	}
 }

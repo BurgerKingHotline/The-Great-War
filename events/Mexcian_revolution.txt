@@ -49,7 +49,8 @@ country_event = {
 		}
 	}
 	option = {
-		name = mexican_revolution.2.a # villa side
+		name = mexican_revolution.2.b # villa side
+		starting_civil_war_other_side_villa = yes
 		trigger = {
 			OR = {
 				check_variable = { mx = 1 }
@@ -58,7 +59,8 @@ country_event = {
 		}
 	}
 	option = {
-		name = mexican_revolution.2.a # diaz side
+		name = mexican_revolution.2.c # diaz side
+		starting_civil_war_other_side_diaz = yes
 		trigger = {
 			OR = {
 				check_variable = { mx = 2 }
@@ -67,7 +69,8 @@ country_event = {
 		}
 	}
 	option = {
-		name = mexican_revolution.2.a # carranza side
+		name = mexican_revolution.2.e # carranza side
+		starting_civil_war_other_side_carranza = yes
 		trigger = {
 			OR = {
 				check_variable = { mx = 3 }
