@@ -585,7 +585,7 @@
 		cost = 70
 		
 		available = {
-			hidden_effect = {
+			hidden_trigger = {
 				all_state = {
 					OR = {
 						AND = {
@@ -2557,7 +2557,7 @@
 
 			every_other_country = {
 				limit = {
-					has_country_flag = { RUS_controls_manchuria }
+					has_country_flag = RUS_controls_manchuria 
 				}
 				custom_effect_tooltip = needs_approval
 			}
