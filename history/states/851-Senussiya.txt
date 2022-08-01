@@ -6,9 +6,11 @@ state={
 	
 	state_category = wasteland
 	impassable = yes
-
+	resources={
+		oil=3 # was: 2
+	}
 	history={
-		owner = OTT
+		owner = EGY
 		buildings = {
 			infrastructure = 0
 		}

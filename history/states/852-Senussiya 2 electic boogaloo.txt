@@ -8,7 +8,7 @@ state={
 	impassable = yes
 
 	history={
-		owner = OTT
+		owner = EGY
 		buildings = {
 			infrastructure = 0
 		}

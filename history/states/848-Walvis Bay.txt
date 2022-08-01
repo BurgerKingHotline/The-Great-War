@@ -6,8 +6,7 @@ state=
 	
 	state_category = town
 
-	history=
-	{
+	history = {
 		owner = SAF
 		buildings = {
 			infrastructure = 3
@@ -15,7 +14,7 @@ state=
 				naval_base = 2
 			}
 		}
-
+		add_core_of = NMB
 		add_claim_by = GER
 
 		victory_points = {

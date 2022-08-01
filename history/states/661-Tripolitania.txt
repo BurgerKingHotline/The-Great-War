@@ -4,6 +4,10 @@ state={
 	manpower = 17617
 	
 	state_category = wasteland
+
+	resources={
+		oil=3 # was: 2
+	}
 	
 	history={
 		owner = OTT

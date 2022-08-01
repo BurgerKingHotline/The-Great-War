@@ -5,6 +5,10 @@ state={
 	
 	state_category = wasteland
 
+	resources={
+		oil=18 # was: 2
+	}
+
 	history={
 		owner = OTT
 		buildings = {
