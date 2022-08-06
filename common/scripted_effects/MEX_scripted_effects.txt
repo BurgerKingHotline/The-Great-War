@@ -20,122 +20,125 @@
 #Senussiya resistence mechanic scripted effects, theres probably a better way to do this though
 
 check_sides_civil_war = {
-			add_to_temp_array = { temparr = zapata_state_support } # Simpler to do operations with an array later on.
-			add_to_temp_array = { temparr = villa_state_support }
-			add_to_temp_array = { temparr = carranza_state_support }
-			add_to_temp_array = { temparr = diaz_state_support }
+	hidden_effect = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					has_state_flag = carranza_state_support
+					has_state_flag = zapata_state_support
+					has_state_flag = villa_state_support
+					has_state_flag = diaz_state_support
+				}
+			}
+			if = {
+				limit = {
+					has_state_flag = carranza_state_support
+				}
+				set_variable = {
+					var = THIS.support_frame
+					value = 3
+				}
+			}
+			else_if = {
+				limit = {
+					has_state_flag = zapata_state_support
+				}
+				set_variable = {
+					var = THIS.support_frame
+					value = 4
+				}
+			}
+			else_if = {
+				limit = {
+					has_state_flag = villa_state_support
+				}
+				set_variable = {
+					var = THIS.support_frame
+					value = 5
+				}
+			}
+			else_if = {
+				limit = {
+					has_state_flag = diaz_state_support
+				}
+				set_variable = {
+					var = THIS.support_frame
+					value = 2
+				}
+			}
+		}
+		add_to_temp_array = { temparr = zapata_owned_states } # Simpler to do operations with an array later on.
+add_to_temp_array = { temparr = villa_owned_states }
+add_to_temp_array = { temparr = carranza_owned_states }
+add_to_temp_array = { temparr = diaz_owned_states }
+clear_array = potential_max
 
-			if = {                              # Checking which of A and B is larger. Assigning a variable to represent it.
-    			limit = {
-        			check_variable = { A > B }
-    			}
-    			set_temp_variable = { t1 = 0 }
+for_loop_effect = {
+    start = 0
+    end = 4
+    value = temp
+    if = {
+        limit = {
+            NOT = {
+                count_triggers = {
+                    amount = 2
+                    check_variable = { temparr^temp < temparr^0 }
+                    check_variable = { temparr^temp < temparr^1 }
+                    check_variable = { temparr^temp < temparr^2 }
+                    check_variable = { temparr^temp < temparr^3 }
+                }
+            }
+        }
+        add_to_array = { potential_max = temp }
+        log = "[?temp] added to potential max"
+    }
+}
+while_loop_effect = {
+    limit = {
+        check_variable = { potential_max^num > 2 }
+    }
+    set_temp_variable_to_random = { 
+        var = index_to_remove
+        max = potential_max^num
+        integer = yes
+    }
+    if = {
+        limit = {
+            count_triggers = {
+                amount = 2
+                check_variable = { temparr^potential_max^index_to_remove = temparr^0 }
+                check_variable = { temparr^potential_max^index_to_remove = temparr^1 }
+                check_variable = { temparr^potential_max^index_to_remove = temparr^2 }
+                check_variable = { temparr^potential_max^index_to_remove = temparr^3 }
+            }
+        }
+        log = "[?potential_max^index_to_remove] removed from potential max"
+        remove_from_array = {
+            array = potential_max
+            index = index_to_remove
+        }
+    }
+}
+		if = {
+			limit = {
+				check_variable = { potential_max^1 > potential_max^0 }
 			}
-			else_if = {
-    			limit = {
-        			check_variable = { A < B }
-    			}
-    			set_temp_variable = { t1 = 1 }
-			}
-			else = {
-    			random_list = {
-        			50 = {
-            			set_temp_variable = { t1 = 0 }
-        			}                                       # Just assume a random one is larger otherwise.    
-        			50 = {
-            			set_temp_variable = { t1 = 1 }
-        			}
-    			}
-			}
-			if = {                              # Doing the same with C and D.
-    			limit = {
-        			check_variable = { C > D }
-    			}
-    			set_temp_variable = { t2 = 2 }
-			}
-			else_if = {
-    			limit = {
-        			check_variable = { C < D }
-    			}
-    			set_temp_variable = { t2 = 3 }
-			}
-			else = {
-    			random_list = {
-        			50 = {
-            			set_temp_variable = { t2 = 2 }
-        			}
-        			50 = {
-            			set_temp_variable = { t2 = 3 }
-        			}
-    			}
-			}
-			if = {
-    			limit = {
-        			check_variable = { temparr^t1 > temparr^t2 }        # Exactly why an array is used.
-    			}
-   			 set_temp_variable = { mx = t1 }     # The larger of t1 and t2 is surely the maximum value. Let's store it as mx.
-    			set_temp_variable = { t1 = t2 }     # The other one is surely either #2 or #3. Let it be t1 for later.
-			}
-			else_if = {
-    			limit = {
-        			check_variable = { temparr^t1 < temparr^t2 }
-    			}
-    			set_temp_variable = { mx = t2 }
-			}
-			else = {
-    			random_list = {
-        			50 = {
-            			set_temp_variable = { mx = t1 }
-            			set_temp_variable = { t1 = t2 }
-        			}
-        			50 = {
-            			set_temp_variable = { mx = t2 }
-        			}
-    			}
-			}
-			if = {                               # This may be a bit confusing, obtaining the other one that can be #2 (or frankly #3 or #4).
-    			limit = {                        # So far, we have compared A and B, then C and D, then found the larger one.
-        			check_variable = { mx > 1 }  # Let's say A < B < C < D.
-    			}                                # We have found t1 = B, mx = D.
-    			set_temp_variable = { t2 = 5 }   # In this case, it is already known that A is lesser than B and, since D is larger than B, lesser than D too.
-			}                                    # So A can be disqualified as a #2 candidate. 
-			else = {                             # So we need to get the C.
-    			set_temp_variable = { t2 = 1 }   # In each case, that's the first number we compare the maximum to.
-			}                                    # If maximum has ID of 0 or 1, then the sum of IDs is 0. Otherwise, their sum is 5. Subtracting the ID from the sum can find the other #2 candidate.
-			subtract_from_temp_variable = { t2 = mx }   # So, overall, if mx = A, t2 = B. if mx = B, t2 = A. if mx = C, t2 = D. if mx = D, t2 = C.
-			if = {
-    			limit = {
-        			check_variable = { temparr^t1 > temparr^t2 }
-    			}
-    			set_temp_variable = { mx2 = t1 }
-			}
-			else_if = {
-    			limit = {
-        			check_variable = { temparr^t1 < temparr^t2 }
-    			}
-    			set_temp_variable = { mx2 = t2 }
-			}
-			else = {
-    			random_list = {
-        			50 = {
-            			set_temp_variable = { mx2 = t1 }
-        			}
-        			50 = {
-            			set_temp_variable = { mx2 = t2 }
-        			}
-   				}
-			}
+			set_temp_variable = { mx = potential_max^1 }
+			set_variable = { potential_max^1 = potential_max^0 }
+			set_variable = { potential_max^0 = mx }
+		}
+	}
 }
 
 starting_civil_war_other_side_zapata = {
 	if = {
     	limit = {
-        	check_variable = { mx = 0 }
+        	check_variable = { potential_max^0= 0 }
     	}
-		set_temp_variable = { the_other_fuckers = mx2 }
+		set_temp_variable = { the_other_fuckers = potential_max^1 }
 	}
 	else = {
-    	set_temp_variable = { the_other_fuckers = mx }
+    	set_temp_variable = { the_other_fuckers = potential_max^0}
 	}
 	if = {
 		limit = {
@@ -146,31 +149,50 @@ starting_civil_war_other_side_zapata = {
 			ideology = democratic
 			size = 0.5
 			capital = 41
-			states = { 41 165 167 168 173 175 790 792 793 794 }
+			states = all
+				states_filter = {
+					has_state_flag = villa_state_support  
+				}
 		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { the_other_fuckers = 2 }
 		}
+		set_cosmetic_tag = mex_conventionists
 		start_civil_war = {
 			ruling_party = communism
 			ideology = neutrality
 			size = 0.5
 			capital = 41
-			states = { 41 165 167 168 173 175 790 792 793 794 }
+			set_cosmetic_tag = mex_constitutionalists
+			states = all
+				states_filter = {
+					OR = {
+						has_state_flag = carranza_state_support  
+						has_state_flag = diaz_state_support  
+					}
+				}
 		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { the_other_fuckers = 3 }
 		}
+		set_cosmetic_tag = mex_conventionists
 		start_civil_war = {
 			ruling_party = communism
 			ideology = neutrality
 			size = 0.5
 			capital = 41
-			states = { 41 165 167 168 173 175 790 792 793 794 }
+			set_cosmetic_tag = mex_constitutionalists
+			states = all
+				states_filter = {
+					OR = {
+						has_state_flag = carranza_state_support  
+						has_state_flag = diaz_state_support  
+					}
+				}
 		}
 	}
 }
@@ -178,12 +200,12 @@ starting_civil_war_other_side_zapata = {
 starting_civil_war_other_side_villa = {
 	if = {
     	limit = {
-        	check_variable = { mx = 1 }
+        	check_variable = { potential_max^0= 1 }
     	}
-		set_temp_variable = { the_other_fuckers = mx2 }
+		set_temp_variable = { the_other_fuckers = potential_max^1 }
 	}
 	else = {
-    	set_temp_variable = { the_other_fuckers = mx }
+    	set_temp_variable = { the_other_fuckers = potential_max^0}
 	}
 	if = {
 		limit = {
@@ -194,31 +216,50 @@ starting_civil_war_other_side_villa = {
 			ideology = communism
 			size = 0.5
 			capital = 41
-			states = { 41 165 167 168 173 175 790 792 793 794 }
+			states = all
+				states_filter = {
+					has_state_flag = zapata_state_support  
+				}
 		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { the_other_fuckers = 2 }
 		}
+		set_cosmetic_tag = mex_conventionists
 		start_civil_war = {
 			ruling_party = democratic
 			ideology = neutrality
 			size = 0.5
 			capital = 41
-			states = { 41 165 167 168 173 175 790 792 793 794 }
+			set_cosmetic_tag = mex_constitutionalists
+			states = all
+			states_filter = {
+				OR = {
+					has_state_flag = carranza_state_support  
+					has_state_flag = diaz_state_support  
+				}
+			}
 		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { the_other_fuckers = 3 }
 		}
+		set_cosmetic_tag = mex_conventionists
 		start_civil_war = {
 			ruling_party = democratic
 			ideology = neutrality
 			size = 0.5
 			capital = 41
-			states = { 41 165 167 168 173 175 790 792 793 794 }
+			set_cosmetic_tag = mex_constitutionalists
+			states = all
+				states_filter = {
+					OR = {
+						has_state_flag = carranza_state_support  
+						has_state_flag = diaz_state_support  
+					}
+				}
 		}
 	}
 }
@@ -226,12 +267,12 @@ starting_civil_war_other_side_villa = {
 starting_civil_war_other_side_carranza = {
 	if = {
     	limit = {
-        	check_variable = { mx = 2 }
+        	check_variable = { potential_max^0= 2 }
     	}
-		set_temp_variable = { the_other_fuckers = mx2 }
+		set_temp_variable = { the_other_fuckers = potential_max^1 }
 	}
 	else = {
-    	set_temp_variable = { the_other_fuckers = mx }
+    	set_temp_variable = { the_other_fuckers = potential_max^0}
 	}
 	if = {
 		limit = {
@@ -274,12 +315,12 @@ starting_civil_war_other_side_carranza = {
 starting_civil_war_other_side_diaz = {
 	if = {
     	limit = {
-        	check_variable = { mx = 3 }
+        	check_variable = { potential_max^0= 3 }
     	}
-		set_temp_variable = { the_other_fuckers = mx2 }
+		set_temp_variable = { the_other_fuckers = potential_max^1 }
 	}
 	else = {
-    	set_temp_variable = { the_other_fuckers = mx }
+    	set_temp_variable = { the_other_fuckers = potential_max^0}
 	}
 	if = {
 		limit = {

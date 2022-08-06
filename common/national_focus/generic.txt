@@ -17,7 +17,7 @@
 		icon = GFX_goal_generic_political_pressure
 		x = -13
 		y = 0
-		cost = 10
+		cost = 35
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		mutually_exclusive = { focus = GEN_neutrality }
 		available_if_capitulated = yes
@@ -322,7 +322,7 @@
 		icon = GFX_goal_generic_neutrality_focus
 		x = -5
 		y = 0
-		cost = 10
+		cost = 35
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		mutually_exclusive = { focus = GEN_intervention }
 		available_if_capitulated = yes
@@ -1756,7 +1756,7 @@
 		icon = GFX_focus_generic_support_the_left_right
 		x = -25
 		y = 0
-		cost = 10
+		cost = 35
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = yes
 
@@ -1770,7 +1770,7 @@
 		icon = GFX_focus_generic_military_academy
 		x = -1
 		y = 1
-		cost = 10
+		cost = 35
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		mutually_exclusive = { focus = GEN_despotism }
 		prerequisite = { focus = GEN_political_sphere }
@@ -1787,7 +1787,7 @@
 		icon = GFX_goal_support_democracy
 		x = -2
 		y = 1
-		cost = 10
+		cost = 60
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		mutually_exclusive = { focus = GEN_socialism }
 		prerequisite = { focus = GEN_individual_liberties }
@@ -1804,7 +1804,7 @@
 		icon = GFX_focus_prc_agrarian_socialism
 		x = 0
 		y = 1
-		cost = 10
+		cost = 60
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_individual_liberties }
 		mutually_exclusive = { focus = GEN_democracy }
@@ -1824,7 +1824,7 @@
 		icon = GFX_focus_generic_treaty
 		x = 1
 		y = 1
-		cost = 10
+		cost = 70
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_democracy focus = GEN_socialism }
 		relative_position_id = GEN_democracy
@@ -1840,7 +1840,7 @@
 		icon = GFX_focus_generic_the_giant_wakes
 		x = -1
 		y = 1
-		cost = 10
+		cost = 70
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_reform_country }
 		prerequisite = { focus = GEN_democracy }
@@ -1857,7 +1857,7 @@
 		icon = GFX_goal_generic_neutrality_focus
 		x = -2
 		y = 1
-		cost = 10
+		cost = 60
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_sufferage }
 		mutually_exclusive = { focus = GEN_freedom_fight }
@@ -1874,7 +1874,7 @@
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 1
-		cost = 10
+		cost = 25
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_deterrence }
 		relative_position_id = GEN_deterrence
@@ -1890,7 +1890,7 @@
 		icon = GFX_goal_fortify_the_westwall
 		x = 0
 		y = 1
-		cost = 10
+		cost = 60
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_open_economy }
 		relative_position_id = GEN_open_economy
@@ -1906,7 +1906,7 @@
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		x = 0
 		y = 1
-		cost = 10
+		cost = 60
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_sufferage }
 		mutually_exclusive = { focus = GEN_deterrence }
@@ -1923,7 +1923,7 @@
 		icon = GFX_focus_generic_strike_at_democracy1
 		x = 1
 		y = 1
-		cost = 10
+		cost = 60
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_freedom_fight focus = GEN_political_propoganda }
 		relative_position_id = GEN_freedom_fight
@@ -1931,13 +1931,6 @@
 
 		completion_reward = {
 			add_ideas = why_we_fight_focus
-			custom_effect_tooltip = why_we_fight_effect
-			hidden_effect = {
-				if = {
-					limit = { NOT = { has_idea = neutrality_idea } }
-					set_rule = { can_create_factions = yes }
-				}			
-			}
 		}
 	}
 
@@ -1946,7 +1939,7 @@
 		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 1
-		cost = 10
+		cost = 80
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_why_we_fight }
 		relative_position_id = GEN_why_we_fight
@@ -1969,7 +1962,7 @@
 		icon = GFX_goal_generic_soviet_construction
 		x = 1
 		y = 1
-		cost = 10
+		cost = 70
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_reform_country }
 		prerequisite = { focus = GEN_socialism }
@@ -1986,7 +1979,7 @@
 		icon = GFX_goal_generic_propaganda
 		x = 1
 		y = 1
-		cost = 10
+		cost = 70
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_workers_economy focus = GEN_militarism }
 		relative_position_id = GEN_workers_economy
@@ -2002,7 +1995,7 @@
 		icon = GFX_goal_generic_political_pressure
 		x = 1
 		y = 1
-		cost = 10
+		cost = 35
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_political_sphere }
 		mutually_exclusive = { focus = GEN_individual_liberties }
@@ -2019,7 +2012,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 1
-		cost = 10
+		cost = 60
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_despotism }
 		mutually_exclusive = { focus = GEN_authoritarianism }
@@ -2039,7 +2032,7 @@
 		icon = GFX_focus_generic_military_dictatorship
 		x = 2
 		y = 1
-		cost = 10
+		cost = 60
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_despotism }
 		mutually_exclusive = { focus = GEN_nationalism }
@@ -2056,7 +2049,7 @@
 		icon = GFX_focus_generic_japanese_imperial_glory
 		x = 1
 		y = 1
-		cost = 10
+		cost = 70
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_nationalism focus = GEN_authoritarianism }
 		relative_position_id = GEN_nationalism
@@ -2072,7 +2065,7 @@
 		icon = GFX_focus_generic_military_mission
 		x = -1
 		y = 1
-		cost = 10
+		cost = 70
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_chauvinism }
 		prerequisite = { focus = GEN_nationalism }
@@ -2095,7 +2088,7 @@
 		icon = GFX_focus_usa_voter_registration_act
 		x = 1
 		y = 1
-		cost = 10
+		cost = 50
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_chauvinism }
 		prerequisite = { focus = GEN_authoritarianism }
@@ -2112,7 +2105,7 @@
 		icon = GFX_goal_demand_sudetenland
 		x = 0
 		y = 1
-		cost = 10
+		cost = 50
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_traditional_society }
 		relative_position_id = GEN_traditional_society
@@ -2128,7 +2121,7 @@
 		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 1
-		cost = 10
+		cost = 25
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_statism }
 		relative_position_id = GEN_statism
@@ -2144,7 +2137,7 @@
 		icon = GFX_goal_generic_axis_build_infantry
 		x = 0
 		y = 1
-		cost = 10
+		cost = 60
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = GEN_closed_economy }
 		relative_position_id = GEN_closed_economy

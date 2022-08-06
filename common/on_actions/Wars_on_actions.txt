@@ -268,10 +268,12 @@ on_actions = {
                 limit = {
                     date < 1911.1.1
                 }  
-			    country_event = {
-    			    id = mexican_revolution.2
-    			    days = 208
-			    }
+                MEX = {
+			        country_event = {
+    			        id = mexican_revolution.2
+    			        days = 208
+			        }
+                }
             }
         }
     }

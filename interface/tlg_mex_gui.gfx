@@ -1,0 +1,67 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_MEX_baja"
+		texturefile = "gfx/interface/mexstates/MEX_baja.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_sonora"
+		texturefile = "gfx/interface/mexstates/MEX_sonora.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_chihuahua"
+		texturefile = "gfx/interface/mexstates/MEX_chihuahua.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_coahuila"
+		texturefile = "gfx/interface/mexstates/MEX_coahuila.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_tamaulipas"
+		texturefile = "gfx/interface/mexstates/MEX_tamaulipas.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_yucatan"
+		texturefile = "gfx/interface/mexstates/MEX_yucatan.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_veracruz"
+		texturefile = "gfx/interface/mexstates/MEX_veracruz.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_oaxaca"
+		texturefile = "gfx/interface/mexstates/MEX_oaxaca.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_chiapas"
+		texturefile = "gfx/interface/mexstates/MEX_chiapas.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_mainmex"
+		texturefile = "gfx/interface/mexstates/MEX_mainmex.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_sinaloa"
+		texturefile = "gfx/interface/mexstates/MEX_sinaloa.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_nayarit"
+		texturefile = "gfx/interface/mexstates/MEX_nayarit.dds"
+		noOfFrames = 5
+	}
+	SpriteType = {
+		name = "GFX_MEX_guerrero"
+		texturefile = "gfx/interface/mexstates/MEX_guerrero.dds"
+		noOfFrames = 5
+	}
+}

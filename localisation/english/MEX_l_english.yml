@@ -11,8 +11,16 @@
  mexican_revolution.2.e:0 "Support Carranza"
 
  # decisions
- MEX_revolution_escalation:0 "Revolution Escalation"
- MEX_revolution_escalation_desc:0 "Diaz: [?diaz_owned_states]\nZapata: [?zapata_owned_states]\nVilla: [?villa_owned_states]\nCarranza: [?carranza_owned_states]"
+ MEX_revolution_escalation:0 "The Mexican Revolution"
+ MEX_revolution_escalation_desc:0 "[mex_rev_descs]\n\nThe Top Factions:  [one_side_loc],  [two_side_loc]\n"
+ zapata_name:0 "§tZapata§!"
+ villa_name:0 "§1Villa§!"
+ carranza_name:0 "§HCarranza§!"
+ diaz_name:0 "§5Diaz§!"
+ mex_desc_carranza:0 "§HCarranza:§!  [?carranza_owned_states]\n\n§5Diaz:§!  [?diaz_owned_states]\n§tZapata:§! [?zapata_owned_states]\n§1Villa:§!  [?villa_owned_states]"
+ mex_desc_diaz:0 "§5Diaz:§!  [?diaz_owned_states]\n\n§HCarranza:§!  [?carranza_owned_states]\n§tZapata:§!  [?zapata_owned_states]\n§1Villa:§!  [?villa_owned_states]"
+ mex_desc_zapata:0 "§tZapata:§!  [?zapata_owned_states]\n\n§HCarranza:§!  [?carranza_owned_states]\n§5Diaz:§!  [?diaz_owned_states]\n§1Villa:§!  [?villa_owned_states]"
+ mex_desc_villa:0 "§1Villa:§!  [?villa_owned_states]\n\n§HCarranza:§!  [?carranza_owned_states]\n§tZapata:§!  [?zapata_owned_states]\n§5Diaz:§!  [?diaz_owned_states]"
  feliz_diaz_escalates:0 "Diaz Escalation"
  carranza_villa_escalates:0 "Carranza and Villa Escalation"
  random_state_change:0 "State Loyalty Change"
@@ -26,4 +34,7 @@
  MEX_diaz_support_category:0 "Expand Diaz Support"
  diaz_pacify_state:0 "Pacify [FROM.GetName]"
 
+ #cosmetic tags
+ mex_constitutionalists:0 "Constitutionalists"
+ mex_conventionists:0 "Conventionists"
  

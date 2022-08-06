@@ -57,7 +57,8 @@ MEX_debug_category = {
 MEX_revolution_escalation = {
 
 	feliz_diaz_escalates = {
-		days_mission_timeout = 571 #571
+		icon = GFX_decision_revolt
+		days_mission_timeout = 10 #571
 		fire_only_once = yes
 		activation = {
 			has_country_flag = diaz_escalating
@@ -75,13 +76,15 @@ MEX_revolution_escalation = {
 					value = 1
 				}
 			}
+			check_sides_civil_war = yes
 			clr_country_flag = diaz_escalating
 			set_country_flag = carranza_villa_escalating
 		}
 	}
 
 	carranza_villa_escalates = {
-		days_mission_timeout = 161 #161
+		icon = GFX_decision_revolt
+		days_mission_timeout = 10 #161
 		fire_only_once = yes
 		activation = {
 			has_country_flag = carranza_villa_escalating
@@ -113,15 +116,16 @@ MEX_revolution_escalation = {
 					value = 1
 				}
 			}
+			check_sides_civil_war = yes
 			clr_country_flag = carranza_villa_escalating
 			set_country_flag = full_civil_war
 			set_country_flag = random_state_change
-			activate_mission = random_state_change
 		}
 	}
 
 	random_state_change = {
-		days_mission_timeout = 137 #137
+		icon = GFX_decision_generic_civil_support
+		days_mission_timeout = 7 #137
 		activation = {
 			has_country_flag = random_state_change
 			check_variable = { mex_random_state_changes < 3 }
@@ -183,13 +187,15 @@ MEX_revolution_escalation = {
 							value = 1
 						}
 					}
-				}
+				}				
 			}
+			check_sides_civil_war = yes
 		}		
 	}
 
 	full_civil_war = {
-		days_mission_timeout = 549 #549
+		icon = GFX_decision_generic_ignite_civil_war
+		days_mission_timeout = 50 #549
 		fire_only_once = yes
 		activation = {
 			has_country_flag = full_civil_war
@@ -200,11 +206,9 @@ MEX_revolution_escalation = {
 			}
 		}
 		timeout_effect = {
-			check_sides_civil_war = yes	
 			country_event = {
     			id = mexican_revolution.2
     			days = 7
-   			 	random_days = 7
 			}
 		}
 	}
@@ -234,6 +238,7 @@ MEX_carranza_support_category = {
 		cost = 150
 		complete_effect = {
 			carranza_state_superiority = yes
+			check_sides_civil_war = yes
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -1000
@@ -264,6 +269,7 @@ MEX_zapata_support_category = {
 		cost = 150
 		complete_effect = {
 			zapata_state_superiority = yes
+			check_sides_civil_war = yes
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -1000
@@ -294,6 +300,7 @@ MEX_villa_support_category = {
 		cost = 150
 		complete_effect = {
 			villa_state_superiority = yes
+			check_sides_civil_war = yes
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -1000
@@ -324,6 +331,7 @@ MEX_diaz_support_category = {
 		cost = 150
 		complete_effect = {
 			diaz_state_superiority = yes
+			check_sides_civil_war = yes
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -1000

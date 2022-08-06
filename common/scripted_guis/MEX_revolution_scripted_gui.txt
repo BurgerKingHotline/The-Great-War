@@ -1,0 +1,52 @@
+scripted_gui = {
+	mex_rev_ui = {
+		context_type = decision_category
+		window_name = "mex_rev_ui_window"
+
+		visible = {
+			has_global_flag = MEX_revolution
+		}
+
+		properties = {
+			mex_baja = {
+				frame = 484.support_frame
+			}
+			mex_sonora = {
+				frame = 483.support_frame
+			}
+			mex_chihuahua = {
+				frame = 482.support_frame
+			}
+			mex_coahuila = {
+				frame = 480.support_frame
+			}
+			mex_tamaulipas = {
+				frame = 479.support_frame
+			}
+			mex_yucatan = {
+				frame = 474.support_frame
+			}
+			mex_veracruz = {
+				frame = 477.support_frame
+			}
+			mex_oaxaca = {
+				frame = 476.support_frame
+			}
+			mex_chiapas = {
+				frame = 475.support_frame
+			}
+			mex_mainmex = {
+				frame = 277.support_frame
+			}
+			mex_sinaloa = {
+				frame = 481.support_frame
+			}
+			mex_nayarit = {
+				frame = 478.support_frame
+			}
+			mex_guerrero = {
+				frame = 485.support_frame
+			}
+		}
+	}	
+}

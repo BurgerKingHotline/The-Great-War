@@ -1,0 +1,97 @@
+mex_rev_desc_text = {
+    name = mex_rev_descs
+    text = {
+        trigger = {
+            has_country_flag = MEX_supported_carranza
+        }
+        localization_key = mex_desc_carranza
+    }
+    text = {
+        trigger = {
+            has_country_flag = MEX_supported_zapata
+        }
+        localization_key = mex_desc_zapata
+    }
+    text = {
+        trigger = {
+            has_country_flag = MEX_supported_villa
+        }
+        localization_key = mex_desc_villa
+    }
+    text = {
+        trigger = {
+            has_country_flag = MEX_supported_diaz
+        }
+        localization_key = mex_desc_diaz
+    }
+}
+mex_rev_1_faction = {
+    name = one_side_loc
+    text = {
+        trigger = {
+            check_variable = {
+                potential_max^0 = 0
+            }
+        }
+        localization_key = zapata_name
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                potential_max^0 = 1
+            }
+        }
+        localization_key = villa_name
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                potential_max^0 = 2
+            }
+        }
+        localization_key = carranza_name
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                potential_max^0 = 3
+            }
+        }
+        localization_key = diaz_name
+    }
+}
+mex_rev_2_faction = {
+    name = two_side_loc
+    text = {
+        trigger = {
+            check_variable = {
+                potential_max^1 = 0
+            }
+        }
+        localization_key = zapata_name
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                potential_max^1 = 1
+            }
+        }
+        localization_key = villa_name
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                potential_max^1 = 2
+            }
+        }
+        localization_key = carranza_name
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                potential_max^1 = 3
+            }
+        }
+        localization_key = diaz_name
+    }
+}

@@ -20,6 +20,7 @@ country_event = {
 				}
 			}
 			set_country_flag = diaz_escalating
+			check_sides_civil_war = yes
 		}
 	}
 }
@@ -36,25 +37,19 @@ country_event = {
 		name = mexican_revolution.2.a # zapata side
 		trigger = {
 			OR = {
-				check_variable = { mx = 0 }
-				check_variable = { mx2 = 0 }
+				check_variable = { potential_max^0 = 0 }
+				check_variable = { potential_max^1 = 0 }
 			}
 		}
 		starting_civil_war_other_side_zapata = yes
-		hidden_effect = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.75
-			}
-		}
 	}
 	option = {
 		name = mexican_revolution.2.b # villa side
 		starting_civil_war_other_side_villa = yes
 		trigger = {
 			OR = {
-				check_variable = { mx = 1 }
-				check_variable = { mx2 = 1 }
+				check_variable = { potential_max^0 = 1 }
+				check_variable = { potential_max^1 = 1 }
 			}
 		}
 	}
@@ -63,8 +58,8 @@ country_event = {
 		starting_civil_war_other_side_diaz = yes
 		trigger = {
 			OR = {
-				check_variable = { mx = 2 }
-				check_variable = { mx2 = 2 }
+				check_variable = { potential_max^0 = 2 }
+				check_variable = { potential_max^1 = 2 }
 			}
 		}
 	}
@@ -73,8 +68,8 @@ country_event = {
 		starting_civil_war_other_side_carranza = yes
 		trigger = {
 			OR = {
-				check_variable = { mx = 3 }
-				check_variable = { mx2 = 3W }
+				check_variable = { potential_max^0 = 3 }
+				check_variable = { potential_max^1 = 3 }
 			}
 		}
 	}

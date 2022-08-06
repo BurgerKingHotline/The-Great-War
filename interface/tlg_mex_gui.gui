@@ -1,0 +1,73 @@
+guiTypes = {
+    containerWIndowType = {
+        name = "mex_rev_ui_window"
+        position = { x = 0 y = 0 }
+        size = { width = 100% height = 175 }
+
+        iconType = {
+            name = "mex_baja"
+            spriteType = "GFX_MEX_baja"
+            position = { x = 32 y = 0 }
+        }
+        iconType = {
+            name = "mex_sonora"
+            spriteType = "GFX_MEX_sonora"
+            position = { x = 50 y = 0 }
+        }
+        iconType = {
+            name = "mex_chihuahua"
+            spriteType = "GFX_MEX_chihuahua"
+            position = { x = 100 y = 6 }
+        }
+        iconType = {
+            name = "mex_coahuila"
+            spriteType = "GFX_MEX_coahuila"
+            position = { x = 133 y = 25 }
+        }
+        iconType = {
+            name = "mex_tamaulipas"
+            spriteType = "GFX_MEX_tamaulipas"
+            position = { x = 145 y = 53 }
+        }
+        iconType = {
+            name = "mex_yucatan"
+            spriteType = "GFX_MEX_yucatan"
+            position = { x = 232 y = 90 }
+        }
+        iconType = {
+            name = "mex_veracruz"
+            spriteType = "GFX_MEX_veracruz"
+            position = { x = 169 y = 86 }
+        }
+        iconType = {
+            name = "mex_oaxaca"
+            spriteType = "GFX_MEX_oaxaca"
+            position = { x = 182 y = 110 }
+        }
+        iconType = {
+            name = "mex_chiapas"
+            spriteType = "GFX_MEX_chiapas"
+            position = { x = 210 y = 115 }
+        }
+        iconType = {
+            name = "mex_mainmex"
+            spriteType = "GFX_MEX_mainmex"
+            position = { x = 150 y = 85 }
+        }
+        iconType = {
+            name = "mex_sinaloa"
+            spriteType = "GFX_MEX_sinaloa"
+            position = { x = 95 y = 45 }
+        }
+        iconType = {
+            name = "mex_nayarit"
+            spriteType = "GFX_MEX_nayarit"
+            position = { x = 120 y = 70 }
+        }
+        iconType = {
+            name = "mex_guerrero"
+            spriteType = "GFX_MEX_guerrero"
+            position = { x = 140 y = 95 }
+        }
+    }
+}
