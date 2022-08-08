@@ -1,0 +1,33 @@
+state={
+	id=925
+	name="STATE_925"
+	
+	history={
+		owner = GER
+		add_core_of = SOL
+		buildings = {
+			infrastructure = 1
+			4226 = {
+				naval_base = 1
+
+			}
+			10234 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			4226 1 
+		}
+
+	}
+	
+	provinces={
+		1358 4226 4252 4378 10234 10319 12265 
+	}
+	manpower=150000
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	local_supplies=0.000
+}

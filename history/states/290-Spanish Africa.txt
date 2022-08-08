@@ -2,13 +2,8 @@
 state={
 	id=290
 	name="STATE_290"
-	manpower = 744000
-	
-	
-	state_category = rural
-	
 	resources={
-		steel=23 # was: 20 . Changed to 23 (from 15) due to Portugal Setup
+		steel=23.000
 	}
 
 	history={
@@ -17,15 +12,20 @@ state={
 		add_claim_by = SPR
 		buildings = {
 			infrastructure = 2
+
 		}
 		1911.4.28 = {
 			owner = SPR
+
 		}
+
 	}
 
 	provinces={
-		4199 7215 10113 10884 12087 12100 
+		4199 7215 10113 10884 12087 12100 13258 
 	}
-
-	local_supplies=0.0 
+	manpower=744000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

@@ -2,9 +2,6 @@
 state={
 	id=863
 	name="STATE_863"
-	manpower = 365552
-	
-	state_category = rural
 
 	history={
 		owner = MOR
@@ -16,15 +13,20 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
+
 		}
 		1911.4.28 = {
 			owner = FRA
+
 		}
+
 	}
 
 	provinces={
-		1102 1152 4084 4108 4903 7203 10107 10731 11987 12042 12711 12842
+		1043 1102 1152 1207 4084 4097 4108 4903 7173 7203 10013 10107 10731 11987 12042 12711 12816 12842 
 	}
-
-	local_supplies=0.0 
+	manpower=365552
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

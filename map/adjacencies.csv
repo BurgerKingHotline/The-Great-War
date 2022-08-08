@@ -176,4 +176,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4391;12526;impassable;-1;-1;-1;-1;-1;;pamir mountains
 3314;6336;sea;2752;2885;1578;2890;1581;;Afsluitdijk
 849;9887;;7678;-1;-1;-1;-1;;dardanelle
+12299;10313;sea;5539;-1;-1;-1;-1;;Singapore-Malay-one
+12299;4424;sea;5960;-1;-1;-1;-1;;Singapore-Malay-two
+10313;12113;sea;5539;-1;-1;-1;-1;;Malay-Batam
+13247;10000;sea;2757;-1;-1;-1;-1;;Kiautschou
 -1;-1;;-1;-1;-1;-1;-1;-1

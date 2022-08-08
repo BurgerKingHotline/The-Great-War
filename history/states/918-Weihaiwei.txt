@@ -1,0 +1,32 @@
+state={
+	id=918
+	name="STATE_918"
+	
+	history={
+		owner = ENG
+		add_core_of = QIN
+		victory_points = {
+			4205 2 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			4205 = {
+				naval_base = 2
+				coastal_bunker = 1
+				bunker = 1
+
+			}
+
+		}
+
+	}
+	
+	provinces={
+		4205 
+	}
+	manpower=38373200
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=4.000
+}

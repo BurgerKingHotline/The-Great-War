@@ -2,24 +2,25 @@
 state={
 	id=862
 	name="STATE_862"
-	manpower = 186552
-	
-	state_category = wasteland
 
 	history={
 		owner = MOR
 		add_core_of = MOR
 		victory_points = {
-			7958 2
+			7958 2 
 		}
 		buildings = {
 			infrastructure = 1
+
 		}
+
 	}
 
 	provinces={
-		989 1111 4154 4933 7116 7958
+		989 1111 4154 4933 7116 7958 
 	}
-
-	local_supplies=0.0 
+	manpower=186552
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

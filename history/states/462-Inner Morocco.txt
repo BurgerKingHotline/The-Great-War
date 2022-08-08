@@ -2,9 +2,6 @@
 state={
 	id=462
 	name="STATE_462"
-	manpower = 186552
-	
-	state_category = wasteland
 
 	history={
 		owner = MOR
@@ -12,15 +9,20 @@ state={
 		add_claim_by = FRA
 		buildings = {
 			infrastructure = 1
+
 		}
 		1911.4.28 = {
 			owner = FRA
+
 		}
+
 	}
 
 	provinces={
-		1989 4022 5046 7908 8046
+		1989 4022 5046 7908 8046 13257 
 	}
-
-	local_supplies=0.0 
+	manpower=186552
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

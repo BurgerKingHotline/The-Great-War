@@ -1,0 +1,25 @@
+state={
+	id=928
+	name="STATE_928"
+	
+	history={
+		owner = OMA
+		add_core_of = OMA
+		add_core_of = RAJ
+		add_core_of = PAK
+		buildings = {
+			infrastructure = 3
+			13266 = {
+				naval_base = 1
+			}
+		}
+	}
+	
+	provinces={
+		13266 
+	}
+	manpower = 286410
+	buildings_max_level_factor=1.000
+	state_category = enclave
+	local_supplies=0.000
+}

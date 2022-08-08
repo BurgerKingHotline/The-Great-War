@@ -1,0 +1,40 @@
+state={
+	id=919
+	name="STATE_919"
+	resources={
+		rubber=20.000
+		oil=3.000
+	}
+	
+	history={
+		owner = MAL
+		victory_points = {
+			7387 1 
+		}
+		victory_points = {
+			1208 1 
+		}
+		buildings = {
+			infrastructure = 2
+			13245 = {
+				naval_base = 1
+
+			}
+			7387 = {
+				naval_base = 2
+
+			}
+
+		}
+		add_core_of = MAL
+
+	}
+	
+	provinces={
+		7387 13242 13243 13244 13245 
+	}
+	manpower=889800
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

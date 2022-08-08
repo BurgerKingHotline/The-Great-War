@@ -1,0 +1,30 @@
+state={
+	id=916
+	name="STATE_916"
+	
+	history={
+		owner = GER
+		add_core_of = QIN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 1
+			13247 = {
+				naval_base = 5
+				coastal_bunker = 1
+				bunker = 1
+
+			}
+
+		}
+
+	}
+	
+	provinces={
+		13247 
+	}
+	manpower=200000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}
