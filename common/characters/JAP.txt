@@ -1,28 +1,73 @@
-characters={
-	JAP_meiji={
-		name="Emperor Meiji"
-		portraits={
-			civilian={
-				large=GFX_portrait_Mohammed_Zahir_Shah
+characters = {
+	#leaders
+
+	JAP_meiji = {
+		name = "Mustuhito"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Mohammed_Zahir_Shah
 			}
 		}
-		country_leader={
-			ideology=despotism 
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = despotism 
+			traits = { emperor_meiji }
+			desc = "JAP_meiji_desc"
 		}
 	}
-	JAP_katsura_taro={
-		name="Prince Katsura Tarō"
-		portraits={
-			civilian={
-				large=GFX_portrait_Mohammed_Zahir_Shah
+
+	#communism
+	JAP_toshihiko = {
+		name = "Sakai Toshihiko"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Mohammed_Zahir_Shah
 			}
 		}
-		country_leader={
-			ideology=oligarchism 
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = socialism 
+			#traits = {  }
+			desc = "JAP_toshihiko_desc"
 		}
 	}
+
+	#democracy
+	JAP_taro = {
+		name = "Katsura Tarō"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader = {
+			ideology = conservatism 
+			traits = { distinguished_general }
+			desc = "JAP_taro_desc"
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = katsura_taro
+			allowed = { original_tag = JAP }
+			removal_cost = -1
+			traits = { distinguished_general }
+		}
+	}
+
+	#nationalism
+	JAP_kiheita = {
+		name = "Shindo Kiheita"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology 
+			#traits = 
+			desc = "JAP_kiheita_desc"
+		}
+	}
+
+	#advisors
+
+	
 }

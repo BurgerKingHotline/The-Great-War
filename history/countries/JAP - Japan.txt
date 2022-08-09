@@ -1,6 +1,21 @@
 ﻿capital = 282
+oob = "GENERIC_1910" 
+
+#leaders
+
+recruit_character = JAP_meiji 
+recruit_character = JAP_taro
+recruit_character = JAP_toshihiko
+recruit_character = JAP_kiheita
+
+#advisors
+
+activate_advisor = katsura_taro
 
 
+#army
+
+#navy
 
 set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
 set_war_support = 0.8
@@ -171,123 +186,6 @@ create_import = {
 		exporter = USA
 }
 
-1939.1.1 = {
-
-	add_political_power = 1198
-	add_command_power = 100
-	
-
-	#adding ministers
-	add_ideas = {
-
-		#laws
-		tot_economic_mobilisation
-		service_by_requirement
-		closed_economy
-	}
-
-	declare_war_on = {
-		target = CHI
-		type = puppet_wargoal_focus
-	}
-	#declare_war_on = {
-	#	target = GXC
-	#	type = puppet_focus
-	#}
-	#declare_war_on = {
-	#	target = YUN
-	#	type = puppet_focus
-	#}
-	#declare_war_on = {
-	#	target = PRC
-	#	type = annex_everything
-	#}
-	set_technology = {
-
-		#PLACEHOLDERS for vehicles
-		
-		cv_fighter1 = 1
-		fighter1 = 1
-		tactical_bomber1 = 1
-	
-		#doctrines
-		#air
-		force_rotation = 1
-		fighter_baiting = 1
-		low_echelon_support = 1
-		dispersed_fighting = 1
-
-		grand_battle_plan = 1
-		prepared_defense = 1
-		grand_assault = 1
-		carrier_primacy = 1
-		carrier_task_forces = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		basic_encryption = 1
-		basic_decryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		oil_processing = 1
-		fuel_refining2 = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		concentrated_industry = 1
-		concentrated_industry2 = 1
-		concentrated_industry3 = 1
-	}
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		set_technology = {
-			improved_ship_hull_submarine = 1
-			basic_ship_hull_light = 1
-			improved_ship_hull_light = 1
-			improved_ship_hull_cruiser = 1
-			improved_ship_hull_carrier = 1
-			ship_hull_super_heavy = 1
-		}
-		#set_naval_#oob = "JAP_1939_naval"
-	}
-	if = {
-		limit = {
-			not = { has_dlc = "Man the Guns" }
-		}
-		set_technology = {
-			improved_submarine = 1
-			basic_destroyer = 1
-			improved_destroyer = 1
-			improved_heavy_cruiser = 1
-			improved_carrier = 1
-			heavy_battleship = 1
-		}
-		#set_naval_#oob = "JAP_1939_naval_legacy"
-	}
-	if = {
-		limit = {
-			has_dlc = "No Step Back"
-		}
-		set_technology = {
-			basic_medium_tank_chassis = 1
-		}
-		#oob = "JAP_1939_nsb"
-		else = {
-			#oob = "JAP_1939"
-		}
-	}
-}
-
-oob = "GENERIC_1910"
 
 set_convoys = 400
 

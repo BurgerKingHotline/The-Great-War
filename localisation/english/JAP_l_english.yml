@@ -1,0 +1,16 @@
+﻿l_english:
+ ##########
+ # TRAITS #
+ ##########
+
+ emperor_meiji:0 "Emperor Meiji"
+ distinguished_general:0 "Distinguished General"
+
+ #####################
+ # POLITICAL PARTIES #
+ #####################
+
+ JAP_communism_party:0 "Nippon Shakai-tō"
+ JAP_democratic_party:0 "Rikken Seiyūkai"
+ JAP_neutrality_party:0 "Rikken Seiyūkai"
+ JAP_fascism_party:0 "Gen'yōsha"
