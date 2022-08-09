@@ -34,4 +34,15 @@ opinion_modifiers = {
 		value = -20
 	}
 
+	#FRA
+
+	economic_concessions_granted = {
+		value = 25
+	}
+
+	economic_concessions_granted_trade = {
+		trade = yes
+		value = 10
+	}
+
 }
