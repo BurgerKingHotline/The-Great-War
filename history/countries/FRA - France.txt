@@ -20,27 +20,32 @@ starting_train_buffer = 2
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		#set_naval_#oob = "FRA_1936_naval_mtg"
-		set_war_support = 0.1
 	else = {
 		#set_naval_#oob = "FRA_1936_naval_legacy"
-		set_war_support = 0.15
 	}
 }
 
-create_faction = entente_faction
-add_to_faction = FRA
-add_to_faction = RUS
+set_war_support = 0.4
+
+#create_faction = entente_faction
+#add_to_faction = FRA
+#add_to_faction = RUS
+give_guarantee = RUS
+RUS = { give_guarantee = FRA }
 
 set_research_slots = 3
-set_stability = 0.5
+set_stability = 0.3
 add_command_power = 20
 
-country_event = { id = french_events.1 days = 113 }
+
+#country_event = { id = french_events.1 days = 113 }
 
 recruit_character = FRA_aristide_briand
 recruit_character = FRA_joseph_caillaux
 recruit_character = FRA_jean_jaures
 recruit_character = FRA_raymond_poincare
+recruit_character = FRA_charles_maurras
+recruit_character = FRA_maurice_barres
 
 # Starting tech
 set_technology = {

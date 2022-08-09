@@ -1,6 +1,6 @@
 ﻿add_namespace = french_events
 
-#election of 1910
+#election of 1914
 country_event = {
 	id = french_events.1
 	title = french_events.1.t	
@@ -19,37 +19,27 @@ country_event = {
 	
 	option = { #radicals win again
 		name = french_events.1.a
-		complete_national_focus = FRA_1910_elections
-		complete_national_focus = FRA_1910_radical_reelection
+		#
 	}
 	option = { #
 		name = french_events.1.b
-		complete_national_focus = FRA_1910_elections
-		complete_national_focus = FRA_1910_workers_international_victory
+		#
 	}
 	option = { #
 		name = french_events.1.c
-		complete_national_focus = FRA_1910_elections
-		complete_national_focus = FRA_1910_democratic_alliance_victory
+		#
 	}
 }
 
-country_event = { #Briand wnats to make his own party
+country_event = { #Briand resigning
 	id = french_events.2
 	title = french_events.2.t	
 	desc = french_events.2.d	
 
 	is_triggered_only = yes
 	
-	option = { #no don't do it bro
+	option = { #caillaux will take control of the radical party
 		name = french_events.2.a
-		add_popularity = {
-			ideology = communism
-			popularity = 0.02
-		}
-	}
-	option = { #less go, cavy my boi
-		name = french_events.2.b
 		add_country_leader_role = {
 			character = FRA_joseph_caillaux
 			promote_leader = yes
@@ -59,6 +49,211 @@ country_event = { #Briand wnats to make his own party
 				id=-1
 			}
 		}
+		complete_national_focus = FRA_radical_continuation
+	}
+	option = { #motion of no confidence, DA takes control
+		name = french_events.2.b
+		add_country_leader_role = {
+			character = FRA_raymond_poincare
+			promote_leader = yes
+			country_leader={
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			name = FRA_democratic_alliance_name
+			long_name = FRA_democratic_alliance_name_long
+		}
+		complete_national_focus = FRA_1910_democratic_alliance_victory
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = { #Caillaux demanded to resign
+	id = french_events.3
+	title = french_events.3.t	
+	desc = french_events.3.d	
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_leader = {
+			character = FRA_joseph_caillaux
+			ruling_only = yes
+		}
+	}
+	
+	option = { #we will stand firm
+		name = french_events.3.a
+		ai_chance = {
+			factor = 2
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+	}
+	option = { #less go, raymond my boi
+		name = french_events.3.b
+		ai_chance = {
+			factor = 5
+		}
+		add_country_leader_role = {
+			character = FRA_raymond_poincare
+			promote_leader = yes
+			country_leader={
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			name = FRA_democratic_alliance_name
+			long_name = FRA_democratic_alliance_name
+		}
+	}
+}
+
+country_event = { #stuff to give Germany for good opinion?
+	id = french_events.4
+	title = french_events.4.t	
+	desc = french_events.4.d	
+
+	is_triggered_only = yes
+	
+	option = { #cameroon
+		name = french_events.4.a
+		trigger = {
+			owns_state = 859
+		}
+		GER = {
+			effect_tooltip = {
+				transfer_state = 859
+				transfer_state = 860
+				transfer_state = 861
+			}
+			country_event = { id = french_events.5 hours = 2 }
+		}
+	}
+	option = { #pacific territories
+		name = french_events.4.b
+		GER = {
+			effect_tooltip = {
+				transfer_state = 635
+				transfer_state = 734
+			}
+			country_event = { id = french_events.6 hours = 2 }
+		}
+	}
+}
+
+country_event = { #france gives GER pacific islands
+	id = french_events.5
+	title = french_events.8.t	
+	desc = french_events.5.d	
+
+	is_triggered_only = yes
+	
+	option = { #nice
+		name = french_events.5.a
+		add_opinion_modifier = {
+			target = FRA
+			modifier = medium_increase
+		}
+		transfer_state = 859
+		transfer_state = 860
+		transfer_state = 861
+	}
+}
+
+country_event = { #france gives GER cameroon
+	id = french_events.6
+	title = french_events.6.t	
+	desc = french_events.6.d	
+
+	is_triggered_only = yes
+	
+	option = { #nice
+		name = french_events.5.a
+		add_opinion_modifier = {
+			target = FRA
+			modifier = medium_increase
+		}
+		transfer_state = 635
+		transfer_state = 734
+	}
+}
+
+country_event = { #france wants to strengthen the entente
+	id = french_events.7
+	title = french_events.7.t	
+	desc = french_events.7.d	
+
+	is_triggered_only = yes
+	
+	option = { #sounds good bro
+		name = french_events.7.a
+		FRA = {
+			add_to_faction = ROOT
+		}
+	}
+	option = { #no we ain't besties yet bro
+		name = french_events.7.b
+		ai_chance = {
+			factor = 0
+		}
+		FRA = {
+			country_event = { id = french_events.8 hours = 2 }
+		}
+	}
+}
+
+country_event = { #Russia doesn't wanna go aggressive yet
+	id = french_events.8
+	title = french_events.8.t	
+	desc = french_events.8.d	
+
+	is_triggered_only = yes
+	
+	option = { #oh okay *le tear*
+		name = french_events.8.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = { #italy receives aid from France
+	id = french_events.9
+	title = french_events.9.t	
+	desc = french_events.9.d	
+
+	is_triggered_only = yes
+	
+	option = { #oh okay *le tear*
+		name = french_events.9.a
+		add_opinion_modifier = {
+			modifier = medium_increase
+			target = FROM
+		}
+		army_experience = 10
+		add_offsite_building = { type = arms_factory level = 1 }
 	}
 }
 
@@ -306,6 +501,9 @@ country_event = { #Germany demands concessions
 				has_completed_focus = FRA_1910_democratic_alliance_victory
 			}
 		}
+		hidden_effect = {
+			country_event = { id = french_events.3 days = 7 }
+		}
 		GER = {
 			effect_tooltip = {
 				transfer_state = 859
@@ -375,6 +573,32 @@ country_event = { #France refuses concessions for Morocco
 		create_wargoal = {
 			type = puppet_wargoal_focus
 			target = FRA
+		}
+	}
+}
+
+country_event = { #France giving concessions to Germany
+	id = morocco.10
+	title = morocco.10.t	
+	desc = morocco.10.d	
+
+	is_triggered_only = yes
+	
+	option = { #yo nice
+		name = morocco.8.a
+		ai_chance = {
+			factor = 5
+		}
+		863 = { add_dynamic_modifier = { modifier = economic_concessions_state_modifier } }
+		862 = { add_dynamic_modifier = { modifier = economic_concessions_state_modifier } }
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_opinion_modifier = {
+			target = FRA
+			modifier = economic_concessions_granted
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = economic_concessions_granted_trade
 		}
 	}
 }

@@ -124,6 +124,7 @@ d_create_army = {
     while_loop_effect = {
         limit = { check_variable = { i < num_of_divs } }
         random_owned_controlled_state = {
+		limit = { impassable = no }
             create_unit = {
                 division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
                 owner = PREV

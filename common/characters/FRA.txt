@@ -34,12 +34,11 @@ characters={
 				large="gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
 			}
 		}
-		#will be given it via event
-		#country_leader={
-		#	ideology=socialism
-		#	expire="1965.1.1.1"
-		#	id=-1
-		#}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
 	}
 	FRA_raymond_poincare={
 		name="Raymond Poincaré"
@@ -54,6 +53,32 @@ characters={
 		#	expire="1965.1.1.1"
 		#	id=-1
 		#}
+	}
+	FRA_charles_maurras={
+		name="Charles Maurras"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FRA_maurice_barres={
+		name="Maurice Barrès"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
 	}
 	#president
 	FRA_armand_fallieres={

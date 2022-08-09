@@ -138,3 +138,11 @@ moroccan_rebels_modifier = {
 	resistance_decay = -0.15 	
 	state_production_speed_buildings_factor = -0.3
 }
+
+economic_concessions_state_modifier = {
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	local_resources = -0.2
+	local_factories = -0.2
+}

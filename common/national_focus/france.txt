@@ -16,167 +16,85 @@
 	reset_on_civilwar = no
 
 	focus = {
-		id = FRA_1910_elections
-		icon = GFX_goal_support_democracy
-		x = 9
+		id = FRA_establish_republican_socialist_party
+		icon = GFX_focus_generic_treaty
+		x = 8
 		y = 0
-		cost = 1
-		available = {
-			always = no
+		mutually_exclusive = {
+			focus = FRA_provide_rural_pensions
 		}
-
-		allow_branch = {
-			date < 1913.12.1
-		}
+		cost = 35
 
 		completion_reward = {
-			
+			country_event = { id = french_events.2 hours = 2 }
 		}
 	}
 
 	focus = {
-		id = FRA_1910_workers_international_victory
-		icon = GFX_goal_generic_soviet_construction
-		x = -4
+		id = FRA_1910_democratic_alliance_victory
+		icon = GFX_goal_generic_national_unity
+		x = 2
 		y = 1
 		cost = 1
 		prerequisite = {
-			focus = FRA_1910_elections
+			focus = FRA_establish_republican_socialist_party
 		}
 		mutually_exclusive = {
-			focus = FRA_1910_radical_reelection
-			focus = FRA_1910_democratic_alliance_victory
+			focus = FRA_radical_continuation
 		}
-		relative_position_id = FRA_1910_elections
+		relative_position_id = FRA_establish_republican_socialist_party
 		available = {
 			always = no
 		}
 
 		completion_reward = {
-			add_country_leader_role = {
-				character = FRA_jean_jaures
-				promote_leader = yes
-				country_leader={
-					ideology=socialism
-					expire="1965.1.1.1"
-					id=-1
+			effect_tooltip = {
+				add_country_leader_role = {
+					character = FRA_raymond_poincare
+					promote_leader = yes
+					country_leader={
+						ideology=conservatism
+						expire="1965.1.1.1"
+						id=-1
+					}
+				}
+				set_party_name = {
+					ideology = democratic
+					name = FRA_democratic_alliance_name
+					long_name = FRA_democratic_alliance_name
 				}
 			}
-			set_party_name = {
-				ideology = democratic
-				name = FRA_worker_international_name
-				long_name = FRA_worker_international_name_long
-			}
 		}
 	}
 
 	focus = {
-		id = FRA_align_with_caillaux
-		icon = GFX_focus_generic_support_the_left_right
-		x = -1
-		y = 1
-		cost = 35
-		prerequisite = {
-			focus = FRA_1910_workers_international_victory
-		}
-		relative_position_id = FRA_1910_workers_international_victory
-
-		completion_reward = {
-			#some kinda idea thing
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
-		}
-	}
-
-	focus = {
-		id = FRA_win_over_cgt
-		icon = GFX_focus_generic_industry_2
-		x = 1
-		y = 1
-		cost = 35
-		prerequisite = {
-			focus = FRA_1910_workers_international_victory
-		}
-		relative_position_id = FRA_1910_workers_international_victory
-
-		completion_reward = {
-			#idea for the trade unions
-		}
-	}
-
-	focus = {
-		id = FRA_promote_internationalism
-		icon = GFX_goal_generic_positive_trade_relations
-		x = -1
-		y = 1
-		cost = 35
-		prerequisite = {
-			focus = FRA_align_with_caillaux
-		}
-		prerequisite = {
-			focus = FRA_win_over_cgt
-		}
-		relative_position_id = FRA_win_over_cgt
-
-		completion_reward = {
-			every_country = {
-				limit = {
-					capital_scope = { is_on_continent = europe }
-					has_government = democratic
-				}
-				add_opinion_modifier = {
-					target = FRA
-					modifier = medium_increase
-				}
-			}
-			add_political_power = 100
-			add_war_support = -0.05
-		}
-	}
-
-	focus = {
-		id = FRA_win_over_revolutionaries
-		icon = GFX_focus_prc_agrarian_socialism
-		x = 0
-		y = 1
-		cost = 35
-		prerequisite = {
-			focus = FRA_promote_internationalism
-		}
-		relative_position_id = FRA_promote_internationalism
-
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = -0.1
-			}
-			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = FRA_1910_radical_reelection
-		icon = GFX_focus_generic_military_academy
-		x = 0
+		id = FRA_radical_continuation
+		icon = GFX_goal_generic_neutrality_focus
+		x = -2
 		y = 1
 		cost = 1
 		prerequisite = {
-			focus = FRA_1910_elections
+			focus = FRA_establish_republican_socialist_party
 		}
 		mutually_exclusive = {
-			focus = FRA_1910_workers_international_victory
 			focus = FRA_1910_democratic_alliance_victory
 		}
-		relative_position_id = FRA_1910_elections
+		relative_position_id = FRA_establish_republican_socialist_party
 		available = {
 			always = no
 		}
 
 		completion_reward = {
-			hidden_effect = {
-				country_event = { id = french_events.2 days = 200 random = 960 }
+			effect_tooltip = {
+				add_country_leader_role = {
+					character = FRA_joseph_caillaux
+					promote_leader = yes
+					country_leader={
+						ideology=progressivism
+						expire="1965.1.1.1"
+						id=-1
+					}
+				}
 			}
 		}
 	}
@@ -184,54 +102,80 @@
 	focus = {
 		id = FRA_provide_rural_pensions
 		icon = GFX_focus_prc_agrarian_socialism
-		x = 0
-		y = 1
-		cost = 35
-		prerequisite = {
-			focus = FRA_1910_radical_reelection
+		x = 3
+		y = 0
+		mutually_exclusive = {
+			focus = FRA_establish_republican_socialist_party
 		}
-		relative_position_id = FRA_1910_radical_reelection
+		cost = 35
 
 		completion_reward = {
-			#temporary idea of increased consumer goods for increased stability and pop growth
+			add_timed_idea = {
+				idea = FRA_rural_pensions
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_ensure_radical_rule
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = FRA_provide_rural_pensions
+		}
+		relative_position_id = FRA_provide_rural_pensions
+		cost = 35
+
+		completion_reward = {
+			#add a radical minister
 		}
 	}
 
 	focus = {
 		id = FRA_radical_left_coalition
 		icon = GFX_goal_tripartite_pact
-		x = -1
+		x = 0
 		y = 1
 		cost = 35
 		prerequisite = {
-			focus = FRA_provide_rural_pensions
+			focus = FRA_ensure_radical_rule
+			focus = FRA_radical_continuation
 		}
 		mutually_exclusive = {
 			focus = FRA_radical_right_coalition
 		}
-		relative_position_id = FRA_provide_rural_pensions
+		relative_position_id = FRA_ensure_radical_rule
 
 		completion_reward = {
-			#increase party stability and pp gain and decrease communism growth by like 0.01 a day
+			add_timed_idea = {
+				idea = FRA_leftist_coalition
+				days = 365
+			}
 		}
 	}
 
 	focus = {
 		id = FRA_radical_right_coalition
 		icon = GFX_focus_generic_the_giant_wakes
-		x = 1
+		x = 2
 		y = 1
 		cost = 35
 		prerequisite = {
-			focus = FRA_provide_rural_pensions
+			focus = FRA_ensure_radical_rule
+			focus = FRA_radical_continuation
 		}
 		mutually_exclusive = {
 			focus = FRA_radical_left_coalition
 		}
-		relative_position_id = FRA_provide_rural_pensions
+		relative_position_id = FRA_ensure_radical_rule
 
 		completion_reward = {
-			#increase party stability and increase construction speed and production
+			add_timed_idea = {
+				idea = FRA_rightist_coalition
+				days = 365
+			}
 		}
 	}
 
@@ -247,7 +191,7 @@
 		relative_position_id = FRA_radical_left_coalition
 
 		completion_reward = {
-			#add idea for trade union stuff
+			add_ideas = FRA_cgt_idea
 		}
 	}
 
@@ -271,42 +215,6 @@
 	}
 
 	focus = {
-		id = FRA_1910_democratic_alliance_victory
-		icon = GFX_goal_generic_national_unity
-		x = 4
-		y = 1
-		cost = 1
-		prerequisite = {
-			focus = FRA_1910_elections
-		}
-		mutually_exclusive = {
-			focus = FRA_1910_workers_international_victory
-			focus = FRA_1910_radical_reelection
-		}
-		relative_position_id = FRA_1910_elections
-		available = {
-			always = no
-		}
-
-		completion_reward = {
-			add_country_leader_role = {
-				character = FRA_raymond_poincare
-				promote_leader = yes
-				country_leader={
-					ideology=conservatism
-					expire="1965.1.1.1"
-					id=-1
-				}
-			}
-			set_party_name = {
-				ideology = democratic
-				name = FRA_democratic_alliance_name
-				long_name = FRA_democratic_alliance_name_long
-			}
-		}
-	}
-
-	focus = {
 		id = FRA_support_businesses
 		icon = GFX_goal_generic_consumer_goods
 		x = -1
@@ -325,6 +233,7 @@
 						size > 0
 						include_locked = yes
 					}
+					is_core_of = FRA
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -338,7 +247,7 @@
 
 	focus = {
 		id = FRA_begin_national_renewal
-		icon = GFX_focus_political_pressure
+		icon = GFX_goal_generic_political_pressure
 		x = 1
 		y = 1
 		cost = 35
@@ -367,7 +276,10 @@
 		relative_position_id = FRA_begin_national_renewal
 
 		completion_reward = {
-			#add idea that increases stability and political power gain
+			add_timed_idea = {
+				idea = FRA_da_securing_power
+				days = 365
+			}
 			add_popularity = {
 				ideology = communism
 				popularity = -0.05
@@ -387,7 +299,10 @@
 		relative_position_id = FRA_secure_democratic_government
 
 		completion_reward = {
-			#add a timed idea that increases weekly war support
+			add_timed_idea = {
+				idea = FRA_war_propaganda_idea
+				days = 180
+			}
 			add_opinion_modifier = {
 				target = GER
 				modifier = medium_decrease
@@ -416,5 +331,257 @@
 					country_event = { id = morocco.6 hours = 2 }
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = FRA_end_moroccan_resistance
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 3
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_help_abd_al_hafid
+		}
+		relative_position_id = FRA_help_abd_al_hafid
+
+		available = {
+			OR = {
+				MOR = {
+					is_subject_of = FRA
+				}
+				owns_state = 462
+			}
+		}
+
+		completion_reward = {
+			462 = {
+				if = {
+					limit = {
+						is_demilitarized_zone = yes
+					}
+					set_demilitarized_zone = no
+				}
+				remove_dynamic_modifier = { modifier = moroccan_rebels_modifier }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_formalize_moroccan_protectorate
+		icon = GFX_goal_fortify_the_westwall
+		x = 0
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_end_moroccan_resistance
+		}
+		relative_position_id = FRA_end_moroccan_resistance
+
+		available = {
+			OR = {
+				has_subject = MOR
+				AND = {
+					MOR = { exists = no }
+					any_owned_state = { is_core_of = MOR }
+				}
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_subject = MOR
+				}
+				annex_country = {
+					target = MOR
+					transfer_troops = yes
+				}
+			}
+			if = {
+				limit = {
+					any_owned_state = { is_core_of = MOR }
+				}
+				every_state = {
+					limit = { is_core_of = MOR is_owned_by = FRA }
+					add_compliance = 20
+					add_resistance = -10
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_attempt_german_reapproachment
+		icon = GFX_generic_deal_germany
+		x = 0
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_help_abd_al_hafid
+		}
+		mutually_exclusive = {
+			focus = FRA_strengthen_entente
+			focus = FRA_closer_to_britain
+		}
+		relative_position_id = FRA_help_abd_al_hafid
+
+		available = {
+			OR = {
+				has_country_leader = {
+					ruling_only = yes
+					character = FRA_joseph_caillaux
+				}
+				AND = {
+					has_government = communism
+					GER = {
+						has_government = communism
+					}
+				}
+			}
+			NOT = {
+				has_war_with = GER
+			}
+		}
+
+		completion_reward = {
+			country_event = { id = french_events.4 hours = 2 }
+		}
+	}
+
+	focus = {
+		id = FRA_strengthen_entente
+		icon = GFX_goal_generic_army_doctrines
+		x = -3
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_help_abd_al_hafid
+		}
+		mutually_exclusive = {
+			focus = FRA_attempt_german_reapproachment
+			focus = FRA_closer_to_britain
+		}
+		relative_position_id = FRA_help_abd_al_hafid
+
+		available = {
+			OR = {
+				has_guaranteed = RUS
+				is_guaranteed_by = RUS
+			}
+		}
+
+		completion_reward = {
+			create_faction = entente_faction
+			RUS = {
+				country_event = { id = french_events.7 hours = 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_closer_to_britain
+		icon = GFX_focus_chi_british_cooperation
+		x = -5
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_help_abd_al_hafid
+		}
+		mutually_exclusive = {
+			focus = FRA_attempt_german_reapproachment
+			focus = FRA_strengthen_entente
+		}
+		relative_position_id = FRA_help_abd_al_hafid
+
+		completion_reward = {
+			create_faction = entente_faction
+			ENG = {
+				country_event = { id = french_events.7 hours = 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_offer_aid_to_italy
+		icon = GFX_focus_generic_combined_arms
+		x = -2
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_attempt_german_reapproachment
+			focus = FRA_strengthen_entente
+			focus = FRA_closer_to_britain
+		}
+		relative_position_id = FRA_attempt_german_reapproachment
+
+		available = {
+			ITA = {
+				has_war_with = OTT
+			}
+		}
+
+		bypass = {
+			ITA = {
+				owns_state = 448
+			}
+		}
+
+		completion_reward = {
+			#ai strategy for sending volunteers
+			add_ai_strategy = {
+				id = ITA
+				type = send_volunteers_desire
+				value = 100
+			}
+			ITA = {
+				country_event = { id = french_events.9 hours = 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_revive_german_concessions_in_morocco
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_attempt_german_reapproachment
+		}
+		prerequisite = {
+			focus = FRA_end_moroccan_resistance
+		}
+		relative_position_id = FRA_attempt_german_reapproachment
+
+		available = {
+			NOT = {
+				has_war_with = GER
+			}
+		}
+
+		completion_reward = {
+			GER = {
+				#event offering concessions in morocco
+				#863 = { add_dynamic_modifier = { modifier = economic_concessions_state_modifier } }
+				#862 = { add_dynamic_modifier = { modifier = economic_concessions_state_modifier } }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_expand_the_entente_balkans
+		icon = GFX_goal_demand_sudetenland
+		x = -1
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_strengthen_entente
+			focus = FRA_closer_to_britain
+		}
+		relative_position_id = FRA_strengthen_entente
+
+		completion_reward = {
+			#unlocks decisions to expand the faction for Serbia, Albania, Bulgaria, and Montenegro, Greece
 		}
 	}

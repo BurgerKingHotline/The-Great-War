@@ -5,7 +5,7 @@ set_technology = {
 	infantry_weapons = 1
 }
 
-country_event = { id = morocco.1 days = 366 }
+country_event = { id = morocco.1 days = 70 random = 480 }
 
 oob = "GENERIC_1910"
 
