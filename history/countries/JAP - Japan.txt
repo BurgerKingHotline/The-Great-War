@@ -1,6 +1,11 @@
 ﻿capital = 282
 oob = "GENERIC_1910" 
 
+set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
+set_war_support = 0.8
+set_research_slots = 4
+set_fuel_ratio = 1.0
+
 #leaders
 
 recruit_character = JAP_meiji 
@@ -17,12 +22,13 @@ activate_advisor = katsura_taro
 
 #navy
 
-set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
-set_war_support = 0.8
 
-set_research_slots = 4
-set_fuel_ratio = 1.0
+
+
 add_ideas = {
+	JAP_meiji_constitution
+	JAP_modernisation
+	JAP_rising_sun
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation

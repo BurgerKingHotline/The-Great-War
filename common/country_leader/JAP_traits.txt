@@ -6,7 +6,7 @@ leader_traits = {
 	
 	emperor_meiji = {
 		random = no
-		stability_factor = 0.15
+		stability_factor = 0.25
 		war_support_factor = 0.1 #Emperor is everything
 	}
 
@@ -16,6 +16,8 @@ leader_traits = {
 		experience_gain_army = 0.09
 		command_power_gain = 0.05
 		army_morale_factor = 0.05
+		stability_factor = -0.05 
+		political_power_factor = -0.05 #a general as PM doesn't look too good does it
 	}
 	
 
