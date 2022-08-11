@@ -1,0 +1,467 @@
+﻿focus_tree = {
+	id = japan_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = JAP
+		}
+	}
+	
+	continuous_focus_position = { x = 70 y = 2000 }
+	
+	default = no
+	reset_on_civilwar = no
+
+	#######################
+	# FOREIGN POLICY TREE #
+	#######################
+
+	focus = {
+		id = JAP_rising_sun
+		icon = GFX_focus_jap_pacific_guardian
+		x = 27
+		y = 0
+		cost = 35
+		 
+
+		available = {
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	# ALLIANCES BRANCH
+
+	focus = {
+		id = JAP_storm_on_the_horizon
+		icon = GFX_focus_generic_little_entente
+		x = 25
+		y = 1
+		cost = 35
+		
+		prerequisite = { focus = JAP_rising_sun }
+
+		available = {
+		}
+
+		completion_reward = {
+			country_event = { id = jap.1 days = 1 } #Gets Event 'Storm On The Horizon'
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	# Anime-Bri'ish Axis
+
+	focus = {
+		id = JAP_commitment_to_the_british
+		icon = GFX_focus_chi_british_cooperation
+		x = 23
+		y = 2
+		cost = 35
+		
+		prerequisite = { focus = JAP_storm_on_the_horizon }
+
+		mutually_exclusive = { focus = JAP_abandon_british_alliance }
+
+		available = {
+		}
+
+		completion_reward = {
+			#opinion modifier between japan and uk
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_british_military_assistance
+		icon = GFX_focus_generic_military_mission
+		x = 23
+		y = 3
+		cost = 35
+		
+		prerequisite = { focus = JAP_commitment_to_the_british }
+
+		available = {
+		}
+
+		completion_reward = {
+			#gets some equipment or smth and a british military advisor available
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_hire_british_companies
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 23
+		y = 4
+		cost = 35
+		
+		prerequisite = { focus = JAP_british_military_assistance }
+
+		available = {
+		}
+
+		completion_reward = {
+			country_event = { id = jap.2 days = 1 } #Gets Event 'Hiring British Firms'
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_rent_armament_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 21
+		y = 4
+		cost = 70
+		
+		prerequisite = { focus = JAP_british_military_assistance }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Adds a couple offmap military factories
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_consolidate_uk_alliance
+		icon = GFX_goal_generic_alliance
+		x = 22
+		y = 5
+		cost = 35
+		
+		prerequisite = { focus = JAP_hire_british_companies }
+		prerequisite = { focus = JAP_rent_armament_factories }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Joins Entente, possibly declares war on GER
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_occupy_german_colonies
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 21
+		y = 6
+		cost = 35
+		
+		prerequisite = { focus = JAP_consolidate_uk_alliance }
+
+		available = {
+		}
+
+		completion_reward = {
+			#If not already done, declares war on GER + boosts compliance/nerfs resistance in GER colonies in Asia
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	# bye-bye britain!!!!
+
+	focus = {
+		id = JAP_abandon_british_alliance
+		icon = GFX_focus_attack_britain
+		x = 27
+		y = 2
+		cost = 35
+		
+		prerequisite = { focus = JAP_storm_on_the_horizon }
+
+		mutually_exclusive = { focus = JAP_commitment_to_the_british }
+
+		available = {
+		}
+
+		completion_reward = {
+			country_event = { id = jap.3 days = 1 } #Gets Event 'Our Next Move'
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	# Switzerland Mode: Activated
+
+	focus = {
+		id = JAP_adopt_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		x = 27
+		y = 3
+		cost = 35
+		
+		prerequisite = { focus = JAP_abandon_british_alliance }
+
+		mutually_exclusive = { focus = JAP_reconcile_with_germany }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Adds a spirit like vanilla SWI or something idk
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_increased_resource_extration
+		icon = GFX_focus_generic_steel
+		x = 27
+		y = 4
+		cost = 35
+		
+		prerequisite = { focus = JAP_adopt_neutrality }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Adds more resources like steel, chromium or whatever idk
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_develop_defensive_capabilities
+		icon = GFX_goal_generic_defence
+		x = 29
+		y = 4
+		cost = 35
+		
+		prerequisite = { focus = JAP_adopt_neutrality }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Something lmao
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_beacon_of_prosperity
+		icon = GFX_goal_support_democracy
+		x = 27
+		y = 5
+		cost = 35
+		
+		prerequisite = { focus = JAP_increased_resource_extration }
+		prerequisite = { focus = JAP_develop_defensive_capabilities }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Spirit that boosts stability and shit idk (idk really becoming a theme lmao)
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	# Kaiserboo anime edition
+
+	focus = {
+		id = JAP_reconcile_with_germany
+		icon = GFX_focus_chi_mission_to_germany
+		x = 31
+		y = 3
+		cost = 35
+		
+		prerequisite = { focus = JAP_abandon_british_alliance }
+
+		mutually_exclusive = { focus = JAP_adopt_neutrality }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Opinion modifier - positive GER-JAP, negative ENG-JAP
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_partnership_with_krupp
+		icon = GFX_focus_generic_steel
+		x = 31
+		y = 4
+		cost = 35
+		
+		prerequisite = { focus = JAP_reconcile_with_germany }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Adds Krupp as industrial concern and adds more steel resources somewhere in JAP
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_german_delegation
+		icon = GFX_focus_chi_army_reform
+		x = 33
+		y = 4
+		cost = 35
+		
+		prerequisite = { focus = JAP_reconcile_with_germany }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Adds spirit giving various military bonuses plus a German general as advisor
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_join_triple_alliance
+		icon = GFX_goal_tripartite_pact
+		x = 31
+		y = 5
+		cost = 35
+		
+		prerequisite = { focus = JAP_partnership_with_krupp }
+		prerequisite = { focus = JAP_german_delegation }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Joins the Central Powers and possibly declares war on Entente
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_offensive_into_indochina
+		icon = GFX_focus_jap_strike_south
+		x = 33
+		y = 6
+		cost = 35
+		
+		prerequisite = { focus = JAP_join_triple_alliance }
+
+		available = {
+		}
+
+		completion_reward = {
+			#If not already at war with FRA, declares war on FRA + gives bonuses on fighting in Indochina/jungles in general
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_blockade_australia
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 33
+		y = 7
+		cost = 35
+		
+		prerequisite = { focus = JAP_offensive_into_indochina }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Adds nasty spirit to AST and maybe gives bonuses to invading AST as JAP
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	# Europeans too busy fighting? Well, do I have the opportunity for you!
+
+	focus = {
+		id = JAP_assume_control_of_colonies
+		icon = GFX_focus_generic_self_management
+		x = 26
+		y = 6
+		cost = 35
+		
+		prerequisite = { focus = JAP_consolidate_uk_alliance focus = JAP_beacon_of_prosperity focus = JAP_join_triple_alliance }
+
+		available = {
+		}
+
+		completion_reward = {
+			#Lets JAP take decisions that send "requests" to EUR colonists to give JAP control of colonies in Asia
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+
+
+	
+}

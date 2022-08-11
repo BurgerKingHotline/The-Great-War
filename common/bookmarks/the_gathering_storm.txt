@@ -94,6 +94,16 @@ bookmarks = {
 			focuses = {
 			}
 		}
+
+		JAP={
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			minor = yes
+			ideas = {
+			}
+			focuses = {
+			}
+		}
 		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
