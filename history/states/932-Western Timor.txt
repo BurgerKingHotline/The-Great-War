@@ -1,0 +1,29 @@
+state={
+	id=932
+	name="STATE_932"
+	resources={
+		rubber=12 # was: 16
+	}
+
+	history={
+		owner = INS
+		add_core_of = INS
+		buildings = {
+			infrastructure = 2
+			1355 = {
+				naval_base = 1
+			}
+
+		}
+
+	}
+
+	provinces={
+		1339 1355 4358
+	}
+	manpower=3460200
+	buildings_max_level_factor=1
+	state_category="town"
+
+	local_supplies=3.0 
+}

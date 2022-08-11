@@ -1,0 +1,23 @@
+
+state={
+	id=937
+	name="STATE_937"
+	manpower = 3381300
+	
+	state_category = large_city
+
+	history={
+		owner = BEL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		add_core_of = BEL
+	}
+
+	provinces={
+		3488 6537 9418 9444 11407 
+	}
+
+	local_supplies=14.0 
+}
