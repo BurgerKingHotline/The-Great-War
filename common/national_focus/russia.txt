@@ -63,7 +63,7 @@
 		id = RUS_seize_tannu_tuva
 		icon = GFX_focus_SOV_the_true_tsars
 		prerequisite = { focus = RUS_the_powers_of_the_tsar }
-		x = -18
+		x = -5
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar
 		cost = 35
@@ -109,7 +109,7 @@
 	focus = {
 		id = RUS_configure_foreign_policy
 		icon = GFX_generic_deal_germany
-		x = -12
+		x = -15
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar
 		prerequisite = { focus = RUS_the_powers_of_the_tsar }
@@ -397,13 +397,16 @@
 		y = 1
 		relative_position_id = RUS_configure_foreign_policy
 		prerequisite = { focus = RUS_configure_foreign_policy }
-		prerequisite = { focus = RUS_cement_the_tsars_rule }
 		mutually_exclusive = { focus = RUS_strengthen_european_ties }
 		cost = 56
 		 
 
 		available = {
 			NOT = { has_government = communism }
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
 		}
 
 		completion_reward = {
@@ -1196,23 +1199,47 @@
 				has_global_flag = RUS_ger_agree_potsdam
 				has_global_flag = RUS_germans_leave_potsdam
 			}
+			FRA = {
+				NOT = {
+					has_government = communism
+				}
+			}
 		}
 
 		completion_reward = {
 			add_political_power = 50
-			every_other_country = {
+			if = {
 				limit = {
-					is_in_faction_with = ROOT
-					is_major = yes
+					is_in_faction = yes
 				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = entente_strengthened
-				}
-				ROOT = {
+				every_other_country = {
+					limit = {
+						is_in_faction_with = ROOT
+						is_major = yes
+					}
 					add_opinion_modifier = {
-						target = PREV
+						target = ROOT
 						modifier = entente_strengthened
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = entente_strengthened
+						}
+					}
+				}
+			}
+			else = {
+				FRA = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = entente_strengthened
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = entente_strengthened
+						}
 					}
 				}
 			}
@@ -1224,13 +1251,17 @@
 	}
 
 	focus = {
-		id = RUS_revenge_for_bosnia
+		id = RUS_formalize_the_entente
 		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 1
 		relative_position_id = RUS_strengthen_the_entente
 		prerequisite = { focus = RUS_strengthen_the_entente }
 		cost = 56
+
+		bypass = {
+			is_in_faction_with = FRA
+		}
 		 
 
 		available = {
@@ -1238,8 +1269,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 150
-			add_war_support = 0.15
+			effect_tooltip = { #will be given if france accepts,
+				add_political_power = 75
+				add_war_support = 0.05
+			}
+			FRA = { country_event = { id = rus_events.32 } }
 		}
 
 		ai_will_do = {
@@ -1296,8 +1330,8 @@
 		icon = GFX_focus_GRE_an_orthodox_state
 		x = 0
 		y = 2
-		relative_position_id = RUS_revenge_for_bosnia
-		prerequisite = { focus = RUS_revenge_for_bosnia}
+		relative_position_id = RUS_formalize_the_entente
+		prerequisite = { focus = RUS_formalize_the_entente}
 		prerequisite = { focus = RUS_joint_training }
 		cost = 35
 		 
@@ -1358,7 +1392,7 @@
 	focus = {
 		id = RUS_matters_in_persia
 		icon = GFX_focus_GRE_an_orthodox_state
-		x = -20
+		x = -7
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar
 		prerequisite = { focus = RUS_the_powers_of_the_tsar } 

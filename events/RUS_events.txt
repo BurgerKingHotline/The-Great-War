@@ -322,6 +322,19 @@ country_event = { #Russian civil war starts
 				NOT = {
 					is_core_of = BLR
 					is_core_of = UKR
+					is_core_of = LIT
+					is_core_of = LAT
+					is_core_of = EST
+					is_core_of = FIN
+					is_core_of = AZR
+					is_core_of = ARM
+					is_core_of = GEO
+					is_core_of = KAZ
+					is_core_of = UZB
+					is_core_of = TMS
+					is_core_of = KYR
+					is_core_of = TAJ
+					is_core_of = GER
 				}
 			}
 			add_core_of = SOV
@@ -1247,6 +1260,9 @@ country_event = { #collapse of russian control in europe
 					}
 				}
 				137 = {
+					transfer_state_to = RUS
+				}
+				935 = {
 					transfer_state_to = RUS
 				}
 				914 = {
@@ -2827,6 +2843,66 @@ country_event = { #from declines
 		name = rus_events.31.a
 		ai_chance = {
 			factor = 120
+		}
+	}
+}
+
+country_event = { #russia wants to strengthen the entente
+	id = rus_events.32
+	title = rus_events.32.t	
+	desc = rus_events.32.desc
+
+	is_triggered_only = yes
+
+	# i totally didnt copy this from glug :troll:
+	
+	option = { #sounds good bro
+		name = rus_events.32.a
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+	option = { #no we ain't besties yet bro
+		name = rus_events.32.b
+		ai_chance = {
+			factor = 0
+		}
+		FROM = {
+			country_event = { id = french_events.8 hours = 2 }
+		}
+	}
+}
+
+country_event = { #they declined??WA?D?AWdawdjawdw wrf.....
+	id = rus_events.33
+	title = rus_events.33.t	
+	desc = rus_events.33.desc
+
+	is_triggered_only = yes
+	
+	option = { #wrf....
+		name = rus_events.33.a
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+	}
+}
+
+country_event = { #yooo they accepted
+	id = rus_events.34
+	title = rus_events.34.t	
+	desc = rus_events.34.desc
+
+	is_triggered_only = yes
+	
+	option = { #great
+		name = rus_events.34.a
+		add_political_power = 75
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
 		}
 	}
 }
