@@ -24,3 +24,7 @@
  GER_eastern_push:0 "Eastern Push"
  GER_zimmerman_telegram:0 "Zimmerman Telegram"
  GER_ally_usa:0 "Alliance with the USA"
+
+ #just change these ids and remove this on your side
+ GER_expanding_german_sphere:0 "The other major powers of this world have large spheres of influence, covering vast swathes of the world. We do have influence in some small parts of Africa and Asia, but that is not enough. We must catch up to these powers. We will show them, that while they have had hundreds of years to build theirs up, we can build ours in a few decades. And then we can finally find our place in the sun."
+ GER_prussian_roots:0 "While the German nation is its own nation, free of any foreign influence, we are not free from influence from our roots. Those roots being the old nation of Prussia, the unifier of the German states. Prussia, being a militaristic society, with a high nobility, and the self sufficiency of the army, it seems the whole German nation is built upon these doctrines."
