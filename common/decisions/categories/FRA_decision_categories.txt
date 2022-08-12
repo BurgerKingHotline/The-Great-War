@@ -1,0 +1,28 @@
+FRA_mobilizing_leagues_category = {
+	
+	allowed = {
+		tag = FRA
+	}
+
+	visible = {
+		has_idea = FRA_mobilizing_leagues
+	}
+
+}
+
+FRA_francaise_securing_state = {
+	
+	allowed = {
+		tag = FRA
+	}
+
+	priority = {
+		base = 11
+	}
+
+	visible = {
+		has_completed_focus = FRA_hunt_down_republicans
+		has_government = neutrality
+	}
+
+}

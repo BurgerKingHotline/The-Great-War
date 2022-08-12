@@ -139,6 +139,14 @@ moroccan_rebels_modifier = {
 	state_production_speed_buildings_factor = -0.3
 }
 
+FRA_republican_resistance_state_modifier = {
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	local_resources = -0.2
+	state_production_speed_buildings_factor = -0.2
+}
+
 economic_concessions_state_modifier = {
 	
 	icon = GFX_modifiers_sabotaged_resource

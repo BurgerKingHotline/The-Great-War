@@ -1,0 +1,287 @@
+FRA_mobilizing_leagues_category = {
+	
+	FRA_exile_patriots = {
+
+		cost = 20
+
+		icon = generic_political_discourse
+
+		available = {
+			fascism > 0.02
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		days_re_enable = 60
+
+		complete_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.03
+			}
+		}
+
+	}
+
+	FRA_clash_with_camelots = {
+
+		cost = 25
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			neutrality > 0.03
+			has_equipment = {
+				infantry_equipment > 25
+			}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		days_re_enable = 30
+
+		days_remove = 7
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -25
+			}
+		}
+
+		remove_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.03
+			}
+		}
+
+	}
+
+	FRA_arrest_action_francaise_members = {
+
+		cost = 30
+
+		icon = oppression
+
+		available = {
+			neutrality > 0.05
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		days_re_enable = 70
+
+		days_remove = 10
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+		}
+
+	}
+
+	FRA_outlaw_action_francaise = {
+
+		cost = 50
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			neutrality < 0.05
+			fascism < 0.05
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			remove_ideas = FRA_mobilizing_leagues
+			set_country_flag = FRA_action_francaise_outlawed
+		}
+
+	}
+
+	FRA_action_francaise_coup = {
+
+		icon = generic_prepare_civil_war
+
+		activation = {
+			OR = {
+				AND = {
+					fascism > 0.05
+					neutrality > 0.2
+				}
+				neutrality > 0.25
+			}
+		}
+
+		is_good = no
+
+		available = {
+			neutrality < 0.15
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		days_mission_timeout = 70
+
+		fire_only_once = yes
+
+		selectable_mission = yes
+
+		complete_effect = {
+			remove_ideas = FRA_mobilizing_leagues
+		}
+
+		timeout_effect = {
+			country_event = { id = french_events.11 }
+		}
+
+	}
+
+	FRA_help_coup_section = {
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = FRA_league_coup_requirements
+				always = no
+			}
+		}
+
+	}
+
+	FRA_camelot_clash_against_parliamentary_paramilitaries = {
+
+		cost = 10
+
+		days_re_enable = 70
+
+		icon = generic_prepare_civil_war
+
+		complete_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.02
+			}
+		}
+
+	}
+
+	FRA_provide_arms_paramilitaries = {
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 50
+			}
+		}
+
+		icon = generic_industry
+
+		days_re_enable = 30
+
+		days_remove = 7
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -50
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.01
+			}
+		}
+
+	}
+
+}
+
+FRA_francaise_securing_state = {
+	
+	FRA_hunt_republicans_in_FROM = {
+
+		state_target = yes
+
+		target_trigger = {
+			FROM = {
+				has_dynamic_modifier = { modifier = FRA_republican_resistance }
+			}
+		}
+
+		cost = 25
+
+		icon = generic_industry
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 100
+			}
+		}
+
+		days_remove = 7
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -100
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				remove_dynamic_modifier = { modifier = FRA_republican_resistance }
+			}
+		}
+
+	}
+
+	FRA_win_republican_catholics = {
+
+		icon = generic_civil_discourse
+
+		available = {
+			has_completed_focus = FRA_end_secularism
+		}
+
+		cost = 10
+
+		days_re_enable = 30
+
+		visible = {
+			neutrality < 0.55
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.02
+			}
+		}
+
+	}
+
+}

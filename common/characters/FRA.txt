@@ -58,7 +58,7 @@ characters={
 		name="Charles Maurras"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
 			}
 		}
 		country_leader={
@@ -71,7 +71,7 @@ characters={
 		name="Maurice Barrès"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
 			}
 		}
 		country_leader={

@@ -25,6 +25,11 @@
 		}
 		cost = 35
 
+		allow_branch = {
+			has_government = democratic
+			date < 1913.1.1
+		}
+
 		completion_reward = {
 			country_event = { id = french_events.2 hours = 2 }
 		}
@@ -109,6 +114,11 @@
 		}
 		cost = 35
 
+		allow_branch = {
+			has_government = democratic
+			date < 1913.1.1
+		}
+
 		completion_reward = {
 			add_timed_idea = {
 				idea = FRA_rural_pensions
@@ -153,6 +163,13 @@
 				idea = FRA_leftist_coalition
 				days = 365
 			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = communism
+					popularity = -0.05
+				}
+			}
+			country_event = { id = french_events.10 days = 1 random = 96 }
 		}
 	}
 
@@ -307,6 +324,110 @@
 				target = GER
 				modifier = medium_decrease
 			}
+		}
+	}
+
+	#action francaise government
+
+	focus = {
+		id = FRA_af_appeal_conservatives
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 7
+		y = 0
+		mutually_exclusive = {
+			focus = FRA_af_reject_parliamentarianism
+		}
+		cost = 35
+
+		allow_branch = {
+			has_government = neutrality
+			has_elections = yes
+			is_subject = no
+		}
+
+		completion_reward = {
+			set_temp_variable = { temp_democratic_pop = party_popularity@democratic }
+			multiply_temp_variable = { temp_democratic_pop = 0.3 }
+			add_popularity = {
+				ideology = neutrality 
+				popularity = temp_democratic_pop
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_af_reject_parliamentarianism
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 0
+		mutually_exclusive = {
+			focus = FRA_af_appeal_conservatives
+		}
+		cost = 35
+
+		allow_branch = {
+			has_government = neutrality
+			is_subject = no
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_elections = yes
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_state = {
+							has_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = FRA is_owned_by = FRA }
+					add_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
+				}
+			}
+			add_political_power = 100
+			add_ideas = FRA_republican_resistance
+		}
+	}
+
+	focus = {
+		id = FRA_end_secularism
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = FRA_af_appeal_conservatives
+			focus = FRA_af_reject_parliamentarianism
+		}
+		relative_position_id = FRA_af_reject_parliamentarianism
+		cost = 35
+
+		completion_reward = {
+			add_ideas = FRA_catholic_state
+		}
+	}
+
+	focus = {
+		id = FRA_hunt_down_republicans
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = FRA_af_reject_parliamentarianism
+		}
+		relative_position_id = FRA_af_reject_parliamentarianism
+		cost = 35
+
+		completion_reward = {
+			unlock_decision_category_tooltip = FRA_francaise_securing_state
 		}
 	}
 
@@ -469,6 +590,11 @@
 				has_guaranteed = RUS
 				is_guaranteed_by = RUS
 			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = FRA_russia_rejected_entente_offer
+				}
+			}
 		}
 
 		completion_reward = {
@@ -493,6 +619,12 @@
 			focus = FRA_strengthen_entente
 		}
 		relative_position_id = FRA_help_abd_al_hafid
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = FRA_britain_rejected_entente_offer
+			}
+		}
 
 		completion_reward = {
 			create_faction = entente_faction
@@ -562,9 +694,17 @@
 
 		completion_reward = {
 			GER = {
-				#event offering concessions in morocco
-				#863 = { add_dynamic_modifier = { modifier = economic_concessions_state_modifier } }
-				#862 = { add_dynamic_modifier = { modifier = economic_concessions_state_modifier } }
+				country_event = { id = morocco.10 hours = 2 }
+				effect_tooltip = {
+					add_opinion_modifier = {
+						target = FRA
+						modifier = economic_concessions_granted
+					}
+				}
+			}
+			effect_tooltip = {
+				863 = { add_dynamic_modifier = { modifier = economic_concessions_state_modifier } }
+				862 = { add_dynamic_modifier = { modifier = economic_concessions_state_modifier } }
 			}
 		}
 	}

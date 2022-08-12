@@ -236,6 +236,32 @@ country_event = { #Russia doesn't wanna go aggressive yet
 			ideology = fascism
 			popularity = 0.03
 		}
+		if = {
+			limit = {
+				FROM = { tag = RUS }
+				NOT = {
+					has_completed_focus = FRA_closer_to_britain
+				}
+			}
+			uncomplete_national_focus = {
+				focus = FRA_strengthen_entente
+				refund_political_power = yes
+			}
+			set_country_flag = FRA_russia_rejected_entente_offer
+		}
+		if = {
+			limit = {
+				FROM = { tag = ENG }
+				NOT = {
+					has_completed_focus = FRA_strengthen_entente
+				}
+			}
+			uncomplete_national_focus = {
+				focus = FRA_closer_to_britain
+				refund_political_power = yes
+			}
+			set_country_flag = FRA_britain_rejected_entente_offer
+		}
 	}
 }
 
@@ -254,6 +280,41 @@ country_event = { #italy receives aid from France
 		}
 		army_experience = 10
 		add_offsite_building = { type = arms_factory level = 1 }
+	}
+}
+
+country_event = { #far right leagues form
+	id = french_events.10
+	title = french_events.10.t	
+	desc = french_events.10.d	
+
+	is_triggered_only = yes
+	
+	option = { #not the fascis- *whispering* oh. Oh no, not the proto-fascists!
+		name = french_events.10.a
+		add_ideas = FRA_mobilizing_leagues
+		unlock_decision_category_tooltip = FRA_mobilizing_leagues_category
+	}
+}
+
+country_event = { #action francaise seizes control
+	id = french_events.11
+	title = french_events.11.t	
+	desc = french_events.11.d	
+
+	is_triggered_only = yes
+	
+	option = { #not the fascis- *whispering* oh. Oh no, not the proto-fascists!
+		name = french_events.11.a
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		mark_focus_tree_layout_dirty = yes
+		every_state = {
+			limit = { is_core_of = FRA is_owned_by = FRA }
+			add_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
+		}
 	}
 }
 
