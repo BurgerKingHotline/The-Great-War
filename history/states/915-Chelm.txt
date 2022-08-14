@@ -15,7 +15,7 @@ state={
 
 		}
 		add_core_of = POL
-		add_claim_by = UKR
+		add_core_of = UKR
 		1939.1.1 = {
 			buildings = {
 				air_base = 3
