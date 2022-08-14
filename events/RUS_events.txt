@@ -43,7 +43,7 @@ country_event = {
 			ideology = democratic 
 			popularity = 0.1
 		}
-		hidden_effect = {
+		hidden_effect = { #Creating transcaucasia
 			if = {
 				limit = {
 					any_owned_state = {
@@ -55,68 +55,114 @@ country_event = {
 							state = 828
 							state = 842
 						}
-						is_controlled_by = ROOT
+						is_owned_and_controlled_by = ROOT
 					}
 				}
-				create_dynamic_country = {
+				create_dynamic_country = { 
 					original_tag = AZR
 					save_global_event_target_as = transcaucasia_event_target
-					set_state_owner = 229
 					if = {
 						limit = {
 							RUS = {
-								controls_state = 229
+								owns_state = 229
 							}
 						}
-						set_state_controller = 229
+						set_state_owner = 229
+						if = {
+							limit = {
+								RUS = {
+									controls_state = 229
+								}
+							}
+							set_state_controller = 229
+						}
 					}
-					set_state_owner = 230
 					if = {
 						limit = {
 							RUS = {
-								controls_state = 230
+								owns_state = 230
 							}
 						}
-						set_state_controller = 230
+						set_state_owner = 230
+						add_state_core = 230
+						if = {
+							limit = {
+								RUS = {
+									controls_state = 230
+								}
+							}
+							set_state_controller = 230
+						}
 					}
-					set_state_owner = 231
 					if = {
 						limit = {
 							RUS = {
-								controls_state = 231
+								owns_state = 231
 							}
 						}
-						set_state_controller = 231
+						set_state_owner = 231
+						add_state_core = 231
+						if = {
+							limit = {
+								RUS = {
+									controls_state = 231
+								}
+							}
+							set_state_controller = 231
+						}
 					}
-					set_state_owner = 826
 					if = {
 						limit = {
 							RUS = {
-								controls_state = 826
+								owns_state = 826
 							}
 						}
-						set_state_controller = 826
+						set_state_owner = 826
+						add_state_core = 826
+						if = {
+							limit = {
+								RUS = {
+									controls_state = 826
+								}
+							}
+							set_state_controller = 826
+						}
 					}
-					set_state_owner = 828
 					if = {
 						limit = {
 							RUS = {
-								controls_state = 828
+								owns_state = 828
 							}
 						}
-						set_state_controller = 828
+						set_state_owner = 828
+						add_state_core = 828
+						if = {
+							limit = {
+								RUS = {
+									controls_state = 828
+								}
+							}
+							set_state_controller = 828
+						}
 					}
-					set_state_owner = 842
 					if = {
 						limit = {
 							RUS = {
-								controls_state = 842
+								owns_state = 842
 							}
 						}
-						set_state_controller = 242
+						set_state_owner = 842
+						add_state_core = 842
+						if = {
+							limit = {
+								RUS = {
+									controls_state = 842
+								}
+							}
+							set_state_controller = 842
+						}
 					}
 					set_cosmetic_tag = transcaucasia_unified
-					
 				}
 				
 				RUS = {
@@ -137,27 +183,37 @@ country_event = {
 					}
 				}
 			}
-			FIN = {
-				transfer_state = 146
-				transfer_state = 111
-				transfer_state = 150
-				transfer_state = 149
-				transfer_state = 148
-				transfer_state = 147
-			}
 			if = {
 				limit = {
-					OR = {
-						has_dlc = "Together for Victory"
-						has_dlc = "Man the Guns"
+					FIN = {
+						OR = {
+							is_puppet_of = ROOT
+							exists = no
+						}
 					}
 				}
-				set_autonomy = {
-					target = FIN
-					autonomous_state = autonomy_integrated_puppet
+				FIN = {
+					transfer_state = 146
+					transfer_state = 111
+					transfer_state = 150
+					transfer_state = 149
+					transfer_state = 148
+					transfer_state = 147
 				}
-				else = {
-					puppet = FIN
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Together for Victory"
+							has_dlc = "Man the Guns"
+						}
+					}
+					set_autonomy = {
+						target = FIN
+						autonomous_state = autonomy_integrated_puppet
+					}
+					else = {
+						puppet = FIN
+					}
 				}
 			}
 		}
@@ -222,7 +278,6 @@ country_event = { #petrograd soviet formed
 	
 	option = {#oh thats not good
 		name = rus_civilwar.2.a
-		
 		add_dynamic_modifier = {
 			modifier = RUS_local_soviets_modifier
 			scope = 195
@@ -248,7 +303,7 @@ country_event = { #more soviet gets formed
 	
 	option = {#oh thats not good
 		name = rus_civilwar.2.a
-		every_owned_state = {
+		every_owned_controlled_state = {
 			limit = {
 				state_strategic_value > 15
 			}
@@ -269,7 +324,6 @@ country_event = { #Russian civil war starts
 	fire_only_once = yes
 
 	immediate = {
-
 		195 = {
 			SOV = {
 				transfer_state = PREV
@@ -315,7 +369,6 @@ country_event = { #Russian civil war starts
 		RUS = {
 			create_faction = RUS_white_faction
 		}
-		
 		every_state = {
 			limit = {
 				is_core_of = RUS
@@ -432,13 +485,49 @@ country_event = { #workers take control of moscow
 country_event = { #finnish civil war
 	id = rus_civilwar.6
 	title = rus_civilwar.6.t	
-	desc = rus_civilwar.6.desc	
+	desc = rus_civilwar.6.desc
 
-	is_triggered_only = yes
+	trigger = {
+		original_tag = FIN
+		FIN = {
+			exists = yes
+			any_owned_state = { #checking if fin has at least 2 states
+				is_capital = no 
+			}
+			is_puppet = no
+		}
+		OR = {
+			RUS = {
+				has_civil_war = yes
+			}
+			SOV = {
+				has_civil_war = yes
+			}
+		}
+	}
 
 	fire_only_once = yes
 
 	immediate = {
+		start_civil_war = {
+			ruling_party = communism
+			ideology = ROOT
+			size = 0.3
+			capital = 111
+			states = { 
+				111
+			}
+			add_ai_strategy = { #To make sure they dont intervene with the larger russian civil war
+				type = alliance #Plus most red fins hated bolsheviks
+				id = SOV
+				value = -200
+			}
+			add_ai_strategy = { 
+				type = befriend #But hey, they are both still commies
+				id = SOV
+				value = 100
+			}
+		}
 	}
 	
 	option = {#oh thats very not good
@@ -583,6 +672,7 @@ country_event = { #mass uprisings
 			limit = {
 				FIN = {
 					exists = yes
+					is_puppet_of = ROOT
 				}
 			}
 			set_autonomy = {
@@ -593,10 +683,29 @@ country_event = { #mass uprisings
 			}
 			FIN = {
 				leave_faction = yes
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					add_ideas = neutrality_idea
+				}
+			}
+			if = {
+				limit = {
+					FIN = {
+						has_war = yes
+					}
+				}
+				every_enemy_country = {
+					white_peace = FIN
+				}
 			}
 		}
 		else = {
 			release = FIN
+		}
+		SOV = {
+			set_capital = {
+				state = 219
+			}
 		}
 	}
 	
@@ -1225,43 +1334,79 @@ country_event = { #collapse of russian control in europe
 						has_completed_focus = RUS_promote_the_all_russian_nation
 					}
 				}
-				release = MOL
-				release = UKR
-				release = POL
-				release = FIN
-				MOL = {
-					every_owned_state = {
-						RUS = {
-							delete_unit = { 
-								state = PREV
-								disband = no
+				if = {
+					limit = {
+						any_owned_controlled_state = {
+							is_core_of = MOL
+						}
+					}
+					release = MOL
+					MOL = {
+						every_owned_state = {
+							RUS = {
+								delete_unit = { 
+									state = PREV
+									disband = yes
+								}
 							}
 						}
 					}
 				}
-				UKR = {
-					every_owned_state = {
-						RUS = {
-							delete_unit = { 
-								state = PREV
-								disband = no
+				if = {
+					limit = {
+						any_owned_controlled_state = {
+							is_core_of = UKR
+						}
+					}
+					release = UKR
+					UKR = {
+						every_owned_state = {
+							RUS = {
+								delete_unit = { 
+									state = PREV
+									disband = yes
+								}
 							}
 						}
 					}
 				}
-				POL = {
-					every_owned_state = {
-						RUS = {
-							delete_unit = { 
-								state = PREV
-								disband = no
+				if = {
+					limit = {
+						any_owned_controlled_state = {
+							is_core_of = POL
+						}
+					}
+					release = POL
+					POL = {
+						every_owned_state = {
+							RUS = {
+								delete_unit = { 
+									state = PREV
+									disband = yes
+								}
 							}
 						}
 					}
 				}
-				137 = {
-					transfer_state_to = RUS
+				if = {
+					limit = {
+						any_owned_controlled_state = {
+							is_core_of = POL
+						}
+					}
+					release = FIN
 				}
+				if = {
+					limit = {
+						137 = {
+							is_owned_by = ROOT
+						}
+					}
+					137 = {
+						transfer_state_to = RUS
+					}
+				}
+			
 				935 = {
 					transfer_state_to = RUS
 				}
@@ -1445,23 +1590,40 @@ country_event = { #collapse of russian control in europe
 					remove_core_of = RUS
 				}
 			}
-			hidden_effect = {
-				if = {
+			hidden_effect = { #Releasing the caucases
+				every_country = {
 					limit = {
-						any_country = {
-							has_cosmetic_tag = transcaucasia_unified
-							exists = yes
+						OR = {
+							is_puppet_of = ROOT
+							tag = ROOT
+						}
+						any_owned_controlled_state = {
+							OR = {
+								is_core_of = GEO
+								is_core_of = ARM
+								is_core_of = AZR
+							}
 						}
 					}
-					event_target:transcaucasia_event_target = {
-						release = GEO
-						release = ARM
-						
-					}
-				}
-				else = {
 					release = GEO
 					release = ARM
+					if = {
+						limit = {
+							any_other_country = {
+								has_cosmetic_tag = transcaucasia_unified
+								tag = event_target:transcaucasia_event_target
+								owns_state = 229
+							}
+						}
+						event_target:transcaucasia_event_target = {
+							drop_cosmetic_tag = yes
+							set_cosmetic_tag = ARM
+							remove
+						}
+					}
+					else = {
+
+					}
 				}
 				if = {
 					limit = {
@@ -1489,12 +1651,32 @@ country_event = { #collapse of russian control in europe
 				if = {
 					limit = {
 						has_war_with = OTT
-						
+						OTT = {
+							owns_state = 354
+						}
 					}
 					OTT = {
 						transfer_state = 828
 						transfer_state = 842
 					}
+				}
+				else_if = {
+					limit = {
+						ARM = {
+							OR = {
+								owns_state = 354
+								owns_state = 230
+							}
+						}
+					}
+					ARM = {
+						transfer_state = 842
+					}
+				}
+				else = {
+					GEO = {
+						transfer_state = 828
+					} 
 				}
 				if = {
 					limit = {
@@ -1506,6 +1688,7 @@ country_event = { #collapse of russian control in europe
 						puppet = ARM
 					}
 				}
+				drop_cosmetic_tag = yes
 				GEO = {
 					set_politics = {
 						ruling_party = democratic
@@ -2858,8 +3041,16 @@ country_event = { #russia wants to strengthen the entente
 	
 	option = { #sounds good bro
 		name = rus_events.32.a
-		FROM = {
-			add_to_faction = ROOT
+		ai_chance = {
+			factor = 20
+		}
+		effect_tooltip = {
+			FROM = {
+				create_faction = entente_faction
+			}
+			ROOT = {
+				add_to_faction = FROM
+			}
 		}
 	}
 	option = { #no we ain't besties yet bro
@@ -2900,6 +3091,10 @@ country_event = { #yooo they accepted
 		name = rus_events.34.a
 		add_political_power = 75
 		add_war_support = 0.05
+		create_faction = entente_faction
+		FROM = {
+			add_to_faction = ROOT
+		}
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.05

@@ -53,6 +53,10 @@ russian_socialism_decisions = {
 		days_re_enable = 90
 
 		complete_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.02
+			}
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
 				value = -10
