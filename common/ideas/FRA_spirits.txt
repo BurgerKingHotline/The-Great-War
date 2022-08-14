@@ -226,9 +226,9 @@ ideas = {
 			on_remove = {
 				every_owned_state = {
 					limit = {
-						has_dynamic_modifier = { modifier = FRA_republican_resistance }
+						has_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
 					}
-					remove_dynamic_modifier = { modifier = FRA_republican_resistance }
+					remove_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
 				}
 			}
 
@@ -264,6 +264,56 @@ ideas = {
 			modifier = {
 				neutrality_drift = 0.01
 				party_popularity_stability_factor = 0.1
+			}
+		}
+
+		FRA_reserve_mobilization = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				is_subject = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				training_time_factor = -0.05
+				conscription = 0.005
+				mobilization_speed = 0.1
+			}
+		}
+
+		FRA_defensive_focus_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				is_subject = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				training_time_factor = -0.1
+				conscription = 0.005
+				army_defence_factor = 0.1
+				production_speed_bunker_factor = 0.1
+				mobilization_speed = 0.1
 			}
 		}
 

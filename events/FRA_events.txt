@@ -122,6 +122,11 @@ country_event = { #Caillaux demanded to resign
 			name = FRA_democratic_alliance_name
 			long_name = FRA_democratic_alliance_name
 		}
+		uncomplete_national_focus = {
+			focus = FRA_radical_continuation
+			uncomplete_children = yes
+		}
+		complete_national_focus = FRA_1910_democratic_alliance_victory
 	}
 }
 
@@ -318,6 +323,151 @@ country_event = { #action francaise seizes control
 	}
 }
 
+country_event = { #France wants to join the central powers
+	id = french_events.12
+	title = french_events.12.t	
+	desc = french_events.12.d	
+
+	is_triggered_only = yes
+	
+	option = { #I am speechless rn
+		name = french_events.12.a
+		add_to_faction = FRA
+		add_ai_strategy = {
+			id = FRA
+			type = alliance
+			value = 100
+		}
+		FRA = {
+			add_ai_strategy = {
+				id = GER
+				type = alliance
+				value = 100
+			}
+			country_event = { id = french_events.13 hours = 2 }
+		}
+	}
+	option = { #I am speechless rn
+		name = french_events.12.b
+		ai_chance = {
+			factor = 0
+		}
+		FRA = {
+			country_event = { id = french_events.14 hours = 2 }
+		}
+	}
+}
+
+country_event = { #Germany accepts
+	id = french_events.13
+	title = french_events.13.t	
+	desc = french_events.13.d	
+
+	is_triggered_only = yes
+	
+	option = { #a new era of european politics
+		name = french_events.13.a
+		diplomatic_relation = {
+	    country = RUS
+		  relation = guarantee
+		  active = no
+		}
+		RUS = {
+			diplomatic_relation = {
+		    country = FRA
+			  relation = guarantee
+			  active = no
+			}
+		}
+		news_event = { id = french_events.15 hours = 2 }
+	}
+}
+
+country_event = { #Germany does not want to ally
+	id = french_events.14
+	title = french_events.14.t	
+	desc = french_events.14.d	
+
+	is_triggered_only = yes
+	
+	option = { #oops, um.... y'all didn't see that
+		name = french_events.14.a
+		if = {
+			limit = {
+				has_country_leader = {
+					character = FRA_joseph_caillaux
+					ruling_only = yes
+				}
+			}
+			hidden_effect = { country_event = { id = french_events.3 days = 2 } }
+		}
+		uncomplete_national_focus = {
+			focus = FRA_attempt_german_reapproachment
+			uncomplete_children = yes
+		}
+		set_country_flag = FRA_no_central_power_membership_sadge
+	}
+}
+
+news_event = { #Franco-German Alliance
+	id = french_events.15
+	title = french_events.15.t	
+	desc = french_events.15.d	
+	picture = GFX_news_event_generic_usa_treaty
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = { #wtf
+		name = french_events.15.a
+		
+	}
+}
+
+news_event = {
+	id = french_events.16
+	title = french_events.16.t
+	desc = french_events.16.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = french_events.16.b #commies
+		trigger = {
+			has_government = communism
+		}
+	}
+	option = {
+		name = french_events.16.c #democrats
+		trigger = {
+			has_government = democratic
+		}
+	}
+	option = {
+		name = french_events.16.e #fascist and non-royalist unaligned
+		trigger = {
+			OR = {
+				has_government = fascism
+				AND = {
+					has_government = neutrality
+					NOT = {
+						tag = FRA
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = french_events.16.d #France
+		trigger = {
+			tag = FRA
+		}
+	}
+}
+
 add_namespace = morocco
 
 country_event = { #ruh roh raggy, re got a reberrion
@@ -461,6 +611,10 @@ country_event = { #morocco submits
 	option = { #
 		name = morocco.4.a
 		puppet = MOR
+		add_named_threat = {
+			threat = 2
+			name = FRA_agadir_crisis
+		}
 		hidden_effect = {
 			MOR = {
 				add_popularity = {
@@ -497,6 +651,10 @@ country_event = { #morocco denies
 			target = MOR
 			type = puppet_wargoal_focus
 		}
+		add_named_threat = {
+			threat = 5
+			name = FRA_agadir_crisis
+		}
 	}
 }
 
@@ -511,6 +669,10 @@ country_event = { #Germans deciding whether to intervene or not
 		name = morocco.6.a
 		ai_chance = {
 			factor = 6
+		}
+		add_named_threat = {
+			threat = 1
+			name = FRA_agadir_crisis
 		}
 		FRA = {
 			country_event = { id = morocco.7 hours = 2 }
@@ -527,6 +689,10 @@ country_event = { #Germans deciding whether to intervene or not
 			factor = 2
 		}
 		give_guarantee = MOR
+		add_named_threat = {
+			threat = 2
+			name = FRA_agadir_crisis
+		}
 		hidden_effect = {
 			MOR = {
 				country_event = { id = morocco.3 hours = 2 }
@@ -582,6 +748,10 @@ country_event = { #Germany demands concessions
 				factor = 3
 				has_completed_focus = FRA_1910_democratic_alliance_victory
 			}
+		}
+		add_named_threat = {
+			threat = 3
+			name = FRA_agadir_crisis
 		}
 		effect_tooltip = {
 			GER = {

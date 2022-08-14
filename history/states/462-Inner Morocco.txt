@@ -6,13 +6,8 @@ state={
 	history={
 		owner = MOR
 		add_core_of = MOR
-		add_claim_by = FRA
 		buildings = {
 			infrastructure = 1
-
-		}
-		1911.4.28 = {
-			owner = FRA
 
 		}
 

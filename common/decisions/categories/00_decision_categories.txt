@@ -236,6 +236,15 @@ category_test_decisions = {
 	}
 }
 
+faction_expansion_decisions = {
+	icon = generic_crisis
+	priority = 11
+	visible = {
+		is_faction_leader = yes
+	}
+
+}
+
 lar_local_recruitment = {
 	allowed = { has_dlc = "La Resistance" }
 

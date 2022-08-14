@@ -27,6 +27,20 @@ characters={
 		#	id=-1
 		#}
 	}
+	FRA_philippe_orleans={
+		name="Philippe d'Orléans"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		#will be given it via event
+		#country_leader={
+		#	ideology=progressivism
+		#	expire="1965.1.1.1"
+		#	id=-1
+		#}
+	}
 	FRA_jean_jaures={
 		name="Jean Jaurès"
 		portraits={
@@ -86,6 +100,436 @@ characters={
 		portraits={
 			civilian={
 				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+	}
+	#field marshals
+	FRA_joseph_gallieni={
+		name="Joseph Gallieni"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		field_marshal={
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRA_victor_constant_michel={
+		name="Victor-Constant Michel"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		field_marshal={
+			skill=4
+			attack_skill=2
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = FRA_victor_constant_michel
+			ledger = army
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				NOT = {
+					has_completed_focus = FRA_build_up_lorraine
+				}
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	#generals
+	FRA_philippe_petain={
+		name="Philippe Pétain"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		#will be promoted during ww1
+	}
+	FRA_charles_lanrezac={
+		name="Charles Lanrezac"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRA_joseph_joffre={
+		name="Joseph Joffre"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRA_ferdinand_foch={
+		name="Ferdinand Foch"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		corps_commander={
+			traits = { trait_reckless }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = FRA_ferdinand_foch
+			ledger = army
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				blitzkrieg_theorist
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	FRA_maurice_sarrail={
+		name="Maurice Sarrail"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRA_louis_franchet_desperey={
+		name="Louis Franchet d'Espèrey"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		corps_commander={
+			traits = { harsh_leader }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRA_joseph_gauderique_aymerich={
+		name="Joseph Gaudérique Aymerich"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRA_charles_mangin={
+		name="Charles Mangin"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	FRA_augustin_dubail={
+		name="Augustin Dubail"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = FRA_augustin_dubail
+			ledger = army
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_artillery_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	#advisors
+	FRA_adolphe_messimy={
+		name="Adolphe Messimy"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_adolphe_messimy
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				OR = {
+					has_country_leader = {
+						character = FRA_aristide_briand
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = FRA_joseph_caillaux
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				early_mobilizer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	FRA_joseph_paul_boncour={
+		name="Joseph Paul-Boncour"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_joseph_paul_boncour
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				OR = {
+					has_country_leader = {
+						character = FRA_aristide_briand
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = FRA_joseph_caillaux
+						ruling_only = yes
+					}
+					has_government = communism
+				}
+			}
+			traits = {
+				labour_organizer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	FRA_maurice_pujo={
+		name="Maurice Pujo"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_maurice_pujo
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				has_government = neutrality
+			}
+			traits = {
+				integralist_journalist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	FRA_maxime_real_del_sarte={
+		name="Maxime Real del Sarte"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_maxime_real_del_sarte
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				has_government = neutrality
+			}
+			traits = {
+				paramilitary_leader
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	FRA_leon_daudet={
+		name="Léon Daudet"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_leon_daudet
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				has_government = neutrality
+				has_completed_focus = FRA_af_reject_parliamentarianism
+			}
+			traits = {
+				staunch_monarchist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	FRA_georges_sorel={
+		name="Georges Sorel"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_georges_sorel
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				OR = {
+					has_government = communism
+					AND = {
+						has_government = neutrality
+						has_completed_focus = FRA_appeal_to_sorelians
+					}
+				}
+			}
+			traits = {
+				syndicalist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 	}

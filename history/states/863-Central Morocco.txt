@@ -6,7 +6,6 @@ state={
 	history={
 		owner = MOR
 		add_core_of = MOR
-		add_claim_by = FRA
 		victory_points = {
 			1043 1 
 		}
@@ -16,10 +15,6 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-
-		}
-		1911.4.28 = {
-			owner = FRA
 
 		}
 

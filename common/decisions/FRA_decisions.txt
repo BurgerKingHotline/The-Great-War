@@ -226,7 +226,7 @@ FRA_francaise_securing_state = {
 
 		target_trigger = {
 			FROM = {
-				has_dynamic_modifier = { modifier = FRA_republican_resistance }
+				has_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
 			}
 		}
 
@@ -237,6 +237,9 @@ FRA_francaise_securing_state = {
 		available = {
 			has_equipment = {
 				infantry_equipment > 100
+			}
+			NOT = {
+				has_country_flag = FRA_af_hunting_republicans
 			}
 		}
 
@@ -249,11 +252,22 @@ FRA_francaise_securing_state = {
 				type = infantry_equipment
 				amount = -100
 			}
+			hidden_effect = {
+				FROM = {
+					set_state_flag = FRA_af_hunting_republicans
+				}
+			}
+			set_country_flag = {
+				flag = FRA_af_hunting_republicans
+				days = 7
+				value = 1
+			}
 		}
 
 		remove_effect = {
 			FROM = {
-				remove_dynamic_modifier = { modifier = FRA_republican_resistance }
+				remove_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
+				clr_state_flag = FRA_af_hunting_republicans
 			}
 		}
 
@@ -281,6 +295,175 @@ FRA_francaise_securing_state = {
 				popularity = 0.02
 			}
 		}
+
+	}
+
+}
+
+faction_expansion_decisions = {
+	
+	FRA_defend_belgium_decision = {
+
+		target_trigger = {
+			FROM = {
+				tag = BEL
+			}
+		}
+
+		icon = generic_industry
+
+		allowed = {
+			tag = FRA
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = FRA_reinforce_belgians
+			BEL = { is_in_faction = no exists = yes is_subject = no }
+		}
+
+		available = {
+			BEL = { has_war_with = GER }
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = { id = generic.5 hours = 1 }
+			}
+		}
+
+	}
+
+	FRA_invite_balkans_example = {
+
+		allowed = {
+			always = no
+		}
+
+	}
+
+	FRA_invite_balkans = {
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = ALB
+					tag = BUL
+					tag = GRE
+					tag = SER
+					tag = MNT
+				}
+				is_in_faction = no
+				is_subject = no
+				has_war = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		icon = generic_political_discourse
+
+		cost = 30
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = FRA_expand_the_entente_balkans
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = { id = generic.5 hours = 1 }
+			}
+		}
+
+	}
+
+}
+
+FRA_attacking_germany_category = {
+	
+	FRA_invade_belgium_decision = {
+
+		target_trigger = {
+			FROM = {
+				tag = BEL
+			}
+		}
+
+		icon = generic_prepare_civil_war
+
+		cost = 10
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = FRA_reverse_schlieffen
+			BEL = { is_in_faction = no exists = yes is_subject = no }
+		}
+
+		war_with_on_complete = BEL
+
+		available = {
+			#BEL = { has_war_with = GER } #the player can be aggressive if they want lol
+			has_war_with = GER
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 5
+				GER = { has_war_with = BEL }
+			}
+		}
+
+		complete_effect = {
+			declare_war_on = {
+				target = BEL
+				type = topple_government
+			}
+		}
+
+	}
+
+	FRA_lorraine_offensive = {
+
+		cost = 25
+
+		visible = {
+			has_completed_focus = FRA_prepare_lorraine_offensive
+		}
+
+		available = {
+			has_war_with = GER
+		}
+
+		icon = generic_industry
+
+		targeted_modifier = {
+			tag = GER
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0.05
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		modifier = {
+			ai_focus_aggressive_factor = 0.2
+		}
+
+		days_remove = 35
 
 	}
 

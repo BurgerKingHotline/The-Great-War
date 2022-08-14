@@ -1,5 +1,6 @@
 FRA_mobilizing_leagues_category = {
-	
+	icon = generic_crisis
+	priority = 15
 	allowed = {
 		tag = FRA
 	}
@@ -11,18 +12,34 @@ FRA_mobilizing_leagues_category = {
 }
 
 FRA_francaise_securing_state = {
-	
+	icon = infiltration
 	allowed = {
 		tag = FRA
 	}
 
-	priority = {
-		base = 11
-	}
+	priority = 11
 
 	visible = {
 		has_completed_focus = FRA_hunt_down_republicans
 		has_government = neutrality
+	}
+
+}
+
+FRA_attacking_germany_category = {
+	icon = infiltration
+	allowed = {
+		tag = FRA
+	}
+
+	priority = 11
+
+	visible = {
+		OR = {
+			has_war_with = GER
+			has_completed_focus = FRA_reverse_schlieffen
+			has_completed_focus = FRA_prepare_lorraine_offensive
+		}
 	}
 
 }

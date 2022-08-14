@@ -138,8 +138,27 @@
 		relative_position_id = FRA_provide_rural_pensions
 		cost = 35
 
+		bypass = {
+			AND = {
+				has_idea = FRA_adolphe_messimy
+				has_idea = FRA_joseph_paul_boncour
+			}
+		}
+
 		completion_reward = {
 			#add a radical minister
+			if = {
+				limit = {
+					NOT = { has_idea = FRA_adolphe_messimy }
+				}
+				add_ideas = FRA_adolphe_messimy
+				else_if = {
+					limit = {
+						NOT = { has_idea = FRA_joseph_paul_boncour }
+					}
+					add_ideas = FRA_joseph_paul_boncour
+				}
+			}
 		}
 	}
 
@@ -159,10 +178,7 @@
 		relative_position_id = FRA_ensure_radical_rule
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = FRA_leftist_coalition
-				days = 365
-			}
+			add_country_leader_trait = FRA_leftist_coalition_trait
 			hidden_effect = {
 				add_popularity = {
 					ideology = communism
@@ -189,10 +205,7 @@
 		relative_position_id = FRA_ensure_radical_rule
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = FRA_rightist_coalition
-				days = 365
-			}
+			add_country_leader_trait = FRA_rightist_coalition_trait
 		}
 	}
 
@@ -208,7 +221,8 @@
 		relative_position_id = FRA_radical_left_coalition
 
 		completion_reward = {
-			add_ideas = FRA_cgt_idea
+			add_country_leader_trait = cgt_support
+			#add_ideas = FRA_cgt_idea
 		}
 	}
 
@@ -400,7 +414,7 @@
 
 	focus = {
 		id = FRA_end_secularism
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_mex_restore_the_army_of_christ
 		x = 2
 		y = 1
 		prerequisite = {
@@ -416,9 +430,51 @@
 	}
 
 	focus = {
+		id = FRA_appeal_to_sorelians
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = FRA_end_secularism
+		}
+		mutually_exclusive = {
+			focus = FRA_af_corporatism
+		}
+		relative_position_id = FRA_end_secularism
+		cost = 35
+
+		completion_reward = {
+			add_ideas = FRA_georges_sorel
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_af_corporatism
+		icon = GFX_focus_generic_industry_2
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = FRA_end_secularism
+		}
+		mutually_exclusive = {
+			focus = FRA_appeal_to_sorelians
+		}
+		relative_position_id = FRA_end_secularism
+		cost = 35
+
+		completion_reward = {
+			add_country_leader_trait = devoted_corporatist
+		}
+	}
+
+	focus = {
 		id = FRA_hunt_down_republicans
 		icon = GFX_goal_generic_small_arms
-		x = -1
+		x = -2
 		y = 1
 		prerequisite = {
 			focus = FRA_af_reject_parliamentarianism
@@ -428,6 +484,122 @@
 
 		completion_reward = {
 			unlock_decision_category_tooltip = FRA_francaise_securing_state
+		}
+	}
+
+	focus = {
+		id = FRA_mobilize_camelots
+		icon = GFX_focus_secret_rearmament
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = FRA_hunt_down_republicans
+		}
+		relative_position_id = FRA_hunt_down_republicans
+		cost = 35
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = FRA_maxime_real_del_sarte
+					}
+				}
+				add_ideas = FRA_maxime_real_del_sarte
+			}
+			random_owned_controlled_state = {
+				limit = {
+					has_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
+					NOT = {
+						has_state_flag = FRA_af_hunting_republicans
+					}
+				}
+				remove_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					has_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
+					NOT = {
+						has_state_flag = FRA_af_hunting_republicans
+					}
+				}
+				remove_dynamic_modifier = { modifier = FRA_republican_resistance_state_modifier }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_lift_law_exile
+		icon = GFX_focus_POL_beck_ribbentrop
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = FRA_hunt_down_republicans
+		}
+		relative_position_id = FRA_hunt_down_republicans
+		cost = 35
+
+		available = {
+			neutrality > 0.35
+		}
+
+		completion_reward = {
+			add_corps_commander_role = {
+				character = FRA_philippe_orleans
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_restore_orleans
+		icon = GFX_focus_generic_monarchy_2
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = FRA_lift_law_exile
+		}
+		relative_position_id = FRA_lift_law_exile
+		cost = 35
+
+		available = {
+			NOT = {
+				has_idea = FRA_republican_resistance
+			}
+			neutrality > 0.49
+		}
+
+		completion_reward = {
+			add_country_leader_role = {
+				character = FRA_philippe_orleans
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = FRA_af_corporatism
+					}
+					add_country_leader_trait = devoted_corporatist
+				}
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = FRA_orleanist_party_long
+				name = FRA_orleanist_party
+			}
+			set_cosmetic_tag = FRA_ORLEANS
+			news_event = { id = french_events.16 hours = 6 }
 		}
 	}
 
@@ -562,6 +734,11 @@
 			}
 			NOT = {
 				has_war_with = GER
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = FRA_no_central_power_membership_sadge
+				}
 			}
 		}
 
@@ -710,8 +887,36 @@
 	}
 
 	focus = {
+		id = FRA_end_entente
+		icon = GFX_focus_ger_return_of_the_kaiser
+		x = 0
+		y = 2
+		cost = 35
+		prerequisite = {
+			focus = FRA_attempt_german_reapproachment
+		}
+		prerequisite = {
+			focus = FRA_offer_aid_to_italy
+			focus = FRA_revive_german_concessions_in_morocco
+		}
+		relative_position_id = FRA_attempt_german_reapproachment
+
+		available = {
+			NOT = {
+				has_war_with = GER
+			}
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = { id = french_events.12 hours = 2 }
+			}
+		}
+	}
+
+	focus = {
 		id = FRA_expand_the_entente_balkans
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_focus_BUL_free_balkan_states
 		x = -1
 		y = 1
 		cost = 35
@@ -719,10 +924,514 @@
 			focus = FRA_strengthen_entente
 			focus = FRA_closer_to_britain
 		}
+		available = {
+			is_faction_leader = yes
+		}
 		relative_position_id = FRA_strengthen_entente
 
 		completion_reward = {
-			#unlocks decisions to expand the faction for Serbia, Albania, Bulgaria, and Montenegro, Greece
+			custom_effect_tooltip = FRA_invite_balkans_example
+		}
+	}
+
+	focus = {
+		id = FRA_take_the_offensive
+		icon = GFX_goal_demand_sudetenland
+		x = 0
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_expand_the_entente_balkans
+		}
+		relative_position_id = FRA_expand_the_entente_balkans
+
+		available = {
+			NOT = {
+				is_in_faction_with = GER
+				has_war_with = GER
+				is_subject = yes
+				GER = { is_subject = yes }
+			}
+			OR = {
+				AND = {
+					threat > 0.1
+					has_government = neutrality
+				}
+				threat > 0.15
+			}
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = GER
+				type = topple_government
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_redraw_concentration_plans
+		icon = GFX_goal_generic_position_armies
+		x = 30
+		y = 0
+		cost = 35
+		available = {
+			is_faction_leader = yes
+			NOT = { is_in_faction_with = GER }
+		}
+		mutually_exclusive = {
+			focus = FRA_warplan_realignment
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_warplan_realignment
+		icon = GFX_generic_deal_germany
+		x = 38
+		y = 0
+		cost = 35
+		available = {
+			is_in_faction_with = GER
+		}
+		mutually_exclusive = {
+			focus = FRA_redraw_concentration_plans
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_organize_reserves
+		icon = GFX_focus_generic_little_entente
+		x = -2
+		y = 1
+		cost = 35
+		mutually_exclusive = {
+			focus = FRA_build_up_lorraine
+		}
+		prerequisite = {
+			focus = FRA_redraw_concentration_plans
+		}
+		relative_position_id = FRA_redraw_concentration_plans
+
+		bypass = {
+			has_idea = FRA_victor_constant_michel
+		}
+
+		completion_reward = {
+			add_ideas = FRA_victor_constant_michel
+		}
+	}
+
+	focus = {
+		id = FRA_build_up_lorraine
+		icon = GFX_goal_generic_fortify_city
+		x = 3
+		y = 1
+		cost = 35
+		mutually_exclusive = {
+			focus = FRA_organize_reserves
+		}
+		prerequisite = {
+			focus = FRA_redraw_concentration_plans
+		}
+		relative_position_id = FRA_redraw_concentration_plans
+
+		bypass = {
+			has_war_with = GER
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_owned_by = FRA
+					is_core_of = FRA
+					any_neighbor_state = { is_owned_by = GER }
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_incorporate_reserves_into_mobilization
+		icon = GFX_focus_generic_manpower
+		x = 1
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_organize_reserves
+		}
+		relative_position_id = FRA_organize_reserves
+
+		completion_reward = {
+			add_ideas = FRA_reserve_mobilization
+		}
+	}
+
+	focus = {
+		id = FRA_extend_fortifications_north
+		icon = GFX_goal_fortify_the_westwall
+		x = -1
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_organize_reserves
+		}
+		relative_position_id = FRA_organize_reserves
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = BEL
+				}
+				every_state = {
+					limit = {
+						is_owned_by = FRA
+						is_core_of = FRA
+						any_neighbor_state = { is_owned_by = BEL }
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+				else = {
+					every_state = {
+						limit = {
+							is_owned_by = FRA
+							is_core_of = FRA
+							any_neighbor_state = { is_owned_by = GER }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							instant_build = yes
+							province = {
+								all_provinces = yes
+								limit_to_border = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_defensive_focus
+		icon = GFX_goal_generic_defence
+		x = 1
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_incorporate_reserves_into_mobilization
+		}
+		prerequisite = {
+			focus = FRA_extend_fortifications_north
+		}
+		relative_position_id = FRA_extend_fortifications_north
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_reserve_mobilization
+				add_idea = FRA_defensive_focus_idea
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_appoint_joseph_joffre
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_build_up_lorraine
+		}
+		relative_position_id = FRA_build_up_lorraine
+
+		completion_reward = {
+			add_advisor_role = {
+				character = FRA_joseph_joffre
+				activate = yes
+				advisor = {
+					slot = high_command
+					idea_token = FRA_joseph_joffre
+					ledger = army
+					allowed = {
+						original_tag = FRA
+					}
+					traits = {
+						army_chief_offensive_1
+					}
+					cost = 100
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_utilize_plan_xvii
+		icon = GFX_goal_generic_position_armies
+		x = -3
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_appoint_joseph_joffre
+		}
+		relative_position_id = FRA_appoint_joseph_joffre
+
+		completion_reward = {
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_reinforce_belgians
+		icon = GFX_goal_generic_military_sphere
+		x = -2
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_utilize_plan_xvii
+			focus = FRA_defensive_focus
+		}
+		mutually_exclusive = {
+			focus = FRA_reverse_schlieffen
+			focus = FRA_prepare_lorraine_offensive
+		}
+		relative_position_id = FRA_utilize_plan_xvii
+
+		available = {
+			BEL = {
+				is_in_faction = no
+			}
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = FRA_defend_belgium_decision
+			if = {
+				limit = {
+					BEL = { has_war_with = GER }
+				}
+				country_event = { id = generic.5 hours = 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_reverse_schlieffen
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 0
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_utilize_plan_xvii
+		}
+		mutually_exclusive = {
+			focus = FRA_reinforce_belgians
+			focus = FRA_prepare_lorraine_offensive
+		}
+		relative_position_id = FRA_utilize_plan_xvii
+
+		available = {
+			BEL = {
+				NOT = {
+					is_in_faction_with = FRA
+				}
+			}
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = FRA_invade_belgium_decision
+		}
+	}
+
+	focus = {
+		id = FRA_prepare_lorraine_offensive
+		icon = GFX_goal_generic_special_forces
+		x = 2
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_utilize_plan_xvii
+		}
+		mutually_exclusive = {
+			focus = FRA_reinforce_belgians
+			focus = FRA_reverse_schlieffen
+		}
+		relative_position_id = FRA_utilize_plan_xvii
+
+		completion_reward = {
+			unlock_decision_tooltip = FRA_lorraine_offensive
+		}
+	}
+
+	focus = {
+		id = FRA_expand_artillery_development
+		icon = GFX_goal_generic_army_artillery
+		x = 3
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_appoint_joseph_joffre
+		}
+		relative_position_id = FRA_appoint_joseph_joffre
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_centralize_joffres_command
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_expand_artillery_development
+		}
+		mutually_exclusive = {
+			focus = FRA_appoint_sarrail_mow
+			focus = FRA_grant_gallieni_minsterial_control
+		}
+		relative_position_id = FRA_expand_artillery_development
+
+		completion_reward = {
+			add_advisor_role = {
+				character = FRA_joseph_joffre
+				activate = yes
+				advisor = {
+					slot = army_chief
+					idea_token = FRA_joseph_joffre
+					ledger = army
+					allowed = {
+						original_tag = FRA
+					}
+					traits = {
+						army_chief_offensive_2
+					}
+					cost = 100
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_appoint_sarrail_mow
+		icon = GFX_goal_tripartite_pact
+		x = -2
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_expand_artillery_development
+		}
+		mutually_exclusive = {
+			focus = FRA_centralize_joffres_command
+			focus = FRA_grant_gallieni_minsterial_control
+		}
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRA_expand_artillery_development
+
+		completion_reward = {
+			add_advisor_role = {
+				character = FRA_maurice_sarrail
+				activate = yes
+				advisor = {
+					slot = army_chief
+					idea_token = FRA_maurice_sarrail
+					ledger = army
+					allowed = {
+						original_tag = FRA
+					}
+					traits = {
+						army_chief_offensive_1 #probably change this
+					}
+					cost = 100
+				}
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_grant_gallieni_minsterial_control
+		icon = GFX_goal_generic_army_doctrines
+		x = 2
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_expand_artillery_development
+		}
+		mutually_exclusive = {
+			focus = FRA_appoint_sarrail_mow
+			focus = FRA_centralize_joffres_command
+		}
+		relative_position_id = FRA_expand_artillery_development
+
+		completion_reward = {
+			add_advisor_role = {
+				character = FRA_joseph_gallieni
+				activate = yes
+				advisor = {
+					slot = army_chief
+					idea_token = FRA_joseph_gallieni
+					ledger = army
+					allowed = {
+						original_tag = FRA
+					}
+					traits = {
+						army_chief_organizational_2
+					}
+					cost = 100
+				}
+			}
 		}
 	}
 }
