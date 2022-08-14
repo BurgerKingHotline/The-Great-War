@@ -545,48 +545,29 @@ country_event = { #mass uprisings
 	fire_only_once = yes
 
 	immediate = {
-		218 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 218
+					state = 408
+					state = 813
+					state = 213
+					state = 742
+					state = 248
+					state = 911
+					state = 208
+					state = 209
+					state = 263
+					state = 563
 				}
-				set_state_controller_to = SOV
 			}
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-				RUS = {
-					delete_unit = { 
-						state = PREV
-						disband = no
-					}
-				}
-				create_unit = {
-					division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-					owner = SOV
-				} 
-			}
-			create_unit = {
-				division = "name = \"Red Guard\" division_template = \"Red Guard\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-				owner = SOV
-			} 
-		}
-		408 = {
 			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			create_unit = {
-				division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-				owner = SOV
-			} 
-			create_unit = {
-				division = "name = \"Red Guard\" division_template = \"Red Guard\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-				owner = SOV
-			} 
-		}
-		813 = {
+			RUS = {
+				delete_unit = { 
+					state = PREV
+					disband = no
+				}
+			}
 			SOV = {
 				set_state_owner = PREV
 			}
@@ -598,70 +579,21 @@ country_event = { #mass uprisings
 				}
 				set_state_controller_to = SOV
 			}
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-				RUS = {
-					delete_unit = { 
-						state = PREV
-						disband = no
-					}
-				}
-				create_unit = {
-					division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-					owner = SOV
-				} 
-			}
-		}
-		213 = {
-			SOV = {
-				set_state_owner = PREV
-			}
 			if = {
 				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-				RUS = {
-					delete_unit = { 
-						state = PREV
-						disband = no
+					OR = {
+						state_strategic_value > 15
+						any_neighbor_state = {
+							owner = {
+								has_war_with = SOV
+							}
+						}
 					}
 				}
 				create_unit = {
 					division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
 					owner = SOV
-				} 
-			}
-		}
-		742 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
 				}
-				set_state_controller_to = SOV
-			}
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-				RUS = {
-					delete_unit = { 
-						state = PREV
-						disband = no
-					}
-				}
-				create_unit = {
-					division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-					owner = SOV
-				} 
 			}
 		}
 		add_popularity = {
@@ -730,7 +662,38 @@ country_event = { #collapse of russian control in europe
 	fire_only_once = yes
 
 	immediate = {
-		246 = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 246
+					state = 242
+					state = 247
+					state = 210
+					state = 810
+					state = 207
+					state = 241
+					state = 206
+					state = 204
+					state = 95
+					state = 96
+					state = 784
+					state = 243
+					state = 241
+					state = 205
+					state = 223
+					state = 244
+					state = 253
+					state = 215
+					state = 247
+				}
+			}
+			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
+			RUS = {
+				delete_unit = { 
+					state = PREV
+					disband = no
+				}
+			}
 			SOV = {
 				set_state_owner = PREV
 			}
@@ -742,585 +705,20 @@ country_event = { #collapse of russian control in europe
 				}
 				set_state_controller_to = SOV
 			}
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-				RUS = {
-					delete_unit = { 
-						state = PREV
-						disband = no
+			if = {
+				limit = {
+					OR = {
+						state_strategic_value > 15
+						any_neighbor_state = {
+							owner = {
+								has_war_with = SOV
+							}
+						}
 					}
 				}
 				create_unit = {
 					division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
 					owner = SOV
-				} 
-			}
-			create_unit = {
-				division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-				owner = SOV
-			}
-			
-		}
-		242 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-				RUS = {
-					delete_unit = { 
-						state = PREV
-						disband = no
-					}
-				}
-				create_unit = {
-					division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-					owner = SOV
-				} 
-			}
-			create_unit = {
-				division = "name = \"Red Guard\" division_template = \"Red Guard\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-				owner = SOV
-			} 
-		}
-		247 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-				RUS = {
-					delete_unit = { 
-						state = PREV
-						disband = no
-					}
-				}
-				create_unit = {
-					division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-					owner = SOV
-				} 
-			}
-			create_unit = {
-				division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-				owner = SOV
-			}
-		}
-		210 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			hidden_effect = {
-				remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-				RUS = {
-					delete_unit = { 
-						state = PREV
-						disband = no
-					}
-				}
-				create_unit = {
-					division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
-					owner = SOV
-				} 
-			}
-		}
-		810 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		207 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-			 
-		}
-		241 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-			 
-		}
-		206 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-			 
-		}
-		204 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-			 
-		}
-		95 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-			 
-		}
-		96 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		784 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		243 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		241 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		243 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		205 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		223 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		244 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		253 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		215 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		247 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		248 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		911 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		208 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		209 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		263 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		911 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
-				}
-			}
-		}
-		568 = {
-			SOV = {
-				set_state_owner = PREV
-			}
-			if = {
-				limit = {
-					RUS = {
-						controls_state = PREV
-					}
-				}
-				set_state_controller_to = SOV
-			}
-			remove_dynamic_modifier = { modifier = RUS_local_soviets_modifier }
-			RUS = {
-				delete_unit = { 
-					state = PREV
-					disband = no
 				}
 			}
 		}
@@ -1519,7 +917,6 @@ country_event = { #collapse of russian control in europe
 							}
 						}
 					}
-					log = "Soviet unit put in [THIS.GetName]"
 					random_list = {
 						25 = {
 							create_unit = {
@@ -1531,7 +928,6 @@ country_event = { #collapse of russian control in europe
 								RUS = {
 									has_completed_focus = RUS_prepare_for_a_civil_war
 								}
-								
 							}
 						}
 						25 = {
@@ -2832,7 +2228,6 @@ country_event = { #omg big scawwwy wussia demwans puuuuuwsia
 	
 	option = {#ok daddy
 		name = rus_events.28.a
-
 		RUS = {
 			transfer_state = 419
 			transfer_state = 832
@@ -2852,7 +2247,6 @@ country_event = { #omg big scawwwy wussia demwans puuuuuwsia
 			transfer_state = 412
 			transfer_state = 410
 		}
-
 		trigger = {
 			RUS = {
 				has_country_flag = RUS_britain_also_owns_persia
