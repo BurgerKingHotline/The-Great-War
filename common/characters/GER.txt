@@ -3,7 +3,7 @@ characters={
 		name="Wilhelm II"
 		portraits={
 			civilian={
-				large=GFX_portrait_Mohammed_Zahir_Shah
+				large="GFX_portrait_ger_wilhelm_ii"
 			}
 		}
 		country_leader={
@@ -30,8 +30,8 @@ characters={
 	GER_august_mackensen={
 		name="August von Mackensen"
 		portraits={
-			civilian={
-				large=GFX_portrait_Mohammed_Zahir_Shah
+			army={
+				large="gfx/leaders/GER/portrait_ger_august_mackensen.dds"
 			}
 		}
 		field_marshal={

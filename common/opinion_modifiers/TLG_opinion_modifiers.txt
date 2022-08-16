@@ -45,4 +45,26 @@ opinion_modifiers = {
 		value = 10
 	}
 
+	# GER
+
+	ger_contested_navy = {
+		value = -25
+	}
+
+	ger_supported_us = {
+		value = 15
+	}
+
+	ger_abandoned_support = {
+		value = -15
+	}
+
+	ger_romania_mission = {
+		value = 15
+	}
+
+	ger_balkan_prussia = {
+		value = 15
+	}
+
 }

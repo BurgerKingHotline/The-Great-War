@@ -74,6 +74,7 @@
 		}
 
 		completion_reward = {
+			add_political_power = 150
 		}
 
 		ai_will_do = {
@@ -96,6 +97,11 @@
 		available_if_capitulated = yes
 
 		available = {
+			NOT = {
+				ASH = {
+					has_completed_focus = ASH_cede_italian_lands
+				}
+			}
 		}
 
 		completion_reward = {
@@ -159,7 +165,7 @@
 
 	focus = {
 		id = GER_invite_ottomans
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_focus_generic_befriend_turkey
 		relative_position_id = GER_romania_mission
 		prerequisite = {
 			focus = GER_romania_mission
@@ -262,6 +268,10 @@
 		}
 
 		completion_reward = {
+			add_state_claim = 777
+			add_state_claim = 859
+			add_state_claim = 860
+			add_state_claim = 861
 		}
 
 		ai_will_do = {
@@ -305,6 +315,11 @@
 		}
 
 		completion_reward = {
+			add_state_claim = 726
+			AFG = {
+			}
+			SIA = {
+			}
 		}
 
 		ai_will_do = {
@@ -351,6 +366,7 @@
 		}
 
 		completion_reward = {
+			dismantle_faction = yes
 		}
 
 		ai_will_do = {
@@ -373,6 +389,9 @@
 		}
 
 		completion_reward = {
+			create_faction = pact_of_steel
+			add_to_faction = GER
+			add_to_faction = ITA
 		}
 
 		ai_will_do = {
@@ -392,9 +411,24 @@
 		available_if_capitulated = yes
 
 		available = {
+			OR = {
+				owns_state = 903
+				owns_state = 153
+				owns_state = 152
+				owns_state = 4
+				owns_state = 894
+				owns_state = 69
+			}
 		}
 
 		completion_reward = {
+			set_country_flag = ger_integrate_aus_unlock
+		}
+
+		bypass = {
+			ASH = {
+				is_subject_of = GER
+			}
 		}
 
 		ai_will_do = {
@@ -418,6 +452,13 @@
 		}
 
 		completion_reward = {
+			add_named_threat = { threat = 5 name = GER_war_with_france_threat }
+ 			create_wargoal = {
+ 				type = take_state_focus
+ 				target = FRA
+ 				expire = 0
+ 				generator = { 28 }
+ 			}
 		}
 
 		ai_will_do = {
@@ -437,9 +478,16 @@
 		available_if_capitulated = yes
 
 		available = {
+			has_war_with = FRA
 		}
 
 		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = BEL
+				expire = 0
+				generator = { 6 }
+			}
 		}
 
 		ai_will_do = {
@@ -465,6 +513,12 @@
 		}
 
 		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = HOL
+				expire = 0
+				generator = { 7 }
+			}
 		}
 
 		ai_will_do = {
@@ -472,7 +526,7 @@
 	}
 	
 	focus = {
-		id = GER_claim_indonesia
+		id = GER_claim_guinea
 		icon = GFX_goal_generic_position_armies
 		relative_position_id = GER_pressure_hol
 		prerequisite = {
@@ -488,6 +542,9 @@
 		}
 
 		completion_reward = {
+			add_state_claim = 669
+			add_state_claim = 523
+			add_state_claim = 634
 		}
 
 		ai_will_do = {
@@ -554,6 +611,18 @@
 		available_if_capitulated = yes
 
 		available = {
+			OR = {
+				has_war_with = RUS
+				has_war_with = SOV
+			}
+			OR = {
+				RUS = {
+					surrender_progress > 0.1
+				}
+				SOV = {
+					surrender_progress > 0.1
+				}
+			}
 		}
 
 		completion_reward = {
@@ -576,9 +645,27 @@
 		available_if_capitulated = yes
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_improve_national_spirit_tooltip
+				OR = {
+					GER = { controls_state = 126 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 126
+					}
+				}
+				OR = {
+					GER = { controls_state = 16 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 16
+					}
+				}
+			}
 		}
 
 		completion_reward = {
+			add_ideas = triumphant_will
 		}
 
 		ai_will_do = {
@@ -612,7 +699,7 @@
 	
 	focus = {
 		id = GER_ally_usa
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_focus_chi_mission_to_the_us
 		relative_position_id = GER_war_with_france
 		mutually_exclusive = {
 			focus = GER_zimmerman_telegram
