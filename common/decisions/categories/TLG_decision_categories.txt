@@ -184,3 +184,6 @@ MEX_diaz_support_category = {
 		has_global_flag = MEX_revolution
 	}
 }
+surrender_category = {
+	visible = { has_war = yes }
+}

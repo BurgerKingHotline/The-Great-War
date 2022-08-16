@@ -3001,3 +3001,1018 @@ foreign_support = {
 		}
 	}
 }
+
+foreign_politics = {
+	FROM_give_core_state_to_ally = {
+
+		icon = generic_border
+
+		state_target = yes
+
+		target_trigger = {
+			FROM = {
+				NOT = { is_core_of = ROOT }
+				is_owned_by = ROOT
+			}
+			any_allied_country = {
+				FROM = {
+					is_core_of = PREV
+				}
+			}
+		}
+
+		complete_effect = {
+			random_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					FROM = { is_core_of = PREV }
+				}
+				transfer_state = FROM
+			}
+		}
+
+	}
+}
+
+puppet_state_creation_category = {
+	
+	RHI_stoke_rhenish_separatism = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 51
+			51 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			51 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			42 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			856 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				RHI = {
+					add_state_core = 51
+					add_state_core = 42
+					add_state_core = 856
+					if = {
+						limit = { ROOT = { owns_state = 840 } }
+						add_state_core = 840
+					}
+				}
+			}
+			release_puppet = RHI
+		}
+
+	}
+
+	HES_release_hesse = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 55
+			55 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			55 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				HES = {
+					add_state_core = 55
+				}
+			}
+			release_puppet = HES
+		}
+
+	}
+
+	WUR_release_wurtemburg = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 50
+			50 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			50 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				WUR = {
+					add_state_core = 50
+				}
+			}
+			release_puppet = WUR
+		}
+
+	}
+
+	HAN_release_hannover = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 59
+			59 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			59 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			56 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			57 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				HAN = {
+					add_state_core = 59
+					add_state_core = 56
+					add_state_core = 57
+				}
+			}
+			release_puppet = HAN
+		}
+
+	}
+
+	BAY_release_bavaria = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 52
+			52 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			52 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			53 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			54 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				BAY = {
+					add_state_core = 54
+					add_state_core = 53
+					add_state_core = 52
+					if = {
+						limit = { 50 = { is_core_of = BAY } }
+						remove_state_core = 50
+					}
+				}
+			}
+			release_puppet = BAY
+		}
+
+	}
+
+	WGR_establish_west_germany = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 55
+			55 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			55 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			42 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			856 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			51 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			56 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			57 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			59 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			60 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				WGR = {
+					add_state_core = 60
+					add_state_core = 856
+					add_state_core = 42
+					add_state_core = 51
+					add_state_core = 55
+					add_state_core = 56
+					add_state_core = 57
+					add_state_core = 59
+					set_capital = { state = 55 }
+				}
+			}
+			release_puppet = WGR
+		}
+
+	}
+
+	SAX_release_saxony = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 65
+			65 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			65 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				SAX = {
+					add_state_core = 65
+					if = {
+						limit = {
+							ROOT = { owns_state = 60 }
+							60 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 60
+					}
+				}
+			}
+			release_puppet = SAX
+		}
+
+	}
+
+	SHL_release_schleswig = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 58
+			58 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			58 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				SHL = {
+					add_state_core = 58
+					if = {
+						limit = {
+							ROOT = { owns_state = 835 }
+							835 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 835
+					}
+				}
+			}
+			release_puppet = SHL
+		}
+
+	}
+
+	SIL_release_silesia = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 66
+			66 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			66 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			67 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				SIL = {
+					add_state_core = 66
+					add_state_core = 67
+					if = {
+						limit = {
+							ROOT = { owns_state = 762 }
+							762 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 835
+					}
+				}
+			}
+			release_puppet = SHL
+		}
+
+	}
+
+	PRE_release_prussia = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				AND = {
+					owns_state = 5
+					5 = {
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				AND = {
+					owns_state = 807
+					807 = {
+						NOT = { is_core_of = ROOT }
+					}
+				}
+			}
+		}
+
+		available = {
+			5 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			763 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						NOT = { is_core_of = ROOT }
+						OR = {
+							state = 5
+							state = 763
+							state = 188
+							state = 85
+							state = 807
+							state = 86
+						}
+					}
+					add_core_of = PRE
+				}
+			}
+			release_puppet = PRE
+		}
+
+	}
+
+	BAY_release_south_germany = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 52
+			52 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			52 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			53 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			54 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			50 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				BAY = {
+					add_state_core = 54
+					add_state_core = 53
+					add_state_core = 52
+					add_state_core = 50
+				}
+			}
+			BAY = {
+				set_cosmetic_tag = BAY_south_germany
+			}
+			release_puppet = BAY
+		}
+
+	}
+
+	AUS_release_austria = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 4
+			4 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			4 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			152 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			153 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				AUS = {
+					add_state_core = 4
+					add_state_core = 153
+					add_state_core = 152
+					if = {
+						limit = {
+							ROOT = { owns_state = 901 }
+							901 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 901
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 894 }
+							894 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 894
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 903 }
+							903 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 903
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 885 }
+							885 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 885
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 39 }
+							39 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 39
+					}
+				}
+			}
+			release_puppet = AUS
+		}
+
+	}
+
+	ALS_release_alsace_lorraine = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 28
+			28 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			28 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				ALS = {
+					add_state_core = 28
+					if = {
+						limit = {
+							ROOT = { owns_state = 926 }
+							926 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 926
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 927 }
+							927 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 927
+					}
+				}
+			}
+			release_puppet = ALS
+		}
+
+	}
+
+	PRV_release_provence = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 21
+			21 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			21 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			32 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			735 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				PRV = {
+					add_state_core = 21
+					add_state_core = 32
+					add_state_core = 735
+				}
+			}
+			release_puppet = PRV
+		}
+
+	}
+
+	PRS_release_paris = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 16
+			16 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		available = {
+			16 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			15 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			785 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			18 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				PRS = {
+					add_state_core = 16
+					add_state_core = 15
+					add_state_core = 785
+					add_state_core = 18
+					if = {
+						limit = {
+							ROOT = { owns_state = 29 }
+							29 = { NOT = { is_core_of = ROOT } }
+						}
+						add_state_core = 29
+					}
+				}
+			}
+			release_puppet = PRS
+		}
+
+	}
+
+}

@@ -7,8 +7,35 @@
  senussiya_resistence_increase:0 "Senussi Resistance Increase"
  senussiya_revolt:0 "Senussi Revolt"
  fund_senussiya_decision:0 "Fund Senussian Resistance"
- senussiya_resistence_modifier_1:0 "Semussi Resistance"
- senussiya_resistence_modifier_2:0 "Semussi Resistance"
- senussiya_resistence_modifier_3:0 "Semussi Resistance"
- senussiya_resistence_modifier_4:0 "Semussi Resistance"
+ senussiya_resistence_modifier_1:0 "Senussi Resistance"
+ senussiya_resistence_modifier_2:0 "Senussi Resistance"
+ senussiya_resistence_modifier_3:0 "Senussi Resistance"
+ senussiya_resistence_modifier_4:0 "Senussi Resistance"
+
+ #puppet release stuff
+ puppet_state_creation_category:0 "Establish Puppet States"
+ puppet_state_creation_category_desc:0 "To better manage the territory we occupy, we should establish friendly puppet states in our occupied territory."
+ HES_release_hesse:0 "Release Hesse as a Subject"
+ WUR_release_wurtemburg:0 "Release Württemberg as a Subject"
+ HAN_release_hannover:0 "Release Hannover as a Subject"
+ BAY_release_bavaria:0 "Release Bavaria as a Subject"
+ WGR_establish_west_germany:0 "Establish a West German Federation"
+ SAX_release_saxony:0 "Release Saxony as a Subject"
+ SHL_release_schleswig:0 "Release Schleswig as a Subject"
+ RHI_stoke_rhenish_separatism:0 "Stoke Rhenish Separatism"
+ SIL_release_silesia:0 "Release Silesia as a Subject"
+ PRE_release_prussia:0 "Release Prussia as a Subject"
+ AUS_release_austria:0 "Release Austria as a Subject"
+ BAY_release_south_germany:0 "Establish a South German Confederation"
+ ALS_release_alsace_lorraine:0 "Release Alsace-Lorraine as a Subject"
+ PRV_release_provence:0 "Release Provence as a Subject"
+ PRS_release_paris:0 "Release Paris as a Subject"
+
+ #foreing politiasidjf
+ FROM_give_core_state_to_ally:0 "Give [FROM.GetName] to our Ally"
+
+ #surrendering
+ surrender_category:0 "Non-Total Capitulation"
+ surrender_category_desc:0 "We do not wish to see the total destruction of our nation, so we must strike a deal to surrender with honor."
+ FRA_surrender_to_germany:0 "Offer a Peace Deal to [GER.GetNameDef]"
  

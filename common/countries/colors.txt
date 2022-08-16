@@ -861,3 +861,23 @@ LOD = {
 	color = rgb { 204 49 85 }
 	color_ui = rgb { 204 49 85 }
 }
+ALS = {
+	color = rgb { 204 49 85 }
+	color_ui = rgb { 204 49 85 }
+}
+RHI = {
+	color = rgb { 51 155 0 }
+	color_ui = rgb { 210 147 217 }
+}
+HES = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
+PRV = {
+	color = rgb { 171 190 152 }
+	color_ui = rgb { 222 247 198 }
+}
+PRS = {
+	color = rgb { 36 132 247 }
+	color_ui = rgb { 47 172 255 }
+}

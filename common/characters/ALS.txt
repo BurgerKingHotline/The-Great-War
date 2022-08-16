@@ -1,0 +1,28 @@
+characters={
+	ALS_jacques_peirotes={
+		name="Jacques Peirotes"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		country_leader={
+			ideology=progressivism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ALS_charles_hueber={
+		name="Charles Hueber"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

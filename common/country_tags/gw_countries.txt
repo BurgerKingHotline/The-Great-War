@@ -10,3 +10,10 @@ TYL = "countries/Tyrol.txt"
 BAT = "countries/Banat.txt"
 GLI = "countries/UKRGalicia.txt"
 LOD = "countries/Lodomeria.txt"
+#New German Releasables
+ALS = "countries/Alsace.txt"
+RHI = "countries/Rhineland.txt"
+HES = "countries/Hesse.txt"
+#new French Releasables
+PRV = "countries/Provence.txt"
+PRS = "countries/Paris.txt"

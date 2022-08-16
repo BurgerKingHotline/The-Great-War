@@ -1,0 +1,30 @@
+characters={
+	MOR_abd_al_hafid={
+		name="Abd al-Hafid"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MOR_moulay_youssef={
+		name="Moulay Youssef"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		#country_leader={
+		#	ideology=despotism
+		#	expire="1965.1.1.1"
+		#	id=-1
+		#	#traits = { dependent_on_overlord }
+		#	#added when subjugated
+		#}
+	}
+}

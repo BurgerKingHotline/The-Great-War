@@ -2647,10 +2647,27 @@ leader_traits = {
 		consumer_goods_factor = -0.03
 	}
 
+	FRA_rightist_coalition_trait_2 = {
+		random = no
+		sprite = 13
+		party_popularity_stability_factor = 0.2
+		political_power_gain = 0.05
+		consumer_goods_factor = -0.05
+	}
+
 	syndicalist = {
 		random = no
 		sprite = 13
 		production_factory_start_efficiency_factor = 0.05
+		consumer_goods_factor = -0.05
+	}
+
+	dependent_on_overlord = {
+		random = no
+		sprite = 13
+		send_volunteer_size = 2
+		improve_relations_maintain_cost_factor = -1
+		overlord_trade_cost_factor = -0.25
 		consumer_goods_factor = -0.05
 	}
 

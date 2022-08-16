@@ -48,6 +48,27 @@ set_convoys = 20
 }
 
 
+recruit_character = MOR_abd_al_hafid
+recruit_character = MOR_moulay_youssef
+
+1912.4.23 = {
+	FRA = {
+		puppet = MOR
+	}
+	add_country_leader_role = {
+		character = MOR_moulay_youssef
+		promote_leader = yes
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				dependent_on_overlord
+			}
+		}
+	}
+}
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.1"
@@ -59,14 +80,4 @@ set_popularities = {
 	fascism = 20
 	communism = 5
 	neutrality = 50
-}
-
-create_country_leader = {
-	name = "Mohammed V"
-	desc = ""
-	picture = GFX_portrait_Mohammed_V
-	ideology = despotism
-	traits = {
-		#
-	}
 }

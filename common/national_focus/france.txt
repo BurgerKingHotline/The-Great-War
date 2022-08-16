@@ -246,6 +246,58 @@
 	}
 
 	focus = {
+		id = FRA_drive_away_conservatives
+		icon = GFX_focus_generic_industry_2
+		x = 0
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_work_with_cgt
+			focus = FRA_implement_income_tax
+		}
+		mutually_exclusive = {
+			focus = FRA_expand_1910_coalition
+		}
+		relative_position_id = FRA_work_with_cgt
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = FRA_expand_1910_coalition
+		icon = GFX_focus_generic_industry_2
+		x = 0
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_implement_income_tax
+		}
+		mutually_exclusive = {
+			focus = FRA_drive_away_conservatives
+		}
+		relative_position_id = FRA_implement_income_tax
+
+		completion_reward = {
+			swap_ruler_traits = {
+				remove = FRA_rightist_coalition_trait
+				add = FRA_rightist_coalition_trait_2
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.03
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = FRA_support_businesses
 		icon = GFX_goal_generic_consumer_goods
 		x = -1
@@ -311,6 +363,7 @@
 				idea = FRA_da_securing_power
 				days = 365
 			}
+			set_country_flag = FRA_da_secured_power
 			add_popularity = {
 				ideology = communism
 				popularity = -0.05
@@ -1432,6 +1485,117 @@
 					cost = 100
 				}
 			}
+		}
+	}
+
+	#1914 trees
+
+	focus = {
+		id = FRA_poincares_securing_power
+		icon = GFX_focus_generic_treaty
+		x = 8
+		y = 0
+		cost = 35
+
+		allow_branch = {
+			has_government = democratic
+			has_country_flag = FRA_1914_election_da
+		}
+
+		bypass = {
+			has_country_flag = FRA_da_secured_power
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = FRA_da_securing_power
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_turn_towards_industrialists
+		icon = GFX_focus_generic_treaty
+		x = 8
+		y = 0
+		cost = 35
+
+		allow_branch = {
+			has_government = democratic
+			has_country_flag = FRA_1914_election_rf
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { is_core_of = FRA }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_vivianis_government
+		icon = GFX_focus_generic_treaty
+		x = 8
+		y = 0
+		cost = 35
+
+		allow_branch = {
+			has_government = democratic
+			has_country_flag = FRA_1914_election_republican_socialist
+		}
+
+		bypass = {
+			has_idea = FRA_joseph_paul_boncour
+		}
+
+		completion_reward = {
+			add_ideas = FRA_joseph_paul_boncour
+		}
+	}
+
+	focus = {
+		id = FRA_caillaux_radical_party
+		icon = GFX_focus_generic_treaty
+		x = 8
+		y = 0
+		cost = 35
+
+		allow_branch = {
+			has_government = democratic
+			has_country_flag = FRA_1914_election_radical
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = FRA_france_for_proletariat
+		icon = GFX_focus_generic_treaty
+		x = 8
+		y = 0
+		cost = 35
+
+		allow_branch = {
+			has_government = communism
+			has_elections = yes
+		}
+
+		completion_reward = {
+			
 		}
 	}
 }

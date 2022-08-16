@@ -6,4 +6,6 @@
   syndicalist:0 "Syndicalist"
  cgt_support:0 "Confédération Générale du Travail Support"
  FRA_rightist_coalition_trait:0 "Right Wing Coalition"
+ FRA_rightist_coalition_trait_2:0 "Right Wing Coalition"
  FRA_leftist_coalition_trait:0 "Left Wing Coalition"
+ dependent_on_overlord:0 "Dependent on Overlord"

@@ -1,0 +1,28 @@
+characters={
+	HES_carl_ulrich={
+		name="Carl Ulrich"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		country_leader={
+			ideology=progressivism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HES_ernest_louis={
+		name="Ernest Louis"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

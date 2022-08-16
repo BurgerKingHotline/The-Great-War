@@ -47,12 +47,15 @@ recruit_character = FRA_raymond_poincare
 recruit_character = FRA_charles_maurras
 recruit_character = FRA_maurice_barres
 recruit_character = FRA_philippe_orleans
+recruit_character = FRA_rene_viviani
+recruit_character = FRA_jules_meline
 
 recruit_character = FRA_joseph_paul_boncour
 recruit_character = FRA_adolphe_messimy
 recruit_character = FRA_maurice_pujo
 recruit_character = FRA_maxime_real_del_sarte
 recruit_character = FRA_leon_daudet
+recruit_character = FRA_justin_de_selves
 recruit_character = FRA_georges_sorel
 
 recruit_character = FRA_joseph_gallieni
@@ -187,10 +190,10 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 64
-	fascism = 1
-	neutrality = 15
-	communism = 20
+	democratic = 60
+	fascism = 3
+	neutrality = 18
+	communism = 19
 }
 
 add_ideas = {

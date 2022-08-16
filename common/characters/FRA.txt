@@ -27,8 +27,8 @@ characters={
 		#	id=-1
 		#}
 	}
-	FRA_philippe_orleans={
-		name="Philippe d'Orléans"
+	FRA_rene_viviani={
+		name="René Viviani"
 		portraits={
 			civilian={
 				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
@@ -36,10 +36,33 @@ characters={
 		}
 		#will be given it via event
 		#country_leader={
-		#	ideology=progressivism
+		#	ideology=socialism
 		#	expire="1965.1.1.1"
 		#	id=-1
 		#}
+	}
+	FRA_jules_meline={
+		name="Jules Mélinei"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		#will be given it via event
+		#country_leader={
+		#	ideology=conservatism
+		#	expire="1965.1.1.1"
+		#	id=-1
+		#}
+	}
+	FRA_philippe_orleans={
+		name="Philippe d'Orléans"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		#will be given roles via event
 	}
 	FRA_jean_jaures={
 		name="Jean Jaurès"
@@ -363,6 +386,10 @@ characters={
 						character = FRA_joseph_caillaux
 						ruling_only = yes
 					}
+					has_country_leader = {
+						character = FRA_rene_viviani
+						ruling_only = yes
+					}
 				}
 			}
 			traits = {
@@ -400,11 +427,46 @@ characters={
 						character = FRA_joseph_caillaux
 						ruling_only = yes
 					}
+					has_country_leader = {
+						character = FRA_rene_viviani
+						ruling_only = yes
+					}
 					has_government = communism
 				}
 			}
 			traits = {
 				labour_organizer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	FRA_justin_de_selves={
+		name="Justin de Selves"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_justin_de_selves
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				has_country_leader = {
+					character = FRA_joseph_caillaux
+					ruling_only = yes
+				}
+			}
+			traits = {
+				appeaser
 			}
 			cost = 100
 			ai_will_do = {

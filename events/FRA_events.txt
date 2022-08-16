@@ -4,7 +4,37 @@
 country_event = {
 	id = french_events.1
 	title = french_events.1.t	
-	desc = french_events.1.d	
+	desc = french_events.1.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government = democratic
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.08
+			}
+		}
+	}
+	
+	option = { #left wing wins
+		name = french_events.1.a
+		country_event = { id = french_events.18 }
+	}
+	option = { #right wing wins
+		name = french_events.1.d
+		country_event = { id = french_events.17 }
+	}
+}
+
+country_event = { #Briand resigning
+	id = french_events.2
+	title = french_events.2.t	
+	desc = french_events.2.d	
 
 	is_triggered_only = yes
 
@@ -16,27 +46,6 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { #radicals win again
-		name = french_events.1.a
-		#
-	}
-	option = { #
-		name = french_events.1.b
-		#
-	}
-	option = { #
-		name = french_events.1.c
-		#
-	}
-}
-
-country_event = { #Briand resigning
-	id = french_events.2
-	title = french_events.2.t	
-	desc = french_events.2.d	
-
-	is_triggered_only = yes
 	
 	option = { #caillaux will take control of the radical party
 		name = french_events.2.a
@@ -468,6 +477,320 @@ news_event = {
 	}
 }
 
+country_event = { #right wing coalition wins election
+	id = french_events.17
+	title = french_events.17.t	
+	desc = french_events.17.d	
+
+	is_triggered_only = yes
+	
+	option = { #democratic alliance
+		name = french_events.17.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_leader = {
+						character = FRA_raymond_poincare
+						ruling_only = yes
+					}
+				}
+			}
+			add_country_leader_role = {
+				character = FRA_raymond_poincare
+				promote_leader = yes
+				country_leader={
+					ideology=conservatism
+					expire="1965.1.1.1"
+					id=-1
+				}
+			}
+			set_party_name = {
+				ideology = democratic
+				name = FRA_democratic_alliance_name
+				long_name = FRA_democratic_alliance_name_long
+			}
+		}
+		set_country_flag = FRA_1914_election_da
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = { #republican federation
+		name = french_events.17.b
+		add_country_leader_role = {
+			character = FRA_jules_meline
+			promote_leader = yes
+			country_leader={
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = FRA_republican_federation_party
+			name = FRA_republican_federation_party
+		}
+		set_country_flag = FRA_1914_election_rf
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = { #action francaise
+		name = french_events.17.c
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+ #left wing wins 1914
+country_event = {
+	id = french_events.18
+	title = french_events.18.t	
+	desc = french_events.18.d
+
+	is_triggered_only = yes
+	
+	option = { #radicals win
+		name = french_events.18.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_leader = {
+						character = FRA_joseph_caillaux
+						ruling_only = yes
+					}
+				}
+			}
+			add_country_leader_role = {
+				character = FRA_joseph_caillaux
+				promote_leader = yes
+				country_leader={
+					ideology=progressivism
+					expire="1965.1.1.1"
+					id=-1
+				}
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = FRA_democratic_party
+				name = FRA_democratic_party
+			}
+			else = {
+				hidden_effect = {
+					if = {
+						limit = {
+							has_country_leader_with_trait = FRA_leftist_coalition_trait
+						}
+						remove_country_leader_trait = FRA_leftist_coalition_trait
+					}
+					if = {
+						limit = {
+							has_country_leader_with_trait = FRA_rightist_coalition_trait
+						}
+						remove_country_leader_trait = FRA_rightist_coalition_trait
+					}
+					if = {
+						limit = {
+							has_country_leader_with_trait = FRA_rightist_coalition_trait_2
+						}
+						remove_country_leader_trait = FRA_rightist_coalition_trait_2
+					}
+					if = {
+						limit = {
+							has_country_leader_with_trait = cgt_support
+						}
+						remove_country_leader_trait = cgt_support
+					}
+				}
+			}
+		}
+		set_country_flag = FRA_1914_election_radical
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = { #republican socialist party thingy
+		name = french_events.18.b
+		trigger = {
+			has_completed_focus = FRA_establish_republican_socialist_party
+		}
+		add_country_leader_role = {
+			character = FRA_rene_viviani
+			promote_leader = yes
+			country_leader={
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = FRA_republican_socialist_party_long
+			name = FRA_republican_socialist_party
+		}
+		set_country_flag = FRA_1914_election_republican_socialist
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = { #sfio
+		name = french_events.18.c
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = yes
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = { #non-total surrender to germany
+	id = french_events.19
+	title = french_events.19.t	
+	desc = french_events.19.d
+
+	is_triggered_only = yes
+	
+	option = { #we will achieve the septemberprogramm in the west
+		name = french_events.19.a
+		if = {
+			limit = {
+				BEL = {
+					OR = {
+						is_in_faction_with = FRA
+						AND = {
+							has_war_with = GER
+							has_capitulated = yes
+						}
+					}
+				}
+			}
+			transfer_state = 937
+			puppet = BEL
+			BEL = {
+				transfer_state = 29
+			}
+		}
+		if = {
+			limit = {
+				LUX = {
+					OR = {
+						is_in_faction_with = FRA
+						AND = {
+							has_war_with = GER
+							has_capitulated = yes
+						}
+					}
+				}
+			}
+			annex_country = {
+				target = LUX
+			}
+		}
+		FRA = {
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+				white_peace = GER
+				country_event = { id = demobilization.1 days = 1 }
+			}
+		}
+		transfer_state = 927
+		if = {
+			limit = {
+				ITA = {
+					is_in_faction_with = GER
+				}
+			}
+			ITA = {
+				transfer_state = 735
+			}
+		}
+		news_event = { id = french_events.21 hours = 12 }
+	}
+	option = { #no, we must achieve total victory
+		name = french_events.19.a
+		ai_chance = {
+			factor = 0
+		}
+		add_war_support = -0.1
+		FRA = {
+			country_event = { id = french_events.20 hours = 3 }
+		}
+	}
+}
+
+country_event = { #germany denies surrender
+	id = french_events.20
+	title = french_events.20.t	
+	desc = french_events.20.d
+
+	is_triggered_only = yes
+	
+	option = { #then we will fight on!
+		name = french_events.20.b
+		add_war_support = 0.1
+	}
+}
+
+news_event = { #franco-german peace deal - Germans win
+	id = french_events.21
+	title = french_events.21.t	
+	desc = {
+		trigger = {
+			OR = {
+				RUS = {
+					has_war_with = GER
+				}
+				ENG = {
+					has_war_with = GER
+				}
+			}
+		}
+		text = french_events.21.d1
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				OR = {
+					RUS = {
+						has_war_with = GER
+					}
+					ENG = {
+						has_war_with = GER
+					}
+				}
+			}
+		}
+		text = french_events.21.d2
+	}
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = { #lessgooo
+		name = french_events.21.a
+		trigger = {
+			is_in_faction_with = GER
+		}
+	}
+	option = { #german hegemony is secured
+		name = french_events.21.b
+		trigger = {
+			NOT = { is_in_faction_with = GER }
+			NOT = { tag = FRA }
+		}
+	}
+	option = { #we have been humiliated again
+		name = french_events.21.b
+		trigger = {
+			tag = FRA
+		}
+		hidden_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+		}
+	}
+}
+
 add_namespace = morocco
 
 country_event = { #ruh roh raggy, re got a reberrion
@@ -541,16 +864,9 @@ country_event = { #france demands submission
 	option = { #accept
 		name = morocco.3.a
 		ai_chance = {
-			factor = 5
+			factor = 7
 			modifier = {
-				factor = 1.5
-				has_opinion = {
-					target = FRA
-					value > 0
-				}
-			}
-			modifier = {
-				factor = 0.5
+				factor = 0.8
 				is_guaranteed_by = GER
 			}
 		}
@@ -574,16 +890,9 @@ country_event = { #france demands submission
 	option = { #deny
 		name = morocco.3.a
 		ai_chance = {
-			factor = 3
+			factor = 2
 			modifier = {
 				add = 1
-				has_opinion = {
-					target = FRA
-					value < -10
-				}
-			}
-			modifier = {
-				factor = 2
 				is_guaranteed_by = GER
 			}
 		}
@@ -624,6 +933,18 @@ country_event = { #morocco submits
 				set_politics = {
 					ruling_party = neutrality
 					elections_allowed = no
+				}
+				add_country_leader_role = {
+					character = MOR_moulay_youssef
+					promote_leader = yes
+					country_leader={
+						ideology=despotism
+						expire="1965.1.1.1"
+						id=-1
+						traits = {
+							dependent_on_overlord
+						}
+					}
 				}
 			}
 			SPR = {
@@ -686,7 +1007,7 @@ country_event = { #Germans deciding whether to intervene or not
 	option = { #pledge support to morocco
 		name = morocco.6.b
 		ai_chance = {
-			factor = 2
+			factor = 1
 		}
 		give_guarantee = MOR
 		add_named_threat = {
@@ -724,7 +1045,7 @@ country_event = { #Germany demands concessions
 		ai_chance = {
 			factor = 6
 			modifier = {
-				factor = 0.5
+				factor = 0.75
 				has_completed_focus = FRA_1910_democratic_alliance_victory
 			}
 		}
@@ -745,7 +1066,7 @@ country_event = { #Germany demands concessions
 		ai_chance = {
 			factor = 2
 			modifier = {
-				factor = 3
+				factor = 1.5
 				has_completed_focus = FRA_1910_democratic_alliance_victory
 			}
 		}
