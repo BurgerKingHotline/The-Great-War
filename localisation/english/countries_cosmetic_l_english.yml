@@ -1389,3 +1389,10 @@
  BAY_south_germany_neutrality_DEF:0 "the South German Confederation"
  BAY_south_germany_fascism:0 "Second Holy Roman Empire"
  BAY_south_germany_fascism_DEF:0 "the Second Holy Roman Empire"
+
+ brandenburg:0 "Brandenburg"
+ brandenburg_DEF:0 "Brandenburg"
+ brandenburg_ADJ:0 "Brandenburgian"
+ brandenburg_communism:0 "Berlin Commune"
+ brandenburg_communism_DEF:0 "the Berlin Commune"
+ brandenburg_communism_ADJ:0 "Berliner"

@@ -3,3 +3,12 @@
  demobilization.1.t:0 "Interwar Period"
  demobilization.1.d:0 "With the end of the Great War our country requires time to rebuild our economy, our army isn't needed anymore."
  demobilization.1.a:0 "To everlasting peace!"
+ #releasable events
+ decisions.4.t:0 "We Have Been Freed!"
+ decisions.4.desc:0 ""
+ decisions.4.a:0 "We will send thanks to our liberator!"
+ decisions.5.t:0 "The Fate of [FROM.GetNameDef]"
+ decisions.5.desc:0 "Now that we have established [FROM.GetNameDef] as an existing nation, we must decide what we will do with them."
+ decisions.5.a:0 "They must share our form of government"
+ decisions.5.b:0 "They must be our allies"
+ decisions.5.c:0 "They must be our subject"

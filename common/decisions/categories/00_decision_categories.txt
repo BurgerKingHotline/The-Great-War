@@ -373,6 +373,6 @@ lar_local_recruitment = {
 
 puppet_state_creation_category = {
 	
-	
+	visible = { is_subject = no }
 	
 }

@@ -30,6 +30,9 @@
  ALS_release_alsace_lorraine:0 "Release Alsace-Lorraine as a Subject"
  PRV_release_provence:0 "Release Provence as a Subject"
  PRS_release_paris:0 "Release Paris as a Subject"
+ PRE_release_prussia_big:0 "Release Prussia-Brandenburg as a Subject"
+ DDR_release_brandenburg:0 "Release Brandenburg as a Subject"
+ DDR_release_east_germany:0 "Establish an East German Federation"
 
  #foreing politiasidjf
  FROM_give_core_state_to_ally:0 "Give [FROM.GetName] to our Ally"

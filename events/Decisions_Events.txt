@@ -517,3 +517,110 @@ country_event = { #Senussiya Revolt
 		LBA = { change_tag_from = ROOT }
 	}
 }
+
+country_event = { #released country sending stuff to releasor
+	id = decisions.4
+	title = decisions.4.t
+	desc = decisions.4.desc
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	
+	# lets see what our benevolent releaser decides :pray:
+	option = {
+		name = decisions.4.a
+		FROM = { country_event = decisions.5 }
+	}
+}
+
+country_event = { #released country - to be puppet or free?
+	id = decisions.5
+	title = decisions.5.t
+	desc = decisions.5.desc
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	
+	option = { # go and be free - as long as you align with me
+		name = decisions.5.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+		}
+		FROM = {
+			set_politics = {
+				ruling_party = ROOT
+			}
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.2
+			}
+		}
+	}
+	#go and be free - in my faction, anyways-
+	option = {
+		name = decisions.5.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+		}
+		trigger = {
+			is_in_faction = yes
+		}
+		add_political_power = -20
+		FROM = {
+			set_politics = {
+				ruling_party = ROOT
+			}
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.2
+			}
+		}
+		FACTION_LEADER = {
+			add_to_faction = FROM
+		}
+	}
+	#be my puppet
+	option = {
+		name = decisions.5.c
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				has_government = democratic
+			}
+			modifier = {
+				factor = 0.3
+				NOT = {
+					any_owned_state = {
+						any_neighbor_state = {
+							is_owned_by = FROM
+						}
+					}
+				}
+			}
+			modifier = {
+				add = 2
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+		add_political_power = -50
+		puppet = FROM
+	}
+}
