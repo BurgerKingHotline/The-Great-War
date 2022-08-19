@@ -1402,8 +1402,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 75
 			add_war_support = 0.05
+			add_state_claim = 419
+			add_state_claim = 832
+			add_state_claim = 266
 		}
 
 		ai_will_do = {
@@ -1428,6 +1431,10 @@
 				if = {
 					limit = { ROOT = { has_government = fascism } }
 					add_timed_idea = { idea = fascist_influence days = 1095 }
+				}
+				if = {
+					limit = { ROOT = { has_government = neutrality } }
+					add_timed_idea = { idea = neutrality_influence days = 1095 }
 				}
 				if = {
 					limit = { ROOT = { has_government = democratic } }
@@ -1511,13 +1518,25 @@
 							}
 						}
 						PER = {
-							is_puppet_of = ROOT
+							exists = yes
+							OR = {
+								is_puppet = no
+								is_puppet_of = RUS
+							}
+							NOT = {
+								has_war_with = ROOT
+							}
 						}
 					}
 				}
 				if = {
 					limit = {
-						owns_state = 420
+						OR = {
+							owns_state = 420
+							PER = {
+								owns_state = 420
+							}
+						}
 					}
 					420 = {
 						add_building_construction = {
@@ -1567,7 +1586,12 @@
 				}
 				if = {
 					limit = {
-						owns_state = 266
+						OR = {
+							owns_state = 832
+							PER = {
+								owns_state = 832
+							}
+						}
 					}
 					if = {
 						limit = {
@@ -1608,7 +1632,12 @@
 				}
 				if = {
 					limit = {
-						owns_state = 832
+						OR = {
+							owns_state = 832
+							PER = {
+								owns_state = 832
+							}
+						}
 					}
 					if = {
 						limit = {
@@ -1649,7 +1678,12 @@
 				}
 				if = {
 					limit = {
-						owns_state = 419
+						OR = {
+							owns_state = 419
+							PER = {
+								owns_state = 419
+							}
+						}
 					}
 					if = {
 						limit = {
@@ -1688,6 +1722,7 @@
 						}
 					}
 				}
+				add_political_power = 75
 			}
 		}
 
@@ -1804,6 +1839,7 @@
 			}
 			OR = {
 				has_civil_war = yes
+				has_war_with = SOV
 				AND = {
 					has_war = yes
 					surrender_progress > 0.2	
@@ -1812,13 +1848,65 @@
 		}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
 			set_politics = {
-				ruling_party = fascism
+				ruling_party = neutrality
 				elections_allowed = no
-				long_name = TAG_party_long
-				name = TAG_party
 			}
 			#promotes character, ill do character work later
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_request_foreign_support
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 1
+		relative_position_id = RUS_supreme_ruler_of_russia
+		prerequisite = { focus = RUS_supreme_ruler_of_russia }
+		cost = 35
+		 
+
+		available = {
+			NOT = { 
+				has_government = communism 
+				has_completed_focus = RUS_presidential_republic
+			}
+			OR = {
+				has_civil_war = yes
+				has_war_with = SOV
+			}
+		}
+
+		completion_reward = { #TODO FINISH FOCUS PLUS ADD EVENT NOTIFYING THE SOVIETS
+			if = {
+				limit = {
+					NOT = {
+						country_exists = SOV
+					}
+				}
+				random_other_country = {
+					limit = {
+						original_tag = RUS
+						NOT = {
+							tag = RUS
+						}
+					}
+					add_war_support = 0.15
+				}
+			}
+			else = {
+				SOV = {
+					add_war_support = 0.15
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -1837,6 +1925,7 @@
 		cost = 35
 
 		available = {
+			NOT = { has_war_with = SOV }
 			OR = {
 				has_civil_war = no
 				AND = {
@@ -1931,8 +2020,18 @@
 		 
 
 		available = {
-			NOT = { has_government = communism }
-			has_completed_focus = RUS_supreme_ruler_of_russia
+			NOT = { has_war_with = SOV }
+			OR = {
+				has_civil_war = no
+				AND = {
+					has_war = no
+					surrender_progress < 0.1	
+				}
+			}
+			OR = {
+				NOT = { has_completed_focus = RUS_supreme_ruler_of_russia }
+				has_completed_focus = RUS_return_to_democracy
+			}
 		}
 
 		completion_reward = {
