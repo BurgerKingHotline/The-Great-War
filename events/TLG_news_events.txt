@@ -18,7 +18,7 @@ news_event = {
 	fire_only_once = yes
 	
 	option = { #eh we can defeat them
-		name = decisions.1.a
+		name = TLG_newsevents.1.a
 		trigger = {
 			OR = {
 				original_tag = FROM
@@ -32,14 +32,14 @@ news_event = {
 	}
 
 	option = { #Great!
-		name = decisions.1.b
+		name = TLG_newsevents.1.b
 		trigger = {
 			has_war_with = FROM
 		}
 	}
 
 	option = { #hopefully this wont inspire our colonies...
-		name = decisions.1.c
+		name = TLG_newsevents.1.c
 		trigger = {
 			NOT = {
 				original_tag = FROM
@@ -57,7 +57,7 @@ news_event = {
 	}
 
 	option = { #good for them ig
-		name = decisions.1.c
+		name = TLG_newsevents.1.c
 		trigger = {
 			NOT = {
 				original_tag = FROM
@@ -89,7 +89,7 @@ news_event = {
 	fire_only_once = yes
 	
 	option = { #We can defeat these traitors to the tsar!
-		name = decisions.2.a
+		name = TLG_newsevents.2.a
 		trigger = {
 			OR = {
 				original_tag = FROM
@@ -106,14 +106,14 @@ news_event = {
 	}
 
 	option = { #Great!
-		name = decisions.2.b
+		name = TLG_newsevents.2.b
 		trigger = {
 			has_war_with = FROM
 		}
 	}
 
 	option = { #These commies will collapse anyways
-		name = decisions.2.c
+		name = TLG_newsevents.2.c
 		trigger = {
 			NOT = {
 				original_tag = FROM
@@ -132,7 +132,7 @@ news_event = {
 	}
 
 	option = { #Another state falls to the Revolution!
-		name = decisions.2.d
+		name = TLG_newsevents.2.d
 		trigger = {
 			has_government = communism
 		}
@@ -152,7 +152,7 @@ news_event = { #Russia proclaims a crusade against communism
 	fire_only_once = yes
 	
 	option = { #For the Tsar and the destruction of Communism!
-		name = decisions.3.a
+		name = TLG_newsevents.3.a
 		trigger = {
 			OR = {
 				original_tag = FROM
@@ -166,21 +166,11 @@ news_event = { #Russia proclaims a crusade against communism
 	}
 
 	option = { #Great!
-		name = decisions.3.b
+		name = TLG_newsevents.3.b
 		trigger = {
 			NOT = {
 				has_government = communism
 				has_war_with = FROM
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = fascism
-					any_enemy_country = {
-						has_government = communism
-					}
-				}
 			}
 		}
 		hidden_effect = {
@@ -192,7 +182,7 @@ news_event = { #Russia proclaims a crusade against communism
 	}
 
 	option = { #You cannot destroy the revolution!
-		name = decisions.3.c
+		name = TLG_newsevents.3.c
 		trigger = {
 			has_government = communism
 		}
@@ -200,6 +190,68 @@ news_event = { #Russia proclaims a crusade against communism
 			add_opinion_modifier = {
 				target = FROM
 				modifier = crusade_against_communism_negative_modifier
+			}
+		}
+	}
+}
+
+news_event = { #franco-german peace deal - Germans win
+	id = TLG_newsevents.4
+	title = TLG_newsevents.4.t	
+	desc = {
+		trigger = {
+			OR = {
+				RUS = {
+					has_war_with = GER
+				}
+				ENG = {
+					has_war_with = GER
+				}
+			}
+		}
+		text = TLG_newsevents.4.d1
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				OR = {
+					RUS = {
+						has_war_with = GER
+					}
+					ENG = {
+						has_war_with = GER
+					}
+				}
+			}
+		}
+		text = TLG_newsevents.4.d2
+	}
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = { #lessgooo
+		name = TLG_newsevents.4.a
+		trigger = {
+			is_in_faction_with = GER
+		}
+	}
+	option = { #german hegemony is secured
+		name = TLG_newsevents.4.b
+		trigger = {
+			NOT = { is_in_faction_with = GER }
+			NOT = { tag = FRA }
+		}
+	}
+	option = { #we have been humiliated again
+		name = TLG_newsevents.4.b
+		trigger = {
+			tag = FRA
+		}
+		hidden_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
 			}
 		}
 	}

@@ -1,0 +1,1151 @@
+﻿###########################
+# Nuclear Bomb Events
+###########################
+
+add_namespace = TLG_surrender
+
+country_event = { #non-total surrender to germany
+	id = TLG_surrender.1
+	title = TLG_surrender.1.t	
+	desc = TLG_surrender.1.d
+
+	is_triggered_only = yes
+	
+	option = { #we will achieve the septemberprogramm in the west
+		name = TLG_surrender.1.a
+		if = {
+			limit = {
+				BEL = {
+					OR = {
+						is_in_faction_with = FRA
+						AND = {
+							has_war_with = GER
+							has_capitulated = yes
+						}
+					}
+				}
+			}
+			transfer_state = 937
+			puppet = BEL
+			BEL = {
+				transfer_state = 29
+			}
+		}
+		if = {
+			limit = {
+				LUX = {
+					OR = {
+						is_in_faction_with = FRA
+						AND = {
+							has_war_with = GER
+							has_capitulated = yes
+						}
+					}
+				}
+			}
+			annex_country = {
+				target = LUX
+			}
+		}
+		FRA = {
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+				white_peace = GER
+				country_event = { id = demobilization.1 days = 1 }
+			}
+		}
+		transfer_state = 927
+		if = {
+			limit = {
+				ITA = {
+					is_in_faction_with = GER
+				}
+			}
+			ITA = {
+				transfer_state = 735
+			}
+		}
+		news_event = { id = TLG_surrender.21 hours = 12 }
+	}
+	option = { #no, we must achieve total victory
+		name = TLG_surrender.1.a
+		ai_chance = {
+			factor = 0
+		}
+		add_war_support = -0.1
+		FRA = {
+			country_event = { id = TLG_surrender.20 hours = 3 }
+		}
+	}
+}
+
+country_event = { #germany denies surrender
+	id = TLG_surrender.2
+	title = TLG_surrender.2.t	
+	desc = TLG_surrender.2.d
+
+	is_triggered_only = yes
+	
+	option = { #then we will fight on!
+		name = TLG_surrender.2.b
+		add_war_support = 0.1
+	}
+}
+
+# ottomans surrender to balkans
+country_event = {
+	id = TLG_surrender.3
+	title = TLG_surrender.3.t
+	desc = TLG_surrender.3.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		OTT = {
+			every_enemy_country = {
+				limit = {
+					original_tag = SER
+					original_tag = MNT
+					original_tag = GRE
+					original_tag = BUL
+				}
+				white_peace = PREV
+				if = { #checks if they are in balkan league faction and then leaves it if theyre not
+					limit = {
+						faction_leader = {
+							NOT = {
+								original_tag = SER
+								original_tag = BUL
+								original_tag = MNT
+								original_tag = GRE
+								original_tag = ROM
+							}
+						}
+					}
+					leave_faction = yes
+				}
+			}
+		}
+		182 = {
+			remove_claim_by = OTT
+		}
+		871 = {
+			remove_core_of = OTT
+		}
+		839 = {
+			remove_core_of = OTT
+		}
+		878 = {
+			remove_core_of = OTT
+		}
+		880 = {
+			remove_core_of = OTT
+		}
+	}
+	
+	option = { #plan one
+		name = TLG_surrender.3.a 
+		trigger = {
+			OR = {
+				SER = {
+					has_war_with = OTT
+				}
+				MNT = {
+					has_war_with = OTT
+				}
+				GRE = {
+					has_war_with = OTT
+				}
+			}
+		}
+		if = {
+			limit = {
+				SER = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						if = {
+							limit = {
+								BUL = {
+									NOT = {
+										has_war_with = OTT
+									}
+								}
+							}
+							state = 871
+							state = 839
+							state = 106
+						}
+						state = 876
+						state = 802
+						state = 872
+					}
+				}
+				transfer_state_to = SER
+			}
+		}
+		if = {
+			limit = {
+				MNT = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						state = 874
+					}
+				}
+				transfer_state_to = MNT
+			}
+		}
+		if = {
+			limit = {
+				GRE = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						if = {
+							limit = {
+								BUL = {
+									NOT = {
+										has_war_with = OTT
+									}
+								}
+							}
+							state = 879
+						}
+						state = 185
+						state = 731
+					}
+				}
+				transfer_state_to = GRE
+			}
+		}
+		if = {
+			limit = {
+				BUL = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						state = 883
+						state = 341
+						state = 855
+						state = 341
+						state = 184
+						state = 881
+						state = 880
+						state = 878
+						state = 839
+						state = 871
+						state = 106
+						state = 879
+					}
+				}
+				transfer_state_to = BUL
+			}
+		}
+		effect_tooltip = {
+			MNT = {
+				transfer_state = 875
+			}
+			SER = {
+				transfer_state = 44
+			}
+			GRE = {
+				transfer_state = 805
+			}
+		}
+		hidden_effect = {
+			ALB = {
+				country_event = { id = TLG_surrender.4 hours = 12 }
+			}
+		}
+		custom_effect_tooltip = great_powers_will_not_like_this
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	option = { #plan two (historical)
+		if = {
+			limit = {
+				SER = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						if = {
+							limit = {
+								BUL = {
+									NOT = {
+										has_war_with = OTT
+									}
+								}
+							}
+							state = 871
+							state = 839
+						}
+						state = 876
+						state = 802
+						state = 872
+						state = 106
+					}
+				}
+				transfer_state_to = SER
+			}
+		}
+		if = {
+			limit = {
+				MNT = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = OTT
+						is_owned_by = ALB
+					}
+					OR = {
+						state = 874
+						state = 875
+					}
+				}
+				transfer_state_to = MNT
+			}
+		}
+		if = {
+			limit = {
+				GRE = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						state = 185
+						state = 731
+						state = 879
+					}
+				}
+				transfer_state_to = GRE
+			}
+		}
+		if = {
+			limit = {
+				BUL = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						state = 883
+						state = 341
+						state = 855
+						state = 341
+						state = 184
+						state = 881
+						state = 880
+						state = 878
+						state = 839
+						state = 871
+					}
+				}
+				transfer_state_to = BUL
+			}
+		}
+		ALB = {
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						state = 44
+						state = 805
+					}
+				}
+				transfer_state_to = PREV
+			}
+		}
+		if = {
+			limit = {
+				country_exists = ALB
+			}
+			ITA = {
+				give_guarantee = ALB
+			}
+			ASH = {
+				give_guarantee = ALB
+			}
+		}
+		name = TLG_surrender.3.b
+		ai_chance = {
+			factor = 6
+		}
+	}
+	#no extra choice since i dont want bulgaria, serbia, or greece to own all of the middle east
+}
+
+country_event = { #not really a surrender, but event for alb to get annexed
+	id = TLG_surrender.4
+	title = TLG_surrender.4.t
+	desc = TLG_surrender.4.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #ask the great powers for help
+		name = TLG_surrender.4.a 
+		ITA = {
+			country_event = { id = TLG_surrender.5 hours = 12 }
+		}
+		ASH = {
+			country_event = { id = TLG_surrender.5 hours = 12 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.7
+				OR = {
+					SER = {
+						is_ai = no
+					}
+					GRE = {
+						is_ai = no
+					}
+					MNT = {
+						is_ai = no
+					}
+				}
+			}
+		}
+	}
+
+	option = { #well our short time has gone to a close
+		name = TLG_surrender.4.b
+		MNT = {
+			transfer_state = 875
+		}
+		SER = {
+			transfer_state = 44
+		}
+		GRE = {
+			transfer_state = 805
+		}
+		ai_chance = {
+			factor = 8
+		}
+	}
+}
+
+country_event = { #albania is getting annexed!
+	id = TLG_surrender.5
+	title = TLG_surrender.5.t
+	desc = TLG_surrender.5.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	option = { #we mustn't let serbia reach the adriatic
+		name = TLG_surrender.5.a 
+		ALB = {
+			country_event = { id = TLG_surrender.6 hours = 12 }
+		}
+		give_guarantee = ALB
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = { #we will not start another war in the balkans
+		name = TLG_surrender.5.b
+		ALB = {
+			country_event = { id = TLG_surrender.7 hours = 12 }
+		}
+		effect_tooltip = {
+			MNT = {
+				transfer_state = 875
+			}
+			SER = {
+				transfer_state = 44
+			}
+			GRE = {
+				transfer_state = 805
+			}
+		}
+		add_political_power = -25
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.4
+				BUL = {
+					is_ai = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { #great powers guarantee us
+	id = TLG_surrender.6
+	title = TLG_surrender.6.t
+	desc = TLG_surrender.6.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #great!
+		name = TLG_surrender.6.a 
+		add_political_power = 50
+		add_war_support = 0.05
+		hidden_effect = {
+			SER = {
+				country_event = { id = TLG_surrender.8 hours = 12 }
+			}
+			GRE = {
+				country_event = { id = TLG_surrender.8 hours = 12 }
+			}
+			MNT = {
+				country_event = { id = TLG_surrender.8 hours = 12 }
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #great powers leave us....
+	id = TLG_surrender.7
+	title = TLG_surrender.7.t
+	desc = TLG_surrender.7.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #we will still stand defiant!
+		name = TLG_surrender.7.a 
+		hidden_effect = {
+			SER = {
+				country_event = { id = TLG_surrender.8 hours = 12 }
+			}
+			GRE = {
+				country_event = { id = TLG_surrender.8 hours = 12 }
+			}
+			MNT = {
+				country_event = { id = TLG_surrender.8 hours = 12 }
+			}
+		}
+		add_political_power = 75
+		add_war_support = 0.15
+		add_stability = -0.05
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = { #we dont have another choice...
+		name = TLG_surrender.7.b
+		MNT = {
+			transfer_state = 875
+		}
+		SER = {
+			transfer_state = 44
+		}
+		GRE = {
+			transfer_state = 805
+		}
+		ai_chance = {
+			factor = 8
+		}
+	}
+}
+
+country_event = { #Albania defiant
+	id = TLG_surrender.8
+	title = TLG_surrender.8.t
+	desc = {
+		trigger = {
+			any_other_country = {
+				is_major = yes
+				has_guaranteed = ALB
+			}
+		}
+		text = TLG_surrender.3.d1
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = ALB
+				}
+			}
+		}
+		text = TLG_surrender.4.d2
+	}
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	option = { #we can crush them
+		name = TLG_surrender.8.a 
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ALB
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				BUL = {
+					is_ai = no
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = ALB
+				}
+			}
+		}
+	}
+
+	option = { #we will not start another war in the balkans
+		name = TLG_surrender.5.b
+		add_political_power = -25
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = { #FROM declares war on albania
+	id = TLG_surrender.9
+	title = TLG_surrender.9.t
+	desc = TLG_surrender.9.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #this could be a cheeky way to gain all of our claims
+		name = TLG_surrender.8.a 
+		if = { #in case they got called in
+			limit = {
+				OR = {
+					has_war_with = ITA
+					has_war_with = ASH
+					has_war_with = ALB
+				}
+			}
+			ITA = {
+				white_peace = BUL
+			}
+			ASH = {
+				white_peace = BUL
+			}
+			ALB = {
+				white_peace = BUL
+			}
+		}
+		leave_faction = yes
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SER
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = GRE
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 4
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = ALB
+				}
+			}
+		}
+	}
+
+	option = { #we will not start another war in the balkans
+		name = TLG_surrender.5.b
+		add_political_power = -25
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #bulgarians demand peace
+	id = TLG_surrender.10
+	title = TLG_surrender.10.t
+	desc = TLG_surrender.10.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #great
+		name = TLG_surrender.10.a
+		dismantle_faction = yes
+        set_country_flag = balkan_war_ii_end
+		if = {
+			limit = {
+				SER = {
+					has_war_with = BUL
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = BUL
+					OR = {
+						state = 876
+						state = 802
+						state = 872
+						state = 106
+						state = 871
+						state = 803
+					}
+				}
+				transfer_state_to = SER
+			}
+		}
+		if = {
+			limit = {
+				GRE = {
+					has_war_with = BUL
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = BUL
+					OR = {
+						state = 878
+					}
+				}
+				transfer_state_to = GRE
+			}
+		}
+		if = {
+			limit = {
+				ROM = {
+					has_war_with = BUL
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = BUL
+					OR = {
+						state = 77
+						state = 844
+					}
+				}
+				transfer_state_to = BUL
+			}
+		}
+		if = {
+			limit = {
+				OTT = {
+					has_war_with = BUL
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = BUL
+					OR = {
+						state = 341
+						state = 884
+						state = 855
+						state = 797
+						is_core_of = OTT
+					}
+				}
+				transfer_state_to = BUL
+			}
+		}
+		BUL = {
+			every_enemy_country = {
+				limit = {
+					OR = {
+						original_tag = SER
+						original_tag = GRE
+						original_tag = OTT
+						original_tag = ROM
+					}
+				}
+				white_peace = BUL
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 4
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = ALB
+				}
+			}
+		}
+	}
+
+	option = { #we will fight on until they completely surrender!
+		name = TLG_surrender.10.b
+		add_political_power = -25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { #balkan league surrenders to ottomans
+	id = TLG_surrender.11
+	title = TLG_surrender.11.t
+	desc = TLG_surrender.11.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		OTT = {
+			every_enemy_country = {
+				limit = {
+					original_tag = SER
+					original_tag = MNT
+					original_tag = GRE
+					original_tag = BUL
+				}
+				white_peace = PREV
+				if = { #checks if they are in balkan league faction
+					limit = {
+						faction_leader = {
+							NOT = {
+								original_tag = SER
+								original_tag = BUL
+								original_tag = MNT
+								original_tag = GRE
+								original_tag = ROM
+							}
+						}
+					}
+					leave_faction = yes
+				}
+				else = {
+					dismantle_faction = yes
+				}
+			}
+			
+		}
+	}
+	
+	option = { #great
+		name = TLG_surrender.11.a
+        set_country_flag = balkan_war_i_end
+		if = {
+			limit = {
+				has_war_with = MNT
+			}
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Together for Victory"
+						has_dlc = "Man the Guns"
+					}
+				}
+				
+				set_autonomy = {
+					target = MNT
+					autonomous_state = autonomy_integrated_puppet
+				}
+				else = {
+					puppet = MNT
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_war_with = SER
+			}
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Together for Victory"
+						has_dlc = "Man the Guns"
+					}
+				}
+				
+				set_autonomy = {
+					target = SER
+					autonomous_state = autonomy_integrated_puppet
+				}
+				else = {
+					puppet = SER
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OTT = {
+					has_war_with = BUL
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = BUL
+					OR = {
+						state = 341
+						state = 884
+						state = 855
+						state = 797
+						state = 883
+						state = 881
+						state = 184
+						state = 212
+						state = 211
+						state = 880
+
+						is_core_of = OTT
+					}
+				}
+				transfer_state_to = OTT
+			}
+		}
+		if = {
+			limit = {
+				OTT = {
+					has_war_with = SER
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = SER
+					OR = {
+						state = 877
+						is_core_of = OTT
+					}
+				}
+				transfer_state_to = OTT
+			}
+		}
+		if = {
+			limit = {
+				OTT = {
+					has_war_with = GRE
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = GRE
+					OR = {
+						state = 882
+						state = 182
+						is_core_of = OTT
+					}
+				}
+				transfer_state_to = OTT
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 4
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = ALB
+				}
+			}
+		}
+	}
+
+	option = { #we will fight on until they completely surrender!
+		name = TLG_surrender.11.b
+		add_political_power = -25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { #balkan league surrenders to bulgarians
+	id = TLG_surrender.12
+	title = TLG_surrender.12.t
+	desc = TLG_surrender.12.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		BUL = {
+			every_enemy_country = {
+				limit = {
+					original_tag = SER
+					original_tag = MNT
+					original_tag = GRE
+					original_tag = ROM
+					original_tag = OTT
+				}
+				white_peace = PREV
+				if = { #checks if they are in balkan league faction
+					limit = {
+						faction_leader = {
+							NOT = {
+								original_tag = SER
+								original_tag = MNT
+								original_tag = GRE
+								original_tag = ROM
+							}
+						}
+					}
+					leave_faction = yes
+				}
+				else = {
+					dismantle_faction = yes
+				}
+			}
+			
+		}
+	}
+	
+	option = { #great
+		name = TLG_surrender.12.a
+        set_country_flag = balkan_war_ii_end
+		if = {
+			limit = {
+				BUL = {
+					has_war_with = SER
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = SER
+					OR = {
+						state = 803
+						state = 872
+						state = 106
+						state = 871
+						state = 839
+					}
+				}
+				transfer_state_to = BUL
+			}
+		}
+		if = {
+			limit = {
+				BUL = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						state = 884
+						state = 883
+						state = 341
+						state = 855
+					}
+				}
+				transfer_state_to = BUL
+			}
+		}
+		if = {
+			limit = {
+				BUL = {
+					has_war_with = GRE
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = GRE
+					OR = {
+						state = 879
+						state = 731
+					}
+				}
+				transfer_state_to = BUL
+			}
+		}
+		if = {
+			limit = {
+				BUL = {
+					has_war_with = ROM
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = ROM
+					OR = {
+						state = 77
+						state = 844
+					}
+				}
+				transfer_state_to = BUL
+			}
+		}
+    	set_country_flag = balkan_war_ii_end
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 4
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = ALB
+				}
+			}
+		}
+	}
+
+	option = { #we will fight on until they completely surrender!
+		name = TLG_surrender.11.b
+		add_political_power = -25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

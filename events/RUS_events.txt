@@ -303,8 +303,9 @@ country_event = { #more soviet gets formed
 	
 	option = {#oh thats not good
 		name = rus_civilwar.2.a
-		every_owned_controlled_state = {
+		every_owned_state = {
 			limit = {
+				is_controlled_by = ROOT
 				state_strategic_value > 15
 			}
 			add_dynamic_modifier = {
@@ -489,13 +490,12 @@ country_event = { #finnish civil war
 
 	trigger = {
 		original_tag = FIN
-		FIN = {
-			exists = yes
-			any_owned_state = { #checking if fin has at least 2 states
-				is_capital = no 
-			}
-			is_puppet = no
+		exists = yes
+		any_owned_state = { #checking if fin has at least 2 states
+			is_capital = no 
 		}
+		is_puppet = no
+		has_civil_war = no
 		OR = {
 			RUS = {
 				has_civil_war = yes
@@ -734,7 +734,7 @@ country_event = { #collapse of russian control in europe
 				}
 				if = {
 					limit = {
-						any_owned_controlled_state = {
+						any_owned_state = {
 							is_core_of = MOL
 						}
 					}
@@ -752,7 +752,7 @@ country_event = { #collapse of russian control in europe
 				}
 				if = {
 					limit = {
-						any_owned_controlled_state = {
+						any_owned_state = {
 							is_core_of = UKR
 						}
 					}
@@ -770,7 +770,7 @@ country_event = { #collapse of russian control in europe
 				}
 				if = {
 					limit = {
-						any_owned_controlled_state = {
+						any_owned_state = {
 							is_core_of = POL
 						}
 					}
@@ -788,7 +788,7 @@ country_event = { #collapse of russian control in europe
 				}
 				if = {
 					limit = {
-						any_owned_controlled_state = {
+						any_owned_state = {
 							is_core_of = POL
 						}
 					}
@@ -993,7 +993,7 @@ country_event = { #collapse of russian control in europe
 							is_puppet_of = ROOT
 							tag = ROOT
 						}
-						any_owned_controlled_state = {
+						any_owned_state = {
 							OR = {
 								is_core_of = GEO
 								is_core_of = ARM
@@ -1014,7 +1014,6 @@ country_event = { #collapse of russian control in europe
 						event_target:transcaucasia_event_target = {
 							drop_cosmetic_tag = yes
 							set_cosmetic_tag = ARM
-							remove
 						}
 					}
 					else = {

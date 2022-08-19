@@ -67,6 +67,10 @@ senussiya_enemy_decisions = { #for decisions if the enemy own the states
 	}
 }
 
+surrender_category = {
+	visible = { has_war = yes }
+}
+
 #RUS
 
 russian_socialism_decisions = {
