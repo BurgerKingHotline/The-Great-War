@@ -64,6 +64,10 @@ senussiya_enemy_decisions = { #for decisions if the enemy own the states
 	}
 }
 
+surrender_category = {
+	visible = { has_war = yes }
+}
+
 #RUS
 
 russian_socialism_decisions = {
@@ -183,7 +187,4 @@ MEX_diaz_support_category = {
 		has_country_flag = MEX_supported_diaz
 		has_global_flag = MEX_revolution
 	}
-}
-surrender_category = {
-	visible = { has_war = yes }
 }
