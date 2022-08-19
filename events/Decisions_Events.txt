@@ -634,7 +634,7 @@ country_event = { #released country - to be puppet or free?
 		divide_temp_variable = { cost_to_ally_FROM = 200 }
 		add_to_temp_variable = { cost_to_ally_FROM = FROM.num_of_factories }
 		add_to_temp_variable = { cost_to_ally_FROM = FROM.num_divisions }
-		multiply_temp_variable = { cost_to_ally_FROM = -1.8 }
+		multiply_temp_variable = { cost_to_ally_FROM = -2 }
 		add_political_power = var:cost_to_ally_FROM
 		puppet = FROM
 	}
@@ -651,7 +651,7 @@ country_event = { #released country - to be puppet or free?
 		set_temp_variable = { cost_to_ally_FROM = FROM.max_available_manpower_k }
 		divide_temp_variable = { cost_to_ally_FROM = 250 }
 		add_to_temp_variable = { cost_to_ally_FROM = FROM.num_of_factories }
-		multiply_temp_variable = { cost_to_ally_FROM = -1 }
+		multiply_temp_variable = { cost_to_ally_FROM = -1.5 }
 		add_political_power = var:cost_to_ally_FROM
 		puppet = FROM
 		FROM = {
