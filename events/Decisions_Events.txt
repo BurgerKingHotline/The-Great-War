@@ -529,6 +529,11 @@ country_event = { #released country sending stuff to releasor
 	# lets see what our benevolent releaser decides :pray:
 	option = {
 		name = decisions.4.a
+		d_create_army_tiny = yes
+		add_ai_strategy = {
+			type = force_build_armies
+			value = 100
+		}
 		FROM = { country_event = decisions.5 }
 	}
 }
@@ -579,7 +584,12 @@ country_event = { #released country - to be puppet or free?
 		trigger = {
 			is_in_faction = yes
 		}
-		add_political_power = -20
+		set_temp_variable = { cost_to_ally_FROM = FROM.max_available_manpower_k }
+		divide_temp_variable = { cost_to_ally_FROM = 250 }
+		add_to_temp_variable = { cost_to_ally_FROM = FROM.num_of_factories }
+		add_to_temp_variable = { cost_to_ally_FROM = FROM.num_divisions }
+		multiply_temp_variable = { cost_to_ally_FROM = -1.5 }
+		add_political_power = var:cost_to_ally_FROM
 		FROM = {
 			set_politics = {
 				ruling_party = ROOT
@@ -620,7 +630,83 @@ country_event = { #released country - to be puppet or free?
 				}
 			}
 		}
-		add_political_power = -50
+		set_temp_variable = { cost_to_ally_FROM = FROM.max_available_manpower_k }
+		divide_temp_variable = { cost_to_ally_FROM = 200 }
+		add_to_temp_variable = { cost_to_ally_FROM = FROM.num_of_factories }
+		add_to_temp_variable = { cost_to_ally_FROM = FROM.num_divisions }
+		multiply_temp_variable = { cost_to_ally_FROM = -1.8 }
+		add_political_power = var:cost_to_ally_FROM
 		puppet = FROM
+	}
+	#league of nations mandate
+	option = {
+		name = decisions.5.d
+		trigger = {
+			has_government = democratic
+			has_country_flag = league_of_nations_member
+		}
+		ai_chance = {
+			factor = 5
+		}
+		set_temp_variable = { cost_to_ally_FROM = FROM.max_available_manpower_k }
+		divide_temp_variable = { cost_to_ally_FROM = 250 }
+		add_to_temp_variable = { cost_to_ally_FROM = FROM.num_of_factories }
+		multiply_temp_variable = { cost_to_ally_FROM = -1 }
+		add_political_power = var:cost_to_ally_FROM
+		puppet = FROM
+		FROM = {
+			set_cosmetic_tag = LON_mandate_generic
+			hidden_effect = {
+				country_event = decisions.6
+			}
+		}
+	}
+}
+
+country_event = { #established as league of nations mandate
+	id = decisions.6
+	title = decisions.6.t
+	desc = decisions.6.desc
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	
+	# lets see what our benevolent releaser decides :pray:
+	option = {
+		name = decisions.6.a
+		every_other_country = {
+			limit = {
+				NOT = {
+					tag = FROM
+				}
+				has_country_flag = league_of_nations_member
+			}
+			country_event = { id = decisions.7 hours = 3 }
+		}
+	}
+}
+
+country_event = { #established as league of nations mandate
+	id = decisions.7
+	title = decisions.7.t
+	desc = decisions.7.desc
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	
+	# lets guarantee them
+	option = {
+		name = decisions.7.a
+		ai_chance = {
+			factor = 3
+		}
+		give_guarantee = FROM
+	}
+	option = { #nah
+		name = decisions.7.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -5
 	}
 }

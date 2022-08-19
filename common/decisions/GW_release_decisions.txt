@@ -20,6 +20,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			51 = {
 				OWNER = {
 					OR = {
@@ -98,6 +99,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			55 = {
 				OWNER = {
 					OR = {
@@ -143,6 +145,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			50 = {
 				OWNER = {
 					OR = {
@@ -188,6 +191,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			59 = {
 				OWNER = {
 					OR = {
@@ -262,6 +266,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			52 = {
 				OWNER = {
 					OR = {
@@ -340,6 +345,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			55 = {
 				OWNER = {
 					OR = {
@@ -477,6 +483,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			65 = {
 				OWNER = {
 					OR = {
@@ -530,6 +537,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			58 = {
 				OWNER = {
 					OR = {
@@ -583,6 +591,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			66 = {
 				OWNER = {
 					OR = {
@@ -659,6 +668,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			5 = {
 				OWNER = {
 					OR = {
@@ -754,6 +764,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			64 = {
 				OWNER = {
 					OR = {
@@ -892,6 +903,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			64 = {
 				OWNER = {
 					OR = {
@@ -997,6 +1009,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			64 = {
 				OWNER = {
 					OR = {
@@ -1175,6 +1188,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			52 = {
 				OWNER = {
 					OR = {
@@ -1244,6 +1258,78 @@ puppet_state_creation_category = {
 
 	}
 
+	DNZ_relase_danzig = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 85
+			85 = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			owns_state = 85
+		}
+
+		complete_effect = {
+			DNZ = {
+				transfer_state = 85
+			}
+			hidden_effect = {
+				DNZ = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	GER_release_germany = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 64
+			64 = {
+				NOT = { is_core_of = ROOT }
+			}
+			GER = { exists = no }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			owns_state = 64
+			GER = { exists = no }
+		}
+
+		complete_effect = {
+			release = GER
+			hidden_effect = {
+				GER = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	#austria
+
 	AUS_release_austria = {
 
 		icon = generic_nationalism
@@ -1262,6 +1348,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			4 = {
 				OWNER = {
 					OR = {
@@ -1373,6 +1460,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			28 = {
 				OWNER = {
 					OR = {
@@ -1436,6 +1524,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			21 = {
 				OWNER = {
 					OR = {
@@ -1507,6 +1596,7 @@ puppet_state_creation_category = {
 		}
 
 		available = {
+			has_war = no
 			16 = {
 				OWNER = {
 					OR = {

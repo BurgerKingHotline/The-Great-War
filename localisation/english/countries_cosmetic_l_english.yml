@@ -1396,3 +1396,6 @@
  brandenburg_communism:0 "Berlin Commune"
  brandenburg_communism_DEF:0 "the Berlin Commune"
  brandenburg_communism_ADJ:0 "Berliner"
+
+ LON_mandate_generic:0 "Mandate of $NONIDEOLOGY$"
+ LON_mandate_generic_DEF:0 "the Mandate of $NONIDEOLOGY$"
