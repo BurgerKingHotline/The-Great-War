@@ -46,6 +46,15 @@
  CRO_release_croatia:0 "Release Croatia"
  CRO_release_greater_croatia:0 "Establish Greater Croatia"
  BOS_release_bosnia:0 "Establish Bosnia-Herzegovina"
+ BRX_release_bordeaux:0 "Release Bordeaux"
+ BRG_release_burgundy:0 "Release Burgundy"
+ HUN_release_hungary:0 "Release Hungary"
+ HUN_release_greater_hungary:0 "Release All of Hungary"
+ BAT_release_banat:0 "Release Banat"
+ TRA_release_transylvania:0 "Release Transylvania"
+ SZE_release_szeky_land:0 "Release Székely Land"
+ FRA_release_france:0 "Release France"
+ DAL_release_dalmatia:0 "Release Dalmatia"
 
  faction_expansion_decisions:0 "Alliance Expansion"
  faction_expansion_decisions_desc:0 "With the growing tensions in the world, we must make sure we have allies to support us in case conflict breaks out.

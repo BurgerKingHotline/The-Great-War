@@ -881,3 +881,11 @@ PRS = {
 	color = rgb { 36 132 247 }
 	color_ui = rgb { 47 172 255 }
 }
+BRX = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 255 255 255 }
+}
+BRG = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}

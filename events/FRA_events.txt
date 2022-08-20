@@ -220,6 +220,16 @@ country_event = { #france wants to strengthen the entente
 		name = french_events.7.a
 		FRA = {
 			add_to_faction = ROOT
+			add_ai_strategy = {
+				id = ROOT
+				type = alliance
+				value = 100
+			}
+		}
+		add_ai_strategy = {
+			id = FRA
+			type = alliance
+			value = 100
 		}
 	}
 	option = { #no we ain't besties yet bro

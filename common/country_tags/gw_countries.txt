@@ -17,3 +17,5 @@ HES = "countries/Hesse.txt"
 #new French Releasables
 PRV = "countries/Provence.txt"
 PRS = "countries/Paris.txt"
+BRX = "countries/Bordeaux.txt"
+BRG = "countries/Bordeaux.txt"

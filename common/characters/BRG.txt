@@ -1,0 +1,15 @@
+characters={
+	BRG_henri_barabant={
+		name="Henri Barabant"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_6.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

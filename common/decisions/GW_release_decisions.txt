@@ -65,24 +65,24 @@ puppet_state_creation_category = {
 					add_state_core = 856
 					if = {
 						limit = {
-							NOT = { 51 = { is_claimed_by = OWNER } }
+							NOT = { 51 = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
 						}
 						transfer_state = 51
 					}
 					if = {
 						limit = {
-							NOT = { 42 = { is_claimed_by = OWNER } }
+							NOT = { 42 = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
 						}
 						transfer_state = 42
 					}
 					if = {
 						limit = {
-							NOT = { 856 = { is_claimed_by = OWNER } }
+							NOT = { 856 = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
 						}
 						transfer_state = 856
 					}
 					if = {
-						limit = { ROOT = { owns_state = 840 } 840 = { NOT = { is_claimed_by = OWNER } } }
+						limit = { ROOT = { owns_state = 840 } 840 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } } }
 						add_state_core = 840
 						transfer_state = 840
 					}
@@ -133,7 +133,13 @@ puppet_state_creation_category = {
 		complete_effect = {
 				ALS = {
 					add_state_core = 28
-					transfer_state = 28
+					if = {
+						limit = {
+							ROOT = { owns_state = 28 }
+							926 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 28
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 926 }
@@ -198,7 +204,7 @@ puppet_state_creation_category = {
 					add_state_core = 55
 					if = {
 						limit = {
-							NOT = { 55 = { is_claimed_by = OWNER } }
+							NOT = { 55 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 55
 					}
@@ -250,7 +256,7 @@ puppet_state_creation_category = {
 					add_state_core = 50
 					if = {
 						limit = {
-							NOT = { 50 = { is_claimed_by = OWNER } }
+							NOT = { 50 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 50
 					}
@@ -327,19 +333,19 @@ puppet_state_creation_category = {
 					add_state_core = 57
 					if = {
 						limit = {
-							NOT = { 59 = { is_claimed_by = OWNER } }
+							NOT = { 59 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 59
 					}
 					if = {
 						limit = {
-							NOT = { 56 = { is_claimed_by = OWNER } }
+							NOT = { 56 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 56
 					}
 					if = {
 						limit = {
-							NOT = { 57 = { is_claimed_by = OWNER } }
+							NOT = { 57 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 57
 					}
@@ -417,19 +423,19 @@ puppet_state_creation_category = {
 					add_state_core = 52
 					if = {
 						limit = {
-							NOT = { 54 = { is_claimed_by = OWNER } }
+							NOT = { 54 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 54
 					}
 					if = {
 						limit = {
-							NOT = { 53 = { is_claimed_by = OWNER } }
+							NOT = { 53 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 53
 					}
 					if = {
 						limit = {
-							NOT = { 52 = { is_claimed_by = OWNER } }
+							NOT = { 52 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 52
 					}
@@ -573,51 +579,56 @@ puppet_state_creation_category = {
 					set_capital = { state = 55 }
 					if = {
 						limit = {
-							NOT = { 55 = { is_claimed_by = OWNER } }
+							NOT = { 55 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 55
 					}
 					if = {
 						limit = {
-							NOT = { 60 = { is_claimed_by = OWNER } }
+							NOT = { 60 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 60
 					}
 					if = {
 						limit = {
-							NOT = { 856 = { is_claimed_by = OWNER } }
+							NOT = { 856 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 856
 					}
 					if = {
 						limit = {
-							NOT = { 42 = { is_claimed_by = OWNER } }
+							NOT = { 42 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 42
 					}
 					if = {
 						limit = {
-							NOT = { 51 = { is_claimed_by = OWNER } }
+							NOT = { 51 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 51
 					}
 					if = {
 						limit = {
-							NOT = { 56 = { is_claimed_by = OWNER } }
+							NOT = { 56 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 56
 					}
 					if = {
 						limit = {
-							NOT = { 57 = { is_claimed_by = OWNER } }
+							NOT = { 57 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 57
 					}
 					if = {
 						limit = {
-							NOT = { 57 = { is_claimed_by = OWNER } }
+							NOT = { 59 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
-						transfer_state = 57
+						transfer_state = 59
+					}
+					if = {
+						limit = { ROOT = { owns_state = 840 } 840 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } } }
+						add_state_core = 840
+						transfer_state = 840
 					}
 				}
 			hidden_effect = {
@@ -665,11 +676,16 @@ puppet_state_creation_category = {
 		complete_effect = {
 				SAX = {
 					add_state_core = 65
-					transfer_state = 65
+					if = {
+						limit = {
+							65 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+						}
+						transfer_state = 65
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 60 }
-							60 = { NOT = { is_core_of = OWNER } }
+							60 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						add_state_core = 60
 						transfer_state = 60
@@ -722,7 +738,7 @@ puppet_state_creation_category = {
 					add_state_core = 58
 					if = {
 						limit = {
-							NOT = { 58 = { is_claimed_by = OWNER } }
+							NOT = { 58 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 58
 					}
@@ -794,13 +810,13 @@ puppet_state_creation_category = {
 					add_state_core = 67
 					if = {
 						limit = {
-							NOT = { 66 = { is_claimed_by = OWNER } }
+							NOT = { 66 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 66
 					}
 					if = {
 						limit = {
-							NOT = { 67 = { is_claimed_by = OWNER } }
+							NOT = { 67 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 67
 					}
@@ -1156,31 +1172,31 @@ puppet_state_creation_category = {
 					add_state_core = 68
 					if = {
 						limit = {
-							NOT = { 64 = { is_claimed_by = OWNER } }
+							NOT = { 64 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 64
 					}
 					if = {
 						limit = {
-							NOT = { 63 = { is_claimed_by = OWNER } }
+							NOT = { 63 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 63
 					}
 					if = {
 						limit = {
-							NOT = { 62 = { is_claimed_by = OWNER } }
+							NOT = { 62 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 62
 					}
 					if = {
 						limit = {
-							NOT = { 61 = { is_claimed_by = OWNER } }
+							NOT = { 61 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 61
 					}
 					if = {
 						limit = {
-							NOT = { 68 = { is_claimed_by = OWNER } }
+							NOT = { 68 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 						}
 						transfer_state = 68
 					}
@@ -1623,9 +1639,24 @@ puppet_state_creation_category = {
 					add_state_core = 4
 					add_state_core = 153
 					add_state_core = 152
-					transfer_state = 4
-					transfer_state = 153
-					transfer_state = 152
+					if = {
+						limit = {
+							4 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 4
+					}
+					if = {
+						limit = {
+							153 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 153
+					}
+					if = {
+						limit = {
+							152 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 152
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 901 }
@@ -1733,9 +1764,24 @@ puppet_state_creation_category = {
 
 		complete_effect = {
 				CZE = {
-					transfer_state = 9
-					transfer_state = 74
-					transfer_state = 75
+					if = {
+						limit = {
+							9 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 9
+					}
+					if = {
+						limit = {
+							74 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 74
+					}
+					if = {
+						limit = {
+							75 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 75
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 69 }
@@ -1816,8 +1862,22 @@ puppet_state_creation_category = {
 
 		complete_effect = {
 				SLO = {
-					transfer_state = 70
-					transfer_state = 71
+					if = {
+						limit = {
+							ROOT = { owns_state = 70 }
+							70 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 70
+						transfer_state = 70
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 71 }
+							71 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 71
+						transfer_state = 71
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 664 }
@@ -1888,7 +1948,14 @@ puppet_state_creation_category = {
 		complete_effect = {
 				LOD = {
 					add_state_core = 88
-					transfer_state = 88
+					if = {
+						limit = {
+							ROOT = { owns_state = 88 }
+							88 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 88
+						transfer_state = 88
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 893 }
@@ -1963,8 +2030,19 @@ puppet_state_creation_category = {
 				GLI = {
 					add_state_core = 91
 					add_state_core = 89
-					transfer_state = 91
-					transfer_state = 89
+					if = {
+						limit = {
+							91 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 91
+					}
+					if = {
+						limit = {
+							89 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 89
+						transfer_state = 89
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 893 }
@@ -2035,7 +2113,12 @@ puppet_state_creation_category = {
 		complete_effect = {
 				SLV = {
 					add_state_core = 102
-					transfer_state = 102
+					if = {
+						limit = {
+							102 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 102
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 897 }
@@ -2043,6 +2126,14 @@ puppet_state_creation_category = {
 						}
 						add_state_core = 897
 						transfer_state = 897
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 896 }
+							896 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 896
+						transfer_state = 896
 					}
 					if = {
 						limit = {
@@ -2126,8 +2217,18 @@ puppet_state_creation_category = {
 				FIU = {
 					add_state_core = 899
 					add_state_core = 898
-					transfer_state = 899
-					transfer_state = 898
+					if = {
+						limit = {
+							899 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 899
+					}
+					if = {
+						limit = {
+							898 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 898
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 897 }
@@ -2147,6 +2248,356 @@ puppet_state_creation_category = {
 				}
 			hidden_effect = {
 				FIU = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	HUN_release_hungary = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 43
+			43 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			43 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			155 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			904 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			902 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			900 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			154 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			887 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			886 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+				HUN = {
+					if = {
+						limit = {
+							43 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 43
+					}
+					if = {
+						limit = {
+							155 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 155
+					}
+					if = {
+						limit = {
+							904 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 904
+					}
+					if = {
+						limit = {
+							902 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 902
+					}
+					if = {
+						limit = {
+							900 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 900 
+					}
+					if = {
+						limit = {
+							154 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 154
+					}
+					if = {
+						limit = {
+							887 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 887
+					}
+					if = {
+						limit = {
+							886 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 886
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 896 }
+							896 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 896
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 45 }
+							45 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 45
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 896 }
+							896 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 896
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 901 }
+							901 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 901
+						transfer_state = 901
+					}
+				}
+			hidden_effect = {
+				HUN = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	HUN_release_greater_hungary = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 43
+			43 = {
+				NOT = { is_core_of = OWNER }
+			}
+			HUN = { exists = no }
+			OR = {
+				owns_state = 109
+				owns_state = 76
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			owns_state = 43
+			OR = {
+				owns_state = 109
+				owns_state = 76
+			}
+			HUN = { exists = no }
+		}
+
+		complete_effect = {
+			effect_tooltip = {
+				release = HUN
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_owned_by = ROOT
+						is_core_of = HUN
+						NOT = {
+							OR = { is_core_of = OWNER is_claimed_by = ROOT }
+						}
+					}
+					HUN = {
+						transfer_state = PREV
+					}
+				}
+				HUN = {
+					country_event = decisions.4
+					if = {
+						limit = {
+							ROOT = { owns_state = 901 }
+							901 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 901
+						transfer_state = 901
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 103 }
+							103 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 103
+						transfer_state = 103
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 843 }
+							843 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 843
+						transfer_state = 843
+					}
+				}
+			}
+		}
+
+	}
+
+	DAL_release_dalmatia = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 103
+			103 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			103 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			907 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+				DAL = {
+					if = {
+						limit = {
+							ROOT = { owns_state = 103 }
+							103 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 103
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 907 }
+							907 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 907
+					}
+				}
+			hidden_effect = {
+				DAL = {
 					country_event = decisions.4
 				}
 			}
@@ -2222,10 +2673,34 @@ puppet_state_creation_category = {
 
 		complete_effect = {
 				CRO = {
-					transfer_state = 109
-					transfer_state = 907
-					transfer_state = 905
-					transfer_state = 103
+					if = {
+						limit = {
+							ROOT = { owns_state = 109 }
+							109 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 109
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 907 }
+							907 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 907
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 905 }
+							905 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 905
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 103 }
+							103 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 103
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 163 }
@@ -2391,14 +2866,62 @@ puppet_state_creation_category = {
 				CRO = {
 					add_state_core = 104
 					add_state_core = 804
-					transfer_state = 109
-					transfer_state = 907
-					transfer_state = 905
-					transfer_state = 103
-					transfer_state = 906
-					transfer_state = 104
-					transfer_state = 804
-					transfer_state = 895
+					if = {
+						limit = {
+							ROOT = { owns_state = 109 }
+							109 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 109
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 907 }
+							907 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 907
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 905 }
+							905 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 905
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 103 }
+							103 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 103
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 906 }
+							906 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 906
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 804 }
+							804 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 804
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 104 }
+							104 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 104
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 895 }
+							895 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 895
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 163 }
@@ -2426,6 +2949,293 @@ puppet_state_creation_category = {
 				}
 			hidden_effect = {
 				CRO = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	TRA_release_transylvania = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 76
+			76 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			76 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			84 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			892 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			83 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			890 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+				TRA = {
+					if = {
+						limit = {
+							76 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 76
+					}
+					if = {
+						limit = {
+							84 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 84
+					}
+					if = {
+						limit = {
+							83 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 83
+					}
+					if = {
+						limit = {
+							890 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 890
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 891 }
+							891 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 891
+					}
+					if = {
+						limit = {
+							892 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 892
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 843 }
+							843 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 843
+						transfer_state = 843
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 82 }
+							82 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 82
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 764 }
+							764 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 764
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 889 }
+							889 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 889
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 888 }
+							888 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 888
+					}
+				}
+			hidden_effect = {
+				TRA = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	SZE_release_szeky_land = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 891
+			891 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			891 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+				SZE = {
+					add_state_core = 891
+					if = {
+						limit = {
+							891 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 891
+					}
+				}
+			hidden_effect = {
+				SZE = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	BAT_release_banat = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 82
+			82 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			82 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+				BAT = {
+					if = {
+						limit = {
+							ROOT = { owns_state = 82 }
+							82 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 82
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 764 }
+							764 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 764
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 889 }
+							889 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 889
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 888 }
+							888 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 888
+					}
+				}
+			hidden_effect = {
+				BAT = {
 					country_event = decisions.4
 				}
 			}
@@ -2479,8 +3289,20 @@ puppet_state_creation_category = {
 
 		complete_effect = {
 				BOS = {
-					transfer_state = 104
-					transfer_state = 804
+					if = {
+						limit = {
+							ROOT = { owns_state = 104 }
+							104 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 104
+					}
+					if = {
+						limit = {
+							ROOT = { owns_state = 804 }
+							804 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						transfer_state = 804
+					}
 					if = {
 						limit = {
 							ROOT = { owns_state = 906 }
@@ -2563,19 +3385,19 @@ puppet_state_creation_category = {
 				add_state_core = 735
 				if = {
 					limit = {
-						NOT = { 21 = { is_claimed_by = OWNER } }
+						NOT = { 21 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 21
 				}
 				if = {
 					limit = {
-						NOT = { 32 = { is_claimed_by = OWNER } }
+						NOT = { 32 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 32
 				}
 				if = {
 					limit = {
-						NOT = { 735 = { is_claimed_by = OWNER } }
+						NOT = { 735 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 735
 				}
@@ -2661,22 +3483,28 @@ puppet_state_creation_category = {
 				add_state_core = 15
 				add_state_core = 785
 				add_state_core = 18
-				transfer_state = 16
 				if = {
 					limit = {
-						NOT = { 15 = { is_claimed_by = OWNER } }
+						ROOT = { owns_state = 16 }
+						16 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 16
+				}
+				if = {
+					limit = {
+						NOT = { 15 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 15
 				}
 				if = {
 					limit = {
-						NOT = { 785 = { is_claimed_by = OWNER } }
+						NOT = { 785 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 785
 				}
 				if = {
 					limit = {
-						NOT = { 18 = { is_claimed_by = OWNER } }
+						NOT = { 18 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 18
 				}
@@ -2687,6 +3515,14 @@ puppet_state_creation_category = {
 					}
 					add_state_core = 29
 					transfer_state = 29
+				}
+				if = {
+					limit = {
+						ROOT = { owns_state = 24 }
+						24 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					add_state_core = 24
+					transfer_state = 24
 				}
 				if = {
 					limit = {
@@ -2742,7 +3578,13 @@ puppet_state_creation_category = {
 		complete_effect = {
 			BRI = {
 				add_state_core = 14
-				add_state_core = 14
+				if = {
+					limit = {
+						ROOT = { owns_state = 14 }
+						14 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 14
+				}
 				if = {
 					limit = {
 						ROOT = { owns_state = 30 }
@@ -2754,6 +3596,208 @@ puppet_state_creation_category = {
 			}
 			hidden_effect = {
 				BRI = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	BRX_release_bordeaux = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 19
+			19 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			19 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			806 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			25 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			23 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			33 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			BRX = {
+				add_state_core = 19
+				add_state_core = 806
+				add_state_core = 25
+				add_state_core = 33
+				add_state_core = 23
+				if = {
+					limit = {
+						19 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 19
+				}
+				if = {
+					limit = {
+						806 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 806
+				}
+				if = {
+					limit = {
+						25 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 25
+				}
+				if = {
+					limit = {
+						33 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 33
+				}
+				if = {
+					limit = {
+						23 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 23
+				}
+			}
+			hidden_effect = {
+				BRX = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	BRG_release_burgundy = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 27
+			27 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			27 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			17 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			BRG = {
+				add_state_core = 27
+				add_state_core = 17
+				add_state_core = 20
+				if = {
+					limit = {
+						27 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 27
+				}
+				if = {
+					limit = {
+						17 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 17
+				}
+				if = {
+					limit = {
+						ROOT = { owns_state = 20 }
+						20 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 20
+				}
+			}
+			hidden_effect = {
+				BRG = {
 					country_event = decisions.4
 				}
 			}
@@ -2816,6 +3860,55 @@ puppet_state_creation_category = {
 					}
 				}
 				OCC = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	FRA_release_france = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 16
+			16 = {
+				NOT = { is_core_of = OWNER }
+			}
+			FRA = { exists = no }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			owns_state = 16
+			FRA = { exists = no }
+		}
+
+		complete_effect = {
+			effect_tooltip = {
+				release = FRA
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_owned_by = ROOT
+						is_core_of = FRA
+						NOT = {
+							OR = { is_core_of = OWNER is_claimed_by = ROOT }
+						}
+					}
+					FRA = {
+						transfer_state = PREV
+					}
+				}
+				FRA = {
 					country_event = decisions.4
 				}
 			}

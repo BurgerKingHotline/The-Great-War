@@ -15,6 +15,12 @@ if = {
 	#oob = "FRA_1936_nsb"
 }
 
+add_ai_strategy = {
+	id = GER 
+	type = prepare_for_war
+	value = 50
+}
+
 starting_train_buffer = 2
 
 if = {
