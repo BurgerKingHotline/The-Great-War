@@ -27,6 +27,12 @@
 		}
 
 		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = ger_contested_navy
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -105,6 +111,18 @@
 		}
 
 		completion_reward = {
+			ASH = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = ger_supported_us
+				}
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = ger_abandoned_support
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -131,6 +149,12 @@
 		}
 
 		completion_reward = {
+			ROM = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = ger_romania_mission
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -157,6 +181,12 @@
 		}
 
 		completion_reward = {
+			BUL = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = ger_balkan_prussia
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -180,6 +210,7 @@
 		}
 
 		completion_reward = {
+			add_to_faction = OTT
 		}
 
 		ai_will_do = {
@@ -202,6 +233,21 @@
 		}
 
 		completion_reward = {
+			every_country = {
+				limit = {
+					has_opinion = {
+						target = GER
+						value > 50
+					}
+					OR = {
+						original_tag = BUL
+						original_tag = ROM
+						original_tag = GRE
+						original_tag = ALB
+					}
+				}
+				add_ideas = ger_influence_sphere
+			}
 		}
 
 		ai_will_do = {
@@ -268,10 +314,31 @@
 		}
 
 		completion_reward = {
-			add_state_claim = 777
-			add_state_claim = 859
-			add_state_claim = 860
-			add_state_claim = 861
+			if = {
+				limit = {
+					NOT = {
+						owns_state = 777
+						owns_state = 859
+						owns_state = 860
+						owns_state = 861
+					}
+				}
+				add_state_claim = 777
+				add_state_claim = 859
+				add_state_claim = 860
+				add_state_claim = 861
+			}
+			else = {
+				add_state_claim = 772
+				add_state_claim = 539
+				add_state_claim = 861
+				add_state_claim = 774
+				add_state_claim = 660
+				add_state_claim = 796
+				add_state_claim = 538
+				add_state_claim = 295
+				add_state_claim = 718
+			}
 		}
 
 		ai_will_do = {
@@ -293,6 +360,48 @@
 		}
 
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					is_on_continent = africa
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					is_on_continent = africa
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					is_on_continent = africa
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -317,8 +426,10 @@
 		completion_reward = {
 			add_state_claim = 726
 			AFG = {
+				add_ideas = ger_influence_sphere
 			}
 			SIA = {
+				add_ideas = ger_influence_sphere
 			}
 		}
 
@@ -345,6 +456,18 @@
 		}
 
 		completion_reward = {
+			ITA = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = ger_supported_us
+				}
+			}
+			ASH = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = ger_abandoned_support
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -592,6 +715,7 @@
 		}
 
 		completion_reward = {
+			set_country_flag = septemberprogramm_activated
 		}
 
 		ai_will_do = {

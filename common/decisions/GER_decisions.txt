@@ -1,0 +1,442 @@
+septemberprogramm_decision_cat = {
+	septemberprogramm_puppet_bel = {
+		available = {
+			controls_state = 34
+			controls_state = 6
+			controls_state = 29
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = BEL
+					NOT = { BEL = { has_government = neutrality } }
+				}
+				hidden_effect = {
+					BEL = {
+						set_state_controller = 34
+						set_state_controller = 6
+						set_state_controller = 29
+					}
+				}
+				BEL = {
+					start_civil_war = {
+						ideology = neutrality
+						size = 1
+
+						transfer_state = 34
+						transfer_state = 6
+						transfer_state = 29
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+			else = {
+				BEL = {
+					transfer_state = 34
+					transfer_state = 6
+					transfer_state = 29
+				}
+				set_autonomy = { target = BEL autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+	}
+	septemberprogramm_puppet_pol = {
+		available = {
+			controls_state = 97
+			controls_state = 915
+			controls_state = 98
+			controls_state = 10
+			controls_state = 90
+			controls_state = 92
+			controls_state = 87
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = POL
+					NOT = { POL = { has_government = neutrality } }
+				}
+				hidden_effect = {
+					POL = {
+						set_state_controller = 10
+						set_state_controller = 87
+						set_state_controller = 90
+						set_state_controller = 92
+						set_state_controller = 97
+						set_state_controller = 98
+						set_state_controller = 915
+					}
+				}
+				POL = {
+					start_civil_war = {
+						ideology = neutrality
+						size = 1
+
+						transfer_state = 10
+						transfer_state = 87
+						transfer_state = 90
+						transfer_state = 92
+						transfer_state = 97
+						transfer_state = 98
+						transfer_state = 915
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+			else = {
+				POL = {
+					transfer_state = 10
+					transfer_state = 87
+					transfer_state = 90
+					transfer_state = 92
+					transfer_state = 97
+					transfer_state = 98
+					transfer_state = 915
+				}
+				set_autonomy = { target = POL autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+	}
+	septemberprogramm_puppet_lit = {
+		available = {
+			controls_state = 189
+			controls_state = 815
+			controls_state = 11
+			controls_state = 784
+			controls_state = 814
+			controls_state = 95
+			controls_state = 96
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = LIT
+					NOT = { LIT = { has_government = neutrality } }
+				}
+				hidden_effect = {
+					LIT = {
+						set_state_controller = 189
+						set_state_controller = 815
+						set_state_controller = 11
+						set_state_controller = 784
+						set_state_controller = 814
+						set_state_controller = 95
+						set_state_controller = 96
+					}
+				}
+				BEL = {
+					start_civil_war = {
+						ideology = neutrality
+						size = 1
+
+						transfer_state = 11
+						transfer_state = 95
+						transfer_state = 96
+						transfer_state = 189
+						transfer_state = 784
+						transfer_state = 814
+						transfer_state = 815
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+			else = {
+				LIT = {
+					transfer_state = 11
+					transfer_state = 95
+					transfer_state = 96
+					transfer_state = 189
+					transfer_state = 784
+					transfer_state = 814
+					transfer_state = 815
+				}
+				set_autonomy = { target = LIT autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+	}
+	septemberprogramm_puppet_baltics = {
+		available = {
+			controls_state = 809
+			controls_state = 190
+			controls_state = 808
+			controls_state = 12
+			controls_state = 813
+			controls_state = 191
+			controls_state = 13
+			controls_state = 812
+			controls_state = 811
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							country_exists = EST
+							NOT = { EST = { has_government = neutrality } }
+						}
+						AND = {
+							country_exists = LAT
+							NOT = { LAT = { has_government = neutrality } }
+						}
+					}
+				}
+				hidden_effect = {
+					EST = {
+						set_state_controller = 809
+						set_state_controller = 190
+						set_state_controller = 808
+						set_state_controller = 12
+						set_state_controller = 813
+						set_state_controller = 191
+						set_state_controller = 13
+						set_state_controller = 812
+						set_state_controller = 811
+					}
+				}
+				EST = {
+					start_civil_war = {
+						ideology = neutrality
+						size = 1
+
+						transfer_state = 809
+						transfer_state = 190
+						transfer_state = 808
+						transfer_state = 12
+						transfer_state = 813
+						transfer_state = 191
+						transfer_state = 13
+						transfer_state = 812
+						transfer_state = 811
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+						set_cosmetic_tag = BAL_UNIFIED
+					}
+				}
+			}
+			else = {
+				EST = {
+					transfer_state = 809
+					transfer_state = 190
+					transfer_state = 808
+					transfer_state = 12
+					transfer_state = 813
+					transfer_state = 191
+					transfer_state = 13
+					transfer_state = 812
+					transfer_state = 811
+					set_cosmetic_tag = BAL_UNIFIED
+				}
+				set_autonomy = { target = EST autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+	}
+	septemberprogramm_puppet_blr = {
+		available = {
+			controls_state = 911
+			controls_state = 207
+			controls_state = 241
+			controls_state = 204
+			controls_state = 206
+			controls_state = 194
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = BLR
+					NOT = { BLR = { has_government = neutrality } }
+				}
+				hidden_effect = {
+					BLR = {
+						set_state_controller = 911
+						set_state_controller = 207
+						set_state_controller = 241
+						set_state_controller = 204
+						set_state_controller = 206
+						set_state_controller = 194
+					}
+				}
+				BLR = {
+					start_civil_war = {
+						ideology = neutrality
+						size = 1
+						transfer_state = 911
+						transfer_state = 207
+						transfer_state = 241
+						transfer_state = 204
+						transfer_state = 206
+						transfer_state = 194
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+			else = {
+				BLR = {
+					transfer_state = 911
+					transfer_state = 207
+					transfer_state = 241
+					transfer_state = 204
+					transfer_state = 206
+					transfer_state = 194
+				}
+				set_autonomy = { target = BLR autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+	}
+	septemberprogramm_puppet_ukr = {
+		available = {
+			controls_state = 93
+			controls_state = 94
+			controls_state = 199
+			controls_state = 201
+			controls_state = 202
+			controls_state = 193
+			controls_state = 224
+			controls_state = 225
+			controls_state = 221
+			controls_state = 228
+			controls_state = 935
+			controls_state = 914
+			controls_state = 227
+			controls_state = 200
+			controls_state = 226
+			controls_state = 196
+			controls_state = 137
+			controls_state = 197
+			controls_state = 766
+			controls_state = 834
+			controls_state = 203
+			controls_state = 259
+			controls_state = 192
+			controls_state = 198
+			controls_state = 78
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = UKR
+					NOT = { UKR = { has_government = neutrality } }
+				}
+				hidden_effect = {
+					UKR = {
+						set_state_controller = 93
+						set_state_controller = 94
+						set_state_controller = 199
+						set_state_controller = 201
+						set_state_controller = 202
+						set_state_controller = 193
+						set_state_controller = 224
+						set_state_controller = 225
+						set_state_controller = 221
+						set_state_controller = 228
+						set_state_controller = 935
+						set_state_controller = 914
+						set_state_controller = 227
+						set_state_controller = 200
+						set_state_controller = 226
+						set_state_controller = 196
+						set_state_controller = 137
+						set_state_controller = 197
+						set_state_controller = 766
+						set_state_controller = 834
+						set_state_controller = 203
+						set_state_controller = 259
+						set_state_controller = 192
+						set_state_controller = 198
+						set_state_controller = 78
+					}
+				}
+				UKR = {
+					start_civil_war = {
+						ideology = neutrality
+						size = 1
+						transfer_state = 93
+						transfer_state = 94
+						transfer_state = 199
+						transfer_state = 201
+						transfer_state = 202
+						transfer_state = 193
+						transfer_state = 224
+						transfer_state = 225
+						transfer_state = 221
+						transfer_state = 228
+						transfer_state = 935
+						transfer_state = 914
+						transfer_state = 227
+						transfer_state = 200
+						transfer_state = 226
+						transfer_state = 196
+						transfer_state = 137
+						transfer_state = 197
+						transfer_state = 766
+						transfer_state = 834
+						transfer_state = 203
+						transfer_state = 259
+						transfer_state = 192
+						transfer_state = 198
+						transfer_state = 78
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+			else = {
+				UKR = {
+					transfer_state = 93
+					transfer_state = 94
+					transfer_state = 199
+					transfer_state = 201
+					transfer_state = 202
+					transfer_state = 193
+					transfer_state = 224
+					transfer_state = 225
+					transfer_state = 221
+					transfer_state = 228
+					transfer_state = 935
+					transfer_state = 914
+					transfer_state = 227
+					transfer_state = 200
+					transfer_state = 226
+					transfer_state = 196
+					transfer_state = 137
+					transfer_state = 197
+					transfer_state = 766
+					transfer_state = 834
+					transfer_state = 203
+					transfer_state = 259
+					transfer_state = 192
+					transfer_state = 198
+					transfer_state = 78
+				}
+				set_autonomy = { target = UKR autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+	}
+	septemberprogramm_core_west = {
+		available = {
+			owns_state = 8
+			owns_state = 927
+			owns_state = 937
+		}
+		complete_effect = {
+			add_state_core = 927
+			add_state_core = 937
+			add_state_core = 8
+		}
+	}
+}

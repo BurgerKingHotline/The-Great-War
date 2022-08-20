@@ -41,5 +41,25 @@ ideas = {
 			}
 
 		}
+		ger_influence_sphere = {
+			picture = ger_expanding_sphere
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			rule = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				opinion_gain_monthly = 5
+			}
+
+		}
 	}
 }

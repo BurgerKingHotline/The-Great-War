@@ -1,4 +1,5 @@
 ﻿l_english:
+ # focuses
  GER_contest_british_navy:0 "Contest British Naval Rule"
  GER_expand_political_sphere:0 "Expand our Political Sphere"
  GER_south_border:0 "Focus on the Southern Border"
@@ -25,6 +26,16 @@
  GER_zimmerman_telegram:0 "Zimmerman Telegram"
  GER_ally_usa:0 "Alliance with the USA"
 
- #just change these ids and remove this on your side
+# ideas
  GER_expanding_german_sphere:0 "The other major powers of this world have large spheres of influence, covering vast swathes of the world. We do have influence in some small parts of Africa and Asia, but that is not enough. We must catch up to these powers. We will show them, that while they have had hundreds of years to build theirs up, we can build ours in a few decades. And then we can finally find our place in the sun."
  GER_prussian_roots:0 "While the German nation is its own nation, free of any foreign influence, we are not free from influence from our roots. Those roots being the old nation of Prussia, the unifier of the German states. Prussia, being a militaristic society, with a high nobility, and the self sufficiency of the army, it seems the whole German nation is built upon these doctrines."
+
+# decisions
+ septemberprogramm_decision_cat:0 "Septemberprogramm"
+ septemberprogramm_decision_cat_desc:0 "Enables subject creation in occupied states.\n\n"
+ septemberprogramm_puppet_bel:0 "Vassalize Belgium"
+ septemberprogramm_puppet_pol:0 "Vassalize Poland"
+ septemberprogramm_puppet_lit:0 "Vassalize Lithuanian"
+ septemberprogramm_puppet_blr:0 "Vassalize Belarus"
+ septemberprogramm_puppet_ukr:0 "Vassalize Ukraine"
+ septemberprogramm_core_west:0 "Cement Western Expansion"
