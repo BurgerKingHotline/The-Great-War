@@ -8,6 +8,7 @@ state={
 
 	history={
 		owner = ASH
+		add_claim_by = ASH
 		victory_points = {
 			11899 5 
 		}

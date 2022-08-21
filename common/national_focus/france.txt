@@ -803,7 +803,7 @@
 	focus = {
 		id = FRA_strengthen_entente
 		icon = GFX_goal_generic_army_doctrines
-		x = -3
+		x = -2
 		y = 1
 		cost = 35
 		prerequisite = {
@@ -838,7 +838,7 @@
 	focus = {
 		id = FRA_closer_to_britain
 		icon = GFX_focus_chi_british_cooperation
-		x = -5
+		x = -4
 		y = 1
 		cost = 35
 		prerequisite = {
@@ -866,38 +866,56 @@
 
 	focus = {
 		id = FRA_offer_aid_to_italy
-		icon = GFX_focus_generic_combined_arms
-		x = -2
+		icon = GFX_focus_befriend_italy
+		x = 0
 		y = 1
 		cost = 35
 		prerequisite = {
-			focus = FRA_attempt_german_reapproachment
 			focus = FRA_strengthen_entente
 			focus = FRA_closer_to_britain
 		}
-		relative_position_id = FRA_attempt_german_reapproachment
+		relative_position_id = FRA_closer_to_britain
 
 		available = {
+			is_in_faction = yes
 			ITA = {
-				has_war_with = OTT
+				is_in_faction = no
 			}
-		}
-
-		bypass = {
-			ITA = {
-				owns_state = 448
+			custom_trigger_tooltip = {
+				tooltip = FRA_italian_influence_at_least_25
+				check_variable = { var = FRA.fra_gateway_to_europe_influence value = 25 compare = greater_than_or_equals }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FRA_italian_influence_at_least_10_greater
+				check_variable = { var = fra_temp_trade_influence value = 10 compare = greater_than_or_equals }
 			}
 		}
 
 		completion_reward = {
-			#ai strategy for sending volunteers
-			add_ai_strategy = {
-				id = ITA
-				type = send_volunteers_desire
-				value = 100
-			}
 			ITA = {
-				country_event = { id = french_events.9 hours = 2 }
+				country_event = { id = generic.5 hours = 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_protect_belgium
+		icon = GFX_goal_generic_position_armies
+		x = -2
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_closer_to_britain
+		}
+		relative_position_id = FRA_closer_to_britain
+
+		available = {
+			is_in_faction_with = ENG
+		}
+
+		completion_reward = {
+			BEL = {
+				country_event = { id = generic.5 hours = 2 }
 			}
 		}
 	}
@@ -949,7 +967,6 @@
 			focus = FRA_attempt_german_reapproachment
 		}
 		prerequisite = {
-			focus = FRA_offer_aid_to_italy
 			focus = FRA_revive_german_concessions_in_morocco
 		}
 		relative_position_id = FRA_attempt_german_reapproachment
@@ -970,7 +987,7 @@
 	focus = {
 		id = FRA_expand_the_entente_balkans
 		icon = GFX_focus_BUL_free_balkan_states
-		x = -1
+		x = 0
 		y = 1
 		cost = 35
 		prerequisite = {
@@ -1131,6 +1148,29 @@
 	}
 
 	focus = {
+		id = FRA_enact_three_year_law
+		icon = GFX_focus_generic_military_academy
+		x = -2
+		y = 1
+		cost = 35
+		prerequisite = {
+			focus = FRA_organize_reserves
+			focus = FRA_build_up_lorraine
+		}
+		relative_position_id = FRA_build_up_lorraine
+
+		available = {
+			NOT = {
+				has_government = communism
+			}
+		}
+
+		completion_reward = {
+			upgrade_conscription_law = yes
+		}
+	}
+
+	focus = {
 		id = FRA_incorporate_reserves_into_mobilization
 		icon = GFX_focus_generic_manpower
 		x = 1
@@ -1224,7 +1264,7 @@
 
 	focus = {
 		id = FRA_appoint_joseph_joffre
-		icon = GFX_focus_generic_military_academy
+		icon = GFX_focus_generic_self_management
 		x = 0
 		y = 1
 		cost = 35

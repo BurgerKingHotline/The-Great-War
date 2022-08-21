@@ -1,0 +1,171 @@
+ITA_alignment_category = {
+	
+	ITA_pursue_closer_ties_with_FROM = {
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = GER
+					tag = FRA
+				}
+			}
+		}
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 2
+				date > 1911.6.1
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					tag = GER
+					has_completed_focus = GER_support_austria
+				}
+			}
+		}
+
+		cost = 25
+
+		days_re_enable = 35
+
+		complete_effect = {
+			if = {
+				limit = { FROM = { tag = GER } }
+				GER = { 
+					custom_effect_tooltip = ITA_increase_influence_5
+					add_to_variable = { var = ger_gateway_to_europe_influence value = 5 } 
+				}
+				set_variable = { var = ger_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+				subtract_from_variable = { var = ger_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+				set_variable = { var = fra_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+				subtract_from_variable = { var = fra_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+			}
+			if = {
+				limit = { FROM = { tag = FRA } }
+				FRA = { 
+					custom_effect_tooltip = ITA_increase_influence_5
+					add_to_variable = { var = fra_gateway_to_europe_influence value = 5 } 
+				}
+				set_variable = { var = fra_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+				subtract_from_variable = { var = fra_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+				set_variable = { var = ger_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+				subtract_from_variable = { var = ger_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+			}
+		}
+
+	}
+
+	FROM_pursue_closer_ties_with_ITA = {
+
+		target_trigger = {
+			FROM = {
+				tag = ITA
+			}
+		}
+
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = FRA
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			modifier = {
+				factor = 0.5
+				tag = GER 
+				has_completed_focus = GER_support_austria
+			}
+		}
+
+		cost = 25
+
+		days_re_enable = 35
+
+		complete_effect = {
+			custom_effect_tooltip = ITA_increase_influence_5
+			if = {
+				limit = { tag = GER }
+				add_to_variable = { var = ger_gateway_to_europe_influence value = 5 } 
+				ITA = {
+					set_variable = { var = ger_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+					subtract_from_variable = { var = ger_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+					set_variable = { var = fra_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+					subtract_from_variable = { var = fra_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+				}
+			}
+			if = {
+				limit = { tag = FRA }
+				add_to_variable = { var = fra_gateway_to_europe_influence value = 5 } 
+				ITA = {
+					set_variable = { var = fra_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+					subtract_from_variable = { var = fra_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+					set_variable = { var = ger_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+					subtract_from_variable = { var = ger_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+				}
+			}
+		}
+
+	}
+
+	FROM_support_italian_ottoman_war = {
+
+		target_trigger = {
+			FROM = {
+				tag = ITA
+			}
+		}
+
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = FRA
+			}
+		}
+
+		cost = 50
+
+		available = {
+			ITA = {
+				has_war_with = OTT
+			}
+		}
+
+		visible = {
+			NOT = {
+				is_in_faction_with = OTT
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ai_strategy = {
+				id = ITA
+				type = send_volunteers_desire
+				value = 25
+			}
+			ITA = {
+				country_event = { id = french_events.9 hours = 2 }
+			}
+		}
+
+	}
+
+}

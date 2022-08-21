@@ -262,7 +262,7 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			
 			modifier = {
-				neutrality_drift = 0.01
+				neutrality_drift = 0.05
 				party_popularity_stability_factor = 0.1
 			}
 		}

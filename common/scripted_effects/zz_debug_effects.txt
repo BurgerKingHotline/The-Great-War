@@ -126,7 +126,7 @@ d_create_army = {
         random_owned_controlled_state = {
 		limit = { impassable = no }
             create_unit = {
-                division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+                division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
                 owner = PREV
             }
         }
@@ -162,7 +162,7 @@ d_create_army_small = {
         random_owned_controlled_state = {
 		limit = { impassable = no }
             create_unit = {
-                division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+                division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
                 owner = PREV
             }
         }
@@ -198,7 +198,7 @@ d_create_army_tiny = {
         random_owned_controlled_state = {
 		limit = { impassable = no }
             create_unit = {
-                division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+                division = "name = \"Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
                 owner = PREV
             }
         }

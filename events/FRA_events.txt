@@ -289,7 +289,7 @@ country_event = { #Russia doesn't wanna go aggressive yet
 	}
 }
 
-country_event = { #italy receives aid from France
+country_event = { #italy receives aid from FROM
 	id = french_events.9
 	title = french_events.9.t	
 	desc = french_events.9.d	
@@ -302,6 +302,28 @@ country_event = { #italy receives aid from France
 			modifier = medium_increase
 			target = FROM
 		}
+		if = {
+				limit = { FROM = { tag = GER } }
+				GER = { 
+					custom_effect_tooltip = ITA_increase_influence_10
+					add_to_variable = { var = ger_gateway_to_europe_influence value = 10 } 
+				}
+				set_variable = { var = ger_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+				subtract_from_variable = { var = ger_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+				set_variable = { var = fra_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+				subtract_from_variable = { var = fra_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+			}
+			if = {
+				limit = { FROM = { tag = FRA } }
+				FRA = { 
+					custom_effect_tooltip = ITA_increase_influence_10
+					add_to_variable = { var = fra_gateway_to_europe_influence value = 10 } 
+				}
+				set_variable = { var = fra_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+				subtract_from_variable = { var = fra_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+				set_variable = { var = ger_temp_trade_influence value = GER.ger_gateway_to_europe_influence }
+				subtract_from_variable = { var = ger_temp_trade_influence value = FRA.fra_gateway_to_europe_influence }
+			}
 		army_experience = 10
 		add_offsite_building = { type = arms_factory level = 1 }
 	}
