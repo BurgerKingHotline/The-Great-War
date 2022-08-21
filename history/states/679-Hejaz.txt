@@ -1,7 +1,7 @@
 state={
 	id=679
 	name="STATE_679"
-	manpower = 1511000
+	manpower = 910000
 	
 	state_category = pastoral
 
@@ -10,6 +10,9 @@ state={
 		
 		victory_points = {
 			12883 1 
+		}
+		victory_points = {
+			7934 5
 		}
 		buildings = {
 			infrastructure = 2

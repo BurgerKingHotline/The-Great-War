@@ -57,6 +57,10 @@
 				popularity = 0.1
 			}
 		}
+
+		ai_will_do = {
+			factor = 11
+		}
 	}
 
 	focus = {
@@ -102,6 +106,14 @@
 			add_popularity = {
 				ideology = communism
 				popularity = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 11
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
 			}
 		}
 	}
@@ -153,6 +165,14 @@
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 		}
+
+		ai_will_do = {
+			factor = 11
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 	}
 
 	focus = {
@@ -174,6 +194,15 @@
 			}
 			country_event = {
 				id = rus_events.12
+			}
+		}
+
+		ai_will_do = {
+			factor = 11
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				date < 1912.1.1
 			}
 		}
 	}
@@ -202,6 +231,10 @@
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 			set_country_flag = RUS_no_more_commie_radical
+		}
+
+		ai_will_do = {
+			factor = 15
 		}
 	}
 
@@ -1024,6 +1057,7 @@
 		cost = 70
 
 		available = {
+			has_war = yes
 		}
 
 		completion_reward = {
@@ -2168,6 +2202,10 @@
 		completion_reward = {
 			custom_effect_tooltip = RUS_increase_divisions_when_civil_war
 		}
+
+		ai_will_do = {
+			factor = 15
+		}
 	}
 
 	focus = {
@@ -2183,6 +2221,10 @@
 		completion_reward = {
 			custom_effect_tooltip = RUS_menshevik_division_spawns
 		}
+
+		ai_will_do = {
+			factor = 15
+		}
 	}
 
 	focus = {
@@ -2197,6 +2239,10 @@
 
 		completion_reward = {
 			custom_effect_tooltip = RUS_bolshevik_division_spawns
+		}
+
+		ai_will_do = {
+			factor = 16
 		}
 	}
 
@@ -2217,6 +2263,10 @@
 					SOV_funds_from_international_communists
 				}
 			}
+		}
+
+		ai_will_do = {
+			factor = 15
 		}
 	}
 
@@ -2240,6 +2290,10 @@
 			SOV = {
 				set_country_flag = SOV_trudoviks_allowed_flag
 			}
+		}
+
+		ai_will_do = {
+			factor = 15
 		}
 	}
 
@@ -2266,6 +2320,10 @@
 				set_country_flag = SOV_trudoviks_banned_flag
 			}
 		}
+
+		ai_will_do = {
+			factor = 15
+		}
 	}
 
 	focus = {
@@ -2286,6 +2344,10 @@
 				}
 			}
 		}
+
+		ai_will_do = {
+			factor = 15
+		}
 	}
 
 	focus = {
@@ -2304,6 +2366,10 @@
 				threat = 10
 				name = RUS_kill_the_tsar
 			}
+		}
+
+		ai_will_do = {
+			factor = 15
 		}
 	}
 

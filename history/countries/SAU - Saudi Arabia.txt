@@ -19,6 +19,12 @@ oob = "GENERIC_1910"
 
 set_convoys = 5
 
+add_ai_strategy = {
+    type = befriend
+    id = JBL
+    value = -1000
+}
+
 
 1939.1.1 = {
 

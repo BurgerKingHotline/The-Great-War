@@ -1297,6 +1297,9 @@
  EGY_kingdom_neutrality:0 "Kingdom of Egypt"
  EGY_kingdom_neutrality_DEF:0 "the Kingdom of Egypt"
 
+ SAU_nejd_neutrality:0 "Emirate of Nejd and Hasa"
+ SAU_nejd_neutrality_DEF:0 "the Emirate of Nejd and Hasa"
+
  ALS_GER_autonomy_dominion:0 "Alsace-Lorraine"
  ALS_GER_autonomy_dominion_DEF:0 "the Dominion of Alsace-Lorraine"
  ALS_GER_autonomy_colony:0 "Alsace-Lorraine"

@@ -100,6 +100,36 @@ diplomatic_relation = {
     active = yes
 }
 
+diplomatic_relation = {
+    country = JBL
+    relation = military_access
+    active = yes
+}
+
+diplomatic_relation = {
+    country = JBL
+    relation = guarantee
+    active = yes
+}
+
+add_ai_strategy = {
+    type = befriend
+    id = JBL
+    value = 500
+}
+
+add_ai_strategy = {
+    type = befriend
+    id = SAU
+    value = -100
+}
+
+add_ai_strategy = {
+    type = send_lend_lease_desire
+    id = JBL
+    value = 1000
+}
+
 ENG = {
 	diplomatic_relation = {
 		country = QAT

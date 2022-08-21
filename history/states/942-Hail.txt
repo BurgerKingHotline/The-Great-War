@@ -1,0 +1,26 @@
+
+state={
+	id=942
+	name="STATE_942"
+	manpower = 1440000
+	
+	state_category = rural
+	resources={
+		oil=14 # was: 3
+	}
+
+	history={
+		owner = JBL
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		add_core_of = JBL
+	}
+
+	provinces={
+		2057 4968 4974 5027 5058 5099 7970 8030 8101 10815 10901 12455 12749
+	}
+
+	local_supplies=0.0 
+}

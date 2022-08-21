@@ -6,13 +6,13 @@ state={
 	state_category = rural
 
 	history={
-		owner = SAU
+		owner = JBL
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 		}
 
-		add_core_of = SAU
+		add_core_of = JBL
 	}
 
 	provinces={

@@ -61,106 +61,105 @@ country_event = {
 				create_dynamic_country = { 
 					original_tag = AZR
 					save_global_event_target_as = transcaucasia_event_target
+					set_state_owner = 229 
+					add_state_core = 229
 					if = {
 						limit = {
-							RUS = {
-								owns_state = 229
+							ROOT = {
+								controls_state = 229
 							}
 						}
-						set_state_owner = 229
-						if = {
-							limit = {
-								RUS = {
-									controls_state = 229
-								}
-							}
-							set_state_controller = 229
-						}
+						set_state_controller = 229
 					}
+
+					add_state_core = 230
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
 								owns_state = 230
 							}
 						}
 						set_state_owner = 230
-						add_state_core = 230
-						if = {
-							limit = {
-								RUS = {
-									controls_state = 230
-								}
-							}
-							set_state_controller = 230
-						}
 					}
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
+								controls_state = 230
+							}
+						}
+						set_state_controller = 230
+					}
+
+					add_state_core = 231
+					if = {
+						limit = {
+							ROOT = {
 								owns_state = 231
 							}
 						}
 						set_state_owner = 231
-						add_state_core = 231
-						if = {
-							limit = {
-								RUS = {
-									controls_state = 231
-								}
-							}
-							set_state_controller = 231
-						}
 					}
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
+								controls_state = 231
+							}
+						}
+						set_state_controller = 231
+					}
+
+					add_state_core = 826
+					if = {
+						limit = {
+							ROOT = {
 								owns_state = 826
 							}
 						}
 						set_state_owner = 826
-						add_state_core = 826
-						if = {
-							limit = {
-								RUS = {
-									controls_state = 826
-								}
-							}
-							set_state_controller = 826
-						}
 					}
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
+								controls_state = 826
+							}
+						}
+						set_state_controller = 826
+					}
+
+					add_state_core = 828
+					if = {
+						limit = {
+							ROOT = {
 								owns_state = 828
 							}
 						}
 						set_state_owner = 828
-						add_state_core = 828
-						if = {
-							limit = {
-								RUS = {
-									controls_state = 828
-								}
-							}
-							set_state_controller = 828
-						}
 					}
 					if = {
 						limit = {
-							RUS = {
+							ROOT = {
+								controls_state = 828
+							}
+						}
+						set_state_controller = 828
+					}
+
+					add_state_core = 842
+					if = {
+						limit = {
+							ROOT = {
 								owns_state = 842
 							}
 						}
 						set_state_owner = 842
-						add_state_core = 842
-						if = {
-							limit = {
-								RUS = {
-									controls_state = 842
-								}
+					}
+					if = {
+						limit = {
+							ROOT = {
+								controls_state = 842
 							}
-							set_state_controller = 842
 						}
+						set_state_controller = 842
 					}
 					set_cosmetic_tag = transcaucasia_unified
 				}
@@ -735,6 +734,7 @@ country_event = { #collapse of russian control in europe
 				if = {
 					limit = {
 						any_owned_state = {
+							is_controlled_by = RUS
 							is_core_of = MOL
 						}
 					}
@@ -753,6 +753,7 @@ country_event = { #collapse of russian control in europe
 				if = {
 					limit = {
 						any_owned_state = {
+							is_controlled_by = RUS
 							is_core_of = UKR
 						}
 					}
@@ -771,6 +772,7 @@ country_event = { #collapse of russian control in europe
 				if = {
 					limit = {
 						any_owned_state = {
+							is_controlled_by = RUS
 							is_core_of = POL
 						}
 					}
@@ -903,6 +905,10 @@ country_event = { #collapse of russian control in europe
 			add_ideas = {
 				RUS_russian_civil_war
 			}
+			add_timed_idea = {
+				idea = SOV_the_revolution
+				days = 180
+			}
 			hidden_effect = {
 				every_controlled_state = {
 					limit = {
@@ -1016,30 +1022,20 @@ country_event = { #collapse of russian control in europe
 							set_cosmetic_tag = ARM
 						}
 					}
-					else = {
-
-					}
 				}
 				if = {
 					limit = {
 						has_war_with = GER
 					}
 					GER = {
-						if = {
-							limit = {
-								OR = {
-									has_dlc = "Together for Victory"
-									has_dlc = "Man the Guns"
-									has_dlc = "Death or Dishonor"
-								}
-							}
-							set_autonomy = {
-								target = GEO
-								autonomous_state = autonomy_satellite
-							}
-							else = {
-								puppet = GEO
-							}
+						give_guarantee = GEO
+						diplomatic_relation = {
+							country = GEO
+							relation = non_aggression_pact
+							active = yes
+						}
+						GEO = {
+							give_military_access = PREV
 						}
 					}
 				}

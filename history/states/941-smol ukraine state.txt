@@ -1,0 +1,24 @@
+
+state={
+	id=941
+	name="STATE_941"
+	manpower = 1373637
+	
+	state_category = city
+
+	history={
+		owner = RUS
+		add_core_of = RUS
+		buildings = {
+			infrastructure = 2 #was: 5
+		}
+		#add_core_of = SOV
+		add_core_of = UKR
+	}
+
+	provinces={
+		6565 9542
+	}
+
+	local_supplies=0.0 
+}

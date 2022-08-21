@@ -3036,12 +3036,13 @@ foreign_politics = {
 
 		ai_will_do = {
 			factor = 0
-			modifier = { #removing border gore
-				add = 5
-				FROM = {
-					is_in_home_area = no
-					is_coastal = no
-					is_island_state = no
+			modifier = { #for colonies
+				add = 1
+				any_other_country = {
+					is_ai = no
+					FROM = {
+						is_core_of = PREV
+					}
 				}
 			}
 			modifier = { #for colonies

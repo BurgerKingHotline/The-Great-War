@@ -23,7 +23,7 @@ surrender_category = {
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				add = 10
+				add = 100
 				capital_scope = {
 					NOT = {
 						is_controlled_by = ROOT
@@ -63,12 +63,15 @@ surrender_category = {
 			}
 
 			modifier = {
-				factor = 1.5
+				add = 5
 				surrender_progress > 0.25
 			}
-		}
 
-		fire_only_once = yes
+			modifier = {
+				factor = 1000
+				has_capitulated = yes
+			}
+		}
 
 		complete_effect = {
 			GER = {
@@ -170,8 +173,6 @@ surrender_category = {
 				surrender_progress > 0.25
 			}
 		}
-
-		fire_only_once = yes
 
 		complete_effect = {
 			if = { #if any players are in the balkan league then this will be given to them,
@@ -321,8 +322,6 @@ surrender_category = {
 			}
 		}
 
-		fire_only_once = yes
-
 		complete_effect = {
 			if = {
 				limit = {
@@ -446,8 +445,6 @@ surrender_category = {
 				surrender_progress > 0.25
 			}
 		}
-
-		fire_only_once = yes
 
 		complete_effect = {
 			if = {
@@ -574,8 +571,6 @@ surrender_category = {
 			}
 		}
 
-		fire_only_once = yes
-
 		complete_effect = {
             if = {
 				limit = {
@@ -689,9 +684,12 @@ surrender_category = {
 				add = 5
 				surrender_progress > 0.25
 			}
-		}
 
-		fire_only_once = yes
+			modifier = {
+				factor = 10000
+				has_capitulated = yes
+			}
+		}
 
 		complete_effect = {
 		}

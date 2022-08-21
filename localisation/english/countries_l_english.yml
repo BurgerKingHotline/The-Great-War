@@ -832,8 +832,8 @@
  SAU_fascism_DEF:0 "the Arabic Empire"
  SAU_democratic:0 "Arabian Republic"
  SAU_democratic_DEF:0 "the Arabian Republic"
- SAU_neutrality:0 "Saudi Arabia"
- SAU_neutrality_DEF:0 "Saudi Arabia"
+ SAU_neutrality:0 "Emirate of Riyadh"
+ SAU_neutrality_DEF:0 "the Emirate of Riyadh"
  SAU_communism:0 "Republic of the Arabian Assembly"
  SAU_communism_DEF:0 "the Republic of the Arabian Assembly"
  SAU_fascism_ADJ:0 "Arabian"
@@ -3893,3 +3893,7 @@
  BRG_communism_ADJ:0 "Dijonian"
  BRG_fascism:0 "Burgundian Empire"
  BRG_fascism_DEF:0 "the Burgundian Empire"
+
+ JBL:0 "Emirate of Jabal Shammar"
+ JBL_DEF:0 "the Emirate of Jabal Shammar"
+ JBL_ADJ:0 "Shammari"

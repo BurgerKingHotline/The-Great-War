@@ -2,6 +2,7 @@ ASH = "countries/AustriaHungary.txt"
 RUS = "countries/Russia.txt"
 OTT = "countries/Ottomans.txt"
 QIN = "countries/Qing.txt"
+JBL = "countries/Jabal Shammar.txt"
 #New Austrian Releasables#
 FIU = "countries/Fiume.txt"
 DAL = "countries/Dalmatia.txt"
