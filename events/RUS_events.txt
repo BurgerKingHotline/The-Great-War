@@ -493,7 +493,7 @@ country_event = { #finnish civil war
 		any_owned_state = { #checking if fin has at least 2 states
 			is_capital = no 
 		}
-		is_puppet = no
+		is_subject = no
 		has_civil_war = no
 		OR = {
 			RUS = {
@@ -508,9 +508,10 @@ country_event = { #finnish civil war
 	fire_only_once = yes
 
 	immediate = {
+		
 		start_civil_war = {
-			ruling_party = communism
-			ideology = ROOT
+			ruling_party = ROOT
+			ideology = communism
 			size = 0.3
 			capital = 111
 			states = { 
@@ -618,6 +619,33 @@ country_event = { #mass uprisings
 					limit = { NOT = { has_idea = neutrality_idea } }
 					add_ideas = neutrality_idea
 				}
+				division_template = {
+						name = "Finnish Infantry Division"
+						is_locked = no
+						priority = 0
+						template_counter = 0
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 1 y = 0 }
+						}
+					}
+					202 = {
+						create_unit = { 
+							division = "name = \"Infantry Division\" division_template = \"Ukranian Infantry Division\" start_experience_factor = 0.5" 
+							owner = UKR
+							prioritize_location = 525
+							allow_spawning_on_enemy_provs = no
+							count = 10
+						}
+					}
+					add_ai_strategy = {
+						type = prepare_for_war 
+						id = SOV
+						value = 1000
+					}
 			}
 			if = {
 				limit = {
@@ -825,6 +853,9 @@ country_event = { #collapse of russian control in europe
 				94 = {
 					transfer_state_to = UKR
 				}
+				940 = {
+					transfer_state_to = UKR
+				}
 				UKR = {
 					division_template = {
 						name = "Ukranian Infantry Division"
@@ -1021,6 +1052,9 @@ country_event = { #collapse of russian control in europe
 							drop_cosmetic_tag = yes
 							set_cosmetic_tag = ARM
 						}
+					}
+					else = {
+						release = geo
 					}
 				}
 				if = {

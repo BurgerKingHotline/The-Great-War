@@ -1421,7 +1421,7 @@
 
 	focus = {
 		id = RUS_matters_in_persia
-		icon = GFX_focus_GRE_an_orthodox_state
+		icon = GFX_generic_persia_focus
 		x = -7
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar
@@ -1450,7 +1450,7 @@
 
 	focus = {
 		id = RUS_influence_persian_politics
-		icon = GFX_focus_GRE_an_orthodox_state
+		icon = GFX_RUS_trolling_in_persia
 		x = 0
 		y = 1
 		relative_position_id = RUS_matters_in_persia
@@ -1491,7 +1491,7 @@
 
 	focus = {
 		id = RUS_help_build_german_rails
-		icon = GFX_focus_GRE_an_orthodox_state
+		icon = GFX_generic_build_railways
 		x = -1
 		y = 1
 		relative_position_id = RUS_influence_persian_politics
@@ -1517,7 +1517,7 @@
 
 	focus = {
 		id = RUS_invest_in_persia
-		icon = GFX_focus_GRE_an_orthodox_state
+		icon = GFX_RUS_invest_in_persia
 		x = 1
 		y = 1
 		relative_position_id = RUS_help_build_german_rails
@@ -2638,7 +2638,7 @@
 	focus = {
 		id = RUS_build_up_manchurian_rails
 		icon = GFX_focus_SOV_south_manchuria_railway
-		prerequisite = { focus = RUS_invest_in_industry }
+		prerequisite = { focus = RUS_finish_the_trans_siberian_railway }
 		x = 0
 		y = 2
 		relative_position_id = RUS_finish_the_trans_siberian_railway

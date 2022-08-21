@@ -4,4 +4,24 @@ spriteTypes = {
 		name = "GFX_generic_deal_germany"
 		texturefile = "gfx/interface/goals/GEN_deal_country_ger.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_generic_build_railways"
+		texturefile = "gfx/interface/goals/GEN_build_railways.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_generic_persia_focus"
+		texturefile = "gfx/interface/goals/GEN_persia_focus.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_invest_in_persia"
+		texturefile = "gfx/interface/goals/RUS_invest_in_persia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_trolling_in_persia"
+		texturefile = "gfx/interface/goals/RUS_trolling_in_persia_focus.dds"
+	}
 }
