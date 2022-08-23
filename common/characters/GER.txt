@@ -26,6 +26,15 @@ characters={
     		planning_skill = 8
     		logistics_skill = 4
 		}
+		advisor = {
+			slot = army_chief
+			idea_token = GER_erich_falkenhayn
+			available = {
+				NOT = {
+					has_idea = GER_helmuth_moltke
+				}
+			}
+		}
 	}
 	GER_august_mackensen={
 		name="August von Mackensen"
@@ -43,7 +52,7 @@ characters={
 		}
 	}
 	GER_helmuth_moltke={
-		name="Helmuth von Moltke"
+		name="Helmuth Moltke"
 		portraits={
 			civilian={
 				large=GFX_portrait_Mohammed_Zahir_Shah
@@ -56,9 +65,24 @@ characters={
     		planning_skill = 8
     		logistics_skill = 3
 		}
+		advisor = {
+			slot = army_chief
+			removal_cost = -1
+			idea_token = GER_helmuth_moltke
+			visible = {
+				NOT = {
+					has_completed_focus = GER_replace_moltke
+				}
+			}
+			available = {
+				NOT = {
+					has_idea = GER_erich_falkenhayn
+				}
+			}
+		}
 	}
 	GER_josias_heeringen={
-		name="Josias von Heeringen"
+		name="Josias Heeringen"
 		portraits={
 			civilian={
 				large=GFX_portrait_Mohammed_Zahir_Shah
@@ -135,6 +159,23 @@ characters={
     		defense_skill = 1
     		maneuvering_skill = 3
     		coordination_skill = 2
+		}
+	}
+	GER_erich_falkenhayn={
+		name="Erich Falkenhayn"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = GER_erich_falkenhayn
+			available = {
+				NOT = {
+					has_idea = GER_helmuth_moltke
+				}
+			}
 		}
 	}
 }

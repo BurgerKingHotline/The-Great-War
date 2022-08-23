@@ -682,6 +682,7 @@ country_event = {
 	picture = GFX_report_event_journalists_speech
 	
 	trigger = {
+		has_idea_with_trait = democratic_reformer
 		NOT = { 
 			has_government = democratic 
 			has_country_flag = democracy_opposition_formed 

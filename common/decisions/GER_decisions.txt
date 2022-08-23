@@ -468,3 +468,254 @@ septemberprogramm_decision_cat = {
 		}
 	}
 }
+ger_support_uprising_in_pol_cat = {
+	pol_nationalist_propaganda = {
+
+		icon = eng_propaganda_campaigns
+
+		highlight_states = {
+            highlight_state_targets = {
+				state = 938
+				state = 915
+				state = 98
+				state = 10
+				state = 90
+				state = 92
+				state = 87
+            }
+            highlight_color_while_active = 3
+        }
+
+		cancel_trigger = {
+			hidden_trigger = {
+				country_exists = POL
+			}
+		}
+		
+		visible = {
+			hidden_trigger = {
+				NOT = {
+					country_exists = POL
+				}
+			}
+		}
+		
+		fire_only_once = no
+		days_remove = 20
+
+		cost = 50
+
+		remove_effect = {
+			add_to_variable = {
+				var = POL.PolRevStrength
+				value = 10
+			}
+			clamp_variable = {
+				var = POL.PolRevStrength
+				min = 0
+				max = 100
+			}
+			custom_effect_tooltip = add_10_plrv
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+
+	pol_double_nationalist_propaganda = {
+
+		icon = decision_generic_nationalism
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_plrv_25_tt
+				check_variable = {
+					POL.PolRevStrength > 24
+				}
+			}
+		}
+		
+		highlight_states = {
+            highlight_state_targets = {
+				state = 938
+				state = 915
+				state = 98
+				state = 10
+				state = 90
+				state = 92
+				state = 87
+            }
+            highlight_color_while_active = 3
+        }
+
+		cancel_trigger = {
+			hidden_trigger = {
+				country_exists = POL
+			}
+		}
+		
+		visible = {
+			hidden_trigger = {
+				NOT = {
+					country_exists = POL
+				}
+			}
+		}
+		
+		fire_only_once = no
+		days_remove = 25
+
+		cost = 100
+
+		remove_effect = {
+			FROM = {
+				add_to_variable = {
+					var = POL.PolRevStrength
+					value = 15
+				}
+				clamp_variable = {
+					var = POL.PolRevStrength
+					min = 0
+					max = 100
+				}
+				custom_effect_tooltip = add_15_plrv
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+
+	pol_arm_nationalist_militants = {
+
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			hidden_trigger = {
+				NOT = {
+					country_exists = POL
+				}
+			}
+		}
+		
+		highlight_states = {
+            highlight_state_targets = {
+				state = 938
+				state = 915
+				state = 98
+				state = 10
+				state = 90
+				state = 92
+				state = 87
+            }
+            highlight_color_while_active = 3
+        }
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				country_exists = POL
+			}
+		}
+
+		fire_only_once = no
+		days_remove = 30
+
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+		custom_cost_text = decision_cost_ie_1000
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				add_to_variable = {
+					var = POL.PolRevStrength
+					value = 15
+				}
+				clamp_variable = {
+					var = POL.PolRevStrength
+					min = 0
+					max = 100
+				}
+			}
+			custom_effect_tooltip = add_15_plrv
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	pol_spark_revolution = {
+
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			hidden_trigger = {
+				NOT = {
+					country_exists = POL
+				}
+			}
+		}
+		
+		highlight_states = {
+            highlight_state_targets = {
+				state = 938
+				state = 915
+				state = 98
+				state = 10
+				state = 90
+				state = 92
+				state = 87
+            }
+            highlight_color_while_active = 3
+        }
+		
+		cancel_trigger = {
+			hidden_trigger = {
+				country_exists = POL
+			}
+		}
+
+		fire_only_once = yes
+
+		custom_cost_trigger = {
+			check_variable = {
+				POL.PolRevStrength > 99
+			}
+		}
+		custom_cost_text = decision_cost_prs_100
+		
+		complete_effect = {
+			POL = {
+				transfer_state = 10
+				transfer_state = 87
+				transfer_state = 90
+				transfer_state = 98
+				transfer_state = 92
+				declare_war_on = {
+				    target = RUS
+				    type = independence_wargoal 
+				}
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = poland_support_decisions_enable
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

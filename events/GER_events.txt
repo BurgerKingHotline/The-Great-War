@@ -1,0 +1,392 @@
+﻿add_namespace = german_events
+
+country_event = {
+	id = german_events.1 # tsar talks
+    title = german_events.1.t 
+    desc = german_events.1.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.1.a # we'll listen further
+		GER = {
+			country_event = {
+				id = german_events.2
+			}
+		}
+	}
+	option = {
+		name = german_events.1.a # fuck off
+		GER = {
+			country_event = {
+				id = german_events.3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = german_events.2 # tsar agrees
+    title = german_events.2.t 
+    desc = german_events.2.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.2.a # great
+		set_country_flag = rus_agrees_further
+	}
+}
+
+country_event = {
+	id = german_events.3 # tsar says fuck off
+    title = german_events.3.t 
+    desc = german_events.3.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.3.a # time to rethink this
+	}
+}
+
+country_event = {
+	id = german_events.4 # iran split 
+    title = german_events.4.t 
+    desc = german_events.4.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.4.a # we want to
+		GER = {
+			country_event = {
+				id = german_events.5
+			}
+		}
+	}
+	option = {
+		name = german_events.4.a # nahh
+		GER = {
+			country_event = {
+				id = german_events.6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = german_events.5 # tsar splits
+    title = german_events.5.t 
+    desc = german_events.5.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.5.a # okay yeah
+		puppet = PER
+		RUS = {
+			transfer_state = 419
+			transfer_state = 420
+			transfer_state = 832
+			transfer_state = 266
+			transfer_state = 416
+			transfer_state = 418
+		}
+	}
+}
+
+country_event = {
+	id = german_events.6 # iran not split
+    title = german_events.6.t 
+    desc = german_events.6.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.6.a # we'll do it ourselves
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = PER
+		}
+		RUS = {
+			country_event = {
+				id = german_events.7
+			}
+		}
+	}
+	option = {
+		name = german_events.6.a # too risky
+	}
+}
+
+country_event = {
+	id = german_events.7 # germany wars iran
+    title = german_events.7.t 
+    desc = german_events.7.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.7.a # let's start a fun ww1
+		give_guarantee = PER
+	}
+	option = {
+		name = german_events.7.a # germans be scary
+		add_stability = -0.1
+	}
+}
+
+country_event = {
+	id = german_events.8 # german reapproachment
+    title = german_events.8.t 
+    desc = german_events.8.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.8.a # we can hear them out
+		GER = {
+			country_event = {
+				id = german_events.9
+			}
+		}
+	}
+	option = {
+		name = german_events.8.a # never
+		GER = {
+			country_event = {
+				id = german_events.10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = german_events.9 # france loves us
+    title = german_events.9.t 
+    desc = german_events.9.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.9.a # kinda crazy but sure
+		set_country_flag = fra_friendship_ger
+	}
+}
+
+country_event = {
+	id = german_events.10 # france hates us
+    title = german_events.10.t 
+    desc = german_events.10.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.10.a # :(
+	}
+}
+
+country_event = {
+	id = german_events.11 # alsace agreement
+    title = german_events.11.t 
+    desc = german_events.11.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.11.a # keep it germany
+		GER = {
+			country_event = {
+				id = german_events.12
+			}
+		}
+	}
+	option = {
+		name = german_events.11.a # you get the puppet
+		GER = {
+			country_event = {
+				id = german_events.13
+			}
+		}
+	}
+	option = {
+		name = german_events.11.a # we want the puppet
+		GER = {
+			country_event = {
+				id = german_events.14
+			}
+		}
+	}
+	option = {
+		name = german_events.11.a # it's french
+		GER = {
+			country_event = {
+				id = german_events.16
+			}
+		}
+	}
+}
+
+country_event = {
+	id = german_events.12 # we keep it
+    title = german_events.12.t 
+    desc = german_events.12.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.12.a # exactly what we wanted
+		GER = {
+			country_event = {
+				id = german_events.17
+			}
+		}
+		FRA = {
+			country_event = {
+				id = german_events.17
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = german_events.13 # germany puppets alsace
+    title = german_events.13.t 
+    desc = german_events.13.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.13.a # they'll be back soon
+		GER = {
+			country_event = {
+				id = german_events.17
+			}
+		}
+		FRA = {
+			country_event = {
+				id = german_events.17
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = german_events.14 # france wants alsace puppet
+    title = german_events.14.t 
+    desc = german_events.14.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.14.a # if it means no war
+		GER = {
+			country_event = {
+				id = german_events.17
+			}
+		}
+		FRA = {
+			country_event = {
+				id = german_events.17
+			}
+		}
+	}
+	option = {
+		name = german_events.14.a # that's german
+	}
+}
+
+
+country_event = {
+	id = german_events.15 # france doesn't get it
+    title = german_events.15.t 
+    desc = german_events.15.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.15.a # the deal is off
+	}
+	option = {
+		name = german_events.15.a # they can get the puppet
+	}
+	option = {
+		name = german_events.15.a # they can keep the land
+	}
+}
+
+country_event = {
+	id = german_events.16 # france wants it all
+    title = german_events.16.t 
+    desc = german_events.16.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.16.a # we keep land
+	}
+	option = {
+		name = german_events.16.a # we get puppet
+	}
+	option = {
+		name = german_events.16.a # they can get the puppet
+	}
+	option = {
+		name = german_events.16.a # they can keep the land
+		GER = {
+			country_event = {
+				id = german_events.17
+			}
+		}
+		FRA = {
+			country_event = {
+				id = german_events.17
+			}
+		}
+	}
+}
+
+country_event = {
+	id = german_events.17 # deal works out
+    title = german_events.17.t 
+    desc = german_events.17.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.17.a # good good good
+	}
+}
+
+country_event = {
+	id = german_events.18 # deal falls flat
+    title = german_events.18.t 
+    desc = german_events.18.d 
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_events.18.a # crazy to think it would work
+	}
+}

@@ -199,3 +199,13 @@ septemberprogramm_decision_cat = {
 		has_country_flag = septemberprogramm_activated
 	}
 }
+ger_support_uprising_in_pol_cat = {
+	allowed = {
+		original_tag = GER
+	}
+	visible = {
+		has_country_flag = poland_support_decisions_enable
+	}
+	priority = 10
+	icon = GFX_decision_category_generic_propaganda
+}

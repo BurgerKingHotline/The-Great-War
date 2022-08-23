@@ -5,6 +5,9 @@ oob = "GENERIC_1910"
 
 recruit_character = GER_wilhelm_ii
 
+# government
+recruit_character = GER_erich_falkenhayn
+
 # navy 
 
 recruit_character = GER_albert_heinrich
@@ -21,6 +24,7 @@ recruit_character = GER_josias_heeringen
 
 add_ideas = {
 	ger_prussian_roots 
+	GER_helmuth_moltke
 }
 
 if = {

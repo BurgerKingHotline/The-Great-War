@@ -68,10 +68,39 @@
 		id = GER_south_border
 		icon = GFX_goal_generic_neutrality_focus
 		relative_position_id = GER_expand_political_sphere
+		mutually_exclusive = {
+			focus = GER_east_border
+		}
 		prerequisite = {
 			focus = GER_expand_political_sphere
 		}
 		x = -5
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+			add_political_power = 150
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_east_border
+		icon = GFX_goal_generic_neutrality_focus
+		relative_position_id = GER_expand_political_sphere
+		prerequisite = {
+			focus = GER_expand_political_sphere
+		}
+		mutually_exclusive = {
+			focus = GER_south_border
+		}
+		x = 5
 		y = 1
 		cost = 35
 		available_if_capitulated = yes
@@ -97,7 +126,7 @@
 		prerequisite = {
 			focus = GER_south_border
 		}
-		x = -2
+		x = -5
 		y = 1
 		cost = 35
 		available_if_capitulated = yes
@@ -111,6 +140,11 @@
 		}
 
 		completion_reward = {
+			diplomatic_relation = {
+			    country = ITA
+			    relation = guarantee
+			    active = no
+			}
 			ASH = {
 				add_opinion_modifier = {
 					target = GER
@@ -140,7 +174,7 @@
 			focus = GER_support_austria
 			focus = GER_support_italy
 		}
-		x = 1
+		x = 6
 		y = 1
 		cost = 35
 		available_if_capitulated = yes
@@ -172,7 +206,7 @@
 			focus = GER_support_austria
 			focus = GER_support_italy
 		}
-		x = 3
+		x = 8
 		y = 1
 		cost = 35
 		available_if_capitulated = yes
@@ -226,13 +260,14 @@
 		}
 		x = 0
 		y = 1
-		cost = 35
+		cost = 40
 		available_if_capitulated = yes
 
 		available = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = influence_require_bk_ger
 			every_country = {
 				limit = {
 					has_opinion = {
@@ -260,6 +295,29 @@
 		relative_position_id = GER_support_austria
 		prerequisite = {
 			focus = GER_support_austria
+			focus = GER_support_italy
+		}
+		x = 3
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = GER_army_diplomacy
+		icon = GFX_focus_POL_beck_ribbentrop
+		relative_position_id = GER_support_austria
+		prerequisite = {
+			focus = GER_support_austria
 		}
 		x = -1
 		y = 1
@@ -279,11 +337,11 @@
 	focus = {
 		id = GER_naval_escelation
 		icon = GFX_focus_generic_navy_battleship2
-		relative_position_id = GER_morrocco_interests
+		relative_position_id = GER_army_diplomacy
 		prerequisite = {
-			focus = GER_morrocco_interests
+			focus = GER_army_diplomacy
 		}
-		x = 1
+		x = 0
 		y = 2
 		cost = 70
 		available_if_capitulated = yes
@@ -305,7 +363,7 @@
 		prerequisite = {
 			focus = GER_morrocco_interests
 		}
-		x = -1
+		x = 1
 		y = 1
 		cost = 40
 		available_if_capitulated = yes
@@ -415,7 +473,7 @@
 		prerequisite = {
 			focus = GER_morrocco_interests
 		}
-		x = -3
+		x = -1
 		y = 1
 		cost = 40
 		available_if_capitulated = yes
@@ -447,7 +505,7 @@
 		prerequisite = {
 			focus = GER_south_border
 		}
-		x = 2
+		x = 5
 		y = 1
 		cost = 35
 		available_if_capitulated = yes
@@ -456,6 +514,11 @@
 		}
 
 		completion_reward = {
+			diplomatic_relation = {
+			    country = ASH
+			    relation = guarantee
+			    active = no
+			}
 			ITA = {
 				add_opinion_modifier = {
 					target = GER
@@ -545,6 +608,7 @@
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = ger_aus_integrate_unlock
 			set_country_flag = ger_integrate_aus_unlock
 		}
 
@@ -565,13 +629,22 @@
 		prerequisite = {
 			focus = GER_naval_escelation
 			focus = GER_unite_people
+			focus = GER_isolate_france
 		}
-		x = -3
-		y = 2
+		x = -6
+		y = 3
 		cost = 70
 		available_if_capitulated = yes
 
+		bypass = {
+			has_war_with = FRA
+		}
+
 		available = {
+			strength_ratio = {
+   				tag = FRA
+    			ratio > 1
+			}
 		}
 
 		completion_reward = {
@@ -715,6 +788,7 @@
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = septemberprogramm_unlock
 			set_country_flag = septemberprogramm_activated
 		}
 
@@ -769,21 +843,18 @@
 		available_if_capitulated = yes
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GER_improve_national_spirit_tooltip
-				OR = {
-					GER = { controls_state = 126 }
-					any_other_country = {
-						is_in_faction_with = GER
-						controls_state = 126
-					}
+			OR = {
+				GER = { controls_state = 126 }
+				any_other_country = {
+					is_in_faction_with = GER
+					controls_state = 126
 				}
-				OR = {
-					GER = { controls_state = 16 }
-					any_other_country = {
-						is_in_faction_with = GER
-						controls_state = 16
-					}
+			}
+			OR = {
+				GER = { controls_state = 16 }
+				any_other_country = {
+					is_in_faction_with = GER
+					controls_state = 16
 				}
 			}
 		}
@@ -834,6 +905,649 @@
 		x = 1
 		y = 1
 		cost = 45
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_support_poland
+		icon = GFX_focus_generic_polish_deal
+		relative_position_id = GER_east_border
+		mutually_exclusive = {
+			focus = GER_tsar_talks
+		}
+		prerequisite = {
+			focus = GER_east_border
+		}
+		x = -1
+		y = 1
+		cost = 70
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = poland_support_unlock
+			set_country_flag = poland_support_decisions_enable
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_tsar_talks
+		icon = GFX_focus_SOV_the_true_tsars
+		relative_position_id = GER_east_border
+		mutually_exclusive = {
+			focus = GER_support_poland
+		}
+		prerequisite = {
+			focus = GER_east_border
+		}
+		x = 1
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+			RUS = {
+				NOT = {
+					OR = {
+						has_completed_focus = RUS_accede_to_the_radicals
+						has_completed_focus = RUS_on_our_own
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			RUS = {
+				country_event = {
+					id = german_events.1
+				}
+			}
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_middle_east_influence
+		icon = GFX_generic_build_railways
+		relative_position_id = GER_support_poland
+		mutually_exclusive = {
+			focus = GER_iran_split
+		}
+		prerequisite = {
+			focus = GER_support_poland
+			focus = GER_tsar_talks
+		}
+		x = 0
+		y = 1
+		cost = 45
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = influence_require_me_ger
+			every_country = {
+				limit = {
+					has_opinion = {
+						target = GER
+						value > 50
+					}
+					OR = {
+						original_tag = PER
+						original_tag = JBL
+						original_tag = SAU
+						original_tag = OMA
+						original_tag = QAT
+						original_tag = KUW
+						original_tag = EGY
+					}
+				}
+				add_ideas = ger_influence_sphere
+			}
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_iran_split
+		icon = GFX_RUS_trolling_in_persia
+		relative_position_id = GER_tsar_talks
+		mutually_exclusive = {
+			focus = GER_middle_east_influence
+		}
+		prerequisite = {
+			focus = GER_tsar_talks
+		}
+		x = 0
+		y = 1
+		cost = 75
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = rus_agrees_further
+		}
+
+		completion_reward = {
+			RUS = {
+				country_event = {
+					id = german_events.4
+				}
+			}
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_dominate_europe
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = GER_middle_east_influence
+		mutually_exclusive = {
+			focus = GER_reapproach_france
+		}
+		prerequisite = {
+			focus = GER_middle_east_influence
+			focus = GER_iran_split
+		}
+		x = 0
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_reapproach_france
+		icon = GFX_focus_chi_reach_out_to_france
+		relative_position_id = GER_iran_split
+		mutually_exclusive = {
+			focus = GER_dominate_europe
+		}
+		prerequisite = {
+			focus = GER_iran_split
+			focus = GER_middle_east_influence
+		}
+		x = 0
+		y = 1
+		cost = 40
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = {
+					id = german_events.8
+				}
+			}
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_break_austria_ties
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		relative_position_id = GER_dominate_europe
+		prerequisite = {
+			focus = GER_dominate_europe
+			focus = GER_reapproach_france
+		}
+		mutually_exclusive = {
+			focus = GER_expand_central_powers
+		}
+		x = 0
+		y = 1
+		cost = 70
+		available_if_capitulated = yes
+
+		available = {
+			NOT = {
+				has_completed_focus = GER_support_poland
+			}
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_ally_russia
+		icon = GFX_goal_generic_dangerous_deal
+		relative_position_id = GER_break_austria_ties
+		prerequisite = {
+			focus = GER_break_austria_ties
+		}
+		x = -1
+		y = 1
+		cost = 50
+		available_if_capitulated = yes
+
+		available = {
+			has_completed_focus = GER_tsar_talks
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_expand_central_powers
+		icon = GFX_goal_generic_alliance
+		relative_position_id = GER_break_austria_ties
+		prerequisite = {
+			focus = GER_dominate_europe
+			focus = GER_reapproach_france
+		}
+		mutually_exclusive = {
+			focus = GER_break_austria_ties
+		}
+		x = 2
+		y = 0
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_isolate_france
+		icon = GFX_focus_generic_strike_at_democracy1
+		relative_position_id = GER_ally_russia
+		mutually_exclusive = {
+			focus = GER_alsace_lorraine_agreement
+		}
+		prerequisite = {
+			focus = GER_ally_russia
+		}
+		x = -1
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_alsace_lorraine_agreement
+		icon = GFX_goal_generic_major_alliance
+		relative_position_id = GER_ally_russia
+		mutually_exclusive = {
+			focus = GER_isolate_france
+		}
+		prerequisite = {
+			focus = GER_ally_russia
+		}
+		x = 1
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = fra_friendship_ger
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = {
+					id = german_events.11
+				}
+			}
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_world_dominance
+		icon = GFX_goal_generic_more_territorial_claims
+		relative_position_id = GER_alsace_lorraine_agreement
+		prerequisite = {
+			focus = GER_alsace_lorraine_agreement
+		}
+		x = 0
+		y = 1
+		cost = 40
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_carve_balkans
+		icon = GFX_focus_generic_balkans_focus
+		relative_position_id = GER_world_dominance
+		prerequisite = {
+			focus = GER_world_dominance
+		}
+		x = 0
+		y = 1
+		cost = 70
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_increased_army_autonomy
+		icon = GFX_focus_generic_military_mission
+		mutually_exclusive = {
+			focus = GER_contain_army
+		}
+		x = 25
+		y = 0
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_contain_army
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = GER_increased_army_autonomy
+		mutually_exclusive = {
+			focus = GER_increased_army_autonomy
+		}
+		x = 10
+		y = 0
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_supreme_army_command
+		icon = GFX_focus_generic_military_academy
+		relative_position_id = GER_increased_army_autonomy
+		prerequisite = {
+			focus = GER_increased_army_autonomy
+		}
+		x = -1
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_prepare_for_gw
+		icon = GFX_goal_generic_political_pressure
+		relative_position_id = GER_supreme_army_command
+		prerequisite = {
+			focus = GER_supreme_army_command
+		}
+		x = -2
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_1913_army_act
+		icon = GFX_focus_chi_army_reform
+		relative_position_id = GER_supreme_army_command
+		prerequisite = {
+			focus = GER_supreme_army_command
+		}
+		x = 0
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+			date > 1913.1.1
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_replace_moltke
+		icon = GFX_goal_generic_dangerous_deal
+		mutually_exclusive = {
+			focus = GER_one_front_war
+		} 
+		relative_position_id = GER_prepare_for_gw
+		prerequisite = {
+			focus = GER_prepare_for_gw
+		}
+		x = -1
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+			remove_ideas = GER_helmuth_moltke
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_one_front_war
+		icon = GFX_goal_generic_military_deal
+		mutually_exclusive = { focus = GER_replace_moltke}
+		relative_position_id = GER_prepare_for_gw
+		prerequisite = {
+			focus = GER_prepare_for_gw
+		}
+		x = 1
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				AND = {
+					has_war_with = FRA 
+					NOT = {
+						OR = {
+							has_war_with = RUS
+							has_war_with = SOV
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_war_with = RUS
+						has_war_with = SOV
+					}
+					NOT = {
+						has_war_with = FRA
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_combine_army_industry
+		icon = GFX_focus_generic_tank_production
+		relative_position_id = GER_increased_army_autonomy
+		prerequisite = {
+			focus = GER_increased_army_autonomy
+		}
+		x = 1
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_air_production
+		icon = GFX_goal_generic_air_production
+		relative_position_id = GER_increased_army_autonomy
+		x = 5
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_flexible_air_corps
+		icon = GFX_focus_generic_aircraft_production
+		relative_position_id = GER_combine_army_industry
+		prerequisite = {
+			focus = GER_combine_army_industry
+		}
+		prerequisite = {
+			focus = GER_air_production
+		}
+		x = 1
+		y = 1
+		cost = 35
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+		}
+	}
+	
+	focus = {
+		id = GER_maritime_aviation
+		icon = GFX_goal_generic_navy_carrier
+		relative_position_id = GER_air_production
+		prerequisite = {
+			focus = GER_air_production
+		}
+		x = -1
+		y = 1
+		cost = 35
 		available_if_capitulated = yes
 
 		available = {
