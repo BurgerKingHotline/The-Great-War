@@ -55,6 +55,16 @@
  SZE_release_szeky_land:0 "Release Székely Land"
  FRA_release_france:0 "Release France"
  DAL_release_dalmatia:0 "Release Dalmatia"
+ WAL_release_wallonia:0 "Release Wallonia"
+ FLA_release_flanders:0 "Release Flanders"
+ PIE_release_piedmont:0 "Release Piedmont"
+ PIE_release_kingdom_piedmont_sardinia:0 "Release Piedmont-Sardinia"
+ SIC_release_sicily:0 "Release Sicily"
+ VNC_release_venice:0 "Release Venice"
+ TSC_release_tuscany:0 "Release Tuscany"
+ VNC_release_lombardy_venetia:0 "Release Lombardy-Venetia"
+ PAP_release_central_italy:0 "Release Central Italy"
+ ITA_release_italy:0 "Release Italy"
 
  faction_expansion_decisions:0 "Alliance Expansion"
  faction_expansion_decisions_desc:0 "With the growing tensions in the world, we must make sure we have allies to support us in case conflict breaks out.

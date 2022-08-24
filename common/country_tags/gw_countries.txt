@@ -20,3 +20,12 @@ PRV = "countries/Provence.txt"
 PRS = "countries/Paris.txt"
 BRX = "countries/Bordeaux.txt"
 BRG = "countries/Bordeaux.txt"
+#belgian releasables
+FLA = "countries/Flanders.txt"
+WAL = "countries/Wallonia.txt"
+#italian releasables
+PIE = "countries/Piedmont.txt"
+SIC = "countries/Sicily.txt"
+VNC = "countries/Venice.txt"
+TSC = "countries/Tuscany.txt"
+PAP = "countries/Pope.txt"

@@ -1,0 +1,65 @@
+#	Example:
+#
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+#
+#pan-nationalist triggers
+
+is_french_nation = {
+	custom_trigger_tooltip = {
+		tooltip = is_french_nation_tooltip
+		OR = {
+			original_tag = FRA
+			original_tag = PRS
+			original_tag = BRI
+			original_tag = OCC
+			original_tag = BRG
+			original_tag = BRX
+			original_tag = ALS
+			original_tag = WAL
+		}
+	}
+}
+
+is_german_nation = {
+	custom_trigger_tooltip = {
+		tooltip = is_german_nation_tooltip
+		OR = {
+			original_tag = HES
+			original_tag = RHI
+			original_tag = WUR
+			original_tag = BAY
+			original_tag = WGR
+			original_tag = DDR
+			original_tag = GER
+			original_tag = SHL
+			original_tag = PRE
+			original_tag = SIL
+			original_tag = AUS
+			original_tag = HAN
+		}
+	}
+}
+
+is_italian_nation = {
+	custom_trigger_tooltip = {
+		tooltip = is_italian_nation_tooltip
+		OR = {
+			original_tag = ITA
+			original_tag = VNC
+			original_tag = TSC
+			original_tag = PIE
+			original_tag = PAP
+			original_tag = SIC
+		}
+	}
+}

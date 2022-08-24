@@ -1330,3 +1330,15 @@
 
  LON_mandate_generic:0 "Mandate of $NONIDEOLOGY$"
  LON_mandate_generic_DEF:0 "the Mandate of $NONIDEOLOGY$"
+
+ piedmont_sardinia:0 "Piedmont-Sardinia"
+ piedmont_sardinia_DEF:0 "Piedmont-Sardinia"
+ piedmont_sardinia_ADJ:0 "Piedmontese-Sardinian"
+ piedmont_sardinia_neutrality:0 "Kingdom of Piedmont-Sardinia"
+ piedmont_sardinia_neutrality_DEF:0 "the Kingdom of Piedmont-Sardinia"
+
+ lombardy_venetia:0 "Lombardy-Venetia"
+ lombardy_venetia_DEF:0 "Lombardy-Venetia"
+ lombardy_venetia_ADJ:0 "Lombardian-Venetian"
+ lombardy_venetia_neutrality:0 "Kingdom of Lombardy-Venetia"
+ lombardy_venetia_neutrality_DEF:0 "the Kingdom of Lombardy-Venetia"

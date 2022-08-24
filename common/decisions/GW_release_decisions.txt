@@ -3916,4 +3916,703 @@ puppet_state_creation_category = {
 
 	}
 
+	#belgium
+
+	FLA_release_flanders = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 6
+			6 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			6 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			FLA = {
+				add_state_core = 6
+				if = {
+					limit = {
+						6 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 6
+				}
+			}
+			hidden_effect = {
+				FLA = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	WAL_release_wallonia = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 34
+			34 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			34 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			WAL = {
+				add_state_core = 34
+				add_state_core = 937
+				if = {
+					limit = {
+						34 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 34
+				}
+				if = {
+					limit = {
+						937 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 937
+				}
+			}
+			hidden_effect = {
+				WAL = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	#italy
+
+	PIE_release_piedmont = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 158
+			158 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			158 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			PIE = {
+				add_state_core = 158
+				add_state_core = 735
+				if = {
+					limit = {
+						158 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 158
+				}
+				if = {
+					limit = {
+						735 = { OWNER = { OR = { tag = ROOT is_in_faction_with = ROOT } } NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 735
+				}
+			}
+			hidden_effect = {
+				PIE = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	PIE_release_kingdom_piedmont_sardinia = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 158
+			158 = {
+				NOT = { is_core_of = OWNER }
+			}
+			owns_state = 114
+			114 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			158 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			114 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			159 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			PIE = {
+				set_cosmetic_tag = piedmont_sardinia
+				add_state_core = 158
+				add_state_core = 114
+				add_state_core = 159
+				add_state_core = 735
+				if = {
+					limit = {
+						158 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 158
+				}
+				if = {
+					limit = {
+						114 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 114
+				}
+				if = {
+					limit = {
+						159 = { OWNER = { OR = { tag = ROOT is_in_faction_with = ROOT } } NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 159
+				}
+				if = {
+					limit = {
+						735 = { OWNER = { OR = { tag = ROOT is_in_faction_with = ROOT } } NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 735
+				}
+			}
+			hidden_effect = {
+				PIE = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	SIC_release_sicily = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			OR = {
+				AND = {
+					owns_state = 117
+					117 = {
+						NOT = { is_core_of = OWNER }
+					}
+				}
+				AND = {
+					owns_state = 115
+					115 = {
+						NOT = { is_core_of = OWNER }
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			117 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			115 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			156 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			SIC = {
+				add_state_core = 115
+				add_state_core = 117
+				add_state_core = 156
+				if = {
+					limit = {
+						115 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 115
+				}
+				if = {
+					limit = {
+						117 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 117
+				}
+				if = {
+					limit = {
+						156 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 156
+				}
+			}
+			hidden_effect = {
+				SIC = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	VNC_release_venice = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 160
+			160 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			160 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			VNC = {
+				add_state_core = 160
+				if = {
+					limit = {
+						160 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 160
+				}
+			}
+			hidden_effect = {
+				VNC = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	VNC_release_lombardy_venetia = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 160
+			160 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			160 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			159 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			VNC = {
+				set_cosmetic_tag = lombardy_venetia
+				add_state_core = 160
+				add_state_core = 159
+				if = {
+					limit = {
+						160 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 160
+				}
+				if = {
+					limit = {
+						150 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 159
+				}
+			}
+			hidden_effect = {
+				VNC = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	TSC_release_tuscany = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 162
+			162 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			162 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			TSC = {
+				add_state_core = 162
+				add_state_core = 161
+				if = {
+					limit = {
+						162 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 162
+				}
+				if = {
+					limit = {
+						161 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 161
+				}
+			}
+			hidden_effect = {
+				TSC = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	PAP_release_central_italy = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 2
+			2 = {
+				NOT = { is_core_of = OWNER }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			2 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+			157 = {
+				NOT = { is_claimed_by = OWNER }
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			PAP = {
+				add_state_core = 2
+				add_state_core = 157
+				add_state_core = 161
+				if = {
+					limit = {
+						2 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 2
+				}
+				if = {
+					limit = {
+						157 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 157
+				}
+				if = {
+					limit = {
+						ROOT = { owns_state = 162 }
+						162 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 162
+					add_state_core = 162
+				}
+				if = {
+					limit = {
+						ROOT = { owns_state = 161 }
+						161 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 161
+					add_state_core = 161
+				}
+			}
+			hidden_effect = {
+				PAP = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
+	ITA_release_italy = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			owns_state = 2
+			2 = {
+				NOT = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+			}
+			OCC = { exists = no }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war = no
+			owns_state = 2
+			ITA = { exists = no }
+		}
+
+		complete_effect = {
+			effect_tooltip = {
+				release = ITA
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_owned_by = ROOT
+						is_core_of = ITA
+						NOT = {
+							OR = { is_core_of = OWNER is_claimed_by = ROOT }
+						}
+					}
+					ITA = {
+						transfer_state = PREV
+					}
+				}
+				ITA = {
+					country_event = decisions.4
+				}
+			}
+		}
+
+	}
+
 }
