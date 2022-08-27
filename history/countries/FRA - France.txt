@@ -58,15 +58,16 @@ recruit_character = FRA_jules_meline
 
 recruit_character = FRA_joseph_paul_boncour
 recruit_character = FRA_adolphe_messimy
+recruit_character = FRA_etienne_clementel
 recruit_character = FRA_maurice_pujo
 recruit_character = FRA_maxime_real_del_sarte
 recruit_character = FRA_leon_daudet
 recruit_character = FRA_justin_de_selves
 recruit_character = FRA_georges_sorel
+recruit_character = FRA_louis_renault
 
 recruit_character = FRA_joseph_gallieni
 recruit_character = FRA_victor_constant_michel
-recruit_character = FRA_philippe_petain
 recruit_character = FRA_charles_lanrezac
 recruit_character = FRA_joseph_joffre
 recruit_character = FRA_ferdinand_foch
@@ -75,6 +76,7 @@ recruit_character = FRA_louis_franchet_desperey
 recruit_character = FRA_joseph_gauderique_aymerich
 recruit_character = FRA_charles_mangin
 recruit_character = FRA_augustin_dubail
+recruit_character = FRA_philippe_petain
 
 # Starting tech
 set_technology = {

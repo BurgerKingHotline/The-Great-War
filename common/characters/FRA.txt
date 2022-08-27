@@ -190,7 +190,14 @@ characters={
 				large=GFX_portrait_Mohammed_Zahir_Shah
 			}
 		}
-		#will be promoted during ww1
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=1
+			legacy_id=-1
+		}
 	}
 	FRA_charles_lanrezac={
 		name="Charles Lanrezac"
@@ -201,7 +208,7 @@ characters={
 		}
 		corps_commander={
 			skill=3
-			attack_skill=3
+			attack_skill=4
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
@@ -474,6 +481,35 @@ characters={
 			}
 		}
 	}
+	FRA_etienne_clementel={
+		name="Étienne Clémentel"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_etienne_clementel
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				has_government = democratic
+				has_completed_focus = FRA_bring_in_advisors
+			}
+			traits = {
+				lieutenant_of_industry
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 	FRA_maurice_pujo={
 		name="Maurice Pujo"
 		portraits={
@@ -560,7 +596,37 @@ characters={
 			}
 		}
 	}
-
+	FRA_louis_renault={
+		name="Louis Renault"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_louis_renault
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+				has_completed_focus = FRA_bring_in_advisors
+			}
+			traits = {
+				industrialist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 	FRA_georges_sorel={
 		name="Georges Sorel"
 		portraits={

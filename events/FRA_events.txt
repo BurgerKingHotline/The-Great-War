@@ -670,6 +670,91 @@ country_event = {
 	}
 }
 
+country_event = { #combine the entente and balkan league?
+	id = french_events.22
+	title = french_events.22.t	
+	desc = french_events.22.d	
+
+	is_triggered_only = yes
+	
+	option = { #More allies is good
+		name = french_events.22.a
+		every_country = {
+			limit = { is_in_faction_with = ROOT }
+			add_ai_strategy = {
+				id = FRA
+				type = alliance
+				value = 100
+			}
+			FRA = {
+				add_to_faction = PREV
+				effect_tooltip = {
+					news_event = { id = french_events.23 hours = 12 }
+				}
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = FRA
+						has_war_with = OTT
+						has_war_with = FRA
+					}
+				}
+				news_event = { id = french_events.23 hours = 8 }
+			}
+		}
+	}
+	option = { #nah
+		name = french_events.22.b
+		FRA = {
+			country_event = { id = french_events.24 hours = 3 }
+		}
+	}
+}
+
+news_event = { #cosolidation of balkan league and entente
+	id = french_events.23
+	title = french_events.23.t	
+	desc = french_events.23.d	
+
+	is_triggered_only = yes
+	
+	option = { #More allies is good
+		name = french_events.22.a
+		trigger = {
+			OR = {
+				is_in_faction_with = FRA
+				has_war_with = OTT
+			}
+		}
+	}
+	option = { #meddling in the balkans is always dangerous
+		name = french_events.23.b
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = FRA
+					has_war_with = OTT
+				}
+			}
+		}
+	}
+}
+
+news_event = { #FROM refuses to consolidate our alliance
+	id = french_events.24
+	title = french_events.24.t	
+	desc = french_events.24.d	
+
+	is_triggered_only = yes
+	
+	option = { #dang
+		name = french_events.24.a
+	}
+}
+
 add_namespace = morocco
 
 country_event = { #ruh roh raggy, re got a reberrion

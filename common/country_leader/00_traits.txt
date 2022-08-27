@@ -2671,6 +2671,13 @@ leader_traits = {
 		consumer_goods_factor = -0.05
 	}
 
+	industrialist = {
+		random = no
+		sprite = 13
+		industrial_capacity_factory = 0.05
+		production_speed_buildings_factor = 0.1
+	}
+
 	### IDEA TRAITS ###
 	
 	# drift is a percent applied weekly

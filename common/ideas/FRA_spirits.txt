@@ -79,6 +79,31 @@ ideas = {
 			}
 		}
 
+		FRA_private_investments = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			cancel = {
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+
 		FRA_leftist_coalition = {
 			
 			allowed = {
@@ -315,6 +340,32 @@ ideas = {
 				production_speed_bunker_factor = 0.1
 				mobilization_speed = 0.1
 			}
+		}
+
+	}
+
+	tank_manufacturer = {
+
+		FRA_renault = {
+		
+			picture = generic_tank_manufacturer_2
+
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+
+			traits = { fast_tank_manufacturer }
 		}
 
 	}
