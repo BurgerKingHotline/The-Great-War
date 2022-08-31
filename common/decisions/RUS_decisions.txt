@@ -294,6 +294,10 @@ economy_decisions = {
 		icon = generic_form_nation
 
 		allowed = { tag = RUS }
+
+		activation = {
+			always = no
+		}
 		available = {
 			has_railway_connection = {
 				start_state = 566
@@ -327,6 +331,9 @@ economy_decisions = {
 			}
 		}
 
+		activation = {
+			always = no
+		}
 		allowed = {
 			original_tag = RUS
 		}
@@ -383,6 +390,9 @@ economy_decisions = {
 		icon = generic_form_nation
 
 		allowed = { tag = RUS }
+		activation = {
+			always = no
+		}
 		available = {
 			has_railway_connection = {
 				start_state = 563
@@ -418,6 +428,9 @@ economy_decisions = {
 
 		allowed = {
 			original_tag = RUS
+		}
+		activation = {
+			always = no
 		}
 
 		is_good = yes

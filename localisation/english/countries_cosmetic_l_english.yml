@@ -190,6 +190,8 @@
  CZECHOSLOVAK_fascism_DEF:0 "the Bohemian Empire"
  CZECHOSLOVAK_communism:0 "Czech People's Republic"
  CZECHOSLOVAK_communism_DEF:0 "the Czech People's Republic"
+ CZECHOSLOVAK_neutrality:0 "Czechoslovak Republic"
+ CZECHOSLOVAK_neutrality_DEF:0 "the Czechoslovak Republic"
  HUN_EMPIRE_neutrality:0 "Austria-Hungary"
  HUN_EMPIRE_fascism:0 "Austro-Hungarian Empire"
  HUN_EMPIRE_democratic:0 "Danubian Confederation"
