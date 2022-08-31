@@ -20,6 +20,7 @@ state={
 				naval_base = 5
 			}
 		}
+		#For resistence, later on when/if hejaz is added remove this
 		add_core_of = SAU
 	}
 

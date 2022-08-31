@@ -9,6 +9,7 @@ state={
 	history={
 		owner = JBL
 		add_core_of = JBL
+		add_claim_by = SAU
 	}
 
 
