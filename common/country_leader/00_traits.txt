@@ -518,7 +518,7 @@ leader_traits = {
 
 	permanent_revolutionary = {
 		random = no
-		political_power_factor = -0.15
+		political_power_factor = -0.05
 		justify_war_goal_time = 0.15
 		subversive_activites_upkeep = -0.3
 		max_command_power = 30

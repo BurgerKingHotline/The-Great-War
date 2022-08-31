@@ -1383,7 +1383,29 @@ DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
 			tooltip = RUS_CIVIL_WAR_FACTION
 			always = no
 		}
+	}
+	else = {
 		hidden_trigger = {
+			always = yes
+		}
+	}
+}
+
+DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			FROM = {
+				OR = {
+					original_tag = RUS
+					is_in_faction_with = RUS
+					original_tag = SOV
+					is_in_faction_with = SOV
+				}
+			}
+			has_global_flag = Russian_civil_war_flag
+		}
+		custom_trigger_tooltip = {
+			tooltip = RUS_CIVIL_WAR_FACTION
 			always = no
 		}
 	}

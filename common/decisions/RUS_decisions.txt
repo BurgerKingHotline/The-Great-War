@@ -301,10 +301,6 @@ economy_decisions = {
 			}
 		}
 
-		activation = {
-			has_completed_focus = RUS_finish_the_trans_siberian_railway
-		}
-
 		is_good = yes
 		fire_only_once = yes
 		selectable_mission = no
@@ -329,10 +325,6 @@ economy_decisions = {
 				is_ai = yes
 				is_debug = yes
 			}
-		}
-
-		activation = {
-			has_completed_focus = RUS_finish_the_trans_siberian_railway
 		}
 
 		allowed = {
@@ -398,10 +390,6 @@ economy_decisions = {
 			}
 		}
 
-		activation = {
-			has_completed_focus = RUS_finish_the_trans_siberian_railway
-		}
-
 		is_good = yes
 		fire_only_once = yes
 		selectable_mission = no
@@ -425,27 +413,6 @@ economy_decisions = {
 			OR = { #wouldve liked to use allowed, but since theres a debug console command...
 				is_ai = yes
 				is_debug = yes
-			}
-		}
-
-		activation = {
-			has_completed_focus = RUS_build_up_manchurian_rails
-			has_country_flag = RUS_able_to_build_man
-			761 = {
-				OR = {
-					is_controlled_by = ROOT
-					owner = {
-						gives_military_access_to = ROOT
-					}
-				}
-			}
-			714 = {
-				OR = {
-					is_controlled_by = ROOT
-					owner = {
-						gives_military_access_to = ROOT
-					}
-				}
 			}
 		}
 
@@ -865,6 +832,152 @@ SOV_form_ssrs = {
 				}
 			}
 		}
+		
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+
+SOV_peoples_militias = {
+	SOV_spawn_militias = {
+		icon = generic_civil_support
+
+		visible = {
+			has_global_flag = Russian_civil_war_flag
+			FROM = {
+				NOT = {
+					has_state_flag = RUS_state_militia_spawned
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+			}
+		}
+
+		state_target = yes
+
+		available = {
+			
+        }
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+
+		complete_effect = {
+			hidden_effect = {
+				set_variable = {
+					var = FROM.RUS_divisions_spawned_amount
+					value = 0
+				}
+				FROM = {
+					create_unit = {
+						division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+						owner = SOV
+					} 
+					FROM = {
+						add_to_variable = { RUS_divisions_spawned_amount = 1 } 
+					}
+					if = {
+						limit = {
+							any_neighbor_state = {
+								controller = {
+									has_war_with = SOV
+								}
+							}
+						}
+						create_unit = {
+							division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+							owner = SOV
+						} 
+						add_to_variable = { RUS_divisions_spawned_amount = 1 } 
+					}
+					if = {
+						limit = {
+							state_strategic_value > 15
+						}
+						create_unit = {
+							division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+							owner = SOV
+						} 
+						add_to_variable = { RUS_divisions_spawned_amount = 1 } 
+					}
+					if = {
+						limit = {
+							state_strategic_value > 25
+						}
+						create_unit = {
+							division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+							owner = SOV
+						} 
+						add_to_variable = { RUS_divisions_spawned_amount = 1 } 
+					}
+					if = {
+						limit = {
+							OR = {
+								state = 219
+								state = 195
+							}
+						}
+						create_unit = {
+							division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+							owner = SOV
+						}
+						create_unit = {
+							division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+							owner = SOV
+						} 
+						create_unit = {
+							division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+							owner = SOV
+						} 
+						create_unit = {
+							division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+							owner = SOV
+						} 
+						add_to_variable = { RUS_divisions_spawned_amount = 4 }
+					}
+					random_list = {
+						1 = {
+
+						}
+						1 = {
+							create_unit = {
+								division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+								owner = SOV
+							} 
+							FROM = {
+								add_to_variable = { RUS_divisions_spawned_amount = 1 } 
+							}
+						}
+						1 = {
+							create_unit = {
+								division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+								owner = SOV
+							} 
+							create_unit = {
+								division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
+								owner = SOV
+							} 
+							add_to_variable = { RUS_divisions_spawned_amount = 2 } 
+							modifier = {
+								factor = 0
+								state_strategic_value < 5
+							}
+						}
+					}
+					set_state_flag = RUS_state_militia_spawned
+				}
+			}
+			custom_effect_tooltip = RUS_amount_of_militia_spawned_tt
+		}
+
+		fixed_random_seed = no
 		
 		ai_will_do = {
 			factor = 1000

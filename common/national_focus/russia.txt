@@ -107,6 +107,7 @@
 				ideology = communism
 				popularity = 0.05
 			}
+			set_country_flag = RUS_no_more_commie_radical
 		}
 
 		ai_will_do = {
@@ -225,12 +226,11 @@
 				ideology = communism
 				popularity = 0.05
 			}
-			add_to_variable = {
+			add_to_variable = { #doesnt really do anything, just for show
 				var = RUS_socialist_radicalisation
 				value = 10
 				tooltip = RUS_socialist_radicalisation_increase
 			}
-			set_country_flag = RUS_no_more_commie_radical
 		}
 
 		ai_will_do = {
@@ -1238,6 +1238,7 @@
 
 		completion_reward = {
 			add_political_power = 50
+			add_war_support = 0.05
 			if = {
 				limit = {
 					is_in_faction = yes
@@ -1373,12 +1374,14 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
 			add_stability = 0.05
 			add_war_support = 0.05
 			give_guarantee = SER
 			give_guarantee = ROM
 			give_guarantee = MNT
+			give_guarantee = GRE
+			give_guarantee = ALB
 		}
 
 		ai_will_do = {
@@ -2585,6 +2588,66 @@
 	}
 
 	focus = {
+		id = RUS_force_the_workers
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_support_the_military}
+		mutually_exclusive = { focus = RUS_increased_social_security }
+		x = -1
+		y = 1
+		relative_position_id = RUS_support_the_military
+		cost = 70
+
+		completion_reward = {
+			RUS_industrialisation_up = yes
+		}
+	}
+
+	focus = {
+		id = RUS_limit_worker_protections
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_force_the_workers focus = RUS_increased_social_security}
+		mutually_exclusive = { focus = RUS_strengthen_worker_protections }
+		x = 0
+		y = 1
+		relative_position_id = RUS_force_the_workers
+		cost = 70
+
+		completion_reward = {
+			RUS_industrialisation_up = yes
+		}
+	}
+
+	focus = {
+		id = RUS_increased_social_security
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_support_the_military }
+		mutually_exclusive = { focus = RUS_force_the_workers }
+		x = 1
+		y = 1
+		relative_position_id = RUS_support_the_military
+		cost = 70
+
+		completion_reward = {
+			RUS_industrialisation_down = yes
+		}
+	}
+
+	focus = {
+		id = RUS_strengthen_worker_protections
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = RUS_force_the_workers focus = RUS_increased_social_security}
+		mutually_exclusive = { focus = RUS_limit_worker_protections }
+		x = 0
+		y = 1
+		relative_position_id = RUS_increased_social_security
+		cost = 70
+
+		completion_reward = {
+			RUS_industrialisation_down = yes
+		}
+	}
+
+	focus = {
 		id = RUS_finish_the_trans_siberian_railway
 		icon = GFX_focus_SOV_reinforce_eastern_naval_bases #TEMP GOAL
 		prerequisite = { focus = RUS_invest_in_industry }
@@ -2628,6 +2691,9 @@
 
 			activate_decision = RUS_finish_the_trans_siberian_railway_dec
 			custom_effect_tooltip = if_mission_completed
+			hidden_effect = {
+				activate_decision = RUS_ai_build_siberian_railway
+			}
 			effect_tooltip = {
 				add_political_power = 50
 				add_stability = 0.05
@@ -2786,9 +2852,14 @@
 			
 			add_political_power = 50
 
+			activate_decision = RUS_finish_the_trans_siberian_railway_man_dec
+			custom_effect_tooltip = if_mission_completed
+
+			hidden_effect = {
+				activate_decision = RUS_ai_build_siberian_railway_in_man
+			}
+
 			effect_tooltip = {
-				activate_decision = RUS_finish_the_trans_siberian_railway_man_dec
-				custom_effect_tooltip = if_mission_completed
 				add_political_power = 100
 				add_war_support = 0.05
 			}
@@ -2892,7 +2963,7 @@
 
 	focus = {
 		id = RUS_mend_the_railways
-		icon = GFX_goal_generic_construct_infrastructure #TEMP GOAL
+		icon = GFX_generic_build_railways
 		prerequisite = { focus = RUS_invest_in_infrastructure }
 		x = 0
 		y = 2

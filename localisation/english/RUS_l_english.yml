@@ -1,5 +1,14 @@
 ﻿l_english:
- 
+
+ #Focus 
+ RUS_meeting_with_the_germans:0 "Meeting With The Germans"
+
+ RUS_menshevik_division_spawns:0 "Menshevik divisions will be spawned when the civil war starts!"
+ RUS_bolshevik_division_spawns:0 "Bolshevik divisions will be spawned when the civil war starts!"
+ RUS_trudovik_path_will_be_locked:0 "§RThe Trudovik path in the Soviet tree will be locked!§!"
+ RUS_increase_divisions_when_civil_war:0 "More divisions will be spawned when the civil war starts!"
+ RUS_when_civil_war_starts:0 "When the Russian civil war starts:"
+
  #DECISIONS
  russian_socialism_decisions:0 "Socialist Agitation"
  russian_socialism_decisions_desc:0 "The [RUS.GetNameDef] has had a history of dealing with revolutionaries who try to destroy our great empire! The most radical of these groups are the socialists, who are a fringe group supporting the works of Marx, a german philosopher. We must keep tabs on them to make sure they don't overthrow the government. \n\n§RIf the popularity of the socialists exceeds 50% and the radicalism exceeds 80% then they may start a revolution!§!\n\nSocialist Popularity = [?party_popularity_100@communism|Y]%\nSocialist Radicalism = [?RUS_socialist_radicalisation|Y]\n"
@@ -7,7 +16,26 @@
  RUS_raid_marxist_printing_houses:0 "Raid Marxist Printing Houses"
  RUS_give_trade_unions_liberty:0 "Give Liberty to the Trade Unions"
 
+ RUS_tsarist_intervention_decisions:0 "Tsarist Intervention"
+ RUS_intervene_in_the_economy:0 "Intervention in the Economy"
+ RUS_intervene_in_the_military:0 "Intervention in the Military"
+ RUS_intervene_in_national_security:0 "Intervention in National Security"
+ RUS_intervene_in_foreign_policy:0 "Intervention in Foreign Policy"
+
+ RUS_finish_the_trans_siberian_railway_dec:0 "Finish the Trans-Siberian railway"
+ RUS_finish_the_trans_siberian_railway_man_dec:0 "Finish the Trans-Siberian railway in Manchuria"
+
+ SOV_form_ssrs:0 "Formulate Sister Soviet Socialist Republics"
+ SOV_form_ssrs_desc:0 "Although we may have secured the revolution in Russia, we have to secure it elsewhere throughout the old collapsing tsarist regime. For the glory of the Revolution!"
+ SOV_form_transcaucasia_ssr:0 "Form the Transcaucasian Soviet Socialist Republic"
+ SOV_form_fer_ssr:0 "Form the Far Eastern Soviet Socialist Republic"
+ SOV_give_vladivostok_ssr:0 "Give Vladivostok to the Far Easten Soviet Socialist Republic"
+
+ SOV_peoples_militias:0 "Raise Militias"
+ SOV_spawn_militias:0 "Raise Militias in [FROM.GetName]"
+ RUS_amount_of_militia_spawned_tt:0 "§G[?FROM.RUS_divisions_spawned_amount]§! divisions will be spawned in this state!"
+ 
  #OTHER
  autonomy_soviet_republic:0 "Soviet Socialist Republic"
- RUS_CIVIL_WAR_FACTION:0 "§RRussia can NOT invite others to their faction during the Russian Civil War!§!"
+ RUS_CIVIL_WAR_FACTION:0 "§ROther countries cannot join this faction during the Russian Civil War!§!"
 

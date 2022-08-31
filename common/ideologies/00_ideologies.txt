@@ -74,13 +74,14 @@ ideologies = {
 			leninism = {
 			}
 			
-			stalinism = {
+			syndicalism = {
 			}
 			
 			anti_revisionism = {
 			}
 			
 			anarchist_communism = {
+				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
 			}
 		}
 		

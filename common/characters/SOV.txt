@@ -1,0 +1,75 @@
+characters={
+	SOV_vladimir_lenin={
+		name="Vladimir Lenin"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=leninism
+			traits = { leader_of_the_revolution veteran_communist cornered_fox}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SOV_trotsky={
+		name="Leon Trotsky"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=marxism
+			traits = { permanent_revolutionary veteran_communist red_army_organizer}
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SOV_trotsky
+			traits = { army_chief_offensive_2 }
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = SOV_stalin
+						ruling_only = yes
+					}
+				}
+			}
+		}
+	}
+
+	SOV_stalin={
+		name="Joseph Stalin"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=leninism
+			traits = { paranoid_dictator veteran_communist political_mastermind }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_stalin
+			traits = { propaganda_expert silent_workhorse}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = SOV_stalin
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = SOV_trotsky
+						ruling_only = yes
+					}
+				}
+			}
+		}
+	}
+}

@@ -114,7 +114,7 @@ create_country_leader = {
     desc = ""
 	picture = GFX_portrait_Panteleimon_Ponomarenko
     expire = "1965.1.1"
-    ideology = stalinism
+    ideology = leninism
     traits = {
         #
     }

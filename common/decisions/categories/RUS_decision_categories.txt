@@ -1,0 +1,61 @@
+russian_socialism_decisions = {
+	priority = 1000
+	visible_when_empty = yes
+	allowed = {
+		tag = RUS
+	}
+	visible = {
+		NOT = {
+			has_government = communism
+			has_country_flag = RUS_no_more_commie_radical
+		}
+	}
+}
+
+RUS_tsarist_intervention_decisions = {
+	priority = 1000
+	visible_when_empty = yes
+	allowed = {
+		tag = RUS
+	}
+	visible = {
+		has_completed_focus = RUS_tsarist_national_intervension
+	}
+}
+
+RUS_crusade_against_communism_decisions = {
+	visible_when_empty = yes
+	allowed = {
+		tag = RUS
+	}
+	visible = {
+		NOT = {
+			has_government = Communism
+		}
+		has_completed_focus = RUS_crusade_against_communism
+	}
+}
+
+SOV_form_ssrs = {
+	visible_when_empty = no
+	allowed = {
+		tag = SOV
+	}
+	visible = {
+		has_government = Communism
+		always = no
+		#has_completed_focus = RUS_crusade_against_communism
+	}
+}
+
+SOV_peoples_militias = {
+	visible_when_empty = no
+	allowed = {
+		tag = SOV
+	}
+	visible = {
+		has_government = Communism
+		has_war_with = RUS
+		#has_completed_focus = RUS_crusade_against_communism
+	}
+}
