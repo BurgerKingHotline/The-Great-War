@@ -1,0 +1,25 @@
+spriteTypes = {	
+	textSpriteType = {
+		name = "GFX_blank_button"
+		texturefile = "gfx/interface/blank_btn_two.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	SpriteType = {
+		name = "GFX_mil_factory_button"
+		textureFile = "gfx/interface/mil_button.dds"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	SpriteType = {
+		name = "GFX_civ_factory_button"
+		textureFile = "gfx/interface/civ_button.dds"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	SpriteType = {
+		name = "GFX_dock_button"
+		textureFile = "gfx/interface/dock_button.dds"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

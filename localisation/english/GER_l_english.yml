@@ -46,10 +46,10 @@
  GER_prussian_roots_desc:0 "While the German nation is its own nation, free of any foreign influence, we are not free from influence from our roots. Those roots being the old nation of Prussia, the unifier of the German states. Prussia, being a militaristic society, with a high nobility, and the self sufficiency of the army, it seems the whole German nation is built upon these doctrines."
 
 # decisions
- ger_support_uprising_in_pol_cat:0 "Spark Revolution in [POL.GetName]"
+ ger_support_uprising_in_pol_cat:0 "Spark Revolution in [POL.GetName] £pol_violence"
  ger_support_uprising_in_pol_cat_desc:0 "The current Revolution Strength in Poland is §R[?POL.PolRevStrength]§!"
  decision_cost_prs_100_blocked:0 "§R100 fire§!"
- decision_cost_prs_100:0 "§Y100 fire§!"
+ decision_cost_prs_100:0 "§Y100 £pol_violence§!"
  septemberprogramm_decision_cat:0 "Septemberprogramm"
  septemberprogramm_decision_cat_desc:0 "Enables subject creation in occupied states.\n\n"
  septemberprogramm_puppet_bel:0 "Vassalize Belgium"

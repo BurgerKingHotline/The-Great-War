@@ -24,4 +24,24 @@ spriteTypes = {
 		name = "GFX_RUS_trolling_in_persia"
 		texturefile = "gfx/interface/goals/RUS_trolling_in_persia_focus.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_GEN_army_buildup"
+		texturefile = "gfx/interface/goals/GEN_army_buildup.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GEN_restrict_army"
+		texturefile = "gfx/interface/goals/GEN_restrict_army.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_africa_claims"
+		texturefile = "gfx/interface/goals/GER_africa_claims.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_dominate_europe"
+		texturefile = "gfx/interface/goals/GER_dominate_europe.dds"
+	}
 }

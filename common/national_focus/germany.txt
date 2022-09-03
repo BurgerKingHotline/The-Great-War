@@ -22,6 +22,7 @@
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
+		mutually_exclusive = { focus = GER_accept_british_navy }
 
 		available = {
 		}
@@ -33,6 +34,26 @@
 					modifier = ger_contested_navy
 				}
 			}
+		}
+
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = GER_accept_british_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 15
+		y = 0
+		relative_position_id = GER_contest_british_navy
+		mutually_exclusive = { focus = GER_contest_british_navy }
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		completion_reward = {
 		}
 
 		ai_will_do = {
@@ -358,7 +379,7 @@
 	
 	focus = {
 		id = GER_mittelafrika_claims
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_GER_africa_claims
 		relative_position_id = GER_morrocco_interests
 		prerequisite = {
 			focus = GER_morrocco_interests
@@ -683,6 +704,12 @@
 				target = BEL
 				expire = 0
 				generator = { 6 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = LUX
+				expire = 0
+				generator = { 8 }
 			}
 		}
 
@@ -1060,7 +1087,7 @@
 	
 	focus = {
 		id = GER_dominate_europe
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_GER_dominate_europe
 		relative_position_id = GER_middle_east_influence
 		mutually_exclusive = {
 			focus = GER_reapproach_france
@@ -1299,7 +1326,7 @@
 		mutually_exclusive = {
 			focus = GER_contain_army
 		}
-		x = 25
+		x = 35
 		y = 0
 		cost = 35
 		available_if_capitulated = yes
@@ -1316,7 +1343,7 @@
 	
 	focus = {
 		id = GER_contain_army
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_GEN_restrict_army
 		relative_position_id = GER_increased_army_autonomy
 		mutually_exclusive = {
 			focus = GER_increased_army_autonomy
@@ -1327,6 +1354,7 @@
 		available_if_capitulated = yes
 
 		available = {
+			
 		}
 
 		completion_reward = {
@@ -1382,7 +1410,7 @@
 	
 	focus = {
 		id = GER_1913_army_act
-		icon = GFX_focus_chi_army_reform
+		icon = GFX_GEN_army_buildup
 		relative_position_id = GER_supreme_army_command
 		prerequisite = {
 			focus = GER_supreme_army_command

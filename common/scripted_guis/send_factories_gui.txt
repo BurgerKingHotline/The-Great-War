@@ -1,0 +1,153 @@
+scripted_gui = {
+	send_factories_ui = {
+		context_type = diplomatic_action
+		window_name = "send_factories_ui_window"
+
+		effects = {
+			civ_transfer_btn_click = {
+				clr_country_flag = clicked_mils
+				clr_country_flag = clicked_dockyard
+				set_variable = { select_dock = 0 }
+				set_variable = { select_mil = 0 }
+				set_variable = { SENT_FACTORIES = 0 }
+				set_variable = { select_civ = 2 }
+				set_country_flag = clicked_civs
+			}
+			mil_transfer_btn_click = {
+				clr_country_flag = clicked_civs
+				clr_country_flag = clicked_dockyard
+				set_variable = { select_civ = 0 }
+				set_variable = { select_dock = 0 }
+				set_variable = { SENT_FACTORIES = 0 }
+				set_variable = { select_mil = 2 }
+				set_country_flag = clicked_mils
+			}
+			dock_transfer_btn_click = {
+				clr_country_flag = clicked_civs
+				clr_country_flag = clicked_mils
+				set_variable = { select_civ = 0 }
+				set_variable = { select_mil = 0 }
+				set_variable = { SENT_FACTORIES = 0 }
+				set_variable = { select_dock = 2 }
+				set_country_flag = clicked_dockyard
+			}
+
+			blank_btn_plus_one_click = {
+				add_to_variable = { SENT_FACTORIES = 1 }
+			}
+			blank_btn_plus_five_click = {
+				add_to_variable = { SENT_FACTORIES = 5 }
+			}
+			blank_btn_plus_ten_click = {
+				add_to_variable = { SENT_FACTORIES = 10 }
+			}
+			blank_btn_minus_one_click = {
+				add_to_variable = { SENT_FACTORIES = -1 }
+			}
+			blank_btn_minus_five_click = {
+				add_to_variable = { SENT_FACTORIES = -5 }
+			}
+			blank_btn_minus_ten_click = {
+				add_to_variable = { SENT_FACTORIES = -10 }
+			}
+		}
+
+		triggers = {
+			blank_btn_plus_one_click_enabled = {
+				if = {
+					limit = {
+						has_country_flag = clicked_civs
+					}
+					check_variable = { SENT_FACTORIES < ROOT.num_of_civilian_factories }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = clicked_mils
+					}
+					check_variable = { SENT_FACTORIES < ROOT.num_of_military_factories }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = clicked_dockyard
+					}
+					check_variable = { SENT_FACTORIES < ROOT.num_of_naval_factories }
+				}
+				else = {
+					always = no
+				}
+			}
+			blank_btn_plus_five_click_enabled = {
+				set_temp_variable = { MOREFACTS = SENT_FACTORIES }
+				add_to_temp_variable = { MOREFACTS = 4 }
+				if = {
+					limit = {
+						has_country_flag = clicked_civs
+					}
+					check_variable = { MOREFACTS < ROOT.num_of_civilian_factories }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = clicked_mils
+					}
+					check_variable = { MOREFACTS < ROOT.num_of_military_factories }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = clicked_dockyard
+					}
+					check_variable = { MOREFACTS < ROOT.num_of_naval_factories }
+				}
+				else = {
+					always = no
+				}
+			}
+			blank_btn_plus_ten_click_enabled = {
+				set_temp_variable = { MOREFACTS = SENT_FACTORIES }
+				add_to_temp_variable = { MOREFACTS = 9 }
+				if = {
+					limit = {
+						has_country_flag = clicked_civs
+					}
+					check_variable = { MOREFACTS < ROOT.num_of_civilian_factories }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = clicked_mils
+					}
+					check_variable = { MOREFACTS < ROOT.num_of_military_factories }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = clicked_dockyard
+					}
+					check_variable = { MOREFACTS < ROOT.num_of_naval_factories }
+				}
+				else = {
+					always = no
+				}
+			}
+
+			blank_btn_minus_one_click_enabled = {
+				check_variable = { SENT_FACTORIES > 0 }
+			}
+			blank_btn_minus_five_click_enabled = {
+				check_variable = { SENT_FACTORIES > 4 }
+			}
+			blank_btn_minus_ten_click_enabled = {
+				check_variable = { SENT_FACTORIES > 9 }
+			}
+		}
+
+		properties = {
+			civ_transfer_btn = {
+				frame = select_civ
+			}
+			mil_transfer_btn = {
+				frame = select_mil
+			}
+			dock_transfer_btn = {
+				frame = select_dock
+			}
+		}
+	}	
+}
