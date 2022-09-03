@@ -5,7 +5,7 @@ characters = {
 		name = "Mustuhito"
 		portraits = {
 			civilian = {
-				large = GFX_portrait_Mohammed_Zahir_Shah
+				large = GFX_portrait_jap_meiji
 			}
 		}
 		country_leader = {

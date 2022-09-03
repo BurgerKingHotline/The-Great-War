@@ -44,4 +44,19 @@ spriteTypes = {
 		name = "GFX_GER_dominate_europe"
 		texturefile = "gfx/interface/goals/GER_dominate_europe.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_JAP_storm_on_the_horizon"
+		texturefile = "gfx/interface/goals/JAP_storm_on_the_horizon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_JAP_partnership_with_krupp"
+		texturefile = "gfx/interface/goals/JAP_partnership_with_krupp.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_JAP_falling_tiger"
+		texturefile = "gfx/interface/goals/JAP_falling_tiger.dds"
+	}
 }

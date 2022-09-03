@@ -43,7 +43,7 @@
 
 	focus = {
 		id = JAP_storm_on_the_horizon
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_JAP_storm_on_the_horizon
 		x = 25
 		y = 1
 		cost = 35
@@ -311,7 +311,7 @@
 
 	focus = {
 		id = JAP_reconcile_with_germany
-		icon = GFX_focus_chi_mission_to_germany
+		icon = GFX_generic_deal_germany
 		x = 31
 		y = 3
 		cost = 35
@@ -334,7 +334,7 @@
 
 	focus = {
 		id = JAP_partnership_with_krupp
-		icon = GFX_focus_generic_steel
+		icon = GFX_JAP_partnership_with_krupp
 		x = 31
 		y = 4
 		cost = 35
@@ -454,6 +454,29 @@
 
 		completion_reward = {
 			#Lets JAP take decisions that send "requests" to EUR colonists to give JAP control of colonies in Asia
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	# CHINA BRANCH
+
+	focus = {
+		id = JAP_falling_tiger
+		icon = GFX_JAP_falling_tiger
+		x = 35
+		y = 1
+		cost = 35
+		
+		prerequisite = { focus = JAP_rising_sun }
+
+		available = {
+		}
+
+		completion_reward = {
+			
 		}
 
 		ai_will_do = {
