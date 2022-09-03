@@ -295,6 +295,105 @@ spriteTypes = {
 			animationrotationoffset = { x = 0.0 y = 0.0 } 
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
-    }	
+    }
+	
+	SpriteType = { 
+		name = "GFX_JAP_storm_on_the_horizon" 
+		texturefile = "gfx/interface/goals/JAP_storm_on_the_horizon.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/JAP_storm_on_the_horizon.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/JAP_storm_on_the_horizon.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_JAP_partnership_with_krupp" 
+		texturefile = "gfx/interface/goals/JAP_partnership_with_krupp.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/JAP_partnership_with_krupp.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/JAP_partnership_with_krupp.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_JAP_falling_tiger" 
+		texturefile = "gfx/interface/goals/JAP_falling_tiger.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/JAP_falling_tiger.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/JAP_falling_tiger.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
 	
 }
