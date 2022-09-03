@@ -46,6 +46,7 @@ add_command_power = 20
 
 #country_event = { id = french_events.1 days = 113 }
 
+#leaders
 recruit_character = FRA_aristide_briand
 recruit_character = FRA_joseph_caillaux
 recruit_character = FRA_jean_jaures
@@ -55,7 +56,7 @@ recruit_character = FRA_maurice_barres
 recruit_character = FRA_philippe_orleans
 recruit_character = FRA_rene_viviani
 recruit_character = FRA_jules_meline
-
+#advisors
 recruit_character = FRA_joseph_paul_boncour
 recruit_character = FRA_adolphe_messimy
 recruit_character = FRA_etienne_clementel
@@ -65,7 +66,10 @@ recruit_character = FRA_leon_daudet
 recruit_character = FRA_justin_de_selves
 recruit_character = FRA_georges_sorel
 recruit_character = FRA_louis_renault
-
+recruit_character = FRA_georges_leygues
+recruit_character = FRA_louis_barthou
+recruit_character = FRA_paul_deschanel
+#generals
 recruit_character = FRA_joseph_gallieni
 recruit_character = FRA_victor_constant_michel
 recruit_character = FRA_charles_lanrezac
@@ -77,6 +81,13 @@ recruit_character = FRA_joseph_gauderique_aymerich
 recruit_character = FRA_charles_mangin
 recruit_character = FRA_augustin_dubail
 recruit_character = FRA_philippe_petain
+#admirals
+recruit_character = FRA_pierre_alexis_ronarch
+recruit_character = FRA_henri_salaun
+recruit_character = FRA_emile_guepratte
+recruit_character = FRA_marie_jean_lucien_lacaze
+recruit_character = FRA_paul_auvert
+recruit_character = FRA_eugene_de_jonquieres
 
 # Starting tech
 set_technology = {

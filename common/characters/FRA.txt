@@ -566,7 +566,99 @@ characters={
 			}
 		}
 	}
-
+	FRA_georges_leygues={
+		name="Georges Leygues"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_georges_leygues
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				has_country_leader = {
+					character = FRA_raymond_poincare
+					ruling_only = yes
+				}
+			}
+			traits = {
+				war_industrialist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	FRA_louis_barthou={
+		name="Louis Barthou"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_louis_barthou
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				has_country_leader = {
+					character = FRA_raymond_poincare
+					ruling_only = yes
+				}
+			}
+			traits = {
+				smooth_talking_charmer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	FRA_paul_deschanel={
+		name="Paul Deschanel"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_paul_deschanel
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				has_country_leader = {
+					character = FRA_raymond_poincare
+					ruling_only = yes
+				}
+			}
+			traits = {
+				national_orator
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 	FRA_leon_daudet={
 		name="Léon Daudet"
 		portraits={
@@ -654,6 +746,161 @@ characters={
 			}
 			traits = {
 				syndicalist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	#admirals
+	FRA_pierre_alexis_ronarch={
+		name="Pierre Alexis Ronarc'h"
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanmarie_charles_abrial
+				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=3
+			legacy_id=0
+		}
+	}
+	FRA_henri_salaun={
+		name="Henri Salaün"
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanmarie_charles_abrial
+				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=3
+			legacy_id=0
+		}
+	}
+	FRA_emile_guepratte={
+		name="Émile Guépratte"
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanmarie_charles_abrial
+				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+	FRA_marie_jean_lucien_lacaze={
+		name="Marie-Jean-Lucien Lacaze"
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanmarie_charles_abrial
+				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=3
+			legacy_id=0
+		}
+	}
+	FRA_eugene_de_jonquieres={
+		name="Marie-Jean-Lucien Lacaze"
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanmarie_charles_abrial
+				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=3
+			legacy_id=0
+		}
+	}
+	FRA_paul_auvert={
+		name="Paul Auvert"
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanmarie_charles_abrial
+				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			maneuvering_skill=3
+			coordination_skill=4
+			legacy_id=0
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = FRA_paul_auvert
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	FRA_eugene_de_jonquieres={
+		name="Eugène de Jonquières"
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanmarie_charles_abrial
+				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
+			}
+		}
+		navy_leader={
+			traits={  }
+			skill=3
+			attack_skill=4
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=3
+			legacy_id=0
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = FRA_eugene_de_jonquieres
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_chief_decisive_battle_1
 			}
 			cost = 100
 			ai_will_do = {

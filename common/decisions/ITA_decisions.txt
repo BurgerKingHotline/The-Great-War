@@ -19,8 +19,8 @@ ITA_alignment_category = {
 			factor = 0
 			modifier = {
 				add = 2
-				date > 1911.6.1
-				has_political_power > 100
+				date > 1911.2.1
+				has_political_power > 50
 			}
 			modifier = {
 				factor = 0
@@ -82,6 +82,10 @@ ITA_alignment_category = {
 			modifier = {
 				factor = 0
 				has_political_power < 50
+			}
+			modifier = {
+				factor = 0.5
+				date < 1911.6.1
 			}
 			modifier = {
 				factor = 0.5

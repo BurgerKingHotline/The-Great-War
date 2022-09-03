@@ -136,7 +136,7 @@
 			focus = FRA_provide_rural_pensions
 		}
 		relative_position_id = FRA_provide_rural_pensions
-		cost = 35
+		cost = 50
 
 		bypass = {
 			AND = {
@@ -349,7 +349,7 @@
 		icon = GFX_focus_usa_voter_registration_act
 		x = -1
 		y = 1
-		cost = 35
+		cost = 70
 		prerequisite = {
 			focus = FRA_support_businesses
 		}
@@ -362,6 +362,28 @@
 			add_timed_idea = {
 				idea = FRA_da_securing_power
 				days = 365
+			}
+			if = {
+				limit = {
+					NOT = { has_idea = FRA_georges_leygues }
+				}
+				add_ideas = FRA_georges_leygues
+				else_if = {
+					limit = {
+						NOT = {
+							has_idea = FRA_louis_barthou
+						}
+					}
+					add_ideas = FRA_louis_barthou
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_idea = FRA_paul_deschanel
+						}
+					}
+					add_ideas = FRA_paul_deschanel
+				}
 			}
 			set_country_flag = FRA_da_secured_power
 			add_popularity = {
@@ -1801,6 +1823,21 @@
 					instant_build = yes
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = FRA_rf_appeal_to_af
+		icon = GFX_focus_generic_treaty
+		x = -2
+		y = 0
+		cost = 35
+		prerequisite = { focus = FRA_turn_towards_industrialists }
+		relative_position_id = FRA_turn_towards_industrialists
+
+
+		completion_reward = {
+			
 		}
 	}
 
