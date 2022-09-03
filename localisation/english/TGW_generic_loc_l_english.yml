@@ -1,0 +1,8 @@
+﻿l_english:
+ no_fact_loc:0 "0"
+ civ_fact_loc:0 "§Y[?SENT_FACTORIES]§!"
+ mil_fact_loc:0 "§G[?SENT_FACTORIES]§!"
+ dock_fact_loc:0 "§B[?SENT_FACTORIES]§!"
+ FACTORIES_SENT_COUNT:0 "[COLORED_SENT]"
+ SEND_FACTORIES_BUTTON_TITLE:0 "Send Factories"
+ SEND_FACTORIES_BUTTON_ACTION_DESCRIPTION:0 "Send Factories to a Country"

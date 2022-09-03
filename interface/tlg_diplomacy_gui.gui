@@ -1,0 +1,87 @@
+guiTypes = {
+    containerWIndowType = {
+        name = "send_factories_ui_window"
+        position = { x = 0 y = 0 }
+        size = { width = 75 height = 200 }
+
+        instantTextBoxType = {
+            name = "factories_given_txt"
+            position = {x=265 y=90}
+            text = FACTORIES_SENT_COUNT
+            maxWidth = 70
+            maxHeight = 50
+            format = centre
+        }
+
+        ButtonType = {
+            name = "civ_transfer_btn"
+            position = {x=50 y=30}
+            frame = 1
+            quadTextureSprite ="GFX_civ_factory_button"
+            clicksound = click_default
+        }
+        ButtonType = {
+            name = "mil_transfer_btn"
+            position = {x=50 y=80}
+            frame = 1
+            quadTextureSprite ="GFX_mil_factory_button"
+            clicksound = click_default
+        }
+        ButtonType = {
+            name = "dock_transfer_btn"
+            position = {x=50 y=130}
+            frame = 1
+            quadTextureSprite ="GFX_dock_button"
+            clicksound = click_default
+        }
+
+        ButtonType = {
+            name = "blank_btn_plus_one"
+            position = {x=325 y=80}
+            quadTextureSprite ="GFX_blank_button"
+            buttonText = "+ 1"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_default
+        }
+        ButtonType = {
+            name = "blank_btn_plus_five"
+            position = {x=375 y=80}
+            quadTextureSprite ="GFX_blank_button"
+            buttonText = "+ 5"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_default
+        }
+        ButtonType = {
+            name = "blank_btn_plus_ten"
+            position = {x=425 y=80}
+            quadTextureSprite ="GFX_blank_button"
+            buttonText = "+ 10"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_default
+        }
+        ButtonType = {
+            name = "blank_btn_minus_one"
+            position = {x=225 y=80}
+            quadTextureSprite ="GFX_blank_button"
+            buttonText = "- 1"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_default
+        }
+        ButtonType = {
+            name = "blank_btn_minus_five"
+            position = {x=175 y=80}
+            quadTextureSprite ="GFX_blank_button"
+            buttonText = "- 5"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_default
+        }
+        ButtonType = {
+            name = "blank_btn_minus_ten"
+            position = {x=125 y=80}
+            quadTextureSprite ="GFX_blank_button"
+            buttonText = "- 10"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_default
+        }
+    }
+}

@@ -443,9 +443,16 @@ septemberprogramm_decision_cat = {
 	}
 	septemberprogramm_core_west = {
 		available = {
-			8 = {
-				is_owned_and_controlled_by = ROOT
-				compliance > 50
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = freed_lux_sept
+					}
+					8 = {
+						is_owned_and_controlled_by = ROOT
+						compliance > 50
+					}
+				}
 			}
 			927 = {
 				is_owned_and_controlled_by = ROOT
@@ -461,10 +468,59 @@ septemberprogramm_decision_cat = {
 			}
 		}
 		complete_effect = {
+			set_country_flag = fuck_lux_sept
 			add_state_core = 927
 			add_state_core = 937
-			add_state_core = 8
 			add_state_core = 926
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = freed_lux_sept
+					}
+				}
+				add_state_core = 8
+			}
+		}
+	}
+	septemberprogramm_puppet_lux = {
+		available = {
+			controls_state = 8
+		}
+		visible = {
+			NOT = {
+				has_country_flag = fuck_lux_sept
+			}
+		}
+		complete_effect = {
+			set_country_flag = freed_lux_sept
+			if = {
+				limit = {
+					country_exists = LUX
+					NOT = { LUX = { has_government = neutrality } }
+				}
+				hidden_effect = {
+					LUX = {
+						set_state_controller = 8
+					}
+				}
+				LUX = {
+					start_civil_war = {
+						ideology = neutrality
+						size = 1
+						transfer_state = 8
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_integrated_puppet }
+						}
+					}
+				}
+			}
+			else = {
+				LUX = {
+					transfer_state = 8
+				}
+				set_autonomy = { target = LUX autonomy_state = autonomy_integrated_puppet }
+			}
 		}
 	}
 }
