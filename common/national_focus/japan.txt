@@ -484,6 +484,116 @@
 		}
 	}
 
+	focus = {
+		id = JAP_investing_in_mantetsu
+		icon = GFX_focus_SOV_south_manchuria_railway
+		x = 35
+		y = 2
+		cost = 35
+		
+		prerequisite = { focus = JAP_falling_tiger }
+
+		available = {
+		}
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_agreements_with_the_cer
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 35
+		y = 3
+		cost = 35
+		
+		prerequisite = { focus = JAP_investing_in_mantetsu }
+
+		mutually_exclusive = { focus = JAP_take_over_the_cer }
+
+		available = {
+		}
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_take_over_the_cer
+		icon = GFX_goal_generic_major_war
+		x = 37
+		y = 3
+		cost = 35
+		
+		prerequisite = { focus = JAP_investing_in_mantetsu }
+
+		mutually_exclusive = { focus = JAP_agreements_with_the_cer }
+
+		available = {
+		}
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_support_the_revolutionaries
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		x = 39
+		y = 2
+		cost = 35
+		
+		prerequisite = { focus = JAP_falling_tiger }
+
+		available = {
+		}
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	focus = {
+		id = JAP_manchurian_gamble
+		icon = GFX_focus_jap_cast_the_die
+		x = 39
+		y = 3
+		cost = 35
+		
+		prerequisite = { focus = JAP_support_the_revolutionaries }
+
+		available = {
+		}
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+
 
 
 	
