@@ -826,24 +826,6 @@ characters={
 			legacy_id=0
 		}
 	}
-	FRA_eugene_de_jonquieres={
-		name="Marie-Jean-Lucien Lacaze"
-		portraits={
-			army={
-				large=GFX_portrait_FRA_jeanmarie_charles_abrial
-				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
-			}
-		}
-		navy_leader={
-			traits={  }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=3
-			legacy_id=0
-		}
-	}
 	FRA_paul_auvert={
 		name="Paul Auvert"
 		portraits={

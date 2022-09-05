@@ -10,7 +10,7 @@
 		}
 	}
 	
-	continuous_focus_position = { x = 70 y = 1300 }
+	continuous_focus_position = { x = 4500 y = 100 }
 	
 	default = no
 	reset_on_civilwar = no
@@ -421,20 +421,34 @@
 	focus = {
 		id = FRA_af_appeal_conservatives
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		x = 7
-		y = 0
+		x = 20
+		y = 7
 		mutually_exclusive = {
 			focus = FRA_af_reject_parliamentarianism
 		}
 		cost = 35
 
-		allow_branch = {
-			has_country_leader = {
-				character = FRA_charles_maurras
-				ruling_only = yes
-			}
+		available = {
+			has_government = neutrality
 			has_elections = yes
 			is_subject = no
+		}
+
+		allow_branch = {
+			#has_country_leader = {
+			#	character = FRA_charles_maurras
+			#	ruling_only = yes
+			#}
+			#has_elections = yes
+			#is_subject = no
+			NOT = {
+				OR = {
+					has_country_flag = FRA_1914_election_da
+					has_country_flag = FRA_1914_election_rf
+					has_country_flag = FRA_1914_election_radical
+					has_country_flag = FRA_1914_election_republican_socialist
+				}
+			}
 		}
 
 		completion_reward = {
@@ -450,19 +464,27 @@
 	focus = {
 		id = FRA_af_reject_parliamentarianism
 		icon = GFX_goal_generic_political_pressure
-		x = 3
-		y = 0
+		x = 16
+		y = 7
 		mutually_exclusive = {
 			focus = FRA_af_appeal_conservatives
 		}
 		cost = 35
 
-		allow_branch = {
-			has_country_leader = {
-				character = FRA_charles_maurras
-				ruling_only = yes
-			}
+		available = {
+			has_government = neutrality
 			is_subject = no
+		}
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_country_flag = FRA_1914_election_da
+					has_country_flag = FRA_1914_election_rf
+					has_country_flag = FRA_1914_election_radical
+					has_country_flag = FRA_1914_election_republican_socialist
+				}
+			}
 		}
 
 		completion_reward = {
@@ -545,7 +567,7 @@
 			focus = FRA_appeal_to_sorelians
 		}
 		relative_position_id = FRA_end_secularism
-		cost = 35
+		cost = 50
 
 		completion_reward = {
 			add_country_leader_trait = devoted_corporatist
@@ -577,7 +599,7 @@
 			focus = FRA_hunt_down_republicans
 		}
 		relative_position_id = FRA_hunt_down_republicans
-		cost = 35
+		cost = 50
 
 		completion_reward = {
 			if = {
@@ -1775,13 +1797,24 @@
 	focus = {
 		id = FRA_poincares_securing_power
 		icon = GFX_focus_generic_treaty
-		x = 8
-		y = 0
+		x = 9
+		y = 7
 		cost = 35
 
-		allow_branch = {
-			has_government = democratic
+		available = {
 			has_country_flag = FRA_1914_election_da
+		}
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_country_flag = FRA_1914_election_rf
+					has_country_flag = FRA_1914_election_radical
+					has_country_flag = FRA_1914_election_republican_socialist
+					has_government = neutrality
+					has_government = communism
+				}
+			}
 		}
 
 		bypass = {
@@ -1799,13 +1832,24 @@
 	focus = {
 		id = FRA_turn_towards_industrialists
 		icon = GFX_focus_generic_treaty
-		x = 8
-		y = 0
+		x = 12
+		y = 7
 		cost = 35
 
-		allow_branch = {
-			has_government = democratic
+		available = {
 			has_country_flag = FRA_1914_election_rf
+		}
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_country_flag = FRA_1914_election_da
+					has_country_flag = FRA_1914_election_radical
+					has_country_flag = FRA_1914_election_republican_socialist
+					has_government = neutrality
+					has_government = communism
+				}
+			}
 		}
 
 		completion_reward = {
@@ -1829,8 +1873,8 @@
 	focus = {
 		id = FRA_rf_appeal_to_af
 		icon = GFX_focus_generic_treaty
-		x = -2
-		y = 0
+		x = -1
+		y = 1
 		cost = 35
 		prerequisite = { focus = FRA_turn_towards_industrialists }
 		relative_position_id = FRA_turn_towards_industrialists
@@ -1844,13 +1888,31 @@
 	focus = {
 		id = FRA_vivianis_government
 		icon = GFX_focus_generic_treaty
-		x = 8
-		y = 0
+		x = 4
+		y = 7
 		cost = 35
 
-		allow_branch = {
-			has_government = democratic
+		available = {
 			has_country_flag = FRA_1914_election_republican_socialist
+			custom_trigger_tooltip = {
+				tooltip = FRA_republic_socialist_party_established
+				OR = {
+					has_country_flag = FRA_1914_election_republican_socialist
+					has_completed_focus = FRA_establish_republican_socialist_party
+				}
+			}
+		}
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_country_flag = FRA_1914_election_da
+					has_country_flag = FRA_1914_election_rf
+					has_country_flag = FRA_1914_election_radical
+					has_government = neutrality
+					has_government = communism
+				}
+			}
 		}
 
 		bypass = {
@@ -1865,13 +1927,24 @@
 	focus = {
 		id = FRA_caillaux_radical_party
 		icon = GFX_focus_generic_treaty
-		x = 8
-		y = 0
+		x = 6
+		y = 7
 		cost = 35
 
-		allow_branch = {
-			has_government = democratic
+		available = {
 			has_country_flag = FRA_1914_election_radical
+		}
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_country_flag = FRA_1914_election_da
+					has_country_flag = FRA_1914_election_rf
+					has_country_flag = FRA_1914_election_republican_socialist
+					has_government = neutrality
+					has_government = communism
+				}
+			}
 		}
 
 		completion_reward = {
@@ -1882,13 +1955,24 @@
 	focus = {
 		id = FRA_france_for_proletariat
 		icon = GFX_focus_generic_treaty
-		x = 8
-		y = 0
+		x = 2
+		y = 7
 		cost = 35
 
-		allow_branch = {
+		available = {
 			has_government = communism
-			has_elections = yes
+		}
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_country_flag = FRA_1914_election_da
+					has_country_flag = FRA_1914_election_rf
+					has_country_flag = FRA_1914_election_radical
+					has_country_flag = FRA_1914_election_republican_socialist
+					has_government = neutrality
+				}
+			}
 		}
 
 		completion_reward = {
