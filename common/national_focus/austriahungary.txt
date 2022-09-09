@@ -2026,6 +2026,14 @@
 				mark_focus_tree_layout_dirty = yes
 			}
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				date < 1912.1.1
+			}
+		}
 	}
 
 	focus = {
