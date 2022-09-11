@@ -80,10 +80,10 @@
 	focus = {
 		id = RUS_seize_tannu_tuva
 		icon = GFX_focus_SOV_the_true_tsars
-		prerequisite = { focus = RUS_the_powers_of_the_tsar }
-		x = -5
+		prerequisite = { focus = RUS_asian_matters }
+		x = -1
 		y = 1
-		relative_position_id = RUS_the_powers_of_the_tsar
+		relative_position_id = RUS_asian_matters
 		cost = 35
 		 
 		available = {
@@ -163,7 +163,7 @@
 	focus = {
 		id = RUS_configure_foreign_policy
 		icon = GFX_generic_deal_germany
-		x = -15
+		x = -14
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar
 		prerequisite = { focus = RUS_the_powers_of_the_tsar }
@@ -342,7 +342,7 @@
 		id = RUS_root_out_socialist_influence
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = RUS_a_duma_in_chains }
-		x = 1
+		x = 0
 		y = 2
 		relative_position_id = RUS_a_duma_in_chains
 		cost = 70
@@ -382,7 +382,7 @@
 		id = RUS_undermine_democratic_influence
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = RUS_a_duma_in_chains }
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = RUS_a_duma_in_chains
 		cost = 70
@@ -517,11 +517,11 @@
 	focus = {
 		id = RUS_on_our_own
 		icon = GFX_goal_demand_sudetenland
-		x = 3
+		x = 4
 		y = 1
-		relative_position_id = RUS_configure_foreign_policy
-		prerequisite = { focus = RUS_configure_foreign_policy }
-		mutually_exclusive = { focus = RUS_strengthen_european_ties }
+		relative_position_id = RUS_european_matters
+		prerequisite = { focus = RUS_european_matters }
+		mutually_exclusive = { focus = RUS_continued_dialogue_with_the_germans focus = RUS_strengthen_the_entente }
 		cost = 70
 		 
 
@@ -608,10 +608,11 @@
 	focus = {
 		id = RUS_reclaim_sakhalin
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = RUS_on_our_own }
-		x = 0
-		y = 1
-		relative_position_id = RUS_on_our_own
+		prerequisite = { focus = RUS_asian_matters }
+		prerequisite = { focus = RUS_on_our_own}
+		x = -2
+		y = 2
+		relative_position_id = RUS_asian_matters
 		cost = 70
 		
 		available = {
@@ -707,6 +708,7 @@
 
 		completion_reward = {
 			add_stability = -0.05
+			custom_effect_tooltip = RUS_core_greater_state_on_owned
 			every_state = {
 				limit = {
 					OR = {
@@ -805,6 +807,7 @@
 
 		completion_reward = {
 			add_stability = -0.05
+			custom_effect_tooltip = RUS_core_greater_slav_on_owned
 			every_state = {
 				limit = {
 					OR = {
@@ -1236,13 +1239,12 @@
 	}
 
 	focus = {
-		id = RUS_strengthen_european_ties
+		id = RUS_european_matters
 		icon = GFX_focus_usa_focus_on_europe #TEMP GOAL
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = RUS_configure_foreign_policy
 		prerequisite = { focus = RUS_configure_foreign_policy }
-		mutually_exclusive = { focus = RUS_on_our_own }
 		cost = 35
 		 
 
@@ -1252,6 +1254,7 @@
 
 		completion_reward = {
 			add_political_power = 50
+			add_war_support = 0.05
 		}
 
 		ai_will_do = {
@@ -1262,11 +1265,11 @@
 	focus = {
 		id = RUS_continued_dialogue_with_the_germans
 		icon = GFX_generic_deal_germany
-		x = -2
+		x = -4
 		y = 1
-		relative_position_id = RUS_strengthen_european_ties
-		prerequisite = { focus = RUS_strengthen_european_ties }
-		mutually_exclusive = { focus = RUS_strengthen_the_entente }
+		relative_position_id = RUS_european_matters
+		prerequisite = { focus = RUS_european_matters }
+		mutually_exclusive = { focus = RUS_strengthen_the_entente focus = RUS_on_our_own}
 		cost = 70
 		 
 
@@ -1376,11 +1379,11 @@
 	focus = {
 		id = RUS_strengthen_the_entente
 		icon = GFX_focus_chi_reach_out_to_france
-		x = 2
+		x = 0
 		y = 1
-		relative_position_id = RUS_strengthen_european_ties
-		prerequisite = { focus = RUS_strengthen_european_ties }
-		mutually_exclusive = { focus = RUS_continued_dialogue_with_the_germans }
+		relative_position_id = RUS_european_matters
+		prerequisite = { focus = RUS_european_matters }
+		mutually_exclusive = { focus = RUS_continued_dialogue_with_the_germans focus = RUS_on_our_own}
 		cost = 70
 		 
 
@@ -1556,10 +1559,10 @@
 	focus = {
 		id = RUS_take_full_control_of_the_army
 		icon = GFX_focus_GRE_an_orthodox_state
-		x = 1
+		x = 0
 		y = 2
-		relative_position_id = RUS_safeguard_the_orthodoxy
-		prerequisite = { focus = RUS_revive_the_league_of_emperors focus = RUS_safeguard_the_orthodoxy focus = RUS_integrate_the_slavs focus = RUS_realise_greater_russia } 
+		relative_position_id = RUS_tsarist_national_intervension
+		prerequisite = { focus = RUS_tsarist_national_intervension } 
 		cost = 70
 
 		available = {
@@ -1587,12 +1590,36 @@
 	}
 
 	focus = {
+		id = RUS_asian_matters
+		icon = GFX_focus_usa_focus_on_europe #TEMP GOAL
+		x = 4
+		y = 1
+		relative_position_id = RUS_configure_foreign_policy
+		prerequisite = { focus = RUS_configure_foreign_policy }
+		cost = 35
+		 
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
 		id = RUS_matters_in_persia
 		icon = GFX_generic_persia_focus
-		x = -7
+		x = 1
 		y = 1
-		relative_position_id = RUS_the_powers_of_the_tsar
-		prerequisite = { focus = RUS_the_powers_of_the_tsar } 
+		relative_position_id = RUS_asian_matters
+		prerequisite = { focus = RUS_asian_matters } 
 		cost = 50
 
 		available = {
@@ -2036,7 +2063,7 @@
 	focus = {
 		id = RUS_supreme_ruler_of_russia
 		icon = GFX_goal_generic_political_pressure
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = RUS_consituent_assembly
 		prerequisite = { focus = RUS_consituent_assembly }
@@ -2128,7 +2155,7 @@
 	focus = {
 		id = RUS_presidential_republic
 		icon = GFX_goal_generic_political_pressure
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = RUS_consituent_assembly
 		prerequisite = { focus = RUS_consituent_assembly }
