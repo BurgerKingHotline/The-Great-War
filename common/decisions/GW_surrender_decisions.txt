@@ -23,11 +23,14 @@ surrender_category = {
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				add = 100
+				add = 50
 				capital_scope = {
 					NOT = {
 						is_controlled_by = ROOT
 					}
+				}
+				GER = {
+					surrender_progress < 0.1
 				}
 			}
 
@@ -40,12 +43,12 @@ surrender_category = {
 			}
 
 			modifier = {
-				add = 2
+				factor = 1.2
 				has_war_with = ITA
 			}
 
 			modifier = {
-				add = 4
+				factor = 1.4
 				has_war_with = ENG
 			}
 

@@ -1,5 +1,5 @@
 balkan_war_decisions = {
-	balkan_get_ivolved = {
+	balkan_get_involved = {
 		icon = generic_civil_support
 
 		visible = {
@@ -16,9 +16,11 @@ balkan_war_decisions = {
 			NOT = {
 				has_war_with = BUL
 			}
-        	}
+        }
 
 		cost = 0
+
+		fire_only_once = yes #they keep declaring war right after peace, so
 
 		complete_effect = {
 			declare_war_on = {
