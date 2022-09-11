@@ -596,7 +596,7 @@
 					}
 					ROOT = {
 						create_wargoal = {
-							type = puppet_wargoal_focus
+							type = take_claimed_state
 							target = PREV
 						}
 					}
@@ -604,6 +604,78 @@
 			}
 		}
 	}
+
+	focus = {
+		id = RUS_reclaim_sakhalin
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_on_our_own }
+		x = 0
+		y = 1
+		relative_position_id = RUS_on_our_own
+		cost = 70
+		
+		available = {
+			OR = {
+				537 = {
+					owner = {
+						NOT = {
+							tag = ROOT
+							is_in_faction_with = ROOT
+							is_puppet_of = ROOT
+							ROOT = {
+								has_wargoal_against = PREV
+							}
+						}
+					}
+				}
+				655 = {
+					owner = {
+						NOT = {
+							tag = ROOT
+							is_in_faction_with = ROOT
+							is_puppet_of = ROOT
+							ROOT = {
+								has_wargoal_against = PREV
+							}
+						}
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 655
+						state = 537
+					}
+				}
+				add_claim_by = ROOT
+				owner = {
+					if = {
+						limit = {
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_puppet_of = ROOT
+								ROOT = {
+									has_wargoal_against = PREV
+								}
+							}
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+
 
 	focus = {
 		id = RUS_realise_greater_russia
@@ -694,7 +766,7 @@
 					}
 					ROOT = {
 						create_wargoal = {
-							type = puppet_wargoal_focus
+							type = take_claimed_state
 							target = PREV
 						}
 					}
@@ -779,7 +851,7 @@
 					}
 					ROOT = {
 						create_wargoal = {
-							type = puppet_wargoal_focus
+							type = take_claimed_state
 							target = PREV
 						}
 					}
@@ -2274,7 +2346,6 @@
 		y = 1
 		relative_position_id = RUS_the_white_army
 		prerequisite = { focus = RUS_the_white_army }
-		prerequisite = { focus = RUS_consolidate_the_army }
 		cost = 70
 		 
 

@@ -796,7 +796,7 @@ country_event = { #bulgarians demand peace
 						state = 884
 						state = 855
 						state = 797
-						AND {
+						AND = {
 							NOT = {
 								state = 881
 								state = 880
