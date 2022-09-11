@@ -17,7 +17,7 @@ state=
 		}
 	}
 	provinces={
-		7987 8103 10900
+		7987
 	}
 
 	local_supplies=0.0 

@@ -144,6 +144,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 1898;1961;impassable;-1;-1;-1;-1;-1;;Himalayas
 3989;1961;impassable;-1;-1;-1;-1;-1;;Himalayas
 1129;1961;impassable;-1;-1;-1;-1;-1;;Himalayas
+4900;4435;impassable;-1;-1;-1;-1;-1;;Himalayas
+4900;4435;impassable;-1;-1;-1;-1;-1;;Himalayas
 4558;10826;impassable;-1;-1;-1;-1;-1;;peshawar mountains
 4558;12653;impassable;-1;-1;-1;-1;-1;;peshawar mountains
 4558;7519;impassable;-1;-1;-1;-1;-1;;peshawar mountains
@@ -180,4 +182,27 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 12299;4424;sea;5960;-1;-1;-1;-1;;Singapore-Malay-two
 10313;12113;sea;5539;-1;-1;-1;-1;;Malay-Batam
 13247;10000;sea;2757;-1;-1;-1;-1;;Kiautschou
+1362;4397;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+10326;4397;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+10326;12297;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+4260;12297;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+4260;7280;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+10195;7280;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+10195;1302;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+10238;1302;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+4554;7229;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+4554;1248;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+1577;1248;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+1577;4363;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+4596;4363;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+4596;1400;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+6675;3660;impassable;-1;-1;-1;-1;-1;;alps
+11587;3660;impassable;-1;-1;-1;-1;-1;;alps
+11587;3662;impassable;-1;-1;-1;-1;-1;;alps
+6661;3662;impassable;-1;-1;-1;-1;-1;;alps
+6661;658;impassable;-1;-1;-1;-1;-1;;alps
+9600;658;impassable;-1;-1;-1;-1;-1;;alps
+6635;636;impassable;-1;-1;-1;-1;-1;;alps
+6635;9587;impassable;-1;-1;-1;-1;-1;;alps
+636;9587;impassable;-1;-1;-1;-1;-1;;alps
 -1;-1;;-1;-1;-1;-1;-1;-1
