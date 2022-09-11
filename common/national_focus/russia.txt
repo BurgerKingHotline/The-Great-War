@@ -864,6 +864,7 @@
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = RUS_ban_the_political_parties }
 		prerequisite = { focus = RUS_policy_of_russification }
+		prerequisite = { focus = RUS_tsarist_cult_of_personality }
 		x = 1
 		y = 2
 		relative_position_id = RUS_policy_of_russification
