@@ -18,6 +18,7 @@ country_event = {
 		}
 		communism > 0.6
 		check_has_focus_tree_to_switch_to_communism = yes
+		
 		NOT = {
 			original_tag = RUS
 		}
@@ -159,6 +160,7 @@ country_event = {
 			has_government = communism 
 			communism > 0.59
 		}
+		has_idea_with_trait = communist_revolutionary
 		communism > 0.2
 		NOT = {
 			original_tag = RUS
@@ -195,6 +197,7 @@ country_event = {
 			has_government = communism 
 			communism > 0.59
 		}
+		has_idea_with_trait = communist_revolutionary
 		communism > 0.3
 		NOT = {
 			original_tag = RUS
@@ -535,6 +538,7 @@ country_event = {
 	trigger = {
 		NOT = { has_government = fascism fascism > 0.59 }
 		fascism > 0.3
+		has_idea_with_trait = fascist_demagogue 
 		NOT = {
 			original_tag = RUS
 		}

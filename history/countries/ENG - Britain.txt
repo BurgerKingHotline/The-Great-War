@@ -196,10 +196,25 @@ if = {
 		autonomous_state = autonomy_dominion
 		freedom_level = 0.35
 	}
-	else = {
+	set_autonomy = {
+		target = NEP
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.80
+	}
+	set_autonomy = {
+		target = BHU
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.85
+	}
+	else = { #since uk has no faction at game start, just resort to puppet all
 		puppet = MAL
 		puppet = RAJ
 		puppet = KUW
+		puppet = CAN
+		puppet = SAF
+		puppet = AST
+		puppet = NZL
+		puppet = EGY
 	}
 }
 

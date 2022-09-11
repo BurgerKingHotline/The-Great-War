@@ -1786,7 +1786,7 @@
 		icon = GFX_goal_support_democracy
 		x = -2
 		y = 1
-		cost = 60
+		cost = 70
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		mutually_exclusive = { focus = GEN_socialism }
 		prerequisite = { focus = GEN_individual_liberties }
@@ -1795,6 +1795,14 @@
 
 		completion_reward = {
 			
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				NOT = { has_government = democratic }
+			}
 		}
 	}
 
@@ -1814,6 +1822,14 @@
 			add_timed_idea = {
 				idea = internationalism
 				days = 720
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				NOT = { has_government = communism }
 			}
 		}
 	}
@@ -2024,6 +2040,14 @@
 				days = 720
 			}	
 		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				NOT = { has_government = fascism }
+			}
+		}
 	}
 
 	focus = {
@@ -2040,6 +2064,14 @@
 
 		completion_reward = {
 			
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				NOT = { has_government = neutrality }
+			}
 		}
 	}
 

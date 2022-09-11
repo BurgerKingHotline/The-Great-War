@@ -496,6 +496,25 @@
 	}
 
 	focus = {
+		id = RUS_tsarist_cult_of_personality
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_promote_the_all_russian_nation }
+		prerequisite = { focus = RUS_destroy_trade_unions }
+		x = 1
+		y = 1
+		relative_position_id = RUS_promote_the_all_russian_nation
+		cost = 70
+		 
+
+		completion_reward = {
+			remove_ideas = {
+				RUS_strong_independance_movements
+			}
+			custom_effect_tooltip = RUS_civil_war_no_independance
+		}
+	}
+
+	focus = {
 		id = RUS_on_our_own
 		icon = GFX_goal_demand_sudetenland
 		x = 3
@@ -1184,7 +1203,7 @@
 				has_global_flag = RUS_germans_leave_potsdam
 				has_global_flag = RUS_russian_full_access_flag
 			}
-			has_country_flag = RUS_ger_agree_potsdam
+			has_global_flag = RUS_ger_agree_potsdam
 		}
 
 		completion_reward = {
@@ -1298,8 +1317,8 @@
 				has_global_flag = RUS_german_full_access_flag
 			}
 			OR = {
-				has_global_flag = RUS_ger_agree_potsdam
-				has_global_flag = RUS_germans_leave_potsdam
+				has_country_flag = RUS_ger_agree_potsdam
+				has_country_flag = RUS_germans_leave_potsdam
 			}
 			FRA = {
 				NOT = {
@@ -1507,7 +1526,7 @@
 			NOT = {
 				has_global_flag = RUS_german_full_access_flag
 			}
-			has_global_flag = RUS_ger_agree_potsdam
+			has_country_flag = RUS_ger_agree_potsdam
 		}
 
 		offset = {
@@ -1997,7 +2016,6 @@
 		available = {
 			NOT = { 
 				has_government = communism 
-				has_completed_focus = RUS_presidential_republic
 			}
 			OR = {
 				has_civil_war = yes
@@ -2078,7 +2096,7 @@
 	focus = {
 		id = RUS_purge_the_communists
 		icon = GFX_focus_SOV_military_purge #TEMP GOAL
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = RUS_crusade_against_communism
 		prerequisite = { focus = RUS_supreme_ruler_of_russia focus = RUS_presidential_republic focus = RUS_crusade_against_communism } 
@@ -2222,10 +2240,10 @@
 	}
 
 	focus = {
-		id = RUS_consolidate_the_army
+		id = RUS_democratise_the_army
 		icon = GFX_goal_generic_political_pressure
-		x = -1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = RUS_presidential_republic
 		prerequisite = { focus = RUS_supreme_ruler_of_russia focus = RUS_presidential_republic focus = RUS_crusade_against_communism }
 		cost = 70
@@ -2251,9 +2269,9 @@
 	focus = {
 		id = RUS_a_loyal_army
 		icon = GFX_goal_generic_political_pressure
-		x = -1
+		x = 0
 		y = 1
-		relative_position_id = RUS_consolidate_the_army
+		relative_position_id = RUS_the_white_army
 		prerequisite = { focus = RUS_the_white_army }
 		prerequisite = { focus = RUS_consolidate_the_army }
 		cost = 70
