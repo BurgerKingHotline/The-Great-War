@@ -18,7 +18,7 @@ ideas = {
 				army_core_attack_factor = 0.1
 				stability_factor = -0.1
 				war_stability_factor = 0.3
-				training_time_factor = -0.05
+				training_time_army_factor = 0.5
 			}
 
 		}
@@ -94,6 +94,160 @@ ideas = {
 				industrial_capacity_factory = 0.3
 				line_change_production_efficiency_factor = 0.4
 				repair_speed_arms_factory_factor = 0.3
+			}
+
+		}
+		ash_new_constitution = {
+			picture = GFX_idea_generic_constitutional_guarantees
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.3
+				democratic_acceptance = 50
+				repair_speed_arms_factory_factor = 0.3
+			}
+
+		}
+		ash_unequal_development = {
+			picture = GFX_idea_POL_disjointed_industry
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = -0.2
+				production_speed_supply_node_factor = -0.2
+				production_speed_rail_way_factor = -0.2
+			}
+
+		}
+		ash_rising_industrial_economy = {
+			picture = GFX_idea_generic_economic_increase
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.4
+				line_change_production_efficiency_factor = 0.3
+				production_speed_industrial_complex_factor = 0.5
+			}
+
+		}
+		ash_reformed_development_schemes = {
+			picture = GFX_idea_generic_agrarian_reform
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.3
+				line_change_production_efficiency_factor = 0.4
+				repair_speed_arms_factory_factor = 0.3
+			}
+
+		}
+		ash_ethnic_separatism = {
+			picture = GFX_idea_chi_war_of_resistance3
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				occupation_cost = 0.5
+				resistance_activity = 0.5
+				resistance_growth_on_our_occupied_states = 0.3
+				conscription_factor = -0.7
+				army_strength_factor = -0.2
+			}
+
+		}
+		ash_ethnic_division = {
+			picture = GFX_idea_chi_war_of_resistance
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				occupation_cost = 0.3
+				resistance_activity = 0.3
+				conscription_factor = -0.3
+			}
+
+		}
+		ash_ethnic_regionalism = {
+			picture = GFX_idea_generic_local_self_management
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				occupation_cost = 0.1
+				resistance_activity = 0.1
+				resistance_decay_on_our_occupied_states = 0.3
+				conscription_factor = 0.2
+			}
+
+		}
+		ash_the_yugoslav_threat = {
+			picture = GFX_idea_YUG_local_militias
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				defensive_war_stability_factor = -0.2
+				offensive_war_stability_factor = -0.1
 			}
 
 		}

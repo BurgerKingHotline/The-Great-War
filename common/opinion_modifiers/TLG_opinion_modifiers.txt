@@ -33,6 +33,10 @@ opinion_modifiers = {
 	ASH_anger_germany = {
 		value = -20
 	}
+	
+	ASH_serbian_posturing = {
+		value = -35
+	}
 
 	#FRA
 

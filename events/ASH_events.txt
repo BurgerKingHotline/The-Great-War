@@ -25,3 +25,281 @@ country_event = {
 		load_focus_tree = { tree = austrohungarian_focus keep_completed = yes }
 	}
 }
+#BOSNIA QUESTION#
+country_event = {
+    id = ash_events.1
+    title = ash_events.1.t
+    desc = ash_events.1.desc
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = ash_events.1.a
+		trigger = {
+			ASH = {
+			owns_state = 104
+			owns_state = 804
+			owns_state = 906
+			}
+		}
+        BOS = {
+			transfer_state = 104
+			transfer_state = 804
+			transfer_state = 906
+		}
+		ASH = {
+			release_autonomy = {
+			target = BOS
+			autonomy_state = autonomy_puppet
+			freedom_level = 0.5
+			}
+		}
+		complete_national_focus = ASH_defend_territorial_integrity
+    }
+	option = {
+        name = ash_events.1.b
+		trigger = {
+			country_exists = SER
+			country_exists = CRO
+			ASH = {
+			owns_state = 104
+			owns_state = 804
+			owns_state = 906
+			}
+		}
+        SER = {
+			transfer_state = 104
+			transfer_state = 804
+			add_state_core = 104
+			add_state_core = 804
+		}
+		CRO = {
+			transfer_state = 906
+		}
+		complete_national_focus = ASH_reconcile_with_serbia
+    }
+}
+#AUSTRIA-ITALY NEGOTIATIONS#
+country_event = {
+    id = ash_events.2
+    title = ash_events.2.t
+    desc = ash_events.2.desc
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = ash_events.2.a
+		trigger = {
+			ASH = {
+			owns_state = 39
+			owns_state = 885
+			owns_state = 163
+			owns_state = 736
+			owns_state = 898
+			owns_state = 899
+			}
+		}
+		ITA = {
+			country_event = {
+				id = ash_events.3
+				days = 1
+				random_hours = 12
+				random_days = 2
+			}
+		}
+    }
+}
+#italy#
+country_event = {
+    id = ash_events.3
+    title = ash_events.3.t
+    desc = ash_events.3.desc
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = ash_events.3.a
+		ASH = {
+			country_event = {
+				id = ash_events.4
+				days = 1
+				random_hours = 12
+				random_days = 1
+			}
+		}
+    }
+}
+#ash choice#
+country_event = {
+    id = ash_events.4
+    title = ash_events.4.t
+    desc = ash_events.4.desc
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = ash_events.4.a
+		ITA = {
+			country_event = {
+				id = ash_events.5
+				days = 1
+				random_hours = 12
+				random_days = 2
+			}
+		}
+    }
+	
+	option = {
+        name = ash_events.4.b
+		ITA = {
+			country_event = {
+				id = ash_events.6
+				days = 1
+				random_hours = 12
+				random_days = 1
+			}
+		}
+    }
+}
+#ash accepts#
+country_event = {
+    id = ash_events.5
+    title = ash_events.5.t
+    desc = ash_events.5.desc
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = ash_events.5.a
+		ITA = {
+			set_state_owner = 39
+			set_state_owner = 885
+			set_state_owner = 163
+			set_state_owner = 736
+			set_state_owner = 898
+			set_state_owner = 899
+			set_state_owner = 897
+			set_state_owner = 103
+			add_state_core = 39
+			add_state_core = 885
+			add_state_core = 163
+			add_state_core = 736
+			add_state_core = 898
+			add_state_core = 899
+			add_state_core = 897
+			add_state_core = 103
+		}
+		ASH = {
+			remove_state_core = 39
+			remove_state_core = 885
+			remove_state_core = 163
+			remove_state_core = 736
+			remove_state_core = 898
+			remove_state_core = 899
+			remove_state_core = 897
+			remove_state_core = 103
+			complete_national_focus = ASH_cede_italian_lands_2
+		}
+    }
+}
+#ash moderate counter offer#
+country_event = {
+    id = ash_events.6
+    title = ash_events.6.t
+    desc = ash_events.6.desc
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = ash_events.6.a
+		ITA = {
+			country_event = {
+				id = ash_events.7
+				days = 1
+				random_hours = 12
+				random_days = 1
+			}
+		}
+    }
+}
+#italy decision#
+country_event = {
+    id = ash_events.7
+    title = ash_events.7.t
+    desc = ash_events.7.desc
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = ash_events.7.a
+		ASH = {
+			country_event = {
+				id = ash_events.8
+				days = 1
+				random_hours = 12
+				random_days = 1
+			}
+		}
+    }
+	
+	option = {
+        name = ash_events.7.b
+		ASH = {
+			country_event = {
+				id = ash_events.9
+				days = 1
+				random_hours = 12
+				random_days = 1
+			}
+		}
+    }
+}
+#italy accepts#
+country_event = {
+    id = ash_events.8
+    title = ash_events.8.t
+    desc = ash_events.8.desc
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = ash_events.8.a
+		ITA = {
+			set_state_owner = 39
+			set_state_owner = 885
+			set_state_owner = 163
+			set_state_owner = 736
+			add_state_core = 39
+			add_state_core = 885
+			add_state_core = 163
+			add_state_core = 736
+		}
+		ASH = {
+			remove_state_core = 39
+			remove_state_core = 885
+			remove_state_core = 163
+			remove_state_core = 736
+			complete_national_focus = ASH_cede_italian_lands_2
+		}
+    }
+}
+#impass reached#
+country_event = {
+    id = ash_events.9
+    title = ash_events.9.t
+    desc = ash_events.9.desc
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = ash_events.9.a
+		ASH = {
+			uncomplete_national_focus = {
+			focus = ASH_secure_italian_loyalty
+			uncomplete_children = no
+			refund_political_power = no
+			}
+			complete_national_focus = ASH_strengthen_ties_with_germany
+		}
+    }
+}
