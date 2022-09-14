@@ -25,11 +25,35 @@ country_event = { #non-total surrender to germany
 					}
 				}
 			}
-			transfer_state = 937
 			puppet = BEL
+			
+			if = {
+				limit = {
+					BEL = {
+						owns_state = 937
+					}
+				}
+				transfer_state = 937
+			}
 			BEL = {
 				transfer_state = 29
-			}
+				if = {
+					limit = {
+						FROM = {
+							owns_state = 864
+						}
+					}
+					transfer_state = 864
+				}
+				if = {
+					limit = {
+						FROM = {
+							owns_state = 29
+						}
+					}
+					transfer_state = 29
+				}
+			}	
 		}
 		if = {
 			limit = {
@@ -53,15 +77,33 @@ country_event = { #non-total surrender to germany
 					is_in_faction = yes
 				}
 				leave_faction = yes
-				white_peace = GER
-				country_event = { id = demobilization.1 days = 1 }
 			}
+			white_peace = GER
+			country_event = { id = demobilization.1 days = 1 }
 		}
-		transfer_state = 927
+		if = {
+			limit = {
+				FROM = {
+					owns_state = 927
+				}
+			}
+			transfer_state = 927
+		}
+		if = {
+			limit = {
+				FROM = {
+					owns_state = 947
+				}
+			}
+			transfer_state = 947
+		}
 		if = {
 			limit = {
 				ITA = {
 					is_in_faction_with = ROOT
+				}
+				FROM = {
+					owns_state = 735
 				}
 			}
 			ITA = {
@@ -76,6 +118,7 @@ country_event = { #non-total surrender to germany
 			factor = 0
 		}
 		add_war_support = -0.1
+		add_political_power = -100
 		FRA = {
 			country_event = { id = TLG_surrender.2 hours = 3 }
 		}

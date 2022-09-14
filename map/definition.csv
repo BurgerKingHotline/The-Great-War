@@ -2033,7 +2033,7 @@
 2032;9;132;200;land;false;plains;6
 2033;9;135;15;land;true;desert;7
 2034;9;135;165;land;false;forest;5
-2035;9;135;220;land;true;jungle;3
+2035;9;135;220;land;true;plain;3
 2036;9;138;80;land;false;plains;6
 2037;9;138;130;land;false;desert;2
 2038;9;138;185;land;true;forest;5
@@ -8170,7 +8170,7 @@
 8169;94;36;181;land;false;forest;3
 8170;94;37;240;sea;false;ocean;0
 8171;94;38;248;sea;false;ocean;0
-8172;94;39;146;land;false;jungle;3
+8172;94;39;146;land;true;jungle;3
 8173;94;39;236;sea;false;ocean;0
 8174;94;40;244;sea;false;ocean;0
 8175;94;42;211;land;false;jungle;3
