@@ -526,7 +526,7 @@
 		 
 
 		available = {
-			NOT = { has_government = communism }
+			is_in_faction = no
 			OR = {
 				has_government = neutrality
 				has_government = fascism
@@ -535,7 +535,28 @@
 
 		completion_reward = {
 			add_political_power = 50
-
+			if = {
+				limit = {
+					OR = {
+						has_guaranteed = FRA
+						FRA = {
+							has_guaranteed = ROOT
+						}
+					}
+				}
+				FRA = {
+					diplomatic_relation = {
+						country = ROOT
+						relation = guarantee
+						active = no
+					}
+				}
+				diplomatic_relation = {
+					country = FRA
+					relation = guarantee
+					active = no
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -617,26 +638,46 @@
 		
 		available = {
 			OR = {
-				537 = {
-					owner = {
-						NOT = {
-							tag = ROOT
-							is_in_faction_with = ROOT
-							is_puppet_of = ROOT
-							ROOT = {
-								has_wargoal_against = PREV
+				if = {
+					limit = {
+						537 = {
+							owner = {
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
+					}
+					537 = {
+						owner = {
+							NOT = {
+								is_in_faction_with = ROOT
+								is_puppet_of = ROOT
+								ROOT = {
+									has_wargoal_against = PREV
+								}
 							}
 						}
 					}
 				}
-				655 = {
-					owner = {
-						NOT = {
-							tag = ROOT
-							is_in_faction_with = ROOT
-							is_puppet_of = ROOT
-							ROOT = {
-								has_wargoal_against = PREV
+				if = {
+					limit = {
+						655 = {
+							owner = {
+								NOT = {
+									tag = ROOT
+								}
+							}
+						}
+					}
+					655 = {
+						owner = {
+							NOT = {
+								is_in_faction_with = ROOT
+								is_puppet_of = ROOT
+								ROOT = {
+									has_wargoal_against = PREV
+								}
 							}
 						}
 					}
@@ -1392,10 +1433,6 @@
 			NOT = {
 				has_global_flag = RUS_german_full_access_flag
 			}
-			OR = {
-				has_country_flag = RUS_ger_agree_potsdam
-				has_country_flag = RUS_germans_leave_potsdam
-			}
 			FRA = {
 				NOT = {
 					has_government = communism
@@ -1626,7 +1663,6 @@
 			NOT = {
 				has_global_flag = RUS_german_full_access_flag
 			}
-			has_country_flag = RUS_ger_agree_potsdam
 		}
 
 		offset = {
@@ -1706,6 +1742,7 @@
 
 		available = {
 			has_global_flag = RUS_german_railroads_flag
+			has_country_flag = RUS_ger_agree_potsdam
 			NOT = {
 				has_war_with = GER
 			}
