@@ -39,6 +39,88 @@
 	}
 
 	focus = {
+		id = RUS_configure_foreign_policy
+		icon = GFX_generic_deal_germany
+		x = -14
+		y = 1
+		relative_position_id = RUS_the_powers_of_the_tsar
+		prerequisite = { focus = RUS_the_powers_of_the_tsar }
+		cost = 35
+		 
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		offset = {
+			x = 3
+			trigger = {
+				has_completed_focus = RUS_the_powers_of_the_tsar
+				OR = {
+					has_completed_focus = RUS_elections_in_the_duma
+					has_completed_focus = RUS_cement_the_tsars_rule
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_european_matters
+		icon = GFX_focus_usa_focus_on_europe #TEMP GOAL
+		x = -4
+		y = 1
+		relative_position_id = RUS_configure_foreign_policy
+		prerequisite = { focus = RUS_configure_foreign_policy }
+		cost = 35
+		 
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_asian_matters
+		icon = GFX_focus_usa_focus_on_europe #TEMP GOAL
+		x = 4
+		y = 1
+		relative_position_id = RUS_configure_foreign_policy
+		prerequisite = { focus = RUS_configure_foreign_policy }
+		cost = 35
+		 
+
+		available = {
+			NOT = { has_government = communism }
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
 		id = RUS_the_powers_of_the_tsar
 		icon = GFX_focus_SOV_the_true_tsars
 		mutually_exclusive = { focus = RUS_accede_to_the_radicals}
@@ -160,39 +242,6 @@
 		}
 	}
 
-	focus = {
-		id = RUS_configure_foreign_policy
-		icon = GFX_generic_deal_germany
-		x = -14
-		y = 1
-		relative_position_id = RUS_the_powers_of_the_tsar
-		prerequisite = { focus = RUS_the_powers_of_the_tsar }
-		cost = 35
-		 
-
-		available = {
-			NOT = { has_government = communism }
-		}
-
-		completion_reward = {
-			add_political_power = 50
-		}
-
-		offset = {
-			x = 3
-			trigger = {
-				has_completed_focus = RUS_the_powers_of_the_tsar
-				OR = {
-					has_completed_focus = RUS_elections_in_the_duma
-					has_completed_focus = RUS_cement_the_tsars_rule
-				}
-			}
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	}
 
 	focus = {
 		id = RUS_cement_the_tsars_rule
@@ -1279,29 +1328,7 @@
 		}
 	}
 
-	focus = {
-		id = RUS_european_matters
-		icon = GFX_focus_usa_focus_on_europe #TEMP GOAL
-		x = -4
-		y = 1
-		relative_position_id = RUS_configure_foreign_policy
-		prerequisite = { focus = RUS_configure_foreign_policy }
-		cost = 35
-		 
-
-		available = {
-			NOT = { has_government = communism }
-		}
-
-		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	}
+	
 
 	focus = {
 		id = RUS_continued_dialogue_with_the_germans
@@ -1626,29 +1653,7 @@
 		}
 	}
 
-	focus = {
-		id = RUS_asian_matters
-		icon = GFX_focus_usa_focus_on_europe #TEMP GOAL
-		x = 4
-		y = 1
-		relative_position_id = RUS_configure_foreign_policy
-		prerequisite = { focus = RUS_configure_foreign_policy }
-		cost = 35
-		 
-
-		available = {
-			NOT = { has_government = communism }
-		}
-
-		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	}
+	
 
 	focus = {
 		id = RUS_matters_in_persia
