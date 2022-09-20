@@ -660,4 +660,36 @@ spriteTypes = {
 		}
     }
 	
+	SpriteType = { 
+		name = "GFX_RUS_reclaim_sakhalin_russia" 
+		texturefile = "gfx/interface/goals/RUS_reclaim_sakhalin.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_reclaim_sakhalin.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_reclaim_sakhalin.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
 }

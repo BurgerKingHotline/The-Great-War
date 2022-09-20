@@ -8,7 +8,6 @@ on_actions = {
                         NOT = { 
                             OR = {
                                 tag = QIN
-                                tag = RAJ
                                 tag = PER
                                 is_puppet = yes #master should take care of them
                                 is_on_continent = south_america #no one cares about them, 
@@ -58,7 +57,10 @@ on_actions = {
                 }
                 if = {
                     limit = {
-                        has_country_flag = RUS_provisional_government_in_charge
+                        OR = {
+                            has_country_flag = RUS_provisional_government_in_charge
+                            surrender_progress > 0.25
+                        }
                     }
                     RUS_civil_war_start = yes
                 }
@@ -79,6 +81,18 @@ on_actions = {
                         original_tag = SOV
                     }
                 }
+                every_state = {
+                    limit = {
+                        is_core_of = RUS
+                    }
+                    remove_core_of = RUS
+                }
+                every_state = {
+                    limit = {
+                        is_claimed_by = RUS
+                    }
+                   remove_claim_by = RUS
+                }
                 clr_global_flag = Russian_civil_war_flag
                 set_global_flag = Reds_won_civil_war_flag
             }
@@ -90,6 +104,18 @@ on_actions = {
                     FROM = {
                         original_tag = RUS
                     }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = SOV
+                    }
+                    remove_core_of = SOV
+                }
+                every_state = {
+                    limit = {
+                        is_claimed_by = SOV
+                    }
+                   remove_claim_by = SOV
                 }
                 clr_global_flag = Russian_civil_war_flag
                 set_global_flag = Whites_won_civil_war_flag

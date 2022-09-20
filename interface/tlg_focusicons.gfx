@@ -99,4 +99,9 @@ spriteTypes = {
 		name = "GFX_RUS_realize_greater_russia"
 		texturefile = "gfx/interface/goals/RUS_realize_greater_russia.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_RUS_reclaim_sakhalin"
+		texturefile = "gfx/interface/goals/RUS_reclaim_sakhalin.dds"
+	}
 }
