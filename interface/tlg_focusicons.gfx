@@ -59,4 +59,44 @@ spriteTypes = {
 		name = "GFX_JAP_falling_tiger"
 		texturefile = "gfx/interface/goals/JAP_falling_tiger.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_generic_army_deal"
+		texturefile = "gfx/interface/goals/GEN_army_deal.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_naval_dominance"
+		texturefile = "gfx/interface/goals/GER_naval_dominance.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_integrate_slavs"
+		texturefile = "gfx/interface/goals/RUS_integrate_slavs.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_seize_tuva"
+		texturefile = "gfx/interface/goals/RUS_seize_tuva.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_third_rome"
+		texturefile = "gfx/interface/goals/RUS_third_rome.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_league_of_emperors"
+		texturefile = "gfx/interface/goals/RUS_league_of_emperors.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_pan_russia"
+		texturefile = "gfx/interface/goals/RUS_pan_russia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_realize_greater_russia"
+		texturefile = "gfx/interface/goals/RUS_realize_greater_russia.dds"
+	}
 }

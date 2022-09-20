@@ -1,0 +1,4 @@
+﻿l_english:
+ # USA ELECTORAL COLLEGE GUI
+ usa_elect_cat:0 "The Electoral College"
+ usa_elect_cat_cannidates:0 "£redsquare_text_icon William H. Taft §R[?republican_elec_votes]§!  £bluesquare_text_icon Woodrow Wilson §B[?democrat_elec_votes]§!\n£greensquare_text_icon Theodore Roosevelt §G[?progressive_elec_votes]§!  £pinksquare_text_icon Eugene Debs §t[?socialist_elec_votes]§!"

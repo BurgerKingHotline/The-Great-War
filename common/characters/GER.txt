@@ -74,11 +74,6 @@ characters={
 					has_completed_focus = GER_replace_moltke
 				}
 			}
-			available = {
-				NOT = {
-					has_idea = GER_erich_falkenhayn
-				}
-			}
 		}
 	}
 	GER_josias_heeringen={

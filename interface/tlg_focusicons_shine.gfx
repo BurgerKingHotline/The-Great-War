@@ -395,5 +395,269 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
     }
+
+	SpriteType = { 
+		name = "GFX_RUS_integrate_slavs" 
+		texturefile = "gfx/interface/goals/RUS_integrate_slavs.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_integrate_slavs.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_integrate_slavs.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_generic_army_deal" 
+		texturefile = "gfx/interface/goals/GEN_army_deal.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/GEN_army_deal.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/GEN_army_deal.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_GER_naval_dominance" 
+		texturefile = "gfx/interface/goals/GER_naval_dominance.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/GER_naval_dominance.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/GER_naval_dominance.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_RUS_seize_tuva" 
+		texturefile = "gfx/interface/goals/RUS_seize_tuva.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_seize_tuva.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_seize_tuva.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_RUS_third_rome" 
+		texturefile = "gfx/interface/goals/RUS_third_rome.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_third_rome.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_third_rome.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_RUS_league_of_emperors" 
+		texturefile = "gfx/interface/goals/RUS_league_of_emperors.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_league_of_emperors.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_league_of_emperors.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_RUS_pan_russia" 
+		texturefile = "gfx/interface/goals/RUS_pan_russia.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_pan_russia.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_pan_russia.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_RUS_realize_greater_russia" 
+		texturefile = "gfx/interface/goals/RUS_realize_greater_russia.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_realize_greater_russia.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_realize_greater_russia.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
 	
 }

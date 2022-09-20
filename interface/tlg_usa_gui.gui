@@ -1,0 +1,371 @@
+@US_GUI_X = 6
+@US_GUI_Y = 5
+
+guiTypes = {
+    containerWIndowType = {
+        name = "us_election_ui_window"
+        position = { x = 0 y = 0 }
+        size = { width = 50% height = 355 }
+		
+		instantTextBoxType = {
+			name = usa_cannidates_des
+			position = { x = 7 y = 310 }
+			textureFile = ""
+			font = "hoi_20bs"
+			borderSize = {x = 4 y = 4}
+			text = usa_elect_cat_cannidates
+			maxWidth = 500
+			maxHeight = 50
+		}
+
+        iconType = {
+            name = "usa_AL"
+            spriteType = "GFX_US_Alabama"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_AK"
+            spriteType = "GFX_US_Alaska"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_AZ"
+            spriteType = "GFX_US_Arizona"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_AR"
+            spriteType = "GFX_US_Arkansas"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_CA"
+            spriteType = "GFX_US_California"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_CO"
+            spriteType = "GFX_US_Colorado"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_CT"
+            spriteType = "GFX_US_Conneticut"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_DE"
+            spriteType = "GFX_US_Delaware"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_FL"
+            spriteType = "GFX_US_Florida"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_GA"
+            spriteType = "GFX_US_Georgia"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_HI"
+            spriteType = "GFX_US_Hawaii"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_ID"
+            spriteType = "GFX_US_Idaho"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_IL"
+            spriteType = "GFX_US_Illinois"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_IN"
+            spriteType = "GFX_US_Indiana"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_IA"
+            spriteType = "GFX_US_Iowa"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_KS"
+            spriteType = "GFX_US_Kansas"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_KY"
+            spriteType = "GFX_US_Kentuky"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_LA"
+            spriteType = "GFX_US_Louisiania"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_ME"
+            spriteType = "GFX_US_Maine"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_MD"
+            spriteType = "GFX_US_Maryland"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_MA"
+            spriteType = "GFX_US_Massivetwoshits"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_MI"
+            spriteType = "GFX_US_Michigan"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_MN"
+            spriteType = "GFX_US_Minnesota"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_MS"
+            spriteType = "GFX_US_Missisippi"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_MO"
+            spriteType = "GFX_US_Missouri"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_MT"
+            spriteType = "GFX_US_Montana"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_NV"
+            spriteType = "GFX_US_Nevada"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_NE"
+            spriteType = "GFX_US_Nebraska"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_NM"
+            spriteType = "GFX_US_New_Mexico"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_NH"
+            spriteType = "GFX_US_New_Hampsire"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_NJ"
+            spriteType = "GFX_US_New_Jersey"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_NY"
+            spriteType = "GFX_US_New_York"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_NC"
+            spriteType = "GFX_US_North_Carolina"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_ND"
+            spriteType = "GFX_US_North_Dakota"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_OH"
+            spriteType = "GFX_US_Ohio"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_OK"
+            spriteType = "GFX_US_Oklahoma"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_OR"
+            spriteType = "GFX_US_Oregon"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_PA"
+            spriteType = "GFX_US_Pennsylvania"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_RI"
+            spriteType = "GFX_US_Rhode_Island"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_SC"
+            spriteType = "GFX_US_South_Carolina"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_SD"
+            spriteType = "GFX_US_South_Dakota"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_TN"
+            spriteType = "GFX_US_Tennesse"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_TX"
+            spriteType = "GFX_US_Texas"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_UT"
+            spriteType = "GFX_US_Utah"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_VT"
+            spriteType = "GFX_US_Vermont"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_VA"
+            spriteType = "GFX_US_Virginia"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_WA"
+            spriteType = "GFX_US_Washington"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_WV"
+            spriteType = "GFX_US_West_Virginia"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_WI"
+            spriteType = "GFX_US_Wisconsin"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+
+        iconType = {
+            name = "usa_WY"
+            spriteType = "GFX_US_Wyoming"
+            position = { x =@US_GUI_X y =@US_GUI_Y }
+			scale = 0.64
+        }
+    }
+}

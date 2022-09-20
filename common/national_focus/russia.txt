@@ -161,7 +161,7 @@
 
 	focus = {
 		id = RUS_seize_tannu_tuva
-		icon = GFX_focus_SOV_the_true_tsars
+		icon = GFX_RUS_seize_tuva
 		prerequisite = { focus = RUS_asian_matters }
 		x = -1
 		y = 1
@@ -615,7 +615,7 @@
 
 	focus = {
 		id = RUS_focus_on_pan_russia
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_RUS_pan_russia
 		prerequisite = { focus = RUS_on_our_own }
 		mutually_exclusive = { focus = RUS_unify_the_slavs}
 		x = 1
@@ -677,7 +677,7 @@
 
 	focus = {
 		id = RUS_reclaim_sakhalin
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_RUS_reclaim_sakhalin
 		prerequisite = { focus = RUS_asian_matters }
 		prerequisite = { focus = RUS_on_our_own}
 		x = -2
@@ -770,7 +770,7 @@
 
 	focus = {
 		id = RUS_realise_greater_russia
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_RUS_realize_greater_russia
 		prerequisite = { focus = RUS_focus_on_pan_russia }
 		x = 1
 		y = 2
@@ -815,7 +815,7 @@
 
 	focus = {
 		id = RUS_unify_the_slavs
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_SOV_panslavic_nationalism
 		prerequisite = { focus = RUS_on_our_own }
 		mutually_exclusive = { focus = RUS_focus_on_pan_russia }
 		x = -1
@@ -869,7 +869,7 @@
 
 	focus = {
 		id = RUS_integrate_the_slavs
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_RUS_integrate_slavs
 		prerequisite = { focus = RUS_unify_the_slavs }
 		x = -1
 		y = 2
@@ -912,7 +912,7 @@
 
 	focus = {
 		id = RUS_a_third_rome
-		icon = GFX_focus_BUL_supremacy_on_the_bosporus #TEMP GOAL
+		icon = GFX_RUS_third_rome
 		prerequisite = { focus = RUS_focus_on_pan_russia focus = RUS_unify_the_slavs }
 		x = -1
 		y = 1
@@ -1414,7 +1414,7 @@
 
 	focus = {
 		id = RUS_revive_the_league_of_emperors
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_RUS_league_of_emperors
 		x = 0
 		y = 2
 		relative_position_id = RUS_rapproachments_with_the_austrians
@@ -1545,7 +1545,7 @@
 
 	focus = {
 		id = RUS_joint_training
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_generic_army_deal
 		x = -2
 		y = 2
 		relative_position_id = RUS_strengthen_the_entente

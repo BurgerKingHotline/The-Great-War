@@ -1,0 +1,12 @@
+usa_elect_cat = {
+	visible_when_empty = yes
+	priority = 10000
+	scripted_gui = us_elec_ui 
+	allowed = {
+		original_tag = USA 
+	}
+	visible = {
+		original_tag = USA
+		has_government = democratic
+	}
+}

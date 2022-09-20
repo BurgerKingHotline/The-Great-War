@@ -1,0 +1,163 @@
+scripted_gui = {
+	us_elec_ui = {
+		context_type = decision_category
+		window_name = "us_election_ui_window"
+
+		visible = {
+			original_tag = USA  
+		}
+
+		properties = {
+			usa_AL = {
+				frame = al_elect_status
+			}
+			usa_AK = {
+				frame = ak_elect_status
+			}
+			usa_AZ = {
+				frame = az_elect_status
+			}
+			usa_AR = {
+				frame = ar_elect_status
+			}
+			usa_CA = {
+				frame = ca_elect_status
+			}
+			usa_CO = {
+				frame = co_elect_status
+			}
+			usa_CT = {
+				frame = ct_elect_status
+			}
+			usa_DE = {
+				frame = de_elect_status
+			}
+			usa_FL = {
+				frame = fl_elect_status
+			}
+			usa_GA = {
+				frame = ga_elect_status
+			}
+			usa_HI = {
+				frame = hi_elect_status
+			}
+			usa_ID = {
+				frame = id_elect_status
+			}
+			usa_IL = {
+				frame = il_elect_status
+			}
+			usa_IN = {
+				frame = in_elect_status
+			}
+			usa_IA = {
+				frame = ia_elect_status
+			}
+			usa_KS = {
+				frame = ks_elect_status
+			}
+			usa_KY = {
+				frame = ky_elect_status
+			}
+			usa_LA = {
+				frame = la_elect_status
+			}
+			usa_ME = {
+				frame = me_elect_status
+			}
+			usa_MD = {
+				frame = md_elect_status
+			}
+			usa_MA = {
+				frame = ma_elect_status
+			}
+			usa_MI = {
+				frame = mi_elect_status
+			}
+			usa_MN = {
+				frame = mn_elect_status
+			}
+			usa_MS = {
+				frame = ms_elect_status
+			}
+			usa_MO = {
+				frame = md_elect_status
+			}
+			usa_MT = {
+				frame = mt_elect_status
+			}
+			usa_NV = {
+				frame = nv_elect_status
+			}
+			usa_NE = {
+				frame = ne_elect_status
+			}
+			usa_NM = {
+				frame = nm_elect_status
+			}
+			usa_NH = {
+				frame = nh_elect_status
+			}
+			usa_NJ = {
+				frame = nj_elect_status
+			}
+			usa_NY = {
+				frame = ny_elect_status
+			}
+			usa_NC = {
+				frame = nc_elect_status
+			}
+			usa_ND = {
+				frame = nd_elect_status
+			}
+			usa_OH = {
+				frame = oh_elect_status
+			}
+			usa_OK = {
+				frame = ok_elect_status
+			}
+			usa_OR = {
+				frame = or_elect_status
+			}
+			usa_PA = {
+				frame = pa_elect_status
+			}
+			usa_RI = {
+				frame = ri_elect_status
+			}
+			usa_SC = {
+				frame = sc_elect_status
+			}
+			usa_SD = {
+				frame = sd_elect_status
+			}
+			usa_TN = {
+				frame = tn_elect_status
+			}
+			usa_TX = {
+				frame = tx_elect_status
+			}
+			usa_UT = {
+				frame = ut_elect_status
+			}
+			usa_VT = {
+				frame = vt_elect_status
+			}
+			usa_VA = {
+				frame = va_elect_status
+			}
+			usa_WA = {
+				frame = wa_elect_status
+			}
+			usa_WV = {
+				frame = wv_elect_status
+			}
+			usa_WI = {
+				frame = wi_elect_status
+			}
+			usa_WY = {
+				frame = wy_elect_status
+			}
+		}
+	}	
+}
