@@ -620,32 +620,31 @@ country_event = { #mass uprisings
 					add_ideas = neutrality_idea
 				}
 				division_template = {
-						name = "Finnish Infantry Division"
-						is_locked = no
-						priority = 0
-						template_counter = 0
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 0 y = 3 }
-							infantry = { x = 1 y = 0 }
-						}
+					name = "Finnish Infantry Division"
+					is_locked = no
+					priority = 0
+					template_counter = 0
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
 					}
-					202 = {
-						create_unit = { 
-							division = "name = \"Infantry Division\" division_template = \"Ukranian Infantry Division\" start_experience_factor = 0.5" 
-							owner = UKR
-							prioritize_location = 525
-							allow_spawning_on_enemy_provs = no
-							count = 10
-						}
+				}
+				111 = {
+					create_unit = { 
+						division = "name = \"Infantry Division\" division_template = \"Finnish Infantry Division\" start_experience_factor = 0.5" 
+						owner = FIN
+						allow_spawning_on_enemy_provs = no
+						count = 10
 					}
-					add_ai_strategy = {
-						type = prepare_for_war 
-						id = SOV
-						value = 1000
-					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war 
+					id = SOV
+					value = 1000
+				}
 			}
 			if = {
 				limit = {

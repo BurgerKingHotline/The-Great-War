@@ -36,11 +36,12 @@ ideas = {
 
    				modifier = {
 					factor = 60 # being disarmed is bad in a wargame yo
+					has_idea = disarmed_nation
 				}
 			}
 
 			modifier = {
-				conscription = 0.015
+				conscription = 0.005
 				mobilization_speed = 0.01
 			}
 
@@ -61,7 +62,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.025
+				conscription = 0.015
 				mobilization_speed = 0.02
 			}
 
