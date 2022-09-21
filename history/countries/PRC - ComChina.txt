@@ -78,10 +78,4 @@ set_popularities = {
 	communism = 100
 }
 
-add_ideas = {
-	closed_economy
-	service_by_requirement
-	partial_economic_mobilisation
-}
-
 add_opinion_modifier = { target = CHI modifier = hostile_status }

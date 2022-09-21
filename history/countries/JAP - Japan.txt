@@ -30,8 +30,6 @@ add_ideas = {
 	JAP_modernisation
 	JAP_rising_sun
 	limited_exports
-	limited_conscription
-	partial_economic_mobilisation
 }
 
 527 = {

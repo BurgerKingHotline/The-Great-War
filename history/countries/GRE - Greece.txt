@@ -86,15 +86,6 @@ set_convoys = 10
 	
 
 #generic focuses
-	if = { 
-		limit = { NOT = { has_dlc = "Battle for the Bosporus" } } 	
-
-		add_ideas = {
-			partial_economic_mobilisation
-			export_focus
-			limited_conscription
-		}
-	}
 	
 	#oob = "GRE_1939"
 	if = {
