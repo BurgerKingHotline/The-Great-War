@@ -1199,6 +1199,8 @@ country_event = { #Potsdam Meeting
 
 		set_global_flag = RUS_german_full_access_flag
 
+		custom_effect_tooltip = RUS_brits_wont_like_this
+
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -1447,7 +1449,7 @@ country_event = { #germans leave
 	
 	option = {#ah
 		name = rus_events.7.a
-		clr_global_flag = RUS_russian_full_access_flag
+		set_global_flag = RUS_russian_full_access_flag
 		clr_global_flag = RUS_german_railroads_flag
 		clr_global_flag = RUS_german_full_access_flag
 		set_country_flag = RUS_germans_leave_potsdam
