@@ -2194,6 +2194,7 @@ country_event = { #germwany no accewpt
 	
 	option = {#oh
 		name = rus_events.23.a
+		clr_country_flag = RUS_only_ger_owns_persia
 		ai_chance = {
 			factor = 10
 		}
@@ -2210,7 +2211,6 @@ country_event = { #englwand no accewpt
 	option = {#so uh, germany?
 		name = rus_events.25.a
 		clr_country_flag = RUS_britain_also_owns_persia
-		set_country_flag = RUS_only_ger_owns_persia
 		ai_chance = {
 			factor = 10
 		}

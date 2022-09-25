@@ -3,11 +3,31 @@
  #Focus 
  RUS_meeting_with_the_germans:0 "Meeting With The Germans"
 
- RUS_menshevik_division_spawns:0 "Menshevik divisions will be spawned when the civil war starts!"
- RUS_bolshevik_division_spawns:0 "Bolshevik divisions will be spawned when the civil war starts!"
- RUS_trudovik_path_will_be_locked:0 "§RThe Trudovik path in the Soviet tree will be locked!§!"
- RUS_increase_divisions_when_civil_war:0 "More divisions will be spawned when the civil war starts!"
- RUS_when_civil_war_starts:0 "When the Russian civil war starts:"
+ RUS_configure_foreign_policy:0 "Configure Foreign Policy"
+ RUS_european_matters:0 "European Matters"
+ RUS_continued_dialogue_with_the_germans:0 "Continued Dialogue With The Germans"
+ RUS_rapproachments_with_the_austrians:0 "Rapproachment With The Austrians"
+ RUS_revive_the_league_of_emperors:0 "Revive The League Of Emperors"
+ RUS_strengthen_the_entente:0 "Strengthen The Entente"
+ RUS_formalize_the_entente:0 "Formalize The Entente"
+ RUS_safeguard_the_orthodoxy:0 "Safeguard The Orthodoxy"
+ RUS_joint_training:0 "Joint Training"
+ RUS_on_our_own:0 "On Our Own"
+ RUS_unify_the_slavs:0 "Unify The Slavs"
+ RUS_integrate_the_slavs:0 "Integrate The Slavs"
+ RUS_a_third_rome:0 "A Third Rome"
+ RUS_focus_on_pan_russia:0 "Focus On Pan Russia"
+ RUS_realise_greater_russia:0 "Realise Greater Russia"
+
+ RUS_asian_matters:0 "Asian Matters"
+ RUS_reclaim_sakhalin:0 "Reclaim Sakhalin"
+ RUS_seize_tannu_tuva:0 "Seize Tannu Tuva"
+ RUS_matters_in_persia:0 "Matters In Persia"
+ RUS_influence_persian_politics:0 "Influence Persian Politics"
+ RUS_help_build_german_rails:0 "Help Build German Rails"
+ RUS_invest_in_persia:0 "Invest In Persia"
+ RUS_division_of_persia:0 "Division Of Persia"
+ RUS_direct_intervention_in_persia:0 "Direct Intervention In Persia"
 
  #DECISIONS
  russian_socialism_decisions:0 "Socialist Agitation"
@@ -41,7 +61,13 @@
 
  #TTS
  RUS_brits_wont_like_this:0 "§RThe British will not like this course of action...§!"
+ RUS_core_greater_state_on_owned:0 "§YCores the states that was claimed by the previous focus.§!"
  
+ RUS_menshevik_division_spawns:0 "Menshevik divisions will be spawned when the civil war starts!"
+ RUS_bolshevik_division_spawns:0 "Bolshevik divisions will be spawned when the civil war starts!"
+ RUS_trudovik_path_will_be_locked:0 "§RThe Trudovik path in the Soviet tree will be locked!§!"
+ RUS_increase_divisions_when_civil_war:0 "More divisions will be spawned when the civil war starts!"
+ RUS_when_civil_war_starts:0 "When the Russian civil war starts:"
  #events
  rus_events.1.t:0 "Germans Meet us in Potsdam"
  rus_events.1.desc:0 "omg the germonies is talkint o people!?"
@@ -72,3 +98,4 @@
  rus_events.8.t:0 "Germans Leave Without a Resolution"
  rus_events.8.desc:0 ""
  rus_events.8.a:0 "Well, that leaves Persia to us."
+ rus_events.28.t:0 "Russia Demands our Partition!"
