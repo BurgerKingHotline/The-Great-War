@@ -10,7 +10,9 @@ on_actions = {
                                 tag = QIN
                                 tag = PER
                                 is_puppet = yes #master should take care of them
-                                is_on_continent = south_america #no one cares about them, 
+                                capital_scope = {
+                                    is_on_continent = south_america #no one cares about them, 
+                                }
                             }
                             has_country_flag = has_actual_oob 
                         }

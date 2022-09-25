@@ -32,6 +32,10 @@ state={
 				naval_base = 4
 			}
 		}
+		1911.4.28 = {
+			owner = MOR
+
+		}
 	}
 
 	provinces={

@@ -218,6 +218,24 @@ if = {
 	}
 }
 
+add_ai_strategy = {
+    type = befriend
+    id = SAU
+    value = 500
+}
+
+add_ai_strategy = {
+    type = befriend
+    id = JBL
+    value = -100
+}
+
+add_ai_strategy = {
+    type = send_lend_lease_desire
+    id = SAU
+    value = 1000
+}
+
 if = {
 	limit = { has_dlc = "Together for Victory" }
 

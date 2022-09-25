@@ -40,7 +40,7 @@
 
 	focus = {
 		id = RUS_configure_foreign_policy
-		icon = GFX_generic_deal_germany
+		icon = GFX_goal_generic_political_pressure
 		x = -14
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar
@@ -74,7 +74,7 @@
 
 	focus = {
 		id = RUS_european_matters
-		icon = GFX_focus_usa_focus_on_europe #TEMP GOAL
+		icon = GFX_focus_usa_focus_on_europe
 		x = -4
 		y = 1
 		relative_position_id = RUS_configure_foreign_policy
@@ -98,7 +98,7 @@
 
 	focus = {
 		id = RUS_asian_matters
-		icon = GFX_focus_usa_focus_on_europe #TEMP GOAL
+		icon = GFX_JAP_falling_tiger #TEMP GOAL
 		x = 4
 		y = 1
 		relative_position_id = RUS_configure_foreign_policy
@@ -577,7 +577,10 @@
 		available = {
 			is_in_faction = no
 			OR = {
-				has_government = neutrality
+				AND = {
+					has_government = neutrality
+					has_completed_focus = RUS_cement_the_tsars_rule
+				}
 				has_government = fascism
 			}
 		}
@@ -2033,7 +2036,22 @@
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			modifier = {
+				add = 1
+				date > 1915.1.1 
+				NOT = {
+					has_civil_war = yes
+					has_war_with = SOV
+				}
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+				GER = {
+					has_government = neutrality
+				}
+			}
 		}
 	}
 

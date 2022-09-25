@@ -2,9 +2,6 @@ state={
 	id=934
 	name="STATE_719" # Natal
 	manpower = 3962157
-	resources={
-		chromium=60 # was: 116
-	}
 	
 	state_category = city
 
