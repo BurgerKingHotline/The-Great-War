@@ -76,6 +76,9 @@
 		mutually_exclusive = { focus = JAP_abandon_british_alliance }
 
 		available = {
+			JAP = {
+				has_country_flag = JAP_allied_britain
+			}
 		}
 
 		completion_reward = {
@@ -207,6 +210,12 @@
 		mutually_exclusive = { focus = JAP_commitment_to_the_british }
 
 		available = {
+			JAP = {
+				OR = {
+					has_country_flag = JAP_chose_neutrality
+					has_country_flag = JAP_allied_germany
+				}
+			}
 		}
 
 		completion_reward = {
@@ -232,6 +241,9 @@
 		mutually_exclusive = { focus = JAP_reconcile_with_germany }
 
 		available = {
+			JAP = {
+				has_country_flag = JAP_chose_neutrality
+			}
 		}
 
 		completion_reward = {
@@ -244,7 +256,7 @@
 	}
 
 	focus = {
-		id = JAP_increased_resource_extration
+		id = JAP_increased_resource_extraction
 		icon = GFX_focus_generic_steel
 		x = 27
 		y = 4
@@ -292,7 +304,7 @@
 		y = 5
 		cost = 35
 		
-		prerequisite = { focus = JAP_increased_resource_extration }
+		prerequisite = { focus = JAP_increased_resource_extraction }
 		prerequisite = { focus = JAP_develop_defensive_capabilities }
 
 		available = {
@@ -321,6 +333,7 @@
 		mutually_exclusive = { focus = JAP_adopt_neutrality }
 
 		available = {
+			has_country_flag = JAP_allied_germany
 		}
 
 		completion_reward = {

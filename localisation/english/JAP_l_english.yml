@@ -14,3 +14,37 @@
  JAP_democratic_party:0 "Rikken Seiyūkai"
  JAP_neutrality_party:0 "Rikken Seiyūkai"
  JAP_fascism_party:0 "Gen'yōsha"
+
+ ##############
+ # FOCUS TREE #
+ ##############
+ JAP_rising_sun:0 "The Rising Sun"
+ JAP_storm_on_the_horizon:0 "Storm On The Horizon"
+ JAP_commitment_to_the_british:0 "Commitment To The British"
+ JAP_british_military_assistance:0 "British Military Assistance"
+ JAP_rent_armament_factories:0 "Rent Armament Factories"
+ JAP_hire_british_companies:0 "Hire British Companies"
+ JAP_consolidate_uk_alliance:0 "Consolidate The Alliance"
+ JAP_occupy_german_colonies:0 "Occupy German Colonies"
+ JAP_abandon_british_alliance:0 "Abandon The British Alliance"
+ JAP_adopt_neutrality:0 "Adopt Neutrality"
+ JAP_increased_resource_extraction:0 "Increased Resource Extraction"
+ JAP_develop_defensive_capabilities:0 "Develop Defensive Capabilities"
+ JAP_beacon_of_prosperity:0 "Beacon Of Prosperity"
+ JAP_assume_control_of_colonies:0 "Assume Control Of Colonies"
+ JAP_reconcile_with_germany:0 "Reconcile With Germany"
+ JAP_partnership_with_krupp:0 "Partnership With Krupp"
+ JAP_german_delegation:0 "Invite The German Delegation"
+ JAP_join_triple_alliance:0 "Join The Triple Alliance"
+ JAP_offensive_into_indochina:0 "Offensive Into Indochina"
+ JAP_blocakde_australia:0 "Blockade Australia"
+ JAP_falling_tiger:0 "The Falling Tiger"
+ JAP_investing_in_mantetsu:0 "Investing In Mantetsu"
+ JAP_agreements_with_the_cer:0 "Agreements With The CER"
+ JAP_take_over_the_cer:0 "Take Over The CER"
+ JAP_support_the_revolutionaries:0 "Support The Revolutionaries"
+ JAP_manchurian_gamble:0 "A Manchurian Gamble"
+
+ ##########
+ # EVENTS #
+ ##########
