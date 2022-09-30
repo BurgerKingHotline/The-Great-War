@@ -1,0 +1,153 @@
+#Ethiopia
+
+music_station = "base_music"
+
+music = {
+	song = "ethiopian_highlands"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = ETH
+		}
+	}
+}
+
+music = {
+	song = "safer_grounds"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = ETH
+		}
+	}
+}
+
+music = {
+	song = "threat_from_red_sea"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = ETH
+		}	
+	}
+}
+
+music = {
+	song = "wildlife_surroundings"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = ETH
+		}	
+	}
+}
+
+
+#Italy
+
+music = {
+	song = "cittadina_irresistibile"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = ITA
+		}
+	}
+}
+
+music = {
+	song = "fino_a_combattere"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = ITA
+		}
+	}
+}
+
+music = {
+	song = "la_marcia_dei_soldati"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = ITA
+		}
+	}
+}
+
+music = {
+	song = "lotta_di_vecchi_amici"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = ITA
+		}
+	}
+}
+
+
+#Switzerland
+
+music = {
+	song = "dem_vaterland"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = SWI
+		}
+	}
+}
+
+music = {
+	song = "der_preis_fur_die_freiheit"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = SWI
+		}
+	}
+}
+
+music = {
+	song = "die_parade"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = SWI
+		}
+	}
+}
+
+music = {
+	song = "tag_der_heimkehr"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			original_tag = SWI
+		}	
+	}
+}

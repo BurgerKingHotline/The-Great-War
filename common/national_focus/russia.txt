@@ -39,6 +39,45 @@
 	}
 
 	focus = {
+		id = RUS_the_powers_of_the_tsar
+		icon = GFX_focus_SOV_the_true_tsars
+		mutually_exclusive = { focus = RUS_accede_to_the_radicals}
+		prerequisite = { focus = RUS_meeting_with_the_germans }
+		x = -5
+		y = 1
+		relative_position_id = RUS_meeting_with_the_germans
+		cost = 70
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = RUS_accede_to_the_radicals
+			}
+		}
+
+		offset = {
+			x = 5
+			trigger = {
+				has_completed_focus = RUS_the_powers_of_the_tsar
+				
+			}
+		}
+		 
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 11
+		}
+	}
+
+	focus = {
 		id = RUS_configure_foreign_policy
 		icon = GFX_goal_generic_political_pressure
 		x = -14
@@ -120,44 +159,7 @@
 		}
 	}
 
-	focus = {
-		id = RUS_the_powers_of_the_tsar
-		icon = GFX_focus_SOV_the_true_tsars
-		mutually_exclusive = { focus = RUS_accede_to_the_radicals}
-		prerequisite = { focus = RUS_meeting_with_the_germans }
-		x = -5
-		y = 1
-		relative_position_id = RUS_meeting_with_the_germans
-		cost = 70
-
-		allow_branch = {
-			NOT = {
-				has_completed_focus = RUS_accede_to_the_radicals
-			}
-		}
-
-		offset = {
-			x = 5
-			trigger = {
-				has_completed_focus = RUS_the_powers_of_the_tsar
-				
-			}
-		}
-		 
-
-		completion_reward = {
-			add_stability = 0.05
-			add_war_support = 0.05
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
-			}
-		}
-
-		ai_will_do = {
-			factor = 11
-		}
-	}
+	
 
 	focus = {
 		id = RUS_seize_tannu_tuva
