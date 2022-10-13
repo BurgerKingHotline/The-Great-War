@@ -127,7 +127,7 @@ decrease_senussiya_resistence = {
 
 RUS_civil_war_start = {
 	country_event = { id = rus_civilwar.4 }
-	news_event = { id = TLG_newsevents.2 }
+	news_event = { id = TLG_newsevents.2 hours = 4}
 	SOV = {
 		set_cosmetic_tag = RUS
 		

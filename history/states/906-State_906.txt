@@ -4,6 +4,7 @@ state={
 	
 	history={
 		owner = ASH
+		add_claim_by = OTT
 		buildings = {
 			infrastructure = 4
 		}

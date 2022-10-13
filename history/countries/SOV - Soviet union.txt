@@ -6,6 +6,8 @@ recruit_character = SOV_vladimir_lenin
 recruit_character = SOV_trotsky
 recruit_character = SOV_stalin
 
+set_cosmetic_tag = RUS
+
 set_politics = {
 	ruling_party = communism
 	last_election = "1936.1.1"

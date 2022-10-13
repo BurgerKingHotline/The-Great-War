@@ -1,0 +1,26 @@
+state={
+	id=957
+	name="STATE_957"
+	manpower = 1017600
+	state_category = pastoral
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			
+		}
+
+		
+		add_core_of = EGY
+		add_core_of = SUD
+
+	}
+
+	provinces={
+		1960 5060 8052 10739
+	}
+
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -487,23 +487,7 @@ country_event = { #finnish civil war
 	title = rus_civilwar.6.t	
 	desc = rus_civilwar.6.desc
 
-	trigger = {
-		original_tag = FIN
-		exists = yes
-		any_owned_state = { #checking if fin has at least 2 states
-			is_capital = no 
-		}
-		is_subject = no
-		has_civil_war = no
-		OR = {
-			RUS = {
-				has_civil_war = yes
-			}
-			SOV = {
-				has_civil_war = yes
-			}
-		}
-	}
+	is_triggered_only = yes
 
 	fire_only_once = yes
 
@@ -645,11 +629,17 @@ country_event = { #mass uprisings
 					id = SOV
 					value = 1000
 				}
+				country_event = {
+					id = rus_civilwar.6
+					days = 62
+					random = 31
+				}
 			}
 			if = {
 				limit = {
 					FIN = {
 						has_war = yes
+						has_capitulated = no
 					}
 				}
 				every_enemy_country = {

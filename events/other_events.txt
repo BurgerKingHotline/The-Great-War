@@ -1,0 +1,216 @@
+﻿#if you have any extra events that dont fit in
+#if you want to move this to another event file that fits it more, thats fine
+add_namespace = other
+
+# press for state 855
+country_event = {
+	id = other.1
+	title = other.1.t
+	desc = other.1.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = BUL
+		is_subject = no
+		855 = {
+			owner = {
+				is_in_faction_with = ROOT
+				NOT = {
+					tag = ROOT
+				}
+			}
+			any_neighbor_state = {
+				owner = {
+					original_tag = BUL
+				}
+			}
+		}
+	}
+
+	fire_only_once = yes
+
+	option = {#yep, why not
+		name = other.1.a
+		
+	}
+	option = { #nah
+		name = other.1.b
+		add_political_power = -25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { #bulgaria demands 855
+	id = other.2
+	title = other.2.t
+	desc = other.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {#alr fine
+		name = other.2.a
+		855 = {
+			transfer_state_to = FROM
+		}
+		if = {
+			limit = {
+				ROOT = {
+					owns_state = 883
+				}
+			}
+			883 = {
+				transfer_state_to = FROM
+			}
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				original_tag = OTT
+			}
+			modifier = {#removing border gore
+				factor = 50
+				855 = {
+					all_neighbor_state = {
+						owner = {
+							NOT = {
+								tag = ROOT
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					is_ai = no
+				}
+			}
+		}
+	}
+	option = { #nah
+		name = other.2.b
+		add_political_power = -50
+		custom_effect_tooltip = they_might_leave_the_faction
+		faction_leader = {
+			country_event = {
+				id = other.3
+				days = 1
+			}
+		}
+		FROM = {
+			add_opinion_modifier = {
+				modifier = unstable_alliance
+				target = ROOT
+			}
+		}
+		hidden_effect = {
+			add_opinion_modifier = {
+				modifier = unstable_alliance
+				target = FROM
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				original_tag = OTT
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 5
+				has_opinion = {
+					target = FROM
+					value < -25
+				}
+			}
+		}
+	}
+}
+
+country_event = { #bickering in our faction
+	id = other.3
+	title = other.3.t
+	desc = other.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {#send a strongly worded message to them
+		name = other.3.a
+		add_political_power = -25
+	}
+}
+
+country_event = { #They accept!
+	id = other.4
+	title = other.4.t
+	desc = other.4.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {#great
+		name = other.4.a
+		add_political_power = 50
+	}
+}
+
+country_event = { #They decline
+	id = other.5
+	title = other.5.t
+	desc = other.5.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {#then i doubt we'll be able to cooperate
+		name = other.5.a
+		leave_faction = yes
+		faction_leader = {
+			ROOT = {
+				add_ai_strategy = {
+					type = alliance
+					id = PREV
+					value = -200
+				}
+			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = -200
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_timed_idea = { #so they dont immediately join another faction
+				idea = neutrality_idea
+				days = 180
+			}
+		}
+		ai_chance = { 
+			factor = 1
+			modifier = {  
+				factor = 0
+				OR = {
+					FROM = {
+						is_ai = no
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+	option = {#smh fine
+		name = other.5.b
+		add_political_power = -50
+		ai_chance = { 
+			factor = 1
+		}
+	}
+}

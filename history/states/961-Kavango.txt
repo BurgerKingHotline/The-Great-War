@@ -1,0 +1,23 @@
+
+state={
+	id=961
+	name="STATE_961"
+	manpower = 92400
+	state_category = pastoral
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = NMB
+
+	}
+
+	provinces={
+		1897 13217 
+	}
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

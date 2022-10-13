@@ -9,6 +9,7 @@ state={
 	history={
 		owner = ASH
 		add_claim_by = ASH
+		add_claim_by = OTT
 		victory_points = {
 			9894 3 
 		}
