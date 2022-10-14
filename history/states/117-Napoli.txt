@@ -23,6 +23,9 @@ state={
 			819 = {
 				naval_base = 6
 			}
+			6831 = {
+				naval_base = 1
+			}
 		}
 		add_core_of = ITA
 		1939.1.1 = {

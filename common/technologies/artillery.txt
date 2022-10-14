@@ -42,17 +42,17 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1911.1.1"
+				date > "1937.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1912.1.1"
+				date > "1938.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1914.1.1"
+				date > "1939.1.1"
 			}
 		}
 	}
@@ -97,7 +97,7 @@ technologies = {
 
 		research_cost = 1.5
 
-		start_year = 1910
+		start_year = 1936
 
 		folder = {
 			name = artillery_folder
@@ -113,17 +113,17 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1911.1.1"
+				date > "1937.1.1"
 			}
 
 			modifier = {
 				factor = 2
-				date > "1912.1.1"
+				date > "1938.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1914.1.1"
+				date > "1939.1.1"
 			}
 		}
 	}
@@ -146,7 +146,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1914
+		start_year = 1939
 
 		folder = {
 			name = artillery_folder
@@ -162,17 +162,17 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1912.1.9"
+				date > "1938.1.9"
 			}
 
 			modifier = {
 				factor = 2
-				date > "1914.1.1"
+				date > "1939.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1914.1.6"
+				date > "1939.1.6"
 			}
 		}
 	}
@@ -216,7 +216,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1915
+		start_year = 1940
 
 		folder = {
 			name = artillery_folder
@@ -232,17 +232,17 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1915.1.6"
+				date > "1940.1.6"
 			}
 
 			modifier = {
 				factor = 2
-				date > "1915.1.1"
+				date > "1941.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1916.1.1"
+				date > "1942.1.1"
 			}
 		}
 	}
@@ -284,7 +284,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1915
+		start_year = 1941
 
 		folder = {
 			name = artillery_folder
@@ -300,12 +300,12 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1915.1.6"
+				date > "1941.1.6"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1916.1.1"
+				date > "1942.1.1"
 			}
 		}
 	}
@@ -326,7 +326,7 @@ technologies = {
 
 		research_cost = 2
 
-		start_year = 1916
+		start_year = 1942
 
 		folder = {
 			name = artillery_folder
@@ -342,17 +342,17 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1915.1.9"
+				date > "1941.1.9"
 			}
 
 			modifier = {
 				factor = 2
-				date > "1916.1.1"
+				date > "1942.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1916.1.6"
+				date > "1942.1.6"
 			}
 		}
 	}
@@ -391,7 +391,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1917
+		start_year = 1943
 
 		folder = {
 			name = artillery_folder
@@ -407,17 +407,17 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1917.1.6"
+				date > "1943.1.6"
 			}
 
 			modifier = {
 				factor = 2
-				date > "1905.1.1"
+				date > "1944.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1905.1.1"
+				date > "1945.1.1"
 			}
 		}
 	}
@@ -455,6 +455,7 @@ technologies = {
 
 		enable_equipment_modules = {
 			tank_rocket_launcher
+			rocket_rails
 		}
 
 		path = {
@@ -464,7 +465,7 @@ technologies = {
 
 		research_cost = 2
 
-		start_year = 1915
+		start_year = 1940
 
 		folder = {
 			name = artillery_folder
@@ -507,7 +508,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1915
+		start_year = 1941
 
 		folder = {
 			name = artillery_folder
@@ -550,7 +551,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1916
+		start_year = 1942
 
 		folder = {
 			name = artillery_folder
@@ -584,7 +585,7 @@ technologies = {
 		}
 		research_cost = 1
 
-		start_year = 1917
+		start_year = 1943
 
 		folder = {
 			name = artillery_folder
@@ -630,7 +631,7 @@ technologies = {
 
 		research_cost = 1.5
 
-		start_year = 1910
+		start_year = 1936
 
 		folder = {
 			name = artillery_folder
@@ -655,17 +656,17 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				date > "1911.1.1"
+				date > "1937.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1912.1.1"
+				date > "1938.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1914.1.1"
+				date > "1939.1.1"
 			}
 		}
 
@@ -696,7 +697,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1914
+		start_year = 1939
 
 		folder = {
 			name = artillery_folder
@@ -747,7 +748,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1915
+		start_year = 1940
 
 		folder = {
 			name = artillery_folder
@@ -802,7 +803,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1915
+		start_year = 1941
 
 		folder = {
 			name = artillery_folder
@@ -853,7 +854,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1916
+		start_year = 1942
 
 		folder = {
 			name = artillery_folder
@@ -900,7 +901,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1917
+		start_year = 1943
 
 		folder = {
 			name = artillery_folder
@@ -938,6 +939,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_high_velocity_cannon
 			tank_heavy_cannon
+			tank_buster_1
 		}
 		path = {
 			leads_to_tech = antitank1
@@ -946,7 +948,7 @@ technologies = {
 
 		research_cost = 1.5
 
-		start_year = 1910
+		start_year = 1936
 
 		folder = {
 			name = artillery_folder
@@ -981,17 +983,17 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				date > "1911.1.1"
+				date > "1937.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1912.1.1"
+				date > "1938.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1914.1.1"
+				date > "1939.1.1"
 			}
 			modifier = {
 				factor = 10
@@ -1058,7 +1060,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1914
+		start_year = 1939
 
 		folder = {
 			name = artillery_folder
@@ -1090,12 +1092,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				date > "1914.1.6"
+				date > "1939.1.6"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1915.1.1"
+				date > "1940.1.1"
 			}
 		}
 
@@ -1108,8 +1110,8 @@ technologies = {
 	antitank2 = {
 
 		mot_anti_tank_brigade = {
-			hard_attack = 0.2
-			ap_attack = 0.2
+			hard_attack = 0.1
+			ap_attack = 0.1
 		}
 
 		enable_equipments = {
@@ -1117,6 +1119,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_heavy_cannon_2
+			tank_buster_2
 		}
 		path = {
 			leads_to_tech = antitank3
@@ -1125,7 +1128,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1915
+		start_year = 1940
 
 		folder = {
 			name = artillery_folder
@@ -1137,7 +1140,7 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1914.1.9"
+				date > "1939.1.9"
 			}
 			modifier = {
 				tag = JAP
@@ -1151,7 +1154,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				date > "1915.1.1"
+				date > "1940.1.1"
 			}
 			modifier = {
 				tag = USA
@@ -1160,7 +1163,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 5
-				date > "1915.1.6"
+				date > "1940.1.6"
 			}
 			modifier = {
 				factor = 10
@@ -1199,23 +1202,23 @@ technologies = {
 		}
 		light_tank_destroyer_brigade = {
 			hard_attack = 0.1
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 		medium_tank_destroyer_brigade = {
 			hard_attack = 0.1
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 		heavy_tank_destroyer_brigade = {
 			hard_attack = 0.1
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 		super_heavy_tank_destroyer_brigade = {
 			hard_attack = 0.1
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 		modern_tank_destroyer_brigade = {
 			hard_attack = 0.1
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 
 		path = {
@@ -1225,7 +1228,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1915
+		start_year = 1941
 
 		folder = {
 			name = artillery_folder
@@ -1237,7 +1240,7 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1915.1.6"
+				date > "1941.1.6"
 			}
 			modifier = {
 				tag = JAP
@@ -1251,12 +1254,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				date > "1916.1.1"
+				date > "1942.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1917.1.1"
+				date > "1943.1.1"
 			}
 			modifier = {
 				factor = 10
@@ -1295,23 +1298,23 @@ technologies = {
 		}
 		light_tank_destroyer_brigade = {
 			hard_attack = 0.05
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 		medium_tank_destroyer_brigade = {
 			hard_attack = 0.05
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 		heavy_tank_destroyer_brigade = {
 			hard_attack = 0.05
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 		super_heavy_tank_destroyer_brigade = {
 			hard_attack = 0.05
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 		modern_tank_destroyer_brigade = {
 			hard_attack = 0.05
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 
 		path = {
@@ -1321,7 +1324,7 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1916
+		start_year = 1942
 
 		folder = {
 			name = artillery_folder
@@ -1333,7 +1336,7 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1916.1.6"
+				date > "1942.1.6"
 			}
 			modifier = {
 				tag = JAP
@@ -1347,7 +1350,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 5
-				date > "1917.1.1"
+				date > "1943.1.1"
 			}
 			modifier = {
 				factor = 10
@@ -1380,7 +1383,7 @@ technologies = {
 		}
 		research_cost = 1
 
-		start_year = 1917
+		start_year = 1943
 
 		folder = {
 			name = artillery_folder
@@ -1392,7 +1395,7 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "1916.1.9"
+				date > "1942.1.9"
 			}
 			modifier = {
 				tag = JAP
@@ -1406,12 +1409,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				date > "1917.1.1"
+				date > "1943.1.1"
 			}
 
 			modifier = {
 				factor = 5
-				date > "1917.1.6"
+				date > "1943.1.6"
 			}
 			modifier = {
 				factor = 10

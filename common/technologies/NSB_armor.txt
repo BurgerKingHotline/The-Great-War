@@ -58,6 +58,7 @@ technologies = {
 			extra_ammo_storage
 			wet_ammo_storage
 			smoke_launchers
+			expanded_fuel_tank
 		}
 		enable_subunits = {
 			light_armor
@@ -890,6 +891,7 @@ technologies = {
 			name = nsb_armour_folder
 			position = { x = 5 y = @1943 }
 		}
+		
 
 		ai_will_do = {
 			factor = 0.8

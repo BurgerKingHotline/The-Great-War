@@ -335,17 +335,6 @@ peace_action_modifiers = {
         cost_multiplier = 3
     }
 
-    dormant_national_identity = {
-        peace_action_type = liberate
-        enable = {
-            FROM = {
-                is_unlikely_country_tag = yes
-            }
-        }
-        cost_multiplier = 1.25
-    }
-
-
     war_of_independence = {
         category = other
         peace_action_type = { take_states puppet force_government liberate }
@@ -355,7 +344,7 @@ peace_action_modifiers = {
                 has_war_with_wargoal_against = {
                     target = FROM
                     type = independence_wargoal  # (optional: if not specified any wargoal will do)
-                  }
+                }
             }
         }
         cost_multiplier = 1.25
