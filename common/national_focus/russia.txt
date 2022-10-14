@@ -34,7 +34,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10000
+			factor = 1000000
 		}
 	}
 
@@ -193,6 +193,10 @@
 					id = rus_events.14
 				}
 			}
+		}
+
+		ai_will_do = {
+			factor = 10000000000
 		}
 	}
 	focus = {
@@ -1736,7 +1740,7 @@
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
 		}
 	}
 
@@ -2081,7 +2085,14 @@
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					date < 1915.1.1
+					has_war = yes
+				}
+			}
 		}
 	}
 
@@ -2199,12 +2210,46 @@
 							tag = RUS
 						}
 					}
+					country_event = rus_events.36
 					add_war_support = 0.15
 				}
 			}
 			else = {
 				SOV = {
+					country_event = rus_events.36
 					add_war_support = 0.15
+				}
+			}
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_government = communism
+					}
+					OR = {
+						any_neighbor_country = {
+							OR = {
+								tag = ROOT
+								AND = {
+									original_tag = RUS
+									has_government = communism
+								}
+								AND = {
+									original_tag = SOV
+									has_government = communism
+								}
+							}
+						}
+						AND = {
+							original_tag = CZE
+							is_subject = no
+						}
+						is_major = yes
+					}
+				}
+				country_event = {
+					id = rus_events.35
+					days = 3
+					random = 2
 				}
 			}
 		}
@@ -2652,6 +2697,10 @@
 				category = industry
 			}
 		}
+
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -2698,7 +2747,11 @@
 		prerequisite = { focus = RUS_invest_in_research_teams}
 
 		completion_reward = {
-			add_research_slot = 1
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
 		}
 		ai_will_do = {
 			factor = 100
@@ -2715,7 +2768,11 @@
 		prerequisite = { focus = RUS_electronic_research_teams}
 
 		completion_reward = {
-			add_research_slot = 1
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
 		}
 		ai_will_do = {
 			factor = 100
@@ -2914,6 +2971,9 @@
 					add_extra_state_shared_building_slots = 2
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 5
 		}
 	}
 
@@ -3114,6 +3174,9 @@
 				add_political_power = 50
 				add_stability = 0.05
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -3388,6 +3451,22 @@
 
 		completion_reward = {
 			remove_ideas = RUS_outdated_railways
+		}
+	}
+
+	focus = {
+		id = RUS_fund_aviation_industries
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 40
+		y = 13
+		cost = 21
+
+		completion_reward = {
+			137 = {
+			}
+		}
+		ai_will_do = {
+			factor = 10000000
 		}
 	}
 }

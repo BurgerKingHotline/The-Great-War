@@ -2515,3 +2515,107 @@ country_event = { #yooo they accepted
 		}
 	}
 }
+
+country_event = { #guns for whites in civil war
+	id = rus_events.35
+	title = rus_events.35.t	
+	desc = rus_events.35.desc
+
+	is_triggered_only = yes
+	
+	option = { #sure
+		name = rus_events.35.a
+		add_political_power = 25
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 1000
+			target = FROM
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100000
+				is_historical_focus_on = yes
+				OR = {
+					original_tag = CZE
+					original_tag = JAP
+					original_tag = ROM
+					AND = {
+						original_tag = GER
+						NOT = {
+							has_government = democratic
+						}
+						OR = { #rudimentary check to see if they have versailles or not
+							owns_state = 28
+							owns_state = 86
+							owns_state = 188
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				stockpile_ratio = {
+					archetype = infantry_equipment
+					ratio > 1
+				}
+			}
+			modifier = {
+				factor = 2
+				stockpile_ratio = {
+					archetype = infantry_equipment
+					ratio > 1.5
+				}
+			}
+			modifier = {
+				factor = 2
+				has_government = fascism
+			}
+			modifier = {
+				factor = 3
+				any_neighbor_country = {
+					OR = {
+						tag = FROM
+						AND = {
+							original_tag = RUS
+							has_government = communism
+						}
+						AND = {
+							original_tag = SOV
+							has_government = communism
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				stockpile_ratio = {
+					archetype = infantry_equipment
+					ratio < 1
+				}
+			}
+		}
+	}
+
+	option = { #nah
+		name = rus_events.35.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #whites get foreign support
+	id = rus_events.36
+	title = rus_events.36.t	
+	desc = rus_events.36.desc
+
+	is_triggered_only = yes
+	
+	option = { #whats expected of a foreign puppet
+		name = rus_events.36.a
+		effect_tooltip = {
+			add_war_support = 0.15
+		}
+	}
+}
