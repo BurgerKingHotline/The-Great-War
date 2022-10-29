@@ -63,3 +63,17 @@ is_italian_nation = {
 		}
 	}
 }
+
+is_colonial_power = {
+	OR = {
+		original_tag = ENG
+		original_tag = GER
+		original_tag = ITA
+		original_tag = FRA
+		original_tag = SPR
+		original_tag = POR
+	}
+	NOT = {
+		has_government = communism
+	}
+}

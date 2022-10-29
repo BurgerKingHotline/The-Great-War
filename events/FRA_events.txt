@@ -913,6 +913,7 @@ country_event = { #morocco submits
 			}
 			SPR = {
 				transfer_state = 290
+				transfer_state = 910
 			}
 		}
 	}
@@ -930,6 +931,7 @@ country_event = { #morocco denies
 		hidden_effect = {
 			SPR = {
 				transfer_state = 290
+				transfer_state = 910
 			}
 		}
 		create_wargoal = {

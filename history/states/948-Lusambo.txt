@@ -4,6 +4,14 @@ state={
 	manpower = 885237
 	state_category = pastoral 
 
+	
+	
+	resources={
+		rubber=19 # was: 2
+		steel=6 # was: 2
+		tungsten=5
+	}
+
 	history = {
 		owner = BEL
 		buildings = {

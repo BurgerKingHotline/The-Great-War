@@ -634,6 +634,13 @@ country_event = { #mass uprisings
 					days = 62
 					random = 31
 				}
+				GER = {
+					if = {
+						limit = {
+							
+						}
+					}
+				}
 			}
 			if = {
 				limit = {

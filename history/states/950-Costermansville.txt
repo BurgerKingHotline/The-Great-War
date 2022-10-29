@@ -5,7 +5,7 @@ state={
 	state_category = pastoral
 	
 	resources = {
-		rubber=3.000
+		rubber=26.000
 	}
 	
 	history={

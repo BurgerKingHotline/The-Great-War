@@ -3,7 +3,7 @@
 
 peace_ai_desires = {
 
-    fascist_non_aligned_uk_annex_ireland = {
+    uk_annex_ireland = {
         peace_action_type = take_states
         enable = {
             FROM.FROM.FROM = {
@@ -12,33 +12,51 @@ peace_ai_desires = {
             ROOT = {
                 original_tag = ENG
             }
-            ROOT = {
+        }
+        ai_desire = 75
+    }
+    
+    uk_gain_colonies = {
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM.FROM = {
+                FROM.FROM = {
+                    OR = {
+                        tag = GER
+                        tag = FRA
+                    }
+                }
+                NOT = {
+                    is_core_of = FROM.FROM
+                }
                 OR = {
-                    has_government = fascism
-                    has_government = neutrality
+                    is_on_continent = asia
+                    is_on_continent = africa
+                }
+            }
+            ROOT = {
+                original_tag = ENG
+                NOT = {
+                    has_government = communism
                 }
             }
         }
         ai_desire = 75
     }
 
-
-    democratic_communist_uk_puppet_ireland = {
-        peace_action_type = puppet
+    uk_doesnt_care_about_continental_affairs = {
+        peace_action_type = take_states
         enable = {
             FROM.FROM.FROM = {
-                is_core_of = IRE
+                is_on_continent = europe
             }
             ROOT = {
                 original_tag = ENG
-            }
-            ROOT = {
-                OR = {
-                    has_government = democratic
-                    has_government = communism
+                NOT = {
+                    has_government = fascism
                 }
             }
         }
-        ai_desire = 75
+        ai_desire = -30
     }
 }
