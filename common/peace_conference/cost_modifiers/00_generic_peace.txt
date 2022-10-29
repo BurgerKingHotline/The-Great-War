@@ -62,7 +62,7 @@ peace_action_modifiers = {
             NOT = { FROM.FROM.FROM = { is_core_of = ROOT.FROM.FROM } }
         }
 
-        cost_multiplier = 0.9
+        cost_multiplier = 0.8
     }
 
 

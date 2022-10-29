@@ -3,6 +3,23 @@
 
 peace_ai_desires = {
 
+    dont_liberate_african_countries = {
+        peace_action_type = { liberate force_government puppet }
+        enable = {
+            ROOT = {
+                is_colonial_power = yes
+            }
+
+            FROM = { tag = ROOT }  # And the negotiator is also taking for themselves
+            FROM.FROM.FROM = { 
+                is_on_continent = africa
+                is_on_continent = asia
+            }  
+        }
+
+        ai_desire = -100  # 50 percent higher desire
+    }
+
     important_water_ways = {
         peace_action_type = take_states
         enable = {
