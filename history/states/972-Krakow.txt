@@ -1,0 +1,30 @@
+
+state={
+	id=972
+	name="STATE_972"
+
+	history={
+		owner = ASH
+		victory_points = {
+			9427 20 
+		}
+		
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			air_base = 4
+
+		}
+		add_core_of = POL
+		add_core_of = ASH
+
+	}
+
+	provinces={
+		9427
+	}
+	manpower=3692800
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=12.000
+}

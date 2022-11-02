@@ -10,7 +10,6 @@ state={
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
-			air_base = 1
 
 		}
 		add_core_of = POL
@@ -27,7 +26,7 @@ state={
 	provinces={
 		402 524 3521 3559 6484 9521 9544 12562  
 	}
-	manpower=2464600
+	manpower=2507300
 	buildings_max_level_factor=1.000
 	state_category=town
 

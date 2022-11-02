@@ -3249,6 +3249,13 @@ puppet_state_creation_category = {
 
 		fire_only_once = yes
 
+		allowed = {
+			NOT = {
+				original_tag = ASH
+				original_tag = OTT
+			}
+		}
+
 		visible = {
 			owns_state = 104
 			104 = {
@@ -3376,6 +3383,17 @@ puppet_state_creation_category = {
 					}
 				}
 			}
+			966 = {
+				OWNER = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_in_faction_with = ROOT
+							is_ai = yes
+						}
+					}
+				}
+			}
 		}
 
 		complete_effect = {
@@ -3383,6 +3401,9 @@ puppet_state_creation_category = {
 				add_state_core = 21
 				add_state_core = 32
 				add_state_core = 735
+				add_state_core = 966
+				add_state_core = 968
+				add_state_core = 967
 				if = {
 					limit = {
 						NOT = { 21 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
@@ -3400,6 +3421,24 @@ puppet_state_creation_category = {
 						NOT = { 735 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 735
+				}
+				if = {
+					limit = {
+						NOT = { 966 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 966
+				}
+				if = {
+					limit = {
+						NOT = { 967 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 967
+				}
+				if = {
+					limit = {
+						NOT = { 968 = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 968
 				}
 			}
 			hidden_effect = {
@@ -4067,18 +4106,25 @@ puppet_state_creation_category = {
 		complete_effect = {
 			PIE = {
 				add_state_core = 158
-				add_state_core = 735
+				add_state_core = 967
+				add_state_core = 968
+				if = {
+					limit = {
+						968 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER owner = { original_tag = FRA }} } }
+					}
+					transfer_state = 968
+				}
+				if = {
+					limit = {
+						967 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER owner = { original_tag = FRA }} } }
+					}
+					transfer_state = 967
+				}
 				if = {
 					limit = {
 						158 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 158
-				}
-				if = {
-					limit = {
-						735 = { OWNER = { OR = { tag = ROOT is_in_faction_with = ROOT } } NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
-					}
-					transfer_state = 735
 				}
 			}
 			hidden_effect = {
@@ -4156,7 +4202,20 @@ puppet_state_creation_category = {
 				add_state_core = 158
 				add_state_core = 114
 				add_state_core = 159
-				add_state_core = 735
+				add_state_core = 968
+				add_state_core = 967
+				if = {
+					limit = {
+						968 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER owner = { original_tag = FRA }} } }
+					}
+					transfer_state = 968
+				}
+				if = {
+					limit = {
+						967 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER owner = { original_tag = FRA }} } }
+					}
+					transfer_state = 967
+				}
 				if = {
 					limit = {
 						158 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
@@ -4174,12 +4233,6 @@ puppet_state_creation_category = {
 						159 = { OWNER = { OR = { tag = ROOT is_in_faction_with = ROOT } } NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 159
-				}
-				if = {
-					limit = {
-						735 = { OWNER = { OR = { tag = ROOT is_in_faction_with = ROOT } } NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
-					}
-					transfer_state = 735
 				}
 			}
 			hidden_effect = {
@@ -4326,11 +4379,18 @@ puppet_state_creation_category = {
 		complete_effect = {
 			VNC = {
 				add_state_core = 160
+				add_state_core = 969
 				if = {
 					limit = {
 						160 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 160
+				}
+				if = {
+					limit = {
+						969 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 969
 				}
 			}
 			hidden_effect = {
@@ -4392,6 +4452,7 @@ puppet_state_creation_category = {
 				set_cosmetic_tag = lombardy_venetia
 				add_state_core = 160
 				add_state_core = 159
+				add_state_core = 969
 				if = {
 					limit = {
 						160 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
@@ -4403,6 +4464,12 @@ puppet_state_creation_category = {
 						150 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 159
+				}
+				if = {
+					limit = {
+						969 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 969
 				}
 			}
 			hidden_effect = {
@@ -4522,7 +4589,7 @@ puppet_state_creation_category = {
 			PAP = {
 				add_state_core = 2
 				add_state_core = 157
-				add_state_core = 161
+				add_state_core = 947
 				if = {
 					limit = {
 						2 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
@@ -4545,11 +4612,11 @@ puppet_state_creation_category = {
 				}
 				if = {
 					limit = {
-						ROOT = { owns_state = 161 }
-						161 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+						ROOT = { owns_state = 947 }
+						947 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
-					transfer_state = 161
-					add_state_core = 161
+					transfer_state = 947
+					add_state_core = 947
 				}
 			}
 			hidden_effect = {

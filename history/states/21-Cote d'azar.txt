@@ -12,9 +12,6 @@ state={
 	history={
 		owner = FRA
 		victory_points = {
-			911 1 
-		}
-		victory_points = {
 			11834 30
 		}
 		buildings = {
@@ -23,11 +20,6 @@ state={
 			dockyard = 3
 			arms_factory = 1
 			fuel_silo = 1
-			air_base = 10
-			911 = {
-				naval_base = 10
-				coastal_bunker = 1
-			}
 			11834 = {
 				naval_base = 3
 				coastal_bunker = 1
@@ -43,7 +35,7 @@ state={
 	}
 
 	provinces={
-		911 956 958 3762 3928 11834 11849 11875 
+		958 3762 11834 11849 11875 
 	}
 
 	local_supplies=0.0 

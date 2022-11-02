@@ -205,4 +205,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 6635;636;impassable;-1;-1;-1;-1;-1;;alps
 6635;9587;impassable;-1;-1;-1;-1;-1;;alps
 636;9587;impassable;-1;-1;-1;-1;-1;;alps
+6675;9633;impassable;-1;-1;-1;-1;-1;;alps
+9630;9633;impassable;-1;-1;-1;-1;-1;;alps
 -1;-1;;-1;-1;-1;-1;-1;-1
