@@ -1,8 +1,8 @@
 ﻿l_english:
  SAF_COM_communist:0 "Cape Commune"
  SAF_COM_communist_DEF:0 "the Cape Commune"
- POL_RUS_subject_neutrality:0 "Congress Poland"
- FIN_RUS_subject_neutrality:0 "Grand Duchy of Finland"
+ POL_RUS_neutrality_subject:0 "Congress Poland"
+ FIN_RUS_neutrality_subject:0 "Grand Duchy of Finland"
  INS_HOL_democratic:0 "Dutch East Indies"
  INS_HOL_democratic_DEF:0 "the Dutch East Indies"
  INS_subject:0 "$OVERLORDADJ$ East Indies"
