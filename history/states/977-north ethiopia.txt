@@ -1,0 +1,45 @@
+state=
+{
+	id=977
+	name="STATE_977"
+	manpower = 150000
+	resources={
+		rubber= 6 # was: 2
+		steel = 3
+	}
+	
+	state_category = town
+
+	history=
+	{
+		owner = ETH
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			2072 2 
+		}
+		victory_points = {
+			13281 1 
+		}
+		victory_points = {
+			13280 1 
+		}
+		add_core_of = ETH
+
+		1936.6.1 = {
+			owner = ITA
+			controller = ITA
+		}
+		
+		add_dynamic_modifier = {
+			modifier = eth_autonomous_state
+		}
+	}
+
+	provinces={
+	2072 13280 13281
+	}
+
+	local_supplies=0.0 
+}

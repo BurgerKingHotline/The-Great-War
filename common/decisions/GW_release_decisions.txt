@@ -4264,6 +4264,24 @@ puppet_state_creation_category = {
 						NOT = { is_core_of = OWNER }
 					}
 				}
+				AND = {
+					owns_state = 156
+					156 = {
+						NOT = { is_core_of = OWNER }
+					}
+				}
+				AND = {
+					owns_state = 973
+					973 = {
+						NOT = { is_core_of = OWNER }
+					}
+				}
+				AND = {
+					owns_state = 974
+					974 = {
+						NOT = { is_core_of = OWNER }
+					}
+				}
 			}
 		}
 
@@ -4315,6 +4333,8 @@ puppet_state_creation_category = {
 				add_state_core = 115
 				add_state_core = 117
 				add_state_core = 156
+				add_state_core = 973
+				add_state_core = 974
 				if = {
 					limit = {
 						115 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
@@ -4332,6 +4352,18 @@ puppet_state_creation_category = {
 						156 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
 					}
 					transfer_state = 156
+				}
+				if = {
+					limit = {
+						973 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 973
+				}
+				if = {
+					limit = {
+						974 = { NOT = { OR = { is_core_of = OWNER is_claimed_by = OWNER } } }
+					}
+					transfer_state = 974
 				}
 			}
 			hidden_effect = {

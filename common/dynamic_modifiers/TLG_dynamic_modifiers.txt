@@ -102,6 +102,22 @@ senussiya_resistence_modifier_4 = {
 	state_production_speed_buildings_factor = -0.65
 }
 
+eth_autonomous_state = {
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	local_manpower = -0.2
+	local_resources = -0.45
+	state_production_speed_buildings_factor = -0.45
+	local_non_core_supply_impact_factor = -0.8
+	mobilization_speed = 0.5
+	local_intel_to_enemies = -0.5
+	dig_in_speed_factor = 0.15
+	army_defence_factor = 0.25
+	local_building_slots_factor = -0.5
+}
+
+
 #RUS AND SOV modifiers
 
 RUS_local_soviets_modifier = {
