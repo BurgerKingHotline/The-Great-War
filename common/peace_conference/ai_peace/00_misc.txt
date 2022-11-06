@@ -17,7 +17,7 @@ peace_ai_desires = {
             }  
         }
 
-        ai_desire = -100  # 50 percent higher desire
+        ai_desire = -100 
     }
 
     important_water_ways = {

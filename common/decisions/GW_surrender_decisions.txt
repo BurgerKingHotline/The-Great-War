@@ -450,54 +450,8 @@ surrender_category = {
 		}
 
 		complete_effect = {
-			if = {
-				limit = {
-					any_enemy_country = {
-						OR = {
-							original_tag = ROM
-							original_tag = GRE
-							original_tag = MNT
-							original_tag = SER
-							original_tag = BUL
-						}
-						is_faction_leader = yes
-					}
-				}
-				random_enemy_country = { 
-					limit = {
-						OR = {
-							original_tag = ROM
-							original_tag = GRE
-							original_tag = MNT
-							original_tag = SER
-							original_tag = BUL
-						}
-						is_faction_leader = yes
-					}
-					country_event = { id = TLG_surrender.11 }
-				}
-			}
-			else_if = {
-				limit = {
-					has_war_with = SER
-				}
-				SER = { 
-					country_event = { id = TLG_surrender.11 }
-				}
-			}
-			else = {
-				random_enemy_country = { 
-					limit = {
-						OR = {
-							original_tag = ROM
-							original_tag = GRE
-							original_tag = MNT
-							original_tag = ALB
-							original_tag = BUL
-						}
-					}
-					country_event = { id = TLG_surrender.11 }
-				}
+			OTT = {
+				country_event = TLG_surrender.11
 			}
 		}
 	}

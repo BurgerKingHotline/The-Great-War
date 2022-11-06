@@ -1020,11 +1020,24 @@ country_event = { #Germany demands concessions
 		}
 		GER = {
 			effect_tooltip = {
-				transfer_state = 859
-				transfer_state = 860
-				transfer_state = 861
+				every_state = {
+					limit = {
+						is_owned_by = FRA
+						OR = {
+							state = 859
+							state = 860
+							state = 861
+						}
+					}
+					transfer_state_to = ROOT
+				}
 			}
 			country_event = { id = morocco.8 hours = 2 }
+		}
+		FRA = {
+			effect_tooltip = {
+				transfer_state = 858
+			}
 		}
 	}
 	option = { #nah
@@ -1063,9 +1076,25 @@ country_event = { #France gives us Neukamerun
 	
 	option = { #yo nice
 		name = morocco.8.a
-		transfer_state = 859
-		transfer_state = 860
-		transfer_state = 861
+		every_state = {
+			limit = {
+				is_owned_by = FRA
+				OR = {
+					state = 859
+					state = 860
+					state = 861
+				}
+			}
+			transfer_state_to = ROOT
+		}
+		if = {
+			limit = {
+				owns_state = 858
+			}
+			FRA = {
+				transfer_state = 858
+			}
+		}
 	}
 }
 

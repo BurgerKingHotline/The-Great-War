@@ -896,35 +896,7 @@ country_event = { #balkan league surrenders to ottomans
 	fire_only_once = yes
 
 	immediate = {
-		OTT = {
-			every_enemy_country = {
-				limit = {
-					original_tag = SER
-					original_tag = MNT
-					original_tag = GRE
-					original_tag = BUL
-				}
-				white_peace = PREV
-				if = { #checks if they are in balkan league faction
-					limit = {
-						faction_leader = {
-							NOT = {
-								original_tag = SER
-								original_tag = BUL
-								original_tag = MNT
-								original_tag = GRE
-								original_tag = ROM
-							}
-						}
-					}
-					leave_faction = yes
-				}
-				else = {
-					dismantle_faction = yes
-				}
-			}
-			
-		}
+		
 	}
 	
 	option = { #great
@@ -1035,6 +1007,35 @@ country_event = { #balkan league surrenders to ottomans
 				}
 				transfer_state_to = OTT
 			}
+		}
+		OTT = {
+			every_enemy_country = {
+				limit = {
+					original_tag = SER
+					original_tag = MNT
+					original_tag = GRE
+					original_tag = BUL
+				}
+				white_peace = PREV
+				if = { #checks if they are in balkan league faction
+					limit = {
+						faction_leader = {
+							NOT = {
+								original_tag = SER
+								original_tag = BUL
+								original_tag = MNT
+								original_tag = GRE
+								original_tag = ROM
+							}
+						}
+					}
+					leave_faction = yes
+				}
+				else = {
+					dismantle_faction = yes
+				}
+			}
+			
 		}
 		ai_chance = {
 			factor = 100
