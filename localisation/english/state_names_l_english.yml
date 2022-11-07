@@ -937,6 +937,8 @@
  STATE_938:0 "Lomza"
  STATE_940:0 "Brest"
  STATE_943:0 "Ticino"
+ STATE_944:0 "Sedan"
+ STATE_945:0 "Saarland"
  STATE_947:0 "Romagna"
  STATE_965:0 "Sulwaki"
  STATE_966:0 "Var"

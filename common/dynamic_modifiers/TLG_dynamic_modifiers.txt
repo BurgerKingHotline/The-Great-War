@@ -120,6 +120,22 @@ eth_autonomous_state = {
 
 #RUS AND SOV modifiers
 
+
+RUS_duma = {
+	remove_trigger = {
+	}
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	political_power_factor = RUS_duma_political_power_factor
+	stability_factor = RUS_duma_political_power_factor
+	drift_defence_factor = RUS_duma_drift_defence_factor
+	war_support_factor = RUS_duma_war_support
+	democratic_acceptance = RUS_duma_democratic_acceptance
+	stability_weekly = RUS_duma_democratic_acceptance
+	neutrality_drift = RUS_duma_neutrality_drift
+}
+
 RUS_local_soviets_modifier = {
 	remove_trigger = {
 	}

@@ -1584,7 +1584,7 @@ country_event = { #formation of the consituent assembly
 
 	is_triggered_only = yes
 	
-	option = {#hopefully this will win us the war
+	option = {#we will beg
 		name = rus_events.13.a
 		add_political_power = 50
 		add_stability = 0.02
@@ -2512,9 +2512,19 @@ country_event = { #yooo they accepted
 		name = rus_events.34.a
 		add_political_power = 75
 		add_war_support = 0.05
-		create_faction = entente_faction
-		FROM = {
-			add_to_faction = ROOT
+		if = {
+			limit = {
+				FRA = {
+					is_in_faction = no
+				}
+			}
+			create_faction = entente_faction
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+		else = {
+			add_to_faction = FROM
 		}
 		add_popularity = {
 			ideology = democratic

@@ -3,12 +3,10 @@
 
 peace_ai_desires = {
     
-     # Soviet really wants that Königsberg place for themselves, don't they?
-    SOV_wants_russian_empire_back = {
+    RUS_wants_russian_empire_back = {
         peace_action_type = take_states
         enable = {
-            has_country_flag = SOV_soviet_union
-            tag = SOV  # Negotiatior is soviet union
+            tag = RUS
             FROM = { tag = ROOT }  # And the negotiator is also taking for themselves
             FROM.FROM.FROM = {
                 OR = {
@@ -29,7 +27,6 @@ peace_ai_desires = {
         ai_desire = 50  # 50 percent higher desire
     }
 
-     # Soviet really wants that Königsberg place for themselves, don't they?
     SOV_wants_russian_empire_back = {
         peace_action_type = take_states
         enable = {
