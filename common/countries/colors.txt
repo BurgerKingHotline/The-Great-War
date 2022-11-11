@@ -13,8 +13,8 @@ SOV = {
 	color_ui = rgb { 163 17 31 }
 }
 SWE = {
-	color = rgb { 36 132 247 }
-	color_ui = rgb { 47 172 255 }
+	color = rgb { 15 96 200 }
+	color_ui = rgb { 15 96 200 }
 }
 FRA = {
 	color = rgb { 57 113 228 }
@@ -43,8 +43,8 @@ AUS = {
 	color_ui = rgb { 255 255 255 }
 }
 LIT = {
-	color = rgb { 219 219 119 }
-	color_ui = rgb { 255 255 155 }
+	color = rgb { 154 69 116 }
+	color_ui = rgb { 154 69 116 }
 }
 EST = {
 	color = rgb { 50 135 175 }
@@ -87,8 +87,8 @@ ALB = {
 	color_ui = rgb { 194 59 133 }
 }
 NOR = {
-	color = rgb { 111 71 71 }
-	color_ui = rgb { 144 92 92 }
+	color = rgb { 85 151 182 }
+	color_ui = rgb { 85 151 182 }
 }
 DEN = {
 	color = rgb { 153 116 93 }
@@ -99,8 +99,8 @@ BUL = {
 	color_ui = rgb { 210 147 217 }
 }
 POR = {
-	color = rgb { 39 116 70 }
-	color_ui = rgb { 51 151 91 }
+	color = rgb { 0 147 175 }
+	color_ui = rgb { 0 147 175 }
 }
 FIN = {
 	color = rgb { 205 212 228 }
@@ -139,8 +139,8 @@ BRA = {
 	color_ui = rgb { 99 189 82 }
 }
 CAN = {
-	color = rgb { 233  59  59 }
-	color_ui = rgb { 155 62 51 }
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 119 48 39 }
 }
 CHI = {
 	color = rgb { 5 84 166 }
@@ -360,8 +360,8 @@ SYR = {
 }
 
 SER = {
-	color = rgb { 160 110 110 }
-	color_ui = rgb { 160 110 110 }
+	color = rgb { 50 50 85 }
+	color_ui = rgb { 50 50 85 }
 }
 
 ICE = {
@@ -415,8 +415,8 @@ MAL = {
 }
 
 MNT = {
-	color = rgb { 77  90  105 }
-	color_ui = rgb { 77  90  105 }
+	color = rgb { 60 60 70 }
+	color_ui = rgb { 60 60 70 }
 }
 
 BLR = {
@@ -822,16 +822,16 @@ RUS = {
 	color_ui = rgb { 50 100 50 }
 }
 OTT = {
-	color = rgb { 125 45 45 }
-	color_ui = rgb { 125 45 45 }
+	color = rgb { 135 15 15 }
+	color_ui = rgb { 135 15 15 }
 }
 ASH = {
 	color = rgb { 215 198 194 }
 	color_ui = rgb { 215 198 194 }
 }
 QIN = {
-	color = hsv { 0.18 0.6 0.9 } #255 244 190
-	color_ui = hsv { 0.18 0.3 0.9 }
+	color = rgb { 255 175 0 }
+	color_ui = rgb { 255 198 0 }
 }
 
 FIU = {
