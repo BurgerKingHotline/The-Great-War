@@ -321,7 +321,6 @@ if = {
 			basic_ship_hull_heavy = 1
 			
 			improved_ship_hull_carrier = 1
-			dp_secondary_battery = 1
 			improved_sonar = 1
 		}
 		#set_naval_#oob = "ENG_1939_Naval"

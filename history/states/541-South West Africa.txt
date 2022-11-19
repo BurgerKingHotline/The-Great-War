@@ -5,6 +5,11 @@ state={
 	manpower = 254100
 	state_category = pastoral
 
+	resources={
+		tungsten=37.000
+		chromium=15 # was: 168
+	}
+
 	history={
 		owner = GER
 		buildings = {

@@ -1,6 +1,6 @@
 state={
 	id=933
-	name="STATE_719" # Natal
+	name="STATE_933"
 	manpower = 3962157
 	resources={
 		chromium=2 # was: 116

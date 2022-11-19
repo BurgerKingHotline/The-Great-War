@@ -15,7 +15,7 @@ state = {
 		add_core_of = ITA
 	}
 	provinces = {
-		963 3923 3966 6831
+		963 3910 3923 3966 6831 9838 11882
 	}
 	local_supplies = 0.000
 }

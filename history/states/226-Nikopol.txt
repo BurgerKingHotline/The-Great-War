@@ -19,17 +19,21 @@ state={
 		victory_points = {
 			11561 1
 		}
+		victory_points = {
+			11683 3
+		}
 		buildings = {
 			infrastructure = 3 #was: 5
-			industrial_complex = 2
+			industrial_complex = 1
 			air_base = 2
+			dockyard = 1
 		}
 		#add_core_of = SOV
 		add_core_of = UKR
 	}
 
 	provinces={
-		453 472 486 6423 9419 9433 9463 11422 11437 11452 11461 11561 12002
+		574 3403 3755 6597 9573 11546 11683 11715 6423 6451 6478 9419 9433 11422 11437 11561
 	}
 
 	local_supplies=0.0 

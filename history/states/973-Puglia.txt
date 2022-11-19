@@ -25,6 +25,9 @@ state = {
 			11837 = { #Taranto
 				naval_base = 10
 			}
+			11998 = {
+				naval_base = 2
+			}
 			9784 = { #Bari
 				naval_base = 3
 			}

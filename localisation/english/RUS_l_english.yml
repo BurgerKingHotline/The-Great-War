@@ -32,7 +32,7 @@
  #DECISIONS
  russian_socialism_decisions:0 "Socialist Agitation"
  russian_socialism_decisions_desc:0 "The [RUS.GetNameDef] has had a history of dealing with revolutionaries who try to destroy our great empire! The most radical of these groups are the socialists, who are a fringe group supporting the works of Marx, a german philosopher. We must keep tabs on them to make sure they don't overthrow the government. \n\n§RIf the popularity of the socialists exceeds 50% and the radicalism exceeds 80% then they may start a revolution!§!\n\nSocialist Popularity = [?party_popularity_100@communism|Y]%\nSocialist Radicalism = [?RUS_socialist_radicalisation|Y]%\n"
- RUS_socialist_radicalisation_increase:0 "Socialist Radicalisation: $RIGHT|-=0..0$%."
+ RUS_socialist_radicalisation_increase:0 "Socialist Radicalisation: $RIGHT|-=0..0$§G%§!."
  RUS_raid_marxist_printing_houses:0 "Raid Marxist Printing Houses"
  RUS_give_trade_unions_liberty:0 "Give Liberty to the Trade Unions"
 

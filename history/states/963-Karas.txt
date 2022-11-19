@@ -4,6 +4,12 @@ state={
 	manpower = 46200
 	state_category = wasteland
 
+	resources={
+		tungsten=2.000
+		oil = 5 #its actually coal, but coal isnt a thing,
+		chromium=4 # was: 168
+	}
+
 	history={
 		owner = GER
 		buildings = {

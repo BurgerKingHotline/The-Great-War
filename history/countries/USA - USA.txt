@@ -152,40 +152,6 @@ give_guarantee = URG
 		dispersed_industry2 = 1
 		dispersed_industry3 = 1
 	}
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-			improved_submarine = 1
-			basic_destroyer = 1
-			basic_heavy_cruiser = 1
-			basic_battlecruiser = 1
-		}
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		set_technology = {
-			improved_ship_hull_light = 1
-			basic_ship_hull_heavy = 1
-			improved_ship_hull_heavy = 1
-			improved_sonar = 1
-			improved_ship_torpedo_launcher = 1
-			improved_cruiser_armor_scheme = 1
-			improved_heavy_battery = 1
-			dp_secondary_battery = 1
-		}
-		remove_ideas = MTG_naval_treaty_adherent
-		add_ideas = MTG_naval_treaty_adherent_reduced
-	}
-	create_equipment_variant = {
-		name = "Martin M166"
-		type = tac_bomber_equipment_0
-		upgrades = {
-			plane_tac_bomb_upgrade = 2
-			plane_range_upgrade = 1
-			plane_engine_upgrade = 2
-			plane_reliability_upgrade = 3
-		}
-	}
 }
 
 
