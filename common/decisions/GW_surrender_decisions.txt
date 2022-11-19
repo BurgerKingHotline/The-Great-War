@@ -596,15 +596,15 @@ surrender_category = {
 		}
 
 		available = {
-			if = {
-				limit = {
-					is_in_faction = yes
-				}
-				is_faction_leader = yes
-			}
 			OR = {
-				surrender_progress > 0.1
+				surrender_progress > 0.15
 				casualties_k > 1200
+				original_tag = SOV
+			}
+			any_controlled_state = {
+				any_neighbor_state = {
+					is_controlled_by = GER
+				}
 			}
 		}
 
@@ -634,6 +634,10 @@ surrender_category = {
 				OR = {
 					is_in_faction_with = FRA
 					is_in_faction_with = ENG
+				}
+				NOT = {
+					has_war_with = SOV
+					has_civil_war = yes
 				}
 			}
 

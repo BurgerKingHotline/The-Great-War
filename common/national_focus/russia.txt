@@ -236,7 +236,7 @@
 				ideology = communism
 				popularity = 0.05
 			}
-			set_country_flag = RUS_no_more_commie_radical
+			clr_country_flag = RUS_revolutionaries_active
 		}
 
 		ai_will_do = {
@@ -254,10 +254,23 @@
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = RUS_the_powers_of_the_tsar }
 		mutually_exclusive = { focus = RUS_elections_in_the_duma }
-		x = -5
+		x = -6
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar 
 		cost = 70
+		
+		available = {
+			OR = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
+			}
+		}
 
 		allow_branch = {
 			NOT = {
@@ -280,7 +293,7 @@
 			add_political_power = -100
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.15
+				popularity = 0.1
 			}
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
@@ -303,16 +316,19 @@
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = RUS_the_powers_of_the_tsar }
 		mutually_exclusive = { focus = RUS_cement_the_tsars_rule }
-		x = 7
+		x = 6
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar 
-		cost = 70
+		cost = 30
 		allow_branch = {
 			NOT = {
 				has_completed_focus = RUS_cement_the_tsars_rule
 			}
 		}
-		 
+
+		available = {
+			has_country_flag = RUS_duma_elections
+		}
 
 		completion_reward = {
 			add_political_power = 100
@@ -326,12 +342,7 @@
 		}
 
 		ai_will_do = {
-			factor = 11
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				date < 1912.1.1
-			}
+			factor = 15
 		}
 	}
 
@@ -353,11 +364,6 @@
 				ideology = communism
 				popularity = 0.05
 			}
-			add_to_variable = { #doesnt really do anything, just for show
-				var = RUS_socialist_radicalisation
-				value = 10
-				tooltip = RUS_socialist_radicalisation_increase
-			}
 		}
 
 		ai_will_do = {
@@ -376,9 +382,10 @@
 		 
 
 		completion_reward = {
+			add_stability = -0.05
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = 5
+				value = 8
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 			custom_effect_tooltip = RUS_replace_duma_with_chained
@@ -399,7 +406,7 @@
 		id = RUS_root_out_socialist_influence
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = RUS_a_duma_in_chains }
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = RUS_a_duma_in_chains
 		cost = 70
@@ -407,14 +414,14 @@
 
 		completion_reward = {
 			add_political_power = 100
-			add_stability = 0.05
+			add_stability = -0.05
 			add_popularity = {
 				ideology = communism
 				popularity = -0.15
 			}
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = 10
+				value = 12
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 		}
@@ -423,12 +430,24 @@
 	focus = {
 		id = RUS_tsarist_national_intervension 
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = RUS_a_duma_in_chains focus = RUS_full_tsarist_control}
-		x = 5
+		prerequisite = { focus = RUS_the_powers_of_the_tsar}
+		x = 0
 		y = 2
-		relative_position_id = RUS_cement_the_tsars_rule
+		relative_position_id = RUS_the_powers_of_the_tsar
 		cost = 70
-		 
+		
+		available = {
+			OR = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
+			}
+		}
 
 		completion_reward = {
 			unlock_decision_category_tooltip = RUS_tsarist_intervention_decisions
@@ -439,7 +458,7 @@
 		id = RUS_undermine_democratic_influence
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = RUS_a_duma_in_chains }
-		x = -2
+		x = -1
 		y = 2
 		relative_position_id = RUS_a_duma_in_chains
 		cost = 70
@@ -447,14 +466,14 @@
 
 		completion_reward = {
 			add_political_power = 50
-			add_stability = 0.05
+			add_stability = -0.05
 			add_popularity = {
 				ideology = democratic
 				popularity = -0.15
 			}
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = 5
+				value = 8
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 		}
@@ -481,6 +500,7 @@
 			remove_ideas = {
 				RUS_chained_duma
 			}
+			add_stability = -0.15
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
 				value = 15
@@ -493,7 +513,7 @@
 		id = RUS_destroy_trade_unions
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = RUS_dismiss_the_duma }
-		x = -0
+		x = 1
 		y = 1
 		relative_position_id = RUS_dismiss_the_duma
 		cost = 35
@@ -507,7 +527,7 @@
 			}
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = 10
+				value = 15
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 		}
@@ -521,6 +541,12 @@
 		y = 1
 		relative_position_id = RUS_destroy_trade_unions
 		cost = 70
+
+		available = {
+			any_other_country = {
+				has_government = communism
+			}
+		}
 
 		completion_reward = {
 			add_ideas = {
@@ -538,7 +564,7 @@
 		id = RUS_promote_the_all_russian_nation
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = RUS_dismiss_the_duma }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = RUS_dismiss_the_duma
 		cost = 70
@@ -548,7 +574,6 @@
 			remove_ideas = {
 				RUS_strong_independance_movements
 			}
-			custom_effect_tooltip = RUS_civil_war_no_independance
 		}
 	}
 
@@ -561,13 +586,24 @@
 		y = 1
 		relative_position_id = RUS_promote_the_all_russian_nation
 		cost = 70
+		
+		available = {
+			has_country_leader = {
+				character = RUS_nicholas_ii
+				ruling_only = yes
+			}
+		}
 		 
 
 		completion_reward = {
-			remove_ideas = {
-				RUS_strong_independance_movements
+			add_ideas = {
+				RUS_cult_of_personality
 			}
-			custom_effect_tooltip = RUS_civil_war_no_independance
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 25
+				tooltip = RUS_socialist_radicalisation_increase
+			}
 		}
 	}
 
@@ -617,7 +653,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 8
 		}
 	}
 
@@ -951,6 +987,11 @@
 
 		completion_reward = {
 			add_stability = -0.1
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 15
+				tooltip = RUS_socialist_radicalisation_increase
+			}
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -996,11 +1037,11 @@
 		completion_reward = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.15
+				popularity = 0.1
 			}
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = 15
+				value = 8
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 			add_ideas = {
@@ -1020,10 +1061,21 @@
 		y = 2
 		relative_position_id = RUS_policy_of_russification
 		cost = 100
+		
+		available = {
+			has_country_leader = {
+				character = RUS_nicholas_ii
+				ruling_only = yes
+			}
+		}
 		 
 
 		completion_reward = {
-			set_country_flag = RUS_no_more_commie_radical
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 25
+				tooltip = RUS_socialist_radicalisation_increase
+			}
 			add_ideas = {
 				RUS_all_power_to_the_tsar_idea
 			}
@@ -1139,7 +1191,7 @@
 			}
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = 5
+				value = 3
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 		}
@@ -1241,7 +1293,7 @@
 			}
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = -5
+				value = -8
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 		}
@@ -1258,7 +1310,7 @@
 		 
 
 		completion_reward = {
-			add_stability = 0.15
+			add_stability = 0.1
 			add_political_power = 150
 			if = {
 				limit = {
@@ -1305,32 +1357,70 @@
 		completion_reward = {
 			add_stability = 0.15
 			add_political_power = 150
-			if = {
-				limit = {
-					has_completed_focus = RUS_full_tsarist_control
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.05
-				}
+		}
+	}
+
+	focus = {
+		id = RUS_promise_independence_after_the_war
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_maintain_the_status_quo }
+		x = -1
+		y = 1
+		relative_position_id = RUS_maintain_the_status_quo
+		cost = 70
+		 
+
+		completion_reward = {
+			remove_ideas = {
+				RUS_strong_independance_movements
 			}
-			else_if = {
-				limit = {
-					has_completed_focus = RUS_increased_radicalisation
-				}
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.05
-				}
+			custom_effect_tooltip = RUS_civil_war_no_independance
+		}
+	}
+
+	focus = {
+		id = RUS_russification_policy
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_maintain_the_status_quo }
+		x = 0
+		y = 2
+		relative_position_id = RUS_maintain_the_status_quo
+		cost = 50
+		 
+
+		completion_reward = {
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 10
+				tooltip = RUS_socialist_radicalisation_increase
 			}
-			else_if = {
-				limit = {
-					has_completed_focus = RUS_full_socialist_control
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.05
-				}
+			add_ideas = {
+				RUS_russification
+			}
+			custom_effect_tooltip = RUS_russification_decisions_tt
+		}
+	}
+
+	focus = {
+		id = RUS_lessons_of_leadership
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_russification_policy }
+		x = 0
+		y = 1
+		relative_position_id = RUS_russification_policy
+		cost = 70
+		
+		available = {
+			has_country_leader = {
+				character = RUS_nicholas_ii
+				ruling_only = yes
+			}
+		}
+
+		completion_reward = {
+			swap_ruler_traits = {
+				remove = inexperienced_monarch
+				add = dictator
 			}
 		}
 	}
@@ -1355,6 +1445,161 @@
 	}
 
 	focus = {
+		id = RUS_limit_the_tsars_power
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_strengthen_the_duma }
+		x = 0
+		y = 1
+		relative_position_id = RUS_strengthen_the_duma
+		cost = 70
+
+		completion_reward = {
+			swap_ruler_traits = {
+				remove = inexperienced_monarch
+				add = inexperienced_monarch_1
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_destroy_tsarist_cells
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_limit_the_tsars_power }
+		x = -1
+		y = 2
+		relative_position_id = RUS_limit_the_tsars_power
+		cost = 70
+
+		completion_reward = {
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = -8
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+			swap_ruler_traits = {
+				remove = inexperienced_monarch
+				add = inexperienced_monarch_1
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_increased_autonomy
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_limit_the_tsars_power }
+		x = 1
+		y = 1
+		relative_position_id = RUS_limit_the_tsars_power
+		cost = 70
+
+		completion_reward = {
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = -15
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+			add_ideas = RUS_increased_autonomy_idea
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				add_autonomy_score = {
+					value = 100
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_release_the_autonomos_areas
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_increased_autonomy }
+		x = 0
+		y = 1
+		relative_position_id = RUS_increased_autonomy
+		cost = 70
+
+		bypass = {
+			country_exists = FIN
+			country_exists = POL
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = -15
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+			add_political_power = 70
+			add_stability = 0.05
+			release_puppet = POL
+			hidden_effect = {
+				if = {
+					limit = {
+						POL = {
+							exists = yes
+							is_subject_of = ROOT
+						}
+					}
+					POL = {
+						transfer_state = 965
+						transfer_state = 814
+					}
+					transfer_state = 97
+				}
+			}
+			release_puppet = FIN
+		}
+	}
+
+	focus = {
+		id = RUS_constitutional_monarchy
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_release_the_autonomos_areas }
+		prerequisite = { focus = RUS_destroy_tsarist_cells }
+		mutually_exclusive = { focus = RUS_depose_the_tsar }
+		x = 0
+		y = 1
+		relative_position_id = RUS_release_the_autonomos_areas
+		cost = 70
+
+		bypass = {
+			country_exists = FIN
+			country_exists = POL
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = -25
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+			add_political_power = 50
+			set_country_flag = RUS_constitutional_monarchy
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_depose_the_tsar
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RUS_release_the_autonomos_areas }
+		prerequisite = { focus = RUS_destroy_tsarist_cells }
+		mutually_exclusive = { focus = RUS_constitutional_monarchy }
+		x = 0
+		y = 1
+		relative_position_id = RUS_destroy_tsarist_cells
+		cost = 70
+
+		completion_reward = {
+			RUS_ferbruary_revolution = yes
+		}
+	}
+
+	focus = {
 		id = RUS_continued_dialogue_with_the_germans
 		icon = GFX_generic_deal_germany
 		x = -4
@@ -1368,7 +1613,7 @@
 		available = {
 			NOT = { has_government = communism }
 			NOT = {
-				has_global_flag = RUS_germans_leave_potsdam
+				has_global_flag = RUS_germans_wont_potsdam
 				has_global_flag = RUS_russian_full_access_flag
 			}
 			has_global_flag = RUS_ger_agree_potsdam
@@ -1648,23 +1893,57 @@
 		id = RUS_take_full_control_of_the_army
 		icon = GFX_focus_GRE_an_orthodox_state
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = RUS_tsarist_national_intervension
 		prerequisite = { focus = RUS_tsarist_national_intervension } 
 		cost = 70
 
 		available = {
 			has_war = yes
+			OR = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
+			}
 		}
 
 		completion_reward = {
-			add_field_marshal_role  = {
-				Character = RUS_nicholas_ii
-				skill = 2
-				attack_skill = 1
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 1
+			if = {
+				limit = {
+					has_country_leader = {
+						character = RUS_nicholas_ii
+						ruling_only = yes
+					}
+				}
+				add_field_marshal_role  = {
+					Character = RUS_nicholas_ii
+					skill = 2
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_leader = {
+						character = RUS_michael
+						ruling_only = yes
+					}
+				}
+				add_field_marshal_role  = {
+					Character = RUS_michael
+					skill = 4
+					attack_skill = 3
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 3
+				}
 			}
 			swap_ruler_traits = {
 				remove = inexperienced_imperialist
@@ -2114,18 +2393,22 @@
 	focus = {
 		id = RUS_the_russian_civil_war
 		icon = GFX_goal_generic_political_pressure
-		x = -0
-		y = 1
-		relative_position_id = RUS_maintain_the_status_quo
-		prerequisite = { focus = RUS_maintain_the_status_quo }
-		cost = 70
+		x = 8
+		y = 10
+		cost = 50
+
+		allow_branch = {
+			OR = {
+				has_global_flag = Russian_civil_war_flag
+				has_civil_war = yes
+				has_war_with = SOV
+			}
+		}
 		 
 
 		available = {
-			has_country_flag = RUS_provisional_government_in_charge
-			NOT = { 
-				has_completed_focus = RUS_full_socialist_control
-				has_completed_focus = RUS_reformist_socialism
+			NOT = {
+				has_government = communism
 			}
 			OR = {
 				has_civil_war = yes
@@ -2144,6 +2427,138 @@
 		}
 
 		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	focus = {
+		id = RUS_maintain_the_tsars_autocracy
+		icon = GFX_goal_generic_political_pressure
+		x = -4
+		y = 1
+		relative_position_id = RUS_the_russian_civil_war
+		prerequisite = { focus = RUS_the_russian_civil_war}
+		cost = 50
+
+		available = {
+			OR = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
+			}
+		}
+
+		completion_reward = { 
+			add_stability = 0.15
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.08
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_one_movement
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		relative_position_id = RUS_maintain_the_tsars_autocracy
+		prerequisite = { focus = RUS_maintain_the_tsars_autocracy}
+		cost = 40
+
+		available = {
+			OR = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
+			}
+		}
+
+		completion_reward = { 
+			remove_ideas = RUS_fractured_white_movement
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_destroy_the_bolsheviks
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		relative_position_id = RUS_maintain_the_tsars_autocracy
+		prerequisite = { focus = RUS_maintain_the_tsars_autocracy}
+		cost = 40
+
+		available = {
+			OR = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
+			}
+		}
+
+		completion_reward = { 
+			add_timed_idea = {
+				idea = RUS_destroy_the_bolsheviks_idea
+				days = 180
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_the_father_of_russia
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		relative_position_id = RUS_one_movement
+		prerequisite = { focus = RUS_one_movement}
+		prerequisite = { focus = RUS_destroy_the_bolsheviks}
+		cost = 100
+
+		available = {
+			OR = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
+			}
+		}
+
+		completion_reward = { 
+			add_country_leader_trait = father_of_russia
+		}
+
+		ai_will_do = {
 			factor = 10
 		}
 	}
@@ -2151,11 +2566,24 @@
 	focus = {
 		id = RUS_supreme_ruler_of_russia
 		icon = GFX_goal_generic_political_pressure
-		x = -1
+		x = 3
 		y = 1
 		relative_position_id = RUS_the_russian_civil_war
 		prerequisite = { focus = RUS_the_russian_civil_war }
 		mutually_exclusive = { focus = RUS_presidential_republic }
+
+		available = {
+			NOT = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
+			}
+		}
 		cost = 35
 		 
 
@@ -2194,8 +2622,8 @@
 	focus = {
 		id = RUS_request_foreign_support
 		icon = GFX_goal_generic_political_pressure
-		x = 0
-		y = 2
+		x = -1
+		y = 1
 		relative_position_id = RUS_the_russian_civil_war
 		prerequisite = { focus = RUS_the_russian_civil_war}
 		cost = 35
@@ -2277,7 +2705,7 @@
 	focus = {
 		id = RUS_presidential_republic
 		icon = GFX_goal_generic_political_pressure
-		x = 1
+		x = 5
 		y = 1
 		relative_position_id = RUS_the_russian_civil_war
 		prerequisite = { focus = RUS_the_russian_civil_war }
@@ -2286,6 +2714,16 @@
 
 		available = {
 			has_stability > 0.69
+			NOT = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
+			}
 		}
 
 		completion_reward = {
@@ -2333,7 +2771,7 @@
 	focus = {
 		id = RUS_the_peoples_fight
 		icon = GFX_goal_generic_political_pressure
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = RUS_establish_free_and_fair_elections
 		prerequisite = { focus = RUS_establish_free_and_fair_elections }
@@ -2354,36 +2792,13 @@
 	}
 
 	focus = {
-		id = RUS_unite_the_whites
-		icon = GFX_goal_generic_political_pressure
-		x = 0
-		y = 2
-		relative_position_id = RUS_request_foreign_support
-		prerequisite = { focus = RUS_the_grand_russian_state focus = RUS_the_peoples_fight }
-		cost = 35
-
-		available = {
-		}
-
-		completion_reward = {
-			add_ideas = {
-				RUS_peoples_fight
-			}
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-	}
-
-	focus = {
 		id = RUS_purge_the_communists
 		icon = GFX_focus_SOV_military_purge #TEMP GOAL
-		x = 5
+		x = 1
 		y = 1
-		relative_position_id = RUS_crusade_against_communism
-		prerequisite = { focus = RUS_the_russian_civil_war focus = RUS_crusade_against_communism } 
-		cost = 70
+		relative_position_id = RUS_the_russian_civil_war
+		prerequisite = { focus = RUS_the_russian_civil_war} 
+		cost = 35
 		 
 
 		available = {
@@ -2408,9 +2823,9 @@
 		id = RUS_the_white_army
 		icon = GFX_focus_SOV_restore_cossack_units
 		x = 0
-		y = 1
-		relative_position_id = RUS_purge_the_communists
-		prerequisite = { focus = RUS_purge_the_communists}
+		y = 2
+		relative_position_id = RUS_the_russian_civil_war
+		prerequisite = { focus = RUS_the_russian_civil_war}
 		cost = 70
 		 
 
@@ -2436,7 +2851,6 @@
 		y = 1
 		relative_position_id = RUS_supreme_ruler_of_russia
 		prerequisite = { focus = RUS_supreme_ruler_of_russia }
-		mutually_exclusive = { focus = RUS_return_to_democracy }
 		cost = 35
 		 
 
@@ -2461,7 +2875,7 @@
 	focus = {
 		id = RUS_the_grand_russian_state
 		icon = GFX_goal_generic_political_pressure
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = RUS_loyalty_to_the_ruler
 		prerequisite = { focus = RUS_loyalty_to_the_ruler }
@@ -2476,6 +2890,33 @@
 			add_ideas = {
 				RUS_grand_russian_state
 			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_unite_the_whites
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		relative_position_id = RUS_the_grand_russian_state
+		prerequisite = { focus = RUS_the_grand_russian_state focus = RUS_the_peoples_fight }
+		cost = 35
+
+		bypass = {
+			NOT = {
+				has_idea = RUS_fractured_white_movement
+			}
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			remove_ideas = RUS_fractured_white_movement
 		}
 
 		ai_will_do = {
@@ -2680,7 +3121,7 @@
 		prerequisite = { focus = RUS_funds_from_international_communists }
 		prerequisite = { focus = RUS_allow_trudovik_involvement focus = RUS_remove_trudovik_influence }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = RUS_funds_from_international_communists
 		cost = 70
 
@@ -2709,6 +3150,21 @@
 		 
 
 		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = {
+							character = RUS_nicholas_ii
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = RUS_michael
+							ruling_only = yes
+						}
+					}
+				}
+				kill_country_leader = yes
+			}
 			RUS_civil_war_start = yes
 			add_named_threat = { 
 				threat = 10
@@ -3229,158 +3685,6 @@
 		cost = 35
 
 		completion_reward = {
-			effect_tooltip = {
-				761 = {
-					add_dynamic_modifier = {
-						modifier = RUS_trans_siberian_railway_construction
-					}
-					controller = {
-						if = {
-							limit = {
-								NOT = {
-									has_country_flag = RUS_controls_manchuria
-									original_tag = RUS
-								}
-							}
-							give_military_access = RUS
-							set_country_flag = RUS_controls_manchuria
-						}
-					}
-				}
-				714 = {
-					add_dynamic_modifier = {
-						modifier = RUS_trans_siberian_railway_construction
-					}
-					controller = {
-						if = {
-							limit = {
-								NOT = {
-									has_country_flag = RUS_controls_manchuria
-									original_tag = RUS
-								}
-							}
-							give_military_access = RUS
-							set_country_flag = RUS_controls_manchuria
-						}
-					}
-				}
-				717 = {
-					add_dynamic_modifier = {
-						modifier = RUS_trans_siberian_railway_construction
-					}
-					controller = {
-						if = {
-							limit = {
-								NOT = {
-									has_country_flag = RUS_controls_manchuria
-									original_tag = RUS
-								}
-							}
-							give_military_access = RUS
-							set_country_flag = RUS_controls_manchuria
-						}
-					}
-				}
-				328 = {
-					add_dynamic_modifier = {
-						modifier = RUS_trans_siberian_railway_construction
-					}
-					controller = {
-						if = {
-							limit = {
-								NOT = {
-									has_country_flag = RUS_controls_manchuria
-									original_tag = RUS
-								}
-							}
-							give_military_access = RUS
-							set_country_flag = RUS_controls_manchuria
-						}
-					}
-				}
-				715 = {
-					add_dynamic_modifier = {
-						modifier = RUS_trans_siberian_railway_construction
-					}
-					controller = {
-						if = {
-							limit = {
-								NOT = {
-									has_country_flag = RUS_controls_manchuria
-									original_tag = RUS
-								}
-							}
-							give_military_access = RUS
-							set_country_flag = RUS_controls_manchuria
-						}
-					}
-				}
-				716 = {
-					add_dynamic_modifier = {
-						modifier = RUS_trans_siberian_railway_construction
-					}
-					controller = {
-						if = {
-							limit = {
-								NOT = {
-									has_country_flag = RUS_controls_manchuria
-									tag = ROOT
-								}
-							}
-							give_military_access = RUS
-							set_country_flag = RUS_controls_manchuria
-						}
-					}
-				}
-			}
-
-			every_other_country = {
-				limit = {
-					has_country_flag = RUS_controls_manchuria 
-				}
-				custom_effect_tooltip = needs_approval
-			}
-
-			if = {
-				limit = {
-					QIN = {
-						has_country_flag = RUS_controls_manchuria
-					}
-				}
-				custom_effect_tooltip = RUS_qing_prob_wont_accept
-			}
-
-			hidden_effect = {
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 761 
-							state = 714
-							state = 717
-							state = 328
-							state = 715
-							state = 716 
-						}
-					}
-					add_dynamic_modifier = {
-						modifier = RUS_trans_siberian_railway_construction
-					}
-				}
-			}
-			
-			add_political_power = 50
-
-			activate_decision = RUS_finish_the_trans_siberian_railway_man_dec
-			custom_effect_tooltip = if_mission_completed
-
-			hidden_effect = {
-				activate_decision = RUS_ai_build_siberian_railway_in_man
-			}
-
-			effect_tooltip = {
-				add_political_power = 100
-				add_war_support = 0.05
-			}
 		}
 
 		ai_will_do = {

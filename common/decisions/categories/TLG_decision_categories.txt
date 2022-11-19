@@ -1,4 +1,5 @@
 surrender_category = {
+	priority = 2000
 	visible = { 
 		OR = {
 			is_debug = yes

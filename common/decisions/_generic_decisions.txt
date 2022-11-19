@@ -84,24 +84,6 @@ political_actions = {
 
 		cost = 100
 
-		complete_effect = {
-			if = {
-				limit = {
-					tag = RUS
-					NOT = { has_country_flag = RUS_no_more_commie_radical }
-				}
-				add_to_variable = {
-					var = RUS_socialist_radicalisation
-					value = -5
-					tooltip = RUS_socialist_radicalisation_increase
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.05
-				}
-			}
-		}
-
 		ai_will_do = {
 			base = 0
 			modifier = {

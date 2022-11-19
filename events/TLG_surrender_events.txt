@@ -1,8 +1,7 @@
-﻿###########################
-# Nuclear Bomb Events
-###########################
-
+﻿
 add_namespace = TLG_surrender
+
+#FRANCE SURRENDER
 
 country_event = { #non-total surrender to germany
 	id = TLG_surrender.1
@@ -11,7 +10,7 @@ country_event = { #non-total surrender to germany
 
 	is_triggered_only = yes
 	
-	option = { #we will achieve the septemberprogramm in the west
+	option = { #we will achieve the septemberprogramm in the west, but less colonies
 		name = TLG_surrender.1.a
 		if = {
 			limit = {
@@ -26,17 +25,27 @@ country_event = { #non-total surrender to germany
 				}
 			}
 			puppet = BEL
-			
-			if = {
+			every_state = {
 				limit = {
-					BEL = {
-						owns_state = 937
+					OWNER = {
+						OR = {
+							original_tag = BEL
+							is_subject_of = BEL
+						}
+					}
+					OR = {
+						#congo
+						region = 235
+						region = 246
+						region = 227
+
+						#mainland posessitons
+						state = 937
 					}
 				}
-				transfer_state = 937
+				transfer_state_to = ROOT
 			}
 			BEL = {
-				transfer_state = 29
 				if = {
 					limit = {
 						FROM = {
@@ -55,6 +64,7 @@ country_event = { #non-total surrender to germany
 				}
 			}	
 		}
+
 		if = {
 			limit = {
 				LUX = {
@@ -71,6 +81,7 @@ country_event = { #non-total surrender to germany
 				target = LUX
 			}
 		}
+
 		FROM = {
 			if = {
 				limit = {
@@ -81,39 +92,198 @@ country_event = { #non-total surrender to germany
 			white_peace = GER
 			country_event = { id = demobilization.1 days = 1 }
 		}
-		if = {
+		every_state = {
 			limit = {
-				FROM = {
-					owns_state = 927
+				OWNER = {
+					OR = {
+						original_tag = FROM
+						is_subject_of = FROM
+					}
+				}
+				OR = {
+					#french equatorial collonies and congo
+					region = 183
+					region = 184
+					region = 235
+					region = 246
+					region = 227
+					#mainland possetions
+					state = 28
+					state = 926
+					state = 927
+					state = 944
 				}
 			}
-			transfer_state = 927
+			transfer_state_to = ROOT
 		}
-		if = {
-			limit = {
-				FROM = {
-					owns_state = 947
-				}
-			}
-			transfer_state = 947
-		}
+		#italy
 		if = {
 			limit = {
 				ITA = {
 					is_in_faction_with = ROOT
 				}
-				FROM = {
-					owns_state = 735
+			}
+			every_state = {
+				limit = {
+					OWNER = {
+						OR = {
+							original_tag = FROM
+							is_subject_of = FROM
+						}
+					}
+					OR = {
+						#french areas they took from italy
+						state = 967
+						state = 968
+						state = 1
+
+						#north africa
+						region = 225
+						state = 273
+						state = 850
+						state = 851
+						state = 849
+						state = 853
+						state = 854
+						state = 852
+						state = 849
+						state = 665
+						state = 458
+					}
+				}
+				transfer_state_to = ROOT
+			}
+		}
+		news_event = { id = TLG_surrender.21 hours = 12 }
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = { #kaiserreich larp
+		name = TLG_surrender.1.b
+		ai_chance = {
+			factor = 1
+		}
+		FROM = {
+			if = {
+				limit = {
+					MOR = {
+						is_subject_of = FROM
+					}
+				}
+				set_autonomy = {
+					target = MOR
+					autonomy_state = autonomy_free
+					end_wars = no
+					end_civil_wars = no
+				}
+				every_state = {
+					limit = {
+						OWNER = {
+							OR = {
+								original_tag = FROM
+								is_subject_of = FROM
+							}
+						}
+						is_core_of = MOR
+					}
+					transfer_state_to = ROOT
 				}
 			}
-			ITA = {
-				transfer_state = 735
+			else = {
+				release = MOR 
+			}
+		}
+		every_state = {
+			limit = {
+				OWNER = {
+					OR = {
+						original_tag = FROM
+						is_subject_of = FROM
+					}
+				}
+				OR = {
+					#french equatorial collonies and congo
+					region = 183
+					region = 184
+					region = 235
+					region = 246
+					region = 227
+
+					#west african states they claim
+					state = 776
+					state = 779
+					state = 708
+					state = 543
+					state = 706
+					state = 713
+					state = 268
+					#indochina
+					region = 142
+					region = 251
+					region = 83
+					#mainland possetions
+					state = 28
+					state = 926
+					state = 927
+
+					#other
+					region = 244
+
+				}
+			}
+			transfer_state_to = ROOT
+		}
+
+		#italy
+		if = {
+			limit = {
+				ITA = {
+					is_in_faction_with = ROOT
+				}
+			}
+			every_state = {
+				limit = {
+					OWNER = {
+						OR = {
+							original_tag = FROM
+							is_subject_of = FROM
+						}
+					}
+					OR = {
+						#french areas they took from italy
+						state = 967
+						state = 968
+						state = 1
+
+						#north africa
+						state = 448
+						state = 449
+						state = 450
+						state = 451
+						state = 661
+						state = 663
+						state = 273
+						state = 850
+						state = 851
+						state = 849
+						state = 853
+						state = 854
+						state = 852
+						state = 849
+						state = 665
+						state = 458
+					}
+				}
+				transfer_state_to = ROOT
 			}
 		}
 		news_event = { id = TLG_surrender.21 hours = 12 }
 	}
+
 	option = { #no, we must achieve total victory
-		name = TLG_surrender.1.a
+		name = TLG_surrender.1.c
 		ai_chance = {
 			factor = 0
 		}
@@ -150,6 +320,143 @@ country_event = {
 	fire_only_once = yes
 
 	immediate = {
+		
+		182 = {
+			remove_claim_by = FROM
+		}
+		871 = {
+			remove_core_of = FROM
+		}
+		839 = {
+			remove_core_of = FROM
+		}
+		878 = {
+			remove_core_of = FROM
+		}
+		880 = {
+			remove_core_of = FROM
+		}
+	}
+
+	option = { #plan two (historical)
+		if = {
+			limit = {
+				SER = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						if = {
+							limit = {
+								BUL = {
+									NOT = {
+										has_war_with = OTT
+									}
+								}
+							}
+							state = 871
+							state = 839
+						}
+						state = 876
+						state = 802
+						state = 872
+						state = 106
+					}
+				}
+				transfer_state_to = SER
+			}
+		}
+		if = {
+			limit = {
+				MNT = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = OTT
+						is_owned_by = ALB
+					}
+					OR = {
+						state = 874
+						state = 875
+					}
+				}
+				transfer_state_to = MNT
+			}
+		}
+		if = {
+			limit = {
+				GRE = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						state = 185
+						state = 731
+						state = 879
+					}
+				}
+				transfer_state_to = GRE
+			}
+		}
+		if = {
+			limit = {
+				BUL = {
+					has_war_with = OTT
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						state = 883
+						state = 341
+						state = 855
+						state = 341
+						state = 184
+						state = 881
+						state = 880
+						state = 878
+						state = 839
+						state = 871
+					}
+				}
+				transfer_state_to = BUL
+			}
+		}
+		ALB = {
+			every_state = {
+				limit = {
+					is_owned_by = OTT
+					OR = {
+						state = 44
+						state = 805
+					}
+				}
+				transfer_state_to = PREV
+			}
+		}
+		if = {
+			limit = {
+				country_exists = ALB
+			}
+			ITA = {
+				give_guarantee = ALB
+			}
+			ASH = {
+				give_guarantee = ALB
+			}
+		}
+		name = TLG_surrender.3.b
+
 		FROM = {
 			every_enemy_country = {
 				limit = {
@@ -175,20 +482,8 @@ country_event = {
 				}
 			}
 		}
-		182 = {
-			remove_claim_by = FROM
-		}
-		871 = {
-			remove_core_of = FROM
-		}
-		839 = {
-			remove_core_of = FROM
-		}
-		878 = {
-			remove_core_of = FROM
-		}
-		880 = {
-			remove_core_of = FROM
+		ai_chance = {
+			factor = 6
 		}
 	}
 	
@@ -314,135 +609,38 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = great_powers_will_not_like_this
+
+		FROM = {
+			every_enemy_country = {
+				limit = {
+					original_tag = SER
+					original_tag = MNT
+					original_tag = GRE
+					original_tag = BUL
+				}
+				white_peace = PREV
+				if = { #checks if they are in balkan league faction and then leaves it if theyre not
+					limit = {
+						faction_leader = {
+							NOT = {
+								original_tag = SER
+								original_tag = BUL
+								original_tag = MNT
+								original_tag = GRE
+								original_tag = ROM
+							}
+						}
+					}
+					leave_faction = yes
+				}
+			}
+		}
 		ai_chance = {
 			factor = 5
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
 			}
-		}
-	}
-
-	option = { #plan two (historical)
-		if = {
-			limit = {
-				SER = {
-					has_war_with = OTT
-				}
-			}
-			every_state = {
-				limit = {
-					is_owned_by = OTT
-					OR = {
-						if = {
-							limit = {
-								BUL = {
-									NOT = {
-										has_war_with = OTT
-									}
-								}
-							}
-							state = 871
-							state = 839
-						}
-						state = 876
-						state = 802
-						state = 872
-						state = 106
-					}
-				}
-				transfer_state_to = SER
-			}
-		}
-		if = {
-			limit = {
-				MNT = {
-					has_war_with = OTT
-				}
-			}
-			every_state = {
-				limit = {
-					OR = {
-						is_owned_by = OTT
-						is_owned_by = ALB
-					}
-					OR = {
-						state = 874
-						state = 875
-					}
-				}
-				transfer_state_to = MNT
-			}
-		}
-		if = {
-			limit = {
-				GRE = {
-					has_war_with = OTT
-				}
-			}
-			every_state = {
-				limit = {
-					is_owned_by = OTT
-					OR = {
-						state = 185
-						state = 731
-						state = 879
-					}
-				}
-				transfer_state_to = GRE
-			}
-		}
-		if = {
-			limit = {
-				BUL = {
-					has_war_with = OTT
-				}
-			}
-			every_state = {
-				limit = {
-					is_owned_by = OTT
-					OR = {
-						state = 883
-						state = 341
-						state = 855
-						state = 341
-						state = 184
-						state = 881
-						state = 880
-						state = 878
-						state = 839
-						state = 871
-					}
-				}
-				transfer_state_to = BUL
-			}
-		}
-		ALB = {
-			every_state = {
-				limit = {
-					is_owned_by = OTT
-					OR = {
-						state = 44
-						state = 805
-					}
-				}
-				transfer_state_to = PREV
-			}
-		}
-		if = {
-			limit = {
-				country_exists = ALB
-			}
-			ITA = {
-				give_guarantee = ALB
-			}
-			ASH = {
-				give_guarantee = ALB
-			}
-		}
-		name = TLG_surrender.3.b
-		ai_chance = {
-			factor = 6
 		}
 	}
 	#no extra choice for not surrendering since i dont want bulgaria, serbia, or greece to own all of the middle east
@@ -839,16 +1037,9 @@ country_event = { #bulgarians demand peace
 						state = 884
 						state = 855
 						state = 797
-						AND = {
-							NOT = {
-								state = 881
-								state = 880
-							}
-							is_core_of = OTT
-						}
 					}
 				}
-				transfer_state_to = BUL
+				transfer_state_to = OTT
 			}
 		}
 		BUL = {
@@ -906,43 +1097,9 @@ country_event = { #balkan league surrenders to ottomans
 			limit = {
 				has_war_with = MNT
 			}
-			if = {
-				limit = {
-					OR = {
-						has_dlc = "Together for Victory"
-						has_dlc = "Man the Guns"
-					}
-				}
-				
-				set_autonomy = {
-					target = MNT
-					autonomous_state = autonomy_integrated_puppet
-				}
-				else = {
-					puppet = MNT
-				}
-			}
-		}
-
-		if = {
-			limit = {
-				has_war_with = SER
-			}
-			if = {
-				limit = {
-					OR = {
-						has_dlc = "Together for Victory"
-						has_dlc = "Man the Guns"
-					}
-				}
-				
-				set_autonomy = {
-					target = SER
-					autonomous_state = autonomy_integrated_puppet
-				}
-				else = {
-					puppet = SER
-				}
+			annex_country = {
+				target = MNT
+				transfer_troops = no
 			}
 		}
 		
@@ -1008,34 +1165,54 @@ country_event = { #balkan league surrenders to ottomans
 				transfer_state_to = OTT
 			}
 		}
-		OTT = {
-			every_enemy_country = {
+
+		if = {
+			limit = {
+				has_war_with = SER
+			}
+			if = {
 				limit = {
-					original_tag = SER
-					original_tag = MNT
-					original_tag = GRE
-					original_tag = BUL
-				}
-				white_peace = PREV
-				if = { #checks if they are in balkan league faction
-					limit = {
-						faction_leader = {
-							NOT = {
-								original_tag = SER
-								original_tag = BUL
-								original_tag = MNT
-								original_tag = GRE
-								original_tag = ROM
-							}
-						}
+					OR = {
+						has_dlc = "Together for Victory"
+						has_dlc = "Man the Guns"
 					}
-					leave_faction = yes
+				}
+				
+				set_autonomy = {
+					target = SER
+					autonomous_state = autonomy_integrated_puppet
 				}
 				else = {
-					dismantle_faction = yes
+					puppet = SER
 				}
 			}
-			
+		}
+		every_enemy_country = {
+			limit = {
+				original_tag = SER
+				original_tag = MNT
+				original_tag = GRE
+				original_tag = BUL
+				original_tag = OTT
+			}
+			white_peace = ROOT
+			if = { #checks if they arent in balkan league faction
+				limit = {
+					faction_leader = {
+						NOT = {
+							original_tag = SER
+							original_tag = OTT
+							original_tag = MNT
+							original_tag = GRE
+							original_tag = ROM
+						}
+					}
+				}
+				leave_faction = yes
+			}
+			else = {
+				dismantle_faction = yes
+			}
 		}
 		ai_chance = {
 			factor = 100
@@ -1069,35 +1246,7 @@ country_event = { #balkan league surrenders to bulgarians
 	fire_only_once = yes
 
 	immediate = {
-		BUL = {
-			every_enemy_country = {
-				limit = {
-					original_tag = SER
-					original_tag = MNT
-					original_tag = GRE
-					original_tag = ROM
-					original_tag = OTT
-				}
-				white_peace = PREV
-				if = { #checks if they are in balkan league faction
-					limit = {
-						faction_leader = {
-							NOT = {
-								original_tag = SER
-								original_tag = MNT
-								original_tag = GRE
-								original_tag = ROM
-							}
-						}
-					}
-					leave_faction = yes
-				}
-				else = {
-					dismantle_faction = yes
-				}
-			}
-			
-		}
+		
 	}
 	
 	option = { #great
@@ -1118,6 +1267,7 @@ country_event = { #balkan league surrenders to bulgarians
 						state = 106
 						state = 871
 						state = 839
+						state = 838
 					}
 				}
 				transfer_state_to = BUL
@@ -1137,6 +1287,7 @@ country_event = { #balkan league surrenders to bulgarians
 						state = 883
 						state = 341
 						state = 855
+						state = 881
 					}
 				}
 				transfer_state_to = BUL
@@ -1177,6 +1328,36 @@ country_event = { #balkan league surrenders to bulgarians
 			}
 		}
     	set_country_flag = balkan_war_ii_end
+		BUL = {
+			every_enemy_country = {
+				limit = {
+					original_tag = SER
+					original_tag = MNT
+					original_tag = GRE
+					original_tag = ROM
+					original_tag = OTT
+				}
+				white_peace = PREV
+				if = { #checks if they are in balkan league faction
+					limit = {
+						faction_leader = {
+							NOT = {
+								original_tag = SER
+								original_tag = MNT
+								original_tag = GRE
+								original_tag = ROM
+								original_tag = OTT
+							}
+						}
+					}
+					leave_faction = yes
+				}
+				else = {
+					dismantle_faction = yes
+				}
+			}
+			
+		}
 		ai_chance = {
 			factor = 100
 			modifier = {
@@ -1190,8 +1371,399 @@ country_event = { #balkan league surrenders to bulgarians
 	}
 
 	option = { #we will fight on until they completely surrender!
-		name = TLG_surrender.11.b
+		name = TLG_surrender.1.b
 		add_political_power = -25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#BREST LITOVSK
+
+country_event = { #brest-litovsk
+	id = TLG_surrender.13
+	title = TLG_surrender.13.t
+	desc = TLG_surrender.13.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		
+	}
+	
+	option = { #great
+		name = TLG_surrender.13.a
+
+		#FIN
+		if = {
+			limit = {
+				OR = {
+					FIN = {
+						is_subject_of = FROM
+					}
+					FROM = {
+						any_owned_state = {
+							is_core_of = FIN
+						}
+					}
+				}
+			}
+			FROM = {
+				if = {
+					limit = {
+						FIN = {
+							is_subject_of = FROM
+						}
+					}
+					set_autonomy = {
+						target = FIN
+						autonomy_state = autonomy_free
+						end_wars = no
+						end_civil_wars = no
+					}
+					every_state = {
+						limit = {
+							OWNER = {
+								OR = {
+									original_tag = FROM
+									is_subject_of = FROM
+								}
+							}
+							NOT = {
+								state = 722
+							}
+							is_core_of = FIN
+						}
+						transfer_state_to = ROOT
+					}
+				}
+				else = {
+					release = FIN 
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					FIN = {
+						is_subject_of = RUS
+					}
+					RUS = {
+						any_owned_state = {
+							is_core_of = FIN
+						}
+					}
+				}
+			}
+			RUS = {
+				if = {
+					limit = {
+						FIN = {
+							is_subject_of = RUS
+						}
+					}
+					set_autonomy = {
+						target = FIN
+						autonomy_state = autonomy_free
+						end_wars = no
+						end_civil_wars = no
+					}
+					every_state = {
+						limit = {
+							OWNER = {
+								OR = {
+									original_tag = FROM
+									is_subject_of = FROM
+								}
+							}
+							NOT = {
+								state = 722
+							}
+							is_core_of = FIN
+						}
+						transfer_state_to = ROOT
+					}
+				}
+				else = {
+					release = FIN 
+				}
+			}
+		}
+		
+		#pol
+		every_state = {
+			limit = {#states 965 and 97 are gonna be transfered to lit later on anyways
+				region = 38
+			}
+			transfer_state_to = POL
+		}
+		if = {
+			limit = {
+				OR = {
+					has_dlc = "Together for Victory"
+					has_dlc = "Man the Guns"
+				}
+			}
+			
+			set_autonomy = {
+				target = POL
+				autonomous_state = autonomy_integrated_puppet
+			}
+			else = {
+				puppet = POL
+			}
+		}
+		#LIT
+		every_state = {
+			limit = {
+				OR = {
+					state = 11
+					state = 814
+					state = 189
+					state = 815
+					state = 784
+					state = 965
+					state = 939
+					state = 97
+				}
+			}
+			transfer_state_to = LIT
+		}
+		if = {
+			limit = {
+				OR = {
+					has_dlc = "Together for Victory"
+					has_dlc = "Man the Guns"
+				}
+			}
+			
+			set_autonomy = {
+				target = LIT
+				autonomous_state = autonomy_integrated_puppet
+			}
+			else = {
+				puppet = LIT
+			}
+		}
+		#BAL
+		every_state = {
+			limit = {
+				OR = {
+					state = 808
+					state = 809
+					state = 190
+					state = 812
+					state = 13
+					state = 811
+					state = 191
+					state = 812
+					state = 813
+				}
+			}
+			transfer_state_to = LAT
+		}
+		puppet = LAT
+		LAT = {
+			set_cosmetic_tag = BAL_unified
+		}
+		#BLR
+		every_state = {
+			limit = {
+				OR = {
+					state = 96
+					state = 95
+					state = 94
+					state = 194
+					state = 204
+					state = 206
+					state = 911
+				}
+			}
+			transfer_state_to = BLR
+		}
+		puppet = BLR
+
+		if = {
+			limit = {
+				UKR = {
+					exists = yes
+					is_subject = no
+				}
+			}
+			UKR = {
+				country_event = TLG_surrender.14
+			}
+		}
+		else_if = {
+			limit = {
+				UKR = {
+					OR = {
+						AND = {
+							exists = yes
+							is_subject_of = RUS
+						}
+						AND = {
+							exists = no
+						}
+					}
+				}
+			}
+			event_target:russia_event_target = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 941
+							state = 240
+							state = 935
+							state = 914
+						}
+					}
+					transfer_state_to = PREV
+				}
+			}
+		}
+
+		#to prevent excess since they might already be independent because of civil war shenanigans
+		every_state = {
+			limit = {
+				OR = {
+					state = 810
+					state = 207
+					state = 241
+				}
+			}
+			transfer_state_to = FROM
+		}
+		
+		ROOT = {
+			every_enemy_country = {
+				limit = {
+					original_tag = RUS
+					original_tag = SOV
+					original_tag = FIN
+					original_tag = KHI
+					original_tag = buk
+				}
+				white_peace = PREV
+			}
+		}
+		FROM = {
+			save_global_event_target_as = russia_event_target
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 4
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = ALB
+				}
+			}
+		}
+	}
+
+	option = { #we will fight on until they completely surrender!
+		name = TLG_surrender.1.b
+		add_political_power = -25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = { #germany wants to protect us
+	id = TLG_surrender.14
+	title = TLG_surrender.14.t
+	desc = TLG_surrender.14.desc
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #okay
+		name = TLG_surrender.14.a
+		event_target:russia_event_target = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 941
+						state = 240
+						state = 935
+						state = 914
+					}
+				}
+				transfer_state_to = PREV
+			}
+		}
+		clear_global_event_target = russia_event_target
+		FROM = {
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Together for Victory"
+						has_dlc = "Man the Guns"
+						has_dlc = "Death or Dishonor"
+					}
+				}
+				
+				set_autonomy = {
+					target = ROOT
+					autonomous_state = autonomy_satellite
+				}
+				else = {
+					add_to_faction = ROOT
+				}
+			}
+			
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 940
+					state = 93
+					state = 199
+					state = 201
+					state = 198
+					state = 834
+					state = 192
+					state = 197
+					state = 203
+					state = 202
+					state = 193
+					state = 225
+					state = 224
+					state = 259
+					state = 226
+					state = 196
+					state = 137
+					state = 200
+					state = 227
+					state = 228
+					state = 221
+				}
+			}
+			transfer_state_to = PREV
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 4
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = ALB
+				}
+			}
+		}
+	}
+
+	option = { #NO!
+		name = TLG_surrender.14.b
+		clear_global_event_target = russia_event_target
+		add_political_power = 25
 		ai_chance = {
 			factor = 0
 		}

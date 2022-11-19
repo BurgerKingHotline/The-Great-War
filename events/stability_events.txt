@@ -16,28 +16,17 @@ country_event = {
 	hidden = yes
 
 	trigger = {
+		if = { #Russia has its own events if bop is active,
+			limit = { #best not to have multiple a the same time
+				original_tag = RUS
+			}
+			has_country_flag = RUS_revolutionaries_active
+		}
 		has_war = yes
 		has_civil_war = no
 		OR = {
 			has_stability < 0.6
 			has_war_support < 0.6
-			if = {
-				limit = {
-					original_tag = RUS
-					NOT = {
-						has_country_flag = RUS_no_more_commie_radical
-					}
-				}
-				check_variable = { RUS_socialist_radicalisation > 44 }
-			}
-		}
-		NOT = {
-			AND = {
-				is_major = yes
-				all_enemy_country = {
-					is_major = no
-				}
-			}
 		}
 		NOT = { 
 			has_country_flag = crisis_in_progress
@@ -47,23 +36,17 @@ country_event = {
 	mean_time_to_happen = { 
 		days = 260
 		modifier = {
-			factor = 2.0
-		}
-		modifier = {
-			factor = 1.5
-		}
-		modifier = {
-			factor = 2.5
-		}
-		modifier = {
-			factor = 2.0
-		}
-		modifier = {
-			factor = 1.5
-		}
-		modifier = {
-			factor = 2
-			NOT = { has_government = democratic }
+			factor = 0.8
+			OR = { #trench warfare
+				AND = {
+					original_tag = FRA
+					has_war_with = GER
+				}
+				AND = {
+					original_tag = GER
+					has_war_with = FRA
+				}
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -238,46 +221,6 @@ country_event = {
 				factor = 2
 			}
 		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			random_list = {
-				10 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = 15
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-				20 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = 10
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-				30 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = 5
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-				20 = {
-				}
-				20 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = -5
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-			}
-		}
 		
 		add_political_power = -120
 		custom_effect_tooltip = 30_days_tt
@@ -341,46 +284,6 @@ country_event = {
 			modifier = {
 				has_political_power > 100
 				factor = 2
-			}
-		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			random_list = {
-				10 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = 15
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-				20 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = 10
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-				30 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = 5
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-				20 = {
-				}
-				20 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = -5
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
 			}
 		}
 		add_political_power = -130
@@ -448,46 +351,6 @@ country_event = {
 				factor = 2
 			}
 		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			random_list = {
-				10 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = 15
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-				20 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = 10
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-				30 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = 5
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-				20 = {
-				}
-				20 = {
-					add_to_variable = {
-						var = RUS_socialist_radicalisation
-						value = -5
-						tooltip = RUS_socialist_radicalisation_increase
-					}
-				}
-			}
-		}
 		add_political_power = -150
 		custom_effect_tooltip = 30_days_tt
 		set_country_flag = crisis_solution_in_progress
@@ -549,19 +412,6 @@ country_event = {
 				factor = 0.5
 			}
 		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = 5
-				tooltip = RUS_socialist_radicalisation_increase
-			}
-		}
 		custom_effect_tooltip = 30_days_tt
 		set_country_flag = crisis_solution_in_progress
 		add_political_power = -75 
@@ -587,19 +437,6 @@ country_event = {
 				factor = 2
 			}
 		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = -5
-				tooltip = RUS_socialist_radicalisation_increase
-			}
-		}
 		add_political_power = -125 
 		random_list = {
 			80 = { country_event = { id = strikes_event.3 days = 45 } }#success
@@ -621,19 +458,6 @@ country_event = {
 			modifier = {
 				has_political_power > 100
 				factor = 0.5
-			}
-		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = 5
-				tooltip = RUS_socialist_radicalisation_increase
 			}
 		}
 		custom_effect_tooltip = 30_days_tt
@@ -660,19 +484,6 @@ country_event = {
 				factor = 2
 			}
 		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = -5
-				tooltip = RUS_socialist_radicalisation_increase
-			}
-		}
 		add_political_power = -135 
 		set_country_flag = crisis_solution_in_progress
 		random_list = {
@@ -696,19 +507,6 @@ country_event = {
 				factor = 0.5
 			}
 		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = 5
-				tooltip = RUS_socialist_radicalisation_increase
-			}
-		}
 		custom_effect_tooltip = 30_days_tt
 		set_country_flag = crisis_solution_in_progress
 		add_political_power = -85 
@@ -730,19 +528,6 @@ country_event = {
 			modifier = {
 				has_political_power > 100
 				factor = 2
-			}
-		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = -5
-				tooltip = RUS_socialist_radicalisation_increase
 			}
 		}
 		custom_effect_tooltip = 45_days_tt
@@ -812,19 +597,6 @@ country_event = {
 			60 = { country_event = { id = mutiny_event.1 days = 30 } }#success
 			40 = { country_event = { id = mutiny_event.2 days = 30 } }#failure
 		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = 5
-				tooltip = RUS_socialist_radicalisation_increase
-			}
-		}
 	}
 	option = { 
 		name = stability.23.c #negotiations - level 1
@@ -840,19 +612,6 @@ country_event = {
 			modifier = {
 				has_political_power > 100
 				factor = 2
-			}
-		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = -5
-				tooltip = RUS_socialist_radicalisation_increase
 			}
 		}
 		add_political_power = -125 
@@ -885,19 +644,6 @@ country_event = {
 			60 = { country_event = { id = mutiny_event.4 days = 30 } }#success
 			40 = { country_event = { id = mutiny_event.5 days = 30 } }#failure
 		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = 5
-				tooltip = RUS_socialist_radicalisation_increase
-			}
-		}
 	}
 	option = { 
 		trigger = {
@@ -922,19 +668,6 @@ country_event = {
 			20 = { country_event = { id = stability.23 days = 45 } }  
 
 		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = -5
-				tooltip = RUS_socialist_radicalisation_increase
-			}
-		}
 	}
 	option = { 
 		trigger = {
@@ -957,19 +690,6 @@ country_event = {
 		random_list = {
 			60 = { country_event = { id = mutiny_event.7 days = 30 } }#success
 			40 = { country_event = { id = mutiny_event.8 days = 30 } }#failure
-		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = 5
-				tooltip = RUS_socialist_radicalisation_increase
-			}
 		}
 	}
 	option = { 
@@ -994,19 +714,6 @@ country_event = {
 			80 = { country_event = { id = mutiny_event.9 days = 45 } }#success
 			20 = { country_event = { id = stability.23 days = 45 } } 
 
-		}
-		if = {
-			limit = {
-				original_tag = RUS
-				NOT = {
-					has_country_flag = RUS_no_more_commie_radical
-				}
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = -5
-				tooltip = RUS_socialist_radicalisation_increase
-			}
 		}
 	}
 }

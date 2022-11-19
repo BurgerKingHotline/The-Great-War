@@ -1,5 +1,23 @@
 on_actions = {
 
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = {
+                    FROM.FROM = {
+                        has_dynamic_modifier = { modifier = eth_autonomous_state }
+                    }
+                    ROOT = {
+                        NOT = {
+                            original_tag = ETH
+                        }
+                    }
+                }
+                remove_dynamic_modifier = { modifier = eth_autonomous_state }
+            }
+        }
+    }
+
     on_startup = {
         effect = {
             every_country = {
@@ -53,21 +71,30 @@ on_actions = {
         effect = {
             if = {
                 limit = {
-                    check_variable = { RUS_socialist_radicalisation > 79 }
-                    check_variable = { party_popularity_100@communism > 59 }
-                    NOT = { has_country_flag = RUS_no_more_commie_radical}
+                    has_country_flag = RUS_revolutionaries_active
+                }
+                clamp_temp_variable = {
+                    var = RUS_socialist_radicalisation
+                    min = 0
+                    max = 100
                 }
                 if = {
                     limit = {
-                        OR = {
-                            has_country_flag = RUS_provisional_government_in_charge
-                            surrender_progress > 0.25
-                        }
+                        check_variable = { RUS_socialist_radicalisation > 79 }
+                        check_variable = { party_popularity_100@communism > 59 }
                     }
-                    RUS_civil_war_start = yes
-                }
-                else = {
-                    country_event = { id = rus_civilwar.1 }
+                    if = {
+                        limit = {
+                            OR = {
+                                has_country_flag = RUS_ferbruary_revolution_flag
+                                surrender_progress > 0.25
+                            }
+                        }
+                        RUS_civil_war_start = yes
+                    }
+                    else = {
+                        country_event = { id = rus_civilwar.1 }
+                    }
                 }
             }
         }

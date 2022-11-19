@@ -16,24 +16,7 @@ country_event = {
 	
 	option = { #february revolution works!
 		name = rus_civilwar.1.a
-		set_country_flag = RUS_provisional_government_in_charge
-		set_cosmetic_tag = RUS_provisional
-		if = {
-			limit = {
-				has_completed_focus = RUS_full_socialist_control
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
-		}
-		else = {
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-				name = RUS_democratic_party_civil_war
-			}
-		}
+		set_country_flag = RUS_ferbruary_revolution_flag
 		add_to_variable = {
 			var = RUS_socialist_radicalisation
 			value = -15
@@ -224,44 +207,56 @@ country_event = {
 				random = 10
 			}
 		}
-
-		trigger = {
-			NOT = {
-				has_completed_focus = RUS_ban_the_political_parties
-			}
-		}
 	}
 
 	option = { #it falls apart
 		name = rus_civilwar.1.b
-		if = {
-			limit = {
-				has_completed_focus = RUS_ban_the_political_parties
-			}
-			add_political_power = -50
-			set_country_flag = RUS_provisional_government_failed
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = 5
-				tooltip = RUS_socialist_radicalisation_increase
+		add_political_power = -150
+		set_country_flag = RUS_february_revolution_failed
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = RUS_socialist_radicalisation
+			value = 15
+			tooltip = RUS_socialist_radicalisation_increase
+		}
+	}
+}
+country_event = { #who takes control of the government
+	id = rus_civilwar.1000
+	title = rus_civilwar.1000.t	
+	desc = rus_civilwar.1000.desc	
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #tsar michael does
+		name = rus_civilwar.1000.a
+		promote_character = {
+			character = RUS_michael
+			ideology = despotism
+		}
+		add_stability = -0.05
+		add_political_power = -25
+		hidden_effect = {
+			country_event = { 
+				id = rus_civilwar.2
+				days = 30
+				random = 10
 			}
 		}
-		else = {
-			add_political_power = -150
-			set_country_flag = RUS_provisional_government_failed
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.05
-			}
-			add_to_variable = {
-				var = RUS_socialist_radicalisation
-				value = 15
-				tooltip = RUS_socialist_radicalisation_increase
-			}
+	}
+
+	option = { #a provisional government is set up
+		name = rus_civilwar.1000.b
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+			election_frequency = 60
+			last_election = "1907.10.1"
 		}
 	}
 }
@@ -361,7 +356,7 @@ country_event = { #Russian civil war starts
 			}
 			add_civil_war_target = RUS
 		}
-		set_country_flag = RUS_no_more_commie_radical
+		clr_country_flag = RUS_revolutionaries_active
 		add_popularity = {
 			ideology = communism
 			popularity = -0.05
@@ -748,138 +743,132 @@ country_event = { #collapse of russian control in europe
 		RUS = {
 			add_ideas = {
 				RUS_russian_civil_war
+				RUS_fractured_white_movement
 			}
 			if = {
 				limit = {
-					NOT = { 
-						has_completed_focus = RUS_promote_the_all_russian_nation
+					any_owned_state = {
+						is_controlled_by = RUS
+						is_core_of = MOL
 					}
 				}
-				if = {
-					limit = {
-						any_owned_state = {
-							is_controlled_by = RUS
-							is_core_of = MOL
-						}
-					}
-					release = MOL
-					MOL = {
-						every_owned_state = {
-							RUS = {
-								delete_unit = { 
-									state = PREV
-									disband = yes
-								}
+				release = MOL
+				MOL = {
+					every_owned_state = {
+						RUS = {
+							delete_unit = { 
+								state = PREV
+								disband = yes
 							}
 						}
 					}
 				}
-				if = {
-					limit = {
-						any_owned_state = {
-							is_controlled_by = RUS
-							is_core_of = UKR
-						}
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						is_controlled_by = RUS
+						is_core_of = UKR
 					}
-					release = UKR
-					UKR = {
-						every_owned_state = {
-							RUS = {
-								delete_unit = { 
-									state = PREV
-									disband = yes
-								}
+				}
+				release = UKR
+				UKR = {
+					every_owned_state = {
+						RUS = {
+							delete_unit = { 
+								state = PREV
+								disband = yes
 							}
 						}
 					}
 				}
-				if = {
-					limit = {
-						any_owned_state = {
-							is_controlled_by = RUS
-							is_core_of = POL
-						}
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						is_controlled_by = RUS
+						is_core_of = POL
 					}
-					release = POL
-					POL = {
-						every_owned_state = {
-							RUS = {
-								delete_unit = { 
-									state = PREV
-									disband = yes
-								}
+				}
+				release = POL
+				POL = {
+					every_owned_state = {
+						RUS = {
+							delete_unit = { 
+								state = PREV
+								disband = yes
 							}
 						}
 					}
 				}
-				if = {
-					limit = {
-						any_owned_state = {
-							is_core_of = POL
-						}
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						is_core_of = POL
 					}
-					release = FIN
 				}
-				if = {
-					limit = {
-						137 = {
-							is_owned_by = ROOT
-						}
-					}
+				release = FIN
+			}
+			if = {
+				limit = {
 					137 = {
-						transfer_state_to = RUS
+						is_owned_by = ROOT
 					}
 				}
-			
-				935 = {
+				137 = {
 					transfer_state_to = RUS
 				}
-				914 = {
-					transfer_state_to = SOV
-				}
-				722 = {
-					transfer_state_to = SOV
-				}
-				240 = {
-					transfer_state_to = UKR
-				}
-				194 = {
-					transfer_state_to = UKR
-				}
-				94 = {
-					transfer_state_to = UKR
-				}
-				940 = {
-					transfer_state_to = UKR
-				}
-				UKR = {
-					division_template = {
-						name = "Ukranian Infantry Division"
-						is_locked = no
-						priority = 0
-						template_counter = 0
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 0 y = 3 }
-							infantry = { x = 1 y = 0 }
-						}
+			}
+		
+			935 = {
+				transfer_state_to = RUS
+			}
+			914 = {
+				transfer_state_to = SOV
+			}
+			722 = {
+				transfer_state_to = SOV
+			}
+			240 = {
+				transfer_state_to = UKR
+			}
+			194 = {
+				transfer_state_to = UKR
+			}
+			94 = {
+				transfer_state_to = UKR
+			}
+			940 = {
+				transfer_state_to = UKR
+			}
+			UKR = {
+				division_template = {
+					name = "Ukranian Infantry Division"
+					is_locked = no
+					priority = 0
+					template_counter = 0
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
 					}
-					202 = {
-						create_unit = { 
-							division = "name = \"Infantry Division\" division_template = \"Ukranian Infantry Division\" start_experience_factor = 0.5" 
-							owner = UKR
-							prioritize_location = 525
-							allow_spawning_on_enemy_provs = no
-							count = 10
-						}
+				}
+				202 = {
+					create_unit = { 
+						division = "name = \"Infantry Division\" division_template = \"Ukranian Infantry Division\" start_experience_factor = 0.5" 
+						owner = UKR
+						prioritize_location = 525
+						allow_spawning_on_enemy_provs = no
+						count = 10
 					}
-					add_ai_strategy = {
-						type = prepare_for_war 
-						id = SOV
-						value = 1000
-					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war 
+					id = SOV
+					value = 1000
 				}
 			}
 			
@@ -902,33 +891,29 @@ country_event = { #collapse of russian control in europe
 				amount = 1000
 				target = SOV
 			}
-			set_country_flag = RUS_no_more_commie_radical
+			clr_country_flag = RUS_revolutionaries_active
 		}
 		add_popularity = {
 			ideology = communism
 			popularity = -0.05
 		}
-		if = {
-			limit = {
-				has_completed_focus = RUS_funds_from_international_communists
-			}
-			SOV = {
+		SOV = {
+			if = {
+				limit = {
+					has_completed_focus = RUS_funds_from_international_communists
+				}
 				add_ideas = {
 					SOV_funds_from_international_communists
 				}
 			}
-		}
-		if = {
-			limit = {
-				NOT = { has_completed_focus = RUS_consolidate_the_party }
-			}
-			SOV = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = RUS_consolidate_the_party }
+				}
 				add_ideas = {
 					SOV_disorganised_party
 				}
 			}
-		}
-		SOV = {
 			add_ideas = {
 				RUS_russian_civil_war
 			}
@@ -1406,7 +1391,7 @@ country_event = { #Russians disagree!
 		}
 	}
 
-	option = {#Leave St Petersburg
+	option = {#kick them out of potsdam
 		name = rus_events.6.b
 		RUS = {
 			country_event = {
@@ -1437,7 +1422,7 @@ country_event = { #germans back down
 	}
 }
 
-country_event = { #germans leave
+country_event = { #germans kick us out
 	id = rus_events.8
 	title = rus_events.8.t	
 	desc = rus_events.8.desc
@@ -1449,7 +1434,7 @@ country_event = { #germans leave
 		set_global_flag = RUS_russian_full_access_flag
 		clr_global_flag = RUS_german_railroads_flag
 		clr_global_flag = RUS_german_full_access_flag
-		set_country_flag = RUS_germans_leave_potsdam
+		set_global_flag = RUS_germans_wont_potsdam
 	}
 }
 
@@ -1543,6 +1528,16 @@ country_event = { #duma election
 	desc = rus_events.12.desc
 
 	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = RUS_duma_elections
+	}
+
+	trigger = {
+		original_tag = RUS
+		date > 1912.1.1
+		date < 1913.1.1
+	}
 	
 	option = {#tsarist majority
 		name = rus_events.12.a

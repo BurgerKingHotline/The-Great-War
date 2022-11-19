@@ -1,6 +1,6 @@
 characters={
 	RUS_nicholas_ii={
-		name="Nikolai II"
+		name="Tsar Nikolai II"
 		portraits={
 			civilian={
 				large=GFX_portrait_Mohammed_Zahir_Shah
@@ -9,6 +9,25 @@ characters={
 		country_leader={
 			ideology=despotism 
 			traits = { inexperienced_imperialist inexperienced_monarch }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	RUS_michael={
+		name="Tsar Michael Alexandrovich"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		country_leader={
+			ideology=despotism 
+			traits = { unpopular_monarch military_monarch }
 			expire="1965.1.1.1"
 			id=-1
 		}

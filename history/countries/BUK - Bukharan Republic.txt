@@ -2,8 +2,6 @@
 
 ##oob = "BUK_1936"
 
-set_cosmetic_tag = BUK_russian
-
 set_research_slots = 2
 
 # Starting tech

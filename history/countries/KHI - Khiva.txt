@@ -2,8 +2,6 @@
 
 ##oob = "KHI_1936"
 
-set_cosmetic_tag = KHI_russian
-
 set_research_slots = 2
 
 # Starting tech

@@ -256,3 +256,67 @@ news_event = { #franco-german peace deal - Germans win
 		}
 	}
 }
+
+#The February Revolution
+news_event = {
+	id = TLG_newsevents.5
+	title = TLG_newsevents.5.t
+	desc = TLG_newsevents.5.desc
+	picture = GFX_news_event_nuke
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #We can defeat these traitors to the tsar!
+		name = TLG_newsevents.5.a
+		trigger = {
+			OR = {
+				original_tag = FROM
+				is_in_faction_with = FROM
+				is_subject_of = FROM
+				FROM = {
+					is_subject_of = ROOT
+				}
+			}
+			NOT = {
+				has_government = communism
+			}
+		}
+	}
+
+	option = { #Great!
+		name = TLG_newsevents.5.b
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+
+	option = { #These commies will collapse anyways
+		name = TLG_newsevents.5.c
+		trigger = {
+			NOT = {
+				original_tag = FROM
+				is_in_faction_with = FROM
+				is_subject_of = FROM
+				FROM = {
+					is_subject_of = ROOT
+				}
+				has_war_with = FROM
+				any_owned_state = {
+					is_in_home_area = NO
+				}
+				has_government = communism
+			}
+		}
+	}
+
+	option = { #Another state falls to the Revolution!
+		name = TLG_newsevents.5.d
+		trigger = {
+			has_government = communism
+		}
+	}
+}

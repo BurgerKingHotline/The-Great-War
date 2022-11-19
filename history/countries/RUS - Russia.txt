@@ -4,6 +4,8 @@
 
 set_research_slots = 2
 
+set_country_flag = RUS_revolutionaries_active
+
 add_ideas = {
 	RUS_duma
 	RUS_strong_independance_movements
@@ -13,8 +15,6 @@ add_ideas = {
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
-	election_frequency = 48
 	elections_allowed = no
 }
 
@@ -26,6 +26,7 @@ set_popularities = {
 set_war_support = 0.35
 
 recruit_character = RUS_nicholas_ii
+recruit_character = RUS_michael
 
 set_variable = {
 	var = RUS_socialist_radicalisation
@@ -127,24 +128,6 @@ if = {
 
 
 
-if = {
-	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
-	}
-	set_autonomy = {
-		target = BUK
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = KHI
-		autonomous_state = autonomy_integrated_puppet
-	}
-	else = {
-		puppet = BUK
-		puppet = KHI
-	}
-}
+puppet = BUK
+puppet = KHI
 

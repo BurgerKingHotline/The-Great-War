@@ -1,19 +1,27 @@
 russian_socialism_decisions = {
-	priority = 1000
+	allowed = {
+		tag = RUS
+	}
+	priority = 10000
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = RUS_revolutionaries_active
+	}
+}
+
+RUS_russification_decisions = {
+	priority = 100
 	visible_when_empty = yes
 	allowed = {
 		tag = RUS
 	}
 	visible = {
-		NOT = {
-			has_government = communism
-			has_country_flag = RUS_no_more_commie_radical
-		}
+		has_completed_focus = RUS_russification_policy
 	}
 }
 
 RUS_tsarist_intervention_decisions = {
-	priority = 1000
+	priority = 101
 	visible_when_empty = yes
 	allowed = {
 		tag = RUS
