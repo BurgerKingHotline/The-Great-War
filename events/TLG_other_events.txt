@@ -31,11 +31,34 @@ country_event = {
 
 	option = {#yep, why not
 		name = other.1.a
-		
+		855 = {
+			owner = {
+				save_event_target_as = 855owner
+			}
+		}
+		if = {
+			limit = {
+				855 = {
+					owner = {
+						is_subject = yes
+					}
+				}
+			}
+			random_other_country = {
+				limit = {
+					has_subject = event_target:855owner
+				}
+				country_event = other.2
+			}
+		}
+		else = {
+			event_target:855owner = {
+				country_event = other.2	
+			}
+		}
 	}
 	option = { #nah
 		name = other.1.b
-		add_political_power = -25
 		ai_chance = {
 			factor = 0
 		}
@@ -52,13 +75,36 @@ country_event = { #bulgaria demands 855
 
 	option = {#alr fine
 		name = other.2.a
-		855 = {
-			transfer_state_to = FROM
+		FROM = {
+			country_event = {
+				id = other.4
+				hours = 14
+			}
 		}
 		if = {
 			limit = {
-				ROOT = {
-					owns_state = 883
+				885 = {
+					owner = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+			885 = {
+				transfer_state_to = FROM
+			}
+		}
+		if = {
+			limit = {
+				883 = {
+					owner = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
 				}
 			}
 			883 = {
@@ -99,6 +145,12 @@ country_event = { #bulgaria demands 855
 			country_event = {
 				id = other.3
 				days = 1
+			}
+		}
+		FROM = {
+			country_event = {
+				id = other.5
+				hours = 14
 			}
 		}
 		FROM = {
@@ -208,9 +260,109 @@ country_event = { #They decline
 	}
 	option = {#smh fine
 		name = other.5.b
-		add_political_power = -50
+		add_political_power = -25
 		ai_chance = { 
 			factor = 1
+		}
+	}
+}
+
+country_event = { #franz ferdinand died, 
+	id = other.7 #IMPORTANT: NOT SUPPOSED TO BE IN THE ACTUAL MOD
+	title = other.7.t #ONLY FOR EARLY DEV PURPOSES
+	desc = other.7.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	trigger = {
+		ASH = {
+			owns_state = 104
+		}
+		SER = {
+			NOT = {
+				has_war_with = OTT
+			}
+		}
+	}
+
+	immediate = {
+		add_stability = -0.1
+		set_global_flag = Franz_ferdinand_shot
+	}
+
+	option = {#ruhroh serbia, you did something!
+		name = other.7.a
+		add_war_support = 0.1
+		add_political_power = 75
+		SER = {
+			country_event = {
+				id = other.8
+				days = 2
+			}
+		}
+		ai_chance = { 
+			factor = 1000
+		}
+	}
+	option = {#smh fine
+		name = other.7.b
+		add_political_power = -150
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}
+
+country_event = { #aus demands subjugation
+	id = other.8 #IMPORTANT: NOT SUPPOSED TO BE IN THE ACTUAL MOD
+	title = other.8.t #ONLY FOR EARLY DEV PURPOSES
+	desc = other.8.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {#no, duh!
+		name = other.8.a
+		add_war_support = 0.1
+		ASH = {
+			country_event = {
+				id = other.9
+				days = 2
+			}
+		}
+		ai_chance = { 
+			factor = 1000
+		}
+	}
+	option = {#sure ig
+		name = other.8.b
+		FROM = {
+			puppet = ROOT
+		}
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}
+
+
+country_event = { #WAR
+	id = other.9 #IMPORTANT: NOT SUPPOSED TO BE IN THE ACTUAL MOD
+	title = other.9.t #ONLY FOR EARLY DEV PURPOSES
+	desc = other.9.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {#g
+		name = other.9.a
+		declare_war_on = {
+			target = FROM
+			type = puppet_wargoal_focus
+		}
+		ai_chance = { 
+			factor = 1000
 		}
 	}
 }

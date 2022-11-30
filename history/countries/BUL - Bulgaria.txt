@@ -85,7 +85,7 @@ set_technology = { #VANILLA & DLC
 ##############
 #### 1939 ####
 ##############
-1939.1.1 = {
+1914.1.1 = {
 	
 	#POLIICS
 	set_popularities = { #VANILLA & DLC
@@ -103,40 +103,13 @@ set_technology = { #VANILLA & DLC
 	add_political_power = 1198
 	add_command_power = 100
 
-	#FOCUS AND IDEAS
-	if = { #DLC
-		limit = {
-			has_dlc = "Battle for the Bosporus"
-		}
-		unlock_national_focus = BUL_negotiate_bulgarian_rearmament
-
-		#Remove Army Restrictions NS and all limitations 								Negotiate Bulgarian Rearmament
-		remove_ideas = BUL_army_restrictions
-		remove_ideas = BUL_zveno_ns
-		#Destroy Zveno 																 	Dissolve the Military Union
-		set_country_flag = BUL_disposed_of_zveno_generals_flag
-		set_country_flag = BUL_zveno_leaders_imprisoned_flag
-		set_country_flag = BUL_raided_zveno_supporters_flag
-		every_unit_leader = {
-			limit = {
-				has_trait = trait_BUL_zveno_member
-			}
-			retire = yes
-		}
-		set_country_flag = BUL_zveno_destroyed_flag
-		#Freedom of Press was taken more than a year ago, so clr flag 					Freedom of Press
-		clr_country_flag = BUL_freedom_of_press_flag
-		#Simulate German influence events and good relations with Bulgaria 				Approach Germany + Events
-		set_country_flag = BUL_german_aircraft_donation_flag
-		add_opinion_modifier = { 
-			target = GER
-			modifier = BUL_donated_aircraft
-		}
-
-		else = { #VANILLA
-			#generic focuses
-		}
-	}
+	
+	complete_national_focus = BUL_balkan_intervention
+	complete_national_focus = BUL_recliam_lands
+	complete_national_focus = BUL_balkan_league
+	complete_national_focus = BUL_balkan_war_i
+	complete_national_focus = BUL_leave_league
+	complete_national_focus = BUL_balkan_war_ii
 	
 	#TROOPS
 	

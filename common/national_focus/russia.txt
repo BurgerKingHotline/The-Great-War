@@ -107,7 +107,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -131,7 +131,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 10000
 		}
 	}
 
@@ -1777,7 +1777,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 1000
 		}
 	}
 
@@ -1808,7 +1808,7 @@
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 1990
 		}
 	}
 
@@ -1886,6 +1886,10 @@
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 1000
+				has_country_flag = balkan_war_i_end 
+			}
 		}
 	}
 
@@ -3688,15 +3692,6 @@
 		}
 
 		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				761 = {
-					controller = {
-						tag = QIN
-					}
-				}
-			}
 		}
 	}
 

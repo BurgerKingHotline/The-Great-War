@@ -58,7 +58,7 @@
  #OTHER
  autonomy_soviet_republic:0 "Soviet Socialist Republic"
  RUS_CIVIL_WAR_FACTION:0 "§ROther countries cannot join this faction during the Russian Civil War!§!"
-
+ RUS_petrograd:0 "Petrograd"
  #TTS
  RUS_brits_wont_like_this:0 "§RThe British will not like this course of action...§!"
  RUS_core_greater_state_on_owned:0 "§YCores the states that was claimed by the previous focus.§!"

@@ -1432,3 +1432,7 @@
  lombardy_venetia_ADJ:0 "Lombardian-Venetian"
  lombardy_venetia_neutrality:0 "Kingdom of Lombardy-Venetia"
  lombardy_venetia_neutrality_DEF:0 "the Kingdom of Lombardy-Venetia"
+ 
+ CZE_czechoslovakia:0 "Czechoslovakia"
+ CZE_czechoslovakia_DEF:0 "Czechoslovakia"
+ CZE_czechoslovakia_ADJ:0 "Czechoslovakian"

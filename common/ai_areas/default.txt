@@ -58,6 +58,14 @@ areas = {
         }
     }
 
+	WW1_area = {
+        strategic_regions = {
+            19
+			5
+			7
+        }
+    }
+
 	north_america = {
 
 		continents = {

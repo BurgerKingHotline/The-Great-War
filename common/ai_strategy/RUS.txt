@@ -1,0 +1,73 @@
+protect_serbia_against_austria = {
+	allowed = { original_tag = RUS }
+
+	enable = {
+		has_global_flag = Franz_ferdinand_shot
+		AUS = { NOT = { has_war_with = SER } }
+		country_exists = SER
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SER }
+			has_war_with = SER
+		}
+	}
+
+	ai_strategy = {
+		type = protect
+		id = "SER"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SER"
+		value = 200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = POL
+		target = guarantee
+		value = 20
+	}
+}
+
+defend_serbia_against_austria = {
+	allowed = { original_tag = RUS }
+	enable = {
+		AUS = { has_war_with = SER }
+		country_exists = SER
+	}
+	abort = {
+		OR = {
+			NOT = { country_exists = SER }
+			has_war_with = SER
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "POL"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "POL"
+		value = 200
+	}
+}
+
+
+RUS_dont_defend_france = {
+	allowed = { original_tag = RUS }
+	enable = {
+		FRA = {
+			has_war = yes
+		}
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = FRA
+		value = 10
+	}
+}

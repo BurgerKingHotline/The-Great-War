@@ -89,6 +89,19 @@ recruit_character = FRA_marie_jean_lucien_lacaze
 recruit_character = FRA_paul_auvert
 recruit_character = FRA_eugene_de_jonquieres
 
+1914.1.1 = {
+	create_faction = entente_faction
+	add_to_faction = FRA
+	add_to_faction = RUS
+	RUS = {
+		add_ai_strategy = {
+			type = alliance
+			id = FRA
+			value = 100000
+		}
+	}
+}
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1

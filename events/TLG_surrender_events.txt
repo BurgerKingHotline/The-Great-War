@@ -466,20 +466,6 @@ country_event = {
 					original_tag = BUL
 				}
 				white_peace = PREV
-				if = { #checks if they are in balkan league faction and then leaves it if theyre not
-					limit = {
-						faction_leader = {
-							NOT = {
-								original_tag = SER
-								original_tag = BUL
-								original_tag = MNT
-								original_tag = GRE
-								original_tag = ROM
-							}
-						}
-					}
-					leave_faction = yes
-				}
 			}
 		}
 		ai_chance = {
@@ -619,20 +605,6 @@ country_event = {
 					original_tag = BUL
 				}
 				white_peace = PREV
-				if = { #checks if they are in balkan league faction and then leaves it if theyre not
-					limit = {
-						faction_leader = {
-							NOT = {
-								original_tag = SER
-								original_tag = BUL
-								original_tag = MNT
-								original_tag = GRE
-								original_tag = ROM
-							}
-						}
-					}
-					leave_faction = yes
-				}
 			}
 		}
 		ai_chance = {
@@ -1196,23 +1168,6 @@ country_event = { #balkan league surrenders to ottomans
 				original_tag = OTT
 			}
 			white_peace = ROOT
-			if = { #checks if they arent in balkan league faction
-				limit = {
-					faction_leader = {
-						NOT = {
-							original_tag = SER
-							original_tag = OTT
-							original_tag = MNT
-							original_tag = GRE
-							original_tag = ROM
-						}
-					}
-				}
-				leave_faction = yes
-			}
-			else = {
-				dismantle_faction = yes
-			}
 		}
 		ai_chance = {
 			factor = 100
@@ -1338,23 +1293,6 @@ country_event = { #balkan league surrenders to bulgarians
 					original_tag = OTT
 				}
 				white_peace = PREV
-				if = { #checks if they are in balkan league faction
-					limit = {
-						faction_leader = {
-							NOT = {
-								original_tag = SER
-								original_tag = MNT
-								original_tag = GRE
-								original_tag = ROM
-								original_tag = OTT
-							}
-						}
-					}
-					leave_faction = yes
-				}
-				else = {
-					dismantle_faction = yes
-				}
 			}
 			
 		}

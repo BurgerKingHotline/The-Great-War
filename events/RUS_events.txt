@@ -2631,3 +2631,20 @@ country_event = { #whites get foreign support
 		}
 	}
 }
+
+country_event = { #rename st petersburg
+	id = rus_events.37
+	title = rus_events.37.t	
+	desc = rus_events.37.desc
+
+	is_triggered_only = yes
+	
+	option = { #die germans!
+		name = rus_events.37.a
+		add_war_support = 0.1
+		set_province_name = {
+			id = 3151
+			name = RUS_petrograd
+		}
+	}
+}

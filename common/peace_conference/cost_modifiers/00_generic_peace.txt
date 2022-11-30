@@ -58,11 +58,10 @@ peace_action_modifiers = {
         peace_action_type = take_states
 
         enable = {
-            FROM.FROM.FROM = { is_core_of = ROOT.FROM }
             NOT = { FROM.FROM.FROM = { is_core_of = ROOT.FROM.FROM } }
         }
 
-        cost_multiplier = 0.8
+        cost_multiplier = 0.7
     }
 
 

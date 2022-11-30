@@ -145,7 +145,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 3989;1961;impassable;-1;-1;-1;-1;-1;;Himalayas
 1129;1961;impassable;-1;-1;-1;-1;-1;;Himalayas
 4900;4435;impassable;-1;-1;-1;-1;-1;;Himalayas
-4900;4435;impassable;-1;-1;-1;-1;-1;;Himalayas
+2014;4435;impassable;-1;-1;-1;-1;-1;;Himalayas
 4558;10826;impassable;-1;-1;-1;-1;-1;;peshawar mountains
 4558;12653;impassable;-1;-1;-1;-1;-1;;peshawar mountains
 4558;7519;impassable;-1;-1;-1;-1;-1;;peshawar mountains
@@ -207,4 +207,43 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 636;9587;impassable;-1;-1;-1;-1;-1;;alps
 6675;9633;impassable;-1;-1;-1;-1;-1;;alps
 9630;9633;impassable;-1;-1;-1;-1;-1;;alps
+13254;10423;impassable;-1;-1;-1;-1;-1;;papua
+11018;10423;impassable;-1;-1;-1;-1;-1;;papua
+11018;12400;impassable;-1;-1;-1;-1;-1;;papua
+11018;12428;impassable;-1;-1;-1;-1;-1;;papua
+10954;12428;impassable;-1;-1;-1;-1;-1;;papua
+10954;5135;impassable;-1;-1;-1;-1;-1;;papua
+10954;12931;impassable;-1;-1;-1;-1;-1;;papua
+10954;1222;impassable;-1;-1;-1;-1;-1;;papua
+10954;12123;impassable;-1;-1;-1;-1;-1;;papua
+10954;12107;impassable;-1;-1;-1;-1;-1;;papua
+2129;12107;impassable;-1;-1;-1;-1;-1;;papua
+2129;4635;impassable;-1;-1;-1;-1;-1;;papua
+11004;4635;impassable;-1;-1;-1;-1;-1;;papua
+11004;1617;impassable;-1;-1;-1;-1;-1;;papua
+8250;1617;impassable;-1;-1;-1;-1;-1;;papua
+8250;1602;impassable;-1;-1;-1;-1;-1;;papua
+8235;1602;impassable;-1;-1;-1;-1;-1;;papua
+8235;4593;impassable;-1;-1;-1;-1;-1;;papua
+10436;4593;impassable;-1;-1;-1;-1;-1;;papua
+10436;7269;impassable;-1;-1;-1;-1;-1;;papua
+10436;1546;impassable;-1;-1;-1;-1;-1;;papua
+10436;4552;impassable;-1;-1;-1;-1;-1;;papua
+7570;4552;impassable;-1;-1;-1;-1;-1;;papua
+7570;10396;impassable;-1;-1;-1;-1;-1;;papua
+10990;10396;impassable;-1;-1;-1;-1;-1;;papua
+10990;12371;impassable;-1;-1;-1;-1;-1;;papua
+10990;10423;impassable;-1;-1;-1;-1;-1;;papua
+10354;7327;impassable;-1;-1;-1;-1;-1;;indonesia
+1274;12209;impassable;-1;-1;-1;-1;-1;;indonesia
+1274;7308;impassable;-1;-1;-1;-1;-1;;indonesia
+10150;7308;impassable;-1;-1;-1;-1;-1;;indonesia
+10150;12138;impassable;-1;-1;-1;-1;-1;;indonesia
+10294;12138;impassable;-1;-1;-1;-1;-1;;indonesia
+10294;7440;impassable;-1;-1;-1;-1;-1;;indonesia
+12181;10354;impassable;-1;-1;-1;-1;-1;;indonesia
+12343;10354;impassable;-1;-1;-1;-1;-1;;indonesia
+10382;12343;impassable;-1;-1;-1;-1;-1;;indonesia
+10382;1533;impassable;-1;-1;-1;-1;-1;;indonesia
+7368;1533;impassable;-1;-1;-1;-1;-1;;indonesia
 -1;-1;;-1;-1;-1;-1;-1;-1

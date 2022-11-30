@@ -1,23 +1,27 @@
 has_unsupported_economic_law = {
 	if = {
 		limit = {
+			has_idea = low_economic_mobilisation
 		}
-		has_war_support < 0.15
+		has_war_support < 0.2
 	}
 	else_if = {
 		limit = {
+			has_idea = partial_economic_mobilisation
 		}
-		has_war_support < 0.25
+		has_war_support < 0.3
 	}
 	else_if = {
 		limit = {
+			has_idea = war_economy
 		}
-		has_war_support < 0.5
+		has_war_support < 0.55
 	}
 	else_if = {
 		limit = {
+			has_idea = tot_economic_mobilisation
 		}
-		has_war_support < 0.8
+		has_war_support < 0.85
 	}
 	else = {
 		always = no
@@ -26,31 +30,34 @@ has_unsupported_economic_law = {
 has_unsupported_manpower_law = {
 	if = {
 		limit = {
+			has_idea = limited_conscription
 		}
-			has_war_support < 0.1
-			hidden_trigger = { NOT = { tag = TUR } }
+		has_war_support < 0.15
 	}
 	else_if = {
 		limit = {
+			has_idea = extensive_conscription
 		}
-			has_war_support < 0.2
-			NOT = { has_government = communism }
-			NOT = { has_government = fascism }
+		has_war_support < 0.3
+		NOT = { has_government = communism }
+		NOT = { has_government = fascism }
 	}
 	else_if = {
 		limit = {
+			has_idea = service_by_requirement
 		}
-			has_war_support < 0.6
-			NOT = { has_government = communism }
-			NOT = { has_government = fascism }
+		has_war_support < 0.6
+		NOT = { has_government = communism }
+		NOT = { has_government = fascism }
 	}
 	else_if = {
 		limit = {
+			OR = {
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
 		}
-	}
-	else_if = {
-		limit = {
-		}
+		always = yes
 	}
 	else = {
 		always = no

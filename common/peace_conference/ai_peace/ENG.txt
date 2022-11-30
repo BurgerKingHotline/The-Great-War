@@ -3,6 +3,28 @@
 
 peace_ai_desires = {
 
+    uk_sevres = {
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM.FROM = {
+                OR = {
+                    state = 454 
+                    state = 837
+                    state = 355
+                    state = 291
+                    state = 675
+                    state = 676
+                    state = 930
+                }
+            }
+            ROOT = {
+                is_colonial_power = yes
+                original_tag = ENG
+            }
+        }
+        ai_desire = 150
+    }
+
     uk_annex_ireland = {
         peace_action_type = take_states
         enable = {
@@ -13,7 +35,7 @@ peace_ai_desires = {
                 original_tag = ENG
             }
         }
-        ai_desire = 75
+        ai_desire = 150
     }
     
     uk_gain_colonies = {
@@ -35,10 +57,8 @@ peace_ai_desires = {
                 }
             }
             ROOT = {
+                is_colonial_power = yes
                 original_tag = ENG
-                NOT = {
-                    has_government = communism
-                }
             }
         }
         ai_desire = 75
@@ -51,10 +71,8 @@ peace_ai_desires = {
                 is_on_continent = europe
             }
             ROOT = {
+                is_colonial_power = yes
                 original_tag = ENG
-                NOT = {
-                    has_government = fascism
-                }
             }
         }
         ai_desire = -30

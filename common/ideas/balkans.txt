@@ -34,6 +34,8 @@ ideas = {
 			
 			modifier = {
 				army_defence_factor = -0.15
+				army_org_factor = -0.15
+				attrition = 0.1
 			}
 
 		}

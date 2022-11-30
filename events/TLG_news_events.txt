@@ -320,3 +320,21 @@ news_event = {
 		}
 	}
 }
+#Tsar ferdinand dies
+news_event = {
+	id = TLG_newsevents.6
+	title = TLG_newsevents.6.t
+	desc = TLG_newsevents.6.desc
+	picture = GFX_news_event_nuke
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #We can defeat these traitors to the tsar!
+		name = TLG_newsevents.6.a
+		custom_effect_tooltip = ww1_start
+	}
+}

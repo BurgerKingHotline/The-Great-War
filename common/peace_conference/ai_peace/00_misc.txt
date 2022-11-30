@@ -16,7 +16,7 @@ peace_ai_desires = {
         ai_desire = -15
     }
 
-    dont_liberate_african_countries = {
+    dont_liberate_colonies = {
         peace_action_type = { liberate force_government puppet }
         enable = {
             ROOT = {
