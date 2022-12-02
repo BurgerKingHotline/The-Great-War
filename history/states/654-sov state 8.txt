@@ -13,6 +13,10 @@ state={
 			infrastructure = 1
 		}
 		#add_core_of = SOV
+		
+		add_dynamic_modifier = {
+			modifier = RUS_siberian_wasteland
+		}
 		victory_points = {
 			4800 1 #Oyrot-Tura/Gorno-Altaysk
 		}

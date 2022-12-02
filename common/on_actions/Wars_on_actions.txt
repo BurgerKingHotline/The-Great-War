@@ -101,6 +101,9 @@ on_actions = {
                 else_if = {
                     limit = {
                         tag = GER
+                        tag = SER
+                        tag = BUL
+                        tag = GRE
                     }
                     d_create_army_large = yes
                 }
@@ -112,11 +115,7 @@ on_actions = {
                 give_resource_rights = { receiver = EGY state = 551 }
                 give_resource_rights = { receiver = EGY state = 549 }
             }
-            set_country_flag = balkan_war_i_end
-            set_country_flag = balkan_war_ii_end
-            RUS = {
-                give_guarantee = SER
-            }
+            
             if = {
                 limit = {
                     date < 1911.1.1
@@ -129,6 +128,8 @@ on_actions = {
                 }
             }
             else = {
+                set_country_flag = balkan_war_i_end
+                set_country_flag = balkan_war_ii_end
                 ASH = {
                     country_event = {
                         id = other.7

@@ -24,6 +24,9 @@
 		 
 
 		available = {
+			NOT = {
+				has_war_with = GER
+			}
 		}
 
 		completion_reward = {
@@ -80,7 +83,7 @@
 	focus = {
 		id = RUS_configure_foreign_policy
 		icon = GFX_goal_generic_political_pressure
-		x = -16
+		x = -15
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar
 		prerequisite = { focus = RUS_the_powers_of_the_tsar }
@@ -204,7 +207,7 @@
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		mutually_exclusive = { focus = RUS_the_powers_of_the_tsar}
 		prerequisite = { focus = RUS_meeting_with_the_germans }
-		x = 10
+		x = 9
 		y = 1
 		relative_position_id = RUS_meeting_with_the_germans
 		cost = 70
@@ -251,10 +254,10 @@
 
 	focus = {
 		id = RUS_cement_the_tsars_rule
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_monarchy_1
 		prerequisite = { focus = RUS_the_powers_of_the_tsar }
 		mutually_exclusive = { focus = RUS_elections_in_the_duma }
-		x = -6
+		x = -5
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar 
 		cost = 70
@@ -316,7 +319,7 @@
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = RUS_the_powers_of_the_tsar }
 		mutually_exclusive = { focus = RUS_cement_the_tsars_rule }
-		x = 6
+		x = 5
 		y = 1
 		relative_position_id = RUS_the_powers_of_the_tsar 
 		cost = 30
@@ -409,7 +412,7 @@
 		x = 1
 		y = 2
 		relative_position_id = RUS_a_duma_in_chains
-		cost = 70
+		cost = 50
 		 
 
 		completion_reward = {
@@ -429,7 +432,7 @@
 
 	focus = {
 		id = RUS_tsarist_national_intervension 
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_annex_country #TEMP
 		prerequisite = { focus = RUS_the_powers_of_the_tsar}
 		x = 0
 		y = 2
@@ -461,7 +464,7 @@
 		x = -1
 		y = 2
 		relative_position_id = RUS_a_duma_in_chains
-		cost = 70
+		cost = 50
 		 
 
 		completion_reward = {
@@ -481,7 +484,7 @@
 
 	focus = {
 		id = RUS_dismiss_the_duma
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_SWI_dissolve_the_federal_council #TEMP
 		prerequisite = { focus = RUS_root_out_socialist_influence }
 		prerequisite = { focus = RUS_undermine_democratic_influence }
 		x = -1
@@ -511,7 +514,7 @@
 
 	focus = {
 		id = RUS_destroy_trade_unions
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_eng_move_to_secure_the_dominions
 		prerequisite = { focus = RUS_dismiss_the_duma }
 		x = 1
 		y = 1
@@ -549,6 +552,15 @@
 		}
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				add_ideas = RUS_crusade_against_communis_lar
+			}
+			else = {
+				add_ideas = RUS_crusade_against_communism_no_lar
+			}
 			add_ideas = {
 				RUS_crusade_against_communism
 			}
@@ -562,7 +574,7 @@
 
 	focus = {
 		id = RUS_promote_the_all_russian_nation
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_SOV_free_Rutenia
 		prerequisite = { focus = RUS_dismiss_the_duma }
 		x = -1
 		y = 1
@@ -579,7 +591,7 @@
 
 	focus = {
 		id = RUS_tsarist_cult_of_personality
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_SOV_transcaucasian_republic
 		prerequisite = { focus = RUS_promote_the_all_russian_nation }
 		prerequisite = { focus = RUS_destroy_trade_unions }
 		x = 1
@@ -976,8 +988,8 @@
 	}
 
 	focus = {
-		id = RUS_policy_of_russification
-		icon = GFX_goal_generic_political_pressure
+		id = RUS_forceful_russification
+		icon = GFX_focus_SOV_penal_battalions #TEMP
 		prerequisite = { focus = RUS_promote_the_all_russian_nation }
 		x = 0
 		y = 2
@@ -991,6 +1003,10 @@
 				var = RUS_socialist_radicalisation
 				value = 15
 				tooltip = RUS_socialist_radicalisation_increase
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
 			}
 			every_owned_state = {
 				limit = {
@@ -1053,13 +1069,13 @@
 
 	focus = {
 		id = RUS_all_power_to_the_tsar
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_monarchy_2
 		prerequisite = { focus = RUS_ban_the_political_parties }
-		prerequisite = { focus = RUS_policy_of_russification }
+		prerequisite = { focus = RUS_forceful_russification }
 		prerequisite = { focus = RUS_tsarist_cult_of_personality }
-		x = 1
-		y = 2
-		relative_position_id = RUS_policy_of_russification
+		x = 0
+		y = 3
+		relative_position_id = RUS_tsarist_cult_of_personality
 		cost = 100
 		
 		available = {
@@ -1301,7 +1317,7 @@
 
 	focus = {
 		id = RUS_a_new_duma
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_improve_the_administration  #TEMP
 		prerequisite = { focus = RUS_tsarist_meddling_in_the_duma focus = RUS_democratic_reforms }
 		x = 0
 		y = 3
@@ -1362,7 +1378,7 @@
 
 	focus = {
 		id = RUS_promise_independence_after_the_war
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_polish_deal #temp goal
 		prerequisite = { focus = RUS_maintain_the_status_quo }
 		x = -1
 		y = 1
@@ -1380,7 +1396,7 @@
 
 	focus = {
 		id = RUS_russification_policy
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_RUS_pan_russia
 		prerequisite = { focus = RUS_maintain_the_status_quo }
 		x = 0
 		y = 2
@@ -1394,6 +1410,10 @@
 				value = 10
 				tooltip = RUS_socialist_radicalisation_increase
 			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 			add_ideas = {
 				RUS_russification
 			}
@@ -1403,7 +1423,7 @@
 
 	focus = {
 		id = RUS_lessons_of_leadership
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = RUS_russification_policy }
 		x = 0
 		y = 1
@@ -1446,7 +1466,7 @@
 
 	focus = {
 		id = RUS_limit_the_tsars_power
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_rom_handle_king
 		prerequisite = { focus = RUS_strengthen_the_duma }
 		x = 0
 		y = 1
@@ -1454,16 +1474,13 @@
 		cost = 70
 
 		completion_reward = {
-			swap_ruler_traits = {
-				remove = inexperienced_monarch
-				add = inexperienced_monarch_1
-			}
+			remove_country_leader_trait = inexperienced_monarch
 		}
 	}
 
 	focus = {
 		id = RUS_destroy_tsarist_cells
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_eng_move_to_secure_the_dominions
 		prerequisite = { focus = RUS_limit_the_tsars_power }
 		x = -1
 		y = 2
@@ -1473,19 +1490,20 @@
 		completion_reward = {
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = -8
+				value = -10
 				tooltip = RUS_socialist_radicalisation_increase
 			}
-			swap_ruler_traits = {
-				remove = inexperienced_monarch
-				add = inexperienced_monarch_1
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.15
 			}
+			add_political_power = 75
 		}
 	}
 
 	focus = {
 		id = RUS_increased_autonomy
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_tfv_sever_ties_with_uk #TEMP
 		prerequisite = { focus = RUS_limit_the_tsars_power }
 		x = 1
 		y = 1
@@ -1512,7 +1530,7 @@
 
 	focus = {
 		id = RUS_release_the_autonomos_areas
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = RUS_increased_autonomy }
 		x = 0
 		y = 1
@@ -1554,7 +1572,7 @@
 
 	focus = {
 		id = RUS_constitutional_monarchy
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties #TEMP
 		prerequisite = { focus = RUS_release_the_autonomos_areas }
 		prerequisite = { focus = RUS_destroy_tsarist_cells }
 		mutually_exclusive = { focus = RUS_depose_the_tsar }
@@ -1585,7 +1603,7 @@
 
 	focus = {
 		id = RUS_depose_the_tsar
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = RUS_release_the_autonomos_areas }
 		prerequisite = { focus = RUS_destroy_tsarist_cells }
 		mutually_exclusive = { focus = RUS_constitutional_monarchy }
@@ -1607,11 +1625,14 @@
 		relative_position_id = RUS_european_matters
 		prerequisite = { focus = RUS_european_matters }
 		mutually_exclusive = { focus = RUS_strengthen_the_entente focus = RUS_on_our_own}
-		cost = 50
+		cost = 35
 		 
 
 		available = {
 			NOT = { has_government = communism }
+			NOT = {
+				has_war_with = GER
+			}
 			NOT = {
 				has_global_flag = RUS_germans_wont_potsdam
 				has_global_flag = RUS_russian_full_access_flag
@@ -1721,11 +1742,14 @@
 		relative_position_id = RUS_european_matters
 		prerequisite = { focus = RUS_european_matters }
 		mutually_exclusive = { focus = RUS_continued_dialogue_with_the_germans focus = RUS_on_our_own}
-		cost = 50
+		cost = 35
 		 
 
 		available = {
 			NOT = { has_government = communism }
+			NOT = {
+				has_war_with = FRA
+			}
 			NOT = {
 				has_global_flag = RUS_german_full_access_flag
 			}
@@ -1917,6 +1941,7 @@
 		}
 
 		completion_reward = {
+			unlock_decision_tooltip = RUS_intervene_in_the_military
 			if = {
 				limit = {
 					has_country_leader = {
@@ -1975,6 +2000,7 @@
 			NOT = {
 				has_global_flag = RUS_german_full_access_flag
 			}
+			country_exists = PER
 		}
 
 		offset = {
@@ -2011,6 +2037,7 @@
 		cost = 35
 
 		available = {
+			country_exists = PER
 		}
 
 		completion_reward = {
@@ -2330,8 +2357,10 @@
 		cost = 35
 
 		available = {
+			country_exists = PER
 			NOT = {
 				has_war_with = GER
+				has_war_with = PER
 			}
 		}
 
@@ -2371,8 +2400,16 @@
 		
 		will_lead_to_war_with = PER
 
+		bypass = {
+			has_war_with = PER
+		}
+
 		available = {
 			has_global_flag = RUS_russian_full_access_flag
+			NOT = {
+				is_in_faction_with = ENG
+			}
+			country_exists = PER
 		}
 
 		completion_reward = {
@@ -2396,38 +2433,31 @@
 
 	focus = {
 		id = RUS_the_russian_civil_war
-		icon = GFX_goal_generic_political_pressure
-		x = 8
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 6
 		y = 10
-		cost = 50
+		cost = 35
 
 		allow_branch = {
-			OR = {
-				has_global_flag = Russian_civil_war_flag
-				has_civil_war = yes
-				has_war_with = SOV
-			}
 		}
-		 
 
 		available = {
 			NOT = {
 				has_government = communism
 			}
-			OR = {
-				has_civil_war = yes
-				AND = {
-					has_war = yes
-					surrender_progress > 0.15	
+			custom_trigger_tooltip = {
+				tooltip = RUS_russian_civil_war
+				OR = {
+					has_civil_war = yes
+					has_war_with = SOV
+					has_global_flag = RUS_russian_civil_war
 				}
 			}
+			
 		}
 
 		completion_reward = {
-			add_ideas = {
-				RUS_consituent_assembly_idea
-			}
-			country_event = { id = rus_events.13 }
+			add_war_support = 0.15
 		}
 
 		ai_will_do = {
@@ -2437,7 +2467,7 @@
 
 	focus = {
 		id = RUS_maintain_the_tsars_autocracy
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_rom_royal_dictatorship
 		x = -4
 		y = 1
 		relative_position_id = RUS_the_russian_civil_war
@@ -2472,12 +2502,12 @@
 
 	focus = {
 		id = RUS_one_movement
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_demand_territory
 		x = 1
 		y = 1
 		relative_position_id = RUS_maintain_the_tsars_autocracy
 		prerequisite = { focus = RUS_maintain_the_tsars_autocracy}
-		cost = 40
+		cost = 50
 
 		available = {
 			OR = {
@@ -2503,12 +2533,12 @@
 
 	focus = {
 		id = RUS_destroy_the_bolsheviks
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_war_with_comintern
 		x = -1
 		y = 1
 		relative_position_id = RUS_maintain_the_tsars_autocracy
 		prerequisite = { focus = RUS_maintain_the_tsars_autocracy}
-		cost = 40
+		cost = 50
 
 		available = {
 			OR = {
@@ -2526,7 +2556,7 @@
 		completion_reward = { 
 			add_timed_idea = {
 				idea = RUS_destroy_the_bolsheviks_idea
-				days = 180
+				days = 365
 			}
 		}
 
@@ -2537,7 +2567,7 @@
 
 	focus = {
 		id = RUS_the_father_of_russia
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_SOV_patriarch_of_all_russia
 		x = -1
 		y = 1
 		relative_position_id = RUS_one_movement
@@ -2569,7 +2599,7 @@
 
 	focus = {
 		id = RUS_supreme_ruler_of_russia
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_SOV_rebuild_the_savior_cathedral #TEMP
 		x = 3
 		y = 1
 		relative_position_id = RUS_the_russian_civil_war
@@ -2586,6 +2616,9 @@
 					character = RUS_michael
 					ruling_only = yes
 				}
+			}
+			NOT = {
+				has_completed_focus = RUS_strengthen_the_duma
 			}
 		}
 		cost = 35
@@ -2607,6 +2640,7 @@
 		}
 
 		completion_reward = {
+			add_stability = 0.05
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.15
@@ -2625,7 +2659,7 @@
 
 	focus = {
 		id = RUS_request_foreign_support
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_positive_trade_relations
 		x = -1
 		y = 1
 		relative_position_id = RUS_the_russian_civil_war
@@ -2684,6 +2718,8 @@
 									original_tag = SOV
 									has_government = communism
 								}
+								is_puppet_of = ROOT
+								is_puppet_of = SOV
 							}
 						}
 						AND = {
@@ -2708,7 +2744,7 @@
 
 	focus = {
 		id = RUS_presidential_republic
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_the_giant_wakes
 		x = 5
 		y = 1
 		relative_position_id = RUS_the_russian_civil_war
@@ -2731,6 +2767,7 @@
 		}
 
 		completion_reward = {
+			add_political_power = 75
 			set_politics = {
 				ruling_party = democratic
 			}
@@ -2747,7 +2784,7 @@
 
 	focus = {
 		id = RUS_establish_free_and_fair_elections
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_support_democracy #TEMP
 		x = 1
 		y = 1
 		relative_position_id = RUS_presidential_republic
@@ -2761,10 +2798,10 @@
 
 		completion_reward = {
 			set_politics = {
+				ideology = ROOT
 				elections_allowed = yes
 			}
 			add_stability = 0.15
-			add_war_support = 0.1
 		}
 
 		ai_will_do = {
@@ -2774,7 +2811,7 @@
 
 	focus = {
 		id = RUS_the_peoples_fight
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_ETH_freedom_at_gunpoint
 		x = -1
 		y = 1
 		relative_position_id = RUS_establish_free_and_fair_elections
@@ -2797,7 +2834,7 @@
 
 	focus = {
 		id = RUS_purge_the_communists
-		icon = GFX_focus_SOV_military_purge #TEMP GOAL
+		icon = GFX_focus_SOV_military_purge
 		x = 1
 		y = 1
 		relative_position_id = RUS_the_russian_civil_war
@@ -2849,8 +2886,38 @@
 	}
 
 	focus = {
+		id = RUS_siberian_tigers
+		icon = GFX_focus_ETH_continuous_strengthen_the_black_lions #TEMP
+		x = 0
+		y = 2
+		relative_position_id = RUS_the_white_army
+		prerequisite = { focus = RUS_the_white_army}
+		cost = 70
+
+		available = {
+			NOT = { has_government = communism }
+			has_completed_focus = RUS_tame_siberia
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = cat_special_forces_generic
+			}
+			add_ideas = {
+				RUS_siberian_tigers
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
 		id = RUS_loyalty_to_the_ruler
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_ITA_generic_fascist_workers #TEMP
 		x = -1
 		y = 1
 		relative_position_id = RUS_supreme_ruler_of_russia
@@ -2860,7 +2927,6 @@
 
 		available = {
 			NOT = { has_government = communism }
-			has_completed_focus = RUS_supreme_ruler_of_russia
 		}
 
 		completion_reward = {
@@ -2878,7 +2944,7 @@
 
 	focus = {
 		id = RUS_the_grand_russian_state
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_SOV_my_brothers_keeper
 		x = 1
 		y = 1
 		relative_position_id = RUS_loyalty_to_the_ruler
@@ -2903,7 +2969,7 @@
 
 	focus = {
 		id = RUS_unite_the_whites
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_national_unity
 		x = 1
 		y = 1
 		relative_position_id = RUS_the_grand_russian_state
@@ -2929,9 +2995,9 @@
 	}
 
 	focus = {
-		id = RUS_democratise_the_army
-		icon = GFX_goal_generic_political_pressure
-		mutually_exclusive = { focus = RUS_a_loyal_army }
+		id = RUS_national_militia
+		icon = GFX_focus_SOV_builder_of_the_red_army #TEMP
+		mutually_exclusive = { focus = RUS_a_professional_army }
 		x = 1
 		y = 1
 		relative_position_id = RUS_the_white_army
@@ -2946,7 +3012,7 @@
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = RUS_white_army
-				add_idea = RUS_democratic_army
+				add_idea = RUS_national_militia
 			}
 		}
 
@@ -2956,9 +3022,9 @@
 	}
 
 	focus = {
-		id = RUS_a_loyal_army
-		icon = GFX_goal_generic_political_pressure
-		mutually_exclusive = { focus = RUS_democratise_the_army }
+		id = RUS_a_professional_army
+		icon = GFX_focus_SOV_mobilization_plan
+		mutually_exclusive = { focus = RUS_national_militia }
 		x = -1
 		y = 1
 		relative_position_id = RUS_the_white_army
@@ -2973,7 +3039,7 @@
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = RUS_white_army
-				add_idea = RUS_autocratic_army
+				add_idea = RUS_professional_army
 			}
 		}
 
@@ -2984,7 +3050,7 @@
 	
 	focus = {
 		id = RUS_prepare_for_a_civil_war
-		icon = GFX_focus_ger_great_red_menace #TEMP GOAL
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
 		prerequisite = { focus = RUS_radicalise_the_people}
 		x = 0
 		y = 1
@@ -3003,7 +3069,7 @@
 
 	focus = {
 		id = RUS_secure_menshevik_support
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		prerequisite = { focus = RUS_prepare_for_a_civil_war }
 		x = -1
 		y = 1
@@ -3022,7 +3088,7 @@
 
 	focus = {
 		id = RUS_secure_bolshevik_support
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = RUS_prepare_for_a_civil_war }
 		x = 1
 		y = 1
@@ -3065,7 +3131,7 @@
 
 	focus = {
 		id = RUS_allow_trudovik_involvement
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_dangerous_deal #TEMP
 		prerequisite = { focus = RUS_secure_menshevik_support }
 		mutually_exclusive = { focus = RUS_remove_trudovik_influence }
 		x = -1
@@ -3092,7 +3158,7 @@
 
 	focus = {
 		id = RUS_remove_trudovik_influence
-		icon = GFX_focus_SOV_the_last_purge
+		icon = GFX_focus_SOV_military_purge
 		prerequisite = { focus = RUS_secure_bolshevik_support }
 		mutually_exclusive = { focus = RUS_allow_trudovik_involvement }
 		x = 1
@@ -3145,7 +3211,7 @@
 
 	focus = {
 		id = RUS_kill_the_tsar
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_conspiracy
 		prerequisite = { focus = RUS_consolidate_the_party }
 		x = 0
 		y = 1
@@ -3185,7 +3251,7 @@
 		id = RUS_invest_in_industry
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 20
-		y = 20
+		y = 13
 
 		cost = 70
 
@@ -3204,14 +3270,24 @@
 
 	focus = {
 		id = RUS_invest_in_research_teams
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_research
 		x = 3
 		y = 1
 		cost = 70
 		relative_position_id = RUS_invest_in_industry
 		prerequisite = { focus = RUS_invest_in_industry}
 
+		select_effect = {
+			hidden_effect = {
+				add_ideas = RUS_invest_in_research_teams_consumer_goods_idea
+			}
+		}
+
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = RUS_invest_in_research_teams_consumer_goods_idea
+			}
+			custom_effect_tooltip = RUS_cost_3_cg_while_effect
 			add_research_slot = 1
 		}
 		ai_will_do = {
@@ -3221,14 +3297,23 @@
 
 	focus = {
 		id = RUS_invest_in_research_teams_ii
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_research2
 		x = 0
 		y = 2
 		cost = 70
 		relative_position_id = RUS_invest_in_research_teams
 		prerequisite = { focus = RUS_invest_in_research_teams}
 
+		select_effect = {
+			hidden_effect = {
+				add_ideas = RUS_invest_in_research_teams_consumer_goods_idea
+			}
+		}
+
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = RUS_invest_in_research_teams_consumer_goods_idea
+			}
 			add_research_slot = 1
 		}
 		ai_will_do = {
@@ -3238,10 +3323,10 @@
 
 	focus = {
 		id = RUS_electronic_research_teams
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_tfv_generic_tech_sharing
 		x = 1
 		y = 1
-		cost = 70
+		cost = 35
 		relative_position_id = RUS_invest_in_research_teams
 		prerequisite = { focus = RUS_invest_in_research_teams}
 
@@ -3259,7 +3344,7 @@
 
 	focus = {
 		id = RUS_research_efficiency
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_scientific_exchange
 		x = 0
 		y = 2
 		cost = 70
@@ -3267,10 +3352,8 @@
 		prerequisite = { focus = RUS_electronic_research_teams}
 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = electronics
+			add_ideas = {
+				RUS_research_efficiency_increase
 			}
 		}
 		ai_will_do = {
@@ -3286,7 +3369,7 @@
 		x = -1
 		y = 2
 		relative_position_id = RUS_invest_in_industry
-		cost = 56
+		cost = 50
 
 		completion_reward = {
 			RUS_industrialisation_up = yes
@@ -3301,7 +3384,7 @@
 		x = 1
 		y = 2
 		relative_position_id = RUS_invest_in_industry
-		cost = 56
+		cost = 50
 
 		completion_reward = {
 			RUS_industrialisation_down = yes
@@ -3350,7 +3433,7 @@
 
 	focus = {
 		id = RUS_the_all_russian_development_scheme
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_SOV_organize_wreckers
 		prerequisite = { focus = RUS_speed_up_industrialisation focus = RUS_increase_standards_of_living }
 		mutually_exclusive = { focus = RUS_invest_in_outer_russia }
 		x = -1
@@ -3387,6 +3470,22 @@
 	}
 
 	focus = {
+		id = RUS_one_giant_factory
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = RUS_the_all_russian_development_scheme }
+		x = -1
+		y = 1
+		relative_position_id = RUS_the_all_russian_development_scheme
+		cost = 70
+
+		completion_reward = {
+			add_ideas = { 
+				RUS_one_giant_factory 
+			}
+		}
+	}
+
+	focus = {
 		id = RUS_invest_in_outer_russia
 		icon = GFX_focus_SOV_free_Rutenia
 		prerequisite = { focus = RUS_increase_standards_of_living focus = RUS_speed_up_industrialisation}
@@ -3418,8 +3517,25 @@
 	}
 
 	focus = {
+		id = RUS_breadbasket_of_russia
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { focus = RUS_invest_in_outer_russia}
+		x = 1
+		y = 1
+		relative_position_id = RUS_invest_in_outer_russia
+		cost = 70
+
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = {
+				RUS_breadbasket_of_russia
+			}
+		}
+	}
+
+	focus = {
 		id = RUS_support_the_military
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = RUS_invest_in_outer_russia focus = RUS_the_all_russian_development_scheme}
 		x = 0
 		y = 2
@@ -3478,7 +3594,7 @@
 
 	focus = {
 		id = RUS_jumpstart_military_production
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_build_tank #TEMP
 		prerequisite = { focus = RUS_support_the_military}
 		x = 2
 		y = 1
@@ -3534,7 +3650,7 @@
 
 	focus = {
 		id = RUS_en_masse_production
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = RUS_jumpstart_military_production}
 		mutually_exclusive = { focus = RUS_quality_production }
 		x = -1
@@ -3549,7 +3665,7 @@
 
 	focus = {
 		id = RUS_quality_production
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = RUS_jumpstart_military_production}
 		mutually_exclusive = { focus = RUS_en_masse_production }
 		x = 1
@@ -3680,15 +3796,37 @@
 	}
 
 	focus = {
-		id = RUS_build_up_manchurian_rails
-		icon = GFX_focus_SOV_south_manchuria_railway
+		id = RUS_tame_siberia
+		icon = GFX_focus_generic_land_reclamation
 		prerequisite = { focus = RUS_finish_the_trans_siberian_railway }
 		x = 0
 		y = 2
 		relative_position_id = RUS_finish_the_trans_siberian_railway
-		cost = 35
+		cost = 40
+
+		available = {
+			any_owned_state = {
+				has_dynamic_modifier = {
+					modifier = RUS_siberian_wasteland
+				}
+			}
+		}
 
 		completion_reward = {
+			every_owned_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = RUS_siberian_wasteland
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				remove_dynamic_modifier = { modifier = RUS_siberian_wasteland }
+			}
 		}
 
 		ai_will_do = {
@@ -3712,19 +3850,10 @@
 						size > 1
 						include_locked = yes
 					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-						include_locked = yes
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = RUS_siberian_wasteland
+						}
 					}
 				}
 				add_building_construction = {
@@ -3740,19 +3869,10 @@
 						size > 1
 						include_locked = yes
 					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-						include_locked = yes
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = RUS_siberian_wasteland
+						}
 					}
 				}
 				add_building_construction = {
@@ -3767,6 +3887,49 @@
 						building = infrastructure
 						size > 1
 						include_locked = yes
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = RUS_siberian_wasteland
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = RUS_siberian_wasteland
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = RUS_siberian_wasteland
+						}
 					}
 				}
 				add_building_construction = {
@@ -3780,12 +3943,12 @@
 
 	focus = {
 		id = RUS_mend_the_railways
-		icon = GFX_generic_build_railways
+		icon = GFX_focus_generic_railroad
 		prerequisite = { focus = RUS_invest_in_infrastructure }
 		x = 0
 		y = 2
 		relative_position_id = RUS_invest_in_infrastructure
-		cost = 35
+		cost = 50
 
 		completion_reward = {
 			remove_ideas = RUS_outdated_railways
@@ -3794,17 +3957,420 @@
 
 	focus = {
 		id = RUS_fund_aviation_industries
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 40
+		icon = GFX_focus_SOV_flying_clubs
+		x = 27
 		y = 13
 		cost = 21
 
 		completion_reward = {
+			air_experience = 50
 			137 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			10 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			202  = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			11  = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			231  = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			408  = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
 			}
 		}
 		ai_will_do = {
-			factor = 10000000
+			factor = 100000000
+		}
+	}
+	
+	focus = {
+		id = RUS_air_innovations
+		icon = GFX_goal_expand_the_luftwaffe
+		x = 0
+		y = 1
+		cost = 35
+		relative_position_id = RUS_fund_aviation_industries
+		prerequisite = { focus = RUS_fund_aviation_industries }
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 4
+				category = air_equipment
+			}
+			add_ideas = {
+				RUS_air_force
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_supremacy_over_the_skies
+		icon = GFX_goal_generic_air_fighter2
+		x = 1
+		y = 1
+		cost = 70
+		relative_position_id = RUS_air_innovations
+		mutually_exclusive = { focus = RUS_destruction_of_the_home }
+		prerequisite = { focus = RUS_air_innovations }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_air_force
+				add_idea = RUS_supremacy_over_the_skies
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_destruction_of_the_home
+		icon = GFX_focus_generic_multi_role_aircraft
+		x = -1
+		y = 1
+		cost = 70
+		relative_position_id = RUS_air_innovations
+		mutually_exclusive = { focus = RUS_supremacy_over_the_skies }
+		prerequisite = { focus = RUS_air_innovations }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_air_force
+				add_idea = RUS_destruction_of_the_home
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_massacre_on_the_battlefield
+		icon = GFX_goal_generic_CAS
+		x = 1
+		y = 1
+		cost = 70
+		relative_position_id = RUS_destruction_of_the_home
+		prerequisite = { focus = RUS_destruction_of_the_home focus = RUS_supremacy_over_the_skies }
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = RUS_supremacy_over_the_skies
+				}
+				swap_ideas = {
+					remove_idea = RUS_supremacy_over_the_skies
+					add_idea = RUS_supremacy_over_the_skies1
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RUS_destruction_of_the_home
+					add_idea = RUS_destruction_of_the_home1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_new_bomber_models
+		icon = GFX_focus_generic_long_range_aircraft
+		x = -1
+		y = 1
+		cost = 35
+		relative_position_id = RUS_destruction_of_the_home
+		prerequisite = { focus = RUS_destruction_of_the_home}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_new_fighter_models
+		icon = GFX_goal_generic_air_fighter
+		x = 1
+		y = 1
+		cost = 35
+		relative_position_id = RUS_supremacy_over_the_skies
+		prerequisite = { focus = RUS_supremacy_over_the_skies}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_air_officers
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		cost = 50
+		relative_position_id = RUS_massacre_on_the_battlefield
+		prerequisite = { focus = RUS_massacre_on_the_battlefield }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			if = {
+				limit = {
+					has_idea = RUS_supremacy_over_the_skies1
+				}
+				swap_ideas = {
+					remove_idea = RUS_supremacy_over_the_skies1
+					add_idea = RUS_supremacy_over_the_skies2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RUS_destruction_of_the_home1
+					add_idea = RUS_destruction_of_the_home2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_military_reform
+		icon = GFX_focus_generic_military_mission
+		x = 32
+		y = 13
+		cost = 100
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_inefficient_high_command
+				add_idea = RUS_inefficient_high_command1
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			army_experience = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_formulate_the_stavka
+		icon = GFX_goal_generic_military_sphere #TEMP
+		x = 0
+		y = 1
+		cost = 35
+		relative_position_id = RUS_military_reform
+		prerequisite = { focus = RUS_military_reform }
+
+		available = {
+			has_war = yes
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_inefficient_high_command1
+				add_idea = RUS_stavka
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_strengthen_partisan_movement
+		icon = GFX_focus_focus_fra_maquis
+		x = 2
+		y = 1
+		cost = 35
+		relative_position_id = RUS_formulate_the_stavka
+		prerequisite = { focus = RUS_formulate_the_stavka }
+
+		available = {
+			has_war = yes
+			has_idea = RUS_stavka
+			OR = {
+				any_owned_state = {
+					is_core_of = ROOT
+					NOT = { 
+						is_controlled_by = ROOT
+					}
+				}
+				AND = {
+					any_owned_state = {
+						NOT = { 
+							is_controlled_by = ROOT
+						}
+					}
+					NOT = {
+						has_idea = RUS_strong_independance_movements
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = RUS_partisan_movement 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_regain_our_footing	
+		icon = GFX_focus_generic_manpower
+		x = -2
+		y = 1
+		cost = 35
+		relative_position_id = RUS_formulate_the_stavka
+		prerequisite = { focus = RUS_formulate_the_stavka }
+
+		available = {
+			has_war = yes
+			has_idea = RUS_stavka
+		}
+
+		completion_reward = {
+			add_ideas = RUS_partisan_movement 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_war_of_attrition
+		icon = GFX_focus_prc_infiltration
+		x = 0
+		y = 1
+		cost = 35
+		relative_position_id = RUS_formulate_the_stavka
+		prerequisite = { focus = RUS_formulate_the_stavka }
+
+		available = {
+			has_war = yes
+			has_idea = RUS_stavka
+		}
+
+		completion_reward = {
+			add_ideas = RUS_partisan_movement 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_logistical_focus
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 1
+		cost = 35
+		relative_position_id = RUS_war_of_attrition
+		prerequisite = { focus = RUS_war_of_attrition }
+
+		available = {
+			has_war = yes
+			has_idea = RUS_stavka
+		}
+
+		completion_reward = {
+			add_ideas = RUS_logistical_focus
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_reclaim_our_lands
+		icon = GFX_goal_generic_major_war
+		x = 1
+		y = 1
+		cost = 35
+		relative_position_id = RUS_regain_our_footing
+		prerequisite = { focus = RUS_regain_our_footing }
+		prerequisite = { focus = RUS_war_of_attrition }
+
+		available = {
+			has_war = yes
+			has_idea = RUS_stavka
+			any_owned_state = {
+				NOT = {
+					is_controlled_by = ROOT
+				}
+			}
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = RUS_reclaim_our_lands
+				days = 100
+			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 }

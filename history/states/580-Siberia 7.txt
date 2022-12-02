@@ -16,6 +16,9 @@ state = {
 			infrastructure = 1
 
 		}
+		add_dynamic_modifier = {
+			modifier = RUS_siberian_wasteland
+		}
 		#add_core_of = SOV
 	}
 

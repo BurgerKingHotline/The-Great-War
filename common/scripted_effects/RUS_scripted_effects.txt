@@ -38,6 +38,10 @@ RUS_ferbruary_revolution = {
 	news_event = { id = TLG_newsevents.5 hours = 4}
 }
 
+RUS_increase_intervention_campaign_cost_effect = {
+	multiply_variable = { RUS_intervention_cost = 2 } #Using generic var SOV_propaganda_cost so that we only need to change this operation to tweak all propagandas' cost escalation
+}
+
 RUS_industrialisation_up = {
 	if = {
 		limit = {

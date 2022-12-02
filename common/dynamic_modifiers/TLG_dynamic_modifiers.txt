@@ -120,10 +120,20 @@ eth_autonomous_state = {
 
 #RUS AND SOV modifiers
 
+RUS_siberian_wasteland = {
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	local_manpower = -1
+	local_resources = -0.8
+	state_production_speed_buildings_factor = -0.65
+	local_intel_to_enemies = -0.5
+	local_building_slots_factor = -0.5
+	local_supplies = -0.5
+}
+
 
 RUS_duma = {
-	remove_trigger = {
-	}
 	
 	icon = GFX_modifiers_sabotaged_resource
 	

@@ -248,6 +248,13 @@ country_event = { #who takes control of the government
 				random = 10
 			}
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0 
+				is_historical_focus_on = yes
+			}
+		}
 	}
 
 	option = { #a provisional government is set up
@@ -257,6 +264,10 @@ country_event = { #who takes control of the government
 			elections_allowed = yes
 			election_frequency = 60
 			last_election = "1907.10.1"
+		}
+		hold_election = ROOT
+		ai_chance = {
+			factor = 1
 		}
 	}
 }
@@ -619,11 +630,6 @@ country_event = { #mass uprisings
 						count = 10
 					}
 				}
-				add_ai_strategy = {
-					type = prepare_for_war 
-					id = SOV
-					value = 1000
-				}
 				country_event = {
 					id = rus_civilwar.6
 					days = 62
@@ -632,7 +638,10 @@ country_event = { #mass uprisings
 				GER = {
 					if = {
 						limit = {
-							
+							has_government = neutrality
+							NOT = {
+								has_global_flag = versailles_flag
+							}
 						}
 					}
 				}
@@ -642,6 +651,38 @@ country_event = { #mass uprisings
 					FIN = {
 						has_war = yes
 						has_capitulated = no
+					}
+				}
+				FIN = {
+					if = {
+						limit = { NOT = { has_idea = neutrality_idea } }
+						add_ideas = neutrality_idea
+					}
+					division_template = {
+						name = "Finnish Infantry Division"
+						is_locked = no
+						priority = 0
+						template_counter = 0
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 1 y = 0 }
+						}
+					}
+					111 = {
+						create_unit = { 
+							division = "name = \"Infantry Division\" division_template = \"Finnish Infantry Division\" start_experience_factor = 0.5" 
+							owner = FIN
+							allow_spawning_on_enemy_provs = no
+							count = 10
+						}
+					}
+					country_event = {
+						id = rus_civilwar.6
+						days = 62
+						random = 31
 					}
 				}
 				every_enemy_country = {
@@ -747,13 +788,49 @@ country_event = { #collapse of russian control in europe
 			}
 			if = {
 				limit = {
-					any_owned_state = {
-						is_controlled_by = RUS
-						is_core_of = MOL
+					any_enemy_country = {
+						NOT = {
+							original_tag = ROM
+						}
 					}
 				}
-				release = MOL
-				MOL = {
+				if = {
+					limit = {
+						any_owned_state = {
+							is_controlled_by = RUS
+							is_core_of = MOL
+						}
+					}
+					release = MOL
+					MOL = {
+						every_owned_state = {
+							RUS = {
+								delete_unit = { 
+									state = PREV
+									disband = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						is_controlled_by = RUS
+						is_core_of = UKR
+					}
+				}
+				release = UKR
+				every_other_country = {
+					limit = {
+						controls_state = 202
+					}
+					UKR = {
+						give_military_access = PREV
+					}
+				}
+				UKR = {
 					every_owned_state = {
 						RUS = {
 							delete_unit = { 
@@ -771,26 +848,27 @@ country_event = { #collapse of russian control in europe
 						is_core_of = UKR
 					}
 				}
-				release = UKR
-				UKR = {
-					every_owned_state = {
-						RUS = {
-							delete_unit = { 
-								state = PREV
-								disband = yes
+				release = POL
+				every_other_country = {
+					limit = {
+						controls_state = 10
+					}
+					if = {
+						limit = {
+							OR = {
+								has_dlc = "Together for Victory"
+								has_dlc = "Man the Guns"
 							}
+						}
+						set_autonomy = {
+							target = POL
+							autonomous_state = autonomy_integrated_puppet
+						}
+						else = {
+							puppet = POL
 						}
 					}
 				}
-			}
-			if = {
-				limit = {
-					any_owned_state = {
-						is_controlled_by = RUS
-						is_core_of = POL
-					}
-				}
-				release = POL
 				POL = {
 					every_owned_state = {
 						RUS = {
@@ -805,41 +883,42 @@ country_event = { #collapse of russian control in europe
 			if = {
 				limit = {
 					any_owned_state = {
-						is_core_of = POL
+						is_controlled_by = ROOT
+						is_core_of = FIN
 					}
 				}
 				release = FIN
 			}
-			if = {
+			every_state = {
 				limit = {
-					137 = {
-						is_owned_by = ROOT
+					is_owned_by = ROOT
+					OR = {
+						state = 935
+						state = 137
 					}
 				}
-				137 = {
-					transfer_state_to = RUS
-				}
-			}
-		
-			935 = {
 				transfer_state_to = RUS
 			}
-			914 = {
+			every_state = {
+				limit = {
+					is_owned_by = ROOT
+					OR = {
+						state = 914
+						state = 722
+					}
+				}
 				transfer_state_to = SOV
 			}
-			722 = {
-				transfer_state_to = SOV
-			}
-			240 = {
-				transfer_state_to = UKR
-			}
-			194 = {
-				transfer_state_to = UKR
-			}
-			94 = {
-				transfer_state_to = UKR
-			}
-			940 = {
+			every_state = {
+				limit = {
+					is_owned_by = ROOT
+					OR = {
+						state = 240
+						state = 194
+						state = 94
+						state = 940
+					}
+				}
 				transfer_state_to = UKR
 			}
 			UKR = {
@@ -1011,31 +1090,28 @@ country_event = { #collapse of russian control in europe
 							is_puppet_of = ROOT
 							tag = ROOT
 						}
-						any_owned_state = {
-							OR = {
-								is_core_of = GEO
-								is_core_of = ARM
-								is_core_of = AZR
-							}
-						}
 					}
 					release = GEO
 					release = ARM
+					release = AZR
 					if = {
 						limit = {
 							any_other_country = {
-								has_cosmetic_tag = transcaucasia_unified
-								tag = event_target:transcaucasia_event_target
-								owns_state = 229
+								OR = {
+									has_cosmetic_tag = transcaucasia_unified
+									tag = event_target:transcaucasia_event_target
+								}
 							}
 						}
-						event_target:transcaucasia_event_target = {
+						every_other_country = {
+							limit = {
+								OR = {
+									has_cosmetic_tag = transcaucasia_unified
+									tag = event_target:transcaucasia_event_target
+								}
+							}
 							drop_cosmetic_tag = yes
-							set_cosmetic_tag = ARM
 						}
-					}
-					else = {
-						release = geo
 					}
 				}
 				if = {
@@ -1064,25 +1140,9 @@ country_event = { #collapse of russian control in europe
 					OTT = {
 						transfer_state = 828
 						transfer_state = 842
+						transfer_state = 970
+						transfer_state = 971
 					}
-				}
-				else_if = {
-					limit = {
-						ARM = {
-							OR = {
-								owns_state = 354
-								owns_state = 230
-							}
-						}
-					}
-					ARM = {
-						transfer_state = 842
-					}
-				}
-				else = {
-					GEO = {
-						transfer_state = 828
-					} 
 				}
 				if = {
 					limit = {
@@ -1094,7 +1154,6 @@ country_event = { #collapse of russian control in europe
 						puppet = ARM
 					}
 				}
-				drop_cosmetic_tag = yes
 				GEO = {
 					set_politics = {
 						ruling_party = democratic
@@ -1118,6 +1177,11 @@ country_event = { #collapse of russian control in europe
 
 	option = {#well, off to ukraine boys!
 		name = rus_civilwar.8.b
+		trigger = {
+			UKR = {
+				exists = yes
+			}
+		}
 		UKR = { change_tag_from = ROOT }
 	}
 }
@@ -1531,12 +1595,6 @@ country_event = { #duma election
 
 	immediate = {
 		set_country_flag = RUS_duma_elections
-	}
-
-	trigger = {
-		original_tag = RUS
-		date > 1912.1.1
-		date < 1913.1.1
 	}
 	
 	option = {#tsarist majority

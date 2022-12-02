@@ -10,7 +10,10 @@ state={
 		owner = RUS
 		add_core_of = RUS
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
+		}
+		add_dynamic_modifier = {
+			modifier = RUS_siberian_wasteland
 		}
 		#add_core_of = SOV
 	}

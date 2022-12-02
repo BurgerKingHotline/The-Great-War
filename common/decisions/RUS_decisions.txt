@@ -13,7 +13,7 @@ russian_socialism_decisions = {
 		cost = 50
 
 		modifier = {
-			political_power_cost = 0.1
+			political_power_cost = 0.25
 		}
 		remove_effect = {
 			add_stability = 0.1
@@ -113,6 +113,26 @@ russian_socialism_decisions = {
 			modifier = {
 				factor = 20000
 				check_variable = { RUS_socialist_radicalisation > 70 }
+			}
+		}
+	}
+}
+
+RUS_crusade_against_communism_decisions = {
+	RUS_intervention_in_country = {
+		targets_dynamic = yes
+		target_trigger = {
+			has_government = communism
+			any_neighbor_country = {
+				tag = ROOT
+			}
+		}
+		cost = 20
+		war_with_target_on_complete = yes
+		complete_effect = {
+			create_wargoal = {
+				target = FROM
+				type = annex_everything
 			}
 		}
 	}
@@ -476,18 +496,22 @@ RUS_tsarist_intervention_decisions = {
 
 		remove_effect = {
 			clr_country_flag = RUS_tsar_intervening
+
+			set_variable = { RUS_intervention_cost = RUS_intervene_in_the_economy_cost }
+			RUS_increase_intervention_campaign_cost_effect = yes
+			set_variable = { RUS_intervene_in_the_economy_cost= RUS_intervention_cost }
+			clear_variable = RUS_intervention_cost
 		}
 	
 		modifier = {
 			consumer_goods_factor = -0.05
-			production_factory_efficiency_gain_factor = -0.05 
-			production_factory_start_efficiency_factor = -0.08
+			production_factory_efficiency_gain_factor = 0.05 
+			production_factory_start_efficiency_factor = 0.08
 			production_lack_of_resource_penalty_factor = 0.25 
 		}
 	
 		days_remove = 180
-		days_re_enable = 179
-		cost = 50
+		cost = RUS_intervene_in_the_economy_cost
 		
 		ai_will_do = {
 			factor = 5
@@ -498,6 +522,7 @@ RUS_tsarist_intervention_decisions = {
 		icon = generic_civil_support
 
 		visible = {
+			has_completed_focus = RUS_take_full_control_of_the_army
 		}
 
 		available = {
@@ -506,10 +531,11 @@ RUS_tsarist_intervention_decisions = {
 					has_country_flag = RUS_tsar_intervening
 				}
 			}
+
         }
 	
 		modifier = {
-			army_org_factor = 0.3
+			army_org_factor = 0.2
 			army_core_defence_factor = 0.05
 			army_core_attack_factor = 0.05
 			army_morale_factor = -0.05
@@ -524,11 +550,15 @@ RUS_tsarist_intervention_decisions = {
 
 		remove_effect = {
 			clr_country_flag = RUS_tsar_intervening
+
+			set_variable = { RUS_intervention_cost = RUS_intervene_in_the_military_cost }
+			RUS_increase_intervention_campaign_cost_effect = yes
+			set_variable = { RUS_intervene_in_the_military_cost = RUS_intervention_cost }
+			clear_variable = RUS_intervention_cost
 		}
 	
 		days_remove = 180
-		days_re_enable = 179
-		cost = 50
+		cost = RUS_intervene_in_the_military_cost
 		
 		ai_will_do = {
 			factor = 0
@@ -579,11 +609,15 @@ RUS_tsarist_intervention_decisions = {
 
 		remove_effect = {
 			clr_country_flag = RUS_tsar_intervening
+
+			set_variable = { RUS_intervention_cost = RUS_intervene_in_national_security_cost }
+			RUS_increase_intervention_campaign_cost_effect = yes
+			set_variable = { RUS_intervene_in_national_security_cost = RUS_intervention_cost }
+			clear_variable = RUS_intervention_cost
 		}
 	
 		days_remove = 180
-		days_re_enable = 179
-		cost = 50
+		cost = RUS_intervene_in_national_security_cost
 		
 		ai_will_do = {
 			factor = 4
@@ -632,6 +666,12 @@ RUS_tsarist_intervention_decisions = {
 
 		remove_effect = {
 			clr_country_flag = RUS_tsar_intervening
+
+			set_variable = { RUS_intervention_cost = RUS_intervene_in_foreign_policy_cost }
+			RUS_increase_intervention_campaign_cost_effect = yes
+			set_variable = { RUS_intervene_in_foreign_policy_cost = RUS_intervention_cost }
+			clear_variable = RUS_intervention_cost
+
 			hidden_effect = {
 				every_other_country = {
 					add_ai_strategy = {
@@ -644,8 +684,141 @@ RUS_tsarist_intervention_decisions = {
 		}
 	
 		days_remove = 180
-		days_re_enable = 179
-		cost = 50
+		cost = RUS_intervene_in_foreign_policy_cost
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 2
+				OR = {
+					has_stability < 0.4
+					has_war_support < 0.4
+				}
+			}
+		}
+	}
+	
+	RUS_intervene_in_political_affairs = {
+		icon = generic_civil_support
+
+		visible = {
+		}
+
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = RUS_tsar_intervening
+				}
+			}
+        }
+	
+		modifier = {
+			political_advisor_cost_factor = -0.15
+			trade_laws_cost_factor = -0.15
+			economy_cost_factor = -0.15
+		}
+
+		complete_effect = {
+			set_country_flag = RUS_tsar_intervening
+			hidden_effect = {
+				every_other_country = {
+					add_ai_strategy = {
+						type = befriend 
+						id = RUS
+						value = 20
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = RUS_tsar_intervening
+
+			set_variable = { RUS_intervention_cost = RUS_intervene_in_political_affairs_cost }
+			RUS_increase_intervention_campaign_cost_effect = yes
+			set_variable = { RUS_intervene_in_political_affairs_cost = RUS_intervention_cost }
+			clear_variable = RUS_intervention_cost
+
+			hidden_effect = {
+				every_other_country = {
+					add_ai_strategy = {
+						type = befriend 
+						id = RUS
+						value = -20
+					}
+				}
+			}
+		}
+	
+		days_remove = 180
+		cost = RUS_intervene_in_political_affairs_cost
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 2
+				OR = {
+					has_stability < 0.4
+					has_war_support < 0.4
+				}
+			}
+		}
+	}
+
+	RUS_intervene_in_mobilization = {
+		icon = generic_civil_support
+
+		visible = {
+		}
+
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = RUS_tsar_intervening
+				}
+			}
+        }
+	
+		modifier = {
+			mobilization_laws_cost_factor = -0.15
+			weekly_manpower = 300
+			mobilization_speed = 0.3
+		}
+
+		complete_effect = {
+			set_country_flag = RUS_tsar_intervening
+			hidden_effect = {
+				every_other_country = {
+					add_ai_strategy = {
+						type = befriend 
+						id = RUS
+						value = 20
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = RUS_tsar_intervening
+
+			set_variable = { RUS_intervention_cost = RUS_intervene_in_mobilization_cost }
+			RUS_increase_intervention_campaign_cost_effect = yes
+			set_variable = { RUS_intervene_in_mobilization_cost = RUS_intervention_cost }
+			clear_variable = RUS_intervention_cost
+
+			hidden_effect = {
+				every_other_country = {
+					add_ai_strategy = {
+						type = befriend 
+						id = RUS
+						value = -20
+					}
+				}
+			}
+		}
+	
+		days_remove = 180
+		cost = RUS_intervene_in_mobilization_cost
 		
 		ai_will_do = {
 			factor = 4

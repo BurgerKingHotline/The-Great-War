@@ -17,6 +17,9 @@ state = {
 		}
 		#add_core_of = SOV
 		#add_core_of = FER
+		add_dynamic_modifier = {
+			modifier = RUS_siberian_wasteland
+		}
 	}
 
 	provinces = {

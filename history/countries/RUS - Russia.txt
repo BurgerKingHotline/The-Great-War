@@ -1,6 +1,8 @@
 ﻿capital = 195
 
 #oob = "SOV_1936"
+puppet = BUK
+puppet = KHI
 
 set_research_slots = 2
 
@@ -11,6 +13,7 @@ add_ideas = {
 	RUS_strong_independance_movements
 	RUS_industrialising_nation_1
 	RUS_outdated_railways
+	RUS_inefficient_high_command
 }
 
 set_politics = {
@@ -28,9 +31,35 @@ set_war_support = 0.35
 recruit_character = RUS_nicholas_ii
 recruit_character = RUS_michael
 
+#variables
+
 set_variable = {
 	var = RUS_socialist_radicalisation
 	value = 20
+}
+set_variable = {
+	var = RUS_intervene_in_foreign_policy_cost
+	value = 25
+}
+set_variable = {
+	var = RUS_intervene_in_national_security_cost
+	value = 25
+}
+set_variable = {
+	var = RUS_intervene_in_the_economy_cost
+	value = 25
+}
+set_variable = {
+	var = RUS_intervene_in_the_military_cost
+	value = 25
+}
+set_variable = {
+	var = RUS_intervene_in_political_affairs_cost
+	value = 25
+}
+set_variable = {
+	var = RUS_intervene_in_mobilization_cost
+	value = 25
 }
 
 add_opinion_modifier = {
@@ -43,13 +72,25 @@ add_opinion_modifier = {
 	modifier = historic_enemies_modifier
 }
 
-
 add_ai_strategy = {
 	type = befriend
 	id = FRA
 	value = 200
 }
 
+if = {
+	limit = {
+		has_start_date < 1911.1.1
+	}
+	country_event = {
+		id = rus_events.12
+		days = 737
+	}
+}
+
+1914.1.1 = {
+    give_guarantee = SER
+}
 
 # Starting tech
 set_technology = {
@@ -128,6 +169,4 @@ if = {
 
 
 
-puppet = BUK
-puppet = KHI
 

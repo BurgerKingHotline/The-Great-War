@@ -74,7 +74,7 @@ leader_traits = {
 		political_power_factor = 0.25
 		army_org_factor = 0.1
 		resistance_target_on_our_occupied_states = 0.35
-		supply_combat_penalties_on_core_factor = 0.8
+		supply_combat_penalties_on_core_factor = -0.8
 	}
 
 	national_orator = {

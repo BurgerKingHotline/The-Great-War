@@ -1,5 +1,559 @@
 ideas = {
 	country = {
+		RUS_inefficient_high_command = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = -0.15
+				max_command_power = -50
+				land_doctrine_cost_factor = 0.25
+				command_abilities_cost_factor = 0.1
+				army_org_factor = -0.1
+			}
+		}
+		RUS_inefficient_high_command1 = {
+			name = RUS_inefficient_high_command
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = -0.1
+				land_doctrine_cost_factor = 0.1
+			}
+		}
+		RUS_stavka = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				has_war = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				land_doctrine_cost_factor = -0.05
+				max_planning_factor = 0.25
+				planning_speed = 0.2
+				recon_factor = 0.1
+				coordination_bonus = 0.3
+			}
+		}
+		RUS_partisan_movement = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.15
+				resistance_damage_to_garrison_on_our_occupied_states = 0.15
+				resistance_target_on_our_occupied_states = 0.08
+			}
+		}
+		RUS_reclaim_our_lands = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				OR = {
+					has_war = no
+					all_owned_state = {
+						is_controlled_by = ROOT
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.1
+				army_speed_factor = 0.08
+				army_morale_factor = 0.25
+				breakthrough_factor = 0.15
+				org_loss_when_moving = -0.05
+			}
+		}
+		RUS_logistical_focus = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				supply_consumption_factor = -0.05
+				air_fuel_consumption_factor = -0.05
+				army_fuel_consumption_factor = -0.05
+				navy_fuel_consumption_factor = -0.05
+			}
+		}
+		RUS_breadbasket_of_russia = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				supply_consumption_factor = -0.08
+				consumer_goods_factor = -0.03
+			}
+		}
+		RUS_one_giant_factory = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				global_building_slots_factor = 0.25
+				production_speed_industrial_complex_factor = 0.08
+				production_speed_arms_factory_factor = 0.08
+			}
+		}
+		RUS_air_force = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_equipment_upgrade_xp_cost = -0.15
+				air_mission_xp_gain_factor = 0.1
+			}
+			equipment_bonus = { 
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				heavy_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+			}
+		}
+		RUS_supremacy_over_the_skies = {
+			name = RUS_air_force
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_equipment_upgrade_xp_cost = -0.15
+				air_mission_xp_gain_factor = 0.1
+				air_agility_factor = 0.15
+				air_attack_factor = 0.05
+				air_air_superiority_attack_factor = 0.08
+				air_superiority_efficiency = 0.25
+				air_power_projection_factor = 0.15
+			}
+			equipment_bonus = { 
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				heavy_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+			}
+		}
+
+		RUS_destruction_of_the_home = {
+			name = RUS_air_force
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_equipment_upgrade_xp_cost = -0.15
+				air_mission_xp_gain_factor = 0.1
+				air_defence_factor = 0.1
+				air_bombing_targetting = 0.15
+				ground_attack_factor = 0.05
+				air_strategic_bomber_night_penalty = -0.15
+				air_strategic_bomber_bombing_factor = 0.25
+				air_range_factor = 0.25
+			}
+			equipment_bonus = { 
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				heavy_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+			}
+		}
+
+		RUS_supremacy_over_the_skies1 = {
+			name = RUS_air_force
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_equipment_upgrade_xp_cost = -0.15
+				air_mission_xp_gain_factor = 0.1
+				air_agility_factor = 0.2
+				air_attack_factor = 0.05
+				air_air_superiority_attack_factor = 0.08
+				air_superiority_efficiency = 0.25
+				air_power_projection_factor = 0.15
+				air_cas_present_factor = 0.15
+				air_cas_efficiency = 0.15
+				ground_attack_factor = 0.1
+			}
+			equipment_bonus = { 
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				heavy_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+			}
+		}
+
+		RUS_destruction_of_the_home1 = {
+			name = RUS_air_force
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_equipment_upgrade_xp_cost = -0.15
+				air_mission_xp_gain_factor = 0.1
+				air_defence_factor = 0.1
+				air_bombing_targetting = 0.15
+				ground_attack_factor = 0.15
+				air_strategic_bomber_night_penalty = -0.15
+				air_strategic_bomber_bombing_factor = 0.25
+				air_range_factor = 0.25
+				air_cas_present_factor = 0.15
+				air_cas_efficiency = 0.15
+			}
+			equipment_bonus = { 
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				heavy_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+			}
+		}
+
+		RUS_supremacy_over_the_skies2 = {
+			name = RUS_air_force
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_equipment_upgrade_xp_cost = -0.15
+				air_mission_xp_gain_factor = 0.15
+				air_untrained_pilots_penalty_factor = -0.1
+				air_accidents_factor = -0.1
+				air_agility_factor = 0.2
+				air_attack_factor = 0.05
+				air_air_superiority_attack_factor = 0.08
+				air_superiority_efficiency = 0.25
+				air_power_projection_factor = 0.15
+				air_cas_present_factor = 0.15
+				air_cas_efficiency = 0.15
+				ground_attack_factor = 0.1
+			}
+			equipment_bonus = { 
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				heavy_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+			}
+		}
+
+		RUS_destruction_of_the_home2 = {
+			name = RUS_air_force
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_equipment_upgrade_xp_cost = -0.15
+				air_mission_xp_gain_factor = 0.15
+				air_untrained_pilots_penalty_factor = -0.1
+				air_accidents_factor = -0.1
+				air_defence_factor = 0.1
+				air_bombing_targetting = 0.15
+				ground_attack_factor = 0.15
+				air_strategic_bomber_night_penalty = -0.15
+				air_strategic_bomber_bombing_factor = 0.25
+				air_range_factor = 0.25
+				air_cas_present_factor = 0.15
+				air_cas_efficiency = 0.15
+			}
+			equipment_bonus = { 
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				CAS_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				heavy_fighter_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+				strat_bomber_equipment = {
+					instant = yes
+					build_cost_ic = 0.1
+				}
+			}
+		}
+
 		RUS_duma = {
 			picture = generic_production_bonus
 			allowed = {
@@ -442,7 +996,7 @@ ideas = {
 
 		}
 
-		RUS_crusade_against_communism = {
+		RUS_crusade_against_communis_lar = {
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -455,6 +1009,29 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				operation_coup_government_outcome = 0.25
+				boost_ideology_mission_factor = 0.25
+				war_support_factor = 0.15
+				army_attack_factor = 0.1
+				army_morale_factor = 0.1
+			}
+
+		}
+
+		RUS_crusade_against_communism_no_lar = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				subversive_activites_upkeep = 0.25
 				war_support_factor = 0.15
 				army_attack_factor = 0.1
 				army_morale_factor = 0.1
@@ -543,12 +1120,38 @@ ideas = {
 				supply_consumption_factor = -0.1
 				attrition = -0.08
 				winter_attrition_factor = -0.25
-				out_of_supply_factor = 0.05
 			}
 
 		}
 
-		RUS_democratic_army = {
+		RUS_national_militia = {
+			name = RUS_white_army
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.2
+				supply_consumption_factor = -0.1
+				attrition = -0.08
+				winter_attrition_factor = -0.25
+				army_morale_factor = 0.05
+				recruitable_population_factor = 0.15
+				army_org_factor = -0.08
+				training_time_factor = -0.1
+			}
+
+		}
+
+		RUS_professional_army = {
 			name = RUS_white_army
 			picture = generic_production_bonus
 			allowed = {
@@ -563,19 +1166,18 @@ ideas = {
 			
 			modifier = {
 				army_core_defence_factor = 0.2
-				army_core_attack_factor = 0.1
-				supply_consumption_factor = -0.15
-				attrition = -0.08
+				army_core_attack_factor = 0.05
+				supply_consumption_factor = -0.1
+				attrition = -0.15
 				winter_attrition_factor = -0.25
-				out_of_supply_factor = 0.05
-				army_org_factor = -0.05
-				army_morale_factor = 0.15
+				out_of_supply_factor = -0.05
+				army_org_factor = 0.15
+				army_morale_factor = -0.05
 			}
 
 		}
 
-		RUS_autocratic_army = {
-			name = RUS_white_army
+		RUS_siberian_tigers = {
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -588,14 +1190,12 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_core_defence_factor = 0.1
-				army_core_attack_factor = 0.1
-				supply_consumption_factor = -0.1
-				attrition = -0.05
-				winter_attrition_factor = -0.25
-				out_of_supply_factor = 0.05
-				army_org_factor = 0.15
-				army_morale_factor = -0.05
+				supply_consumption_factor = -0.15
+				attrition = -0.15
+				winter_attrition_factor = -0.3
+				no_supply_grace = 24
+				special_forces_cap = 0.5
+				training_time_factor = 0.1
 			}
 
 		}
@@ -989,6 +1589,25 @@ ideas = {
 				supply_consumption_factor = -0.3
 				weekly_manpower = 1000
 			}
+		}
+	}
+	hidden_ideas = {
+		RUS_invest_in_research_teams_consumer_goods_idea = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.03
+			}
+
 		}
 	}
 }
