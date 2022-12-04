@@ -2798,7 +2798,6 @@
 
 		completion_reward = {
 			set_politics = {
-				ideology = ROOT
 				elections_allowed = yes
 			}
 			add_stability = 0.15
@@ -4017,7 +4016,7 @@
 		icon = GFX_goal_expand_the_luftwaffe
 		x = 0
 		y = 1
-		cost = 35
+		cost = 70
 		relative_position_id = RUS_fund_aviation_industries
 		prerequisite = { focus = RUS_fund_aviation_industries }
 

@@ -13,7 +13,7 @@ peace_ai_desires = {
 			}
         }
 
-        ai_desire = -15
+        ai_desire = -20
     }
 
     dont_liberate_colonies = {
@@ -101,26 +101,6 @@ peace_ai_desires = {
         ai_desire = -1000
     }
 
-    do_grab_stuff_near_us = {
-        peace_action_type = { liberate take_states force_government puppet }
-        enable = {
-            ROOT.FROM.FROM.FROM = {
-                OR = {
-                    any_neighbor_state = {
-                        OR = {
-                            is_owned_by = ROOT.FROM
-                        }
-                    }
-                    is_claimed_by = ROOT.FROM
-                }
-            }
-            ROOT = {
-                tag = ROOT.FROM
-            }
-        }
-        ai_desire = 10
-    }
-
 
     leave_force_gov_at_will_to_allies = { #It is a bit hacky, but we need a preference here or we end up worse than where we started
         peace_action_type = force_government
@@ -152,6 +132,8 @@ peace_ai_desires = {
         }
         ai_desire = -20
     }
+	
+	### The above trigger looks extremely harsh. In reality, this means the AI is more inclined to step through nearby land without bunny hopping and potentially leaving gaps. 
 
     has_access_to_state_desire = {
         peace_action_type = { take_states puppet force_government }
@@ -241,21 +223,19 @@ peace_ai_desires = {
         peace_action_type = puppet
         enable = {
             ROOT = { 
-				NOT = { tag = JAP }			#We aren't Japan (special handling)
 				is_major = yes				#We are big
 				has_government = fascism	#We are the baddies
 				tag = ROOT.FROM				#We are acting for ourselves
 			}
         }
 
-        ai_desire = -75
+        ai_desire = -25
     }
 	
 	fascist_liberate_desire = {
         peace_action_type = liberate
         enable = {
             ROOT = { 
-				NOT = { tag = JAP }			#We aren't Japan (special handling)
 				is_major = yes				#We are big
 				has_government = fascism	#We are the baddies
 				tag = ROOT.FROM				#We are acting for ourselves

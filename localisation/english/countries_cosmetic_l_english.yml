@@ -8,12 +8,8 @@
  INS_subject:0 "$OVERLORDADJ$ East Indies"
  INS_subject_DEF:0 "the $OVERLORDADJ$ East Indies"
  ZAM_subject:0 "$OVERLORDADJ$ Rhodesia"
- CAR_subject:0 "$OVERLORDADJ$ Central Africa"
- MRT_subject:0 "$OVERLORDADJ$ West Africa"
  COG_subject:0 "$OVERLORDADJ$ Congo"
  MAL_subject:0 "$OVERLORDADJ$ Malaya"
- LBA_subject:0 "$OVERLORDADJ$ North Africa"
- SAU_subject:0 "$OVERLORDADJ$ Central Arabia"
  TOG_subject:0 "$OVERLORDADJ$ Togoland"
 
  #misc colonies
