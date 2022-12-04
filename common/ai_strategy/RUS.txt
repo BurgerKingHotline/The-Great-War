@@ -1,3 +1,47 @@
+keep_faction_with_fra = {
+	allowed = { original_tag = FRA }
+
+	enable = {
+		country_exists = GER
+		NOT = {
+			has_completed_focus = RUS_continued_dialogue_with_the_germans
+		}
+		OR = {
+			has_government = democratic
+			has_government = neutrality
+		}
+		FRA = {
+			OR = {
+				has_government = democratic 
+				has_government = neutrality
+			}
+			NOT = {
+				has_completed_focus = FRA_attempt_german_reapproachment
+				has_completed_focus = RUS_on_our_own
+			}
+		}
+	}
+	abort = {
+		OR = {
+			FRA = {
+				has_completed_focus = FRA_attempt_german_reapproachment
+			}
+			ROOT = {
+				OR = {
+					has_completed_focus = RUS_continued_dialogue_with_the_germans
+					has_completed_focus = RUS_on_our_own
+				}
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "FRA"
+		value = 200
+	}
+}
+
 protect_serbia_against_austria = {
 	allowed = { original_tag = RUS }
 
@@ -25,7 +69,7 @@ protect_serbia_against_austria = {
 	}
 	ai_strategy = {
 		type = diplo_action_desire
-		id = POL
+		id = SER
 		target = guarantee
 		value = 20
 	}
@@ -53,21 +97,5 @@ defend_serbia_against_austria = {
 		type = alliance
 		id = "POL"
 		value = 200
-	}
-}
-
-
-RUS_dont_defend_france = {
-	allowed = { original_tag = RUS }
-	enable = {
-		FRA = {
-			has_war = yes
-		}
-	}
-
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = FRA
-		value = 10
 	}
 }

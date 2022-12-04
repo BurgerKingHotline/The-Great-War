@@ -1,0 +1,39 @@
+keep_faction_with_rus = {
+	allowed = { original_tag = FRA }
+
+	enable = {
+		country_exists = GER
+		NOT = {
+			has_completed_focus = FRA_attempt_german_reapproachment
+		}
+		OR = {
+			has_government = democratic
+			has_government = neutrality
+		}
+		RUS = {
+			OR = {
+				has_government = democratic 
+				has_government = neutrality
+			}
+			NOT = {
+				has_completed_focus = RUS_continued_dialogue_with_the_germans
+			}
+		}
+	}
+	abort = {
+		OR = {
+			ROOT = {
+				has_completed_focus = FRA_attempt_german_reapproachment
+			}
+			RUS = {
+				has_completed_focus = RUS_continued_dialogue_with_the_germans
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "RUS"
+		value = 200
+	}
+}

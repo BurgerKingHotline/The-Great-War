@@ -1383,7 +1383,7 @@
 		x = -1
 		y = 1
 		relative_position_id = RUS_maintain_the_status_quo
-		cost = 70
+		cost = 50
 		 
 
 		completion_reward = {
@@ -1683,8 +1683,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.05
-			add_political_power = 75
+			add_war_support = -0.05
+			add_political_power = -100
 			remove_opinion_modifier = {
 				target = ASH
 				modifier = historic_enemies_modifier
@@ -1994,7 +1994,7 @@
 		y = 1
 		relative_position_id = RUS_asian_matters
 		prerequisite = { focus = RUS_asian_matters } 
-		cost = 50
+		cost = 35
 
 		available = {
 			NOT = {
@@ -2496,7 +2496,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2527,7 +2527,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2561,7 +2561,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2593,7 +2593,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2653,7 +2653,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2738,7 +2738,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2778,7 +2778,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2804,7 +2804,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2827,7 +2827,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2855,7 +2855,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2880,7 +2880,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2910,7 +2910,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2929,7 +2929,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.15
+			add_war_support = 0.15
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
@@ -2937,7 +2938,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2962,7 +2963,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -2989,7 +2990,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 	}
 
@@ -3016,7 +3017,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
@@ -3043,7 +3044,7 @@
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 	
@@ -3460,10 +3461,31 @@
 			217 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 2
+			}
+			223 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			208 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			244 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -3655,7 +3677,7 @@
 		x = -1
 		y = 1
 		relative_position_id = RUS_jumpstart_military_production
-		cost = 56
+		cost = 50
 
 		completion_reward = {
 			#companies
@@ -3670,7 +3692,7 @@
 		x = 1
 		y = 1
 		relative_position_id = RUS_jumpstart_military_production
-		cost = 56
+		cost = 50
 
 		completion_reward = {
 			#companies
@@ -4007,7 +4029,7 @@
 			}
 		}
 		ai_will_do = {
-			factor = 100000000
+			factor = 10
 		}
 	}
 	
@@ -4347,7 +4369,7 @@
 		icon = GFX_goal_generic_major_war
 		x = 1
 		y = 1
-		cost = 35
+		cost = 50
 		relative_position_id = RUS_regain_our_footing
 		prerequisite = { focus = RUS_regain_our_footing }
 		prerequisite = { focus = RUS_war_of_attrition }

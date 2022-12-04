@@ -1,0 +1,131 @@
+RUS_historical_plan = {
+	name = "Russian Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes 
+				#has_game_rule = {
+				#	rule = RUS_AI_BEHAVIOR
+				#	option = DEFAULT
+				#}
+			}
+			has_country_flag = RUS_AI_RANDOM_HISTORICAL
+			
+			#has_game_rule = {
+			#	rule = RUS_ai_behavior
+			#	option = HISTORICAL
+			#}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		#CIVIL WAR, ALWAYS DO THESE FIRST
+		RUS_the_russian_civil_war
+		RUS_purge_the_communists
+		RUS_the_white_army
+		RUS_a_professional_army
+		RUS_supreme_ruler_of_russia
+		RUS_loyalty_to_the_ruler
+		RUS_request_foreign_support
+		RUS_the_grand_russian_state
+		RUS_siberian_tigers
+		RUS_unite_the_whites
+		
+		#1910
+		RUS_fund_aviation_industries
+		RUS_meeting_with_the_germans
+
+		#1911
+		RUS_the_powers_of_the_tsar
+		RUS_configure_foreign_policy
+		RUS_european_matters
+		RUS_asian_matters
+		RUS_invest_in_industry
+		RUS_invest_in_research_teams
+		RUS_finish_the_trans_siberian_railway
+		RUS_speed_up_industrialisation
+
+		#1912
+		RUS_strengthen_the_entente
+		RUS_elections_in_the_duma
+		RUS_matters_in_persia
+		RUS_increased_radicalisation
+		RUS_invest_in_research_teams_ii
+		RUS_seize_tannu_tuva
+		RUS_joint_training
+
+		#1913
+		RUS_military_reform
+		RUS_the_all_russian_development_scheme
+		RUS_influence_persian_politics
+		RUS_invest_in_infrastructure
+		RUS_mend_the_railways
+		RUS_help_build_german_rails
+		RUS_safeguard_the_orthodoxy
+		RUS_tsarist_meddling_in_the_duma
+
+		#1914
+		RUS_democratic_reforms
+		RUS_maintain_the_status_quo
+		RUS_support_the_military
+		RUS_jumpstart_military_production
+		RUS_formulate_the_stavka
+		RUS_promise_independence_after_the_war
+
+		#1915
+		RUS_air_innovations
+		RUS_tsarist_national_intervension
+		RUS_regain_our_footing
+		RUS_russification_policy
+		RUS_quality_production
+		RUS_one_giant_factory
+		RUS_take_full_control_of_the_army
+
+		#1916
+		RUS_war_of_attrition
+		RUS_supremacy_over_the_skies
+		RUS_tame_siberia
+		RUS_electronic_research_teams
+		RUS_research_efficiency
+		RUS_logistical_focus
+		RUS_reclaim_our_lands
+
+		#1917
+		RUS_lessons_of_leadership
+		RUS_reclaim_our_lands
+		RUS_massacre_on_the_battlefield
+		RUS_new_fighter_models
+		RUS_force_the_workers
+		RUS_limit_worker_protections
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
