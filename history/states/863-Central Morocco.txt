@@ -7,10 +7,10 @@ state={
 		owner = MOR
 		add_core_of = MOR
 		victory_points = {
-			1043 1 
+			4108 5 
 		}
 		victory_points = {
-			4108 5 
+			11987 5 
 		}
 		victory_points = {
 			1095 1
