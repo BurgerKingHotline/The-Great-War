@@ -12,6 +12,51 @@ country_event = { #non-total surrender to germany
 	
 	option = { #we will achieve the septemberprogramm in the west, but less colonies
 		name = TLG_surrender.1.a
+		trigger = {
+			has_war_with = BEL
+		}
+		FROM = {
+			if = {
+				limit = {
+					MOR = {
+						is_subject_of = FROM
+					}
+				}
+				set_autonomy = {
+					target = MOR
+					autonomy_state = autonomy_free
+					end_wars = no
+					end_civil_wars = no
+				}
+				every_state = {
+					limit = {
+						OWNER = {
+							OR = {
+								original_tag = FROM
+								is_subject_of = FROM
+							}
+						}
+						is_core_of = MOR
+					}
+					transfer_state_to = ROOT
+				}
+			}
+			else = {
+				release = MOR 
+				every_state = {
+					limit = {
+						OWNER = {
+							OR = {
+								original_tag = FROM
+								is_subject_of = FROM
+							}
+						}
+						is_core_of = MOR
+					}
+					transfer_state_to = ROOT
+				}
+			}
+		}
 		if = {
 			limit = {
 				BEL = {
@@ -136,22 +181,36 @@ country_event = { #non-total surrender to germany
 						state = 967
 						state = 968
 						state = 1
-
-						#north africa
-						region = 225
-						state = 273
-						state = 850
-						state = 851
-						state = 849
-						state = 853
-						state = 854
-						state = 852
-						state = 849
-						state = 665
-						state = 458
+						if = {
+							limit = {
+								ITA = {
+									owns_state = 661 
+									owns_state = 448
+									owns_state = 663
+									owns_state = 451
+								}
+							}
+							#north africa
+							state = 448
+							state = 449
+							state = 450
+							state = 451
+							state = 661
+							state = 663
+							state = 273
+							state = 850
+							state = 851
+							state = 849
+							state = 853
+							state = 854
+							state = 852
+							state = 849
+							state = 665
+							state = 458
+						}
 					}
 				}
-				transfer_state_to = ROOT
+				transfer_state_to = ITA
 			}
 		}
 		news_event = { id = TLG_surrender.21 hours = 12 }
@@ -193,6 +252,18 @@ country_event = { #non-total surrender to germany
 			}
 			else = {
 				release = MOR 
+				every_state = {
+					limit = {
+						OWNER = {
+							OR = {
+								original_tag = FROM
+								is_subject_of = FROM
+							}
+						}
+						is_core_of = MOR
+					}
+					transfer_state_to = ROOT
+				}
 			}
 		}
 		every_state = {
@@ -256,27 +327,36 @@ country_event = { #non-total surrender to germany
 						state = 967
 						state = 968
 						state = 1
-
-						#north africa
-						state = 448
-						state = 449
-						state = 450
-						state = 451
-						state = 661
-						state = 663
-						state = 273
-						state = 850
-						state = 851
-						state = 849
-						state = 853
-						state = 854
-						state = 852
-						state = 849
-						state = 665
-						state = 458
+						if = {
+							limit = {
+								ITA = {
+									owns_state = 661 
+									owns_state = 448
+									owns_state = 663
+									owns_state = 451
+								}
+							}
+							#north africa
+							state = 448
+							state = 449
+							state = 450
+							state = 451
+							state = 661
+							state = 663
+							state = 273
+							state = 850
+							state = 851
+							state = 849
+							state = 853
+							state = 854
+							state = 852
+							state = 849
+							state = 665
+							state = 458
+						}
 					}
 				}
-				transfer_state_to = ROOT
+				transfer_state_to = ITA
 			}
 		}
 		news_event = { id = TLG_surrender.21 hours = 12 }
@@ -1524,7 +1604,7 @@ country_event = { #brest-litovsk
 			transfer_state_to = BLR
 		}
 		puppet = BLR
-
+		#UKR
 		if = {
 			limit = {
 				UKR = {
@@ -1564,6 +1644,7 @@ country_event = { #brest-litovsk
 				}
 			}
 		}
+		
 
 		#to prevent excess since they might already be independent because of civil war shenanigans
 		every_state = {

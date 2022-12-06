@@ -71,7 +71,7 @@ surrender_category = {
 			}
 
 			modifier = {
-				factor = 1000
+				add = 1000
 				has_capitulated = yes
 			}
 		}
@@ -599,12 +599,6 @@ surrender_category = {
 			OR = {
 				surrender_progress > 0.15
 				casualties_k > 1200
-				original_tag = SOV
-			}
-			any_controlled_state = {
-				any_neighbor_state = {
-					is_controlled_by = GER
-				}
 			}
 		}
 
@@ -653,6 +647,22 @@ surrender_category = {
 		}
 
 		complete_effect = {
+			if = {
+				limit = {
+					has_war_with = GER
+				}
+				GER = {
+					country_event = TLG_surrender.13
+				}
+			}
+			else = {
+				random_enemy_country = { 
+					limit = {
+						is_major = yes
+					}
+					country_event = TLG_surrender.13
+				}
+			}
 		}
 
 	}
