@@ -27,6 +27,7 @@ state={
 			}
 		}
 		add_core_of = OTT
+		add_claim_by = GRE
 		
 		1936.11.9 = {
 			set_demilitarized_zone = no

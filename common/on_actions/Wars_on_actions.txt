@@ -83,32 +83,38 @@ on_actions = {
             every_country = {
                 if = {
                     limit = {
-                        NOT = { 
-                            OR = {
-                                tag = QIN
-                                tag = PER
-                                tag = GER #theyre gonna have more troops
-                                is_puppet = yes #master should take care of them
-                                capital_scope = {
-                                    is_on_continent = south_america #no one cares about them, 
-                                }
-                            }
-                            has_country_flag = has_actual_oob 
+                        NOT = {
+                            has_country_flag = has_actual_oob
                         }
                     }
-                    d_create_army = yes
-                }
-                else_if = {
-                    limit = {
-                        tag = GER
-                        tag = SER
-                        tag = BUL
-                        tag = GRE
+                    if = {
+                        limit = {
+                            NOT = { 
+                                OR = {
+                                    tag = QIN
+                                    tag = PER
+                                    tag = GER #theyre gonna have more troops
+                                    is_puppet = yes #master should take care of them
+                                    capital_scope = {
+                                        is_on_continent = south_america #no one cares about them, 
+                                    }
+                                }
+                            }
+                        }
+                        d_create_army = yes
                     }
-                    d_create_army_large = yes
-                }
-                else = {
-                    d_create_army_small = yes
+                    else_if = {
+                        limit = {
+                            tag = GER
+                            tag = SER
+                            tag = BUL
+                            tag = GRE
+                        }
+                        d_create_army_large = yes
+                    }
+                    else = {
+                        d_create_army_small = yes
+                    }
                 }
             }
             ENG = {

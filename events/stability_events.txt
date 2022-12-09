@@ -16,14 +16,17 @@ country_event = {
 	hidden = yes
 
 	trigger = {
-		if = { #Russia has its own events if bop is active,
-			limit = { #best not to have multiple a the same time
+		if = { #Russia has its own events,
+			limit = { #best not to have multiple at the same time
 				original_tag = RUS
 			}
-			has_country_flag = RUS_revolutionaries_active
+			NOT = {
+				has_country_flag = RUS_revolutionaries_active
+			}
 		}
 		has_war = yes
 		has_civil_war = no
+		is_government_in_exile = no # strikes etc shouldn't affect you if you are not there... 
 		OR = {
 			has_stability < 0.6
 			has_war_support < 0.6
@@ -36,17 +39,24 @@ country_event = {
 	mean_time_to_happen = { 
 		days = 260
 		modifier = {
-			factor = 0.8
-			OR = { #trench warfare
-				AND = {
-					original_tag = FRA
-					has_war_with = GER
-				}
-				AND = {
-					original_tag = GER
-					has_war_with = FRA
-				}
-			}
+			factor = 2.0
+			has_idea = disarmed_nation
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = volunteer_only
+		}
+		modifier = {
+			factor = 2.5
+			has_idea = undisturbed_isolation
+		}
+		modifier = {
+			factor = 2.0
+			has_idea = isolation
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = civilian_economy
 		}
 		modifier = {
 			factor = 0.75
@@ -62,6 +72,12 @@ country_event = {
 				has_war_support < 0.2
 			}
 		}
+		modifier = {
+			factor = 1.25
+			OR = { #ruling ideology is low
+				ROOT < 0.6
+			}
+		}
 	}
 
 	immediate = { 
@@ -73,9 +89,15 @@ country_event = {
 				}
 				modifier = {
 					factor = 0
+					has_idea = disarmed_nation
 				}
 				modifier = {
 					factor = 0
+					has_idea = volunteer_only
+				}
+				modifier = {
+					factor = 0.1
+					has_war_support > 0.5
 				}
 				modifier = {
 					factor = 0.1
@@ -132,7 +154,18 @@ country_event = {
 	title = stability.21.t	
 	desc = {
 		text = stability.21.desc.a
-	} 
+		trigger = { 		 
+			has_idea = draft_dodging 
+		}	
+	} 	
+	desc = {
+		text = stability.21.desc.b
+		trigger = { has_idea = draft_dodging_2 }
+	}
+	desc = {
+		text = stability.21.desc.c
+		trigger = { has_idea = draft_dodging_3 }
+	}
 
 	picture = GFX_report_event_desertion_poster					
 		
@@ -160,6 +193,14 @@ country_event = {
 	}
 	
 	option = { #military crackdown level 1
+		trigger = { 
+			NOT = {
+				OR = {
+					has_idea = draft_dodging_2
+					has_idea = draft_dodging_3
+				}
+			}
+		}
 		ai_chance = {
 			base = 50
 			modifier = {
@@ -206,6 +247,8 @@ country_event = {
 		trigger = { 
 			NOT = {
 				OR = {
+					has_idea = draft_dodging_2
+					has_idea = draft_dodging_3
 				}
 			}
 		}
@@ -234,6 +277,7 @@ country_event = {
 
 	option = { #military crackdown level 2
 		trigger = { 
+			has_idea = draft_dodging_2
 		}
 		name = stability.21.f
 		ai_chance = {
@@ -273,6 +317,7 @@ country_event = {
 
 	option = { #improve living standards lvl 2
 		trigger = { 
+			has_idea = draft_dodging_2
 		}
 		name = stability.21.g
 		ai_chance = {
@@ -298,6 +343,7 @@ country_event = {
 
 	option = { #military crackdown level 3
 		trigger = { 
+			has_idea = draft_dodging_3
 		}
 		name = stability.21.h
 		ai_chance = {
@@ -338,6 +384,7 @@ country_event = {
 
 	option = { #improve living standards lvl 3
 		trigger = { 
+			has_idea = draft_dodging_3
 		}
 		name = stability.21.i
 		ai_chance = {
@@ -369,13 +416,16 @@ country_event = {
 	desc = {
 		text = stability.22.desc.a
 		trigger = { 		 
+			has_idea = strikes_1
 		}	
 	} 	
 	desc = {
 		text = stability.22.desc.b
+		trigger = { has_idea = strikes_2 }
 	}
 	desc = {
 		text = stability.22.desc.c
+		trigger = { has_idea = strikes_3 }
 	}	#
 	picture = GFX_report_event_worker_protests					# 
 		
@@ -399,6 +449,7 @@ country_event = {
 	}
 	option = { 
 		trigger = {
+			has_idea = strikes_1
 		}
 		name = stability.22.b #violence - level 1
 		ai_chance = {
@@ -423,6 +474,7 @@ country_event = {
 	option = { 
 		name = stability.22.c #negotiations - level 1
 		trigger = {
+			has_idea = strikes_1
 		}
 		custom_effect_tooltip = 45_days_tt
 		set_country_flag = crisis_solution_in_progress
@@ -447,6 +499,7 @@ country_event = {
 	}
 	option = { 
 		trigger = {
+			has_idea = strikes_2
 		}
 		name = stability.22.d #violence - level 2
 		ai_chance = {
@@ -470,6 +523,7 @@ country_event = {
 	}
 	option = { 
 		trigger = {
+			has_idea = strikes_2
 		}
 		name = stability.22.e #negotiations - level 2
 		custom_effect_tooltip = 45_days_tt
@@ -494,6 +548,7 @@ country_event = {
 	}
 	option = { 
 		trigger = {
+			has_idea = strikes_3
 		}
 		name = stability.22.f #violence - level 3
 		ai_chance = {
@@ -517,6 +572,7 @@ country_event = {
 	}
 	option = { 
 		trigger = {
+			has_idea = strikes_3
 		}
 		name = stability.22.g #negotiations - level 3
 		ai_chance = {
@@ -548,13 +604,16 @@ country_event = {
 	desc = {
 		text = stability.23.desc.a
 		trigger = { 		 
+			has_idea = mutiny_1
 		}	
 	} 	
 	desc = {
 		text = stability.23.desc.b
+		trigger = { has_idea = mutiny_2 }
 	}
 	desc = {
 		text = stability.23.desc.c
+		trigger = { has_idea = mutiny_3 }
 	}
 	picture = GFX_report_event_chinese_soldiers_02
 		
@@ -577,6 +636,7 @@ country_event = {
 	}
 	option = { 
 		trigger = {
+			has_idea = mutiny_1
 		}
 		name = stability.23.b #violence - level 1
 		ai_chance = {
@@ -601,6 +661,7 @@ country_event = {
 	option = { 
 		name = stability.23.c #negotiations - level 1
 		trigger = {
+			has_idea = mutiny_1
 		}
 		custom_effect_tooltip = 45_days_tt
 		ai_chance = {
@@ -624,6 +685,7 @@ country_event = {
 	}
 	option = { 
 		trigger = {
+			has_idea = mutiny_2
 		}
 		name = stability.23.d #violence - level 2
 		ai_chance = {
@@ -647,6 +709,7 @@ country_event = {
 	}
 	option = { 
 		trigger = {
+			has_idea = mutiny_2
 		}
 		name = stability.23.e #negotiations - level 2
 		custom_effect_tooltip = 45_days_tt
@@ -671,6 +734,7 @@ country_event = {
 	}
 	option = { 
 		trigger = {
+			has_idea = mutiny_3
 		}
 		name = stability.23.f #violence - level 3
 		ai_chance = {
@@ -694,6 +758,7 @@ country_event = {
 	}
 	option = { 
 		trigger = {
+			has_idea = mutiny_3
 		}
 		name = stability.23.g #negotiations - level 3
 		ai_chance = {
