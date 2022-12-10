@@ -394,6 +394,6 @@ adjacency_rule = {
 		tooltip = singapore_strait_blocked_tt
 	}
 	
-	icon = 9833
+	icon = 12299
 	offset = { -2 0 -9 }
 }
