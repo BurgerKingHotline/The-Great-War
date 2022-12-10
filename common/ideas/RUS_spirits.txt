@@ -1,5 +1,25 @@
 ideas = {
 	country = {
+		RUS_strike = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.15
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+			}
+		}
 		RUS_inefficient_high_command = {
 			picture = generic_production_bonus
 			allowed = {

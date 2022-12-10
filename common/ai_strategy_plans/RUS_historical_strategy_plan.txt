@@ -76,9 +76,10 @@ RUS_historical_plan = {
 		RUS_democratic_reforms
 		RUS_maintain_the_status_quo
 		RUS_support_the_military
-		RUS_jumpstart_military_production
+		RUS_invest_in_persia
 		RUS_formulate_the_stavka
 		RUS_promise_independence_after_the_war
+		RUS_jumpstart_military_production
 
 		#1915
 		RUS_air_innovations
@@ -86,6 +87,7 @@ RUS_historical_plan = {
 		RUS_regain_our_footing
 		RUS_russification_policy
 		RUS_quality_production
+		RUS_occupation_of_persia
 		RUS_one_giant_factory
 		RUS_take_full_control_of_the_army
 

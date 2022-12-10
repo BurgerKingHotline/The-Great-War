@@ -246,4 +246,13 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 10382;12343;impassable;-1;-1;-1;-1;-1;;indonesia
 10382;1533;impassable;-1;-1;-1;-1;-1;;indonesia
 7368;1533;impassable;-1;-1;-1;-1;-1;;indonesia
+6763;1450;impassable;-1;-1;-1;-1;-1;;caucases
+6763;3711;impassable;-1;-1;-1;-1;-1;;caucases
+6763;7554;impassable;-1;-1;-1;-1;-1;;caucases
+6436;7554;impassable;-1;-1;-1;-1;-1;;caucases
+6436;1455;impassable;-1;-1;-1;-1;-1;;caucases
+9632;1530;impassable;-1;-1;-1;-1;-1;;caucases
+9632;9626;impassable;-1;-1;-1;-1;-1;;caucases
+9632;654;impassable;-1;-1;-1;-1;-1;;caucases
+6674;654;impassable;-1;-1;-1;-1;-1;;caucases
 -1;-1;;-1;-1;-1;-1;-1;-1

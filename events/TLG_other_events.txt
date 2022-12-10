@@ -289,6 +289,7 @@ country_event = { #franz ferdinand died,
 	immediate = {
 		add_stability = -0.1
 		set_global_flag = Franz_ferdinand_shot
+		news_event = TLG_newsevents.6
 	}
 
 	option = {#ruhroh serbia, you did something!
