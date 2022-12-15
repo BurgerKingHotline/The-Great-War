@@ -1,5 +1,5 @@
 keep_faction_with_fra = {
-	allowed = { original_tag = FRA }
+	allowed = { original_tag = RUS }
 
 	enable = {
 		country_exists = GER
@@ -97,5 +97,49 @@ defend_serbia_against_austria = {
 		type = alliance
 		id = "POL"
 		value = 200
+	}
+}
+
+RUS_get_equipment_1 = {
+	allowed = { original_tag = RUS }
+	enable = {
+		stockpile_ratio = {
+			archetype = infantry_equipment
+			ratio < 0.25
+		}
+	}
+	abort = {
+		stockpile_ratio = {
+			archetype = infantry_equipment
+			ratio > 0.25
+		}
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry_equipment
+		value = 30
+	}
+}
+
+RUS_get_equipment_2 = {
+	allowed = { original_tag = RUS }
+	enable = {
+		stockpile_ratio = {
+			archetype = infantry_equipment
+			ratio < 0
+		}
+	}
+	abort = {
+		stockpile_ratio = {
+			archetype = infantry_equipment
+			ratio > 0
+		}
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry_equipment
+		value = 20
 	}
 }

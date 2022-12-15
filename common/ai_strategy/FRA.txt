@@ -37,3 +37,19 @@ keep_faction_with_rus = {
 		value = 200
 	}
 }
+
+dont_defend_russia_fra = {
+	allowed = { original_tag = FRA }
+
+	enable = {
+		is_in_faction_with = RUS
+	}
+	abort = {
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = RUS
+		value = 10
+	}
+}
