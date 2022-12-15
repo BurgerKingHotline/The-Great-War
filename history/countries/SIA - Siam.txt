@@ -9,7 +9,43 @@ if = {
 	}
 }
 
+ENG = {
+	diplomatic_relation = {
+		country = SIA
+		relation = military_access
+		active = yes
+	}
+}
+RAJ = {
+	diplomatic_relation = {
+		country = SIA
+		relation = military_access
+		active = yes
+	}
+}
+FRA = {
+	diplomatic_relation = {
+		country = SIA
+		relation = military_access
+		active = yes
+	}
+}
 
+add_ai_strategy = {
+    type = befriend
+    id = ENG
+    value = 100
+}
+add_ai_strategy = {
+    type = befriend
+    id = FRA
+    value = 100
+}
+add_ai_strategy = {
+    type = befriend
+    id = RAJ
+    value = 100
+}
 
 # Starting tech
 set_technology = {

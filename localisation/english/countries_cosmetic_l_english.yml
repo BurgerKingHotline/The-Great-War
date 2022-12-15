@@ -19,6 +19,7 @@
 
  #French colonies
  CAR_FRA_subject:0 "French Equatorial Africa"
+ MRT_FRA_subject:0 "French West Africa"
  CAY_FRA_subject:0 "French Guiana"
  VIN_FRA_subject:0 "Indochinese Union"
  MOR_FRA_subject:0 "French protectorate in Morocco"

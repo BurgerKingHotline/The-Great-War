@@ -38,7 +38,41 @@ if = {
 	}
 }
 
+ENG = {
+	diplomatic_relation = {
+		country = AFG
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = AFG
+		relation = guarantee
+		active = yes
+	}
+}
+RAJ = {
+	diplomatic_relation = {
+		country = AFG
+		relation = military_access
+		active = yes
+	}
+	diplomatic_relation = {
+		country = AFG
+		relation = guarantee
+		active = yes
+	}
+}
 
+add_ai_strategy = {
+    type = befriend
+    id = ENG
+    value = 100
+}
+add_ai_strategy = {
+    type = befriend
+    id = RAJ
+    value = 100
+}
 
 1939.1.1 = {
 

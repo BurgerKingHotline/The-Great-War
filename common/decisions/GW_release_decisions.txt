@@ -863,6 +863,10 @@ puppet_state_creation_category = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				original_tag = RUS
+			}
 		}
 
 		available = {
@@ -1927,6 +1931,10 @@ puppet_state_creation_category = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				original_tag = RUS
+			}
 		}
 
 		available = {
@@ -1966,6 +1974,14 @@ puppet_state_creation_category = {
 					}
 					if = {
 						limit = {
+							ROOT = { owns_state = 972 }
+							972 = { NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
+						}
+						add_state_core = 972
+						transfer_state = 972
+					}
+					if = {
+						limit = {
 							ROOT = { owns_state = 72 }
 							72 = {  NOT = { OR = { is_claimed_by = OWNER is_core_of = OWNER } } }
 						}
@@ -1997,6 +2013,10 @@ puppet_state_creation_category = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				original_tag = RUS
+			}
 		}
 
 		available = {
