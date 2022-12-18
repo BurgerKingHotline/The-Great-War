@@ -2,6 +2,14 @@ state={
 	id=545
 	
 	state_category = pastoral
+
+	resources = {
+		chromium = 32
+		tungsten = 8
+		oil = 5
+		steel = 6
+		aluminium = 7
+	}
 	
 	name="STATE_545"
 

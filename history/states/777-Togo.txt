@@ -2,6 +2,11 @@ state={
 	id=777
 	name="STATE_777"
 
+	resources = {
+		rubber = 6
+		steel = 3
+	}
+
 	history={
 		owner = GER
 		add_core_of = TOG

@@ -3,8 +3,11 @@ state={
 	name="STATE_548"
 
 	state_category = rural
-	resources={
-		rubber=7 # was: 4
+	resources = {
+		rubber = 6
+		chromium = 6
+		tungsten = 8
+		steel = 12
 	}
 	history={
 		owner = ENG
