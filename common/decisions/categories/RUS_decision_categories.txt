@@ -51,7 +51,6 @@ SOV_form_ssrs = {
 	}
 	visible = {
 		has_government = Communism
-		always = no
 		#has_completed_focus = RUS_crusade_against_communism
 	}
 }

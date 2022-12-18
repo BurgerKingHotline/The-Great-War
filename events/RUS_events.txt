@@ -60,6 +60,10 @@ country_event = { #stability selector event
 	mean_time_to_happen = { 
 		days = 100
 		modifier = {
+			factor = 0.25
+			is_debug = yes
+		}
+		modifier = {
 			factor = 1.5
 			has_idea = disarmed_nation
 		}
@@ -73,19 +77,31 @@ country_event = { #stability selector event
 		}
 		modifier = {
 			factor = 1.25
-			neutrality > 0.5
-		}
-		modifier = {
-			factor = 1.25
-			has_war = no
-		}
-		modifier = {
-			factor = 0.9
-			surrender_progress > 0.1
+			neutrality > 0.7
 		}
 		modifier = {
 			factor = 0.85
+			neutrality > 0.5
+		}
+		modifier = {
+			factor = 0.9
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.8
+			surrender_progress > 0.1
+		}
+		modifier = {
+			factor = 0.8
 			check_variable = { RUS_socialist_radicalisation > 35 }
+		}
+		modifier = {
+			factor = 0.8
+			check_variable = { RUS_socialist_radicalisation > 55 }
+		}
+		modifier = {
+			factor = 0.8
+			check_variable = { RUS_socialist_radicalisation > 70 }
 		}
 		modifier = {
 			factor = 0.85
@@ -143,6 +159,32 @@ country_event = { #stability selector event
 			}
 			1 = {
 				country_event = rus_stability.10
+			}
+			1 = {
+				country_event = rus_stability.11
+			}
+			1 = {
+				country_event = rus_stability.12
+			}
+			1 = {
+				country_event = rus_stability.13
+			}
+			1 = {
+				country_event = rus_stability.14
+				modifier = {
+					factor = 0 
+					has_war = no
+				}
+			}
+			1 = {
+				country_event = rus_stability.15
+			}
+			1 = {
+				country_event = rus_stability.16
+				modifier = {
+					factor = 0 
+					has_war = no
+				}
 			}
 		}
 	}
@@ -233,9 +275,6 @@ country_event = { #a minor noble erupts a scandal
 	desc = rus_stability.5.desc	
 
 	is_triggered_only = yes
-
-	immediate = {
-	}
 	
 	option = { #do nothing
 		name = rus_stability.5.a
@@ -389,6 +428,149 @@ country_event = { #larger strike
 		}
 	}
 }
+country_event = { #national unrest
+	id = rus_stability.11
+	title = rus_stability.11.t	
+	desc = rus_stability.11.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #geat
+		name = rus_stability.11.a
+		add_stability = -0.05
+		add_war_support = -0.05
+		every_controlled_state = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+			add_resistance = 25
+		}
+	}
+}
+country_event = { #great harvest
+	id = rus_stability.12
+	title = rus_stability.12.t	
+	desc = rus_stability.12.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #great!
+		name = rus_stability.12.a
+		add_stability = 0.05
+		if = {
+			limit = {
+				NOT = {
+					has_idea = RUS_great_harvest
+				}
+			}
+			add_timed_idea = {
+				idea = RUS_great_harvest
+				days = 180
+			}
+		}
+		else = {
+			modify_timed_idea = {
+				idea = RUS_great_harvest
+				days = 120
+			}
+		}
+	}
+}
+country_event = { #clamour for education reform
+	id = rus_stability.13
+	title = rus_stability.13.t	
+	desc = rus_stability.13.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #fine
+		name = rus_stability.13.a
+		add_stability = 0.05
+		add_political_power = -100
+	}
+
+	option = { #great!
+		name = rus_stability.13.b
+		if = {
+			limit = {
+				NOT = {
+					has_idea = RUS_horrible_education
+				}
+			}
+			add_timed_idea = {
+				idea = RUS_horrible_education
+				days = 180
+			}
+		}
+		else = {
+			modify_timed_idea = {
+				idea = RUS_horrible_education
+				days = 120
+			}
+		}
+	}
+}
+country_event = { #soldier becomes a hero
+	id = rus_stability.14
+	title = rus_stability.14.t	
+	desc = rus_stability.14.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #graet
+		name = rus_stability.14.a
+		add_war_support = 0.05
+	}
+}
+country_event = { #tsar visits a local area
+	id = rus_stability.15
+	title = rus_stability.15.t	
+	desc = rus_stability.15.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #graet
+		name = rus_stability.15.a
+		add_stability = 0.05
+		add_popularity = {
+			ideology = neutrality 
+			popularity = 0.08
+		}
+	}
+}
+country_event = { #generals criticise the tsar over military operations
+	id = rus_stability.16
+	title = rus_stability.16.t	
+	desc = rus_stability.16.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #aaa
+		name = rus_stability.16.a
+		add_war_support = -0.05
+		army_experience = -50
+	}
+}
 #########################
 #Russian civilwar events#
 #########################
@@ -429,7 +611,7 @@ country_event = {
 							state = 828
 							state = 842
 						}
-						is_owned_and_controlled_by = ROOT
+						is_controlled_by = ROOT
 					}
 				}
 				create_dynamic_country = { 
@@ -437,103 +619,29 @@ country_event = {
 					save_global_event_target_as = transcaucasia_event_target
 					set_state_owner = 229 
 					add_state_core = 229
-					if = {
+					every_state = {
 						limit = {
-							ROOT = {
-								controls_state = 229
+							OWNER = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+							OR = {
+								state = 230
+								state = 229
+								state = 971
+								state = 842
+								state = 970
+								state = 231
+								state = 826
+								state = 828
+								state = 354
+								state = 800
+								state = 819
+								state = 832
 							}
 						}
-						set_state_controller = 229
-					}
-
-					add_state_core = 230
-					if = {
-						limit = {
-							ROOT = {
-								owns_state = 230
-							}
-						}
-						set_state_owner = 230
-					}
-					if = {
-						limit = {
-							ROOT = {
-								controls_state = 230
-							}
-						}
-						set_state_controller = 230
-					}
-
-					add_state_core = 231
-					if = {
-						limit = {
-							ROOT = {
-								owns_state = 231
-							}
-						}
-						set_state_owner = 231
-					}
-					if = {
-						limit = {
-							ROOT = {
-								controls_state = 231
-							}
-						}
-						set_state_controller = 231
-					}
-
-					add_state_core = 826
-					if = {
-						limit = {
-							ROOT = {
-								owns_state = 826
-							}
-						}
-						set_state_owner = 826
-					}
-					if = {
-						limit = {
-							ROOT = {
-								controls_state = 826
-							}
-						}
-						set_state_controller = 826
-					}
-
-					add_state_core = 828
-					if = {
-						limit = {
-							ROOT = {
-								owns_state = 828
-							}
-						}
-						set_state_owner = 828
-					}
-					if = {
-						limit = {
-							ROOT = {
-								controls_state = 828
-							}
-						}
-						set_state_controller = 828
-					}
-
-					add_state_core = 842
-					if = {
-						limit = {
-							ROOT = {
-								owns_state = 842
-							}
-						}
-						set_state_owner = 842
-					}
-					if = {
-						limit = {
-							ROOT = {
-								controls_state = 842
-							}
-						}
-						set_state_controller = 842
+						transfer_state_to = THIS
+						add_core_of = THIS
 					}
 					set_cosmetic_tag = transcaucasia_unified
 				}
@@ -551,7 +659,7 @@ country_event = {
 							autonomous_state = autonomy_integrated_puppet
 						}
 						else = {
-							puppet = ARM
+							puppet = event_target:transcaucasia_event_target
 						}
 					}
 				}
@@ -572,6 +680,25 @@ country_event = {
 					transfer_state = 149
 					transfer_state = 148
 					transfer_state = 147
+				}
+				every_state = {
+					limit = {
+						OWNER = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+						OR = {
+							state = 148
+							state = 147
+							state = 146
+							state = 150
+							state = 111
+							state = 149
+							state = 145
+						}
+					}
+					transfer_state_to = FIN
+					add_core_of = FIN
 				}
 				if = {
 					limit = {
@@ -887,6 +1014,15 @@ country_event = { #finnish civil war
 	is_triggered_only = yes
 
 	fire_only_once = yes
+
+	trigger = {
+		FIN = {
+			is_subject = no
+			NOT = {
+				has_government = commmunism
+			}
+		}
+	}
 
 	immediate = {
 		

@@ -21,7 +21,36 @@
 		x = 30
 		y = 0
 		cost = 35
-		 
+		
+		offset = {
+			x = -26
+			trigger = {
+				has_completed_focus = RUS_accede_to_the_radicals
+			}
+		}
+
+		offset = {
+			x = -5
+			trigger = {
+				has_completed_focus = RUS_the_powers_of_the_tsar
+			}
+		}
+
+		offset = {
+			x = -5
+			trigger = {
+				has_completed_focus = RUS_elections_in_the_duma
+			}
+		}
+
+		offset = {
+			x = -8
+			trigger = {
+				OR = {
+					has_completed_focus = RUS_cement_the_tsars_rule
+				}
+			}
+		}
 
 		available = {
 			NOT = {
@@ -99,13 +128,20 @@
 		}
 
 		offset = {
-			x = 3
+			x = 8
 			trigger = {
 				has_completed_focus = RUS_the_powers_of_the_tsar
 				OR = {
 					has_completed_focus = RUS_elections_in_the_duma
 					has_completed_focus = RUS_cement_the_tsars_rule
 				}
+			}
+		}
+		offset = {
+			x = 2
+			trigger = {
+				has_completed_focus = RUS_the_powers_of_the_tsar
+				has_completed_focus = RUS_elections_in_the_duma
 			}
 		}
 
@@ -178,18 +214,8 @@
 				exists = yes
 			}
 			is_neighbor_of = TAN
+		
 		}
-		offset = {
-			x = 3
-			trigger = {
-				has_completed_focus = RUS_the_powers_of_the_tsar
-				OR = {
-					has_completed_focus = RUS_elections_in_the_duma
-					has_completed_focus = RUS_cement_the_tsars_rule
-				}
-			}
-		}
-
 		completion_reward = {
 			TAN = {
 				country_event = {
@@ -219,13 +245,9 @@
 		}
 
 		offset = {
-			x = -5
+			x = -9
 			trigger = {
 				has_completed_focus = RUS_accede_to_the_radicals
-				OR = {
-					has_completed_focus = RUS_elections_in_the_duma
-					has_completed_focus = RUS_cement_the_tsars_rule
-				}
 			}
 		}
 
@@ -282,10 +304,9 @@
 		}
 		 
 		offset = {
-			x = 6
+			x = 8
 			trigger = {
 				OR = {
-					has_completed_focus = RUS_elections_in_the_duma
 					has_completed_focus = RUS_cement_the_tsars_rule
 				}
 			}
@@ -432,7 +453,7 @@
 
 	focus = {
 		id = RUS_tsarist_national_intervension 
-		icon = GFX_focus_generic_annex_country #TEMP
+		icon = GFX_focus_generic_annex_country
 		prerequisite = { focus = RUS_the_powers_of_the_tsar}
 		x = 0
 		y = 2
@@ -1092,6 +1113,10 @@
 				value = 25
 				tooltip = RUS_socialist_radicalisation_increase
 			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 			add_ideas = {
 				RUS_all_power_to_the_tsar_idea
 			}
@@ -1438,6 +1463,8 @@
 		}
 
 		completion_reward = {
+			add_stability = 0.08
+			add_political_power = 150
 			swap_ruler_traits = {
 				remove = inexperienced_monarch
 				add = dictator
@@ -1474,6 +1501,7 @@
 		cost = 70
 
 		completion_reward = {
+			add_political_power = 50
 			remove_country_leader_trait = inexperienced_monarch
 		}
 	}
@@ -1513,8 +1541,12 @@
 		completion_reward = {
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = -15
+				value = -1
 				tooltip = RUS_socialist_radicalisation_increase
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.02
 			}
 			add_ideas = RUS_increased_autonomy_idea
 			every_other_country = {
@@ -1548,9 +1580,14 @@
 				value = -15
 				tooltip = RUS_socialist_radicalisation_increase
 			}
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.05
+			}
 			add_political_power = 70
 			add_stability = 0.05
 			release_puppet = POL
+			custom_effect_tooltip = RUS_congress_poland
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1559,11 +1596,30 @@
 							is_subject_of = ROOT
 						}
 					}
-					POL = {
-						transfer_state = 965
-						transfer_state = 814
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 965
+								state = 814
+								state = 938
+								state = 98
+								state = 87
+								state = 10
+								state = 90
+								state = 92
+								state = 915
+							}
+						}
+						transfer_state_to = POL
 					}
-					transfer_state = 97
+					if = {
+						limit = {
+							POL = {
+								owns_state = 97
+							}
+						}
+						transfer_state = 97
+					}
 				}
 			}
 			release_puppet = FIN
@@ -1592,7 +1648,12 @@
 				value = -25
 				tooltip = RUS_socialist_radicalisation_increase
 			}
-			add_political_power = 50
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.15
+			}
+			add_political_power = 75
+			add_stability = 0.05
 			set_country_flag = RUS_constitutional_monarchy
 			set_politics = {
 				ruling_party = democratic
@@ -2003,17 +2064,6 @@
 			country_exists = PER
 		}
 
-		offset = {
-			x = 3
-			trigger = {
-				has_completed_focus = RUS_the_powers_of_the_tsar
-				OR = {
-					has_completed_focus = RUS_elections_in_the_duma
-					has_completed_focus = RUS_cement_the_tsars_rule
-				}
-			}
-		}
-
 		completion_reward = {
 			add_political_power = 75
 			add_war_support = 0.05
@@ -2418,11 +2468,16 @@
 	focus = {
 		id = RUS_the_russian_civil_war
 		icon = GFX_focus_spr_crush_the_revolution
-		x = 6
+		x = 5
 		y = 10
 		cost = 35
 
 		allow_branch = {
+			OR = {
+				has_global_flag = Russian_civil_war_flag
+				has_war_with = SOV
+				has_civil_war = yes
+			}
 		}
 
 		available = {
@@ -3234,10 +3289,16 @@
 	focus = {
 		id = RUS_invest_in_industry
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 20
+		x = 15
 		y = 13
 
 		cost = 70
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = RUS_accede_to_the_radicals
+			}
+		}
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -3963,9 +4024,15 @@
 	focus = {
 		id = RUS_fund_aviation_industries
 		icon = GFX_focus_SOV_flying_clubs
-		x = 27
+		x = 22
 		y = 13
 		cost = 21
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = RUS_accede_to_the_radicals
+			}
+		}
 
 		completion_reward = {
 			air_experience = 50
@@ -4196,9 +4263,15 @@
 	focus = {
 		id = RUS_military_reform
 		icon = GFX_focus_generic_military_mission
-		x = 32
+		x = 27
 		y = 13
 		cost = 70
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = RUS_accede_to_the_radicals
+			}
+		}
 
 		completion_reward = {
 			swap_ideas = {

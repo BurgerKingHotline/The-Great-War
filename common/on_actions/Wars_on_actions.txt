@@ -177,10 +177,18 @@ on_actions = {
                     min = 0
                     max = 100
                 }
+            }
+            RUS = {
                 if = {
                     limit = {
                         check_variable = { RUS_socialist_radicalisation > 79 }
-                        check_variable = { party_popularity_100@communism > 59 }
+                        communism > 0.5
+                        has_country_flag = RUS_revolutionaries_active
+                    }
+                    clamp_temp_variable = {
+                        var = RUS_socialist_radicalisation
+                        min = 0
+                        max = 100
                     }
                     if = {
                         limit = {
@@ -192,7 +200,7 @@ on_actions = {
                         RUS_civil_war_start = yes
                     }
                     else = {
-                        country_event = { id = rus_civilwar.1 }
+                        RUS_ferbruary_revolution = yes
                     }
                 }
             }
