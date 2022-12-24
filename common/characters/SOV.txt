@@ -6,12 +6,7 @@ characters={
 				large=GFX_portrait_Mohammed_Zahir_Shah
 			}
 		}
-		country_leader={
-			ideology=leninism
-			traits = { leader_of_the_revolution veteran_communist cornered_fox}
-			expire="1965.1.1.1"
-			id=-1
-		}
+		
 	}
 	SOV_trotsky={
 		name="Leon Trotsky"

@@ -117,7 +117,7 @@ RUS_get_equipment_1 = {
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = infantry_equipment
+		id = infantry_equipment_1
 		value = 30
 	}
 }
@@ -139,7 +139,7 @@ RUS_get_equipment_2 = {
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = infantry_equipment
+		id = infantry_equipment_1
 		value = 20
 	}
 }

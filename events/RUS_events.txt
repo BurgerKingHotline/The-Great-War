@@ -884,6 +884,24 @@ country_event = { #Russian civil war starts
 				type = annex_everything
 			}
 			add_civil_war_target = RUS
+			if = {
+				limit = {
+					has_global_flag = RUS_lenin_in_russia
+					NOT = {
+						has_global_flag = RUS_lenin_is_dead
+					}
+				}
+				add_country_leader_role = {
+					character = SOV_vladimir_lenin
+					promote_leader = yes
+					country_leader={
+						ideology=leninism
+						traits = { leader_of_the_revolution veteran_communist cornered_fox}
+						expire="1965.1.1.1"
+						id=-1
+					}
+				}
+			}
 		}
 		clr_country_flag = RUS_revolutionaries_active
 		add_popularity = {
@@ -1019,7 +1037,7 @@ country_event = { #finnish civil war
 		FIN = {
 			is_subject = no
 			NOT = {
-				has_government = commmunism
+				has_government = communism
 			}
 		}
 	}
@@ -2847,6 +2865,80 @@ country_event = { #rename st petersburg
 		set_province_name = {
 			id = 3151
 			name = RUS_petrograd
+		}
+		195 = {
+			set_state_name = RUS_petrograd
+		}
+	}
+}
+
+add_namespace = sov_events
+
+#SOV EVENTS
+country_event = { #Lenin arrives
+	id = sov_events.1
+	title = sov_events.1.t	
+	desc = sov_events.1.desc
+
+	trigger = {
+		OR = {
+			original_tag = SOV
+			original_tag = RUS
+		}
+		has_global_flag = RUS_lenin_in_russia
+		NOT = {
+			has_global_flag = RUS_lenin_is_dead
+		}
+	}
+
+	fire_only_once = yes
+	
+	option = { #Our great leader arrives!
+		name = sov_events.1.a
+		trigger = {
+			has_government = communism
+		}
+		add_country_leader_role = {
+			character = SOV_vladimir_lenin
+			promote_leader = yes
+			country_leader={
+				ideology=leninism
+				traits = { leader_of_the_revolution veteran_communist cornered_fox}
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+
+	option = { #Oh great, wow
+		name = sov_events.1.b
+		trigger = {
+			NOT = {
+				has_government = communism
+			}
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+		if = {
+			limit = {
+				has_country_flag = RUS_revolutionaries_active
+			}
+			add_to_variable = {
+				var = RUS_socialist_radicalisation
+				value = 10
+				tooltip = RUS_socialist_radicalisation_increase
+			}
+		}
+		add_country_leader_role = {
+			character = SOV_vladimir_lenin
+			country_leader={
+				ideology=leninism
+				traits = { leader_of_the_revolution veteran_communist cornered_fox}
+				expire="1965.1.1.1"
+				id=-1
+			}
 		}
 	}
 }

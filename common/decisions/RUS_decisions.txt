@@ -1,3 +1,50 @@
+war_measures = {
+	RUS_form_the_stavka = {
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = RUS
+		}
+
+		visible = {
+			NOT = {
+				has_idea = RUS_stavka
+			}
+			has_completed_focus = RUS_formulate_the_stavka
+		}
+
+		cost = 25
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_completed_focus = RUS_regain_our_footing
+					has_completed_focus = RUS_war_of_attrition
+				}
+				add_ideas = RUS_stavka_final
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = RUS_regain_our_footing
+				}
+				add_ideas = RUS_stavka_regain
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = RUS_war_of_attrition
+				}
+				add_ideas = RUS_stavka_at
+			}
+			else = {
+				add_ideas = RUS_stavka
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
 russian_socialism_decisions = {
 	RUS_tsarist_propaganda_dec = {
 		icon = generic_civil_support
