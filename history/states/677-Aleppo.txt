@@ -6,13 +6,13 @@ state={
 	history={
 		owner = OTT
 		victory_points = {
-			12473 3 
+			12473 15 
 		}
 		victory_points = {
-			3942 1
+			3942 3
 		}
 		victory_points = {
-			6883 1
+			6883 3
 		}
 		buildings = {
 			infrastructure = 2
