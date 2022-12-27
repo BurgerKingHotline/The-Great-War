@@ -298,7 +298,7 @@ spriteTypes = {
     }
 	
 	SpriteType = { 
-		name = "GFX_JAP_storm_on_the_horizon" 
+		name = "GFX_JAP_storm_on_the_horizon_shine" 
 		texturefile = "gfx/interface/goals/JAP_storm_on_the_horizon.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -331,7 +331,7 @@ spriteTypes = {
     }
 
 	SpriteType = { 
-		name = "GFX_JAP_partnership_with_krupp" 
+		name = "GFX_JAP_partnership_with_krupp_shine" 
 		texturefile = "gfx/interface/goals/JAP_partnership_with_krupp.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -364,7 +364,7 @@ spriteTypes = {
     }
 
 	SpriteType = { 
-		name = "GFX_JAP_falling_tiger" 
+		name = "GFX_JAP_falling_tiger_shine" 
 		texturefile = "gfx/interface/goals/JAP_falling_tiger.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -397,7 +397,7 @@ spriteTypes = {
     }
 
 	SpriteType = { 
-		name = "GFX_RUS_integrate_slavs" 
+		name = "GFX_RUS_integrate_slavs_shine" 
 		texturefile = "gfx/interface/goals/RUS_integrate_slavs.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -430,7 +430,7 @@ spriteTypes = {
     }
 
 	SpriteType = { 
-		name = "GFX_generic_army_deal" 
+		name = "GFX_generic_army_deal_shine" 
 		texturefile = "gfx/interface/goals/GEN_army_deal.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -463,7 +463,7 @@ spriteTypes = {
     }
 
 	SpriteType = { 
-		name = "GFX_GER_naval_dominance" 
+		name = "GFX_GER_naval_dominance_shine" 
 		texturefile = "gfx/interface/goals/GER_naval_dominance.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -496,7 +496,7 @@ spriteTypes = {
     }
 
 	SpriteType = { 
-		name = "GFX_RUS_seize_tuva" 
+		name = "GFX_RUS_seize_tuva_shine" 
 		texturefile = "gfx/interface/goals/RUS_seize_tuva.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -529,7 +529,7 @@ spriteTypes = {
     }
 
 	SpriteType = { 
-		name = "GFX_RUS_third_rome" 
+		name = "GFX_RUS_third_rome_shine" 
 		texturefile = "gfx/interface/goals/RUS_third_rome.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -562,7 +562,7 @@ spriteTypes = {
     }
 
 	SpriteType = { 
-		name = "GFX_RUS_league_of_emperors" 
+		name = "GFX_RUS_league_of_emperors_shine" 
 		texturefile = "gfx/interface/goals/RUS_league_of_emperors.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -595,7 +595,7 @@ spriteTypes = {
     }
 
 	SpriteType = { 
-		name = "GFX_RUS_pan_russia" 
+		name = "GFX_RUS_pan_russia_shine" 
 		texturefile = "gfx/interface/goals/RUS_pan_russia.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -628,7 +628,7 @@ spriteTypes = {
     }
 
 	SpriteType = { 
-		name = "GFX_RUS_realize_greater_russia" 
+		name = "GFX_RUS_realize_greater_russia_shine" 
 		texturefile = "gfx/interface/goals/RUS_realize_greater_russia.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -661,7 +661,7 @@ spriteTypes = {
     }
 	
 	SpriteType = { 
-		name = "GFX_RUS_reclaim_sakhalin_russia" 
+		name = "GFX_RUS_reclaim_sakhalin_russia_shine" 
 		texturefile = "gfx/interface/goals/RUS_reclaim_sakhalin.dds"   
 		effectFile = "gfx/FX/buttonstate.lua"		
 		legacy_lazy_load = no
@@ -681,6 +681,138 @@ spriteTypes = {
     
 		animation = { 
 			animationmaskfile = "gfx/interface/goals/RUS_reclaim_sakhalin.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_RUS_force_the_workers_shine" 
+		texturefile = "gfx/interface/goals/RUS_force_workers.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_force_workers.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_force_workers.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+	
+	SpriteType = { 
+		name = "GFX_RUS_hit_the_workers_lol_shine" 
+		texturefile = "gfx/interface/goals/RUS_hit_the_workers_lol.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_hit_the_workers_lol.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_hit_the_workers_lol.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_RUS_protect_workers_shine" 
+		texturefile = "gfx/interface/goals/RUS_protect_workers.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_protect_workers.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_protect_workers.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = 90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add"
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    }
+
+	SpriteType = { 
+		name = "GFX_RUS_social_security_shine" 
+		texturefile = "gfx/interface/goals/RUS_social_security.dds"   
+		effectFile = "gfx/FX/buttonstate.lua"		
+		legacy_lazy_load = no
+		
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_social_security.dds"    
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
+			animationrotation = -90.0 
+			animationlooping = no	
+			animationtime = 0.75 
+			animationdelay = 0	
+			animationblendmode = "add" 
+			animationtype = "scrolling" 
+			animationrotationoffset = { x = 0.0 y = 0.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+    
+		animation = { 
+			animationmaskfile = "gfx/interface/goals/RUS_social_security.dds"    
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"   
 			animationrotation = 90.0 
 			animationlooping = no	

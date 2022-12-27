@@ -104,4 +104,24 @@ spriteTypes = {
 		name = "GFX_RUS_reclaim_sakhalin"
 		texturefile = "gfx/interface/goals/RUS_reclaim_sakhalin.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_RUS_force_the_workers"
+		texturefile = "gfx/interface/goals/RUS_force_workers.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_hit_the_workers_lol"
+		texturefile = "gfx/interface/goals/RUS_hit_the_workers_lol.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_protect_workers"
+		texturefile = "gfx/interface/goals/RUS_protect_workers.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_RUS_social_security"
+		texturefile = "gfx/interface/goals/RUS_social_security.dds"
+	}
 }

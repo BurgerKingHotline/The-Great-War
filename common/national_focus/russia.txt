@@ -3746,7 +3746,7 @@
 
 	focus = {
 		id = RUS_force_the_workers
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_RUS_force_the_workers
 		prerequisite = { focus = RUS_support_the_military}
 		mutually_exclusive = { focus = RUS_increased_social_security }
 		x = -3
@@ -3761,7 +3761,7 @@
 
 	focus = {
 		id = RUS_limit_worker_protections
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_RUS_hit_the_workers_lol
 		prerequisite = { focus = RUS_force_the_workers focus = RUS_increased_social_security}
 		mutually_exclusive = { focus = RUS_strengthen_worker_protections }
 		x = 0
@@ -3776,7 +3776,7 @@
 
 	focus = {
 		id = RUS_increased_social_security
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_RUS_social_security
 		prerequisite = { focus = RUS_support_the_military }
 		mutually_exclusive = { focus = RUS_force_the_workers }
 		x = -1
@@ -3791,7 +3791,7 @@
 
 	focus = {
 		id = RUS_strengthen_worker_protections
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_RUS_protect_workers
 		prerequisite = { focus = RUS_force_the_workers focus = RUS_increased_social_security}
 		mutually_exclusive = { focus = RUS_limit_worker_protections }
 		x = 0
@@ -4314,10 +4314,7 @@
 		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = RUS_inefficient_high_command1
-				add_idea = RUS_stavka
-			}
+			add_ideas = RUS_stavka
 		}
 		ai_will_do = {
 			factor = 10
