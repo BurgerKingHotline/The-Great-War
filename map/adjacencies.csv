@@ -182,20 +182,21 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 12299;4424;sea;5960;-1;-1;-1;-1;;Singapore-Malay-two
 10313;12113;sea;5539;-1;-1;-1;-1;;Malay-Batam
 13247;10000;sea;2757;-1;-1;-1;-1;;Kiautschou
-1362;4397;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-10326;4397;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-10326;12297;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-4260;12297;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-4260;7280;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-10195;7280;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-10195;1302;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-10238;1302;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-4554;7229;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-4554;1248;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-1577;1248;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-1577;4363;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-4596;4363;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
-4596;1400;impassable;-1;-1;-1;-1;-1;;vietnamese stuff
+1362;9988;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+1362;4397;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+10326;4397;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+10326;12297;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+4260;12297;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+4260;7280;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+10195;7280;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+10195;1302;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+10238;1302;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+4554;7229;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+4554;1248;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+1577;1248;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+1577;4363;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+4596;4363;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
+4596;1400;impassable;-1;-1;-1;-1;-1;;Vietnamese Mountains
 6675;3660;impassable;-1;-1;-1;-1;-1;;alps
 11587;3660;impassable;-1;-1;-1;-1;-1;;alps
 11587;3662;impassable;-1;-1;-1;-1;-1;;alps
@@ -234,25 +235,47 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 10990;10396;impassable;-1;-1;-1;-1;-1;;papua
 10990;12371;impassable;-1;-1;-1;-1;-1;;papua
 10990;10423;impassable;-1;-1;-1;-1;-1;;papua
-10354;7327;impassable;-1;-1;-1;-1;-1;;indonesia
-1274;12209;impassable;-1;-1;-1;-1;-1;;indonesia
-1274;7308;impassable;-1;-1;-1;-1;-1;;indonesia
-10150;7308;impassable;-1;-1;-1;-1;-1;;indonesia
-10150;12138;impassable;-1;-1;-1;-1;-1;;indonesia
-10294;12138;impassable;-1;-1;-1;-1;-1;;indonesia
-10294;7440;impassable;-1;-1;-1;-1;-1;;indonesia
-12181;10354;impassable;-1;-1;-1;-1;-1;;indonesia
-12343;10354;impassable;-1;-1;-1;-1;-1;;indonesia
-10382;12343;impassable;-1;-1;-1;-1;-1;;indonesia
-10382;1533;impassable;-1;-1;-1;-1;-1;;indonesia
-7368;1533;impassable;-1;-1;-1;-1;-1;;indonesia
+7673;10522;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+12302;10522;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+12302;4446;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+7327;4446;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+7327;1460;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+7327;10354;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+12181;10354;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+12343;10354;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+12343;10382;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+10294;7440;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+10294;12138;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+10150;12138;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+10150;7308;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+1274;7308;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+1274;12209;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+1313;12209;impassable;-1;-1;-1;-1;-1;;Sumatran Mountains
+11645;1450;impassable;-1;-1;-1;-1;-1;;caucases
 6763;1450;impassable;-1;-1;-1;-1;-1;;caucases
 6763;3711;impassable;-1;-1;-1;-1;-1;;caucases
 6763;7554;impassable;-1;-1;-1;-1;-1;;caucases
 6436;7554;impassable;-1;-1;-1;-1;-1;;caucases
 6436;1455;impassable;-1;-1;-1;-1;-1;;caucases
 9632;1530;impassable;-1;-1;-1;-1;-1;;caucases
+11609;1530;impassable;-1;-1;-1;-1;-1;;caucases
 9632;9626;impassable;-1;-1;-1;-1;-1;;caucases
 9632;654;impassable;-1;-1;-1;-1;-1;;caucases
 6674;654;impassable;-1;-1;-1;-1;-1;;caucases
+1333;1014;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+4059;1014;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+4019;1014;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+4019;4147;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+7190;4147;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+7190;10033;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+7163;10033;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+7163;11966;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+7534;11966;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+7534;3999;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+12319;1522;impassable;-1;-1;-1;-1;-1;;North Vietnam Mountains
+12319;1114;impassable;-1;-1;-1;-1;-1;;North Vietnam Mountains
+12392;1522;impassable;-1;-1;-1;-1;-1;;North Vietnam Mountains
+12392;10776;impassable;-1;-1;-1;-1;-1;;North Vietnam Mountains
+12433;10776;impassable;-1;-1;-1;-1;-1;;North Vietnam Mountains
+4568;10776;impassable;-1;-1;-1;-1;-1;;North Vietnam Mountains
 -1;-1;;-1;-1;-1;-1;-1;-1
