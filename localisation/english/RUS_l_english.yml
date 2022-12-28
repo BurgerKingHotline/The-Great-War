@@ -236,7 +236,7 @@
  SOV_disorganised_party:0 "Disorganised Party"
  SOV_the_revolution:0 "The Revolution"
 
- RUS_invest_in_research_teams_consumer_goods_idea
+ RUS_invest_in_research_teams_consumer_goods_idea:0 "Invest In Resarch Teams"
  
  #events
  rus_events.1.t:0 "Germans Meet us in Potsdam"

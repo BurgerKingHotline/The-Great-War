@@ -4453,7 +4453,7 @@
 4452;49;12;23;land;false;forest;2
 4453;49;12;78;land;false;plains;4
 4454;49;12;128;land;false;mountain;6
-4455;49;12;236;land;false;plains;6
+4455;49;12;236;land;false;mountain;1
 4456;49;14;244;sea;false;ocean;0
 4457;49;15;43;land;true;plains;3
 4458;49;15;88;land;false;hills;1

@@ -2962,6 +2962,8 @@ country_event = { #poles demand independance
 			is_core_of = POL
 		}
 	}
+
+	fire_only_once = yes
 	
 	option = { #they are subservient to the great russia!
 		name = rus_events.41.a
@@ -3062,8 +3064,10 @@ country_event = { #poles demand independance
 					state = 89
 					if = {
 						limit = {
-							owns_state = 938
-							owns_state = 814
+							ROOT = {
+								owns_state = 938
+								owns_state = 814
+							}
 						}
 						NOT = {
 							state = 97

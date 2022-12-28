@@ -2,6 +2,10 @@
 state={
 	id=972
 	name="STATE_972"
+	resources={
+		oil=2
+		steel=3
+	}
 
 	history={
 		owner = ASH
