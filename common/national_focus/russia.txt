@@ -411,8 +411,6 @@
 				value = 8
 				tooltip = RUS_socialist_radicalisation_increase
 			}
-			custom_effect_tooltip = RUS_replace_duma_with_chained
-			add_to_variable = { gd_drift_defence_factor = 0.05 tooltip = gd_drift_defence_factor_tt }
 			if = {
 				limit = {
 					has_idea = RUS_duma
@@ -1441,7 +1439,7 @@
 			add_ideas = {
 				RUS_russification
 			}
-			custom_effect_tooltip = RUS_russification_decisions_tt
+			unlock_decision_category_tooltip = RUS_russification_decisions
 		}
 	}
 
@@ -1586,7 +1584,6 @@
 			add_political_power = 70
 			add_stability = 0.05
 			release_puppet = POL
-			custom_effect_tooltip = RUS_congress_poland
 			hidden_effect = {
 				if = {
 					limit = {
@@ -3097,8 +3094,9 @@
 		 
 
 		completion_reward = {
-			custom_effect_tooltip = RUS_lenin_will_arrive_from_switzerland
+			country_event = sov_events.1
 			set_global_flag = RUS_lenin_in_russia
+
 		}
 
 		ai_will_do = {
@@ -3213,7 +3211,7 @@
 				popularity = 0.1
 			}
 			add_manpower = -20000
-			custom_effect_tooltip = RUS_trudovik_path_will_be_locked
+			#custom_effect_tooltip = RUS_trudovik_path_will_be_locked
 			SOV = {
 				set_country_flag = SOV_trudoviks_banned_flag
 			}
@@ -3332,7 +3330,7 @@
 			hidden_effect = {
 				remove_ideas = RUS_invest_in_research_teams_consumer_goods_idea
 			}
-			custom_effect_tooltip = RUS_cost_3_cg_while_effect
+			custom_effect_tooltip = RUS_cost_3_cg_while_effect_tt
 			add_research_slot = 1
 		}
 		ai_will_do = {

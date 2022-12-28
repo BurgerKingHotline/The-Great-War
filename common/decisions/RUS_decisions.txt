@@ -174,12 +174,83 @@ RUS_crusade_against_communism_decisions = {
 				tag = ROOT
 			}
 		}
-		cost = 20
+		cost = 50
 		war_with_target_on_complete = yes
-		complete_effect = {
+		days_remove = 25
+		remove_effect = {
 			create_wargoal = {
 				target = FROM
 				type = annex_everything
+			}
+		}
+	}
+	RUS_fund_anti_communists = {
+		targets_dynamic = yes
+		available = {
+			has_equipment = {
+				infantry_equipment > 500
+			}
+		}
+		target_trigger = {
+			has_government = communism
+			NOT = {
+				any_neighbor_country = {
+					tag = ROOT
+				}
+			}
+		}
+		cost = 20
+		days_remove = 25
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = communism
+					popularity = -0.05
+				}
+				country_event = rus_events.38
+			}
+		}
+	}
+	RUS_anti_communist_coup = {
+		targets_dynamic = yes
+		available = {
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+		}
+		target_trigger = {
+			has_government = communism
+			communism < 0.5
+			NOT = {
+				any_neighbor_country = {
+					tag = ROOT
+				}
+				hidden_trigger = {
+					has_country_flag = RUS_has_been_couped
+				}
+			}
+			is_major = no #to not ruin anything
+		}
+		cost = 20
+		days_remove = 100
+		war_with_target_on_remove = yes
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			country_event = rus_events.39
+		}
+		remove_effect = {
+			FROM = {
+				country_event = rus_events.40
+				set_country_flag = RUS_has_been_couped
 			}
 		}
 	}
@@ -763,6 +834,7 @@ RUS_tsarist_intervention_decisions = {
 			political_advisor_cost_factor = -0.15
 			trade_laws_cost_factor = -0.15
 			economy_cost_factor = -0.15
+			political_power_cost = 0.5
 		}
 
 		complete_effect = {

@@ -118,6 +118,7 @@ ideas = {
 			}
 		}
 		RUS_stavka_at = {
+			name = RUS_stavka
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -148,6 +149,7 @@ ideas = {
 			}
 		}
 		RUS_stavka_regain = {
+			name = RUS_stavka
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -173,6 +175,7 @@ ideas = {
 			}
 		}
 		RUS_stavka_final = {
+			name = RUS_stavka
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -733,7 +736,6 @@ ideas = {
 				stability_factor = -0.05
 				drift_defence_factor = -0.05
 				democratic_acceptance = 20
-				stability_weekly = -0.002
 			}
 
 		}
@@ -756,7 +758,6 @@ ideas = {
 				stability_factor = -0.05
 				drift_defence_factor = -0.25
 				democratic_acceptance = 25
-				stability_weekly = -0.002
 			}
 
 		}
@@ -779,7 +780,6 @@ ideas = {
 				drift_defence_factor = -0.3
 				war_support_factor = -0.05
 				democratic_acceptance = 30
-				stability_weekly = -0.002
 			}
 		}
 
@@ -799,7 +799,6 @@ ideas = {
 			modifier = {# 0.05 stability, 0.05 drift defence, -20 democratic acceptance, 0.05 war support
 				political_power_factor = 0.1
 				war_support_factor = 0.05
-				stability_weekly = -0.002
 			}
 
 		}
@@ -820,7 +819,6 @@ ideas = {
 			modifier = {#0.05 stability, 0.05 drift defence, -5 democratic acceptance
 				political_power_factor = 0.1
 				democratic_acceptance = 15
-				stability_weekly = -0.002
 			}
 
 		}
@@ -842,7 +840,6 @@ ideas = {
 				political_power_factor = 0.2
 				drift_defence_factor = -0.20
 				democratic_acceptance = 20
-				stability_weekly = -0.002
 			}
 
 		}
@@ -865,7 +862,6 @@ ideas = {
 				drift_defence_factor = -0.15
 				stability_factor = 0.05
 				democratic_acceptance = 15
-				stability_weekly = -0.002
 
 			}
 
@@ -890,7 +886,6 @@ ideas = {
 				drift_defence_factor = 0.05
 				democratic_acceptance = -5
 				war_support_factor = 0.05
-				stability_weekly = -0.002
 			}
 
 		}
@@ -912,7 +907,6 @@ ideas = {
 				political_power_factor = 0.3
 				drift_defence_factor = -0.3
 				democratic_acceptance = 30
-				stability_weekly = -0.002
 			}
 
 		}
@@ -936,7 +930,6 @@ ideas = {
 				drift_defence_factor = -0.35
 				war_support_factor = -0.05
 				democratic_acceptance = 35
-				stability_weekly = -0.002
 			}
 		}
 
@@ -958,7 +951,6 @@ ideas = {
 				stability_factor = 0.05
 				drift_defence_factor = -0.25
 				democratic_acceptance = 25
-				stability_weekly = -0.002
 			}
 		}
 
@@ -980,7 +972,6 @@ ideas = {
 				stability_factor = 0.05
 				drift_defence_factor = -0.25
 				democratic_acceptance = 25
-				stability_weekly = -0.002
 			}
 
 		}
@@ -1004,7 +995,6 @@ ideas = {
 				drift_defence_factor = -0.3
 				war_support_factor = -0.05
 				democratic_acceptance = 35
-				stability_weekly = -0.002
 			}
 
 		}
@@ -1028,7 +1018,6 @@ ideas = {
 				drift_defence_factor = -0.3
 				war_support_factor = -0.05
 				democratic_acceptance = 35
-				stability_weekly = -0.002
 			}
 		}
 
@@ -1047,7 +1036,6 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.5
 				neutrality_drift = 0.02
-				stability_weekly = -0.002
 			}
 
 		}
@@ -1064,6 +1052,12 @@ ideas = {
 				always = yes
 			}
 
+			cancel = {
+				NOT = {
+					has_war_with = SOV
+				}
+				has_civil_war = no
+			}
 			removal_cost = -1
 
 			targeted_modifier = {
@@ -1135,7 +1129,7 @@ ideas = {
 
 		}
 
-		RUS_crusade_against_communis_lar = {
+		RUS_crusade_against_communism = {
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -1158,6 +1152,7 @@ ideas = {
 		}
 
 		RUS_crusade_against_communism_no_lar = {
+			name = RUS_crusade_against_communism
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -1632,8 +1627,29 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.05
 				political_power_cost = 0.15
-				custom_modifier_tooltip = RUS_offmap_factories
+				custom_modifier_tooltip = RUS_offmap_factories_tt
 			}
+		}
+
+		RUS_fractured_white_movement = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.1
+				army_morale_factor = -0.15
+				political_power_factor = -0.05
+				max_command_power_mult = -0.5
+			}
+
 		}
 
 
@@ -1657,27 +1673,6 @@ ideas = {
 				consumer_goods_factor = -0.05
 				production_speed_arms_factory_factor = 0.1
 				industrial_capacity_factory = 0.2
-			}
-
-		}
-
-		RUS_fractured_white_movement = {
-			picture = generic_production_bonus
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_org_factor = -0.1
-				army_morale_factor = -0.15
-				political_power_factor = -0.05
-				max_command_power_mult = -0.5
 			}
 
 		}
