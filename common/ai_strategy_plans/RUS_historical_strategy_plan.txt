@@ -68,7 +68,6 @@ RUS_historical_plan = {
 		RUS_influence_persian_politics
 		RUS_invest_in_infrastructure
 		RUS_mend_the_railways
-		RUS_help_build_german_rails
 		RUS_safeguard_the_orthodoxy
 		RUS_tsarist_meddling_in_the_duma
 

@@ -582,11 +582,6 @@
 			add_ideas = {
 				RUS_crusade_against_communism
 			}
-			unlock_decision_category_tooltip = RUS_crusade_against_communism_decisions
-			add_named_threat = { 
-				threat = 5 
-				name = RUS_crusade_against_communism
-			}
 		}
 	}
 
