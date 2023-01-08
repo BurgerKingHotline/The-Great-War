@@ -31,19 +31,6 @@ RUS_tsarist_intervention_decisions = {
 	}
 }
 
-RUS_crusade_against_communism_decisions = {
-	visible_when_empty = yes
-	allowed = {
-		tag = RUS
-	}
-	visible = {
-		NOT = {
-			has_government = Communism
-		}
-		has_completed_focus = RUS_crusade_against_communism
-	}
-}
-
 SOV_form_ssrs = {
 	visible_when_empty = no
 	allowed = {

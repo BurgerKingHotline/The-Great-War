@@ -1024,7 +1024,7 @@
 			}
 			add_popularity = {
 				ideology = communism
-				popularity = 0.05
+				popularity = 0.15
 			}
 			every_owned_state = {
 				limit = {
@@ -1429,7 +1429,7 @@
 		completion_reward = {
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = 10
+				value = 5
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 			add_popularity = {
@@ -1902,10 +1902,26 @@
 		relative_position_id = RUS_strengthen_the_entente
 		prerequisite = { focus = RUS_strengthen_the_entente focus = RUS_continued_dialogue_with_the_germans}
 		cost = 35
-		 
+		
+		bypass = {
+			has_idea = RUS_joint_training
+		}
 
 		available = {
 			NOT = { has_government = communism }
+			if = {
+				limit = {
+					has_completed_focus = RUS_continued_dialogue_with_the_germans
+				}
+				NOT = {
+					has_war_with = GER
+				}
+			}
+			else = {
+				NOT = {
+					has_war_with = FRA
+				}
+			}
 		}
 
 		completion_reward = {
@@ -2116,39 +2132,12 @@
 	}
 
 	focus = {
-		id = RUS_help_build_german_rails
-		icon = GFX_generic_build_railways
-		x = -1
-		y = 1
-		relative_position_id = RUS_influence_persian_politics
-		prerequisite = { focus = RUS_influence_persian_politics } 
-		mutually_exclusive = { focus = RUS_direct_intervention_in_persia }
-		cost = 35
-
-		available = {
-			has_global_flag = RUS_german_railroads_flag
-			has_country_flag = RUS_ger_agree_potsdam
-			NOT = {
-				has_war_with = GER
-			}
-		}
-
-		completion_reward = {
-			
-		}
-
-		ai_will_do = {
-			factor = 5
-		}
-	}
-
-	focus = {
 		id = RUS_invest_in_persia
 		icon = GFX_RUS_invest_in_persia
-		x = 1
+		x = -1
 		y = 1
-		relative_position_id = RUS_help_build_german_rails
-		prerequisite = { focus = RUS_help_build_german_rails focus = RUS_direct_intervention_in_persia } 
+		relative_position_id = RUS_direct_intervention_in_persia
+		prerequisite = { focus = RUS_occupation_of_persia focus = RUS_direct_intervention_in_persia } 
 		cost = 35
 
 		available = {
@@ -2397,9 +2386,9 @@
 		icon = GFX_goal_generic_forceful_treaty
 		x = -1
 		y = 1
-		relative_position_id = RUS_invest_in_persia
-		prerequisite = { focus = RUS_invest_in_persia }
-		prerequisite = { focus = RUS_help_build_german_rails }  
+		relative_position_id = RUS_influence_persian_politics
+		prerequisite = { focus = RUS_influence_persian_politics}  
+		mutually_exclusive = { focus = RUS_direct_intervention_in_persia }
 		cost = 35
 
 		available = {
@@ -2407,6 +2396,7 @@
 			NOT = {
 				has_war_with = PER
 			}
+			has_war = yes
 		}
 
 		completion_reward = {
@@ -2425,7 +2415,7 @@
 		y = 1
 		relative_position_id = RUS_influence_persian_politics
 		prerequisite = { focus = RUS_influence_persian_politics } 
-		mutually_exclusive = { focus = RUS_help_build_german_rails }
+		mutually_exclusive = { focus = RUS_occupation_of_persia }
 		cost = 70
 		
 		will_lead_to_war_with = PER
