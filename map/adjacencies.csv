@@ -278,4 +278,23 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 12392;10776;impassable;-1;-1;-1;-1;-1;;North Vietnam Mountains
 12433;10776;impassable;-1;-1;-1;-1;-1;;North Vietnam Mountains
 4568;10776;impassable;-1;-1;-1;-1;-1;;North Vietnam Mountains
+5076;7997;impassable;-1;-1;-1;-1;-1;;Qinghai
+2099;5076;impassable;-1;-1;-1;-1;-1;;Qinghai
+2028;2099;impassable;-1;-1;-1;-1;-1;;Qinghai
+2053;5100;impassable;-1;-1;-1;-1;-1;;Qinghai
+2099;5100;impassable;-1;-1;-1;-1;-1;;Qinghai
+5076;7997;impassable;-1;-1;-1;-1;-1;;Qinghai
+6709;11605;impassable;-1;-1;-1;-1;-1;;Carpathians
+6679;11605;impassable;-1;-1;-1;-1;-1;;Carpathians
+3665;11605;impassable;-1;-1;-1;-1;-1;;Carpathians
+3665;6667;impassable;-1;-1;-1;-1;-1;;Carpathians
+9619;6667;impassable;-1;-1;-1;-1;-1;;Carpathians
+9563;6460;impassable;-1;-1;-1;-1;-1;;Carpathians
+9563;9425;impassable;-1;-1;-1;-1;-1;;Carpathians
+6571;9425;impassable;-1;-1;-1;-1;-1;;Carpathians
+6571;3743;impassable;-1;-1;-1;-1;-1;;Carpathians
+9704;3743;impassable;-1;-1;-1;-1;-1;;Carpathians
+727;3743;impassable;-1;-1;-1;-1;-1;;Carpathians
+727;9548;impassable;-1;-1;-1;-1;-1;;Carpathians
+1381;10201;sea;7479;-1;-1;-1;-1;;Madurai-Ceylon
 -1;-1;;-1;-1;-1;-1;-1;-1
