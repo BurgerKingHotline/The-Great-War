@@ -360,9 +360,6 @@
 				ideology = democratic
 				popularity = 0.05
 			}
-			country_event = {
-				id = rus_events.12
-			}
 		}
 
 		ai_will_do = {
@@ -1395,7 +1392,7 @@
 
 	focus = {
 		id = RUS_promise_independence_after_the_war
-		icon = GFX_focus_generic_polish_deal #temp goal
+		icon = GFX_focus_generic_polish_deal
 		prerequisite = { focus = RUS_maintain_the_status_quo }
 		x = -1
 		y = 1
@@ -1413,7 +1410,7 @@
 
 	focus = {
 		id = RUS_russification_policy
-		icon = GFX_RUS_pan_russia
+		icon = GFX_RUS_realize_greater_russia
 		prerequisite = { focus = RUS_maintain_the_status_quo }
 		x = 0
 		y = 2
@@ -2127,6 +2124,76 @@
 	}
 
 	focus = {
+		id = RUS_occupation_of_persia
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		relative_position_id = RUS_influence_persian_politics
+		prerequisite = { focus = RUS_influence_persian_politics}  
+		mutually_exclusive = { focus = RUS_direct_intervention_in_persia }
+		cost = 35
+
+		available = {
+			country_exists = PER
+			NOT = {
+				has_war_with = PER
+			}
+			has_war = yes
+		}
+
+		completion_reward = {
+			country_event = { id = rus_events.18 }
+		}
+
+		ai_will_do = {
+			factor = 11
+		}
+	}
+
+	focus = {
+		id = RUS_direct_intervention_in_persia
+		icon = GFX_focus_generic_attack_iran
+		x = 1
+		y = 1
+		relative_position_id = RUS_influence_persian_politics
+		prerequisite = { focus = RUS_influence_persian_politics } 
+		mutually_exclusive = { focus = RUS_occupation_of_persia }
+		cost = 70
+		
+		will_lead_to_war_with = PER
+
+		bypass = {
+			has_war_with = PER
+		}
+
+		available = {
+			has_global_flag = RUS_russian_full_access_flag
+			NOT = {
+				is_in_faction_with = ENG
+			}
+			country_exists = PER
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					date < 1915.1.1
+					has_war = yes
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = RUS_invest_in_persia
 		icon = GFX_RUS_invest_in_persia
 		x = -1
@@ -2373,76 +2440,6 @@
 
 		ai_will_do = {
 			factor = 5
-		}
-	}
-
-	focus = {
-		id = RUS_occupation_of_persia
-		icon = GFX_goal_generic_forceful_treaty
-		x = -1
-		y = 1
-		relative_position_id = RUS_influence_persian_politics
-		prerequisite = { focus = RUS_influence_persian_politics}  
-		mutually_exclusive = { focus = RUS_direct_intervention_in_persia }
-		cost = 35
-
-		available = {
-			country_exists = PER
-			NOT = {
-				has_war_with = PER
-			}
-			has_war = yes
-		}
-
-		completion_reward = {
-			country_event = { id = rus_events.18 }
-		}
-
-		ai_will_do = {
-			factor = 11
-		}
-	}
-
-	focus = {
-		id = RUS_direct_intervention_in_persia
-		icon = GFX_focus_generic_attack_iran
-		x = 1
-		y = 1
-		relative_position_id = RUS_influence_persian_politics
-		prerequisite = { focus = RUS_influence_persian_politics } 
-		mutually_exclusive = { focus = RUS_occupation_of_persia }
-		cost = 70
-		
-		will_lead_to_war_with = PER
-
-		bypass = {
-			has_war_with = PER
-		}
-
-		available = {
-			has_global_flag = RUS_russian_full_access_flag
-			NOT = {
-				is_in_faction_with = ENG
-			}
-			country_exists = PER
-		}
-
-		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = ROOT
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					date < 1915.1.1
-					has_war = yes
-				}
-			}
 		}
 	}
 
@@ -3342,6 +3339,7 @@
 			hidden_effect = {
 				remove_ideas = RUS_invest_in_research_teams_consumer_goods_idea
 			}
+			custom_effect_tooltip = RUS_cost_3_cg_while_effect_tt
 			add_research_slot = 1
 		}
 		ai_will_do = {
@@ -3406,7 +3404,7 @@
 
 	focus = {
 		id = RUS_increase_standards_of_living
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_RUS_social_security
 		prerequisite = { focus = RUS_invest_in_industry}
 		mutually_exclusive = { focus = RUS_speed_up_industrialisation }
 		x = 1
@@ -3545,7 +3543,7 @@
 		cost = 70
 
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 75
 			206 = {
 				add_building_construction = {
 					type = industrial_complex
@@ -3759,7 +3757,7 @@
 
 	focus = {
 		id = RUS_increased_social_security
-		icon = GFX_RUS_social_security
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		prerequisite = { focus = RUS_support_the_military }
 		mutually_exclusive = { focus = RUS_force_the_workers }
 		x = -1
@@ -4262,7 +4260,6 @@
 				add_idea = RUS_inefficient_high_command1
 			}
 			add_doctrine_cost_reduction = {
-				name =  air_doc_bonus
 				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
@@ -4323,28 +4320,15 @@
 					has_idea = RUS_stavka_final
 				}	
 			}
-			OR = {
-				any_owned_state = {
-					is_core_of = ROOT
-					NOT = { 
-						is_controlled_by = ROOT
-					}
-				}
-				AND = {
-					any_owned_state = {
-						NOT = { 
-							is_controlled_by = ROOT
-						}
-					}
-					NOT = {
-						has_idea = RUS_strong_independance_movements
-					}
-				}
-			}
 		}
 
 		completion_reward = {
-			add_ideas = RUS_partisan_movement 
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			army_experience = 50
 		}
 		ai_will_do = {
 			factor = 10
