@@ -139,6 +139,10 @@
  FRA_caillaux_radical_party_desc:0 ""
  FRA_france_for_proletariat:0 "A France for the Proletariat"
  FRA_france_for_proletariat_desc:0 ""
+ FRA_import_resources:0 "Expand Steel Imports"
+ FRA_import_resources_desc:0 ""
+ FRA_create_union_sacree:0 "Propose the Union Sacrée"
+ FRA_create_union_sacree_desc:0 ""
  #parties
  FRA_democratic_alliance_name:0 "Alliance démocratique"
  FRA_worker_international_name:0 "SFIO"
@@ -305,6 +309,10 @@
  FRA_defensive_focus_idea:0 "Defensive Focus"
  FRA_renault:0 "Renault"
  FRA_private_investments:0 "Private Investments"
+ FRA_expanded_imports:0 "Expanded Imports"
+ FRA_union_sacree:0 "Union Sacrée"
+ FRA_union_sacree:0 "A 'sacred union' has been declared, with a broad coalition of the trade unions and leftists agreeing not to enact any strikes while the current war is ongoing."
+ FRA_disable_strikes:0 "Chance of Strikes: §Y0%§!"
  #traits
  #decisions
  FRA_mobilizing_leagues_category:0 "Dealing with the Leagues"

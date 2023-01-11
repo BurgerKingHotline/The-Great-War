@@ -1182,6 +1182,98 @@
 	}
 
 	focus = {
+		id = FRA_empower_guepratte
+		icon = GFX_generic_deal_germany
+		x = -1
+		y = 0
+		cost = 35
+		prerequisite = {
+			focus = FRA_warplan_realignment
+		}
+		relative_position_id = FRA_warplan_realignment
+
+		completion_reward = {
+			navy_experience = 10
+			add_advisor_role = {
+				character = FRA_emile_guepratte
+				activate = yes
+				advisor = {
+					slot = high_command
+					idea_token = FRA_emile_guepratte
+					ledger = navy
+					allowed = {
+						original_tag = FRA
+					}
+					traits = {
+						navy_chief_reform_1 
+						navy_chief_commerce_raiding_2 
+					}
+					cost = 100
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_join_naval_arms_race
+		icon = GFX_generic_deal_germany
+		x = -1
+		y = 0
+		cost = 35
+		prerequisite = {
+			focus = FRA_empower_guepratte
+		}
+		relative_position_id = FRA_empower_guepratte
+
+		completion_reward = {
+			#boosts naval production, but REALLY pisses of Britain
+		}
+	}
+
+	focus = {
+		id = FRA_build_up_norman_coast
+		icon = GFX_generic_deal_germany
+		x = 1
+		y = 0
+		cost = 35
+		prerequisite = {
+			focus = FRA_empower_guepratte
+		}
+		relative_position_id = FRA_empower_guepratte
+
+		completion_reward = {
+			15 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_mutual_training_excersizes #I forgor how to spell :skull:
+		icon = GFX_generic_deal_germany
+		x = 1
+		y = 0
+		cost = 35
+		prerequisite = {
+			focus = FRA_warplan_realignment
+		}
+		relative_position_id = FRA_warplan_realignment
+
+		completion_reward = {
+			army_experience = 10
+			#add idea to GER and you that boosts stuff
+		}
+	}
+
+	focus = {
 		id = FRA_organize_reserves
 		icon = GFX_focus_generic_little_entente
 		x = -2
@@ -1733,6 +1825,114 @@
 	}
 
 	focus = {
+		id = FRA_invest_in_colonies
+		icon = GFX_goal_generic_production
+		x = -1
+		y = 1
+		cost = 35
+		relative_position_id = FRA_revitalize_production
+		prerequisite = {
+			focus = FRA_revitalize_production
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_on_continent = africa
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_on_continent = africa
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_import_resources
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 1
+		cost = 35
+		relative_position_id = FRA_revitalize_production
+		prerequisite = {
+			focus = FRA_revitalize_production
+		}
+
+		completion_reward = {
+			add_ideas = FRA_expanded_imports
+		}
+	}
+
+	focus = {
+		id = FRA_create_union_sacree
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 3
+		y = 1
+		cost = 35
+		relative_position_id = FRA_bring_in_advisors
+		prerequisite = {
+			focus = FRA_bring_in_advisors
+		}
+
+		available = {
+			has_government = democratic
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+		}
+
+		completion_reward = {
+			add_ideas = FRA_union_sacree
+			set_country_flag = strikes_resolved
+			if = {
+				limit = {
+					has_idea = strikes_1
+				}
+				remove_ideas = strikes_1
+			}
+			if = {
+				limit = {
+					has_idea = strikes_2
+				}
+				remove_ideas = strikes_2
+			}
+			if = {
+				limit = {
+					has_idea = strikes_3
+				}
+				remove_ideas = strikes_3
+			}
+			clr_country_flag = crisis_in_progress
+			clr_country_flag = crisis_solution_in_progress
+		}
+	}
+
+	focus = {
 		id = FRA_paris_arsenal
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 1
@@ -1789,6 +1989,22 @@
 					}
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = FRA_organize_railways
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		cost = 35
+		relative_position_id = FRA_paris_arsenal
+		prerequisite = {
+			focus = FRA_paris_arsenal
+		}
+
+		completion_reward = {
+			#railways
 		}
 	}
 

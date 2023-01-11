@@ -342,6 +342,68 @@ ideas = {
 			}
 		}
 
+		FRA_expanded_imports = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				country_resource_steel = 12
+				min_export = -0.1
+				faction_trade_opinion_factor = 0.1
+			}
+		}
+
+		FRA_union_sacree = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war = no
+			}
+			
+			removal_cost = -1
+
+			on_add = {
+				add_popularity = {
+					ideology = communism
+					popularity = -0.05
+				}
+			}
+
+			on_remove = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				clr_country_flag = strikes_resolved
+			}
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				party_popularity_stability_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				custom_modifier_tooltip = FRA_disable_strikes
+			}
+		}
+
 	}
 
 	tank_manufacturer = {
