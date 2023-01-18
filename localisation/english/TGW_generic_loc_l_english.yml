@@ -6,3 +6,4 @@
  FACTORIES_SENT_COUNT:0 "[COLORED_SENT]"
  SEND_FACTORIES_BUTTON_TITLE:0 "Send Factories"
  SEND_FACTORIES_BUTTON_ACTION_DESCRIPTION:0 "Send Factories to a Country"
+ line_break_in_tt:0 "\n"

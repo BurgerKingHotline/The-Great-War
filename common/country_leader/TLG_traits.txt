@@ -87,4 +87,12 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
+	#advisors
+	
+	scandalous_holy_man = {
+		random = no
+		stability_factor = -0.05
+		political_power_cost = 0.05
+	}
 }

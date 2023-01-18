@@ -18,7 +18,11 @@
 
 
 #Senussiya resistence mechanic scripted effects, theres probably a better way to do this though
-
+mark_focus_tree_layout_dirty_focus = {
+	hidden_effect = {
+		country_event = other.10
+	}
+}
 increase_senussiya_resistence = {
 	if = {
 		limit = {

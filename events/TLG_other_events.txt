@@ -367,3 +367,22 @@ country_event = { #WAR
 		}
 	}
 }
+
+country_event = {
+	id = other.10
+	title = other.10.t 
+	desc = other.10.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	immediate = {
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	hidden = yes
+
+	option = {#g
+		name = other.10.a
+	}
+}

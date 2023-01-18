@@ -8,7 +8,9 @@ war_measures = {
 
 		visible = {
 			NOT = {
-				has_idea = RUS_stavka
+				has_dynamic_modifier = {
+					modifier = RUS_stavka
+				}
 			}
 			has_completed_focus = RUS_formulate_the_stavka
 		}
@@ -16,27 +18,8 @@ war_measures = {
 		cost = 25
 
 		complete_effect = {
-			if = {
-				limit = {
-					has_completed_focus = RUS_regain_our_footing
-					has_completed_focus = RUS_war_of_attrition
-				}
-				add_ideas = RUS_stavka_final
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = RUS_regain_our_footing
-				}
-				add_ideas = RUS_stavka_regain
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = RUS_war_of_attrition
-				}
-				add_ideas = RUS_stavka_at
-			}
-			else = {
-				add_ideas = RUS_stavka
+			add_dynamic_modifier = {
+				modifier = RUS_stavka
 			}
 		}
 		
@@ -45,6 +28,292 @@ war_measures = {
 		}
 	}
 }
+political_actions = {
+	RUS_dismiss_the_duma_timer = {
+
+		icon = generic_civil_support
+
+		allowed = { always = no }
+
+		available = {
+			has_completed_focus = RUS_dismiss_the_duma
+		}
+
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 210
+
+		timeout_effect = {
+			effect_tooltip = {
+				add_political_power = -100
+				add_stability = -0.15
+				uncomplete_national_focus = {
+					focus = RUS_cement_the_tsars_rule
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+				add_timed_idea = {
+					idea = RUS_political_deadlock_idea
+					days = 180
+				}
+			}
+			hidden_effect = {
+				country_event = rus_events.39
+			}
+		}
+	}
+
+}
+
+economy_decisions = {
+	RUS_increase_industrialisation_attempts = {
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = RUS
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = RUS_strengthen_worker_protections
+				has_completed_focus = RUS_limit_worker_protections
+			}
+		}
+
+		available = {
+        }
+
+		cost = 50
+
+		complete_effect = {
+			RUS_industrialisation_down = yes
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	RUS_decrease_industrialisation_attempts = {
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = RUS
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = RUS_strengthen_worker_protections
+				has_completed_focus = RUS_limit_worker_protections
+			}
+		}
+
+		available = {
+        }
+		
+		cost = 50
+
+		complete_effect = {
+			RUS_industrialisation_down = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+RUS_operations = {
+	
+
+	RUS_military_offensive_ongoing = {
+
+		icon = hol_draw_up_staff_plans
+
+		fire_only_once = yes
+
+		days_mission_timeout = 30
+
+		is_good = no
+
+		allowed = { always = no }
+
+		cancel_trigger = {
+			hidden_trigger = {
+				has_war = no
+			}
+		}
+
+		cancel_effect = {
+			#log = "Mission cancelled"
+			hidden_effect = {
+				RUS_clean_military_offensive_effect = yes
+			}
+		}
+
+		visible = {
+			has_war = yes
+			has_country_flag = RUS_military_offensive_in_progress_flag
+		}
+
+		available = { #Conditions to succeed in the offensive
+			custom_trigger_tooltip = {
+				tooltip = RUS_military_offensive_ongoing_trigger_tt
+				all_of_scopes = {
+					array = RUS_military_offensive_states
+					is_controlled_by = ROOT
+				}
+			}
+		}
+
+		timeout_effect = { #FAIL
+			#log = "Var = [?RUS_offensive_main_objective.GetName] // Array = [?RUS_military_offensive_states^0.GetName]" #Debug
+			if = {
+				limit = {
+					#var:RUS.RUS_military_offensive_states^0 = {
+					var:RUS_offensive_main_objective = {
+						is_controlled_by = ROOT
+					}
+				}
+				custom_effect_tooltip = RUS_military_offensive_ongoing_holding_main_objective_tt
+			}
+			else = {
+				custom_effect_tooltip = RUS_military_offensive_ongoing_not_holding_main_objective_tt
+				hidden_effect = {
+					add_war_support = -0.1
+					add_political_power = -75
+				}
+			}
+
+			custom_effect_tooltip = RUS_military_offensive_ongoing_failing_main_objective_tt
+			effect_tooltip = {
+				add_war_support = -0.1
+				add_political_power = -75
+			}
+
+			RUS_clean_military_offensive_effect = yes
+		}
+
+		complete_effect = { #SUCCESS
+			RUS_clean_military_offensive_effect = yes
+
+			add_war_support = 0.1
+			add_political_power = 50
+		}
+	}
+
+	RUS_military_offensive = {
+		priority = 30
+
+		icon = GFX_decision_generic_operation
+
+		ai_will_do = {
+			base = 0.5
+		}
+
+		state_target = yes
+
+		target_trigger = {
+			FROM = {
+				RUS_is_military_offensive_main_objective = yes
+			}
+		}
+
+		target_root_trigger = {
+			has_war = yes
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		allowed = {
+			original_tag = RUS
+		}
+
+		available = {
+			NOT = { has_country_flag = RUS_military_offensive_in_progress_flag }
+			command_power > 49
+		}
+
+		visible = {
+			 FROM = {
+			 	controller = {
+			 		has_war_with = ROOT
+			 	}
+			 	any_neighbor_state = {
+					OR = {
+			 			is_controlled_by = ROOT
+						any_neighbor_state = { #seperation of one state
+			 				is_controlled_by = ROOT
+						}
+					}
+			 	}
+			 }
+		}
+
+		cancel_if_not_visible = yes
+
+		cancel_effect = {
+			#log = "Preparations cancelled"
+			hidden_effect = {
+				RUS_clean_military_offensive_effect = yes
+			}
+		}
+
+		ai_hint_pp_cost = 15
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 14
+		}
+		custom_cost_text = decision_cost_CP_50_pp_15
+
+		days_remove = 14
+
+		modifier = {
+			command_power_gain_mult = -0.5
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -15
+			}
+			set_country_flag = RUS_military_offensive_in_progress_flag
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = RUS_military_offensive_scope_tt
+			custom_effect_tooltip = SOV_military_offensive_current_scope_main_objective_tt
+			effect_tooltip = {
+				FROM = {
+					custom_effect_tooltip = RUS_military_offensive_current_scope_negihbors_tt
+					every_neighbor_state = { #NEIGHBOR STATES
+						limit = {
+							controller = { has_war_with = ROOT }
+						}
+					}
+				}
+			}
+
+			hidden_effect = {
+				set_variable = { RUS_offensive_main_objective = FROM } #This variable exists because trying to scope to the element 0 of an array causes an error :D (!)
+				FROM = {
+					ROOT = { add_to_array = { RUS_military_offensive_states = PREV } }
+					every_neighbor_state = { #NEIGHBOR STATES
+						limit = {
+							controller = { has_war_with = ROOT }
+						}
+						ROOT = { add_to_array = { RUS_military_offensive_states = PREV } }
+					}
+				}
+				RUS_set_military_offensive_effect = yes
+
+				activate_mission = RUS_military_offensive_ongoing
+			}
+			custom_effect_tooltip = SOV_military_offensive_activate_decision_tt
+		}
+	}
+}
+
 russian_socialism_decisions = {
 	RUS_tsarist_propaganda_dec = {
 		icon = generic_civil_support
@@ -128,8 +397,8 @@ russian_socialism_decisions = {
 
 		available = {
         }
-		cost = 100
-		days_re_enable = 90
+		cost = 50
+		days_re_enable = 100
 
 		complete_effect = {
 			add_popularity = {
@@ -141,6 +410,7 @@ russian_socialism_decisions = {
 				value = -5
 				tooltip = RUS_socialist_radicalisation_increase
 			}
+			add_stability = 0.05
 		}
 		
 		ai_will_do = {
@@ -506,7 +776,7 @@ RUS_russification_decisions = {
 
 RUS_tsarist_intervention_decisions = {
 	RUS_intervene_in_the_economy = {
-		icon = generic_civil_support
+		icon = eng_trade_unions_demand
 
 		available = {
 			hidden_trigger = {
@@ -534,6 +804,7 @@ RUS_tsarist_intervention_decisions = {
 			production_factory_efficiency_gain_factor = 0.05 
 			production_factory_start_efficiency_factor = 0.08
 			production_lack_of_resource_penalty_factor = 0.25 
+			political_power_cost = 0.25
 		}
 	
 		days_remove = 180
@@ -545,7 +816,7 @@ RUS_tsarist_intervention_decisions = {
 	}
 
 	RUS_intervene_in_the_military = {
-		icon = generic_civil_support
+		icon = eng_trade_unions_demand
 
 		visible = {
 			has_completed_focus = RUS_take_full_control_of_the_army
@@ -567,7 +838,7 @@ RUS_tsarist_intervention_decisions = {
 			army_morale_factor = -0.05
 			max_planning_factor = -0.15
 			planning_speed = -0.15
-			political_power_factor = -0.05
+			political_power_cost = 0.25
 		}
 
 		complete_effect = {
@@ -602,7 +873,7 @@ RUS_tsarist_intervention_decisions = {
 	}
 
 	RUS_intervene_in_national_security = {
-		icon = generic_civil_support
+		icon = eng_trade_unions_demand
 
 		visible = {
 		}
@@ -627,6 +898,7 @@ RUS_tsarist_intervention_decisions = {
 			foreign_subversive_activites = -0.3
 			navy_intel_to_others = -0.1
 			agency_upgrade_time = -0.25
+			political_power_cost = 0.25
 		}
 
 		complete_effect = {
@@ -658,7 +930,7 @@ RUS_tsarist_intervention_decisions = {
 	}
 
 	RUS_intervene_in_foreign_policy = {
-		icon = generic_civil_support
+		icon = eng_trade_unions_demand
 
 		visible = {
 		}
@@ -676,6 +948,8 @@ RUS_tsarist_intervention_decisions = {
 			custom_modifier_tooltip = RUS_other_people_like_you_more
 			improve_relations_maintain_cost_factor = 0.15
 		}
+
+		
 
 		complete_effect = {
 			set_country_flag = RUS_tsar_intervening
@@ -725,7 +999,7 @@ RUS_tsarist_intervention_decisions = {
 	}
 	
 	RUS_intervene_in_political_affairs = {
-		icon = generic_civil_support
+		icon = eng_trade_unions_demand
 
 		visible = {
 		}
@@ -742,7 +1016,7 @@ RUS_tsarist_intervention_decisions = {
 			political_advisor_cost_factor = -0.15
 			trade_laws_cost_factor = -0.15
 			economy_cost_factor = -0.15
-			political_power_cost = 0.5
+			political_power_cost = 0.25
 		}
 
 		complete_effect = {
@@ -793,7 +1067,7 @@ RUS_tsarist_intervention_decisions = {
 	}
 
 	RUS_intervene_in_mobilization = {
-		icon = generic_civil_support
+		icon = eng_trade_unions_demand
 
 		visible = {
 		}
@@ -865,11 +1139,8 @@ economy_decisions = {
 
 		icon = generic_form_nation
 
-		allowed = { tag = RUS }
+		allowed = { always = no }
 
-		activation = {
-			always = no
-		}
 		available = {
 			has_railway_connection = {
 				start_state = 566
@@ -903,12 +1174,7 @@ economy_decisions = {
 			}
 		}
 
-		activation = {
-			always = no
-		}
-		allowed = {
-			original_tag = RUS
-		}
+		allowed = { always = no }
 
 		is_good = yes
 		fire_only_once = yes

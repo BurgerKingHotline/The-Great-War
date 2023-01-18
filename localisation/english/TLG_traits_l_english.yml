@@ -11,3 +11,11 @@
  dependent_on_overlord:0 "Dependent on Overlord"
  industrialist:0 "Industrialist"
  national_orator:0 "National Orator"
+ leader_of_the_revolution:0 "Leader of the Revolution"
+ paranoid_dictator:0 "Paranoid Dictator"
+ political_mastermind:0 "Political Mastermind"
+ inexperienced_monarch_1:0 "Inexperienced Monarch"
+ military_monarch:0 "Military Monarch"
+ father_of_russia:0 "Father of Russia"
+
+ scandalous_holy_man:0 "Scandalous Holy Man"

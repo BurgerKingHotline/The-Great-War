@@ -31,6 +31,7 @@ RUS_civil_war_start = {
 		}
 	}
 	set_global_flag = Russian_civil_war_flag
+	mark_focus_tree_layout_dirty = yes
 }
 
 RUS_ferbruary_revolution = {
@@ -93,6 +94,18 @@ RUS_industrialisation_up = {
 			has_idea = RUS_industrialising_nation_6
 		}
 		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = RUS_siberian_wasteland
+					}
+				}
+			}
 			add_building_construction = {
 				type = industrial_complex
 				level = 2
@@ -101,6 +114,18 @@ RUS_industrialisation_up = {
 			add_extra_state_shared_building_slots = 2
 		}
 		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = RUS_siberian_wasteland
+					}
+				}
+			}
 			add_building_construction = {
 				type = industrial_complex
 				level = 2
@@ -112,7 +137,7 @@ RUS_industrialisation_up = {
 	}
 	add_to_variable = {
 		var = RUS_socialist_radicalisation
-		value = 10
+		value = 5
 		tooltip = RUS_socialist_radicalisation_increase
 	}
 	add_popularity = {
@@ -191,11 +216,33 @@ RUS_industrialisation_down = {
     }
 	add_to_variable = {
 		var = RUS_socialist_radicalisation
-		value = -10
+		value = -5
 		tooltip = RUS_socialist_radicalisation_increase
 	}
 	add_popularity = {
 		ideology = communism
 		popularity = -0.05
 	}
+}
+
+RUS_set_military_offensive_effect = {
+	set_country_flag = RUS_military_offensive_in_progress_flag
+	for_each_scope_loop = {
+		array = RUS_military_offensive_states
+		add_dynamic_modifier = {
+			modifier = RUS_russian_military_offensive
+			days = 90
+			scope = RUS
+		}
+	}
+}
+
+RUS_clean_military_offensive_effect = {
+	clr_country_flag = RUS_military_offensive_in_progress_flag
+	for_each_scope_loop = {
+		array = RUS_military_offensive_states
+		remove_dynamic_modifier = { modifier = RUS_russian_military_offensive }
+	}
+	clear_array = RUS_military_offensive_states
+	clear_variable = RUS_offensive_main_objective
 }

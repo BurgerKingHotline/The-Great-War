@@ -132,7 +132,6 @@ RUS_siberian_wasteland = {
 	local_supplies = -0.5
 }
 
-
 RUS_duma = {
 	
 	icon = GFX_modifiers_sabotaged_resource
@@ -144,6 +143,34 @@ RUS_duma = {
 	democratic_acceptance = RUS_duma_democratic_acceptance
 	stability_weekly = RUS_duma_democratic_acceptance
 	neutrality_drift = RUS_duma_neutrality_drift
+}
+
+RUS_stavka = {
+	
+	icon = GFX_idea_general_staff
+	
+	land_doctrine_cost_factor = RUS_stavka_land_doctrine_cost_factor
+	max_planning_factor = RUS_stavka_max_planning_factor
+	planning_speed = RUS_stavka_planning_speed
+	recon_factor = RUS_stavka_recon_factor
+	coordination_bonus = RUS_stavka_coordination_bonus
+	army_org_factor = RUS_stavka_army_org_factor
+	army_attack_factor = RUS_stavka_army_attack_factor
+	supply_combat_penalties_on_core_factor = RUS_stavka_supply_combat_penalties_on_core_factor
+	weekly_casualties_war_support = RUS_stavka_weekly_casualties_war_support
+	supply_consumption_factor = RUS_stavka_supply_consumption_factor
+	air_fuel_consumption_factor = RUS_stavka_air_fuel_consumption_factor
+	army_fuel_consumption_factor = RUS_stavka_army_fuel_consumption_factor
+	navy_fuel_consumption_factor = RUS_stavka_navy_fuel_consumption_factor
+}
+
+RUS_russian_military_offensive = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+
+	breakthrough_factor = 0.1
+	army_attack_factor = 0.1
 }
 
 RUS_local_soviets_modifier = {

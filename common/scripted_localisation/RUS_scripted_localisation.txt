@@ -1,0 +1,177 @@
+defined_text = { #The main use for this is to prevent countless errors in the log due to the array not being set yet when you hover over the decision, which will activate the mission as a hidden effect
+	name = GetOngoingOffensiveMainObjective
+	text = {
+		trigger = {
+			check_variable = { RUS_military_offensive_states^0 = 0 compare = equals }
+		}
+		localization_key = RUS_military_offensive_generic_name
+	}
+	text = {
+		localization_key = RUS_military_offensive_specific_name
+	}
+}
+
+defined_text = {
+	name = GetOffensiveMissionTriggerText
+	text = {
+		trigger = {
+			check_variable = { RUS_military_offensive_states^0 = 0 compare = equals }
+		}
+		localization_key = RUS_military_offensive_ongoing_trigger_completed
+
+	}
+	text = {
+		localization_key = RUS_military_offensive_ongoing_trigger_default
+	}
+}
+
+defined_text = {
+	name = GetMilitaryOffensiveName
+	text = {
+		trigger = {
+			FROM = { state = 893 }
+		}
+		localization_key = RUS_military_offensive_name_brusilov
+	}
+	text = {
+		trigger = {
+			FROM = { state = 763 } 
+		}
+		localization_key = RUS_military_offensive_name_eastern_prussia
+	}
+	text = {
+		trigger = {
+			FROM = { state = 807 } 
+		}
+		localization_key = RUS_military_offensive_name_western_prussia
+	}
+	text = {
+		trigger = {
+			FROM = { state = 66 } 
+		}
+		localization_key = RUS_military_offensive_name_silesia
+	}
+	text = {
+		trigger = {
+			FROM = { state = 353 } 
+		}
+		localization_key = RUS_military_offensive_name_armenia 
+	}
+	text = {
+		trigger = {
+			FROM = { state = 10 } #WARSAW
+		}
+		localization_key = SOV_military_offensive_name_warsaw
+	}
+	text = {
+		trigger = {
+			FROM = { state = 812 } #TALLIN
+		}
+		localization_key = SOV_military_offensive_name_tallin
+	}
+	text = {
+		trigger = {
+			FROM = { state = 808 } #RIGA
+		}
+		localization_key = SOV_military_offensive_name_riga
+	}
+	text = {
+		trigger = {
+			FROM = { state = 43 } #BUDAPEST
+		}
+		localization_key = SOV_military_offensive_name_budapest
+	}
+	text = {
+		trigger = {
+			FROM = { state = 46 } #BUCHAREST
+		}
+		localization_key = SOV_military_offensive_name_bucharest
+	}
+	text = {
+		trigger = {
+			FROM = { state = 44 } #TIRANA
+		}
+		localization_key = SOV_military_offensive_name_tirana
+	}
+	text = {
+		trigger = {
+			FROM = { state = 9 } #PRAGUE
+		}
+		localization_key = SOV_military_offensive_name_prague
+	}
+	text = {
+		trigger = {
+			FROM = { state = 2 } #ROME
+		}
+		localization_key = SOV_military_offensive_name_rome
+	}
+	text = {
+		trigger = {
+			FROM = { state = 3 } #BERNE
+		}
+		localization_key = SOV_military_offensive_name_berne
+	}
+	text = {
+		trigger = {
+			FROM = { state = 64 } #BERLIN
+		}
+		localization_key = SOV_military_offensive_name_berlin
+	}
+	text = {
+		trigger = {
+			FROM = { state = 55 } #FRANKFURT
+		}
+		localization_key = SOV_military_offensive_name_frankfurt
+	}
+	text = {
+		trigger = {
+			FROM = { state = 58 } #HAMBURG
+		}
+		localization_key = SOV_military_offensive_name_hamburg
+	}
+	text = {
+		trigger = {
+			FROM = { state = 111 } #HELSINKI
+		}
+		localization_key = SOV_military_offensive_name_helsinki
+	}
+	text = {
+		trigger = {
+			FROM = { state = 141 } #STOCKHOLM
+		}
+		localization_key = SOV_military_offensive_name_stockholm
+	}
+	text = {
+		trigger = {
+			FROM = { state = 110 } #OSLO
+		}
+		localization_key = SOV_military_offensive_name_oslo
+	}
+	text = {
+		trigger = {
+			FROM = { state = 37 } #COPENHAGEN
+		}
+		localization_key = SOV_military_offensive_name_copenhagen
+	}
+	text = {
+		trigger = {
+			FROM = { state = 7 } #AMSTERDAM
+		}
+		localization_key = SOV_military_offensive_name_amsterdam
+	}
+	text = {
+		trigger = {
+			FROM = { state = 16 } #PARIS
+		}
+		localization_key = SOV_military_offensive_name_paris
+	}
+	text = {
+		trigger = {
+			FROM = { state = 126 } #LONDON
+		}
+		localization_key = SOV_military_offensive_name_london
+	}
+	text = {
+		localization_key = SOV_military_offensive_name_generic
+	}
+}

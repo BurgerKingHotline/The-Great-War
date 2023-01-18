@@ -102,6 +102,7 @@
 				ideology = neutrality
 				popularity = 0.1
 			}
+			mark_focus_tree_layout_dirty_focus = yes
 		}
 
 		ai_will_do = {
@@ -230,7 +231,7 @@
 	}
 	focus = {
 		id = RUS_accede_to_the_radicals
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		icon = GFX_focus_generic_join_comintern
 		mutually_exclusive = { focus = RUS_the_powers_of_the_tsar}
 		prerequisite = { focus = RUS_meeting_with_the_germans }
 		x = 9
@@ -262,6 +263,7 @@
 				popularity = 0.05
 			}
 			clr_country_flag = RUS_revolutionaries_active
+			mark_focus_tree_layout_dirty_focus = yes
 		}
 
 		ai_will_do = {
@@ -295,6 +297,12 @@
 					ruling_only = yes
 				}
 			}
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
+			NOT = {
+				has_country_flag = RUS_has_been_deadlocked_previously
+			}
 		}
 
 		allow_branch = {
@@ -313,7 +321,7 @@
 		}
 
 		completion_reward = {
-			add_stability = -0.10
+			add_stability = -0.05
 			add_political_power = -100
 			add_popularity = {
 				ideology = neutrality
@@ -324,6 +332,7 @@
 				value = 10
 				tooltip = RUS_socialist_radicalisation_increase
 			}
+			mark_focus_tree_layout_dirty_focus = yes
 		}
 
 		ai_will_do = {
@@ -352,6 +361,9 @@
 
 		available = {
 			has_country_flag = RUS_duma_elections
+			NOT = {
+				has_idea = RUS_political_deadlock_idea
+			}
 		}
 
 		completion_reward = {
@@ -360,6 +372,7 @@
 				ideology = democratic
 				popularity = 0.05
 			}
+			mark_focus_tree_layout_dirty_focus = yes
 		}
 
 		ai_will_do = {
@@ -399,6 +412,13 @@
 		y = 1
 		relative_position_id = RUS_cement_the_tsars_rule
 		cost = 70
+
+		available = {
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
+
+		}
 		 
 
 		completion_reward = {
@@ -417,6 +437,8 @@
 					add_idea = RUS_chained_duma
 				}
 			}
+			activate_mission = RUS_dismiss_the_duma_timer
+			custom_effect_tooltip = RUS_dimiss_the_duma_timer_tt
 		}
 	}
 
@@ -428,6 +450,12 @@
 		y = 2
 		relative_position_id = RUS_a_duma_in_chains
 		cost = 50
+
+		available = {
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
+		}
 		 
 
 		completion_reward = {
@@ -465,6 +493,9 @@
 					ruling_only = yes
 				}
 			}
+			NOT = {
+				has_idea = RUS_political_deadlock_idea
+			}
 		}
 
 		completion_reward = {
@@ -480,6 +511,12 @@
 		y = 2
 		relative_position_id = RUS_a_duma_in_chains
 		cost = 50
+
+		available = {
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
+		}
 		 
 
 		completion_reward = {
@@ -511,14 +548,16 @@
 		available = {
 			neutrality > 0.79
 			has_stability > 0.6
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			remove_ideas = {
 				RUS_chained_duma
 			}
-			add_stability = -0.15
+			add_stability = -0.05
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
 				value = 15
@@ -535,7 +574,12 @@
 		y = 1
 		relative_position_id = RUS_dismiss_the_duma
 		cost = 35
-		 
+
+		available = {
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
+		}
 
 		completion_reward = {
 			add_political_power = 100
@@ -564,6 +608,9 @@
 			any_other_country = {
 				has_government = communism
 			}
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
 		}
 
 		completion_reward = {
@@ -571,13 +618,10 @@
 				limit = {
 					has_dlc = "La Resistance"
 				}
-				add_ideas = RUS_crusade_against_communis_lar
+				add_ideas = RUS_crusade_against_communism
 			}
 			else = {
 				add_ideas = RUS_crusade_against_communism_no_lar
-			}
-			add_ideas = {
-				RUS_crusade_against_communism
 			}
 		}
 	}
@@ -590,7 +634,12 @@
 		y = 1
 		relative_position_id = RUS_dismiss_the_duma
 		cost = 70
-		 
+
+		available = {
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
+		}
 
 		completion_reward = {
 			remove_ideas = {
@@ -610,9 +659,19 @@
 		cost = 70
 		
 		available = {
-			has_country_leader = {
-				character = RUS_nicholas_ii
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
+			}
+			
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
 			}
 		}
 		 
@@ -1005,7 +1064,12 @@
 		y = 2
 		relative_position_id = RUS_promote_the_all_russian_nation
 		cost = 70
-		 
+
+		available = {
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
+		}
 
 		completion_reward = {
 			add_stability = -0.1
@@ -1058,7 +1122,12 @@
 		y = 2
 		relative_position_id = RUS_destroy_trade_unions
 		cost = 35
-		 
+
+		available = {
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
+		}
 
 		completion_reward = {
 			add_popularity = {
@@ -1089,12 +1158,23 @@
 		cost = 100
 		
 		available = {
-			has_country_leader = {
-				character = RUS_nicholas_ii
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					character = RUS_nicholas_ii
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = RUS_michael
+					ruling_only = yes
+				}
 			}
 		}
-		 
+
+		available = {
+			NOT = {
+				has_global_flag = Russian_civil_war_flag
+			}
+		}
 
 		completion_reward = {
 			add_to_variable = {
@@ -1109,9 +1189,14 @@
 			add_ideas = {
 				RUS_all_power_to_the_tsar_idea
 			}
-			swap_ruler_traits = {
-				remove = inexperienced_monarch
-				add = dictator
+			if = {
+				limit = {
+					has_country_leader_with_trait = inexperienced_monarch
+				}
+				swap_ruler_traits = {
+					remove = inexperienced_monarch
+					add = dictator
+				}
 			}
 		}
 	}
@@ -1398,13 +1483,11 @@
 		y = 1
 		relative_position_id = RUS_maintain_the_status_quo
 		cost = 50
-		 
 
 		completion_reward = {
 			remove_ideas = {
 				RUS_strong_independance_movements
 			}
-			custom_effect_tooltip = RUS_civil_war_no_independance
 		}
 	}
 
@@ -1421,12 +1504,12 @@
 		completion_reward = {
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = 5
+				value = 8
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 			add_popularity = {
 				ideology = communism
-				popularity = 0.05
+				popularity = 0.08
 			}
 			add_ideas = {
 				RUS_russification
@@ -1452,11 +1535,16 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.08
+			add_stability = 0.1
 			add_political_power = 150
-			swap_ruler_traits = {
-				remove = inexperienced_monarch
-				add = dictator
+			if = {
+				limit = {
+					has_country_leader_with_trait = inexperienced_monarch
+				}
+				swap_ruler_traits = {
+					remove = inexperienced_monarch
+					add = dictator
+				}
 			}
 		}
 	}
@@ -1530,7 +1618,7 @@
 		completion_reward = {
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = -1
+				value = -3
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 			add_popularity = {
@@ -1566,7 +1654,7 @@
 		completion_reward = {
 			add_to_variable = {
 				var = RUS_socialist_radicalisation
-				value = -15
+				value = -8
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 			add_popularity = {
@@ -1647,6 +1735,18 @@
 				ruling_party = democratic
 				elections_allowed = yes
 			}
+			custom_effect_tooltip = line_break_in_tt
+			effect_tooltip = {
+				swap_ruler_traits = {
+					remove = unpopular_monarch
+					add = constitutional_monarch
+				}
+				remove_trait = {
+					character = RUS_nicholas_ii
+					ideology = despotism
+					trait = inexperienced_monarch
+				}
+			}
 		}
 	}
 
@@ -1683,8 +1783,12 @@
 				has_war_with = GER
 			}
 			NOT = {
-				has_global_flag = RUS_germans_wont_potsdam
 				has_global_flag = RUS_russian_full_access_flag
+			}
+			GER = {
+				NOT = {
+					has_government = communism
+				}
 			}
 			has_global_flag = RUS_ger_agree_potsdam
 		}
@@ -1929,13 +2033,13 @@
 					has_completed_focus = RUS_continued_dialogue_with_the_germans
 				}
 				GER = {
-					country_event = { id = rus_events.8 days = 1}
+					country_event = { id = rus_events.9 days = 1}
 					custom_effect_tooltip = needs_approval
 				}
 			}
 			else = {
 				FRA = {
-					country_event = { id = rus_events.8 days = 1}
+					country_event = { id = rus_events.9 days = 1}
 					custom_effect_tooltip = needs_approval
 				}
 			}
@@ -1966,11 +2070,86 @@
 		completion_reward = {
 			add_political_power = 150
 			add_war_support = 0.1
-			give_guarantee = SER
-			give_guarantee = ROM
-			give_guarantee = MNT
-			give_guarantee = GRE
-			give_guarantee = ALB
+			if = {
+				limit = {
+					SER = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+						OR = {
+							is_subject = no
+							overlord = {
+								OR = {
+									original_tag = ROOT
+									is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+				give_guarantee = SER
+			}
+			if = {
+				limit = {
+					ROM = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+						OR = {
+							is_subject = no
+							overlord = {
+								OR = {
+									original_tag = ROOT
+									is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+				give_guarantee = ROM
+			}
+			if = {
+				limit = {
+					MNT = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+						OR = {
+							is_subject = no
+							overlord = {
+								OR = {
+									original_tag = ROOT
+									is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+				give_guarantee = MNT
+			}
+			if = {
+				limit = {
+					GRE = {
+						exists = yes
+						NOT = {
+							has_government = communism
+						}
+						OR = {
+							is_subject = no
+							overlord = {
+								OR = {
+									original_tag = ROOT
+									is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+				give_guarantee = GRE
+			}
 		}
 
 		ai_will_do = {
@@ -2002,6 +2181,9 @@
 					character = RUS_michael
 					ruling_only = yes
 				}
+			}
+			NOT = {
+				has_idea = RUS_political_deadlock_idea
 			}
 		}
 
@@ -2039,9 +2221,21 @@
 					logistics_skill = 3
 				}
 			}
-			swap_ruler_traits = {
-				remove = inexperienced_imperialist
-				add = autocratic_imperialist
+			if = {
+				limit = {
+					has_country_leader_with_trait = inexperienced_imperialist
+				}
+				swap_ruler_traits = {
+					remove = inexperienced_imperialist
+					add = autocratic_imperialist
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = rus_events.41
+					days = 45
+					random = 10
+				}
 			}
 		}
 
@@ -2624,6 +2818,22 @@
 		mutually_exclusive = { focus = RUS_presidential_republic }
 
 		available = {
+		}
+		cost = 35
+		 
+
+		available = {
+			NOT = { 
+				has_government = communism 
+			}
+			OR = {
+				has_civil_war = yes
+				has_war_with = SOV
+				AND = {
+					has_war = yes
+					surrender_progress > 0.2	
+				}
+			}
 			NOT = {
 				has_country_leader = {
 					character = RUS_nicholas_ii
@@ -2638,23 +2848,6 @@
 				has_completed_focus = RUS_strengthen_the_duma
 			}
 		}
-		cost = 35
-		 
-
-		available = {
-			NOT = { 
-				has_government = communism 
-				has_completed_focus = RUS_presidential_republic
-			}
-			OR = {
-				has_civil_war = yes
-				has_war_with = SOV
-				AND = {
-					has_war = yes
-					surrender_progress > 0.2	
-				}
-			}
-		}
 
 		completion_reward = {
 			add_stability = 0.05
@@ -2666,7 +2859,10 @@
 				ruling_party = neutrality
 				elections_allowed = no
 			}
-			#promotes character, ill do character work later
+			promote_character = {
+				character = RUS_alexander_kolchak
+				ideology = despotism
+			}
 		}
 
 		ai_will_do = {
@@ -2707,6 +2903,7 @@
 						NOT = {
 							tag = RUS
 						}
+						has_government = communism
 					}
 					country_event = rus_events.36
 					add_war_support = 0.15
@@ -2770,7 +2967,12 @@
 		cost = 35
 
 		available = {
-			has_stability > 0.69
+			OR = {
+				has_stability > 0.69
+				NOT = {
+					has_global_flag = Russian_civil_war_flag
+				}
+			}
 			NOT = {
 				has_country_leader = {
 					character = RUS_nicholas_ii
@@ -2814,9 +3016,6 @@
 		}
 
 		completion_reward = {
-			set_politics = {
-				elections_allowed = yes
-			}
 			add_stability = 0.15
 		}
 
@@ -3389,7 +3588,7 @@
 
 	focus = {
 		id = RUS_speed_up_industrialisation
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_reichsautobahn
 		prerequisite = { focus = RUS_invest_in_industry}
 		mutually_exclusive = { focus = RUS_increase_standards_of_living }
 		x = -1
@@ -3612,22 +3811,13 @@
 					}
 					add_extra_state_shared_building_slots = 2
 				}
-				random_owned_controlled_state = {
-					prioritize = { 206 }
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 2
-				}
 			}
 			else = {
 				random_owned_controlled_state = {
 					prioritize = { 217 }
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					add_extra_state_shared_building_slots = 2
@@ -3752,6 +3942,8 @@
 
 		completion_reward = {
 			RUS_industrialisation_up = yes
+			unlock_decision_tooltip = RUS_increase_industrialisation_attempts
+			unlock_decision_tooltip = RUS_decrease_industrialisation_attempts
 		}
 	}
 
@@ -3782,6 +3974,8 @@
 
 		completion_reward = {
 			RUS_industrialisation_down = yes
+			unlock_decision_tooltip = RUS_increase_industrialisation_attempts
+			unlock_decision_tooltip = RUS_decrease_industrialisation_attempts
 		}
 	}
 
@@ -4018,44 +4212,121 @@
 		completion_reward = {
 			air_experience = 50
 			137 = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
 				}
+				
 			}
 			10 = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
 				}
 			}
-			202  = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
+			202 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
 				}
 			}
 			11  = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
-				}
-			}
-			231  = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
 				}
 			}
 			408  = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = RUS_siberian_wasteland
+						}
+					}
+				}
 				add_building_construction = {
 					type = air_base
-					level = 5
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = RUS_siberian_wasteland
+						}
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -4244,7 +4515,7 @@
 	focus = {
 		id = RUS_military_reform
 		icon = GFX_focus_generic_military_mission
-		x = 27
+		x = 28
 		y = 13
 		cost = 70
 
@@ -4285,16 +4556,44 @@
 		}
 
 		bypass = {
-			OR = {
-				has_idea = RUS_stavka
-				has_idea = RUS_stavka_at
-				has_idea = RUS_stavka_regain
-				has_idea = RUS_stavka_final
+			has_dynamic_modifier = {
+				modifier = RUS_stavka
 			}
 		}
 
 		completion_reward = {
-			add_ideas = RUS_stavka
+			#Stavka starting modifiers
+			set_variable = {
+				var = RUS_stavka_land_doctrine_cost_factor
+				value = -0.05
+			}
+			set_variable = {
+				var = RUS_stavka_max_planning_factor
+				value = 0.25
+			}
+			set_variable = {
+				var = RUS_stavka_planning_speed
+				value = 0.1
+			}
+			set_variable = {
+				var = RUS_stavka_recon_factor
+				value = 0.1
+			}
+			set_variable = {
+				var = RUS_stavka_coordination_bonus
+				value = 0.05
+			}
+			set_variable = {
+				var = RUS_stavka_army_org_factor
+				value = -0.1
+			}
+			set_variable = {
+				var = RUS_stavka_army_attack_factor
+				value = -0.05
+			}
+			add_dynamic_modifier = {
+				modifier = RUS_stavka
+			}
 		}
 		ai_will_do = {
 			factor = 10
@@ -4302,7 +4601,7 @@
 	}
 
 	focus = {
-		id = RUS_strengthen_partisan_movement
+		id = RUS_address_the_arms_crisis
 		icon = GFX_focus_focus_fra_maquis
 		x = 2
 		y = 1
@@ -4313,22 +4612,111 @@
 		available = {
 			has_war = yes
 			hidden_trigger = {
-				OR = {
-					has_idea = RUS_stavka
-					has_idea = RUS_stavka_at
-					has_idea = RUS_stavka_regain
-					has_idea = RUS_stavka_final
-				}	
+				has_dynamic_modifier = {
+					modifier = RUS_stavka
+				}
 			}
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
+			add_ideas = RUS_efficient_production
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_recruit_cossack_cavalry
+		icon = GFX_focus_generic_horse_studs
+		x = 3
+		y = 1
+		cost = 35
+		relative_position_id = RUS_address_the_arms_crisis
+		prerequisite = { focus = RUS_address_the_arms_crisis }
+
+		available = {
+			hidden_trigger = {
+				has_dynamic_modifier = {
+					modifier = RUS_stavka
+				}
 			}
-			army_experience = 50
+			has_war = yes
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RUS_restore_cossack_units_spawn_tt
+			hidden_effect = {
+				division_template = {
+					name = "Kazachya Kavaleryskaya Diviziya"
+					template_counter = 05
+
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+						cavalry = { x = 2 y = 0 }
+						cavalry = { x = 2 y = 1 }
+						cavalry = { x = 2 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+					}
+				}
+
+				capital_scope = {
+					#Cossack Cavalry
+					create_unit = { 
+						division = "name = \"4ya Donskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"6ya Kubansko-Terskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"10ya Tersko-Stavropolskaya Kazachya Kav. Div\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"12ya Kubanskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"14ya Kubanskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"16ya Kubanskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_form_womens_battalions
+		icon = GFX_focus_generic_women_in_military
+		x = 1
+		y = 1
+		cost = 35
+		relative_position_id = RUS_address_the_arms_crisis
+		prerequisite = { focus = RUS_address_the_arms_crisis }
+
+		available = {
+			has_war = yes
+			hidden_trigger = {
+				has_dynamic_modifier = {
+					modifier = RUS_stavka
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = RUS_womens_battalions
 		}
 		ai_will_do = {
 			factor = 10
@@ -4347,48 +4735,34 @@
 		available = {
 			has_war = yes
 			hidden_trigger = {
-				OR = {
-					has_idea = RUS_stavka
-					has_idea = RUS_stavka_at
-					has_idea = RUS_stavka_regain
-					has_idea = RUS_stavka_final
-				}	
-			}
-		}
-
-		bypass = {
-			OR = {
-				has_idea = RUS_stavka_regain
-				has_idea = RUS_stavka_final
+				has_dynamic_modifier = {
+					modifier = RUS_stavka
+				}
 			}
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_completed_focus = RUS_war_of_attrition
-				}
-				swap_ideas = {
-					remove_idea = RUS_stavka_at
-					add_idea = RUS_stavka_final
-				}
+			custom_effect_tooltip = RUS_modify_stavka
+			add_to_variable = {
+				var = RUS_stavka_army_org_factor
+				value = 0.05
+				tooltip = RUS_stavka_army_org_factor_tt 
 			}
-			else = {
-				swap_ideas = {
-					remove_idea = RUS_stavka
-					add_idea = RUS_stavka_regain
-				}
+			add_to_variable = {
+				var = RUS_stavka_army_attack_factor
+				value = 0.05
+				tooltip = RUS_stavka_army_attack_factor_tt
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 11
 		}
 	}
 
 	focus = {
 		id = RUS_war_of_attrition
 		icon = GFX_focus_prc_infiltration
-		x = 0
+		x = -0
 		y = 1
 		cost = 35
 		relative_position_id = RUS_formulate_the_stavka
@@ -4397,37 +4771,33 @@
 		available = {
 			has_war = yes
 			hidden_trigger = {
-				OR = {
-					has_idea = RUS_stavka
-					has_idea = RUS_stavka_at
-					has_idea = RUS_stavka_regain
-					has_idea = RUS_stavka_final
-				}	
-			}
-		}
-
-		bypass = {
-			OR = {
-				has_idea = RUS_stavka_at
-				has_idea = RUS_stavka_final
+				has_dynamic_modifier = {
+					modifier = RUS_stavka
+				}
 			}
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_completed_focus = RUS_regain_our_footing
-				}
-				swap_ideas = {
-					remove_idea = RUS_stavka_regain
-					add_idea = RUS_stavka_final
-				}
+			custom_effect_tooltip = RUS_modify_stavka
+			add_to_variable = {
+				var = RUS_stavka_weekly_casualties_war_support
+				value = 0.001
+				tooltip = RUS_stavka_weekly_casualties_war_support_tt
 			}
-			else = {
-				swap_ideas = {
-					remove_idea = RUS_stavka
-					add_idea = RUS_stavka_at
-				}
+			add_to_variable = {
+				var = RUS_stavka_supply_combat_penalties_on_core_factor
+				value = -0.15
+				tooltip = RUS_stavka_supply_combat_penalties_on_core_factor_tt
+			}
+			add_to_variable = {
+				var = RUS_stavka_army_org_factor
+				value = 0.05
+				tooltip = RUS_stavka_army_org_factor_tt
+			}
+			add_to_variable = {
+				var = RUS_stavka_army_attack_factor
+				value = -0.05
+				tooltip = RUS_stavka_army_attack_factor_tt
 			}
 		}
 		ai_will_do = {
@@ -4436,30 +4806,83 @@
 	}
 
 	focus = {
-		id = RUS_logistical_focus
+		id = RUS_strategic_offensives
 		icon = GFX_goal_generic_position_armies
-		x = 1
+		x = -1
 		y = 1
 		cost = 35
 		relative_position_id = RUS_war_of_attrition
 		prerequisite = { focus = RUS_war_of_attrition }
+		prerequisite = { focus = RUS_regain_our_footing }
 
 		available = {
 			has_war = yes
 			hidden_trigger = {
-				OR = {
-					has_idea = RUS_stavka
-					has_idea = RUS_stavka_at
-					has_idea = RUS_stavka_regain
-					has_idea = RUS_stavka_final
-				}	
+				has_dynamic_modifier = {
+					modifier = RUS_stavka
+				}
 			}
 		}
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = RUS_logistical_focus
-				days = 730
+			custom_effect_tooltip = RUS_modify_stavka
+			add_to_variable = {
+				var = RUS_stavka_max_planning_factor
+				value = 0.1
+				tooltip = RUS_stavka_max_planning_factor_tt
+			}
+			add_to_variable = {
+				var = RUS_stavka_coordination_bonus
+				value = 0.05
+				tooltip = RUS_stavka_coordination_bonus_tt
+			}
+			unlock_decision_category_tooltip = RUS_operations
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = RUS_establish_a_logistical_department
+		icon = GFX_focus_generic_truck #TEMP GOAL
+		x = 1
+		y = 1
+		cost = 35
+		relative_position_id = RUS_war_of_attrition
+		prerequisite = { focus = RUS_war_of_attrition}
+		prerequisite = { focus = RUS_address_the_arms_crisis}
+
+		available = {
+			has_war = yes
+			hidden_trigger = {
+				has_dynamic_modifier = {
+					modifier = RUS_stavka
+				}
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RUS_modify_stavka
+			add_to_variable = {
+				var = RUS_stavka_air_fuel_consumption_factor
+				value = -0.1
+				tooltip = RUS_stavka_air_fuel_consumption_factor_tt
+			}
+			add_to_variable = {
+				var = RUS_stavka_navy_fuel_consumption_factor
+				value = -0.1
+				tooltip = RUS_stavka_navy_fuel_consumption_factor_tt
+			}
+			add_to_variable = {
+				var = RUS_stavka_army_fuel_consumption_factor
+				value = -0.1
+				tooltip = RUS_stavka_army_fuel_consumption_factor_tt
+			}
+			add_to_variable = {
+				var = RUS_stavka_supply_consumption_factor
+				value = -0.1
+				tooltip = RUS_stavka_supply_consumption_factor_tt
 			}
 		}
 		ai_will_do = {
@@ -4470,26 +4893,25 @@
 	focus = {
 		id = RUS_reclaim_our_lands
 		icon = GFX_goal_generic_major_war
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		cost = 50
-		relative_position_id = RUS_regain_our_footing
-		prerequisite = { focus = RUS_regain_our_footing }
-		prerequisite = { focus = RUS_war_of_attrition }
+		relative_position_id = RUS_war_of_attrition
+		prerequisite = { focus = RUS_strategic_offensives }
+		prerequisite = { focus = RUS_establish_a_logistical_department }
+		prerequisite = { focus = RUS_form_womens_battalions }
+		prerequisite = { focus = RUS_recruit_cossack_cavalry }
 
 		available = {
 			has_war = yes
-			hidden_trigger = {
-				OR = {
-					has_idea = RUS_stavka
-					has_idea = RUS_stavka_at
-					has_idea = RUS_stavka_regain
-					has_idea = RUS_stavka_final
-				}	
-			}
 			any_owned_state = {
 				NOT = {
 					is_controlled_by = ROOT
+				}
+			}
+			hidden_trigger = {
+				has_dynamic_modifier = {
+					modifier = RUS_stavka
 				}
 			}
 		}
@@ -4497,7 +4919,7 @@
 		completion_reward = {
 			add_timed_idea = {
 				idea = RUS_reclaim_our_lands
-				days = 100
+				days = 120
 			}
 		}
 		ai_will_do = {

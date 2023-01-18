@@ -8,12 +8,13 @@ characters={
 		}
 		country_leader={
 			ideology=despotism 
-			traits = { inexperienced_imperialist inexperienced_monarch }
+			traits = { unpopular_monarch inexperienced_monarch }
 			expire="1965.1.1.1"
 			id=-1
 		}
 		country_leader={
 			ideology=conservatism
+			traits = { constitutional_monarch }
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -25,11 +26,36 @@ characters={
 				large=GFX_portrait_Mohammed_Zahir_Shah
 			}
 		}
+	}
+	RUS_alexander_kolchak={
+		name="Alexander Kolchak"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
 		country_leader={
 			ideology=despotism 
-			traits = { unpopular_monarch military_monarch }
+			traits = { nationalist_symbol retired_officer anti_communist anti_democrat }
 			expire="1965.1.1.1"
 			id=-1
+		}
+	}
+	RUS_rasputin={
+		name="Rasputin"
+		portraits={
+			civilian={
+				large=GFX_portrait_Mohammed_Zahir_Shah
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_rasputin
+			ledger = civilian
+			allowed = { original_tag = RUS }
+			can_be_fired = no
+			available = { NOT = { has_government = communism } }
+			traits = { scandalous_holy_man }
 		}
 	}
 }

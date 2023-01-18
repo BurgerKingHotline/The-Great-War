@@ -9,6 +9,10 @@ opinion_modifiers = {
 		value = 15
 	}
 
+	dismissed_the_duma = {
+		value = -15
+	}
+
 	talks_with_the_germans_modifier = {
 		value = -30
 	}

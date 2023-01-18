@@ -21,7 +21,10 @@ state={
 			arms_factory = 2
 			industrial_complex = 3
 			fuel_silo = 1
-			air_base = 8
+			air_base = 3
+			525 = {
+				bunker = 2
+			}
 		}
 		#add_core_of = SOV
 		add_core_of = UKR

@@ -9,6 +9,9 @@ state={
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
+			9546 = {
+				bunker = 1
+			}
 		}
 		
 		add_core_of = POL

@@ -77,3 +77,52 @@ is_colonial_power = {
 		has_government = communism
 	}
 }
+
+#RUS
+
+RUS_is_military_offensive_main_objective = {
+	OR = {
+		#ACTUAL NAME
+		state = 893 #Brusilov offensive
+		state = 763 #Eastern Prussia Offensive
+		state = 807 #Western Prussia Offensive
+		state = 66 #Silesia Offensive
+		state = 353 #Armenian Offensive
+
+		#CUSTOM BUT GENERIC NAME
+		state = 10 #WARSAW (WARSZAWA)
+		state = 812 #Tallin
+		state = 808 #RIGA
+		state = 43 #BUDAPEST (NORTHERN HUNGARY)
+		state = 46 #BUCHAREST (MUNTENIA)
+		state = 44 #TIRANA
+		state = 9 #PRAGUE (BOHEMIA)
+		state = 4 #Vienna (Niedderosterreich)
+		state = 2 #ROME (LATIUM)
+		state = 3 #BERNE (SWITZERLAND)
+		state = 64 #BERLIN (BRANDENBURG)
+		state = 55 #FRANKFURT (HESSEN)
+		state = 58 #HAMBURG (SCHLESWIG-HOLSTEIN)
+		state = 111 #HELSINKI (UUSIMAA)
+		state = 141 #STOCKHOLM (SVEALAND)
+		state = 110 #OSLO (OSTLANDET)
+		state = 37 #COPENHAGEN (SJAELLAND)
+		state = 7 #AMSTERDAM (HOLLAND)
+		state = 16 #PARIS (ILE DE FRANCE)
+		state = 126 #LONDON (GREATER LONDON AREA)
+		
+		#GENERIC NAME
+		state = 219 #MOSCOW
+		state = 195 #PETROGRAD
+		state = 217 #TSARITSYN
+		state = 784 #VILNIUS
+		state = 48 #SOFIA
+		state = 107 #SERBIA
+		state = 47 #ATHENS
+		state = 797 #ISTANBUL
+		state = 49 #ANKARA
+		state = 41 #MADRID
+		state = 112 #LISBON
+
+	}
+}

@@ -24,9 +24,8 @@
  RUS_seize_tannu_tuva:0 "Seize Tannu Tuva"
  RUS_matters_in_persia:0 "Matters In Persia"
  RUS_influence_persian_politics:0 "Influence Persian Politics"
- RUS_help_build_german_rails:0 "Help Build German Rails"
+ RUS_occupation_of_persia:0 "Occupation Of Persia"
  RUS_invest_in_persia:0 "Invest In Persia"
- RUS_division_of_persia:0 "Division Of Persia"
  RUS_direct_intervention_in_persia:0 "Direct Intervention In Persia"
  
  RUS_the_powers_of_the_tsar:0 "The Powers Of The Tsar"
@@ -43,6 +42,7 @@
  RUS_all_power_to_the_tsar:0 "All Power To The Tsar"
 
  RUS_tsarist_national_intervension:0 "Tsarist National Intervention"
+ RUS_tsarist_national_intervension_desc:0 ""
  RUS_take_full_control_of_the_army:0 "Take Full Control Of The Army"
  RUS_elections_in_the_duma:0 "Elections In The Duma"
  RUS_full_tsarist_control:0 "Full Tsarist Control"
@@ -115,9 +115,12 @@
  RUS_formulate_the_stavka:0 "Formulate The Stavka"
  RUS_regain_our_footing:0 "Regain Our Footing"
  RUS_war_of_attrition:0 "War Of Attrition"
- RUS_strengthen_partisan_movement:0 "Redraw The War Plans"
+ RUS_strategic_offensives:0 "Strategic Offensives"
+ RUS_address_the_arms_crisis:0 "Address The Arms Crisis"
+ RUS_establish_a_logistical_department:0 "Establish A Logistical Department"
+ RUS_form_womens_battalions:0 "Form Womens Battalions"
+ RUS_recruit_cossack_cavalry:0 "Recruit Cossack Cavalry"
  RUS_reclaim_our_lands:0 "Reclaim Our Lands"
- RUS_logistical_focus:0 "Logistical Focus"
 
  RUS_the_russian_civil_war:0 "The Russian Civil War"
  RUS_maintain_the_tsars_autocracy:0 "Maintain The Tsar's Autocracy"
@@ -140,9 +143,14 @@
 
  #DECISIONS
  russian_socialism_decisions:0 "Socialist Agitation"
- russian_socialism_decisions_desc:0 "The [RUS.GetNameDef] has had a history of dealing with revolutionaries who try to destroy our great empire! The most radical of these groups are the socialists, who are a fringe group supporting the works of Marx, a german philosopher. We must keep tabs on them to make sure they don't overthrow the government. \n\n§RIf the popularity of the socialists exceeds 50% and the radicalism exceeds 80% then they may start a revolution!§!\n\nSocialist Popularity = [?party_popularity_100@communism|Y]%\nSocialist Radicalism = [?RUS_socialist_radicalisation|Y]%\n"
+ russian_socialism_decisions_desc:0 "The [RUS.GetName] has had a history of dealing with revolutionaries who try to destroy our great empire! The most radical of these groups are the socialists, who are a fringe group supporting the works of Marx, a german philosopher. We must keep tabs on them to make sure they don't overthrow the government. \n\n§RIf the popularity of the socialists exceeds 50% and the radicalism exceeds 80% then they may start a revolution!§!\n\nSocialist Popularity = [?party_popularity_100@communism|Y]%\nSocialist Radicalism = [?RUS_socialist_radicalisation|Y]%\n"
+ RUS_tsarist_propaganda_dec:0 "Tsarist Propaganda"
  RUS_raid_marxist_printing_houses:0 "Raid Marxist Printing Houses"
  RUS_give_trade_unions_liberty:0 "Give Liberty to the Trade Unions"
+
+ RUS_dismiss_the_duma_timer:0 "Dismiss The Duma"
+ RUS_increase_industrialisation_attempts:0 "Increase Industrialisation Attempts"
+ RUS_decrease_industrialisation_attempts:0 "Decrease Industrialisation Attempts"
 
  RUS_crusade_against_communism_decisions:0 "Crusade Against Communism"
  RUS_fund_anti_communists:0 "Fund Anti Communists"
@@ -155,6 +163,7 @@
  RUS_russify_central_asia:0 "Russify Central Asia"
 
  RUS_tsarist_intervention_decisions:0 "Tsarist Intervention"
+ RUS_tsarist_intervention_decisions_desc:0 "Although it would cost us greatly in public opinion, we may need to directly intervene in the affairs of the state. Doing so would perhaps increase efficiency but would make ourselves liable to anything wrong that may happen during the duration of our intervention. Overall this would be a risky play, but would further cement our control over our nation and could increase efficiency."
  RUS_intervene_in_the_economy:0 "Intervention in the Economy"
  RUS_intervene_in_the_military:0 "Intervention in the Military"
  RUS_intervene_in_national_security:0 "Intervention in National Security"
@@ -164,6 +173,8 @@
 
  RUS_finish_the_trans_siberian_railway_dec:0 "Finish the Trans-Siberian railway"
  RUS_finish_the_trans_siberian_railway_man_dec:0 "Finish the Trans-Siberian railway in Manchuria"
+
+ RUS_military_offensive:0 "[GetMilitaryOffensiveName]"
 
  SOV_form_ssrs:0 "Formulate Sister Soviet Socialist Republics"
  SOV_form_ssrs_desc:0 "Although we may have secured the revolution in Russia, we have to secure it elsewhere throughout the old collapsing tsarist regime or else the revolution would collapse. For the glory of the Revolution!"
@@ -176,28 +187,66 @@
  RUS_amount_of_militia_spawned_tt:0 "§G[?FROM.RUS_divisions_spawned_amount]§! divisions will be spawned in this state!"
  
  #OTHER
- RUS_socialist_radicalisation_increase:0 "Socialist Radicalisation: $RIGHT|+%%-=0$."
+ RUS_socialist_radicalisation_increase:0 "Socialist Radicalisation: $RIGHT|+%%-=0..1$."
  autonomy_soviet_republic:0 "Soviet Socialist Republic"
  RUS_CIVIL_WAR_FACTION:0 "§ROther countries cannot join this faction during the Russian Civil War!§!"
  RUS_petrograd:0 "Petrograd"
+ RUS_siberian_wasteland:0 "Siberian Wasteland"
+ RUS_russian_military_offensive:0 "Russian Military Offensive"
+ RUS_military_offensive_name_brusilov:0 "Brusilov Offensive"
+ RUS_military_offensive_name_eastern_prussia:0 "Offensive in Eastern Prussia"
+ RUS_military_offensive_name_western_prussia:0 "Offensive in Western Prussia"
+ RUS_military_offensive_name_silesia:0 "Offensive in silesia"
+ RUS_military_offensive_name_armenia:0 "Offensive in [353.OWNER.GetAdjective] Armenia" 
 
  #TTS
  RUS_brits_wont_like_this:0 "§RThe British will not like this course of action...§!"
  RUS_core_greater_state_on_owned:0 "§YCores the states that was claimed by the previous focus.§!"
  if_mission_completed:0 "If the mission is completed:"
+ RUS_restore_cossack_units_spawn_tt:0 "§Y6 Cavalry Divisions§! will be created in §Y[ROOT.Capital.GetName]§!."
+ RUS_dimiss_the_duma_timer_tt:0 "§YIf we don't dimiss the Duma within 210 days then we will be in §RPolitical Deadlock§!!"
 
  RUS_menshevik_division_spawns:0 "Menshevik divisions will be spawned when the civil war starts!"
  RUS_bolshevik_division_spawns:0 "Bolshevik divisions will be spawned when the civil war starts!"
  RUS_trudovik_path_will_be_locked:0 "§RThe Trudovik path in the Soviet tree will be locked!§!"
  RUS_increase_divisions_when_civil_war:0 "More divisions will be spawned when the civil war starts!"
  RUS_when_civil_war_starts:0 "When the Russian civil war starts:"
- RUS_no_february_revolution:0 "The February Revolution will not happen"
- RUS_civil_war_no_independance:0 "During the civil war, no countries will attempt to gain independance"
+ RUS_no_february_revolution:0 "§YThe February Revolution will not happen.§!"
+ RUS_civil_war_no_independance:0 "§YDuring the civil war, no countries will attempt to gain independence.§!"
 
  RUS_cost_3_cg_while_effect_tt:0 "During the focus: \n§YConsumer Goods Factories: 3.0%§!"
  RUS_offmap_factories_tt:0 "§YWe will gain 5 Military and Civilian factories§!"
 
+ RUS_modify_stavka:0 "Modify §YStavka§! by \n"
+ RUS_stavka_army_attack_factor_tt:0 "Division Attack: $RIGHT|+=%0..1$" 
+ RUS_stavka_army_org_factor_tt:0 "Division Organization: $RIGHT|+=%0..1$" 
+ RUS_stavka_weekly_casualties_war_support_tt:0 "Weekly War Support (Combat Casualties): $RIGHT|+=%0..2$"
+ RUS_stavka_supply_combat_penalties_on_core_factor_tt:0 "Supply Combat Penalties on Core Territory: $RIGHT|-=%0..1$"  
+ RUS_stavka_max_planning_factor_tt:0 "Max planning factor: $RIGHT|+=%0..1$"  
+ RUS_stavka_coordination_bonus_tt:0 "Coordination: $RIGHT|+=%0..1$"   
+ RUS_stavka_air_fuel_consumption_factor_tt:0 "Air Fuel Consumption: $RIGHT|+=%0..1$"  
+ RUS_stavka_navy_fuel_consumption_factor_tt:0 "Navy Fuel Consumption: $RIGHT|+=%0..1$"  
+ RUS_stavka_army_fuel_consumption_factor_tt:0 "Army Fuel Consumption: $RIGHT|+=%0..1$"  
+ RUS_stavka_supply_consumption_factor_tt:0 "Supply Consumption: $RIGHT|+=%0..1$"  
+ 
+ RUS_other_people_like_you_more:0 "Other nations will be more inclined to accept your diplomacy, such as §YNon-aggression pacts§!."
+
+ RUS_military_offensive_scope_tt:0 "§Y[FROM.GetName]§! and §Yall neighbor states currently controlled by an enemy§!:\nAdd Modifier: §Y$RUS_russian_military_offensive$§! (Division Attack: §G+10.0%§!, Breakthrough: §G+10.00%§! for [ROOT.GetFlag]§Y[ROOT.GetNameDef]§! in the state)."
+ RUS_military_offensive_current_scope_negihbors_tt:0 "\nSecondary objectives (neighbours):"
+
+ #Flags
+ Russian_civil_war_flag:0 "The §YRussian Civil War§! is ongoing"
+ RUS_has_been_deadlocked_previously:0 "Has previously deadlocked the government"
+ RUS_german_full_access_flag:0 "Germany has full access in [PER.GetName]"
+ RUS_russian_full_access_flag:0 "Russia has full access in [PER.GetName]"
+ RUS_ger_agree_potsdam:0 "We have made a deal with Germany in the Potsdam Meeting"
+ RUS_duma_elections:0 "The 1912 Duma elections has happened"
+ RUS_duma_tsarist_majority_flag:0 "The Tsarists have won a majority in the Duma"
+ RUS_duma_no_majority_flag:0 "No faction has gained a majority in the Duma"
+ RUS_duma_socialist_majority_flag:0 "The Republicans have won a majority in the Duma"
+
  #Ideas
+ RUS_efficient_production:0 "Efficient Production"
  RUS_horrible_education:0 "Horrible Education Standards"
  RUS_great_harvest:0 "Great Harvest"
  RUS_strike:0 "Strike!"
@@ -206,7 +255,6 @@
  RUS_partisan_movement:0 "Partisan Movement"
  RUS_reclaim_our_lands:0 "Reclaim Our Lands"
  RUS_logistical_focus:0 "Logistical Focus"
- RUS_breadbasket_of_russia:0 "Breadbasked Of Russia"
  RUS_one_giant_factory:0 "One Giant Factory"
  RUS_air_force:0 "Russian Air Force"
  RUS_duma:0 "Duma"
@@ -230,6 +278,8 @@
  RUS_research_efficiency_increase:0 "Research Efficiency Increase"
  RUS_foreign_support:0 "Foreign Support"
  RUS_fractured_white_movement:0 "Fractured White Movement"
+ RUS_womens_battalions:0 "Womens Battalions"
+ RUS_political_deadlock_idea:0 "Political Deadlock"
 
  SOV_funds_from_international_communists:0 "Funds From International Communists"
  SOV_disorganised_party:0 "Disorganised Party"

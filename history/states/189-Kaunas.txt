@@ -18,7 +18,7 @@ state={
 			infrastructure = 3 #was: 5
 			6314 = {
 				naval_base = 1
-
+				bunker = 2
 			}
 
 		}

@@ -13,7 +13,7 @@ state={
 			3529 20.0
 		}
 		buildings = {
-			infrastructure = 4 #was: 7
+			infrastructure = 3 #was: 7
 			arms_factory = 1
 			industrial_complex = 1
 			air_base = 1

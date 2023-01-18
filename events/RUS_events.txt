@@ -26,13 +26,17 @@ country_event = {
 
 	option = { #do nothing
 		name = rus_stability.1.b
-		add_political_power = -300
+		add_political_power = -200
 		add_stability = -0.05
+		add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		}
 	}
 
 	option = { #accept their reforms
 		name = rus_stability.1.c
-		add_political_power = -500
+		add_political_power = -300
 		add_to_variable = {
 			var = RUS_socialist_radicalisation
 			value = -10
@@ -82,9 +86,10 @@ country_event = { #stability selector event
 		modifier = {
 			factor = 0.85
 			neutrality > 0.5
+			neutrality < 0.7
 		}
 		modifier = {
-			factor = 0.9
+			factor = 0.85
 			has_war = yes
 		}
 		modifier = {
@@ -92,11 +97,11 @@ country_event = { #stability selector event
 			surrender_progress > 0.1
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.9
 			check_variable = { RUS_socialist_radicalisation > 35 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.85
 			check_variable = { RUS_socialist_radicalisation > 55 }
 		}
 		modifier = {
@@ -122,7 +127,7 @@ country_event = { #stability selector event
 			}
 		}
 		modifier = {
-			factor = 0.85
+			factor = 0.75
 			OR = {
 				has_stability < 0.2
 				has_war_support < 0.2
@@ -143,6 +148,10 @@ country_event = { #stability selector event
 			}
 			1 = {
 				country_event = rus_stability.6
+				modifier = {
+					factor = 0 #if you remove -5 neutrality without any 
+					neutrality > 0.99 #other ideology, then it does nothing
+				}
 			}
 			1 = {
 				country_event = rus_stability.7
@@ -183,7 +192,100 @@ country_event = { #stability selector event
 				country_event = rus_stability.16
 				modifier = {
 					factor = 0 
-					has_war = no
+					NOT = {
+						has_completed_focus = RUS_take_full_control_of_the_army
+					}
+				}
+			}
+			1 = {
+				country_event = rus_stability.17
+				modifier = {
+					factor = 0 
+					NOT = {
+						has_completed_focus = RUS_cement_the_tsars_rule
+					}
+				}
+			}
+			1 = {
+				country_event = rus_stability.18
+			}
+			1 = {
+				country_event = rus_stability.19
+			}
+			1 = {
+				country_event = rus_stability.20
+				modifier = {
+					factor = 0
+					check_variable = { RUS_socialist_radicalisation < 40 }
+				}
+			}
+			1 = {
+				country_event = rus_stability.21
+				modifier = {
+					factor = 0
+					communism < 0.3
+				}
+			}
+			2 = {
+				country_event = rus_stability.22
+				modifier = {
+					factor = 0
+					OR = {
+						has_war_support < 0.8
+						has_war = no
+					}
+				}
+			}
+			2 = {
+				country_event = rus_stability.23
+				modifier = {
+					factor = 0
+					OR = {
+						has_war_support < 0.6
+						has_war = no
+					}
+				}
+			}
+			1 = {
+				country_event = rus_stability.24
+				modifier = {
+					factor = 0
+					OR = {
+						has_war_support < 0.4
+						has_war = no
+					}
+				}
+			}
+			1 = {
+				country_event = rus_stability.25
+				modifier = {
+					factor = 0
+					surrender_progress < 0.05
+				}
+			}
+			1 = {
+				country_event = rus_stability.26
+				modifier = {
+					factor = 0
+					surrender_progress < 0.1
+				}
+			}
+			1 = {
+				country_event = rus_stability.27
+				modifier = {
+					factor = 0
+					has_war_support < 0.7
+				}
+			}
+			1 = {
+				country_event = rus_stability.28
+				modifier = {
+					factor = 0
+					NOT = {
+						RUS_rasputin = {
+							is_political_advisor = yes
+						}
+					}
 				}
 			}
 		}
@@ -232,12 +334,50 @@ country_event = { #fire in factory
 			value = 3
 			tooltip = RUS_socialist_radicalisation_increase
 		}
+		effect_tooltip = {
+			random_owned_state = {
+				limit = {
+					industrial_complex > 2
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1.25
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1.25
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1.25
+				}
+			}
+		}
 	}
 
 	option = { #strengthen regulations
 		name = rus_stability.3.b
 		add_political_power = -50
 		add_stability = -0.05
+		effect_tooltip = {
+			random_owned_state = {
+				limit = {
+					industrial_complex > 2
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1.25
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1.25
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1.25
+				}
+			}
+		}
 	}
 }
 
@@ -278,10 +418,10 @@ country_event = { #a minor noble erupts a scandal
 	
 	option = { #do nothing
 		name = rus_stability.5.a
-		add_political_power = -50
+		add_political_power = -75
 	}
 
-	option = { #kick him from the family
+	option = { #remove his power
 		name = rus_stability.5.b
 		add_stability = -0.02
 		add_political_power = -25	
@@ -381,6 +521,10 @@ country_event = { #local strike
 				days = 90
 			}
 		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		}
 	}
 }
 country_event = { #larger strike
@@ -426,6 +570,10 @@ country_event = { #larger strike
 				days = 120
 			}
 		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
 	}
 }
 country_event = { #national unrest
@@ -448,7 +596,7 @@ country_event = { #national unrest
 					is_core_of = ROOT
 				}
 			}
-			add_resistance = 25
+			add_resistance = 15
 		}
 	}
 }
@@ -464,7 +612,6 @@ country_event = { #great harvest
 	
 	option = { #great!
 		name = rus_stability.12.a
-		add_stability = 0.05
 		if = {
 			limit = {
 				NOT = {
@@ -500,7 +647,7 @@ country_event = { #clamour for education reform
 		add_political_power = -100
 	}
 
-	option = { #great!
+	option = { #no sod off
 		name = rus_stability.13.b
 		if = {
 			limit = {
@@ -551,7 +698,7 @@ country_event = { #tsar visits a local area
 		add_stability = 0.05
 		add_popularity = {
 			ideology = neutrality 
-			popularity = 0.08
+			popularity = 0.03
 		}
 	}
 }
@@ -569,6 +716,290 @@ country_event = { #generals criticise the tsar over military operations
 		name = rus_stability.16.a
 		add_war_support = -0.05
 		army_experience = -50
+	}
+}
+country_event = { #protests against the tsars power increasing
+	id = rus_stability.17
+	title = rus_stability.17.t	
+	desc = rus_stability.17.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #do nothing
+		name = rus_stability.17.a
+		add_stability = -0.05
+		if = {
+			limit = {
+				has_war = yes
+			}
+			add_war_support = -0.05
+		}
+		add_political_power = -120
+		add_to_variable = {
+			var = RUS_socialist_radicalisation
+			value = 2
+			tooltip = RUS_socialist_radicalisation_increase
+		}
+	}
+}
+country_event = { #democratic opposition gains support
+	id = rus_stability.18
+	title = rus_stability.18.t	
+	desc = rus_stability.18.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #oh well
+		name = rus_stability.18.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+}
+country_event = { #communist opposition gains support
+	id = rus_stability.19
+	title = rus_stability.19.t	
+	desc = rus_stability.19.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #oh well
+		name = rus_stability.18.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = RUS_socialist_radicalisation
+			value = 3
+			tooltip = RUS_socialist_radicalisation_increase
+		}
+	}
+}
+country_event = { #communists use aggressive recruitment tactics
+	id = rus_stability.20
+	title = rus_stability.20.t	
+	desc = rus_stability.20.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #oh well
+		name = rus_stability.20.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+country_event = { #increasing radicalisation
+	id = rus_stability.21
+	title = rus_stability.21.t	
+	desc = rus_stability.21.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #oh well
+		name = rus_stability.21.a
+		add_to_variable = {
+			var = RUS_socialist_radicalisation
+			value = 5
+			tooltip = RUS_socialist_radicalisation_increase
+		}
+	}
+}
+country_event = { #mutiny
+	id = rus_stability.22
+	title = rus_stability.22.t	
+	desc = rus_stability.22.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #oh well
+		name = rus_stability.22.a
+		add_manpower = -25000
+		add_political_power = -25
+	}
+	
+	option = { #shoot the deserters
+		name = rus_stability.22.b
+		add_war_support = -0.05
+		add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		}
+	}
+}
+country_event = { #large mutiny
+	id = rus_stability.23
+	title = rus_stability.23.t	
+	desc = rus_stability.23.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #oh well
+		name = rus_stability.22.a
+		add_manpower = -50000
+		add_political_power = -50
+	}
+	
+	option = { #shoot the deserters
+		name = rus_stability.22.b
+		add_war_support = -0.08
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+country_event = { #front-line wide mutiny
+	id = rus_stability.24
+	title = rus_stability.24.t	
+	desc = rus_stability.24.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #oh well
+		name = rus_stability.22.a
+		add_manpower = -100000
+		add_political_power = -100
+	}
+	
+	option = { #shoot the deserters
+		name = rus_stability.22.b
+		add_war_support = -0.1
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = RUS_socialist_radicalisation
+			value = 5
+			tooltip = RUS_socialist_radicalisation_increase
+		}
+	}
+}
+country_event = { #public dissatisfaction with the war
+	id = rus_stability.25
+	title = rus_stability.25.t	
+	desc = rus_stability.25.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #oh well
+		name = rus_stability.25.a
+		add_war_support = -0.05
+	}
+}
+country_event = { #public dissatisfaction with the war
+	id = rus_stability.26
+	title = rus_stability.26.t	
+	desc = rus_stability.25.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #oh well
+		name = rus_stability.25.a
+		add_war_support = -0.1
+	}
+}
+country_event = { #public opinion of the tsar decreases
+	id = rus_stability.27
+	title = rus_stability.27.t	
+	desc = rus_stability.27.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #oh well
+		name = rus_stability.27.a
+		if = {
+			limit = {
+				neutrality < 0.99 #other ideology, then it does nothing
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.8
+			}
+		}
+		else = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.04
+			}
+		}
+		add_political_power = -50
+	}
+}
+country_event = { #rasputin is involved in another scandal
+	id = rus_stability.28
+	title = rus_stability.28.t	
+	desc = rus_stability.28.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #of course he is
+		name = rus_stability.28.a
+		if = {
+			limit = {
+				neutrality < 0.99 #other ideology, then it does nothing
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.2
+			}
+		}
+		else = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.01
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.01
+			}
+		}
+		add_political_power = -50
+		add_stability = -0.05
 	}
 }
 #########################
@@ -753,6 +1184,17 @@ country_event = { #who takes control of the government
 	
 	option = { #tsar michael does
 		name = rus_civilwar.1000.a
+		hidden_effect = {
+			add_country_leader_role = {
+				character = RUS_michael
+				country_leader={
+					ideology=despotism 
+					traits = { inexperienced_imperialist military_monarch }
+					expire="1965.1.1.1"
+					id=-1
+				}
+			}
+		}
 		promote_character = {
 			character = RUS_michael
 			ideology = despotism
@@ -1390,7 +1832,7 @@ country_event = { #collapse of russian control in europe
 				limit = {
 					any_owned_state = {
 						is_controlled_by = RUS
-						is_core_of = UKR
+						is_core_of = POL
 					}
 				}
 				release = POL
@@ -2046,7 +2488,7 @@ country_event = { #germans back down
 	
 	option = {#great
 		name = rus_events.7.a
-		set_country_flag = RUS_ger_agree_potsdam
+		set_global_flag = RUS_ger_agree_potsdam
 	}
 }
 
@@ -3059,6 +3501,110 @@ country_event = { #poles demand independance
 			target = POL
 			days = 100
 		}
+	}
+}
+
+country_event = { #political deadlock
+	id = rus_events.39
+	title = rus_events.39.t	
+	desc = rus_events.39.desc
+
+	is_triggered_only = yes
+	
+	option = { #ah crap
+		name = rus_events.39.a
+		add_political_power = -100
+		add_stability = -0.15
+		uncomplete_national_focus = {
+			focus = RUS_cement_the_tsars_rule
+			uncomplete_children = yes
+			refund_political_power = no
+		}
+		add_timed_idea = {
+			idea = RUS_political_deadlock_idea
+			days = 180
+		}
+		set_country_flag = RUS_has_been_deadlocked_previously
+	}
+}
+
+country_event = { #dismissal of the duma
+	id = rus_events.40
+	title = rus_events.40.t	
+	desc = rus_events.40.desc
+
+	is_triggered_only = yes
+	
+	option = { #the tsar shall reign supreme
+		name = rus_events.40.a
+		add_political_power = 50
+		FRA = {
+			if = {
+				limit = {
+					has_government = democratic
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = dismissed_the_duma
+			}
+		}
+		ENG = {
+			if = {
+				limit = {
+					has_government = democratic
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = dismissed_the_duma
+			}
+		}
+	}
+}
+
+country_event = { #Rasputin gains more power
+	id = rus_events.41
+	title = rus_events.41.t	
+	desc = rus_events.41.desc
+
+	is_triggered_only = yes
+	
+	option = { #maybe i shouldnt have taken the army
+		name = rus_events.41.a
+		add_political_power = -50
+		add_stability = -0.05
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = rus_events.42
+				days = 365
+				random = 60
+			}
+		}
+	}
+}
+
+country_event = { #Rasputin gets assassinated
+	id = rus_events.42
+	title = rus_events.42.t	
+	desc = rus_events.42.desc
+
+	trigger = {
+		RUS_rasputin = {
+			is_political_advisor = yes
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = { #finally
+		name = rus_events.42.a
+		deactivate_advisor = RUS_rasputin
+		add_stability = 0.05
 	}
 }
 

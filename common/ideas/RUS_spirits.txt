@@ -1,5 +1,22 @@
 ideas = {
 	country = {
+		RUS_political_deadlock_idea = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				disabled_ideas = 1
+				political_power_cost = 0.5
+			}
+		}
 		RUS_horrible_education = {
 			picture = generic_production_bonus
 			allowed = {
@@ -17,7 +34,7 @@ ideas = {
 			}
 		}
 		RUS_great_harvest = {
-			picture = generic_production_bonus
+			picture = LIT_invested_in_farms
 			allowed = {
 				always = no
 			}
@@ -34,7 +51,7 @@ ideas = {
 			}
 		}
 		RUS_strike = {
-			picture = generic_production_bonus
+			picture = POL_the_peasants_strike
 			allowed = {
 				always = no
 			}
@@ -54,7 +71,7 @@ ideas = {
 			}
 		}
 		RUS_inefficient_high_command = {
-			picture = generic_production_bonus
+			picture = chi_incompetent_officers
 			allowed = {
 				always = no
 			}
@@ -75,7 +92,7 @@ ideas = {
 		}
 		RUS_inefficient_high_command1 = {
 			name = RUS_inefficient_high_command
-			picture = generic_production_bonus
+			picture = chi_incompetent_officers
 			allowed = {
 				always = no
 			}
@@ -89,137 +106,6 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = -0.1
 				land_doctrine_cost_factor = 0.1
-			}
-		}
-		RUS_stavka = {
-			picture = generic_production_bonus
-			allowed = {
-				always = no
-			}
-
-			cancel = {
-				has_war = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				land_doctrine_cost_factor = -0.05
-				max_planning_factor = 0.25
-				planning_speed = 0.1
-				recon_factor = 0.1
-				coordination_bonus = 0.05
-				army_org_factor = -0.1	
-				army_attack_factor = -0.05
-			}
-		}
-		RUS_stavka_at = {
-			name = RUS_stavka
-			picture = generic_production_bonus
-			allowed = {
-				always = no
-			}
-
-			cancel = {
-				has_war = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				land_doctrine_cost_factor = -0.05
-				max_planning_factor = 0.25
-				planning_speed = 0.1
-				recon_factor = 0.1
-				coordination_bonus = 0.05
-				army_org_factor = -0.1
-				army_attack_factor = -0.05
-				dig_in_speed_factor = -0.1
-				supply_combat_penalties_on_core_factor = -0.25
-				weekly_casualties_war_support = 0.001
-				max_dig_in = 5
-			}
-		}
-		RUS_stavka_regain = {
-			name = RUS_stavka
-			picture = generic_production_bonus
-			allowed = {
-				always = no
-			}
-
-			cancel = {
-				has_war = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				land_doctrine_cost_factor = -0.05
-				max_planning_factor = 0.25
-				planning_speed = 0.1
-				recon_factor = 0.1
-				coordination_bonus = 0.05
-				army_org_factor = -0.05
-			}
-		}
-		RUS_stavka_final = {
-			name = RUS_stavka
-			picture = generic_production_bonus
-			allowed = {
-				always = no
-			}
-
-			cancel = {
-				has_war = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				land_doctrine_cost_factor = -0.05
-				max_planning_factor = 0.25
-				planning_speed = 0.1
-				recon_factor = 0.1
-				coordination_bonus = 0.05
-				army_org_factor = -0.05
-				dig_in_speed_factor = -0.1
-				supply_combat_penalties_on_core_factor = -0.25
-				weekly_casualties_war_support = 0.001
-				max_dig_in = 5
-			}
-		}
-		RUS_partisan_movement = {
-			picture = generic_production_bonus
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				resistance_growth_on_our_occupied_states = 0.15
-				resistance_damage_to_garrison_on_our_occupied_states = 0.15
-				resistance_target_on_our_occupied_states = 0.08
 			}
 		}
 		RUS_reclaim_our_lands = {
@@ -252,8 +138,8 @@ ideas = {
 				org_loss_when_moving = -0.05
 			}
 		}
-		RUS_logistical_focus = {
-			picture = generic_production_bonus
+		RUS_womens_battalions = {
+			picture = generic_women_in_the_army
 			allowed = {
 				always = no
 			}
@@ -265,10 +151,28 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				supply_consumption_factor = -0.05
-				air_fuel_consumption_factor = -0.05
-				army_fuel_consumption_factor = -0.05
-				navy_fuel_consumption_factor = -0.05
+				conscription_factor = 0.1
+				army_morale_factor = 0.05
+				political_power_cost = 0.05
+			}
+		}
+		RUS_efficient_production = {
+			picture = generic_supply_depot
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = { 
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
 			}
 		}
 		RUS_breadbasket_of_russia = {
@@ -1144,9 +1048,9 @@ ideas = {
 			modifier = {
 				operation_coup_government_outcome = 0.25
 				boost_ideology_mission_factor = 0.25
-				war_support_factor = 0.15
-				army_attack_factor = 0.1
-				army_morale_factor = 0.1
+				war_support_factor = 0.1
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
 			}
 
 		}
@@ -1166,9 +1070,9 @@ ideas = {
 			
 			modifier = {
 				subversive_activites_upkeep = 0.25
-				war_support_factor = 0.15
-				army_attack_factor = 0.1
-				army_morale_factor = 0.1
+				war_support_factor = 0.1
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
 			}
 
 		}
@@ -1312,7 +1216,7 @@ ideas = {
 		}
 
 		RUS_siberian_tigers = {
-			picture = generic_production_bonus
+			picture = FRA_army_of_aggression_focus
 			allowed = {
 				always = no
 			}
@@ -1381,7 +1285,7 @@ ideas = {
 		}
 
 		RUS_strong_independance_movements = {
-			picture = generic_production_bonus
+			picture = MEX_revolutionary_army
 			allowed = {
 				always = no
 			}
@@ -1401,7 +1305,7 @@ ideas = {
 		}
 
 		RUS_joint_training = {
-			picture = generic_production_bonus
+			picture = generic_army_war_college
 			allowed = {
 				always = no
 			}
@@ -1464,7 +1368,7 @@ ideas = {
 		}
 
 		RUS_industrialising_nation_1 = {
-			picture = generic_production_bonus
+			picture = SOV_second_five_year_plan
 			allowed = {
 				always = no
 			}
@@ -1483,7 +1387,7 @@ ideas = {
 
 		RUS_industrialising_nation_2 = {
 			name = RUS_industrialising_nation_1
-			picture = generic_production_bonus
+			picture = SOV_second_five_year_plan
 			allowed = {
 				always = no
 			}
@@ -1504,7 +1408,7 @@ ideas = {
 
 		RUS_industrialising_nation_3 = {
 			name = RUS_industrialising_nation_1
-			picture = generic_production_bonus
+			picture = SOV_third_five_year_plan
 			allowed = {
 				always = no
 			}
@@ -1527,7 +1431,7 @@ ideas = {
 
 		RUS_industrialising_nation_4 = {
 			name = RUS_industrialising_nation_1
-			picture = generic_production_bonus
+			picture = SOV_third_five_year_plan
 			allowed = {
 				always = no
 			}
@@ -1550,7 +1454,7 @@ ideas = {
 
 		RUS_industrialising_nation_5 = {
 			name = RUS_industrialising_nation_1
-			picture = generic_production_bonus
+			picture = SOV_third_five_year_plan_civilian
 			allowed = {
 				always = no
 			}
@@ -1574,7 +1478,7 @@ ideas = {
 
 		RUS_industrialising_nation_6 = {
 			name = RUS_industrialising_nation_1
-			picture = generic_production_bonus
+			picture = SOV_fourth_five_year_plan
 			allowed = {
 				always = no
 			}

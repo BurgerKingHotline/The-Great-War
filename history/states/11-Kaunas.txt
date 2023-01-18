@@ -14,7 +14,12 @@ state={
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
-
+			6296 = {
+				bunker = 3
+			}
+			6360 = {
+				bunker = 1
+			}
 		}
 		add_core_of = LIT
 	}
