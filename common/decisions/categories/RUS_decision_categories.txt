@@ -58,7 +58,24 @@ SOV_peoples_militias = {
 	}
 	visible = {
 		has_government = Communism
-		has_war_with = RUS
+		OR = {
+			has_war_with = RUS
+			has_global_flag = Russian_civil_war_flag
+		}
 		#has_completed_focus = RUS_crusade_against_communism
+	}
+}
+
+SOV_civil_war = {
+	visible_when_empty = no
+	allowed = {
+		tag = SOV
+	}
+	visible = {
+		has_government = Communism
+		OR = {
+			has_war_with = RUS
+			has_global_flag = Russian_civil_war_flag
+		}
 	}
 }

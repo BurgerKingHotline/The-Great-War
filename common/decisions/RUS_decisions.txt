@@ -1681,7 +1681,7 @@ SOV_peoples_militias = {
 						1 = {
 
 						}
-						1 = {
+						2 = {
 							create_unit = {
 								division = "name = \"People's Militia\" division_template = \"People's Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.8 start_manpower_factor = 1"
 								owner = SOV
@@ -1716,6 +1716,37 @@ SOV_peoples_militias = {
 		
 		ai_will_do = {
 			factor = 1000
+		}
+	}
+}
+
+SOV_civil_war = {
+	
+	SOV_consolidate_our_lands_timer = {
+
+		icon = generic_civil_support
+
+		allowed = { always = no }
+
+		available = {
+			#has_completed_focus = RUS_dismiss_the_duma
+		}
+
+		is_good = no
+		fire_only_once = yes
+		selectable_mission = no
+		days_mission_timeout = 100
+
+		timeout_effect = {
+			every_other_country = {
+				limit = {
+					has_war_with = RUS
+				}
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+			}
 		}
 	}
 }

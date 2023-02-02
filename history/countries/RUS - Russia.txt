@@ -85,6 +85,11 @@ if = {
 		id = rus_events.12
 		days = 737
 	}
+	country_event = {
+		id = rus_stability.1
+		days = 533
+	}
+	
 }
 
 1914.1.1 = {

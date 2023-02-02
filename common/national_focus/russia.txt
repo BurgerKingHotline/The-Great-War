@@ -4881,7 +4881,7 @@
 			}
 			add_to_variable = {
 				var = RUS_stavka_supply_consumption_factor
-				value = -0.1
+				value = -0.05
 				tooltip = RUS_stavka_supply_consumption_factor_tt
 			}
 		}

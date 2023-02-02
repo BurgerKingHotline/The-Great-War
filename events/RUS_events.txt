@@ -235,6 +235,10 @@ country_event = { #stability selector event
 						has_war = no
 					}
 				}
+				modifier = {
+					factor = 1.5
+					has_war_support < 0.4
+				}
 			}
 			2 = {
 				country_event = rus_stability.23
@@ -244,6 +248,10 @@ country_event = { #stability selector event
 						has_war_support < 0.6
 						has_war = no
 					}
+				}
+				modifier = {
+					factor = 1.5
+					has_war_support < 0.3
 				}
 			}
 			1 = {
@@ -255,12 +263,20 @@ country_event = { #stability selector event
 						has_war = no
 					}
 				}
+				modifier = {
+					factor = 1.5
+					has_war_support < 0.2
+				}
 			}
 			1 = {
 				country_event = rus_stability.25
 				modifier = {
 					factor = 0
 					surrender_progress < 0.05
+				}
+				modifier = {
+					factor = 2
+					has_war_support < 0.4
 				}
 			}
 			1 = {
@@ -286,6 +302,20 @@ country_event = { #stability selector event
 							is_political_advisor = yes
 						}
 					}
+				}
+			}
+			1 = {
+				country_event = rus_stability.29
+				modifier = {
+					factor = 0
+					OR = {
+						has_war_support < 0.6
+						has_war = no
+					}
+				}
+				modifier = {
+					factor = 3
+					has_war_support < 0.3
 				}
 			}
 		}
@@ -334,6 +364,7 @@ country_event = { #fire in factory
 			value = 3
 			tooltip = RUS_socialist_radicalisation_increase
 		}
+		custom_effect_tooltip = RUS_has_happened
 		effect_tooltip = {
 			random_owned_state = {
 				limit = {
@@ -357,8 +388,11 @@ country_event = { #fire in factory
 
 	option = { #strengthen regulations
 		name = rus_stability.3.b
-		add_political_power = -50
-		add_stability = -0.05
+		add_political_power = -75
+		custom_effect_tooltip = RUS_has_happened
+		trigger = {
+			has_political_power > 75
+		}
 		effect_tooltip = {
 			random_owned_state = {
 				limit = {
@@ -596,7 +630,7 @@ country_event = { #national unrest
 					is_core_of = ROOT
 				}
 			}
-			add_resistance = 15
+			add_resistance = 10
 		}
 	}
 }
@@ -797,7 +831,7 @@ country_event = { #communists use aggressive recruitment tactics
 	}
 	
 	option = { #oh well
-		name = rus_stability.20.a
+		name = rus_stability.18.a
 		add_popularity = {
 			ideology = communism
 			popularity = 0.05
@@ -837,6 +871,23 @@ country_event = { #mutiny
 		name = rus_stability.22.a
 		add_manpower = -25000
 		add_political_power = -25
+		if = {
+			limit = {
+				NOT = {
+					has_idea = RUS_mutiny
+				}
+			}
+			add_timed_idea = {
+				idea = RUS_mutiny
+				days = 90
+			}
+		}
+		else = {
+			modify_timed_idea = {
+				idea = RUS_mutiny
+				days = 90
+			}
+		}
 	}
 	
 	option = { #shoot the deserters
@@ -862,6 +913,23 @@ country_event = { #large mutiny
 		name = rus_stability.22.a
 		add_manpower = -50000
 		add_political_power = -50
+		if = {
+			limit = {
+				NOT = {
+					has_idea = RUS_mutiny
+				}
+			}
+			add_timed_idea = {
+				idea = RUS_mutiny
+				days = 120
+			}
+		}
+		else = {
+			modify_timed_idea = {
+				idea = RUS_mutiny
+				days = 120
+			}
+		}
 	}
 	
 	option = { #shoot the deserters
@@ -887,6 +955,23 @@ country_event = { #front-line wide mutiny
 		name = rus_stability.22.a
 		add_manpower = -100000
 		add_political_power = -100
+		if = {
+			limit = {
+				NOT = {
+					has_idea = RUS_mutiny
+				}
+			}
+			add_timed_idea = {
+				idea = RUS_mutiny
+				days = 180
+			}
+		}
+		else = {
+			modify_timed_idea = {
+				idea = RUS_mutiny
+				days = 180
+			}
+		}
 	}
 	
 	option = { #shoot the deserters
@@ -920,7 +1005,7 @@ country_event = { #public dissatisfaction with the war
 }
 country_event = { #public dissatisfaction with the war
 	id = rus_stability.26
-	title = rus_stability.26.t	
+	title = rus_stability.25.t	
 	desc = rus_stability.25.desc	
 
 	is_triggered_only = yes
@@ -947,8 +1032,8 @@ country_event = { #public opinion of the tsar decreases
 		name = rus_stability.27.a
 		if = {
 			limit = {
-				neutrality < 0.99 #other ideology, then it does nothing
-			}
+				neutrality < 0.99 #if there are no other ideology, then it does nothing
+			}                     #so we're checking to see if there is
 			add_popularity = {
 				ideology = neutrality
 				popularity = -0.8
@@ -1000,6 +1085,45 @@ country_event = { #rasputin is involved in another scandal
 		}
 		add_political_power = -50
 		add_stability = -0.05
+	}
+}
+country_event = { #Anti war groups gain power
+	id = rus_stability.29
+	title = rus_stability.29.t	
+	desc = rus_stability.29.desc	
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+	
+	option = { #Can't they see we are trying to fight an oppressive power?
+		name = rus_stability.25.a
+		if = {
+			limit = {
+				neutrality < 0.99 #other ideology, then it does nothing
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.5
+			}
+		}
+		else = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+		}
+		add_to_variable = {
+			var = RUS_socialist_radicalisation
+			value = 8
+			tooltip = RUS_socialist_radicalisation_increase
+		}
+		add_war_support = -0.05
 	}
 }
 #########################
@@ -1380,10 +1504,7 @@ country_event = { #Russian civil war starts
 			limit = {
 				has_war_with = ROOT
 			}
-			declare_war_on = {
-				target = SOV
-				type = annex_everything
-			}
+			set_country_flag = RUS_has_war_with_rus_during_civil_war_flag
 		}
 	}
 	
@@ -1680,6 +1801,7 @@ country_event = { #mass uprisings
 		else = {
 			release = FIN
 		}
+		release_puppet_on_controlled = DON
 		SOV = {
 			set_capital = {
 				state = 219
@@ -1722,7 +1844,6 @@ country_event = { #collapse of russian control in europe
 					state = 204
 					state = 95
 					state = 96
-					state = 784
 					state = 243
 					state = 241
 					state = 205
@@ -2189,6 +2310,103 @@ country_event = { #collapse of russian control in europe
 			}
 		}
 		UKR = { change_tag_from = ROOT }
+	}
+}
+
+
+country_event = { #belarus revolts
+	id = rus_civilwar.9
+	title = rus_civilwar.9.t	
+	desc = { #if they declared independence and made a new state
+		text = rus_civilwar.9.desc_new
+		trigger = {
+			OR = {
+				NOT = {
+					country_exists = BLR
+				}
+				has_country_flag = RUS_civilwar_9_new
+			}
+		}
+	}
+	desc = { #if they declared independence and joined another state
+		text = rus_civilwar.9.desc_joined
+		trigger = {
+			NOT = {
+				has_country_flag = RUS_civilwar_9_new
+			}
+			country_exists = BLR
+		}
+	}
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		any_state = {
+			is_core_of = BLR
+			owns_or_subject_of = yes
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				BLR = {
+					exists = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = BLR
+					owns_or_subject_of = yes
+				}
+				transfer_state_to = BLR
+			}
+			if = {
+				limit = {
+					BLR = {
+						is_subject_of = ROOT
+					}
+				}
+				set_autonomy = {
+					target = BLR
+					autonomy_state = autonomy_free
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+		}
+		else = {
+			release_on_controlled = BLR
+			set_country_flag = RUS_civilwar_9_new
+		}
+	}
+	
+	option = {#destroy them!
+		name = rus_civilwar.9.a
+		declare_war_on = {
+			target = BLR
+			type = annex_everything
+		}
+		if = {
+			limit = {
+				BLR = {
+					is_subject = yes
+				}
+			}
+			custom_effect_tooltip = RUS_blr_is_subject_tt
+		}
+	}
+	
+	option = {#we dont have enough to deal with them for now
+		name = rus_civilwar.9.b
+		add_political_power = 25
+		hidden_effect = {
+			set_truce = {
+				target = BLR
+				days = 30
+			}
+		}
 	}
 }
 
@@ -3520,6 +3738,11 @@ country_event = { #political deadlock
 			uncomplete_children = yes
 			refund_political_power = no
 		}
+		add_to_variable = {
+			var = RUS_socialist_radicalisation
+			value = 15
+			tooltip = RUS_socialist_radicalisation_increase
+		}
 		add_timed_idea = {
 			idea = RUS_political_deadlock_idea
 			days = 180
@@ -3617,9 +3840,28 @@ country_event = { #Lenin arrives
 	desc = sov_events.1.desc
 
 	trigger = {
-		OR = {
-			original_tag = SOV
-			original_tag = RUS
+		if = {
+			limit = {
+				country_exists = SOV
+				country_exists = RUS
+				has_global_flag = Russian_civil_war_flag
+			}
+			OR = {
+				AND = {
+					original_tag = SOV
+					has_government = communism
+				}
+				AND = {
+					original_tag = RUS
+					has_government = communism
+				}
+			}
+		}
+		else = {
+			OR = {
+				original_tag = SOV
+				original_tag = RUS
+			}
 		}
 		has_global_flag = RUS_lenin_in_russia
 		NOT = {
@@ -3646,7 +3888,7 @@ country_event = { #Lenin arrives
 		}
 	}
 
-	option = { #booo
+	option = { #Who let him in?
 		name = sov_events.1.b
 		trigger = {
 			NOT = {
@@ -3667,5 +3909,23 @@ country_event = { #Lenin arrives
 				tooltip = RUS_socialist_radicalisation_increase
 			}
 		}
+	}
+}
+
+country_event = { #notif for lenin arriving for whites in civil war
+	id = sov_events.2
+	title = sov_events.2.t	
+	desc = sov_events.2.desc
+
+	trigger = {
+		has_global_flag = Russian_civil_war_flag
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #Who let him in?
+		name = sov_events.1.b
 	}
 }
