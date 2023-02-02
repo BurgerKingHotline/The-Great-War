@@ -3,7 +3,7 @@ state={
 	name="STATE_928"
 	
 	history={
-		owner = RAJ #removed it for ux reasons
+		owner = OMA
 		add_claim_by = OMA
 		add_core_of = PAK
 		buildings = {
