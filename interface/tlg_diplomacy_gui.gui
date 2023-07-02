@@ -39,7 +39,7 @@ guiTypes = {
             name = "blank_btn_plus_one"
             position = {x=325 y=80}
             quadTextureSprite ="GFX_blank_button"
-            buttonText = "+ 1"
+            buttonText = plus1
             buttonFont = "hoi_16mbs"
             clicksound = click_default
         }
@@ -47,7 +47,7 @@ guiTypes = {
             name = "blank_btn_plus_five"
             position = {x=375 y=80}
             quadTextureSprite ="GFX_blank_button"
-            buttonText = "+ 5"
+            buttonText = plus5
             buttonFont = "hoi_16mbs"
             clicksound = click_default
         }
@@ -55,7 +55,7 @@ guiTypes = {
             name = "blank_btn_plus_ten"
             position = {x=425 y=80}
             quadTextureSprite ="GFX_blank_button"
-            buttonText = "+ 10"
+            buttonText = plus10
             buttonFont = "hoi_16mbs"
             clicksound = click_default
         }
@@ -63,7 +63,7 @@ guiTypes = {
             name = "blank_btn_minus_one"
             position = {x=225 y=80}
             quadTextureSprite ="GFX_blank_button"
-            buttonText = "- 1"
+            buttonText = minus1
             buttonFont = "hoi_16mbs"
             clicksound = click_default
         }
@@ -71,7 +71,7 @@ guiTypes = {
             name = "blank_btn_minus_five"
             position = {x=175 y=80}
             quadTextureSprite ="GFX_blank_button"
-            buttonText = "- 5"
+            buttonText = minus5
             buttonFont = "hoi_16mbs"
             clicksound = click_default
         }
@@ -79,7 +79,7 @@ guiTypes = {
             name = "blank_btn_minus_ten"
             position = {x=125 y=80}
             quadTextureSprite ="GFX_blank_button"
-            buttonText = "- 10"
+            buttonText = minus10
             buttonFont = "hoi_16mbs"
             clicksound = click_default
         }

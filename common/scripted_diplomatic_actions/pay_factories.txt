@@ -3,7 +3,11 @@ scripted_diplomatic_actions = {
 	send_factories_button = { # will be used in most localizations
 	
 		visible = { #if action is visible on gui
-			always = yes
+			NOT = {
+				has_war_with = THIS
+				is_embargoed_by = THIS
+				is_embargoing = THIS
+			}
 		}
 		selectable = {
 			OR = {
@@ -61,7 +65,7 @@ scripted_diplomatic_actions = {
 
 		# ai_will_do to decide if AI should send this action or not
 		ai_desire = {
-			base = -1
+			base = 1
 		}
 	}
 }

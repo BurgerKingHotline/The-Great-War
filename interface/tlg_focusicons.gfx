@@ -16,6 +16,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_generic_consumer_goods"
+		texturefile = "gfx/interface/goals/GEN_consumer_goods.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_RUS_invest_in_persia"
 		texturefile = "gfx/interface/goals/RUS_invest_in_persia.dds"
 	}
@@ -68,6 +73,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_GER_naval_dominance"
 		texturefile = "gfx/interface/goals/GER_naval_dominance.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_invest_ruhr"
+		texturefile = "gfx/interface/goals/GER_invest_ruhr.dds"
 	}
 
 	SpriteType = {

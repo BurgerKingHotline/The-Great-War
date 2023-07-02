@@ -67,7 +67,7 @@ characters={
 		}
 		advisor = {
 			slot = army_chief
-			removal_cost = -1
+			can_be_fired = no
 			idea_token = GER_helmuth_moltke
 			visible = {
 				NOT = {

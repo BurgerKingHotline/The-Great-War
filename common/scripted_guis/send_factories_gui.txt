@@ -1,8 +1,6 @@
 scripted_gui = {
 	send_factories_ui = {
-        visible = {
-            always = no
-        }
+		context_type = diplomatic_action
 		window_name = "send_factories_ui_window"
 
 		effects = {
