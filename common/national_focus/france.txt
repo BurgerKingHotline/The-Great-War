@@ -1200,9 +1200,6 @@
 					slot = high_command
 					idea_token = FRA_emile_guepratte
 					ledger = navy
-					allowed = {
-						original_tag = FRA
-					}
 					traits = {
 						navy_chief_reform_1 
 						navy_chief_commerce_raiding_2 
@@ -1467,9 +1464,6 @@
 					slot = high_command
 					idea_token = FRA_joseph_joffre
 					ledger = army
-					allowed = {
-						original_tag = FRA
-					}
 					traits = {
 						army_chief_offensive_1
 					}
@@ -1625,9 +1619,6 @@
 					slot = army_chief
 					idea_token = FRA_joseph_joffre
 					ledger = army
-					allowed = {
-						original_tag = FRA
-					}
 					traits = {
 						army_chief_offensive_2
 					}
@@ -1663,9 +1654,6 @@
 					slot = army_chief
 					idea_token = FRA_maurice_sarrail
 					ledger = army
-					allowed = {
-						original_tag = FRA
-					}
 					traits = {
 						army_chief_offensive_1 #probably change this
 					}
@@ -1702,9 +1690,6 @@
 					slot = army_chief
 					idea_token = FRA_joseph_gallieni
 					ledger = army
-					allowed = {
-						original_tag = FRA
-					}
 					traits = {
 						army_chief_organizational_2
 					}

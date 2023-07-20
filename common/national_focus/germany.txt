@@ -104,7 +104,7 @@
 
 	focus = {
 		id = GER_limit_kaiser
-		icon = GFX_
+		icon = GFX_focus_rom_handle_king
 		x = 2
 		y = 1
 		relative_position_id = GER_accept_british_navy
@@ -125,11 +125,12 @@
 
 	focus = {
 		id = GER_violent_overthrow
-		icon = GFX_
+		icon = GFX_goal_generic_demand_territory
 		x = -3
 		y = 1
 		relative_position_id = GER_no_kaiser
 		prerequisite = { focus = GER_no_kaiser }
+		mutually_exclusive = { focus = GER_peaceful_compromise }
 		cost = 25
 		available_if_capitulated = yes
 
@@ -145,7 +146,7 @@
 
 	focus = {
 		id = GER_funded_revoltutionaries
-		icon = GFX_
+		icon = GFX_focus_YUG_pan_slavic_congress
 		x = -1
 		y = 1
 		relative_position_id = GER_violent_overthrow
@@ -165,7 +166,7 @@
 
 	focus = {
 		id = GER_lead_colonies
-		icon = GFX_
+		icon = GFX_focus_ETH_african_wildfire
 		x = -1
 		y = 1
 		relative_position_id = GER_funded_revoltutionaries
@@ -185,7 +186,7 @@
 
 	focus = {
 		id = GER_target_imperialism
-		icon = GFX_
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		x = 1
 		y = 1
 		relative_position_id = GER_funded_revoltutionaries
@@ -208,7 +209,7 @@
 
 	focus = {
 		id = GER_invite_marxists
-		icon = GFX_
+		icon = GFX_focus_generic_join_comintern
 		x = -1
 		y = 1
 		relative_position_id = GER_target_imperialism
@@ -229,7 +230,7 @@
 
 	focus = {
 		id = GER_begin_revolution
-		icon = GFX_
+		icon = GFX_focus_focus_fra_revolution_utmost
 		x = 0
 		y = 1
 		relative_position_id = GER_invite_marxists
@@ -270,11 +271,12 @@
 
 	focus = {
 		id = GER_peaceful_compromise
-		icon = GFX_
+		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 1
 		relative_position_id = GER_no_kaiser
 		prerequisite = { focus = GER_no_kaiser }
+		mutually_exclusive = { focus = GER_violent_overthrow }
 		cost = 25
 		available_if_capitulated = yes
 
@@ -290,7 +292,7 @@
 
 	focus = {
 		id = GER_constitutional_monarchy
-		icon = GFX_
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		x = 0
 		y = 1
 		relative_position_id = GER_peaceful_compromise
@@ -310,7 +312,7 @@
 
 	focus = {
 		id = GER_new_constitution
-		icon = GFX_
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		x = 0
 		y = 1
 		relative_position_id = GER_limit_kaiser
@@ -350,7 +352,7 @@
 
 	focus = {
 		id = GER_approach_shade
-		icon = GFX_
+		icon = GFX_focus_chi_british_cooperation
 		x = 4
 		y = 2
 		relative_position_id = GER_new_leader
@@ -373,7 +375,7 @@
 
 	focus = {
 		id = GER_rethink_path
-		icon = GFX_
+		icon = GFX_goal_generic_occupy_states_coastal
 		x = -1
 		y = 1
 		relative_position_id = GER_approach_shade
@@ -413,7 +415,7 @@
 
 	focus = {
 		id = GER_intervention_eu
-		icon = GFX_
+		icon = GFX_focus_usa_focus_on_europe
 		x = -1
 		y = 1
 		relative_position_id = GER_new_central_powers
@@ -433,11 +435,12 @@
 
 	focus = {
 		id = GER_dismantle_ah
-		icon = GFX_
+		icon = GFX_focus_rom_abdicate
 		x = -2
 		y = 1
 		relative_position_id = GER_intervention_eu
 		prerequisite = { focus = GER_intervention_eu }
+		mutually_exclusive = { focus = GER_ah_solution }
 		cost = 25
 		available_if_capitulated = yes
 
@@ -452,12 +455,13 @@
 	}
 
 	focus = {
-		id = GER_ai_solution
-		icon = GFX_
+		id = GER_ah_solution
+		icon = GFX_goal_generic_major_alliance
 		x = 0
 		y = 1
 		relative_position_id = GER_intervention_eu
 		prerequisite = { focus = GER_intervention_eu }
+		mutually_exclusive = { focus = GER_dismantle_ah }
 		cost = 25
 		available_if_capitulated = yes
 
@@ -473,7 +477,7 @@
 
 	focus = {
 		id = GER_support_poland_resist
-		icon = GFX_
+		icon = GFX_focus_generic_polish_deal
 		x = 2
 		y = 1
 		relative_position_id = GER_intervention_eu
@@ -485,6 +489,8 @@
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = poland_support_unlock
+			set_country_flag = poland_support_decisions_enable
 		}
 
 		ai_will_do = {
@@ -493,11 +499,11 @@
 
 	focus = {
 		id = GER_invite_italy
-		icon = GFX_
+		icon = GFX_focus_befriend_italy
 		x = 1
 		y = 1
 		relative_position_id = GER_dismantle_ah
-		prerequisite = { focus = GER_dismantle_ah focus = GER_ai_solution }
+		prerequisite = { focus = GER_dismantle_ah focus = GER_ah_solution }
 		cost = 25
 		available_if_capitulated = yes
 
@@ -513,7 +519,7 @@
 
 	focus = {
 		id = GER_approach_rom
-		icon = GFX_
+		icon = GFX_focus_invite_romania
 		x = 0
 		y = 1
 		relative_position_id = GER_support_poland_resist
@@ -553,7 +559,7 @@
 
 	focus = {
 		id = GER_contain_bul
-		icon = GFX_
+		icon = GFX_focus_generic_attack_bulgaria
 		x = 1
 		y = 1
 		relative_position_id = GER_approach_rom
@@ -573,11 +579,12 @@
 
 	focus = {
 		id = GER_democracy
-		icon = GFX_
+		icon = GFX_goal_support_democracy
 		x = -1
 		y = 1
 		relative_position_id = GER_strike_rus
 		prerequisite = { focus = GER_strike_rus }
+		mutually_exclusive = { focus = GER_revolution }
 		cost = 25
 		available_if_capitulated = yes
 
@@ -593,11 +600,12 @@
 
 	focus = {
 		id = GER_revolution
-		icon = GFX_
+		icon = GFX_goal_support_communism
 		x = 1
 		y = 1
 		relative_position_id = GER_strike_rus
 		prerequisite = { focus = GER_strike_rus }
+		mutually_exclusive = { focus = GER_democracy }
 		cost = 25
 		available_if_capitulated = yes
 
