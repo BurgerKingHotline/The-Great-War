@@ -1,4 +1,4 @@
-@US_GUI_X = 6
+@US_GUI_X = 400
 @US_GUI_Y = 5
 
 guiTypes = {
@@ -21,351 +21,352 @@ guiTypes = {
         iconType = {
             name = "usa_AL"
             spriteType = "GFX_US_Alabama"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =347 y =191 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_AK"
             spriteType = "GFX_US_Alaska"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =15 y =215 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_AZ"
             spriteType = "GFX_US_Arizona"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =81 y =157}
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_AR"
             spriteType = "GFX_US_Arkansas"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =284 y =176 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_CA"
             spriteType = "GFX_US_California"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =15 y =75 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_CO"
             spriteType = "GFX_US_Colorado"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =140 y =115 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_CT"
             spriteType = "GFX_US_Conneticut"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_DE"
             spriteType = "GFX_US_Delaware"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_FL"
             spriteType = "GFX_US_Florida"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =355 y =235 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_GA"
             spriteType = "GFX_US_Georgia"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =371 y =187 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_HI"
             spriteType = "GFX_US_Hawaii"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =110 y =260 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_ID"
             spriteType = "GFX_US_Idaho"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =85 y =7 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_IL"
             spriteType = "GFX_US_Illinois"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =304 y =102 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_IN"
             spriteType = "GFX_US_Indiana"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =337 y =109 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_IA"
             spriteType = "GFX_US_Iowa"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =258 y =93 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_KS"
             spriteType = "GFX_US_Kansas"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =207 y =135 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_KY"
             spriteType = "GFX_US_Kentuky"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =325 y =141 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_LA"
             spriteType = "GFX_US_Louisiania"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =291 y =219 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_ME"
             spriteType = "GFX_US_Maine"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_MD"
             spriteType = "GFX_US_Maryland"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_MA"
             spriteType = "GFX_US_Massivetwoshits"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_MI"
             spriteType = "GFX_US_Michigan"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =312 y =43 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_MN"
             spriteType = "GFX_US_Minnesota"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =258 y =24 }
+            pdx_tooltip = mn_percents
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_MS"
             spriteType = "GFX_US_Missisippi"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =316 y =193 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_MO"
             spriteType = "GFX_US_Missouri"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =266 y =127 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_MT"
             spriteType = "GFX_US_Montana"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =108 y =11 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_NV"
             spriteType = "GFX_US_Nevada"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =50 y =85 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_NE"
             spriteType = "GFX_US_Nebraska"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =191 y =96 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_NM"
             spriteType = "GFX_US_New_Mexico"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =138 y =165 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_NH"
             spriteType = "GFX_US_New_Hampsire"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_NJ"
             spriteType = "GFX_US_New_Jersey"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_NY"
             spriteType = "GFX_US_New_York"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_NC"
             spriteType = "GFX_US_North_Carolina"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_ND"
             spriteType = "GFX_US_North_Dakota"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =200 y =25 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_OH"
             spriteType = "GFX_US_Ohio"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =362 y =103 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_OK"
             spriteType = "GFX_US_Oklahoma"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =204 y =171 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_OR"
             spriteType = "GFX_US_Oregon"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =23 y =27 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_PA"
             spriteType = "GFX_US_Pennsylvania"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_RI"
             spriteType = "GFX_US_Rhode_Island"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_SC"
             spriteType = "GFX_US_South_Carolina"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_SD"
             spriteType = "GFX_US_South_Dakota"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =197 y =62 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_TN"
             spriteType = "GFX_US_Tennesse"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =324 y =167 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_TX"
             spriteType = "GFX_US_Texas"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =163 y =177 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_UT"
             spriteType = "GFX_US_Utah"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =98 y =98 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_VT"
             spriteType = "GFX_US_Vermont"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_VA"
             spriteType = "GFX_US_Virginia"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_WA"
             spriteType = "GFX_US_Washington"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =40 y =-1 }
+			scale = 0.65	 
         }
 
         iconType = {
             name = "usa_WV"
             spriteType = "GFX_US_West_Virginia"
             position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+			scale = 0.65	 
         }
 
         iconType = {
             name = "usa_WI"
             spriteType = "GFX_US_Wisconsin"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =293 y =50 }
+			scale = 0.65
         }
 
         iconType = {
             name = "usa_WY"
             spriteType = "GFX_US_Wyoming"
-            position = { x =@US_GUI_X y =@US_GUI_Y }
-			scale = 0.64
+            position = { x =135 y =65 }
+			scale = 0.65
         }
     }
 }

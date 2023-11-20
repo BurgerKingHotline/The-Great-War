@@ -22,251 +22,251 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_US_Alabama"
 		texturefile = "gfx/interface/usastates/Alabama.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Alaska"
 		texturefile = "gfx/interface/usastates/Alaska.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Arizona"
 		texturefile = "gfx/interface/usastates/Arizona.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Arkansas"
 		texturefile = "gfx/interface/usastates/Arkansas.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_California"
 		texturefile = "gfx/interface/usastates/California.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Colorado"
 		texturefile = "gfx/interface/usastates/Colorado.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Conneticut"
 		texturefile = "gfx/interface/usastates/Conneticut.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Delaware"
 		texturefile = "gfx/interface/usastates/Delaware.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Florida"
 		texturefile = "gfx/interface/usastates/Florida.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Georgia"
 		texturefile = "gfx/interface/usastates/Georgia.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Hawaii"
 		texturefile = "gfx/interface/usastates/Hawaii.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Idaho"
 		texturefile = "gfx/interface/usastates/Idaho.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Illinois"
 		texturefile = "gfx/interface/usastates/Illinois.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Indiana"
 		texturefile = "gfx/interface/usastates/Indiana.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Iowa"
 		texturefile = "gfx/interface/usastates/Iowa.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Kansas"
 		texturefile = "gfx/interface/usastates/Kansas.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Kentuky"
 		texturefile = "gfx/interface/usastates/Kentuky.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Louisiania"
-		texturefile = "gfx/interface/usastates/Louisiania.dds"
-		noOfFrames = 10
+		texturefile = "gfx/interface/usastates/Louisiana.dds"
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Maine"
 		texturefile = "gfx/interface/usastates/Maine.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Maryland"
 		texturefile = "gfx/interface/usastates/Maryland.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Massivetwoshits"
-		texturefile = "gfx/interface/usastates/Massivetwoshits.dds"
-		noOfFrames = 10
+		texturefile = "gfx/interface/usastates/Massachusetts.dds"
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Michigan"
 		texturefile = "gfx/interface/usastates/Michigan.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Minnesota"
 		texturefile = "gfx/interface/usastates/Minnesota.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Missisippi"
-		texturefile = "gfx/interface/usastates/Missisippi.dds"
-		noOfFrames = 10
+		texturefile = "gfx/interface/usastates/Missisipi.dds"
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Missouri"
 		texturefile = "gfx/interface/usastates/Missouri.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Montana"
 		texturefile = "gfx/interface/usastates/Montana.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Nevada"
 		texturefile = "gfx/interface/usastates/Nevada.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Nebraska"
 		texturefile = "gfx/interface/usastates/Nebraska.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_New_Mexico"
 		texturefile = "gfx/interface/usastates/New Mexico.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_New_Hampsire"
 		texturefile = "gfx/interface/usastates/New Hampsire.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_New_Jersey"
 		texturefile = "gfx/interface/usastates/New Jersey.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_New_York"
 		texturefile = "gfx/interface/usastates/New York.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_North_Carolina"
 		texturefile = "gfx/interface/usastates/North Carolina.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_North_Dakota"
 		texturefile = "gfx/interface/usastates/North Dakota.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Ohio"
 		texturefile = "gfx/interface/usastates/Ohio.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Oklahoma"
 		texturefile = "gfx/interface/usastates/Oklahoma.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Oregon"
 		texturefile = "gfx/interface/usastates/Oregon.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Pennsylvania"
 		texturefile = "gfx/interface/usastates/Pennsylvania.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Rhode_Island"
 		texturefile = "gfx/interface/usastates/Rhode Island.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_South_Carolina"
 		texturefile = "gfx/interface/usastates/South Carolina.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_South_Dakota"
 		texturefile = "gfx/interface/usastates/South Dakota.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Tennesse"
-		texturefile = "gfx/interface/usastates/Tennesse.dds"
-		noOfFrames = 10
+		texturefile = "gfx/interface/usastates/Tennessee.dds"
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Texas"
 		texturefile = "gfx/interface/usastates/Texas.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Utah"
 		texturefile = "gfx/interface/usastates/Utah.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Vermont"
 		texturefile = "gfx/interface/usastates/Vermont.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Virginia"
 		texturefile = "gfx/interface/usastates/Virginia.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Washington"
 		texturefile = "gfx/interface/usastates/Washington.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_West_Virginia"
 		texturefile = "gfx/interface/usastates/West Virginia.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Wisconsin"
 		texturefile = "gfx/interface/usastates/Wisconsin.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 	SpriteType = {
 		name = "GFX_US_Wyoming"
 		texturefile = "gfx/interface/usastates/Wyoming.dds"
-		noOfFrames = 10
+		noOfframes = 8
 	}
 }
